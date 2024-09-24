@@ -737,8 +737,11 @@ class R34ICS {
 						// Multi-day events
 						if	(
 								$dtend_date != $dtstart_date &&
-								// Watch out for events that are NOT multiday, but just extend into the next day
-								!($dtend_date == r34ics_date('Ymd', $dtstart_date, $event_start_tz, '+1 day') && !empty($dtend_time))
+								// Watch out for events that are NOT multiday, but just extend into the next day, unless extendmultiday is set
+								(
+									in_array($args['extendmultiday'], array('both', 'overnight')) ||
+									!($dtend_date == r34ics_date('Ymd', $dtstart_date, $event_start_tz, '+1 day') && !empty($dtend_time))
+								)
 							)
 						{
 						/* @todo Switching to this in 11.3.2.1 introduced issues for more users than it helped; add a setting to make it optional!
@@ -746,12 +749,12 @@ class R34ICS {
 						*/
 							$loop_date = $dtstart_date;
 							while ($loop_date <= $dtend_date) {
-								// Classified as an all-day event and we've hit the end date -- don't display unless $extendmultiday is set
-								if ($all_day && $loop_date == $dtend_date && empty($extendmultiday)) {
+								// Classified as an all-day event and we've hit the end date -- don't display unless extendmultiday is set
+								if ($all_day && $loop_date == $dtend_date && !in_array($args['extendmultiday'], array('both', 'allday'))) {
 									break;
 								}
-								// Multi-day events may be given with end date/time as midnight of the NEXT day (unless $extendmultiday is set)
-								$effective_end_date =	(!empty($all_day) && empty($dtend_time) && empty($extendmultiday))
+								// Multi-day events may be given with end date/time as midnight of the NEXT day (unless extendmultiday is set)
+								$effective_end_date =	(!empty($all_day) && empty($dtend_time) && !in_array($args['extendmultiday'], array('both', 'allday')))
 														? r34ics_date('Ymd', $dtend_date, $event_end_tz, '-1 day')
 														: $dtend_date;
 								if ($dtstart_date == $effective_end_date) {
@@ -1668,7 +1671,11 @@ class R34ICS {
 			// eventdl doesn't support feeds using basic auth
 			'eventdl' => (r34ics_boolean_check($eventdl) && !r34ics_boolean_check($basicauth)),
 			'eventlocaltime' => r34ics_boolean_check($eventlocaltime),
-			'extendmultiday' => r34ics_boolean_check($extendmultiday),
+			'extendmultiday' => (
+				in_array($extendmultiday, array('both', 'overnight', 'allday'))
+					? $extendmultiday
+					: (r34ics_boolean_check($extendmultiday) ? 'allday' : '')
+				),
 			'feedlabel' => $feedlabel,
 			'feedlabelindesc' => $feedlabelindesc,
 			'fixredundantuids' => (
@@ -2249,14 +2256,9 @@ class R34ICS {
 		 * Bail out now if URL fails wp_http_validate_url() check
 		 *
 		 * Note: For internal network security, this prevents access to URLs that resolve to
-		 * private/reserved IP address ranges. Developers may use the WordPress core filter
-		 * 'http_request_host_is_external' to allow specific private/reserved addresses
-		 * (e.g. a mail/calendar server located on the same internal network) by writing
-		 * a function that checks the requested URL against specific allowed hosts, and
-		 * returns true if access is allowed.
-		 *
-		 * See this section of the ICS Calendar documentation for more information:
-		 * https://icscalendar.com/developer/#http_request_host_is_external
+		 * private/reserved IP address ranges. "Allow access to these hostnames that resolve
+		 * to reserved IP addresses" on the ICS Calendar Settings page allows you to specify
+		 * hostnames that should be allowed to override this restriction.
 		 */
 		if (!wp_http_validate_url($url)) {
 			if ($this->debug) { $this->debug_messages[$url]['Errors'][] = 'Invalid ICS feed URL.'; }
@@ -2445,13 +2447,9 @@ class R34ICS {
 		 * Bail out now if URL fails wp_http_validate_url() check
 		 *
 		 * Note: For internal network security, this prevents access to URLs that resolve to
-		 * private/reserved IP address ranges. Developers may use the WordPress core filter
-		 * 'http_request_host_is_external' to allow specific private/reserved addresses
-		 * (e.g. a mail/calendar server located on the same internal network) by writing
-		 * a function that checks the requested URL against specific allowed hosts, and
-		 * returns true if access is allowed.
-		 *
-		 * https://developer.wordpress.org/reference/hooks/http_request_host_is_external/
+		 * private/reserved IP address ranges. "Allow access to these hostnames that resolve
+		 * to reserved IP addresses" on the ICS Calendar Settings page allows you to specify
+		 * hostnames that should be allowed to override this restriction.
 		 */
 		if (!wp_http_validate_url($url)) {
 			if ($this->debug) { $this->debug_messages[$url]['Errors'][] = 'Invalid ICS feed URL.'; }

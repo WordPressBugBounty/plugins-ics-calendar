@@ -623,7 +623,7 @@ function r34ics_last_day_of_current($interval, $dt_str=null) {
  * appearing at all. We are now removing redundancies after the fact using jQuery.
  */
 function r34ics_lightbox_container($echo=true) {
-	$output = '<div class="r34ics_lightbox"><div class="r34ics_lightbox_close" tabindex="0">&times;</div><div class="r34ics_lightbox_content"></div></div>';
+	$output = '<div class="r34ics_lightbox"><div class="r34ics_lightbox_inner"><div class="r34ics_lightbox_close" tabindex="0">&times;</div><div class="r34ics_lightbox_content"></div></div></div>';
 	if (!empty($echo)) { echo $output; return true; }
 	return $output;
 }

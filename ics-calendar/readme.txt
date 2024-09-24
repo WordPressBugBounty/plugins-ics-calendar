@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.6
 Requires PHP: 7.0
-Stable tag: 11.3.3.2
+Stable tag: 11.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,13 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.3.4 - 2024.09.24 =
+
+* Lightbox:
+  * Modified CSS to restrict lightbox dimensions on large displays. Lightbox now displays at a maximum of 800x600 pixels, centered in the window. (Applies only when using `toggle="lightbox"`.)
+* Multi-day events:
+  * Changed options for `extendmultiday` from true/false to `overnight`, `allday`, `both` or empty. The previous true/false values map to `allday` and empty. The new `overnight` value applies to "overnight" events with specified start and end times. The `allday` value (along with the previous true value) works by the previous logic, and applies only to multi-day, all-day events, to address situations where feeds do not conform to the iCalendar spec in handling the end date of multi-day, all-day events. The default is false/empty, with neither condition applying.
 
 = 11.3.3.2 - 2024.09.18 =
 
