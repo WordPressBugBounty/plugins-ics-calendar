@@ -18,14 +18,13 @@ function r34ics_ajax() {
 		// Sanitize input
 		$args = $_POST['args'];
 		foreach ((array)$args as $key => $value) {
-			// Replaces FILTER_SANITIZE_STRING filter, deprecated in PHP 8.1
 			if (is_array($value)) {
 				$args[$key] = array_map(function($v) {
-					return is_string($v) ? htmlspecialchars(strip_tags($v)) : intval($v);
+					return is_string($v) ? wp_kses_post($v) : intval($v);
 				}, $value);
 			}
 			else {
-				$args[$key] = is_string($value) ? htmlspecialchars(strip_tags($value)) : intval($value);
+				$args[$key] = is_string($value) ? wp_kses_post($value) : intval($value);
 			}
 			if ($value == 'true') { $args[$key] = 1; }
 			elseif ($value == 'false') { $args[$key] = 0; }
