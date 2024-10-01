@@ -1095,6 +1095,7 @@ function r34ics_system_report($echo=true) {
 			$plugin_list[] = $plugin;
 		}
 	}
+	sort($plugin_list);
 		
 	// Gather all report data
 	global $wpdb;
@@ -1128,12 +1129,25 @@ function r34ics_system_report($echo=true) {
 	}
 		
 	// Note: cURL settings were removed here in version 11.0.0 switch to wp_remote_get()
+	
+	// Add relevant WordPress core settings
+	$wp_settings = array(
+		'blog_charset',
+		'date_format',
+		'gmt_offset',
+		'start_of_week',
+		'time_format',
+	);
+	foreach ((array)$wp_settings as $setting_name) {
+		$report['WordPress Settings'][$setting_name] = get_option($setting_name);
+	}
 
-	// Append ICS Calendar saved settings
+	// Add ICS Calendar saved settings
 	$settings_fields = array(
 		'r34ics_ajax_by_default',
 		'r34ics_allowed_hosts',
 		'r34ics_display_add_calendar_button_false',
+		'r34ics_display_calendar_memory_limit',
 		'r34ics_feed_urls',
 		'r34ics_previous_version',
 		'r34ics_transients_expiration',

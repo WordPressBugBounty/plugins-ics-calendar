@@ -23,7 +23,8 @@ if ($args['toggle'] === 'lightbox') {
 }
 
 // Pagination
-// If set to 1/true, use site's "posts_per_page" option; if > 1, use value
+// If set to 1/true, default to 5 per page; if > 1, use designated value
+// @todo What if they actually want one per page?
 // Initial opacity depends on whether or not we are using AJAX and pagination
 $initial_opacity = 0;
 if (!empty($args['pagination'])) {
