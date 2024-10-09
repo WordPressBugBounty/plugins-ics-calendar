@@ -3,9 +3,9 @@ Contributors: room34
 Donate link: https://icscalendar.com
 Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.3.4.2
+Stable tag: 11.3.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,10 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.3.4.3 - 2024.10.09 =
+
+* Removed unnecessary `load_plugin_textdomain()` call, and set `$translate` input parameter to `false` on `get_plugin_data()` call, as these may cause PHP notices as of WordPress 6.7. See the [WordPress Trac](https://core.trac.wordpress.org/ticket/62154#comment:8) for more details.
 
 = 11.3.4.2 - 2024.10.01 =
 

@@ -2164,7 +2164,7 @@ class R34ICS {
 		if (!function_exists('get_plugin_data')) {
 			require_once(ABSPATH . 'wp-admin/includes/plugin.php');
 		}
-		$plugin_data = get_plugin_data(dirname(__FILE__) . '/ics-calendar.php');
+		$plugin_data = get_plugin_data(dirname(__FILE__) . '/ics-calendar.php', false, false);
 		$version = $plugin_data['Version'];
 		// Are we running an embedded version?
 		global $r34ics_embedded;

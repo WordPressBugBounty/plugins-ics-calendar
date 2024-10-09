@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.3.4.3 - 2024.10.09 =
+
+* Removed unnecessary `load_plugin_textdomain()` call, and set `$translate` input parameter to `false` on `get_plugin_data()` call, as these may cause PHP notices as of WordPress 6.7. See the [WordPress Trac](https://core.trac.wordpress.org/ticket/62154#comment:8) for more details.
+
 = 11.3.4.2 - 2024.10.01 =
 
 * System Report:
