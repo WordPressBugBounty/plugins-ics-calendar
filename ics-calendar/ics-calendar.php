@@ -3,7 +3,7 @@
 Plugin Name: ICS Calendar
 Plugin URI: https://icscalendar.com
 Description: Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar into a seamlessly integrated, auto-updating, zero-maintenance WordPress experience.
-Version: 11.3.4.3
+Version: 11.3.4.4
 Requires at least: 4.9
 Requires PHP: 7.0
 Author: Room 34 Creative Services, LLC
@@ -50,17 +50,29 @@ if (!class_exists('R34ICS')) {
 	
 	
 	// Initialize plugin functionality
-	add_action('plugins_loaded', 'r34ics_plugins_loaded');
 	function r34ics_plugins_loaded() {
 	
 		// Instantiate class
 		global $R34ICS;
 		$R34ICS = new R34ICS();
-		
+				
 		// Conditionally run update function
 		if (is_admin() && version_compare(get_option('r34ics_version'), $R34ICS->version, '!=')) { r34ics_update(); }
 		
 	}
+	add_action('plugins_loaded', 'r34ics_plugins_loaded');
+	
+	
+	// Load text domain for translations
+	/**
+	 * Note: We are loading this absolutely as early as possible to avoid WP 6.7 warnings.
+	 * ICS Calendar Pro has additional requirements for translations, hence the extremely
+	 * low priority value 1 - PHP_INT_MAX.
+	 */
+	function r34ics_load_plugin_textdomain() {
+		load_plugin_textdomain('r34ics', false, basename(plugin_dir_path(__FILE__)) . '/i18n/languages/');
+	}
+	add_action('init', 'r34ics_load_plugin_textdomain', 1 - PHP_INT_MAX);
 	
 	
 	// Install
@@ -160,7 +172,6 @@ if (!class_exists('R34ICS')) {
 	
 	
 	// Deferred install/update admin notices
-	add_action('admin_notices', 'r34ics_deferred_admin_notices');
 	function r34ics_deferred_admin_notices() {
 		if ($notices = get_option('r34ics_deferred_admin_notices', array())) {
 			foreach ((array)$notices as $notice) {
@@ -169,6 +180,7 @@ if (!class_exists('R34ICS')) {
 		}
 		delete_option('r34ics_deferred_admin_notices');
 	}
+	add_action('admin_notices', 'r34ics_deferred_admin_notices');
 	
 	
 	// Purge transients on certain option updates
