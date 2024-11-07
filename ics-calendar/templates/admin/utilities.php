@@ -74,6 +74,8 @@
 		}
 		?>
 	</div>
+	
+	<?php do_action('r34ics_admin_utilities_more'); ?>
 
 </div>
 

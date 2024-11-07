@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2024-07-04 09:57-0500\n"
-"PO-Revision-Date: 2024-07-04 09:57-0500\n"
+"POT-Creation-Date: 2024-11-05 12:08-0600\n"
+"PO-Revision-Date: 2024-11-05 12:08-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Utilities"
 msgstr "ユーティリティー"
 
-#: class-r34ics.php:320 class-r34ics.php:1920 class-r34ics.php:1924
+#: class-r34ics.php:320 class-r34ics.php:1955 class-r34ics.php:1959
 #: templates/admin/admin.php:19 templates/admin/admin.php:31
 msgid "Settings"
 msgstr "設定"
@@ -74,7 +74,7 @@ msgstr "プロ版へアップグレード!"
 msgid "Show/hide all"
 msgstr "すべて表示/非表示"
 
-#: class-r34ics.php:593
+#: class-r34ics.php:601
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -87,40 +87,40 @@ msgstr ""
 "てください。複数の URL を区切るためにスペースを使用している場合は、代わりにパ"
 "イプ文字を使用することもできます。影響を受ける URL:"
 
-#: class-r34ics.php:1023
+#: class-r34ics.php:1037
 msgid "Hide past events"
 msgstr "過去のイベントを非表示にする"
 
-#: class-r34ics.php:1024 templates/calendar-month.php:83
+#: class-r34ics.php:1038 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "過去のイベントを表示"
 
-#: class-r34ics.php:1102
+#: class-r34ics.php:1116
 msgid "Contact:"
 msgstr "連絡先:"
 
-#: class-r34ics.php:1108
+#: class-r34ics.php:1122
 msgid "Resources:"
 msgstr "リソースです："
 
-#: class-r34ics.php:1118
+#: class-r34ics.php:1132
 msgid "Click for more..."
 msgstr "詳細については、ここをクリックしてください。"
 
-#: class-r34ics.php:1152
+#: class-r34ics.php:1166
 msgid "Save to your calendar"
 msgstr "カレンダーへの保存"
 
-#: class-r34ics.php:1152
+#: class-r34ics.php:1166
 msgid "Download"
 msgstr "ダウンロード"
 
-#: class-r34ics.php:1257
+#: class-r34ics.php:1271
 msgid "Cancelled"
 msgstr "キャンセル"
 
-#: class-r34ics.php:1604
+#: class-r34ics.php:1629
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -128,7 +128,7 @@ msgstr ""
 "「現在の週」のショートコード属性は推奨されていません。代わりに、ショートコー"
 "ドでview=\"week\"を使用してください。"
 
-#: class-r34ics.php:1607
+#: class-r34ics.php:1632
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -136,17 +136,17 @@ msgstr ""
 "ショートコード属性の \"legendinline \"は非推奨です。代わりにショートコードで "
 "legendstyle=\"inline\" を使用してください。"
 
-#: class-r34ics.php:1879
+#: class-r34ics.php:1914
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$sトランジェントをクリアしました。"
 
-#: class-r34ics.php:1886
+#: class-r34ics.php:1921
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s トランジェントは見つかりませんでした。"
 
-#: class-r34ics.php:1920
+#: class-r34ics.php:1955
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -155,11 +155,11 @@ msgstr ""
 "フィードのURLにHTTPベーシック認証の認証情報が含まれているようです。上記の%2$s"
 "タブの%1$sオプションをオフにしてみてください。"
 
-#: class-r34ics.php:1920 class-r34ics.php:1924 templates/admin/settings.php:16
+#: class-r34ics.php:1955 class-r34ics.php:1959 templates/admin/settings.php:16
 msgid "Use legacy feed request method"
 msgstr "レガシーフィードリクエストメソッドを使用する"
 
-#: class-r34ics.php:1924
+#: class-r34ics.php:1959
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -168,7 +168,7 @@ msgstr ""
 "フィードのURLが、オンラインの%1$sプレビュー%2$sツールで機能する場合は、上記"
 "の%4$sタブにある%3$sオプションをオンにしてみてください。"
 
-#: class-r34ics.php:1930
+#: class-r34ics.php:1965
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -183,7 +183,7 @@ msgstr ""
 "されません。正しいダイナミックフィードURLの取得方法については、%4$sユーザーガ"
 "イド%5$sをご覧ください。"
 
-#: class-r34ics.php:1970
+#: class-r34ics.php:2005
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -192,7 +192,7 @@ msgstr ""
 "%1$s設定を更新しました。%2$sいくつかの変更を確認するには、ページを更新する必"
 "要があるかもしれません。"
 
-#: class-r34ics.php:2118
+#: class-r34ics.php:2153
 msgid "calendar event"
 msgstr "カレンダーイベント"
 
@@ -240,7 +240,7 @@ msgstr "%s日ごとに繰り返し発生する"
 msgid "Recurs daily"
 msgstr "毎日繰り返し"
 
-#: functions.php:1044
+#: functions.php:1064
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -253,11 +253,11 @@ msgstr ""
 "カレンダーが正しく表示されない可能性があります。ショートコード内のクリッカブ"
 "ルリンクを削除してください。"
 
-#: functions.php:1328
+#: functions.php:1362
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents()関数はサポートされなくなりました。"
 
-#: ics-calendar.php:96
+#: ics-calendar.php:105
 #, php-format
 msgid ""
 "Thank you for installing %1$s. Before creating your first calendar "
@@ -270,7 +270,7 @@ msgstr ""
 "ン、日付/時間形式の設定が正しいかどうかを確認してください。詳細について"
 "は、%4$sユーザーガイド%5$sを参照してください。"
 
-#: ics-calendar.php:138
+#: ics-calendar.php:147
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -285,7 +285,7 @@ msgstr ""
 "レードした後に新たな問題が発生した場合は、%4$sWordPress サポートフォーラ"
 "ム%5$s をご覧ください。"
 
-#: ics-calendar.php:148
+#: ics-calendar.php:157
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -302,7 +302,7 @@ msgstr ""
 "フォルトに切り替えるには、%9$s 設定%10$sで%8$sオプションをオンにしてくださ"
 "い。 ページ。"
 
-#: ics-calendar.php:148 templates/admin/settings.php:46
+#: ics-calendar.php:157 templates/admin/settings.php:46
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "新しいパラメータのデフォルトを使用 (v.10.6)"
 
@@ -457,8 +457,8 @@ msgid "Shortcode Builder"
 msgstr "ショートコードビルダー"
 
 #: templates/admin/getting-started.php:13
-msgid "All Parameters (Reference)"
-msgstr "全パラメーター（参考値）"
+msgid "Shortcode Parameters Reference"
+msgstr "ショートコード・パラメータ・リファレンス"
 
 #: templates/admin/getting-started.php:14
 msgid "FAQs and Tips"
@@ -605,18 +605,18 @@ msgstr ""
 
 #: templates/admin/sidebar.php:12
 #, php-format
-msgid ""
-"For support please email %1$s or use the %2$sWordPress Support Forums%3$s."
+msgid "For assistance, please use our %1$ssupport request form%1$s."
 msgstr ""
-"サポートについては、%1$s電子メールを送るか、%2$sWordPressサポートフォーラ"
-"ム%3$sを使用してください。"
+"サポートについては、%1$sサポートリクエストフォーム%1$sをご利用ください。"
 
 #: templates/admin/sidebar.php:22
 #, php-format
-msgid "When emailing, please include the %1$sSystem Report%2$s from this page."
+msgid ""
+"When contacting support, please include the %1$sSystem Report%2$s from this "
+"page."
 msgstr ""
-"メールでのお問い合わせの際は、本ページの%1$sシステムレポート%2$sをご記載くだ"
-"さい。"
+"サポートにご連絡の際は、本ページの%1$sシステムレポート%2$sを明記してくださ"
+"い。"
 
 #: templates/admin/sidebar.php:31
 msgid "Do even more with..."
@@ -774,19 +774,19 @@ msgstr ""
 "サイトのセキュリティのため、システムレポートをサポートフォーラムに投稿しない"
 "でください。"
 
-#: templates/calendar-basic.php:56 templates/calendar-list.php:57
+#: templates/calendar-basic.php:57 templates/calendar-list.php:58
 msgid "No events found."
 msgstr "イベントが見つかりませんでした。"
 
-#: templates/calendar-basic.php:77 templates/calendar-list.php:78
+#: templates/calendar-basic.php:78 templates/calendar-list.php:79
 msgid "Previous Page"
 msgstr "前のページ"
 
-#: templates/calendar-basic.php:78 templates/calendar-list.php:79
+#: templates/calendar-basic.php:79 templates/calendar-list.php:80
 msgid "Next Page"
 msgstr "次のページ"
 
-#: templates/calendar-list.php:283 templates/calendar-month.php:200
+#: templates/calendar-list.php:284 templates/calendar-month.php:200
 #: templates/calendar-week.php:209
 msgid "All Day"
 msgstr "終日"
@@ -836,6 +836,13 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#, php-format
+#~ msgid ""
+#~ "For support please email %1$s or use the %2$sWordPress Support Forums%3$s."
+#~ msgstr ""
+#~ "サポートについては、%1$s電子メールを送るか、%2$sWordPressサポートフォーラ"
+#~ "ム%3$sを使用してください。"
 
 #~ msgid "Settings updated."
 #~ msgstr "設定を更新しました。"

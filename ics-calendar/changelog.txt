@@ -1,5 +1,15 @@
 === ICS Calendar Changelog ===
 
+= 11.3.5.1 - 2024.11.06 =
+
+* Added `r34ics_admin_utilities_more` action.
+
+= 11.3.5 - 2024.11.05 =
+
+* Basic and List views: Added `data-dow` and `data-wknum` attributes to each event in the list, allowing developers to customize the appearance of events based on the day of the week (`data-dow`) or week number (`data-wknum`).
+* Updated support text and links.
+* i18n: Updated translation strings.
+
 = 11.3.4.4 - 2024.10.15 =
 
 * Restored `load_plugin_textdomain()` call, as it does appear to be necessary in some situations. The call is now being made on the `init` action, which should prevent any WP 6.7 error messages. If you are receiving error messages or if some translations appear to have gone missing, please let us know in the [support forums](https://wordpress.org/support/plugin/ics-calendar/).

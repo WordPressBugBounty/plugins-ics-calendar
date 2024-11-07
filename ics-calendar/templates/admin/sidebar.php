@@ -9,7 +9,7 @@
 	
 	<h3><?php _e('Support', 'r34ics'); ?></h3>
 	
-	<p><?php printf(__('For support please email %1$s or use the %2$sWordPress Support Forums%3$s.', 'r34ics'), '<strong><a href="mailto:support@room34.com">support@room34.com</a></strong>', '<strong><a href="https://wordpress.org/support/plugin/ics-calendar" target="_blank" style="white-space: nowrap;">', '</a></strong>'); ?></p>
+	<p><?php printf(__('For assistance, please use our %1$ssupport request form%1$s.', 'r34ics'), '<strong><a href="https://icscalendar.com/support/" target="_blank" style="white-space: nowrap;">', '</a></strong>'); ?></p>
 	
 	<?php
 	// Restrict System Report to admins / super admins
@@ -19,7 +19,7 @@
 			)
 	{
 		?>
-		<p><mark class="alert"><?php printf(__('When emailing, please include the %1$sSystem Report%2$s from this page.', 'r34ics'), '<a href="#system-report" style="white-space: nowrap;">', '</a>'); ?></mark></p>
+		<p><mark class="alert"><?php printf(__('When contacting support, please include the %1$sSystem Report%2$s from this page.', 'r34ics'), '<a href="#system-report" style="white-space: nowrap;">', '</a>'); ?></mark></p>
 		<?php
 	}
 	?>

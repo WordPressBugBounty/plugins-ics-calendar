@@ -130,9 +130,8 @@ else {
 						foreach ((array)$days as $day => $day_events) {
 							$date = r34ics_date('Ymd', $m.'/'.$day.'/'.$year);
 							$d = r34ics_date('d', $date);
-							// The following variables are retained for possible future use, but are not currently needed
-							// $dow = r34ics_date('w', $date);
-							// $wknum = r34ics_date('W', $date . ' +' . (1 - $start_of_week) . 'day'); // PHP week numbers start on Monday
+							$dow = r34ics_date('w', $date);
+							$wknum = r34ics_date('W', $date . ' +' . (1 - $start_of_week) . 'day'); // PHP week numbers start on Monday
 							
 							// Is this past/present/future?
 							$rel2today = null;
@@ -184,7 +183,7 @@ else {
 											$month_label_shown = true;
 										}
 										?>
-										<div class="ics-calendar-date-wrapper" data-date="<?php echo esc_attr(strip_tags($day_label)); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-events-count="1" data-feed-keys="<?php echo intval($event['feed_key']); ?>">
+										<div class="ics-calendar-date-wrapper" data-date="<?php echo esc_attr(strip_tags($day_label)); ?>" data-dow="<?php echo esc_attr($dow); ?>" data-wknum="<?php echo esc_attr($wknum); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-events-count="1" data-feed-keys="<?php echo intval($event['feed_key']); ?>">
 											<<?php echo esc_attr($args['htmltagdate']); ?> class="ics-calendar-date" id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post($day_label); ?></<?php echo esc_attr($args['htmltagdate']); ?>>
 											<dl class="events" aria-labelledby="<?php echo esc_attr($day_uid); ?>">
 
@@ -266,7 +265,7 @@ else {
 										$day_label = r34ics_date($date_format, $month.'/'.$day.'/'.$year);
 										$day_uid = $ics_data['guid'] . '-' . $year . $month . $day;
 										?>
-										<div class="ics-calendar-date-wrapper" data-date="<?php echo esc_attr(strip_tags($day_label)); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-events-count="<?php echo intval($day_events_count); ?>" data-feed-keys="<?php echo esc_attr($day_feed_keys); ?>">
+										<div class="ics-calendar-date-wrapper" data-date="<?php echo esc_attr(strip_tags($day_label)); ?>" data-dow="<?php echo esc_attr($dow); ?>" data-wknum="<?php echo esc_attr($wknum); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-events-count="<?php echo intval($day_events_count); ?>" data-feed-keys="<?php echo esc_attr($day_feed_keys); ?>">
 											<<?php echo esc_attr($args['htmltagdate']); ?> class="ics-calendar-date" id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post($day_label); ?></<?php echo esc_attr($args['htmltagdate']); ?>>
 											<dl class="events" aria-labelledby="<?php echo esc_attr($day_uid); ?>">
 										<?php

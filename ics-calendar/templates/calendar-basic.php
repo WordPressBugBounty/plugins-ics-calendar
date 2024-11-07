@@ -140,6 +140,8 @@ else {
 							foreach ((array)$days as $day => $day_events) {
 								$date = r34ics_date('Ymd', $m.'/'.$day.'/'.$year);
 								$d = r34ics_date('d', $date);
+								$dow = r34ics_date('w', $date);
+								$wknum = r34ics_date('W', $date . ' +' . (1 - $start_of_week) . 'day'); // PHP week numbers start on Monday
 				
 								// Is this past/present/future?
 								$rel2today = null;
@@ -199,7 +201,7 @@ else {
 										$has_desc = r34ics_has_desc($args, $event);
 										?>
 					
-										<li class="<?php echo r34ics_event_css_classes($event, $time, $args); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
+										<li class="<?php echo r34ics_event_css_classes($event, $time, $args); ?>" data-dow="<?php echo esc_attr($dow); ?>" data-wknum="<?php echo esc_attr($wknum); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 											if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 											if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
 											if (isset($p_i)) { echo ' data-p-i="' . intval($p_i) . '"'; }

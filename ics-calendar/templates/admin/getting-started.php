@@ -10,7 +10,7 @@
 		<li><a href="https://icscalendar.com/general-wordpress-settings/" target="_blank"><?php _e('General WordPress Settings', 'r34ics'); ?></a></li>
 		<li><a href="https://icscalendar.com/shortcode-overview/" target="_blank"><?php _e('Shortcode Overview', 'r34ics'); ?></a></li>
 		<li><a href="https://icscalendar.com/shortcode-builder/" target="_blank"><?php _e('Shortcode Builder', 'r34ics'); ?></a></li>
-		<li><a href="https://icscalendar.com/icsdocs/" target="_blank"><?php _e('All Parameters (Reference)', 'r34ics'); ?></a></li>
+		<li><a href="https://icscalendar.com/icsdocs/" target="_blank"><?php _e('Shortcode Parameters Reference', 'r34ics'); ?></a></li>
 		<li><a href="https://icscalendar.com/faqs-and-tips/" target="_blank"><?php _e('FAQs and Tips', 'r34ics'); ?></a></li>
 		<li><a href="https://icscalendar.com/css-guide/" target="_blank"><?php _e('CSS Guide', 'r34ics'); ?></a></li>
 		<li><a href="https://icscalendar.com/developer/" target="_blank"><?php _e('Developer Resources', 'r34ics'); ?></a></li>

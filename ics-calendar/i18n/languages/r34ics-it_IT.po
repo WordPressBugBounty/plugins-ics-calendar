@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2024-07-04 09:57-0500\n"
-"PO-Revision-Date: 2024-07-04 09:57-0500\n"
+"POT-Creation-Date: 2024-11-05 12:08-0600\n"
+"PO-Revision-Date: 2024-11-05 12:08-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -56,7 +56,7 @@ msgstr ""
 msgid "Utilities"
 msgstr "Servizi"
 
-#: class-r34ics.php:320 class-r34ics.php:1920 class-r34ics.php:1924
+#: class-r34ics.php:320 class-r34ics.php:1955 class-r34ics.php:1959
 #: templates/admin/admin.php:19 templates/admin/admin.php:31
 msgid "Settings"
 msgstr "Impostazioni"
@@ -77,7 +77,7 @@ msgstr "Passa a PRO!"
 msgid "Show/hide all"
 msgstr "Mostra/nascondi tutto"
 
-#: class-r34ics.php:593
+#: class-r34ics.php:601
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -91,40 +91,40 @@ msgstr ""
 "URL, è anche possibile provare a utilizzare il carattere barra verticale. "
 "URL interessato:"
 
-#: class-r34ics.php:1023
+#: class-r34ics.php:1037
 msgid "Hide past events"
 msgstr "Nascondi eventi passati"
 
-#: class-r34ics.php:1024 templates/calendar-month.php:83
+#: class-r34ics.php:1038 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "Mostra eventi passati"
 
-#: class-r34ics.php:1102
+#: class-r34ics.php:1116
 msgid "Contact:"
 msgstr "Contatto:"
 
-#: class-r34ics.php:1108
+#: class-r34ics.php:1122
 msgid "Resources:"
 msgstr "Risorse:"
 
-#: class-r34ics.php:1118
+#: class-r34ics.php:1132
 msgid "Click for more..."
 msgstr "Clicca per saperne di più..."
 
-#: class-r34ics.php:1152
+#: class-r34ics.php:1166
 msgid "Save to your calendar"
 msgstr "Salva nel tuo calendario"
 
-#: class-r34ics.php:1152
+#: class-r34ics.php:1166
 msgid "Download"
 msgstr "Scarica"
 
-#: class-r34ics.php:1257
+#: class-r34ics.php:1271
 msgid "Cancelled"
 msgstr "Annullato"
 
-#: class-r34ics.php:1604
+#: class-r34ics.php:1629
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -132,7 +132,7 @@ msgstr ""
 "L'attributo shortcode \"currentweek\" è deprecato. Si prega di utilizzare "
 "view=\"week\" nello shortcode."
 
-#: class-r34ics.php:1607
+#: class-r34ics.php:1632
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -140,17 +140,17 @@ msgstr ""
 "L'attributo shortcode \"legendinline\" è deprecato. Utilizzare invece "
 "legendstyle=\"inline\" nel codice breve."
 
-#: class-r34ics.php:1879
+#: class-r34ics.php:1914
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Cancellati %1$s %2$s transitori."
 
-#: class-r34ics.php:1886
+#: class-r34ics.php:1921
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Non sono stati trovati transitori %1$s."
 
-#: class-r34ics.php:1920
+#: class-r34ics.php:1955
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -159,11 +159,11 @@ msgstr ""
 "L'URL del feed sembra contenere credenziali di autenticazione di base HTTP. "
 "Provate a disattivare l'opzione %1$s nella scheda %2$s qui sopra."
 
-#: class-r34ics.php:1920 class-r34ics.php:1924 templates/admin/settings.php:16
+#: class-r34ics.php:1955 class-r34ics.php:1959 templates/admin/settings.php:16
 msgid "Use legacy feed request method"
 msgstr "Utilizzare il metodo di richiesta di alimentazione tradizionale"
 
-#: class-r34ics.php:1924
+#: class-r34ics.php:1959
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -172,7 +172,7 @@ msgstr ""
 "Se l'URL del vostro feed funziona con il nostro strumento %1$sAnteprima%2$s "
 "online, provate ad attivare l'opzione %3$s nella scheda %4$s qui sopra."
 
-#: class-r34ics.php:1930
+#: class-r34ics.php:1965
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -188,7 +188,7 @@ msgstr ""
 "origine. Per istruzioni su come ottenere l'URL corretto del feed dinamico, "
 "consultare la %4$sGuida per l'utente%5$s."
 
-#: class-r34ics.php:1970
+#: class-r34ics.php:2005
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -197,7 +197,7 @@ msgstr ""
 "%1$sImpostazioni aggiornate.%2$s Potrebbe essere necessario aggiornare la "
 "pagina per vedere alcune modifiche."
 
-#: class-r34ics.php:2118
+#: class-r34ics.php:2153
 msgid "calendar event"
 msgstr "evento del calendario"
 
@@ -245,7 +245,7 @@ msgstr "Ricorre ogni %s giorni"
 msgid "Recurs daily"
 msgstr "Ricorre ogni giorno"
 
-#: functions.php:1044
+#: functions.php:1064
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -258,11 +258,11 @@ msgstr ""
 "conseguenza, il calendario potrebbe non essere visualizzato correttamente. "
 "Si prega di rimuovere il link cliccabile nel codice breve."
 
-#: functions.php:1328
+#: functions.php:1362
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "La funzione r34ics_url_get_contents() non è più supportata."
 
-#: ics-calendar.php:96
+#: ics-calendar.php:105
 #, php-format
 msgid ""
 "Thank you for installing %1$s. Before creating your first calendar "
@@ -275,7 +275,7 @@ msgstr ""
 "che la lingua del sito, il fuso orario e il formato data/ora siano corretti. "
 "Per ulteriori informazioni, consultare la %4$sGuida all'uso%5$s."
 
-#: ics-calendar.php:138
+#: ics-calendar.php:147
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -291,7 +291,7 @@ msgstr ""
 "problemi dopo l'aggiornamento alla versione 11 o successiva, visitare il "
 "%4$sForum di supporto di WordPress%5$s per ricevere assistenza."
 
-#: ics-calendar.php:148
+#: ics-calendar.php:157
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -309,7 +309,7 @@ msgstr ""
 "nuove impostazioni predefinite, attivare l'opzione %8$s nella pagina %9$s "
 "delle impostazioni%10$s."
 
-#: ics-calendar.php:148 templates/admin/settings.php:46
+#: ics-calendar.php:157 templates/admin/settings.php:46
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Utilizzare i nuovi parametri predefiniti (v.10.6)"
 
@@ -465,8 +465,8 @@ msgid "Shortcode Builder"
 msgstr "Codice Costruttore"
 
 #: templates/admin/getting-started.php:13
-msgid "All Parameters (Reference)"
-msgstr "Tutti i parametri (riferimento)"
+msgid "Shortcode Parameters Reference"
+msgstr "Riferimento ai parametri dello shortcode"
 
 #: templates/admin/getting-started.php:14
 msgid "FAQs and Tips"
@@ -623,17 +623,17 @@ msgstr ""
 
 #: templates/admin/sidebar.php:12
 #, php-format
-msgid ""
-"For support please email %1$s or use the %2$sWordPress Support Forums%3$s."
+msgid "For assistance, please use our %1$ssupport request form%1$s."
 msgstr ""
-"Per assistenza, invia un'e-mail a %1$s o utilizza i forum di supporto "
-"%2$sWordPress%3$s."
+"Per assistenza, utilizzare il nostro %1$smodulo di richiesta assistenza%1$s."
 
 #: templates/admin/sidebar.php:22
 #, php-format
-msgid "When emailing, please include the %1$sSystem Report%2$s from this page."
+msgid ""
+"When contacting support, please include the %1$sSystem Report%2$s from this "
+"page."
 msgstr ""
-"Quando si invia un'e-mail, includere il %1$sRapporto sul sistema%2$s da "
+"Quando si contatta l'assistenza, includere il %1$sRapporto di sistema%2$s da "
 "questa pagina."
 
 #: templates/admin/sidebar.php:31
@@ -799,19 +799,19 @@ msgstr ""
 "Per la sicurezza del sito, NON pubblicare il Rapporto di sistema nei forum "
 "di supporto."
 
-#: templates/calendar-basic.php:56 templates/calendar-list.php:57
+#: templates/calendar-basic.php:57 templates/calendar-list.php:58
 msgid "No events found."
 msgstr "Nessun evento trovato."
 
-#: templates/calendar-basic.php:77 templates/calendar-list.php:78
+#: templates/calendar-basic.php:78 templates/calendar-list.php:79
 msgid "Previous Page"
 msgstr "Pagina precedente"
 
-#: templates/calendar-basic.php:78 templates/calendar-list.php:79
+#: templates/calendar-basic.php:79 templates/calendar-list.php:80
 msgid "Next Page"
 msgstr "Pagina successiva"
 
-#: templates/calendar-list.php:283 templates/calendar-month.php:200
+#: templates/calendar-list.php:284 templates/calendar-month.php:200
 #: templates/calendar-week.php:209
 msgid "All Day"
 msgstr "Tutto il giorno"
@@ -862,6 +862,13 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#, php-format
+#~ msgid ""
+#~ "For support please email %1$s or use the %2$sWordPress Support Forums%3$s."
+#~ msgstr ""
+#~ "Per assistenza, invia un'e-mail a %1$s o utilizza i forum di supporto "
+#~ "%2$sWordPress%3$s."
 
 #~ msgid "Settings updated."
 #~ msgstr "Impostazioni aggiornate."
