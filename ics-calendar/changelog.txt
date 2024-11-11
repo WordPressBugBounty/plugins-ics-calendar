@@ -1,5 +1,10 @@
 === ICS Calendar Changelog ===
 
+= 11.3.6.1 - 2024.11.11 =
+
+* Admin: Fixed HTML formatting issue in admin page sidebar.
+* i18n: Added Czech translations.
+
 = 11.3.5.1 - 2024.11.06 =
 
 * Added `r34ics_admin_utilities_more` action.

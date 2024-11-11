@@ -9,7 +9,7 @@
 	
 	<h3><?php _e('Support', 'r34ics'); ?></h3>
 	
-	<p><?php printf(__('For assistance, please use our %1$ssupport request form%1$s.', 'r34ics'), '<strong><a href="https://icscalendar.com/support/" target="_blank" style="white-space: nowrap;">', '</a></strong>'); ?></p>
+	<p><?php printf(__('For assistance, please use our %1$ssupport request form%2$s.', 'r34ics'), '<strong><a href="https://icscalendar.com/support/" target="_blank" style="white-space: nowrap;">', '</a></strong>'); ?></p>
 	
 	<?php
 	// Restrict System Report to admins / super admins
