@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.3.6.1
+Stable tag: 11.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,15 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.3.7 - 2024.11.18 =
+
+* Added `class_exists()` check to `R34ICS` class.
+* Added `ua` shortcode attribute, to allow for a custom user agent string on requests. May be useful if your source server is rejecting ICS Calendar's requests. Set to `true` to use a preselected real user agent string, or enter a custom string of your choosing. (Custom strings must be at least 6 characters.) If omitted or set to `false`, ICS Calendar's default user agent string will be used for the request. _Note: This parameter has no effect if the **Use legacy feed request method** setting is turned on._
+* Standardized handling of all admin notices using `r34ics_deferred_admin_notices()` function, and modified some notices to be dismissible.
+* Minor code refactoring.
+* Vendors: Restored `persist-admin-notices-dismissal`, previously removed in version 9.8.0 because it wasn't being used.
+* i18n: Updated translation strings.
 
 = 11.3.6.1 - 2024.11.11 =
 

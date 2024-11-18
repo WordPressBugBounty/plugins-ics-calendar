@@ -33,11 +33,11 @@
 	<a href="https://icscalendar.com/pro" target="_blank"><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__))); ?>assets/ics-calendar-pro-logo-2023.svg" alt="ICS Calendar Pro" style="display: block; height: auto; margin: 1.5em auto; width: 180px;" /></a>
 	
 	<h4 style="margin-bottom: 0;"><?php _e('ICS Events', 'r34ics'); ?></h4>
-	<p style="margin-top: 0;"><?php printf(__('%1$sNew in version 5.1!%2$s Turns ICS Calendar Pro into a full calendar system. Create and manage events directly in WordPress and even integrate them seamlessly with your existing feeds.', 'r34ics'), '<strong style="color: crimson;">', '</strong>'); ?></p>
+	<p style="margin-top: 0;"><?php printf(__('%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage events directly in WordPress and even integrate them seamlessly with your existing feeds.', 'r34ics'), '<strong style="color: crimson;">', '</strong>', 'ICS Calendar Pro'); ?></p>
 	<h4 style="margin-bottom: 0;"><?php _e('Additional Views', 'r34ics'); ?></h4>
 	<p style="margin-top: 0;"><?php _e('Full, Up Next, Masonry, Month with Sidebar, Widget, and more.', 'r34ics'); ?></p>
 	<h4 style="margin-bottom: 0;"><?php _e('Calendar Builder', 'r34ics'); ?></h4>
-	<p style="margin-top: 0;"><?php _e('Configure all calendar settings with an easy visual interface. Also works directly in Block Editor.', 'r34ics'); ?></p>
+	<p style="margin-top: 0;"><?php _e('Configure all calendar settings with an easy visual interface.', 'r34ics'); ?></p>
 	<h4 style="margin-bottom: 0;"><?php _e('Customizer', 'r34ics'); ?></h4>
 	<p style="margin-top: 0;"><?php _e('Easily modify your calendar color palettes, fonts, and more, site-wide.', 'r34ics'); ?></p>
 	<h4 style="margin-bottom: 0;"><?php _e('Enhanced Features', 'r34ics'); ?></h4>

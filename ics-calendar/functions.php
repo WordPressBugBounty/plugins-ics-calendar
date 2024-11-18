@@ -206,6 +206,29 @@ function r34ics_day_events_feed_keys($day_events, $delim=null) {
 }
 
 
+// Display deferred admin notices
+function r34ics_deferred_admin_notices() {
+	if (!is_admin() || wp_doing_ajax()) { return; }
+	global $r34ics_deferred_admin_notices;
+	if (empty($r34ics_deferred_admin_notices)) {
+		$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
+	}
+	if (!empty($r34ics_deferred_admin_notices)) {
+		foreach ((array)$r34ics_deferred_admin_notices as $notice_key => $notice) {
+			if (!empty($notice['dismissible']) && method_exists('PAnD', 'is_admin_notice_active')) {
+				if (!PAnD::is_admin_notice_active($notice_key . '-' . $notice['dismissible'])) { continue; }
+				echo '<div class="notice notice-' . esc_attr($notice['status']) . ' is-dismissible r34ics-admin-notice" data-dismissible="' . esc_attr($notice_key . '-' . $notice['dismissible']) . '"><div>' . wp_kses_post($notice['content']) . '</div></div>';
+			}
+			else {
+				echo '<div class="notice notice-' . esc_attr($notice['status']) . ' r34ics-admin-notice"><div>' . wp_kses_post($notice['content']) . '</div></div>';
+			}
+		}
+	}
+	unset($r34ics_deferred_admin_notices);
+	delete_option('r34ics_deferred_admin_notices');
+}
+
+
 // Check if a URL's domain is the same as the current site
 function r34ics_domain_match($url='') {
 	return (parse_url($url, PHP_URL_HOST) == $_SERVER['SERVER_NAME']);

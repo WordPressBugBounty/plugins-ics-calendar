@@ -237,7 +237,7 @@ will be retained permanently, so they can be used to create custom color palette
 				display: block;
 				height: auto;
 				max-width: 100%;
-				width: auto;
+				/*width: auto; Removed due to issue with Chrome 2024.11.14 */
 			}
 			
 			.ics-calendar .event .descloc .descloc_feed_label {

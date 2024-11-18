@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2024-11-05 12:07-0600\n"
-"PO-Revision-Date: 2024-11-05 12:07-0600\n"
+"POT-Creation-Date: 2024-11-18 14:40-0600\n"
+"PO-Revision-Date: 2024-11-18 14:40-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: hu_HU\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:279
+#: class-r34ics.php:290
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -32,7 +32,7 @@ msgstr ""
 "%2$s Mivel az ICS Calendar-t webszerverre tervezték, előfordulhat, hogy "
 "egyes funkciók nem állnak rendelkezésre, vagy nem működnek megfelelően."
 
-#: class-r34ics.php:288
+#: class-r34ics.php:299
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -49,33 +49,33 @@ msgstr ""
 "lévő városra a megfelelő időmegjelenítés érdekében. További információért "
 "lásd a %6$sdokumentációnkat%7$s."
 
-#: class-r34ics.php:319 templates/admin/admin.php:17
+#: class-r34ics.php:342 templates/admin/admin.php:17
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "Segédprogramok"
 
-#: class-r34ics.php:320 class-r34ics.php:1955 class-r34ics.php:1959
+#: class-r34ics.php:343 class-r34ics.php:1993 class-r34ics.php:1997
 #: templates/admin/admin.php:19 templates/admin/admin.php:31
 msgid "Settings"
 msgstr "Beállítások"
 
-#: class-r34ics.php:321 templates/admin/sidebar.php:5
+#: class-r34ics.php:344 templates/admin/sidebar.php:5
 msgid "User Guide"
 msgstr "Felhasználói kézikönyv"
 
-#: class-r34ics.php:322 templates/admin/sidebar.php:10
+#: class-r34ics.php:345 templates/admin/sidebar.php:10
 msgid "Support"
 msgstr "Támogatás"
 
-#: class-r34ics.php:324
+#: class-r34ics.php:347
 msgid "Upgrade to PRO!"
 msgstr "Frissítsen PRO-ra!"
 
-#: class-r34ics.php:342
+#: class-r34ics.php:365
 msgid "Show/hide all"
 msgstr "Az összes megjelenítése/elrejtése"
 
-#: class-r34ics.php:601
+#: class-r34ics.php:624
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -89,40 +89,40 @@ msgstr ""
 "elhatárolódására, akkor érdemes lehet inkább a csőkaraktert használni. "
 "Érintett URL:Affected URL:"
 
-#: class-r34ics.php:1037
+#: class-r34ics.php:1060
 msgid "Hide past events"
 msgstr "Múltbeli események elrejtése"
 
-#: class-r34ics.php:1038 templates/calendar-month.php:83
+#: class-r34ics.php:1061 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "Elmúlt események megjelenítése"
 
-#: class-r34ics.php:1116
+#: class-r34ics.php:1139
 msgid "Contact:"
 msgstr "Kapcsolat:"
 
-#: class-r34ics.php:1122
+#: class-r34ics.php:1145
 msgid "Resources:"
 msgstr "Források:"
 
-#: class-r34ics.php:1132
+#: class-r34ics.php:1155
 msgid "Click for more..."
 msgstr "Kattintson a további ..."
 
-#: class-r34ics.php:1166
+#: class-r34ics.php:1189
 msgid "Save to your calendar"
 msgstr "Mentés a naptárba"
 
-#: class-r34ics.php:1166
+#: class-r34ics.php:1189
 msgid "Download"
 msgstr "Letöltés"
 
-#: class-r34ics.php:1271
+#: class-r34ics.php:1294
 msgid "Cancelled"
 msgstr "Törölve"
 
-#: class-r34ics.php:1629
+#: class-r34ics.php:1653
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -130,7 +130,7 @@ msgstr ""
 "A \"currentweek\" shortcode attribútum elavult. Kérjük, használja a "
 "view=\"week\" elemet a rövid kódjában."
 
-#: class-r34ics.php:1632
+#: class-r34ics.php:1656
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -138,17 +138,17 @@ msgstr ""
 "A \"legendinline\" rövidkód attribútum elavult. Kérjük, használja helyette a "
 "legendstyle=\"inline\" attribútumot a rövidkódban."
 
-#: class-r34ics.php:1914
+#: class-r34ics.php:1948
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Törölt %1$s %2$s tranziens(ek)."
 
-#: class-r34ics.php:1921
+#: class-r34ics.php:1955
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nem találtunk %1$s tranzienseket."
 
-#: class-r34ics.php:1955
+#: class-r34ics.php:1993
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -157,11 +157,11 @@ msgstr ""
 "Úgy tűnik, hogy a táp URL-címe HTTP Basic Authentication hitelesítő adatokat "
 "tartalmaz. Próbálja meg kikapcsolni a %1$s opciót a fenti %2$s fül alatt."
 
-#: class-r34ics.php:1955 class-r34ics.php:1959 templates/admin/settings.php:16
+#: class-r34ics.php:1993 class-r34ics.php:1997 templates/admin/settings.php:16
 msgid "Use legacy feed request method"
 msgstr "Hagyományos takarmánykérési módszer használata"
 
-#: class-r34ics.php:1959
+#: class-r34ics.php:1997
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -170,7 +170,7 @@ msgstr ""
 "Ha a takarmány URL címe működik az online %1$sElőnézet%2$s eszközünkkel, "
 "próbálja meg bekapcsolni a %3$s opciót a fenti %4$s fül alatt."
 
-#: class-r34ics.php:1965
+#: class-r34ics.php:2003
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -185,7 +185,7 @@ msgstr ""
 "frissítéseit. A helyes dinamikus feed URL-cím megszerzésével kapcsolatos "
 "utasításokat lásd a %4$sFelhasználói útmutatóban%5$s."
 
-#: class-r34ics.php:2005
+#: class-r34ics.php:2050
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -194,55 +194,55 @@ msgstr ""
 "%1$sBeállítások frissítve.%2$s Lehet, hogy frissítenie kell az oldalt, hogy "
 "lássa a változásokat."
 
-#: class-r34ics.php:2153
+#: class-r34ics.php:2204
 msgid "calendar event"
 msgstr "naptári esemény"
 
-#: functions.php:692 functions.php:700 functions.php:709
+#: functions.php:715 functions.php:723 functions.php:732
 msgid "Map"
 msgstr "Bản đồ"
 
-#: functions.php:925
+#: functions.php:948
 msgid "Recurring event"
 msgstr "Ismétlődő esemény"
 
-#: functions.php:930
+#: functions.php:953
 #, php-format
 msgid "Recurs every %s years"
 msgstr "Ismétlődik minden %s évben"
 
-#: functions.php:930
+#: functions.php:953
 msgid "Recurs yearly"
 msgstr "Évente ismétlődik"
 
-#: functions.php:933
+#: functions.php:956
 #, php-format
 msgid "Recurs every %s months"
 msgstr "Ismétlődik minden %s hónapban"
 
-#: functions.php:933
+#: functions.php:956
 msgid "Recurs monthly"
 msgstr "Havonta ismétlődik"
 
-#: functions.php:936
+#: functions.php:959
 #, php-format
 msgid "Recurs every %s weeks"
 msgstr "Ismétlődik minden %s héten"
 
-#: functions.php:936
+#: functions.php:959
 msgid "Recurs weekly"
 msgstr "Hetente ismétlődik"
 
-#: functions.php:939
+#: functions.php:962
 #, php-format
 msgid "Recurs every %s days"
 msgstr "Ismétlődik minden %s napon"
 
-#: functions.php:939
+#: functions.php:962
 msgid "Recurs daily"
 msgstr "Naponta ismétlődik"
 
-#: functions.php:1064
+#: functions.php:1087
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -255,11 +255,11 @@ msgstr ""
 "Ennek következtében előfordulhat, hogy a naptárad nem jelenik meg "
 "megfelelően. Kérjük, távolítsa el a kattintható linket a rövidkódból."
 
-#: functions.php:1362
+#: functions.php:1385
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Az r34ics_url_get_contents() függvény már nem támogatott."
 
-#: ics-calendar.php:105
+#: ics-calendar.php:108
 #, php-format
 msgid ""
 "Thank you for installing %1$s. Before creating your first calendar "
@@ -273,7 +273,7 @@ msgstr ""
 "beállításai megfelelőek-e. További információkért tekintse meg a "
 "%4$sFelhasználói útmutató%5$s-t."
 
-#: ics-calendar.php:147
+#: ics-calendar.php:154
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -289,7 +289,7 @@ msgstr ""
 "problémákkal találkozol, kérjük, látogass el a %4$sWordPress támogatási "
 "fórumokra%5$s segítségért."
 
-#: ics-calendar.php:157
+#: ics-calendar.php:165
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -307,7 +307,7 @@ msgstr ""
 "alapértelmezett beállításokra való áttéréshez kapcsolja be a %8$s opciót a "
 "%9$s beállítások%10$s oldalon."
 
-#: ics-calendar.php:157 templates/admin/settings.php:46
+#: ics-calendar.php:165 templates/admin/settings.php:46
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Új paraméter alapértelmezések használata (v.10.6)"
 
@@ -432,7 +432,7 @@ msgstr "Insert %1$s"
 msgid "Getting Started"
 msgstr "Kezdjük el"
 
-#: templates/admin/admin.php:18 templates/admin/utilities.php:90
+#: templates/admin/admin.php:18 templates/admin/utilities.php:92
 msgid "System Report"
 msgstr "Rendszerjelentés"
 
@@ -618,8 +618,8 @@ msgstr ""
 
 #: templates/admin/sidebar.php:12
 #, php-format
-msgid "For assistance, please use our %1$ssupport request form%1$s."
-msgstr "Segítségért kérjük, használja a %1$stámogatási kérelem űrlapot%1$s."
+msgid "For assistance, please use our %1$ssupport request form%2$s."
+msgstr "Segítségért kérjük, használja a %1$stámogatási kérelem űrlapot%2$s."
 
 #: templates/admin/sidebar.php:22
 #, php-format
@@ -641,13 +641,13 @@ msgstr "ICS események"
 #: templates/admin/sidebar.php:36
 #, php-format
 msgid ""
-"%1$sNew in version 5.1!%2$s Turns ICS Calendar Pro into a full calendar "
-"system. Create and manage events directly in WordPress and even integrate "
-"them seamlessly with your existing feeds."
+"%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
+"events directly in WordPress and even integrate them seamlessly with your "
+"existing feeds."
 msgstr ""
-"%1$sÚjdonság az 5.1-es verzióban!%2$s Az ICS Calendar Pro teljes körű "
-"naptárrendszerré válik. Hozzon létre és kezeljen eseményeket közvetlenül a "
-"WordPressben, és akár zökkenőmentesen integrálja őket a meglévő feedjeibe."
+"%1$sÚj!%2$s A %3$s-t teljes naptárrendszerré alakítja. Hozzon létre és "
+"kezeljen eseményeket közvetlenül a WordPressben, és akár zökkenőmentesen "
+"integrálja őket a meglévő feedjeibe."
 
 #: templates/admin/sidebar.php:37
 msgid "Additional Views"
@@ -662,12 +662,8 @@ msgid "Calendar Builder"
 msgstr "Naptárkészítő"
 
 #: templates/admin/sidebar.php:40
-msgid ""
-"Configure all calendar settings with an easy visual interface. Also works "
-"directly in Block Editor."
-msgstr ""
-"Konfiguráljon minden naptárbeállítást egy egyszerű vizuális felületen. "
-"Közvetlenül a blokkszerkesztőben is működik."
+msgid "Configure all calendar settings with an easy visual interface."
+msgstr "Konfiguráljon minden naptárbeállítást egy egyszerű vizuális felületen."
 
 #: templates/admin/sidebar.php:41
 msgid "Customizer"
@@ -765,7 +761,7 @@ msgid ""
 "An unknown error occurred while attempting to retrieve the requested URL."
 msgstr "Ismeretlen hiba történt a kért URL lekérése közben."
 
-#: templates/admin/utilities.php:92
+#: templates/admin/utilities.php:94
 msgid ""
 "Please copy the following text and include it in your message when emailing "
 "support."
@@ -773,7 +769,7 @@ msgstr ""
 "Kérjük, másolja a következő szöveget, és vegye fel az üzenetbe, amikor e-"
 "mailt küld a támogatásnak."
 
-#: templates/admin/utilities.php:93
+#: templates/admin/utilities.php:95
 #, php-format
 msgid ""
 "Also please include the %1$s shortcode exactly as you have it entered on the "
@@ -782,7 +778,7 @@ msgstr ""
 "Kérjük, hogy a %1$s rövidkódot is pontosan úgy adja meg, ahogyan azt az "
 "érintett oldalon beírta."
 
-#: templates/admin/utilities.php:93
+#: templates/admin/utilities.php:95
 msgid ""
 "For your site security please do NOT post the System Report in the support "
 "forums."
@@ -802,7 +798,7 @@ msgstr "Előző oldal"
 msgid "Next Page"
 msgstr "Következő oldal"
 
-#: templates/calendar-list.php:284 templates/calendar-month.php:200
+#: templates/calendar-list.php:283 templates/calendar-month.php:200
 #: templates/calendar-week.php:209
 msgid "All Day"
 msgstr "Egész nap"

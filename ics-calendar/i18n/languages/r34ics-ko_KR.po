@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2024-11-05 12:08-0600\n"
-"PO-Revision-Date: 2024-11-05 12:08-0600\n"
+"POT-Creation-Date: 2024-11-18 14:40-0600\n"
+"PO-Revision-Date: 2024-11-18 14:40-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ko_KR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:279
+#: class-r34ics.php:290
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -32,7 +32,7 @@ msgstr ""
 "린더는 웹 서버에서 실행하도록 되어 있으므로 일부 기능을 사용할 수 없거나 제대"
 "로 작동하지 않을 수 있습니다."
 
-#: class-r34ics.php:288
+#: class-r34ics.php:299
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -48,33 +48,33 @@ msgstr ""
 "하여 동일한 시간대에서 사용자 위치에서 가장 가까운 도시로 변경하십시오. 이 문"
 "제에 대한 추가 정보는 %6$s문서%7$s를 참조하십시오."
 
-#: class-r34ics.php:319 templates/admin/admin.php:17
+#: class-r34ics.php:342 templates/admin/admin.php:17
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "도구"
 
-#: class-r34ics.php:320 class-r34ics.php:1955 class-r34ics.php:1959
+#: class-r34ics.php:343 class-r34ics.php:1993 class-r34ics.php:1997
 #: templates/admin/admin.php:19 templates/admin/admin.php:31
 msgid "Settings"
 msgstr "설정"
 
-#: class-r34ics.php:321 templates/admin/sidebar.php:5
+#: class-r34ics.php:344 templates/admin/sidebar.php:5
 msgid "User Guide"
 msgstr "사용자 설명서"
 
-#: class-r34ics.php:322 templates/admin/sidebar.php:10
+#: class-r34ics.php:345 templates/admin/sidebar.php:10
 msgid "Support"
 msgstr "지원"
 
-#: class-r34ics.php:324
+#: class-r34ics.php:347
 msgid "Upgrade to PRO!"
 msgstr "프로로 업그레이드!"
 
-#: class-r34ics.php:342
+#: class-r34ics.php:365
 msgid "Show/hide all"
 msgstr "모두 표시/숨기기"
 
-#: class-r34ics.php:601
+#: class-r34ics.php:624
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -87,40 +87,40 @@ msgstr ""
 "URL을 구분하기 위해 공백을 사용하는 경우 파이프 문자를 대신 사용해 볼 수도 있"
 "습니다. 영향을 받는 URL:"
 
-#: class-r34ics.php:1037
+#: class-r34ics.php:1060
 msgid "Hide past events"
 msgstr "과거 이벤트 숨기기"
 
-#: class-r34ics.php:1038 templates/calendar-month.php:83
+#: class-r34ics.php:1061 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "지난 이벤트 보기"
 
-#: class-r34ics.php:1116
+#: class-r34ics.php:1139
 msgid "Contact:"
 msgstr "연락:"
 
-#: class-r34ics.php:1122
+#: class-r34ics.php:1145
 msgid "Resources:"
 msgstr "자원:"
 
-#: class-r34ics.php:1132
+#: class-r34ics.php:1155
 msgid "Click for more..."
 msgstr "더 보려면 클릭하세요..."
 
-#: class-r34ics.php:1166
+#: class-r34ics.php:1189
 msgid "Save to your calendar"
 msgstr "캘린더에 저장"
 
-#: class-r34ics.php:1166
+#: class-r34ics.php:1189
 msgid "Download"
 msgstr "다운로드"
 
-#: class-r34ics.php:1271
+#: class-r34ics.php:1294
 msgid "Cancelled"
 msgstr "취소"
 
-#: class-r34ics.php:1629
+#: class-r34ics.php:1653
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -128,7 +128,7 @@ msgstr ""
 "\"currentweek\" 쇼트코드 속성은 더 이상 사용되지 않습니다. 대신 쇼트코드에서 "
 "view=\"week\"를 사용하십시오."
 
-#: class-r34ics.php:1632
+#: class-r34ics.php:1656
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -136,17 +136,17 @@ msgstr ""
 "\"legendinline\" 쇼트코드 속성은 더 이상 사용되지 않습니다. 대신 shortcode에 "
 "legendstyle=\"inline\"을 사용하십시오."
 
-#: class-r34ics.php:1914
+#: class-r34ics.php:1948
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$s 과도 현상을 제거했습니다."
 
-#: class-r34ics.php:1921
+#: class-r34ics.php:1955
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s 과도 현상이 발견되지 않았습니다."
 
-#: class-r34ics.php:1955
+#: class-r34ics.php:1993
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -155,11 +155,11 @@ msgstr ""
 "피드 URL에 HTTP 기본 인증 자격 증명이 포함된 것 같습니다. 위의 %2$s 탭에서 "
 "%1$s 옵션을 해제해 보세요."
 
-#: class-r34ics.php:1955 class-r34ics.php:1959 templates/admin/settings.php:16
+#: class-r34ics.php:1993 class-r34ics.php:1997 templates/admin/settings.php:16
 msgid "Use legacy feed request method"
 msgstr "레거시 피드 요청 방법 사용"
 
-#: class-r34ics.php:1959
+#: class-r34ics.php:1997
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -168,7 +168,7 @@ msgstr ""
 "피드 URL이 온라인 %1$s미리보기%2$s 도구에서 작동하는 경우, 위의 %4$s 탭에서 "
 "%3$s 옵션을 켜보세요."
 
-#: class-r34ics.php:1965
+#: class-r34ics.php:2003
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -182,7 +182,7 @@ msgstr ""
 "캘린더의 업데이트는 반영되지 않습니다. 올바른 동적 피드 URL을 얻는 방법은 "
 "%4$s 사용자 가이드%5$s를 참조하세요."
 
-#: class-r34ics.php:2005
+#: class-r34ics.php:2050
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -191,55 +191,55 @@ msgstr ""
 "%1$s설정이 업데이트되었습니다.%2$s 일부 변경 사항을 확인하려면 페이지를 새로 "
 "고쳐야 할 수 있습니다."
 
-#: class-r34ics.php:2153
+#: class-r34ics.php:2204
 msgid "calendar event"
 msgstr "캘린더 이벤트"
 
-#: functions.php:692 functions.php:700 functions.php:709
+#: functions.php:715 functions.php:723 functions.php:732
 msgid "Map"
 msgstr "지도"
 
-#: functions.php:925
+#: functions.php:948
 msgid "Recurring event"
 msgstr "반복 이벤트"
 
-#: functions.php:930
+#: functions.php:953
 #, php-format
 msgid "Recurs every %s years"
 msgstr "%s년마다 반복"
 
-#: functions.php:930
+#: functions.php:953
 msgid "Recurs yearly"
 msgstr "매년 반복"
 
-#: functions.php:933
+#: functions.php:956
 #, php-format
 msgid "Recurs every %s months"
 msgstr "%s개월마다 반복"
 
-#: functions.php:933
+#: functions.php:956
 msgid "Recurs monthly"
 msgstr "매월 반복"
 
-#: functions.php:936
+#: functions.php:959
 #, php-format
 msgid "Recurs every %s weeks"
 msgstr "%s주마다 반복"
 
-#: functions.php:936
+#: functions.php:959
 msgid "Recurs weekly"
 msgstr "매주 반복"
 
-#: functions.php:939
+#: functions.php:962
 #, php-format
 msgid "Recurs every %s days"
 msgstr "%s일마다 반복"
 
-#: functions.php:939
+#: functions.php:962
 msgid "Recurs daily"
 msgstr "매일 반복"
 
-#: functions.php:1064
+#: functions.php:1087
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -251,11 +251,11 @@ msgstr ""
 "능한 링크로 바뀌었을 가능성이 큽니다. 결과적으로 캘린더가 제대로 표시되지 않"
 "을 수 있습니다. 쇼트코드에서 클릭 가능한 링크를 제거하십시오."
 
-#: functions.php:1362
+#: functions.php:1385
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "R34ics_url_get_contents() 함수는 더 이상 지원되지 않습니다."
 
-#: ics-calendar.php:105
+#: ics-calendar.php:108
 #, php-format
 msgid ""
 "Thank you for installing %1$s. Before creating your first calendar "
@@ -268,7 +268,7 @@ msgstr ""
 "정이 올바른지 확인하십시오. 자세한 내용은 %4$s사용자 가이드%5$s를 참조하십시"
 "오."
 
-#: ics-calendar.php:147
+#: ics-calendar.php:154
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -282,7 +282,7 @@ msgstr ""
 "치 버전과 완벽하게 호환됩니다. 버전 11 이상으로 업그레이드한 후 새로운 문제"
 "가 발생하면 %4$s워드프레스 지원 포럼%5$s에서 도움을 받으세요."
 
-#: ics-calendar.php:157
+#: ics-calendar.php:165
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -298,7 +298,7 @@ msgstr ""
 "물%7$s을 참조하거나 새 기본값으로 전환하려면 %9$s 설정%10$s에서 %8$s 옵션을 "
 "켜십시오. 페이지."
 
-#: ics-calendar.php:157 templates/admin/settings.php:46
+#: ics-calendar.php:165 templates/admin/settings.php:46
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "새 매개변수 기본값 사용(v.10.6)"
 
@@ -422,7 +422,7 @@ msgstr "%1$s 삽입"
 msgid "Getting Started"
 msgstr "시작하기"
 
-#: templates/admin/admin.php:18 templates/admin/utilities.php:90
+#: templates/admin/admin.php:18 templates/admin/utilities.php:92
 msgid "System Report"
 msgstr "시스템 보고서"
 
@@ -595,8 +595,8 @@ msgstr "전체 사용자 가이드는 웹사이트에서 수십 개 언어로 �
 
 #: templates/admin/sidebar.php:12
 #, php-format
-msgid "For assistance, please use our %1$ssupport request form%1$s."
-msgstr "도움이 필요하시면 %1$s지원 요청 양식%1$s을 이용해 주세요."
+msgid "For assistance, please use our %1$ssupport request form%2$s."
+msgstr "도움이 필요하시면 %1$s지원 요청 양식%2$s을 이용해 주세요."
 
 #: templates/admin/sidebar.php:22
 #, php-format
@@ -616,13 +616,12 @@ msgstr "ICS 이벤트"
 #: templates/admin/sidebar.php:36
 #, php-format
 msgid ""
-"%1$sNew in version 5.1!%2$s Turns ICS Calendar Pro into a full calendar "
-"system. Create and manage events directly in WordPress and even integrate "
-"them seamlessly with your existing feeds."
+"%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
+"events directly in WordPress and even integrate them seamlessly with your "
+"existing feeds."
 msgstr ""
-"%1$s버전 5.1의 새로운 기능!%2$s ICS 캘린더 프로를 완전한 캘린더 시스템으로 전"
-"환합니다. 워드프레스에서 직접 이벤트를 생성하고 관리하며 기존 피드와 원활하"
-"게 통합할 수도 있습니다."
+"%1$s신규!%2$s %3$s를 전체 캘린더 시스템으로 전환합니다. 워드프레스에서 직접 "
+"이벤트를 생성하고 관리하며 기존 피드와 원활하게 통합할 수도 있습니다."
 
 #: templates/admin/sidebar.php:37
 msgid "Additional Views"
@@ -637,12 +636,8 @@ msgid "Calendar Builder"
 msgstr "캘린더 빌더"
 
 #: templates/admin/sidebar.php:40
-msgid ""
-"Configure all calendar settings with an easy visual interface. Also works "
-"directly in Block Editor."
-msgstr ""
-"간편한 시각적 인터페이스로 모든 캘린더 설정을 구성할 수 있습니다. 블록 에디터"
-"에서도 바로 사용할 수 있습니다."
+msgid "Configure all calendar settings with an easy visual interface."
+msgstr "간편한 시각적 인터페이스로 모든 캘린더 설정을 구성하세요."
 
 #: templates/admin/sidebar.php:41
 msgid "Customizer"
@@ -736,13 +731,13 @@ msgid ""
 "An unknown error occurred while attempting to retrieve the requested URL."
 msgstr "요청한 URL을 검색하는 동안 알 수 없는 오류가 발생했습니다."
 
-#: templates/admin/utilities.php:92
+#: templates/admin/utilities.php:94
 msgid ""
 "Please copy the following text and include it in your message when emailing "
 "support."
 msgstr "지원 이메일을 보낼 때 다음 텍스트를 복사하여 메시지에 포함하십시오."
 
-#: templates/admin/utilities.php:93
+#: templates/admin/utilities.php:95
 #, php-format
 msgid ""
 "Also please include the %1$s shortcode exactly as you have it entered on the "
@@ -750,7 +745,7 @@ msgid ""
 msgstr ""
 "또한 영향을 받는 페이지에 입력한 대로 정확히 %1$s 쇼트코드를 포함하십시오."
 
-#: templates/admin/utilities.php:93
+#: templates/admin/utilities.php:95
 msgid ""
 "For your site security please do NOT post the System Report in the support "
 "forums."
@@ -768,7 +763,7 @@ msgstr "이전 페이지"
 msgid "Next Page"
 msgstr "다음 페이지"
 
-#: templates/calendar-list.php:284 templates/calendar-month.php:200
+#: templates/calendar-list.php:283 templates/calendar-month.php:200
 #: templates/calendar-week.php:209
 msgid "All Day"
 msgstr "하루 종일"

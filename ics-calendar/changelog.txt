@@ -1,5 +1,14 @@
 === ICS Calendar Changelog ===
 
+= 11.3.7 - 2024.11.18 =
+
+* Added `class_exists()` check to `R34ICS` class.
+* Added `ua` shortcode attribute, to allow for a custom user agent string on requests. May be useful if your source server is rejecting ICS Calendar's requests. Set to `true` to use a preselected real user agent string, or enter a custom string of your choosing. (Custom strings must be at least 6 characters.) If omitted or set to `false`, ICS Calendar's default user agent string will be used for the request. _Note: This parameter has no effect if the **Use legacy feed request method** setting is turned on._
+* Standardized handling of all admin notices using `r34ics_deferred_admin_notices()` function, and modified some notices to be dismissible.
+* Minor code refactoring.
+* Vendors: Restored `persist-admin-notices-dismissal`, previously removed in version 9.8.0 because it wasn't being used.
+* i18n: Updated translation strings.
+
 = 11.3.6.1 - 2024.11.11 =
 
 * Admin: Fixed HTML formatting issue in admin page sidebar.

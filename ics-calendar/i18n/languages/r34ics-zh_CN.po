@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2024-11-05 12:10-0600\n"
-"PO-Revision-Date: 2024-11-05 12:10-0600\n"
+"POT-Creation-Date: 2024-11-18 14:41-0600\n"
+"PO-Revision-Date: 2024-11-18 14:41-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:279
+#: class-r34ics.php:290
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -31,7 +31,7 @@ msgstr ""
 "%1$s您正在 WordPress Playground 上运行 ICS Calendar。%2$s由于 ICS Calendar 是"
 "在网络服务器上运行的，因此某些功能可能不可用或无法正常运行。"
 
-#: class-r34ics.php:288
+#: class-r34ics.php:299
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -46,33 +46,33 @@ msgstr ""
 "市，在同一个时区，以获得正确的时间显示。请参阅我们的%6$s文件%7$s，了解有关这"
 "个问题的其他信息。"
 
-#: class-r34ics.php:319 templates/admin/admin.php:17
+#: class-r34ics.php:342 templates/admin/admin.php:17
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "工具"
 
-#: class-r34ics.php:320 class-r34ics.php:1955 class-r34ics.php:1959
+#: class-r34ics.php:343 class-r34ics.php:1993 class-r34ics.php:1997
 #: templates/admin/admin.php:19 templates/admin/admin.php:31
 msgid "Settings"
 msgstr "设置"
 
-#: class-r34ics.php:321 templates/admin/sidebar.php:5
+#: class-r34ics.php:344 templates/admin/sidebar.php:5
 msgid "User Guide"
 msgstr "用户指南"
 
-#: class-r34ics.php:322 templates/admin/sidebar.php:10
+#: class-r34ics.php:345 templates/admin/sidebar.php:10
 msgid "Support"
 msgstr "支持"
 
-#: class-r34ics.php:324
+#: class-r34ics.php:347
 msgid "Upgrade to PRO!"
 msgstr "升级到PRO！"
 
-#: class-r34ics.php:342
+#: class-r34ics.php:365
 msgid "Show/hide all"
 msgstr "显示/隐藏所有"
 
-#: class-r34ics.php:601
+#: class-r34ics.php:624
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -84,46 +84,46 @@ msgstr ""
 "cURL 或allow_url_fopen是否可用。如果使用空格来分隔多个 URL，您可能还希望尝试"
 "使用管道字符。受影响的 URL:"
 
-#: class-r34ics.php:1037
+#: class-r34ics.php:1060
 msgid "Hide past events"
 msgstr "隐藏过去的活动"
 
-#: class-r34ics.php:1038 templates/calendar-month.php:83
+#: class-r34ics.php:1061 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "显示过去的事件"
 
-#: class-r34ics.php:1116
+#: class-r34ics.php:1139
 msgid "Contact:"
 msgstr "联系人:"
 
-#: class-r34ics.php:1122
+#: class-r34ics.php:1145
 msgid "Resources:"
 msgstr "相关资源:"
 
-#: class-r34ics.php:1132
+#: class-r34ics.php:1155
 msgid "Click for more..."
 msgstr "点击查看更多..."
 
-#: class-r34ics.php:1166
+#: class-r34ics.php:1189
 msgid "Save to your calendar"
 msgstr "保存到你的日历"
 
-#: class-r34ics.php:1166
+#: class-r34ics.php:1189
 msgid "Download"
 msgstr "下载"
 
-#: class-r34ics.php:1271
+#: class-r34ics.php:1294
 msgid "Cancelled"
 msgstr "已取消"
 
-#: class-r34ics.php:1629
+#: class-r34ics.php:1653
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
 msgstr "\"currentweek\"短代码属性已弃用。请在短代码中使用 view=\"week\"。"
 
-#: class-r34ics.php:1632
+#: class-r34ics.php:1656
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -131,17 +131,17 @@ msgstr ""
 "legendinline \"简码属性已被弃用。请在您的简码中使用 legendstyle=\"inline\" 代"
 "替。"
 
-#: class-r34ics.php:1914
+#: class-r34ics.php:1948
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "清除了%1$s%2$s个瞬态。"
 
-#: class-r34ics.php:1921
+#: class-r34ics.php:1955
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "没有发现%1$s的瞬态。"
 
-#: class-r34ics.php:1955
+#: class-r34ics.php:1993
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -150,11 +150,11 @@ msgstr ""
 "您的馈送 URL 似乎包含 HTTP 基本身份验证凭据。请尝试关闭上述 %2$s 标签下的 "
 "%1$s 选项。"
 
-#: class-r34ics.php:1955 class-r34ics.php:1959 templates/admin/settings.php:16
+#: class-r34ics.php:1993 class-r34ics.php:1997 templates/admin/settings.php:16
 msgid "Use legacy feed request method"
 msgstr "使用传统的馈送请求方法"
 
-#: class-r34ics.php:1959
+#: class-r34ics.php:1997
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -163,7 +163,7 @@ msgstr ""
 "如果您的馈送 URL 可以使用我们的在线 %1$sPreview%2$s 工具，请尝试打开上面 "
 "%4$s 标签下的 %3$s 选项。"
 
-#: class-r34ics.php:1965
+#: class-r34ics.php:2003
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -176,62 +176,62 @@ msgstr ""
 "URL，但它将是文件创建时日历的静态快照，不会反映源日历的任何未来更新。请参阅我"
 "们的 %4$s 用户指南%5$s，了解如何获取正确的动态源 URL。"
 
-#: class-r34ics.php:2005
+#: class-r34ics.php:2050
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
 "changes."
 msgstr "%1$s设置已更新。%2$s 您可能需要刷新页面才能看到某些更改。"
 
-#: class-r34ics.php:2153
+#: class-r34ics.php:2204
 msgid "calendar event"
 msgstr "日历事件"
 
-#: functions.php:692 functions.php:700 functions.php:709
+#: functions.php:715 functions.php:723 functions.php:732
 msgid "Map"
 msgstr "地图"
 
-#: functions.php:925
+#: functions.php:948
 msgid "Recurring event"
 msgstr "定期事件"
 
-#: functions.php:930
+#: functions.php:953
 #, php-format
 msgid "Recurs every %s years"
 msgstr "每%s年重复一次"
 
-#: functions.php:930
+#: functions.php:953
 msgid "Recurs yearly"
 msgstr "每年递归"
 
-#: functions.php:933
+#: functions.php:956
 #, php-format
 msgid "Recurs every %s months"
 msgstr "每%s个月重复一次"
 
-#: functions.php:933
+#: functions.php:956
 msgid "Recurs monthly"
 msgstr "每月递归"
 
-#: functions.php:936
+#: functions.php:959
 #, php-format
 msgid "Recurs every %s weeks"
 msgstr "每%s周重复一次"
 
-#: functions.php:936
+#: functions.php:959
 msgid "Recurs weekly"
 msgstr "每周重复"
 
-#: functions.php:939
+#: functions.php:962
 #, php-format
 msgid "Recurs every %s days"
 msgstr "每%s天重复一次"
 
-#: functions.php:939
+#: functions.php:962
 msgid "Recurs daily"
 msgstr "每天重复"
 
-#: functions.php:1064
+#: functions.php:1087
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -242,11 +242,11 @@ msgstr ""
 "您的%1$s短代码中的 \"url \"属性似乎包含HTML标签；很可能您的URL已经变成了一个"
 "可点击的链接。您的日历可能因此而不能正常显示。请删除短代码中的可点击链接。"
 
-#: functions.php:1362
+#: functions.php:1385
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "不再支持 r34ics_url_get_contents() 函数。"
 
-#: ics-calendar.php:105
+#: ics-calendar.php:108
 #, php-format
 msgid ""
 "Thank you for installing %1$s. Before creating your first calendar "
@@ -258,7 +258,7 @@ msgstr ""
 "并验证您的网站语言、时区和日期/时间格式设置是否正确。请参阅我们的%4$s用户指"
 "南%5$s了解更多信息。"
 
-#: ics-calendar.php:147
+#: ics-calendar.php:154
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -271,7 +271,7 @@ msgstr ""
 "WordPress 的标准内置功能，因此应与所有现有安装完全兼容。如果您在升级到 11 或"
 "更高版本后遇到任何新问题，请访问 %4$sWordPress 支持论坛%5$s 寻求帮助。"
 
-#: ics-calendar.php:157
+#: ics-calendar.php:165
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -286,7 +286,7 @@ msgstr ""
 "请阅读我们的%6$s博客文章%7$s，或切换到新的默认值，打开%9$s设置%10$s页面上"
 "的%8$s选项。"
 
-#: ics-calendar.php:157 templates/admin/settings.php:46
+#: ics-calendar.php:165 templates/admin/settings.php:46
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "使用新的参数默认值 (v.10.6)"
 
@@ -402,7 +402,7 @@ msgstr "插入 %1$s"
 msgid "Getting Started"
 msgstr "入门指南"
 
-#: templates/admin/admin.php:18 templates/admin/utilities.php:90
+#: templates/admin/admin.php:18 templates/admin/utilities.php:92
 msgid "System Report"
 msgstr "系统报告"
 
@@ -570,8 +570,8 @@ msgstr "我们网站上有完整的用户指南，可翻译成数十种语言：
 
 #: templates/admin/sidebar.php:12
 #, php-format
-msgid "For assistance, please use our %1$ssupport request form%1$s."
-msgstr "如需帮助，请使用我们的 %1$s 支持申请表%1$s。"
+msgid "For assistance, please use our %1$ssupport request form%2$s."
+msgstr "如需帮助，请使用我们的 %1$s 支持申请表%2$s。"
 
 #: templates/admin/sidebar.php:22
 #, php-format
@@ -591,12 +591,12 @@ msgstr "ICS 活动"
 #: templates/admin/sidebar.php:36
 #, php-format
 msgid ""
-"%1$sNew in version 5.1!%2$s Turns ICS Calendar Pro into a full calendar "
-"system. Create and manage events directly in WordPress and even integrate "
-"them seamlessly with your existing feeds."
+"%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
+"events directly in WordPress and even integrate them seamlessly with your "
+"existing feeds."
 msgstr ""
-"%1$s5.1版的新功能！%2$s 将 ICS Calendar Pro 变成一个完整的日历系统。直接在 "
-"WordPress 中创建和管理事件，甚至可以将它们与现有的供稿无缝整合。"
+"%1$s新功能！%2$s 将 %3$s 变成一个完整的日历系统。直接在 WordPress 中创建和管"
+"理事件，甚至将它们与您现有的信息源无缝整合。"
 
 #: templates/admin/sidebar.php:37
 msgid "Additional Views"
@@ -611,10 +611,8 @@ msgid "Calendar Builder"
 msgstr "日历生成器"
 
 #: templates/admin/sidebar.php:40
-msgid ""
-"Configure all calendar settings with an easy visual interface. Also works "
-"directly in Block Editor."
-msgstr "通过简单的可视化界面配置所有日历设置。也可直接在区块编辑器中使用。"
+msgid "Configure all calendar settings with an easy visual interface."
+msgstr "通过简单的可视化界面配置所有日历设置。"
 
 #: templates/admin/sidebar.php:41
 msgid "Customizer"
@@ -705,20 +703,20 @@ msgid ""
 "An unknown error occurred while attempting to retrieve the requested URL."
 msgstr "在尝试检索请求的 URL 时发生了未知错误。"
 
-#: templates/admin/utilities.php:92
+#: templates/admin/utilities.php:94
 msgid ""
 "Please copy the following text and include it in your message when emailing "
 "support."
 msgstr "请在发送电子邮件支持时复制以下文本并将其包含在邮件中。"
 
-#: templates/admin/utilities.php:93
+#: templates/admin/utilities.php:95
 #, php-format
 msgid ""
 "Also please include the %1$s shortcode exactly as you have it entered on the "
 "affected page."
 msgstr "也请包括%1$s短码，与你在受影响的页面上输入的短码完全一致。"
 
-#: templates/admin/utilities.php:93
+#: templates/admin/utilities.php:95
 msgid ""
 "For your site security please do NOT post the System Report in the support "
 "forums."
@@ -736,7 +734,7 @@ msgstr "上一页"
 msgid "Next Page"
 msgstr "下一页"
 
-#: templates/calendar-list.php:284 templates/calendar-month.php:200
+#: templates/calendar-list.php:283 templates/calendar-month.php:200
 #: templates/calendar-week.php:209
 msgid "All Day"
 msgstr "全天"

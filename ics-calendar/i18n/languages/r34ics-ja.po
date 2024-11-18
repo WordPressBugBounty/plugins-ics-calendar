@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2024-11-05 12:08-0600\n"
-"PO-Revision-Date: 2024-11-05 12:08-0600\n"
+"POT-Creation-Date: 2024-11-18 14:40-0600\n"
+"PO-Revision-Date: 2024-11-18 14:40-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:279
+#: class-r34ics.php:290
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -32,7 +32,7 @@ msgstr ""
 "Calendarはウェブサーバー上で実行することを目的としているため、一部の機能が利"
 "用できなかったり、正しく機能しない場合があります。"
 
-#: class-r34ics.php:288
+#: class-r34ics.php:299
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -48,33 +48,33 @@ msgstr ""
 "に変更し、正しく時間を表示してください。この問題の詳細については、%6$sドキュ"
 "メント%7$s を参照してください。"
 
-#: class-r34ics.php:319 templates/admin/admin.php:17
+#: class-r34ics.php:342 templates/admin/admin.php:17
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "ユーティリティー"
 
-#: class-r34ics.php:320 class-r34ics.php:1955 class-r34ics.php:1959
+#: class-r34ics.php:343 class-r34ics.php:1993 class-r34ics.php:1997
 #: templates/admin/admin.php:19 templates/admin/admin.php:31
 msgid "Settings"
 msgstr "設定"
 
-#: class-r34ics.php:321 templates/admin/sidebar.php:5
+#: class-r34ics.php:344 templates/admin/sidebar.php:5
 msgid "User Guide"
 msgstr "ユーザーガイド"
 
-#: class-r34ics.php:322 templates/admin/sidebar.php:10
+#: class-r34ics.php:345 templates/admin/sidebar.php:10
 msgid "Support"
 msgstr "サポート"
 
-#: class-r34ics.php:324
+#: class-r34ics.php:347
 msgid "Upgrade to PRO!"
 msgstr "プロ版へアップグレード!"
 
-#: class-r34ics.php:342
+#: class-r34ics.php:365
 msgid "Show/hide all"
 msgstr "すべて表示/非表示"
 
-#: class-r34ics.php:601
+#: class-r34ics.php:624
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -87,40 +87,40 @@ msgstr ""
 "てください。複数の URL を区切るためにスペースを使用している場合は、代わりにパ"
 "イプ文字を使用することもできます。影響を受ける URL:"
 
-#: class-r34ics.php:1037
+#: class-r34ics.php:1060
 msgid "Hide past events"
 msgstr "過去のイベントを非表示にする"
 
-#: class-r34ics.php:1038 templates/calendar-month.php:83
+#: class-r34ics.php:1061 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "過去のイベントを表示"
 
-#: class-r34ics.php:1116
+#: class-r34ics.php:1139
 msgid "Contact:"
 msgstr "連絡先:"
 
-#: class-r34ics.php:1122
+#: class-r34ics.php:1145
 msgid "Resources:"
 msgstr "リソースです："
 
-#: class-r34ics.php:1132
+#: class-r34ics.php:1155
 msgid "Click for more..."
 msgstr "詳細については、ここをクリックしてください。"
 
-#: class-r34ics.php:1166
+#: class-r34ics.php:1189
 msgid "Save to your calendar"
 msgstr "カレンダーへの保存"
 
-#: class-r34ics.php:1166
+#: class-r34ics.php:1189
 msgid "Download"
 msgstr "ダウンロード"
 
-#: class-r34ics.php:1271
+#: class-r34ics.php:1294
 msgid "Cancelled"
 msgstr "キャンセル"
 
-#: class-r34ics.php:1629
+#: class-r34ics.php:1653
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -128,7 +128,7 @@ msgstr ""
 "「現在の週」のショートコード属性は推奨されていません。代わりに、ショートコー"
 "ドでview=\"week\"を使用してください。"
 
-#: class-r34ics.php:1632
+#: class-r34ics.php:1656
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -136,17 +136,17 @@ msgstr ""
 "ショートコード属性の \"legendinline \"は非推奨です。代わりにショートコードで "
 "legendstyle=\"inline\" を使用してください。"
 
-#: class-r34ics.php:1914
+#: class-r34ics.php:1948
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$sトランジェントをクリアしました。"
 
-#: class-r34ics.php:1921
+#: class-r34ics.php:1955
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s トランジェントは見つかりませんでした。"
 
-#: class-r34ics.php:1955
+#: class-r34ics.php:1993
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -155,11 +155,11 @@ msgstr ""
 "フィードのURLにHTTPベーシック認証の認証情報が含まれているようです。上記の%2$s"
 "タブの%1$sオプションをオフにしてみてください。"
 
-#: class-r34ics.php:1955 class-r34ics.php:1959 templates/admin/settings.php:16
+#: class-r34ics.php:1993 class-r34ics.php:1997 templates/admin/settings.php:16
 msgid "Use legacy feed request method"
 msgstr "レガシーフィードリクエストメソッドを使用する"
 
-#: class-r34ics.php:1959
+#: class-r34ics.php:1997
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -168,7 +168,7 @@ msgstr ""
 "フィードのURLが、オンラインの%1$sプレビュー%2$sツールで機能する場合は、上記"
 "の%4$sタブにある%3$sオプションをオンにしてみてください。"
 
-#: class-r34ics.php:1965
+#: class-r34ics.php:2003
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -183,7 +183,7 @@ msgstr ""
 "されません。正しいダイナミックフィードURLの取得方法については、%4$sユーザーガ"
 "イド%5$sをご覧ください。"
 
-#: class-r34ics.php:2005
+#: class-r34ics.php:2050
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -192,55 +192,55 @@ msgstr ""
 "%1$s設定を更新しました。%2$sいくつかの変更を確認するには、ページを更新する必"
 "要があるかもしれません。"
 
-#: class-r34ics.php:2153
+#: class-r34ics.php:2204
 msgid "calendar event"
 msgstr "カレンダーイベント"
 
-#: functions.php:692 functions.php:700 functions.php:709
+#: functions.php:715 functions.php:723 functions.php:732
 msgid "Map"
 msgstr "マップ"
 
-#: functions.php:925
+#: functions.php:948
 msgid "Recurring event"
 msgstr "繰り返しイベントの新規作成"
 
-#: functions.php:930
+#: functions.php:953
 #, php-format
 msgid "Recurs every %s years"
 msgstr "%s年ごとに再発する"
 
-#: functions.php:930
+#: functions.php:953
 msgid "Recurs yearly"
 msgstr "毎年繰り返し"
 
-#: functions.php:933
+#: functions.php:956
 #, php-format
 msgid "Recurs every %s months"
 msgstr "%sか月ごとに繰り返し"
 
-#: functions.php:933
+#: functions.php:956
 msgid "Recurs monthly"
 msgstr "毎月繰り返し"
 
-#: functions.php:936
+#: functions.php:959
 #, php-format
 msgid "Recurs every %s weeks"
 msgstr "%s週間ごとに再発"
 
-#: functions.php:936
+#: functions.php:959
 msgid "Recurs weekly"
 msgstr "毎週繰り返し"
 
-#: functions.php:939
+#: functions.php:962
 #, php-format
 msgid "Recurs every %s days"
 msgstr "%s日ごとに繰り返し発生する"
 
-#: functions.php:939
+#: functions.php:962
 msgid "Recurs daily"
 msgstr "毎日繰り返し"
 
-#: functions.php:1064
+#: functions.php:1087
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -253,11 +253,11 @@ msgstr ""
 "カレンダーが正しく表示されない可能性があります。ショートコード内のクリッカブ"
 "ルリンクを削除してください。"
 
-#: functions.php:1362
+#: functions.php:1385
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents()関数はサポートされなくなりました。"
 
-#: ics-calendar.php:105
+#: ics-calendar.php:108
 #, php-format
 msgid ""
 "Thank you for installing %1$s. Before creating your first calendar "
@@ -270,7 +270,7 @@ msgstr ""
 "ン、日付/時間形式の設定が正しいかどうかを確認してください。詳細について"
 "は、%4$sユーザーガイド%5$sを参照してください。"
 
-#: ics-calendar.php:147
+#: ics-calendar.php:154
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -285,7 +285,7 @@ msgstr ""
 "レードした後に新たな問題が発生した場合は、%4$sWordPress サポートフォーラ"
 "ム%5$s をご覧ください。"
 
-#: ics-calendar.php:157
+#: ics-calendar.php:165
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -302,7 +302,7 @@ msgstr ""
 "フォルトに切り替えるには、%9$s 設定%10$sで%8$sオプションをオンにしてくださ"
 "い。 ページ。"
 
-#: ics-calendar.php:157 templates/admin/settings.php:46
+#: ics-calendar.php:165 templates/admin/settings.php:46
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "新しいパラメータのデフォルトを使用 (v.10.6)"
 
@@ -427,7 +427,7 @@ msgstr "インサート %1$s"
 msgid "Getting Started"
 msgstr "はじめに"
 
-#: templates/admin/admin.php:18 templates/admin/utilities.php:90
+#: templates/admin/admin.php:18 templates/admin/utilities.php:92
 msgid "System Report"
 msgstr "システムレポート"
 
@@ -605,9 +605,9 @@ msgstr ""
 
 #: templates/admin/sidebar.php:12
 #, php-format
-msgid "For assistance, please use our %1$ssupport request form%1$s."
+msgid "For assistance, please use our %1$ssupport request form%2$s."
 msgstr ""
-"サポートについては、%1$sサポートリクエストフォーム%1$sをご利用ください。"
+"サポートについては、%1$sサポートリクエストフォーム%2$sをご利用ください。"
 
 #: templates/admin/sidebar.php:22
 #, php-format
@@ -629,13 +629,12 @@ msgstr "ICSイベント"
 #: templates/admin/sidebar.php:36
 #, php-format
 msgid ""
-"%1$sNew in version 5.1!%2$s Turns ICS Calendar Pro into a full calendar "
-"system. Create and manage events directly in WordPress and even integrate "
-"them seamlessly with your existing feeds."
+"%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
+"events directly in WordPress and even integrate them seamlessly with your "
+"existing feeds."
 msgstr ""
-"%1$sバージョン5.1の新機能！%2$s ICS Calendar Proを完全なカレンダーシステムに"
-"変えます。WordPressで直接イベントを作成・管理し、既存のフィードとシームレスに"
-"統合することもできます。"
+"%1$sNew！%2$s %3$sを完全なカレンダーシステムに変えます。WordPressで直接イベン"
+"トを作成・管理し、既存のフィードとシームレスに統合することもできます。"
 
 #: templates/admin/sidebar.php:37
 msgid "Additional Views"
@@ -650,12 +649,8 @@ msgid "Calendar Builder"
 msgstr "カレンダービルダー"
 
 #: templates/admin/sidebar.php:40
-msgid ""
-"Configure all calendar settings with an easy visual interface. Also works "
-"directly in Block Editor."
-msgstr ""
-"簡単なビジュアル・インターフェースですべてのカレンダー設定を行います。また、"
-"ブロックエディタでも直接機能します。"
+msgid "Configure all calendar settings with an easy visual interface."
+msgstr "簡単なビジュアル・インターフェースですべてのカレンダー設定を行います。"
 
 #: templates/admin/sidebar.php:41
 msgid "Customizer"
@@ -750,7 +745,7 @@ msgid ""
 "An unknown error occurred while attempting to retrieve the requested URL."
 msgstr "要求された URL を取得中に不明なエラーが発生しました。"
 
-#: templates/admin/utilities.php:92
+#: templates/admin/utilities.php:94
 msgid ""
 "Please copy the following text and include it in your message when emailing "
 "support."
@@ -758,7 +753,7 @@ msgstr ""
 "サポートにメールを送信する際は、次のテキストをコピーしてメッセージに含めてく"
 "ださい。"
 
-#: templates/admin/utilities.php:93
+#: templates/admin/utilities.php:95
 #, php-format
 msgid ""
 "Also please include the %1$s shortcode exactly as you have it entered on the "
@@ -766,7 +761,7 @@ msgid ""
 msgstr ""
 "また、対象ページに入力されている%1$sショートコードも正確に記載してください。"
 
-#: templates/admin/utilities.php:93
+#: templates/admin/utilities.php:95
 msgid ""
 "For your site security please do NOT post the System Report in the support "
 "forums."
@@ -786,7 +781,7 @@ msgstr "前のページ"
 msgid "Next Page"
 msgstr "次のページ"
 
-#: templates/calendar-list.php:284 templates/calendar-month.php:200
+#: templates/calendar-list.php:283 templates/calendar-month.php:200
 #: templates/calendar-week.php:209
 msgid "All Day"
 msgstr "終日"

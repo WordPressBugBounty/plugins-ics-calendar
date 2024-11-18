@@ -3,7 +3,7 @@
 Plugin Name: ICS Calendar
 Plugin URI: https://icscalendar.com
 Description: Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar into a seamlessly integrated, auto-updating, zero-maintenance WordPress experience.
-Version: 11.3.6.1
+Version: 11.3.7
 Requires at least: 4.9
 Requires PHP: 7.0
 Author: Room 34 Creative Services, LLC
@@ -98,16 +98,20 @@ if (!class_exists('R34ICS')) {
 		}
 	
 		// Prepare deferred admin notices
-		$notices = get_option('r34ics_deferred_admin_notices', array());
+		global $r34ics_deferred_admin_notices;
+		if (empty($r34ics_deferred_admin_notices)) {
+			$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
+		}
 	
 		// Admin notice with link to settings
-		$notices['r34ics_first_load'] = array(
+		$r34ics_deferred_admin_notices['r34ics_first_load'] = array(
 			'content' => '<p>' . sprintf(__('Thank you for installing %1$s. Before creating your first calendar shortcode, please visit your %2$sGeneral Settings%3$s page and verify that your site language, timezone and date/time format settings are correct. See our %4$sUser Guide%5$s for more information.', 'r34ics'), '<strong>ICS Calendar</strong>', '<a href="' . admin_url('options-general.php') . '">', '</a>', '<a href="https://icscalendar.com/general-wordpress-settings/" target="_blank">', '</a>') . '</p>',
 			'status' => 'info',
+			'dismissible' => 'forever',
 		);
 		
 		// Save deferred admin notices
-		update_option('r34ics_deferred_admin_notices', $notices);
+		update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices);
 	}
 	
 	
@@ -139,31 +143,36 @@ if (!class_exists('R34ICS')) {
 		}
 	
 		// Prepare deferred admin notices
-		$notices = get_option('r34ics_deferred_admin_notices', array());
+		global $r34ics_deferred_admin_notices;
+		if (empty($r34ics_deferred_admin_notices)) {
+			$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
+		}
 	
 		// Admin notice about refactored R34ICS::_url_get_contents() method
 		if (version_compare($previous_version, '11.0.0', '<')) {
-			$notices['r34ics_refactoring_in_v_11'] = array(
+			$r34ics_deferred_admin_notices['r34ics_refactoring_in_v_11'] = array(
 				'content' => '<p>' . sprintf(__('%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are retrieved. This change uses a standard built-in WordPress function, so it should be fully compatible with all existing installations. If you encounter any new issues after upgrading to version 11 or later, please visit the %4$sWordPress Support Forums%5$s for assistance.', 'r34ics'), '<strong>', '</strong>', 'ICS Calendar', '<a href="https://wordpress.org/support/plugin/ics-calendar/" target="_blank">', '</a>') . '</p>',
 				'status' => 'info',
+				'dismissible' => 'forever',
 			);
 		}
 		else {
-			unset($notices['r34ics_refactoring_in_v_11']);
+			unset($r34ics_deferred_admin_notices['r34ics_refactoring_in_v_11']);
 		}
 		// Admin notice about new default options
 		if (version_compare($previous_version, '10.6.0', '<')) {
-			$notices['r34ics_new_parameter_defaults_10_6'] = array(
+			$r34ics_deferred_admin_notices['r34ics_new_parameter_defaults_10_6'] = array(
 				'content' => '<p>' . sprintf(__('%1$sPlease note:%2$s %3$s version 10.6 changes the default options for several shortcode settings. In order to maintain consistency, these new defaults are %4$snot%5$s enabled when upgrading from an earlier version. If you would like to learn more about the changes please read our %6$sblog post%7$s, or to switch to the new defaults, turn on the %8$s option on the %9$s settings%10$s page.', 'r34ics'), '<strong>', '</strong>', 'ICS Calendar', '<em>', '</em>', '<a href="https://icscalendar.com/updated-parameter-defaults-in-ics-calendar-10-6/" target="_blank">', '</a>', '<strong>' . __('Use new parameter defaults (v.10.6)', 'r34ics') . '</strong>', '<a href="' . esc_url(r34ics_get_admin_url('settings')) . '">ICS Calendar', '</a>') . '</p>',
 				'status' => 'info',
+				'dismissible' => 'forever',
 			);
 		}
 		else {
-			unset($notices['r34ics_new_parameter_defaults_10_6']);
+			unset($r34ics_deferred_admin_notices['r34ics_new_parameter_defaults_10_6']);
 		}
 	
 		// Save deferred admin notices
-		update_option('r34ics_deferred_admin_notices', $notices);
+		update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices);
 	
 		// Purge calendar transients
 		r34ics_purge_calendar_transients();
@@ -171,20 +180,12 @@ if (!class_exists('R34ICS')) {
 	}
 	
 	
-	// Deferred install/update admin notices
-	function r34ics_deferred_admin_notices() {
-		if ($notices = get_option('r34ics_deferred_admin_notices', array())) {
-			foreach ((array)$notices as $notice) {
-				echo '<div class="notice notice-' . esc_attr($notice['status']) . ' is-dismissible r34ics-admin-notice"><div>' . wp_kses_post($notice['content']) . '</div></div>';
-			}
-		}
-		delete_option('r34ics_deferred_admin_notices');
-	}
-	add_action('admin_notices', 'r34ics_deferred_admin_notices');
-	
-	
 	// Purge transients on certain option updates
 	add_action('update_option_start_of_week', 'r34ics_purge_calendar_transients');
 	add_action('update_option_timezone_string', 'r34ics_purge_calendar_transients');
 
+
+	// Deferred admin notices (runs on shutdown to catch all collected notices during script execution)
+	add_action('shutdown', 'r34ics_deferred_admin_notices', PHP_INT_MAX - 1);
+	
 }
