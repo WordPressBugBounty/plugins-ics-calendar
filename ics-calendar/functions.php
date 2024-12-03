@@ -1375,7 +1375,7 @@ function r34ics_guid($deprecated1=true, $deprecated2=true) { return r34ics_uid()
 // Return the URL associated with a uniqid value
 function r34ics_uniqid_url($uniqid='') {
 	$r34ics_feed_urls = get_option('r34ics_feed_urls');
-	return $r34ics_feed_urls[$uniqid] ?? false;
+	return sanitize_url($r34ics_feed_urls[$uniqid]) ?? false;
 }
 
 
@@ -1414,7 +1414,7 @@ function r34ics_url_uniqid($url='') {
 function r34ics_url_uniqid_update($url, $check=true) {
 	if (empty($check) || !($uniqid = r34ics_url_uniqid($url))) {
 		// Convert ampersand entities (&amp;) to plain ampersands
-		if (strpos($url,'&amp;') !== false) { $url = str_replace('&amp;','&',$url); }
+		if (strpos($url,'&amp;') !== false) { $url = sanitize_url(str_replace('&amp;','&',$url)); }
 		$uniqid = uniqid('r34ics-url-', true);
 		$r34ics_feed_urls = array_filter(array_merge((array)get_option('r34ics_feed_urls'), array($uniqid => $url)));
 		update_option('r34ics_feed_urls', $r34ics_feed_urls);
@@ -1461,10 +1461,15 @@ function _r34ics_debug($arr) {
 	global $r34ics_debug_output;
 	// Append general settings
 	$settings_fields = array(
+		'r34ics_ajax_by_default',
+		'r34ics_ajax_bypass_nonce',
+		'r34ics_allowed_hosts',
+		'r34ics_display_add_calendar_button_false',
+		'r34ics_display_calendar_memory_limit',
 		'r34ics_feed_urls',
 		'r34ics_previous_version',
 		'r34ics_transients_expiration',
-		'r34ics_display_add_calendar_button_false',
+		'r34ics_url_get_contents_legacy_method',
 		'r34ics_use_new_defaults_10_6',
 		'r34ics_version',
 	);

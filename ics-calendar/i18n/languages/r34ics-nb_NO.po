@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2024-11-18 14:41-0600\n"
-"PO-Revision-Date: 2024-11-18 14:41-0600\n"
+"POT-Creation-Date: 2024-11-21 11:21-0600\n"
+"PO-Revision-Date: 2024-11-21 11:21-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Utilities"
 msgstr "Verktøy"
 
-#: class-r34ics.php:343 class-r34ics.php:1993 class-r34ics.php:1997
+#: class-r34ics.php:343 class-r34ics.php:1996 class-r34ics.php:2000
 #: templates/admin/admin.php:19 templates/admin/admin.php:31
 msgid "Settings"
 msgstr "Innstillinger"
@@ -138,17 +138,17 @@ msgstr ""
 "Kortkodeattributtet \"legendinline\" er avviklet. Vennligst bruk "
 "legendstyle=\"inline\" i kortkoden din i stedet."
 
-#: class-r34ics.php:1948
+#: class-r34ics.php:1951
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Fjernet %1$s %2$s forbigående(r)."
 
-#: class-r34ics.php:1955
+#: class-r34ics.php:1958
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Ingen %1$s transienter ble funnet."
 
-#: class-r34ics.php:1993
+#: class-r34ics.php:1996
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -157,11 +157,11 @@ msgstr ""
 "URL-adressen til feeden din ser ut til å inneholde HTTP Basic Authentication-"
 "legitimasjon. Prøv å slå av %1$s-alternativet under %2$s-fanen ovenfor."
 
-#: class-r34ics.php:1993 class-r34ics.php:1997 templates/admin/settings.php:16
+#: class-r34ics.php:1996 class-r34ics.php:2000 templates/admin/settings.php:21
 msgid "Use legacy feed request method"
 msgstr "Bruk den gamle metoden for feedforespørsel"
 
-#: class-r34ics.php:1997
+#: class-r34ics.php:2000
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -171,7 +171,7 @@ msgstr ""
 "%1$sPreview%2$s-verktøy, kan du prøve å slå på %3$s-alternativet under %4$s-"
 "fanen ovenfor."
 
-#: class-r34ics.php:2003
+#: class-r34ics.php:2006
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -187,7 +187,7 @@ msgstr ""
 "kildekalenderen. Se vår %4$sBrukerveiledning%5$s for instruksjoner om "
 "hvordan du får riktig URL-adresse for dynamisk feed."
 
-#: class-r34ics.php:2050
+#: class-r34ics.php:2056
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -196,7 +196,7 @@ msgstr ""
 "%1$s Innstillingene er oppdatert%2$s Det kan hende du må oppdatere siden for "
 "å se noen av endringene."
 
-#: class-r34ics.php:2204
+#: class-r34ics.php:2210
 msgid "calendar event"
 msgstr "kalenderhendelse"
 
@@ -307,9 +307,17 @@ msgstr ""
 "standardinnstillingene, slå på alternativet %8$s på siden "
 "%9$sinnstillinger%10$s."
 
-#: ics-calendar.php:165 templates/admin/settings.php:46
+#: ics-calendar.php:165 templates/admin/settings.php:51
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Bruk nye parameterstandarder (v.10.6)"
+
+#: r34ics-ajax.php:21
+#, php-format
+msgid ""
+"%1$s AJAX request bypassed nonce verification, due to configuration setting."
+msgstr ""
+"%1$s AJAX-forespørselen omgikk nonce-verifisering på grunn av "
+"konfigurasjonsinnstilling."
 
 #: templates/admin/add-calendar-button.php:1 templates/admin/add-calendar.php:6
 #, php-format
@@ -502,10 +510,32 @@ msgstr ""
 "kortkoden."
 
 #: templates/admin/settings.php:9
+msgid "Bypass nonce on AJAX requests"
+msgstr "Omgå nonce på AJAX-forespørsler"
+
+#: templates/admin/settings.php:10
+#, php-format
+msgid ""
+"By default, %1$s uses a nonce on AJAX requests, although this is not "
+"strictly needed, as the AJAX requests do not directly write anything to the "
+"database, and additional sanitization/validation code is in place. The nonce "
+"occasionally causes conflicts with certain caching plugins, especially %2$s. "
+"If you are using a caching plugin and find your AJAX calendars occasionally "
+"do not load, turn on this option to bypass the nonce."
+msgstr ""
+"Som standard bruker %1$s en nonce på AJAX-forespørsler, selv om dette ikke "
+"er strengt tatt nødvendig, ettersom AJAX-forespørsler ikke skriver noe "
+"direkte til databasen, og ytterligere sanerings-/valideringskode er på "
+"plass. Nonce forårsaker av og til konflikter med visse cache-plugins, "
+"spesielt %2$s. Hvis du bruker en cache-plugin og opplever at AJAX-kalenderne "
+"dine av og til ikke lastes inn, kan du slå på dette alternativet for å omgå "
+"nonce."
+
+#: templates/admin/settings.php:14
 msgid "Increase memory limit when rendering calendars"
 msgstr "Øke minnegrensen ved gjengivelse av kalendere"
 
-#: templates/admin/settings.php:12
+#: templates/admin/settings.php:17
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -521,7 +551,7 @@ msgstr ""
 "å sette dette alternativet lavere enn den gjeldende standardminnegrensen på "
 "serveren din."
 
-#: templates/admin/settings.php:17
+#: templates/admin/settings.php:22
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
 "on this option to use the legacy request method."
@@ -530,12 +560,12 @@ msgstr ""
 "oppdateringen, kan du aktivere dette alternativet for å bruke den gamle "
 "forespørselsmetoden."
 
-#: templates/admin/settings.php:21
+#: templates/admin/settings.php:26
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Tillat tilgang til disse vertsnavnene som løser til reserverte IP-adresser"
 
-#: templates/admin/settings.php:23
+#: templates/admin/settings.php:28
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -550,23 +580,23 @@ msgstr ""
 "Hvis du har flere kalenderservere, angir du ett vertsnavn per linje. Se "
 "%3$sdokumentasjonen%4$s%5$s for mer informasjon."
 
-#: templates/admin/settings.php:24
+#: templates/admin/settings.php:29
 msgid "Enter one hostname per line."
 msgstr "Skriv inn ett vertsnavn per linje."
 
-#: templates/admin/settings.php:29
+#: templates/admin/settings.php:34
 msgid "Caching"
 msgstr "Caching"
 
-#: templates/admin/settings.php:32
+#: templates/admin/settings.php:37
 msgid "Transient (cache) expiration"
 msgstr "Forbigående (cache) utløp"
 
-#: templates/admin/settings.php:32
+#: templates/admin/settings.php:37
 msgid "seconds"
 msgstr "sekunder"
 
-#: templates/admin/settings.php:33
+#: templates/admin/settings.php:38
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
@@ -574,15 +604,15 @@ msgstr ""
 "Angir hvor lenge kalenderfeeddata skal bufres på serveren (WordPress-"
 "transienter) før lasting på nytt. Standard er 3600 (1 time)."
 
-#: templates/admin/settings.php:38
+#: templates/admin/settings.php:43
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: templates/admin/settings.php:41
+#: templates/admin/settings.php:46
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Fjern knappen \"Legg til ICS-kalender\" i Classic Editor"
 
-#: templates/admin/settings.php:42
+#: templates/admin/settings.php:47
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -593,7 +623,7 @@ msgstr ""
 "Editor. Merk av i denne boksen for å fjerne knappen. Har ingen effekt på "
 "nettsteder som bruker Block Editor (Gutenberg)."
 
-#: templates/admin/settings.php:47
+#: templates/admin/settings.php:52
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

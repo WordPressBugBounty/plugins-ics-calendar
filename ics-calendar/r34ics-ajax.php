@@ -2,6 +2,9 @@
 
 function r34ics_ajax() {
 	global $R34ICS;
+	
+	// Get list of valid shortcode attributes
+	$valid_atts = $R34ICS->shortcode_defaults_merge();
 		
 	// Don't do anything in Block Editor
 	if (function_exists('get_current_screen') && $current_screen = get_current_screen()) {
@@ -12,19 +15,30 @@ function r34ics_ajax() {
 	
 	if (!empty($_POST)) {
 
+		// Bypass nonce verification
+		if (get_option('r34ics_ajax_bypass_nonce')) {
+			add_filter('r34ics_debug_array', function($arr) {
+				$arr['Misc'][] = sprintf(__('%1$s AJAX request bypassed nonce verification, due to configuration setting.', 'r34ics'), 'ICS Calendar');
+				return $arr;
+			}, 10, 1);
+		}
 		// Verify nonce
-		if (!wp_verify_nonce($_POST['r34ics_nonce'], 'r34ics_nonce')) { echo 1; exit; }
+		elseif (!wp_verify_nonce($_POST['r34ics_nonce'], 'r34ics_nonce')) { echo 1; exit; }
 		
 		// Sanitize input
 		$args = $_POST['args'];
 		foreach ((array)$args as $key => $value) {
-			if (is_array($value)) {
+			if (!in_array($key, array_keys($valid_atts))) { continue; }
+			if ($key == 'url') {
+				$args['url'] = r34ics_url_uniqid_array_convert($args['url']);
+			}
+			elseif (is_array($value)) {
 				$args[$key] = array_map(function($v) {
-					return is_string($v) ? wp_kses_post($v) : intval($v);
+					return is_string($v) ? stripslashes(wp_kses_post($v)) : intval($v);
 				}, $value);
 			}
 			else {
-				$args[$key] = is_string($value) ? wp_kses_post($value) : intval($value);
+				$args[$key] = is_string($value) ? stripslashes(wp_kses_post($value)) : intval($value);
 			}
 			if ($value == 'true') { $args[$key] = 1; }
 			elseif ($value == 'false') { $args[$key] = 0; }
@@ -34,10 +48,6 @@ function r34ics_ajax() {
 		
 			case 'display_calendar':
 				if (!empty($args['url'])) {
-					$args['url'] = r34ics_url_uniqid_array_convert($args['url']);
-					foreach ((array)$args as $key => $value) {
-						if (!empty($args['ajax']) && is_string($value)) { $args[$key] = stripslashes($value); }
-					}
 					$R34ICS->display_calendar($args);
 					if (!empty($args['debug'])) {
 						_r34ics_wp_footer_debug_output();

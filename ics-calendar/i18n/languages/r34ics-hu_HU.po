@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2024-11-18 14:40-0600\n"
-"PO-Revision-Date: 2024-11-18 14:40-0600\n"
+"POT-Creation-Date: 2024-11-21 11:20-0600\n"
+"PO-Revision-Date: 2024-11-21 11:20-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: hu_HU\n"
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Utilities"
 msgstr "Segédprogramok"
 
-#: class-r34ics.php:343 class-r34ics.php:1993 class-r34ics.php:1997
+#: class-r34ics.php:343 class-r34ics.php:1996 class-r34ics.php:2000
 #: templates/admin/admin.php:19 templates/admin/admin.php:31
 msgid "Settings"
 msgstr "Beállítások"
@@ -138,17 +138,17 @@ msgstr ""
 "A \"legendinline\" rövidkód attribútum elavult. Kérjük, használja helyette a "
 "legendstyle=\"inline\" attribútumot a rövidkódban."
 
-#: class-r34ics.php:1948
+#: class-r34ics.php:1951
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Törölt %1$s %2$s tranziens(ek)."
 
-#: class-r34ics.php:1955
+#: class-r34ics.php:1958
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nem találtunk %1$s tranzienseket."
 
-#: class-r34ics.php:1993
+#: class-r34ics.php:1996
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -157,11 +157,11 @@ msgstr ""
 "Úgy tűnik, hogy a táp URL-címe HTTP Basic Authentication hitelesítő adatokat "
 "tartalmaz. Próbálja meg kikapcsolni a %1$s opciót a fenti %2$s fül alatt."
 
-#: class-r34ics.php:1993 class-r34ics.php:1997 templates/admin/settings.php:16
+#: class-r34ics.php:1996 class-r34ics.php:2000 templates/admin/settings.php:21
 msgid "Use legacy feed request method"
 msgstr "Hagyományos takarmánykérési módszer használata"
 
-#: class-r34ics.php:1997
+#: class-r34ics.php:2000
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -170,7 +170,7 @@ msgstr ""
 "Ha a takarmány URL címe működik az online %1$sElőnézet%2$s eszközünkkel, "
 "próbálja meg bekapcsolni a %3$s opciót a fenti %4$s fül alatt."
 
-#: class-r34ics.php:2003
+#: class-r34ics.php:2006
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -185,7 +185,7 @@ msgstr ""
 "frissítéseit. A helyes dinamikus feed URL-cím megszerzésével kapcsolatos "
 "utasításokat lásd a %4$sFelhasználói útmutatóban%5$s."
 
-#: class-r34ics.php:2050
+#: class-r34ics.php:2056
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -194,7 +194,7 @@ msgstr ""
 "%1$sBeállítások frissítve.%2$s Lehet, hogy frissítenie kell az oldalt, hogy "
 "lássa a változásokat."
 
-#: class-r34ics.php:2204
+#: class-r34ics.php:2210
 msgid "calendar event"
 msgstr "naptári esemény"
 
@@ -307,9 +307,17 @@ msgstr ""
 "alapértelmezett beállításokra való áttéréshez kapcsolja be a %8$s opciót a "
 "%9$s beállítások%10$s oldalon."
 
-#: ics-calendar.php:165 templates/admin/settings.php:46
+#: ics-calendar.php:165 templates/admin/settings.php:51
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Új paraméter alapértelmezések használata (v.10.6)"
+
+#: r34ics-ajax.php:21
+#, php-format
+msgid ""
+"%1$s AJAX request bypassed nonce verification, due to configuration setting."
+msgstr ""
+"%1$s Az AJAX-kérés a konfigurációs beállítások miatt megkerülte a nonce-"
+"ellenőrzést."
 
 #: templates/admin/add-calendar-button.php:1 templates/admin/add-calendar.php:6
 #, php-format
@@ -502,10 +510,32 @@ msgstr ""
 "AJAX van megadva."
 
 #: templates/admin/settings.php:9
+msgid "Bypass nonce on AJAX requests"
+msgstr "Nonce megkerülése AJAX-kéréseknél"
+
+#: templates/admin/settings.php:10
+#, php-format
+msgid ""
+"By default, %1$s uses a nonce on AJAX requests, although this is not "
+"strictly needed, as the AJAX requests do not directly write anything to the "
+"database, and additional sanitization/validation code is in place. The nonce "
+"occasionally causes conflicts with certain caching plugins, especially %2$s. "
+"If you are using a caching plugin and find your AJAX calendars occasionally "
+"do not load, turn on this option to bypass the nonce."
+msgstr ""
+"Alapértelmezés szerint a %1$s az AJAX-kérelmeknél nem titkosítást használ, "
+"bár erre nincs feltétlenül szükség, mivel az AJAX-kérelmek nem írnak "
+"közvetlenül semmit az adatbázisba, és további szanálási/érvényesítési kódot "
+"használnak. A nonce időnként konfliktusokat okoz bizonyos gyorsítótárazási "
+"bővítményekkel, különösen az %2$s-gyel. Ha gyorsítótárazási bővítményt "
+"használ, és úgy találja, hogy az AJAX-naptárak időnként nem töltődnek be, "
+"kapcsolja be ezt az opciót a nonce megkerülése érdekében."
+
+#: templates/admin/settings.php:14
 msgid "Increase memory limit when rendering calendars"
 msgstr "Növelje a memóriakorlátot a naptárak megjelenítésekor"
 
-#: templates/admin/settings.php:12
+#: templates/admin/settings.php:17
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -521,7 +551,7 @@ msgstr ""
 "2) Ezt az opciót nem lehet a szerver aktuális alapértelmezett "
 "memóriakorlátjánál alacsonyabbra állítani."
 
-#: templates/admin/settings.php:17
+#: templates/admin/settings.php:22
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
 "on this option to use the legacy request method."
@@ -529,13 +559,13 @@ msgstr ""
 "Ha webhelye a 11-es verziófrissítés után már nem kérte le a tápokat, "
 "kapcsolja be ezt a lehetőséget a régi kérési módszer használatához."
 
-#: templates/admin/settings.php:21
+#: templates/admin/settings.php:26
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Engedélyezze a hozzáférést ezekhez az olyan hosztnevekhez, amelyek "
 "fenntartott IP-címekre oldódnak fel"
 
-#: templates/admin/settings.php:23
+#: templates/admin/settings.php:28
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -550,23 +580,23 @@ msgstr ""
 "engedélyezéséhez. Több naptárkiszolgáló esetén soronként egy hosztnevet "
 "adjon meg. További információért lásd %3$sa %4$s dokumentációt%5$s."
 
-#: templates/admin/settings.php:24
+#: templates/admin/settings.php:29
 msgid "Enter one hostname per line."
 msgstr "Adjon meg soronként egy állomásnevet."
 
-#: templates/admin/settings.php:29
+#: templates/admin/settings.php:34
 msgid "Caching"
 msgstr "Gyorsítótárazás"
 
-#: templates/admin/settings.php:32
+#: templates/admin/settings.php:37
 msgid "Transient (cache) expiration"
 msgstr "Átmeneti (gyorsítótár) lejárat"
 
-#: templates/admin/settings.php:32
+#: templates/admin/settings.php:37
 msgid "seconds"
 msgstr "másodperc"
 
-#: templates/admin/settings.php:33
+#: templates/admin/settings.php:38
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
@@ -575,15 +605,15 @@ msgstr ""
 "gyorsítótárazni (WordPress tranziensek) az újratöltés előtt. Az "
 "alapértelmezett érték 3600 (1 óra)."
 
-#: templates/admin/settings.php:38
+#: templates/admin/settings.php:43
 msgid "Miscellaneous"
 msgstr "Vegyes"
 
-#: templates/admin/settings.php:41
+#: templates/admin/settings.php:46
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "\"ICS naptár hozzáadása\" gomb eltávolítása a klasszikus szerkesztőben"
 
-#: templates/admin/settings.php:42
+#: templates/admin/settings.php:47
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -594,7 +624,7 @@ msgstr ""
 "hozzáadása\" gombot. A gomb eltávolításához jelölje be ezt a négyzetet. "
 "Nincs hatással a blokkszerkesztőt (Gutenberg) használó webhelyekre."
 
-#: templates/admin/settings.php:47
+#: templates/admin/settings.php:52
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

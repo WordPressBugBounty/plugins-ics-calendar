@@ -1894,7 +1894,7 @@ if (!class_exists('R34ICS')) {
 			}
 			
 			// Filter the current calendar view
-			$view = apply_filters('r34ics_calendar_view', ($atts['view'] ?? ''), $atts);
+			$view = apply_filters('r34ics_calendar_view', (@$atts['view'] ?: 'month'), $atts);
 			
 			// Collapse array defaults by view
 			foreach ((array)$defaults as $key => $value) {
@@ -1907,6 +1907,9 @@ if (!class_exists('R34ICS')) {
 					}
 				}
 			}
+			
+			// Filter the list
+			$defaults = apply_filters('r34ics_shortcode_defaults_merge', $defaults);
 			
 			// Return array of merged defaults
 			return $defaults;
@@ -2027,6 +2030,9 @@ if (!class_exists('R34ICS')) {
 				
 				// ajax_by_default
 				update_option('r34ics_ajax_by_default', !empty($_POST['ajax_by_default']));
+				
+				// ajax_bypass_nonce
+				update_option('r34ics_ajax_bypass_nonce', !empty($_POST['ajax_bypass_nonce']));
 				
 				// display_calendar_memory_limit
 				$display_calendar_memory_limit = intval($_POST['display_calendar_memory_limit']);
