@@ -1,5 +1,25 @@
 === ICS Calendar Changelog ===
 
+= 11.4.1 - 2024.12.06 =
+
+* Bug fix: Reverted change from 11.4.0 that made `month` the default fallback value for `$view` if it is not passed into `R34ICS::shortcode_defaults_merge()` method because this caused incorrect default values to override custom values in some cases.
+* CSS: Modified multi-day event date boxes in Basic view to have a stacked layout to preserve list alignment.
+
+= 11.4.0 - 2024.12.03 =
+
+* AJAX:
+  * Added **Bypass nonce on AJAX requests** setting. _See note below._
+  * Refactored `r34ics-ajax.php` to remove redundant code and add validation of allowed shortcode attributes.
+  * Added `r34ics_shortcode_defaults_merge` filter, to allow `R34ICS::shortcode_defaults_merge()` to be used as a general method for retrieving the full list of valid shortcode attributes and their default values.
+* Miscellaneous:
+  * Added `sanitize_url()` to `r34ics_uniqid_url()` and `r34ics_url_uniqid()` functions.
+  * Added new plugin settings to debugger output.
+  * Additional minor code refactoring.
+* i18n:
+  * Updated translation strings.
+
+_**Note on AJAX nonce:** ICS Calendar AJAX loading uses a [nonce](https://developer.wordpress.org/plugins/javascript/ajax/#nonce), per WordPress best practices for optimal database security. (The nonce is not strictly necessary in this case, as the plugin's AJAX calls have only limited ability to interact with the database, and all AJAX POST data is validated and sanitized.) **In general we recommend leaving the nonce validation in place.** However, we have found that some caching plugins -- particularly LiteSpeed Cache -- may cache the nonce code with your page content, causing calendars to fail to load after the nonce expires. Turn on this setting to bypass ICS Calendar's AJAX nonce validation._
+
 = 11.3.7 - 2024.11.18 =
 
 * Added `class_exists()` check to `R34ICS` class.

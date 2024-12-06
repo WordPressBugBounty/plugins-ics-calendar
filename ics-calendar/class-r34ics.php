@@ -1894,7 +1894,8 @@ if (!class_exists('R34ICS')) {
 			}
 			
 			// Filter the current calendar view
-			$view = apply_filters('r34ics_calendar_view', (@$atts['view'] ?: 'month'), $atts);
+			// Note: Fallback value needs to be empty, not 'month'!
+			$view = apply_filters('r34ics_calendar_view', (@$atts['view'] ?: ''), $atts);
 			
 			// Collapse array defaults by view
 			foreach ((array)$defaults as $key => $value) {

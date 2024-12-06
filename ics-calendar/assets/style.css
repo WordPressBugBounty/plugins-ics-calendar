@@ -349,6 +349,7 @@ will be retained permanently, so they can be used to create custom color palette
 			.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date.multiday {
 				align-items: center;
 				display: flex;
+				flex-direction: column;
 			}
 			
 				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date *[data-date-format],
@@ -375,6 +376,7 @@ will be retained permanently, so they can be used to create custom color palette
 	
 				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date.multiday .multiday-sep {
 					font-size: 210%;
+					line-height: 0.5em;
 				}
 				
 				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .event-info {
