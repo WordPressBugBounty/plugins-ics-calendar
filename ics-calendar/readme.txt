@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.4.1
+Stable tag: 11.4.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,15 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.4.1.2 - 2024.12.14 =
+
+* Fixed fatal error introduced in 11.4.1.1 when the calendar is _not_ empty.
+
+= 11.4.1.1 - 2024.12.14 =
+
+* Added empty string error handling in `r34ics_uniqid_url()` and `r34ics_url_uniqid()` functions.
+* Fixed bug in `r34ics_is_empty_array()`. (Removed `is_scalar()` check in conditional.) Resolves issue of blank output on empty calendars, rather than the proper "No events found" message displaying.
 
 = 11.4.1 - 2024.12.06 =
 

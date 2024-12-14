@@ -569,7 +569,8 @@ function r34ics_is_block_editor() {
 function r34ics_is_empty_array(array $array) {
 	$empty = true;
 	array_walk_recursive($array, function($leaf) use (&$empty) {
-		if ($leaf === [] || (is_scalar($leaf) && trim($leaf ?? '') === '')) { return; }
+		// Added empty($leaf) v.11.4.1.2 to prevent fatal errors with DateTimeZone elements when $leaf is NOT empty
+		if ($leaf === [] || (is_scalar($leaf) && trim($leaf ?: '') === '') || empty($leaf)) { return; }
 		$empty = false;
 	});
 	return $empty;
@@ -1374,6 +1375,7 @@ function r34ics_guid($deprecated1=true, $deprecated2=true) { return r34ics_uid()
 
 // Return the URL associated with a uniqid value
 function r34ics_uniqid_url($uniqid='') {
+	if (empty($uniqid)) { return false; }
 	$r34ics_feed_urls = get_option('r34ics_feed_urls');
 	return sanitize_url($r34ics_feed_urls[$uniqid]) ?? false;
 }
@@ -1396,6 +1398,7 @@ function r34ics_url_open_allowed() {
 // Return a feed URL's uniqid() value
 function r34ics_url_uniqid($url='') {
 	$url = (string)$url; // Avoid PHP 8.1 "Passing null to parameter" deprecation notice
+	if (empty($url)) { return false; }
 	$match = null;
 	// We convert webcal:// URLs to https:// before saving them to r34ics_feed_urls, so we need to do it here too
 	if (strpos($url,'webcal://') === 0) { $url = str_replace('webcal://','https://',$url); }

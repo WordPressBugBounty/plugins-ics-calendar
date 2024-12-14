@@ -1,5 +1,14 @@
 === ICS Calendar Changelog ===
 
+= 11.4.1.2 - 2024.12.14 =
+
+* Fixed fatal error introduced in 11.4.1.1 when the calendar is _not_ empty.
+
+= 11.4.1.1 - 2024.12.14 =
+
+* Added empty string error handling in `r34ics_uniqid_url()` and `r34ics_url_uniqid()` functions.
+* Fixed bug in `r34ics_is_empty_array()`. (Removed `is_scalar()` check in conditional.) Resolves issue of blank output on empty calendars, rather than the proper "No events found" message displaying.
+
 = 11.4.1 - 2024.12.06 =
 
 * Bug fix: Reverted change from 11.4.0 that made `month` the default fallback value for `$view` if it is not passed into `R34ICS::shortcode_defaults_merge()` method because this caused incorrect default values to override custom values in some cases.
