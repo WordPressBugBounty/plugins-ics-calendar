@@ -1,5 +1,10 @@
 === ICS Calendar Changelog ===
 
+= 11.4.2 - 2024.12.16 =
+
+* Added IP address resolution to ICS Feed URL Tester, to help troubleshoot network-related issues.
+* Added box around ICS Feed URL Tester Results area.
+
 = 11.4.1.2 - 2024.12.14 =
 
 * Fixed fatal error introduced in 11.4.1.1 when the calendar is _not_ empty.

@@ -2006,6 +2006,16 @@ if (!class_exists('R34ICS')) {
 				if ($results['status'] == 'valid' && !empty($wp_upload_dir['baseurl']) && strpos($url_to_test, $wp_upload_dir['baseurl']) !== false) {
 					$results['special'][] = sprintf(__('%1$sThis URL points to a file in your Media Library.%2$s While you should be able to use this URL in an %3$s shortcode, it will be a static snapshot of the calendar at the time the file was created, and will not reflect any future updates to the source calendar. Please see our %4$sUser Guide%5$s for instructions on obtaining your correct dynamic feed URL.', 'r34ics'), '<strong style="color: crimson;">', '</strong>', 'ICS Calendar', '<a href="https://icscalendar.com/getting-started/#finding-your-ics-feed-url" target="_blank">', '</a>');
 				}
+				// Append the resolved IP address for the feed's domain
+				if (!empty($results['url']) && $url_host = parse_url($results['url'], PHP_URL_HOST)) {
+					$url_resolved_ip = gethostbyname($url_host);
+					if ($url_resolved_ip == $url_host) {
+						$results['special'][] = sprintf(__('Error: Could not resolve IP address for %1$s.', 'r34ics'), '<strong>' . $url_host . '</strong>');
+					}
+					else {
+						$results['special'][] = sprintf(__('Resolved IP address for %1$s:', 'r34ics'), '<strong>' . $url_host . '</strong>') . ' ' . $url_resolved_ip;
+					}
+				}
 				return $results;
 			}
 		}

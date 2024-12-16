@@ -34,43 +34,47 @@
 		<?php
 		if (!empty($url_tester_result)) {
 			?>
-			<h3><?php _e('Results:', 'r34ics'); ?></h3>
-			<?php
-			if (!empty($url_tester_result['size'])) {
-				?>
-				<p><mark class="success"><?php printf(__('%s received.', 'r34ics'), wp_kses_post($url_tester_result['size'])); ?></mark></p>
+			<div class="r34ics-inner-box">
+				<h3><?php _e('Results:', 'r34ics'); ?></h3>
 				<?php
-			}
-			switch ($url_tester_result['status']) {
-				case 'valid':
+				if (!empty($url_tester_result['size'])) {
 					?>
-					<p><mark class="success"><?php _e('This appears to be a valid ICS feed URL.', 'r34ics'); ?></mark></p>
-					<?php
-					break;
-				case 'invalid':
-					?>
-					<p><mark class="error"><?php _e('This does not appear to be a valid ICS feed URL.', 'r34ics'); ?></mark></p>
-					<?php
-					break;
-				case 'failed':
-					?>
-					<p><mark class="error"><?php _e('Could not retrieve data from the requested URL.', 'r34ics'); ?></mark></p>
-					<?php
-					break;
-				case 'unknown':
-					?>
-					<p><mark class="error"><?php _e('An unknown error occurred while attempting to retrieve the requested URL.', 'r34ics'); ?></mark></p>
-					<?php
-					break;
-				default: break;
-			}
-			if (!empty($url_tester_result['special'])) {
-				foreach ((array)$url_tester_result['special'] as $item) {
-					?>
-					<p><mark class="alert"><?php echo wp_kses_post($item); ?></mark></p>
+					<p><mark class="success"><?php printf(__('%s received.', 'r34ics'), wp_kses_post($url_tester_result['size'])); ?></mark></p>
 					<?php
 				}
-			}
+				switch ($url_tester_result['status']) {
+					case 'valid':
+						?>
+						<p><mark class="success"><?php _e('This appears to be a valid ICS feed URL.', 'r34ics'); ?></mark></p>
+						<?php
+						break;
+					case 'invalid':
+						?>
+						<p><mark class="error"><?php _e('This does not appear to be a valid ICS feed URL.', 'r34ics'); ?></mark></p>
+						<?php
+						break;
+					case 'failed':
+						?>
+						<p><mark class="error"><?php _e('Could not retrieve data from the requested URL.', 'r34ics'); ?></mark></p>
+						<?php
+						break;
+					case 'unknown':
+						?>
+						<p><mark class="error"><?php _e('An unknown error occurred while attempting to retrieve the requested URL.', 'r34ics'); ?></mark></p>
+						<?php
+						break;
+					default: break;
+				}
+				if (!empty($url_tester_result['special'])) {
+					foreach ((array)$url_tester_result['special'] as $item) {
+						?>
+						<p><mark class="alert"><?php echo wp_kses_post($item); ?></mark></p>
+						<?php
+					}
+				}
+				?>
+			</div>
+			<?php
 		}
 		?>
 	</div>

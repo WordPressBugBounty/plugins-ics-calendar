@@ -226,6 +226,21 @@ will be retained permanently, so they can be used to create custom color palette
 	content: '\f12a';
 }
 
+.r34ics-inner-box {
+	background: #fcfcfc;
+	border: 1px solid var(--r34ics--color--trans20);
+	margin: 1.5rem 0;
+	padding: 1rem;
+}
+
+	.r34ics-inner-box *:first-child {
+		margin-top: 0;
+	}
+
+	.r34ics-inner-box *:last-child {
+		margin-bottom: 0;
+	}
+
 .r34ics-menu {
 	border-bottom: 1px solid var(--r34ics--color--gainsboro);
 }
