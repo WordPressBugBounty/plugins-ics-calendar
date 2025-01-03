@@ -287,7 +287,8 @@ if (!class_exists('R34ICS')) {
 				// This is a WordPress Playground implementation
 				if (r34ics_is_playground()) {
 					$r34ics_deferred_admin_notices['r34ics_is_playground'] = array(
-						'content' => '<p>' . sprintf(__('%1$sYou are running ICS Calendar in a WordPress Playground implementation.%2$s Because ICS Calendar is intended to run on a web server, some features may be unavailable or may not function properly.', 'r34ics'), '<strong>', '</strong>') . '</p>',
+						/* translators: 1. HTML tag 2. HTML tag */
+						'content' => '<p>' . sprintf(esc_html__('%1$sYou are running ICS Calendar in a WordPress Playground implementation.%2$s Because ICS Calendar is intended to run on a web server, some features may be unavailable or may not function properly.', 'ics-calendar'), '<strong>', '</strong>') . '</p>',
 						'status' => 'warning',
 						'dismissible' => 'forever',
 					);
@@ -296,7 +297,8 @@ if (!class_exists('R34ICS')) {
 				// Warning about UTC-based timezones
 				if (empty(get_option('timezone_string')) || strpos(get_option('timezone_string'), 'UTC') === 0) {
 					$r34ics_deferred_admin_notices['r34ics_timezone_utc'] = array(
-						'content' => '<p>' . sprintf(__('%1$sYour site is currently using a UTC offset-based timezone setting.%2$s This can produce time display errors in the %3$s plugin in locations that observe Daylight Saving Time. Please %4$schange your timezone setting%5$s to the city nearest your location, in the same timezone, for proper time display. See our %6$sdocumentation%7$s for additional information on this issue.', 'r34ics'), '<strong>', '</strong>', '<strong>ICS Calendar</strong>', '<a href="' . admin_url('options-general.php#timezone_string') . '">', '</a>', '<a href="https://icscalendar.com/general-wordpress-settings/#timezone" target="_blank">', '</a>') . '</p>',
+						/* translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag */
+						'content' => '<p>' . sprintf(esc_html__('%1$sYour site is currently using a UTC offset-based timezone setting.%2$s This can produce time display errors in the %3$s plugin in locations that observe Daylight Saving Time. Please %4$schange your timezone setting%5$s to the city nearest your location, in the same timezone, for proper time display. See our %6$sdocumentation%7$s for additional information on this issue.', 'ics-calendar'), '<strong>', '</strong>', '<strong>ICS Calendar</strong>', '<a href="' . admin_url('options-general.php#timezone_string') . '">', '</a>', '<a href="https://icscalendar.com/general-wordpress-settings/#timezone" target="_blank">', '</a>') . '</p>',
 						'status' => 'error',
 						'dismissible' => 1,
 					);
@@ -339,12 +341,12 @@ if (!class_exists('R34ICS')) {
 			if (!class_exists('R34ICSPro')) {
 				array_unshift(
 					$links,
-					'<a href="' . admin_url('admin.php?page=ics-calendar#utilities') . '">' . __('Utilities', 'r34ics') . '</a>',
-					'<a href="' . admin_url('admin.php?page=ics-calendar#settings') . '">' . __('Settings', 'r34ics') . '</a>',
-					'<a href="https://icscalendar.com/user-guide/" target="_blank">' . __('User Guide', 'r34ics') . '</a>',
-					'<a href="https://wordpress.org/support/plugin/ics-calendar/" target="_blank">' . __('Support', 'r34ics') . '</a>'
+					'<a href="' . admin_url('admin.php?page=ics-calendar#utilities') . '">' . esc_html__('Utilities', 'ics-calendar') . '</a>',
+					'<a href="' . admin_url('admin.php?page=ics-calendar#settings') . '">' . esc_html__('Settings', 'ics-calendar') . '</a>',
+					'<a href="https://icscalendar.com/user-guide/" target="_blank">' . esc_html__('User Guide', 'ics-calendar') . '</a>',
+					'<a href="https://wordpress.org/support/plugin/ics-calendar/" target="_blank">' . esc_html__('Support', 'ics-calendar') . '</a>'
 				);
-				$links[] = '<a href="https://icscalendar.com/pro/" target="_blank" style="font-weight: bold; color: crimson;">' . __('Upgrade to PRO!', 'r34ics') . '</a>';
+				$links[] = '<a href="https://icscalendar.com/pro/" target="_blank" style="font-weight: bold; color: crimson;">' . esc_html__('Upgrade to PRO!', 'ics-calendar') . '</a>';
 			}
 			return $links;
 		}
@@ -362,7 +364,7 @@ if (!class_exists('R34ICS')) {
 						?>
 						<div class="ics-calendar-color-key-header">
 							<label for="<?php echo esc_attr($toggle_all_uid); ?>"><input type="checkbox" id="<?php echo esc_attr($toggle_all_uid); ?>" class="ics-calendar-color-key-toggle-all" data-feed-key="ALL" checked="checked" />
-							<?php _e('Show/hide all', 'r34ics'); ?>
+							<?php esc_html_e('Show/hide all', 'ics-calendar'); ?>
 							</label>
 						</div>
 						<?php
@@ -620,8 +622,8 @@ if (!class_exists('R34ICS')) {
 					$ICal = $this->ical_parse_url($url, $url_tz->getName(), $args, $range);
 	
 					// No ICS data present -- throw error and move on to the next feed
-					if (!is_object($ICal)) {
-						trigger_error(__('ICS file could not be retrieved or was empty. Please verify URL is correct, and check your php.ini configuration to verify either cURL or allow_url_fopen is available. If you are using spaces to delimit multiple URLs, you may also wish to try using the pipe character instead. Affected URL:', 'r34ics') . ' ' . $url, E_USER_NOTICE);
+					if (!is_object($ICal) && $this->debug) {
+						trigger_error(esc_html__('ICS file could not be retrieved or was empty. Please verify URL is correct, and check your php.ini configuration to verify either cURL or allow_url_fopen is available. If you are using spaces to delimit multiple URLs, you may also wish to try using the pipe character instead. Affected URL:', 'ics-calendar') . ' ' . esc_url($url), E_USER_NOTICE);
 						continue;
 					}
 					
@@ -1052,15 +1054,15 @@ if (!class_exists('R34ICS')) {
 			wp_enqueue_script('ics-calendar');
 			
 			// Add inline scripts (dynamic values)
-			wp_add_inline_script('ics-calendar', 'var r34ics_ajax_obj = ' . json_encode(array(
+			wp_add_inline_script('ics-calendar', 'var r34ics_ajax_obj = ' . wp_json_encode(array(
 				'ajaxurl' => admin_url('admin-ajax.php'),
 				'r34ics_nonce' => wp_create_nonce('r34ics_nonce'),
 			)) . ';');
-			wp_add_inline_script('ics-calendar', 'var ics_calendar_i18n = ' . json_encode(array(
-				'hide_past_events' => __('Hide past events', 'r34ics'),
-				'show_past_events' => __('Show past events', 'r34ics'),
+			wp_add_inline_script('ics-calendar', 'var ics_calendar_i18n = ' . wp_json_encode(array(
+				'hide_past_events' => esc_html__('Hide past events', 'ics-calendar'),
+				'show_past_events' => esc_html__('Show past events', 'ics-calendar'),
 			)) . ';');
-			wp_add_inline_script('ics-calendar', 'var r34ics_days_of_week_map = ' . json_encode((array)$this->days_of_week_map()) . ';');
+			wp_add_inline_script('ics-calendar', 'var r34ics_days_of_week_map = ' . wp_json_encode((array)$this->days_of_week_map()) . ';');
 			// Transients expiration is used for AJAX refresh interval, but must be at least 5 minutes
 			$transients_expiration = get_option('r34ics_transients_expiration', 3600);
 			if ($transients_expiration < 300) { $transients_expiration = 300; }
@@ -1119,30 +1121,30 @@ if (!class_exists('R34ICS')) {
 			}
 			// Float attachment in list view
 			if ($show_attachment && $attachment_is_image && in_array($args['view'], (array)$this->get_list_style_views())) {
-				echo '<div class="attach attach_float">' . strip_tags($event['attach'],'<a><img>') . '</div>';
+				echo '<div class="attach attach_float">' . wp_kses_post(strip_tags($event['attach'],'<a><img>')) . '</div>';
 			}
 			
 			// Location
 			if (!empty($args['location']) && (!empty($event['location']) || !empty($event['geo']))) {
 				if ($args['location'] === 'maplinks') {
-					echo '<div class="location">' . r34ics_location_map_link($event['location'], ($event['geo'] ?? ''), ($args['mapsource'] ?? 'google')) . '</div>';
+					echo '<div class="location">' . wp_kses_post(r34ics_location_map_link($event['location'], ($event['geo'] ?? ''), ($args['mapsource'] ?? 'google'))) . '</div>';
 				}
 				elseif (!empty($event['location'])) {
-					echo '<div class="location">' . r34ics_maybe_make_clickable($event['location']) . '</div>';
+					echo '<div class="location">' . wp_kses_post(r34ics_maybe_make_clickable($event['location'])) . '</div>';
 				}
 			}
 			
 			// Organizer
 			if (!empty($args['organizer']) && (!empty($event['organizer']) || !empty($event['contact']))) {
 				echo '<div class="organizer">';
-				if (!empty($event['organizer'])) { echo '<div>' . r34ics_organizer_format($event['organizer']) . '</div>'; }
-				if (!empty($event['contact'])) { echo '<div>' . __('Contact:', 'r34ics') . ' ' . r34ics_maybe_make_clickable($event['contact']) . '</div>'; }
+				if (!empty($event['organizer'])) { echo '<div>' . wp_kses_post(r34ics_organizer_format($event['organizer'])) . '</div>'; }
+				if (!empty($event['contact'])) { echo '<div>' . esc_html__('Contact:', 'ics-calendar') . ' ' . wp_kses_post(r34ics_maybe_make_clickable($event['contact'])) . '</div>'; }
 				echo '</div>';
 			}
 			
 			// Resources
 			if (!empty($args['resources']) && (!empty($event['resources']))) {
-				echo '<div class="resources">' . __('Resources:', 'r34ics') . ' ' . r34ics_maybe_make_clickable($event['resources']) . '</div>';
+				echo '<div class="resources">' . esc_html__('Resources:', 'ics-calendar') . ' ' . wp_kses_post(r34ics_maybe_make_clickable($event['resources'])) . '</div>';
 			}
 			
 			// Description
@@ -1152,7 +1154,7 @@ if (!class_exists('R34ICS')) {
 					if ($args['view'] != 'month' && $args['view'] != 'week' && intval($args['eventdesc']) > 1) {
 						$eventdesc_content .=
 							'<div class="descloc_toggle">' .
-								'<div class="descloc_toggle_excerpt" aria-hidden="true" title="' . esc_attr__('Click for more...', 'r34ics') . '">' .
+								'<div class="descloc_toggle_excerpt" aria-hidden="true" title="' . esc_attr__('Click for more...', 'ics-calendar') . '">' .
 									r34ics_maybe_make_clickable(wp_trim_words($event['eventdesc'], intval($args['eventdesc']))) .
 								'</div>' .
 								'<div class="descloc_toggle_full">' . r34ics_filter_the_content(r34ics_maybe_make_clickable($event['eventdesc'])) . '</div>' .
@@ -1186,7 +1188,7 @@ if (!class_exists('R34ICS')) {
 			}
 			// Add individual event .ics download link
 			if (!empty($args['eventdl'])) {
-				echo '<div><button class="r34ics_event_ics_download" data-eventdl-feed-key="' . intval($event['feed_key']) . '" data-eventdl-uid="' . esc_attr($event['uid']) . '" title="' . esc_attr(__('Save to your calendar', 'r34ics')) . '">' . __('Download', 'r34ics') . '</button></div>';
+				echo '<div><button class="r34ics_event_ics_download" data-eventdl-feed-key="' . intval($event['feed_key']) . '" data-eventdl-uid="' . esc_attr($event['uid']) . '" title="' . esc_attr__('Save to your calendar', 'ics-calendar') . '">' . esc_html__('Download', 'ics-calendar') . '</button></div>';
 			}
 			
 			// Action for additional content
@@ -1208,7 +1210,7 @@ if (!class_exists('R34ICS')) {
 					isset($event['feed_key']) &&
 					!empty($args['feedlabel_array'][$event['feed_key']])
 				) {
-						echo '<div class="descloc_feed_label">' . $args['feedlabel_array'][$event['feed_key']] . '</div>';
+						echo '<div class="descloc_feed_label">' . esc_html($args['feedlabel_array'][$event['feed_key']]) . '</div>';
 				}
 	
 				// Date(s) -- lightbox only, unless multi-day
@@ -1254,7 +1256,7 @@ if (!class_exists('R34ICS')) {
 	
 				// Add recurrence information
 				if (empty($args['skiprecurrence']) && !empty($event['rrule'])) {
-					echo r34ics_recurrence_description($event['rrule'], $args['hiderecurrence']);
+					echo wp_kses_post(r34ics_recurrence_description($event['rrule'], $args['hiderecurrence']));
 				}
 	
 				// Concatenate output and close div
@@ -1280,7 +1282,7 @@ if (!class_exists('R34ICS')) {
 			// Build event label HTML
 			echo '<' . esc_attr($args['htmltageventtitle']) . ' tabindex="0" aria-haspopup="true" class="' . esc_attr(implode(' ', $title_class)) . '">';
 			if (!empty($args['linktitles']) && empty($args['nolink']) && !empty($event['url'])) {
-				echo '<a href="' . esc_url($event['url']) . '" ' . r34ics_sametab_target($args['sametab'], $event['url']) . '>';
+				echo '<a href="' . esc_url($event['url']) . '" ' . wp_kses_post(r34ics_sametab_target($args['sametab'], $event['url'])) . '>';
 			}
 			echo wp_kses_post(html_entity_decode(str_replace('/', '/<wbr />', $event['label'])));
 			if (!empty($args['linktitles']) && empty($args['nolink']) && !empty($event['url'])) {
@@ -1291,7 +1293,7 @@ if (!class_exists('R34ICS')) {
 	
 			// Append cancelled status
 			if (!empty($event['status']) && $event['status'] == 'CANCELLED') {
-				echo '<span class="event_status event_status_cancelled">' . __('Cancelled', 'r34ics') . '</span>';
+				echo '<span class="event_status event_status_cancelled">' . esc_html__('Cancelled', 'ics-calendar') . '</span>';
 			}
 	
 			// Get buffered output
@@ -1649,11 +1651,11 @@ if (!class_exists('R34ICS')) {
 			ob_start();
 			
 			// Report deprecated attributes
-			if (!empty($currentweek)) {
-				trigger_error(__('The "currentweek" shortcode attribute is deprecated. Please use view="week" in your shortcode instead.', 'r34ics'), E_USER_DEPRECATED);
+			if (!empty($currentweek) && $this->debug) {
+				trigger_error(esc_html__('The "currentweek" shortcode attribute is deprecated. Please use view="week" in your shortcode instead.', 'ics-calendar'), E_USER_DEPRECATED);
 			}
-			if (!empty($legendinline)) {
-				trigger_error(__('The "legendinline" shortcode attribute is deprecated. Please use legendstyle="inline" in your shortcode instead.', 'r34ics'), E_USER_DEPRECATED);
+			if (!empty($legendinline) && $this->debug) {
+				trigger_error(esc_html__('The "legendinline" shortcode attribute is deprecated. Please use legendstyle="inline" in your shortcode instead.', 'ics-calendar'), E_USER_DEPRECATED);
 			}
 			
 			// Assemble display arguments array
@@ -1821,7 +1823,7 @@ if (!class_exists('R34ICS')) {
 				'tz' => $tz,
 				'ua' => (
 					(!empty($ua) && strlen($ua) > 5)
-						? trim(strip_tags($ua))
+						? trim(wp_strip_all_tags($ua))
 						: r34ics_boolean_check($ua)
 				),
 				'url' => $url,
@@ -1865,7 +1867,7 @@ if (!class_exists('R34ICS')) {
 				$args['url'] = r34ics_url_uniqid_array_convert($args['url']);
 				$is_list_style = intval(in_array($args['view'], $this->list_style_views));
 				$is_list_long = intval($is_list_style && (!empty($args['eventdesc']) || !empty($args['location']) || !empty($args['organizer']) || $args['count'] > 5));
-				echo '<div class="r34ics-ajax-container loading" id="' . esc_attr($args['guid']) . '" data-view="' . esc_attr($args['view']) . '" data-view-is-list-style="' . esc_attr($is_list_style) . '" data-view-is-list-long="' . esc_attr($is_list_long) . '" data-args="' . esc_attr(json_encode($args)) . '">&nbsp;</div>';
+				echo '<div class="r34ics-ajax-container loading" id="' . esc_attr($args['guid']) . '" data-view="' . esc_attr($args['view']) . '" data-view-is-list-style="' . esc_attr($is_list_style) . '" data-view-is-list-long="' . esc_attr($is_list_long) . '" data-args="' . esc_attr(wp_json_encode($args)) . '">&nbsp;</div>';
 			}
 	
 			// Standard mode
@@ -1945,18 +1947,20 @@ if (!class_exists('R34ICS')) {
 				$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
 			}
 
-			if (isset($_POST['r34ics-purge-calendar-transients-nonce']) && wp_verify_nonce($_POST['r34ics-purge-calendar-transients-nonce'], 'r34ics')) {
+			if (isset($_POST['r34ics-purge-calendar-transients-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-purge-calendar-transients-nonce'])), 'r34ics')) {
 				$cleared = r34ics_purge_calendar_transients();
 				if ($cleared > 0) {
 					$r34ics_deferred_admin_notices['r34ics_purge_transients'] = array(
-						'content' => '<p>' . sprintf(__('Cleared %1$s %2$s transient(s).', 'r34ics'), intval($cleared), 'ICS Calendar') . '</p>',
+						/* translators: 1: Plugin name (do not translate) */
+						'content' => '<p>' . sprintf(esc_html__('Cleared %1$s %2$s transient(s).', 'ics-calendar'), intval($cleared), 'ICS Calendar') . '</p>',
 						'status' => 'success',
 						'dismissible' => false,
 					);
 				}
 				else {
 					$r34ics_deferred_admin_notices['r34ics_purge_transients'] = array(
-						'content' => '<p>' . sprintf(__('No %1$s transients were found.', 'r34ics'), 'ICS Calendar') . '</p>',
+						/* translators: 1: Plugin name (do not translate) */
+						'content' => '<p>' . sprintf(esc_html__('No %1$s transients were found.', 'ics-calendar'), 'ICS Calendar') . '</p>',
 						'status' => 'info',
 						'dismissible' => false,
 					);
@@ -1969,7 +1973,7 @@ if (!class_exists('R34ICS')) {
 		
 		
 		protected function _admin_page_callback_url_tester() {
-			if (isset($_POST['r34ics-url-tester-nonce']) && wp_verify_nonce($_POST['r34ics-url-tester-nonce'],'r34ics')) {
+			if (isset($_POST['r34ics-url-tester-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-url-tester-nonce'])), 'r34ics')) {
 				$results = array('size' => '', 'status' => '', 'special' => array());
 				if ($url_to_test = filter_input(INPUT_POST, 'url_to_test', FILTER_SANITIZE_URL)) {
 					$results['url'] = $url_to_test;
@@ -1994,26 +1998,31 @@ if (!class_exists('R34ICS')) {
 				if (in_array($results['status'], array('failed', 'unknown'))) {
 					// URL contains '@' (could be basic auth credentials) and site uses legacy feed request method
 					if (strpos($url_to_test, '@') !== false && get_option('r34ics_url_get_contents_legacy_method')) {
-						$results['special'][] = sprintf(__('Your feed URL appears to contain HTTP Basic Authentication credentials. Try turning off the %1$s option under the %2$s tab above.', 'r34ics'), '<strong style="white-space: nowrap;">' . __('Use legacy feed request method', 'r34ics') . '</strong>', '<a href="#settings">' . __('Settings', 'r34ics') . '</a>');
+						/* translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags */
+						$results['special'][] = sprintf(esc_html__('Your feed URL appears to contain HTTP Basic Authentication credentials. Try turning off the %1$s option under the %2$s tab above.', 'ics-calendar'), '<strong style="white-space: nowrap;">' . esc_html__('Use legacy feed request method', 'ics-calendar') . '</strong>', '<a href="#settings">' . esc_html__('Settings', 'ics-calendar') . '</a>');
 					}
 					// Suggest "Use legacy feed request method" option
 					else {
-						$results['special'][] = sprintf(__('If your feed URL works with our online %1$sPreview%2$s tool, try turning on the %3$s option under the %4$s tab above.', 'r34ics'), '<a href="https://icscalendar.com/preview/" target="_blank">', '</a>', '<strong style="white-space: nowrap;">' . __('Use legacy feed request method', 'r34ics') . '</strong>', '<a href="#settings">' . __('Settings', 'r34ics') . '</a>');
+						/* translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags */
+						$results['special'][] = sprintf(esc_html__('If your feed URL works with our online %1$sPreview%2$s tool, try turning on the %3$s option under the %4$s tab above.', 'ics-calendar'), '<a href="https://icscalendar.com/preview/" target="_blank">', '</a>', '<strong style="white-space: nowrap;">' . esc_html__('Use legacy feed request method', 'ics-calendar') . '</strong>', '<a href="#settings">' . esc_html__('Settings', 'ics-calendar') . '</a>');
 					}
 				}
 				// The feed URL appears to be a media library file
 				$wp_upload_dir = wp_upload_dir();
 				if ($results['status'] == 'valid' && !empty($wp_upload_dir['baseurl']) && strpos($url_to_test, $wp_upload_dir['baseurl']) !== false) {
-					$results['special'][] = sprintf(__('%1$sThis URL points to a file in your Media Library.%2$s While you should be able to use this URL in an %3$s shortcode, it will be a static snapshot of the calendar at the time the file was created, and will not reflect any future updates to the source calendar. Please see our %4$sUser Guide%5$s for instructions on obtaining your correct dynamic feed URL.', 'r34ics'), '<strong style="color: crimson;">', '</strong>', 'ICS Calendar', '<a href="https://icscalendar.com/getting-started/#finding-your-ics-feed-url" target="_blank">', '</a>');
+					/* translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag */
+					$results['special'][] = sprintf(esc_html__('%1$sThis URL points to a file in your Media Library.%2$s While you should be able to use this URL in an %3$s shortcode, it will be a static snapshot of the calendar at the time the file was created, and will not reflect any future updates to the source calendar. Please see our %4$sUser Guide%5$s for instructions on obtaining your correct dynamic feed URL.', 'ics-calendar'), '<strong style="color: crimson;">', '</strong>', 'ICS Calendar', '<a href="https://icscalendar.com/getting-started/#finding-your-ics-feed-url" target="_blank">', '</a>');
 				}
 				// Append the resolved IP address for the feed's domain
-				if (!empty($results['url']) && $url_host = parse_url($results['url'], PHP_URL_HOST)) {
+				if (!empty($results['url']) && $url_host = wp_parse_url($results['url'], PHP_URL_HOST)) {
 					$url_resolved_ip = gethostbyname($url_host);
 					if ($url_resolved_ip == $url_host) {
-						$results['special'][] = sprintf(__('Error: Could not resolve IP address for %1$s.', 'r34ics'), '<strong>' . $url_host . '</strong>');
+						/* translators: 1. Dynamic value and HTML tags */
+						$results['special'][] = sprintf(esc_html__('Error: Could not resolve IP address for %1$s.', 'ics-calendar'), '<strong>' . esc_html($url_host) . '</strong>');
 					}
 					else {
-						$results['special'][] = sprintf(__('Resolved IP address for %1$s:', 'r34ics'), '<strong>' . $url_host . '</strong>') . ' ' . $url_resolved_ip;
+						/* translators: 1. Dynamic value and HTML tags */
+						$results['special'][] = sprintf(esc_html__('Resolved IP address for %1$s:', 'ics-calendar'), '<strong>' . esc_html($url_host) . '</strong>') . ' ' . esc_html($url_resolved_ip);
 					}
 				}
 				return $results;
@@ -2022,7 +2031,7 @@ if (!class_exists('R34ICS')) {
 		
 		
 		protected function _admin_page_callback_save_settings() {
-			if (current_user_can('manage_options') && isset($_POST['r34ics-settings-nonce']) && wp_verify_nonce($_POST['r34ics-settings-nonce'],'r34ics')) {
+			if (current_user_can('manage_options') && isset($_POST['r34ics-settings-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-settings-nonce'])), 'r34ics')) {
 				
 				// Prepare deferred admin notices
 				global $r34ics_deferred_admin_notices;
@@ -2031,12 +2040,20 @@ if (!class_exists('R34ICS')) {
 				}
 			
 				// transients_expiration
-				update_option('r34ics_transients_expiration', intval($_POST['transients_expiration']));
+				update_option('r34ics_transients_expiration', (
+					isset($_POST['transients_expiration'])
+						? intval(sanitize_text_field(wp_unslash($_POST['transients_expiration'])))
+						: 3600
+				));
 				
 				// allowed_hosts
 				// Need to allow $_POST['allowed_hosts'] to be empty for erasing existing entries
 				if (function_exists('r34ics_sanitize_hosts')) {
-					update_option('r34ics_allowed_hosts', r34ics_sanitize_hosts($_POST['allowed_hosts']));
+					update_option('r34ics_allowed_hosts', (
+						isset($_POST['allowed_hosts'])
+							? r34ics_sanitize_hosts(sanitize_textarea_field(wp_unslash($_POST['allowed_hosts'])))
+							: ''
+					));
 				}
 				
 				// ajax_by_default
@@ -2046,10 +2063,11 @@ if (!class_exists('R34ICS')) {
 				update_option('r34ics_ajax_bypass_nonce', !empty($_POST['ajax_bypass_nonce']));
 				
 				// display_calendar_memory_limit
-				$display_calendar_memory_limit = intval($_POST['display_calendar_memory_limit']);
-				if (!empty($display_calendar_memory_limit)) {
-					update_option('r34ics_display_calendar_memory_limit', $display_calendar_memory_limit . 'M');
-				}
+				update_option('r34ics_display_calendar_memory_limit', (
+					isset($_POST['display_calendar_memory_limit'])
+						? intval(sanitize_text_field(wp_unslash($_POST['display_calendar_memory_limit']))) . 'M'
+						: ini_get('memory_limit')
+				));
 				
 				// display_add_calendar_button_false
 				update_option('r34ics_display_add_calendar_button_false', !empty($_POST['display_add_calendar_button_false']));
@@ -2064,7 +2082,8 @@ if (!class_exists('R34ICS')) {
 				delete_option('r34ics_load_css_js_on_wp_enqueue_scripts');
 				
 				$r34ics_deferred_admin_notices['r34ics_settings_updated'] = array(
-					'content' => '<p>' . sprintf(__('%1$sSettings updated.%2$s You may need to refresh the page to see some changes.', 'r34ics'), '<strong>', '</strong>') . '</p>',
+					/* translators: 1. HTML tag 2. HTML tag */
+					'content' => '<p>' . sprintf(esc_html__('%1$sSettings updated.%2$s You may need to refresh the page to see some changes.', 'ics-calendar'), '<strong>', '</strong>') . '</p>',
 					'status' => 'success',
 					'dismissible' => false,
 				);
@@ -2218,9 +2237,9 @@ if (!class_exists('R34ICS')) {
 						header('Cache-Control: private, must-revalidate, post-check=0, pre-check=0');
 						header('Expires: 0');
 						header('Content-Type: text/calendar');
-						header('Content-Disposition: attachment; filename="' . sanitize_title(__('calendar event', 'r34ics')) . '.ics"');
+						header('Content-Disposition: attachment; filename="' . sanitize_title(esc_html__('calendar event', 'ics-calendar')) . '.ics"');
 						header('Content-Length: ' . strlen($content ?? ''));
-						echo $content;
+						echo wp_kses_post($content);
 						exit;
 					}
 				}
@@ -2295,10 +2314,10 @@ if (!class_exists('R34ICS')) {
 			 * 2. Convert ampersand entities to plain ampersands
 			 * 3. Run standard PHP sanitize filter
 			 */
-			$url = filter_var(str_replace('&amp;', '&', strip_tags($url)), FILTER_SANITIZE_URL);
+			$url = filter_var(str_replace('&amp;', '&', wp_strip_all_tags($url)), FILTER_SANITIZE_URL);
 		
 			// Parse URL for further validation
-			$url_parsed = parse_url($url);
+			$url_parsed = wp_parse_url($url);
 			
 			// Bail out now if URL is from a domain we've already failed to access
 			if (
@@ -2376,7 +2395,7 @@ if (!class_exists('R34ICS')) {
 				'Accept-Encoding' => 'gzip',
 				'Accept-Language' => str_replace('_', '-', $locale) . ',' . substr($locale,0,2) . ';q=0.9,en-US,en;q=0.8,*;q=0.5',
 				'Connection' => 'keep-alive',
-				'Host' => parse_url($url, PHP_URL_HOST),
+				'Host' => wp_parse_url($url, PHP_URL_HOST),
 				'Referer' => home_url($wp->request),
 				'Sec-Fetch-Dest' => 'document',
 				'Sec-Fetch-Mode' => 'navigate',
@@ -2394,7 +2413,7 @@ if (!class_exists('R34ICS')) {
 			// Allow user agent override
 			if (!empty($ua)) {
 				switch (gettype($ua)) {
-					case 'string': $user_agent = trim(strip_tags($ua)); break; // Custom UA string provided
+					case 'string': $user_agent = trim(wp_strip_all_tags($ua)); break; // Custom UA string provided
 					case 'boolean': case 'integer': $user_agent = $user_agent_real; break; // Use our "real" UA string
 					default: break;
 				}
@@ -2481,7 +2500,15 @@ if (!class_exists('R34ICS')) {
 		/**
 		 * Retrieve file from remote server with fallback methods
 		 * Based on: https://stackoverflow.com/a/21177510
+		 *
 		 * DEPRECATED -- Runs only if the r34ics_legacy_url_get_contents option is set
+		 *
+		 * Note: This method triggers several error messages in the Plugin Check plugin;
+		 * it is only retained for legacy purposes when the _url_get_contents() method --
+		 * which *does* use the preferred wp_remote_get() instead of cURL functions --
+		 * does not work properly on certain server configurations. We have not been able
+		 * to replicate the issues in our test environments, so we resorted to retaining the
+		 * old functionality in this legacy method.
 		 */
 		protected function _url_get_contents_legacy($url, $method='', $recursion=false, $curlopts=null, $use_transients=false, $basicauth=false, $skip_domain_errors=false) {
 			$method = (string)$method; // Avoid PHP 8.1 "Passing null to parameter" deprecation notice
@@ -2518,10 +2545,10 @@ if (!class_exists('R34ICS')) {
 			 * 2. Convert ampersand entities to plain ampersands
 			 * 3. Run standard PHP sanitize filter
 			 */
-			$url = filter_var(str_replace('&amp;', '&', strip_tags($url)), FILTER_SANITIZE_URL);
+			$url = filter_var(str_replace('&amp;', '&', wp_strip_all_tags($url)), FILTER_SANITIZE_URL);
 		
 			// Parse URL for further validation
-			$url_parsed = parse_url($url);
+			$url_parsed = wp_parse_url($url);
 			
 			// Bail out now if URL is from a domain we've already failed to access
 			if (
@@ -2604,7 +2631,7 @@ if (!class_exists('R34ICS')) {
 					'Accept-Encoding: gzip',
 					'Accept-Language: ' . str_replace('_', '-', $locale) . ',' . substr($locale,0,2) . ';q=0.9,en-US,en;q=0.8,*;q=0.5',
 					'Connection: keep-alive',
-					'Host: ' . parse_url($url, PHP_URL_HOST),
+					'Host: ' . wp_parse_url($url, PHP_URL_HOST),
 					'Sec-Fetch-Dest: document',
 					'Sec-Fetch-Mode: navigate',
 					'Sec-Fetch-Site: same-origin',

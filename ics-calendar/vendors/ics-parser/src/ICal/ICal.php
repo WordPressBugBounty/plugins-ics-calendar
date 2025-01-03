@@ -8,7 +8,7 @@
  *
  * @author  Jonathan Goode <https://github.com/u01jmg3>
  * @license https://opensource.org/licenses/mit-license.php MIT License
- * @version 3.4.0
+ * @version 3.4.1
  */
 
 namespace R34ICS_ICal; // Renamed to avoid plugin conflicts
@@ -1171,9 +1171,9 @@ class ICal
          */
         $pattern  = '/^(?:TZID=)?([^:]*|".*")'; // [1]: Time zone
         $pattern .= ':?';                       //      Time zone delimiter
-        $pattern .= '([0-9]{8})';               // [2]: YYYYMMDD
+        $pattern .= '(\d{8})';                  // [2]: YYYYMMDD
         $pattern .= 'T?';                       //      Time delimiter
-        $pattern .= '(?(?<=T)([0-9]{6}))';      // [3]: HHMMSS (filled if delimiter present)
+        $pattern .= '(?(?<=T)(\d{6}))';         // [3]: HHMMSS (filled if delimiter present)
         $pattern .= '(Z?)/';                    // [4]: UTC flag
 
         preg_match($pattern, $icalDate, $date);
@@ -1218,7 +1218,8 @@ class ICal
         $iCalDateToDateTime = $this->iCalDateToDateTime($icalDate);
 
         if ($iCalDateToDateTime === false) {
-            trigger_error("ICal::iCalDateToUnixTimestamp: Invalid date passed ({$icalDate})", E_USER_NOTICE);
+            //trigger_error("ICal::iCalDateToUnixTimestamp: Invalid date passed ({$icalDate})", E_USER_NOTICE);
+            trigger_error("ICal::iCalDateToUnixTimestamp: Invalid date passed", E_USER_NOTICE);
 
             return 0;
         }
@@ -1246,7 +1247,8 @@ class ICal
             $dateTime = $this->parseDuration($event['DTSTART'], $dateArray[2]);
 
             if ($dateTime instanceof \DateTime === false) {
-                trigger_error("ICal::iCalDateWithTimeZone: Invalid date passed ({$event['DTSTART']})", E_USER_NOTICE);
+                //trigger_error("ICal::iCalDateWithTimeZone: Invalid date passed ({$event['DTSTART']})", E_USER_NOTICE);
+                trigger_error("ICal::iCalDateWithTimeZone: Invalid date passed", E_USER_NOTICE);
 
                 return false;
             }
@@ -1370,7 +1372,8 @@ class ICal
             $initialEventDate = $this->icalDateToDateTime($anEvent['DTSTART_array'][3]);
 
             if ($initialEventDate === false) {
-                trigger_error("ICal::processRecurrences: Invalid date passed ({$anEvent['DTSTART_array'][3]})", E_USER_NOTICE);
+                //trigger_error("ICal::processRecurrences: Invalid date passed ({$anEvent['DTSTART_array'][3]})", E_USER_NOTICE);
+                trigger_error("ICal::processRecurrences: Invalid date passed", E_USER_NOTICE);
 
                 continue;
             }
@@ -1406,7 +1409,8 @@ class ICal
                 };
                 if (!in_array($frequency, array('MONTHLY', 'YEARLY'))) {
                     if (is_array($rrules['BYDAY']) && !array_reduce($rrules['BYDAY'], $checkByDays, true)) {
-                        trigger_error("ICal::processRecurrences: A {$frequency} RRULE may not contain BYDAY values with numeric prefixes", E_USER_NOTICE);
+                        //trigger_error("ICal::processRecurrences: A {$frequency} RRULE may not contain BYDAY values with numeric prefixes", E_USER_NOTICE);
+                        trigger_error("ICal::processRecurrences: A RRULE may not contain BYDAY values with numeric prefixes", E_USER_NOTICE);
 
                         continue;
                     }
@@ -2657,7 +2661,7 @@ class ICal
         $options['http']           = array();
         $options['http']['header'] = array();
 
-        if ($this->httpBasicAuth === array() || !empty($this->httpUserAgent) || !empty($this->httpAcceptLanguage)) {
+        if ($this->httpBasicAuth !== array() || !empty($this->httpUserAgent) || !empty($this->httpAcceptLanguage)) {
             if ($this->httpBasicAuth !== array()) {
                 $username  = $this->httpBasicAuth['username'];
                 $password  = $this->httpBasicAuth['password'];
@@ -2693,7 +2697,8 @@ class ICal
 
         // phpcs:ignore CustomPHPCS.ControlStructures.AssignmentInCondition
         if (($lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES, $context)) === false) {
-            throw new \Exception("The file path or URL '{$filename}' does not exist.");
+            //throw new \Exception("The file path or URL '{$filename}' does not exist.");
+            throw new \Exception("The file path or URL does not exist.");
         }
 
         return $lines;

@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.4.2
+Stable tag: 11.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,6 +99,24 @@ The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional 
 
 == Changelog ==
 
+= 11.5.0 - 2025.01.03 =
+
+* i18n:
+  * Added `translators:` comments for each translation string containing placeholders.
+  * Changed text domain from `r34ics` to `ics-calendar` to conform with [WordPress Plugin Directory requirements](https://developer.wordpress.org/plugins/internationalization/how-to-internationalize-your-plugin/#text-domains). _Translation files included within the plugin have been correspondingly updated, but if you are using third-party translations or a plugin such as [Say What](https://wordpress.org/plugins/say-what/), you may need to update them with the new text domain._
+  * Replaced `%s` translation string placeholders with `%1$s`.
+  * Replaced uses of unescaped `_e()` and `__()` functions with the corresponding escaped functions `esc_html_e()`, `esc_html__()`, `esc_attr_e()` and `esc_attr__()`, as appropriate.
+  * Updated all translation files to reflect the above changes.
+* Miscellaneous:
+  * Added extra sanitization functionality to handling of form inputs on Settings page and `r34ics-ajax.php`.
+  * Added text escaping functions to dynamic plugin output in templates.
+  * Added `r34ics_select_allowed()` function.
+  * Fixed CSS padding issue with week numbers in month and week views.
+  * Replaced uses of certain standard PHP functions such as `json_encode()`, `mt_rand()`, `parse_url()` and `strip_tags()` with their WordPress-specific equivalents (e.g. `wp_json_encode()`, `wp_rand()`, `wp_parse_url()` and `wp_strip_tags()`).
+  * Updated handling of server variables in System Report.
+* Vendors:
+  * Updated embedded ics-parser library to version 3.4.1 (with namespace change to prevent plugin conflicts, and removal of variables from error messages due to [Plugin Check](https://wordpress.org/plugins/plugin-check) reporting them as coding errors).
+  
 = 11.4.2 - 2024.12.16 =
 
 * Added IP address resolution to ICS Feed URL Tester, to help troubleshoot network-related issues.

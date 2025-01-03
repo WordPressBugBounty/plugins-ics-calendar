@@ -499,7 +499,7 @@ will be retained permanently, so they can be used to create custom color palette
 			}
 
 			.ics-calendar-month-grid th.week-number {
-				padding: 0.2em 0;
+				padding: 0.2em !important;
 				text-align: center;
 				white-space: nowrap;
 				width: 2em !important;

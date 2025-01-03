@@ -46,7 +46,7 @@ if ($args['toggle'] === 'lightbox') {
 
 	// Color code key
 	if (empty($args['legendposition']) || $args['legendposition'] == 'above') {
-		echo $R34ICS->color_key_html($args, $ics_data);
+		echo wp_kses_post($R34ICS->color_key_html($args, $ics_data));
 	}
 
 	// Show previous/next month arrows if applicable
@@ -55,7 +55,7 @@ if ($args['toggle'] === 'lightbox') {
 		<nav class="ics-calendar-arrow-nav" style="display: none;">
 			<a href="#" class="prev" data-goto=""><span class="prev-icon">&larr;</span> <span class="prev-text"></span></a>
 			<a href="#" class="next" data-goto=""><span class="next-text"></span> <span class="next-icon">&rarr;</span></a>
-			<a href="#" class="today" data-goto="<?php echo esc_attr(r34ics_date('Ym')); ?>"><span class="today-text"><?php _e('Today', 'r34ics'); ?></span></a>
+			<a href="#" class="today" data-goto="<?php echo esc_attr(r34ics_date('Ym')); ?>"><span class="today-text"><?php esc_html_e('Today', 'ics-calendar'); ?></span></a>
 		</nav>
 		<?php
 	}
@@ -80,7 +80,7 @@ if ($args['toggle'] === 'lightbox') {
 	</select>
 
 	<!-- Toggle show/hide past events on mobile -->
-	<p class="ics-calendar-past-events-toggle phone_only inline_block" aria-hidden="true"><a href="#" data-ics-calendar-action="show-past-events"><?php _e('Show past events','r34ics'); ?></a></p>
+	<p class="ics-calendar-past-events-toggle phone_only inline_block" aria-hidden="true"><a href="#" data-ics-calendar-action="show-past-events"><?php esc_html_e('Show past events', 'ics-calendar'); ?></a></p>
 	
 	<?php
 	// Build monthly calendars
@@ -168,13 +168,13 @@ if ($args['toggle'] === 'lightbox') {
 										<?php
 										if (!empty($args['fulldateintable'])) {
 											?>
-											<span id="<?php echo esc_attr($day_uid); ?>"><?php echo r34ics_date($date_format, $date); ?></span>
+											<span id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post(r34ics_date($date_format, $date)); ?></span>
 											<?php
 										}
 										else {
 											?>
-											<span class="phone_only" id="<?php echo esc_attr($day_uid); ?>"><?php echo r34ics_date($date_format, $date); ?></span>
-											<span class="no_phone" aria-hidden="true"><?php echo r34ics_date('j', $date); ?></span>
+											<span class="phone_only" id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post(r34ics_date($date_format, $date)); ?></span>
+											<span class="no_phone" aria-hidden="true"><?php echo wp_kses_post(r34ics_date('j', $date)); ?></span>
 											<?php
 										}
 										?>
@@ -190,33 +190,33 @@ if ($args['toggle'] === 'lightbox') {
 													$has_desc = r34ics_has_desc($args, $event);
 													if ($time == 'all-day') {
 														?>
-														<li class="<?php echo r34ics_event_css_classes($event, $time, $args); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
+														<li class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 															if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 															if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
 														?>>
 															<?php
 															if (!$all_day_indicator_shown) {
 																?>
-																<span class="all-day-indicator"><?php _e('All Day', 'r34ics'); ?></span>
+																<span class="all-day-indicator"><?php esc_html_e('All Day', 'ics-calendar'); ?></span>
 																<?php
 																$all_day_indicator_shown = true;
 															}
 
 															// Event label (title)
-															echo $R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null));
+															echo wp_kses_post($R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null)));
 
 															// Sub-label
-															echo $R34ICS->event_sublabel_html($args, $event, null);
+															echo wp_kses_post($R34ICS->event_sublabel_html($args, $event, null));
 
 															// Description/Location/Organizer
-															echo $R34ICS->event_description_html($args, $event, (empty($args['toggle']) ? array('hover_block') : null), $has_desc);
+															echo wp_kses_post($R34ICS->event_description_html($args, $event, (empty($args['toggle']) ? array('hover_block') : null), $has_desc));
 															?>
 														</li>
 														<?php
 													}
 													else {
 														?>
-														<li class="<?php echo r34ics_event_css_classes($event, $time, $args); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
+														<li class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 															if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 															if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
 														?>>
@@ -242,13 +242,13 @@ if ($args['toggle'] === 'lightbox') {
 															}
 
 															// Event label (title)
-															echo $R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null));
+															echo wp_kses_post($R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null)));
 
 															// Sub-label
-															echo $R34ICS->event_sublabel_html($args, $event, null);
+															echo wp_kses_post($R34ICS->event_sublabel_html($args, $event, null));
 
 															// Description/Location/Organizer
-															echo $R34ICS->event_description_html($args, $event, (empty($args['toggle']) ? array('hover_block') : null), $has_desc);
+															echo wp_kses_post($R34ICS->event_description_html($args, $event, (empty($args['toggle']) ? array('hover_block') : null), $has_desc));
 															?>
 														</li>
 														<?php
@@ -279,7 +279,7 @@ if ($args['toggle'] === 'lightbox') {
 				if (empty($ics_data['events'][$year][$month])) {
 					?>
 					<p class="phone_only no_events">
-						<?php _e('No events.', 'r34ics'); ?>
+						<?php esc_html_e('No events.', 'ics-calendar'); ?>
 					</p>
 					<?php
 				}
@@ -291,7 +291,7 @@ if ($args['toggle'] === 'lightbox') {
 				{
 					?>
 					<p class="phone_only no_additional_events">
-						<?php _e('No additional events this month.', 'r34ics'); ?>
+						<?php esc_html_e('No additional events this month.', 'ics-calendar'); ?>
 					</p>
 					<?php
 				}
@@ -304,7 +304,7 @@ if ($args['toggle'] === 'lightbox') {
 		
 	// Color code key
 	if (!empty($args['legendposition']) && $args['legendposition'] == 'below') {
-		echo $R34ICS->color_key_html($args, $ics_data);
+		echo wp_kses_post($R34ICS->color_key_html($args, $ics_data));
 	}
 
 	// Actions after rendering calendar wrapper (can include additional template output)

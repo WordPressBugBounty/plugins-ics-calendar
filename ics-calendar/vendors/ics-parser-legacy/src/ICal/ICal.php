@@ -2599,7 +2599,8 @@ class ICal
 
         // phpcs:ignore CustomPHPCS.ControlStructures.AssignmentInCondition
         if (($lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES, $context)) === false) {
-            throw new \Exception("The file path or URL '{$filename}' does not exist.");
+            //throw new \Exception("The file path or URL '{$filename}' does not exist.");
+            throw new \Exception("The file path or URL does not exist.");
         }
 
         return $lines;

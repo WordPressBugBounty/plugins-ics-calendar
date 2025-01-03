@@ -17,7 +17,7 @@ function r34ics_allowed_heading_tags_check($tag='', $default='div') {
 
 // Check for boolean values in shortcode
 function r34ics_boolean_check($val) {
-	$check = strtolower(trim(strip_tags((string)$val)));
+	$check = strtolower(trim(wp_strip_all_tags((string)$val)));
 	if ($check === '1' || $check === 'true' || $check === 'on') { return true; }
 	if ($check === '0' || $check === 'false' || $check === 'off' || $check === 'none') { return false; }
 	if ($check === 'null' || $check === '') { return null; }
@@ -70,10 +70,11 @@ function r34ics_color_text4bg($hex='', $trimhash=false) {
 
 // Create a cURL cookie path (if needed) and return it
 function r34ics_curl_cookie_path($cookie_file='curl_cookie.txt') {
+	global $wp_filesystem;
 	$wp_upload_dir = wp_upload_dir();
 	$cookie_dir = $wp_upload_dir['basedir'] . '/ics-calendar';
 	if (!is_dir($cookie_dir)) {
-		mkdir($cookie_dir);
+		$wp_filesystem->mkdir($cookie_dir);
 	}
 	return $cookie_dir . '/' . $cookie_file;
 }
@@ -129,7 +130,7 @@ function r34ics_date($format='', $dt_str='', $tz=null, $offset='') {
 
 // Set a display date format based on a passed-in format, or by adding day of week and removing year from site format; optionally wraps elements in tags
 function r34ics_date_format($format='', $spans=false) {
-	$format = !empty($format) ? strip_tags($format) : 'l ' . trim(preg_replace('/((, )?Y|l(, )?)/', '', get_option('date_format')), ',/-');
+	$format = !empty($format) ? wp_strip_all_tags($format) : 'l ' . trim(preg_replace('/((, )?Y|l(, )?)/', '', get_option('date_format')), ',/-');
 	// Add spans; only works if the format doesn't already have some custom (escaped) characters
 	if (!empty($spans) && strpos($format, "\\") === false) {
 		$format = preg_replace('/(([DlFmMndjYy])[S]?[,\.]?)/', '\<\s\p\a\n \d\a\t\a\-\d\a\t\e\-\f\o\r\m\a\t\=\"\\\$2\"\>$1\<\/\s\p\a\n\>', $format);
@@ -231,7 +232,8 @@ function r34ics_deferred_admin_notices() {
 
 // Check if a URL's domain is the same as the current site
 function r34ics_domain_match($url='') {
-	return (parse_url($url, PHP_URL_HOST) == $_SERVER['SERVER_NAME']);
+	// Excessive sanitization to placate Plugin Check
+	return (wp_parse_url($url, PHP_URL_HOST) == (isset($_SERVER['SERVER_NAME']) ? wp_kses_post(wp_unslash($_SERVER['SERVER_NAME'])) : ''));
 }
 
 
@@ -254,7 +256,7 @@ function r34ics_event_css_classes($event, $time, $args) {
 	}
 	// Allow external manipulation of the classes array
 	$classes = apply_filters('r34ics_event_css_classes', $classes, $event, $time, $args);
-	return esc_attr(implode(' ', $classes));
+	return implode(' ', $classes);
 }
 
 
@@ -275,7 +277,7 @@ function r34ics_feed_colors_css($ics_data, $padding=false, $hover=false) {
 					}
 					if (!empty($hover)) {
 						?>
-						border: 1px solid <?php echo r34ics_hex2rgba($color['base'],0.25); ?>;
+						border: 1px solid <?php echo esc_attr(r34ics_hex2rgba($color['base'],0.25)); ?>;
 						z-index: 1;
 						<?php
 					}
@@ -343,7 +345,7 @@ function r34ics_feed_colors_css($ics_data, $padding=false, $hover=false) {
 		$feed_colors_css = apply_filters('r34ics_feed_colors_css', ob_get_clean(), $ics_data, $padding, $hover);
 		// Output CSS
 		if (!empty($feed_colors_css)) {
-			echo '<style type="text/css">' . r34ics_minify_css($feed_colors_css) . '</style>';
+			echo '<style type="text/css">' . wp_kses_post(r34ics_minify_css($feed_colors_css)) . '</style>';
 		}
 }
 
@@ -587,7 +589,8 @@ function r34ics_is_html($str='') {
 
 // Detect if we're running an instance of WordPress Playground (or any PHP.wasm implementation)
 function r34ics_is_playground() {
-	return ($_SERVER['SERVER_SOFTWARE'] == 'PHP.wasm');
+	// Excessive sanitization to placate Plugin Check
+	return (isset($_SERVER['SERVER_SOFTWARE']) && (wp_kses_post(wp_unslash($_SERVER['SERVER_SOFTWARE'])) == 'PHP.wasm'));
 }
 
 
@@ -648,7 +651,7 @@ function r34ics_last_day_of_current($interval, $dt_str=null) {
  */
 function r34ics_lightbox_container($echo=true) {
 	$output = '<div class="r34ics_lightbox"><div class="r34ics_lightbox_inner"><div class="r34ics_lightbox_close" tabindex="0">&times;</div><div class="r34ics_lightbox_content"></div></div></div>';
-	if (!empty($echo)) { echo $output; return true; }
+	if (!empty($echo)) { echo wp_kses_post($output); return true; }
 	return $output;
 }
 
@@ -713,7 +716,7 @@ function r34ics_location_map_link($location='',$geo='',$map_source="google") {
 		switch (strtolower($map_source)) {
 			case 'bing':
 				if (is_array($geo_array) && count($geo_array) == 2) {
-					return '<a href="https://www.bing.com/maps?cp=' . floatval($geo_array[0]) . '%7E' . floatval($geo_array[1]) . '&lvl=15.0">' . (!empty($location) ? $location : __('Map', 'r34ics')) . '</a>';
+					return '<a href="https://www.bing.com/maps?cp=' . floatval($geo_array[0]) . '%7E' . floatval($geo_array[1]) . '&lvl=15.0">' . (!empty($location) ? $location : esc_html__('Map', 'ics-calendar')) . '</a>';
 				}
 				else {
 					return '<a href="https://www.bing.com/maps?q=' . rawurlencode($location) . '">' . $location . '</a>';
@@ -721,7 +724,7 @@ function r34ics_location_map_link($location='',$geo='',$map_source="google") {
 				break;
 			case 'openstreetmap':
 				if (is_array($geo_array) && count($geo_array) == 2) {
-					return '<a href="https://www.openstreetmap.org/#map=15/' . floatval($geo_array[0]) . '/' . floatval($geo_array[1]) . '">' . (!empty($location) ? $location : __('Map', 'r34ics')) . '</a>';
+					return '<a href="https://www.openstreetmap.org/#map=15/' . floatval($geo_array[0]) . '/' . floatval($geo_array[1]) . '">' . (!empty($location) ? $location : esc_html__('Map', 'ics-calendar')) . '</a>';
 				}
 				else {
 					return '<a href="https://www.openstreetmap.org/search?query=' . rawurlencode($location) . '">' . $location . '</a>';
@@ -730,7 +733,7 @@ function r34ics_location_map_link($location='',$geo='',$map_source="google") {
 			case 'google':
 			default:
 				if (is_array($geo_array) && count($geo_array) == 2) {
-					return '<a href="https://www.google.com/maps/@' . floatval($geo_array[0]) . ',' . floatval($geo_array[1]) . ',15z">' . (!empty($location) ? $location : __('Map', 'r34ics')) . '</a>';
+					return '<a href="https://www.google.com/maps/@' . floatval($geo_array[0]) . ',' . floatval($geo_array[1]) . ',15z">' . (!empty($location) ? $location : esc_html__('Map', 'ics-calendar')) . '</a>';
 				}
 				else {
 					return '<a href="https://maps.google.com/?q=' . rawurlencode($location) . '">' . $location . '</a>';
@@ -913,9 +916,9 @@ function r34ics_purge_calendar_transients() {
 	do_action('r34ics_purge_calendar_transients');
 	
 	// Now we purge the plugin's transients and return the results of the query
+	// We do this with a custom SQL query because it's a lot simpler!
 	global $wpdb;
-	$sql =	"DELETE FROM `" . $wpdb->options . "` WHERE `option_name` LIKE '%\_transient\_%' AND `option_name` LIKE '%R34ICS%'";
-	return $wpdb->query($sql);
+	return $wpdb->query($wpdb->prepare("DELETE FROM `" . $wpdb->options . "` WHERE `option_name` LIKE %s AND `option_name` LIKE %s", '%_transient_%', '%R34ICS%'));
 }
 
 
@@ -946,21 +949,25 @@ function r34ics_recurrence_description($rrule=null, $hiderecurrence=null, $html=
 		// Hide this recurrence frequency?
 		if (is_array($hiderecurrence) && in_array(strtolower($recur['FREQ']), $hiderecurrence)) { return null; }
 		// General recurrence description
-		$output = __('Recurring event', 'r34ics');
+		$output = esc_html__('Recurring event', 'ics-calendar');
 		// Get more specific if we can
 		if (!empty($recur['FREQ'])) {
 			switch ($recur['FREQ']) {
 				case 'YEARLY':
-					$output = (isset($recur['INTERVAL']) && $recur['INTERVAL'] > 1) ? sprintf(__('Recurs every %s years', 'r34ics'), $recur['INTERVAL']) : __('Recurs yearly', 'r34ics');
+					/* translators: 1. Dynamic value */
+					$output = (isset($recur['INTERVAL']) && $recur['INTERVAL'] > 1) ? sprintf(esc_html__('Recurs every %1$s years', 'ics-calendar'), $recur['INTERVAL']) : esc_html__('Recurs yearly', 'ics-calendar');
 					break;
 				case 'MONTHLY':
-					$output = (isset($recur['INTERVAL']) && $recur['INTERVAL'] > 1) ? sprintf(__('Recurs every %s months', 'r34ics'), $recur['INTERVAL']) : __('Recurs monthly', 'r34ics');
+					/* translators: 1. Dynamic value */
+					$output = (isset($recur['INTERVAL']) && $recur['INTERVAL'] > 1) ? sprintf(esc_html__('Recurs every %1$s months', 'ics-calendar'), $recur['INTERVAL']) : esc_html__('Recurs monthly', 'ics-calendar');
 					break;
 				case 'WEEKLY':
-					$output = (isset($recur['INTERVAL']) && $recur['INTERVAL'] > 1) ? sprintf(__('Recurs every %s weeks', 'r34ics'), $recur['INTERVAL']) : __('Recurs weekly', 'r34ics');
+					/* translators: 1. Dynamic value */
+					$output = (isset($recur['INTERVAL']) && $recur['INTERVAL'] > 1) ? sprintf(esc_html__('Recurs every %1$s weeks', 'ics-calendar'), $recur['INTERVAL']) : esc_html__('Recurs weekly', 'ics-calendar');
 					break;
 				case 'DAILY':
-					$output = (isset($recur['INTERVAL']) && $recur['INTERVAL'] > 1) ? sprintf(__('Recurs every %s days', 'r34ics'), $recur['INTERVAL']) : __('Recurs daily', 'r34ics');
+					/* translators: 1. Dynamic value */
+					$output = (isset($recur['INTERVAL']) && $recur['INTERVAL'] > 1) ? sprintf(esc_html__('Recurs every %1$s days', 'ics-calendar'), $recur['INTERVAL']) : esc_html__('Recurs daily', 'ics-calendar');
 					break;
 				default: break;
 			}
@@ -1072,6 +1079,24 @@ function r34ics_scrub_duplicate_uids($ics_data, $args) {
 }
 
 
+// Return allowed fields array for wp_kses() with functions like r34ics_memory_limit_select()
+function r34ics_select_allowed() {
+	return array(
+		'select' => array(
+			'class'  => array(),
+			'id'     => array(),
+			'name'   => array(),
+			'value'  => array(),
+			'type'   => array(),
+		),
+		'option' => array(
+			'selected' => array(),
+			'value' => array(),
+		),
+	);
+}
+
+
 /**
  * If the shortcode is in a Block Editor (Gutenberg) "paragraph" block, or has been pasted
  * into the WYSIWYG editor from a program that automatically makes URLs clickable, the URL
@@ -1082,10 +1107,11 @@ function r34ics_scrub_duplicate_uids($ics_data, $args) {
  * can and throw an error.
  */
 function r34ics_shortcode_url_fix($atts) {
-	if (!empty($atts['url'])) { return strip_tags($atts['url']); }
+	if (!empty($atts['url'])) { return wp_strip_all_tags($atts['url']); }
 	elseif (!empty($atts['href'])) {
 		// Trigger an error so hopefully users will clean up their shortcodes
-		trigger_error(sprintf(__('The "url" property in your %1$s shortcode appears to contain HTML tags; most likely your URL has been turned into a clickable link. Your calendar may not display properly as a result. Please remove the clickable link in the shortcode.', 'r34ics'), 'ICS Calendar'), E_USER_WARNING);
+		/* translators: 1: Plugin name (do not translate) */
+		trigger_error(sprintf(esc_html__('The "url" property in your %1$s shortcode appears to contain HTML tags; most likely your URL has been turned into a clickable link. Your calendar may not display properly as a result. Please remove the clickable link in the shortcode.', 'ics-calendar'), 'ICS Calendar'), E_USER_WARNING);
 		return $atts['href'];
 	}
 	return false;
@@ -1123,16 +1149,27 @@ function r34ics_system_report($echo=true) {
 		
 	// Gather all report data
 	global $wpdb;
+	$server_fields = array(
+		'SERVER_SOFTWARE' => '',
+		'SERVER_PROTOCOL' => '',
+		'LOCAL_ADDR' => '',
+		'SERVER_ADDR' => '',
+		'SERVER_PORT' => '',
+	);
+	foreach ((array)$server_fields as $key => $value) {
+		if (!empty($_SERVER[$key])) { $server_fields[$key] = wp_strip_all_tags(wp_unslash($_SERVER[$key])); }
+	}
+	$server_fields = array_filter($server_fields);
 	$report = array(
 		'Site' => get_bloginfo('name') . ' / ' . get_bloginfo('wpurl'),
 		'WordPress' => get_bloginfo('version') . (function_exists('get_sites') ? ' Multisite (' . count(get_sites()) . ')' : ''),
-		'Locale' => get_bloginfo('language') . ' / ' . get_option('timezone_string'),
+		'Locale' => get_bloginfo('language') . ' ' . get_option('timezone_string'),
 		'Active Theme' => $theme->name . ' ' . $theme->version . ' (' . pathinfo($theme->template_dir, PATHINFO_BASENAME) . ')',
 		'Active Plugins' => $plugin_list,
 		'Server' => array(
-			php_uname('s') . ' / ' . php_uname('r') . ' / ' . php_uname('m'),
-			$_SERVER['SERVER_SOFTWARE'] . ' / ' . $_SERVER['SERVER_PROTOCOL'] . ' / ' . (!empty($_SERVER['LOCAL_ADDR']) ? $_SERVER['LOCAL_ADDR'] : $_SERVER['SERVER_ADDR']) . ':' . $_SERVER['SERVER_PORT'],
-			'MySQL ' . $wpdb->dbh->server_version . ' / ' . $wpdb->dbh->host_info,
+			php_uname('s') . ' ' . php_uname('r') . ' ' . php_uname('m'),
+			implode(' ', (array)$server_fields),
+			'MySQL ' . $wpdb->dbh->server_version . ' ' . $wpdb->dbh->host_info,
 			'PHP ' . phpversion(),
 		),
 	);
@@ -1368,7 +1405,7 @@ function r34ics_time_format($time_string='', $time_format='', $tz='', $date=null
  * shorter string than the old method (and possibly generates faster), which is useful
  * in cases where we insert a LOT of these in the HTML output.
  */
-function r34ics_uid() { return uniqid('r') . dechex(mt_rand(16,255)); }
+function r34ics_uid() { return uniqid('r') . dechex(wp_rand(16,255)); }
 // Deprecated; use r34ics_uid() instead
 function r34ics_guid($deprecated1=true, $deprecated2=true) { return r34ics_uid(); }
 
@@ -1384,7 +1421,7 @@ function r34ics_uniqid_url($uniqid='') {
 // This function has been replaced with the protected method R34ICS::_url_get_contents()
 // There is no graceful deprecation, as the function had no legitimate uses outside of this plugin
 function r34ics_url_get_contents($deprecated_1=null, $deprecated_2=null, $deprecated_3=null, $deprecated_4=null, $deprecated_5=null) {
-	trigger_error(__('The r34ics_url_get_contents() function is no longer supported.', 'r34ics'), E_USER_DEPRECATED);
+	trigger_error(esc_html__('The r34ics_url_get_contents() function is no longer supported.', 'ics-calendar'), E_USER_DEPRECATED);
 	return false;
 }
 
@@ -1483,7 +1520,7 @@ function _r34ics_debug($arr) {
 	// Process HTML entities on array values
 	$arr = _r34ics_array_filter_recursive($arr, function($val) {
 		if (is_scalar($val)) {
-			$val = strip_tags(preg_replace('/[\s]+/', ' ', $val));
+			$val = wp_strip_all_tags(preg_replace('/[\s]+/', ' ', $val));
 		}
 		return $val;
 	});

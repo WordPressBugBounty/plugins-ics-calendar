@@ -54,7 +54,7 @@ else {
 	// Empty calendar message
 	if (empty($ics_data['events']) || r34ics_is_empty_array($ics_data['events'])) {
 		?>
-		<p class="ics-calendar-error"><?php _e('No events found.', 'r34ics'); ?></p>
+		<p class="ics-calendar-error"><?php esc_html_e('No events found.', 'ics-calendar'); ?></p>
 		<?php
 	}
 	
@@ -66,7 +66,7 @@ else {
 
 		// Color code key
 		if (empty($args['legendposition']) || $args['legendposition'] == 'above') {
-			echo $R34ICS->color_key_html($args, $ics_data);
+			echo wp_kses_post($R34ICS->color_key_html($args, $ics_data));
 		}
 	
 		// Pagination HTML
@@ -75,8 +75,8 @@ else {
 			ob_start();
 			?>
 			<div class="ics-calendar-paginate-wrapper" aria-hidden="true">
-				<a href="#<?php echo esc_attr($ics_data['guid']); ?>" class="ics-calendar-paginate prev">&larr; <?php echo wp_kses_post(__('Previous Page', 'r34ics')); ?></a>
-				<a href="#<?php echo esc_attr($ics_data['guid']); ?>" class="ics-calendar-paginate next"><?php echo wp_kses_post(__('Next Page', 'r34ics')); ?> &rarr;</a>
+				<a href="#<?php echo esc_attr($ics_data['guid']); ?>" class="ics-calendar-paginate prev">&larr; <?php esc_html_e('Previous Page', 'ics-calendar'); ?></a>
+				<a href="#<?php echo esc_attr($ics_data['guid']); ?>" class="ics-calendar-paginate next"><?php esc_html_e('Next Page', 'ics-calendar'); ?> &rarr;</a>
 			</div>
 			<?php
 			$pagination_html = ob_get_clean();
@@ -201,7 +201,7 @@ else {
 										$has_desc = r34ics_has_desc($args, $event);
 										?>
 					
-										<li class="<?php echo r34ics_event_css_classes($event, $time, $args); ?>" data-dow="<?php echo esc_attr($dow); ?>" data-wknum="<?php echo esc_attr($wknum); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
+										<li class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); ?>" data-dow="<?php echo esc_attr($dow); ?>" data-wknum="<?php echo esc_attr($wknum); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 											if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 											if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
 											if (isset($p_i)) { echo ' data-p-i="' . intval($p_i) . '"'; }
@@ -227,13 +227,13 @@ else {
 												}
 
 												// Event label (title)
-												echo $R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null));
+												echo wp_kses_post($R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null)));
 
 												// Sub-label
-												echo $R34ICS->event_sublabel_html($args, $event, null);
+												echo wp_kses_post($R34ICS->event_sublabel_html($args, $event, null));
 
 												// Description/Location/Organizer
-												echo $R34ICS->event_description_html($args, $event, null, $has_desc);
+												echo wp_kses_post($R34ICS->event_description_html($args, $event, null, $has_desc));
 												?>
 											</div>
 										
@@ -282,7 +282,7 @@ else {
 		
 		// Color code key
 		if (!empty($args['legendposition']) && $args['legendposition'] == 'below') {
-			echo $R34ICS->color_key_html($args, $ics_data);
+			echo wp_kses_post($R34ICS->color_key_html($args, $ics_data));
 		}
 	
 		// Actions after rendering calendar wrapper (can include additional template output)

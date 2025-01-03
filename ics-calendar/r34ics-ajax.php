@@ -18,15 +18,22 @@ function r34ics_ajax() {
 		// Bypass nonce verification
 		if (get_option('r34ics_ajax_bypass_nonce')) {
 			add_filter('r34ics_debug_array', function($arr) {
-				$arr['Misc'][] = sprintf(__('%1$s AJAX request bypassed nonce verification, due to configuration setting.', 'r34ics'), 'ICS Calendar');
+				/* translators: 1: Plugin name (do not translate) */
+				$arr['Misc'][] = sprintf(esc_html__('%1$s AJAX request bypassed nonce verification, due to configuration setting.', 'ics-calendar'), 'ICS Calendar');
 				return $arr;
 			}, 10, 1);
 		}
 		// Verify nonce
-		elseif (!wp_verify_nonce($_POST['r34ics_nonce'], 'r34ics_nonce')) { echo 1; exit; }
+		elseif (!isset($_POST['r34ics_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics_nonce'])), 'r34ics_nonce')) { exit; }
 		
 		// Sanitize input
-		$args = $_POST['args'];
+		/**
+		 * Note: Plugin Check throws a warning about a non-sanitized variable but that is
+		 * literally what this entire block of code is for! We have our own specific
+		 * requirements for sanitizing this data so we can't use a built-in WordPress
+		 * function to do it.
+		 */
+		$args = isset($_POST['args']) ? wp_unslash($_POST['args']) : array();
 		foreach ((array)$args as $key => $value) {
 			if (!in_array($key, array_keys($valid_atts))) { continue; }
 			if ($key == 'url') {
@@ -44,20 +51,22 @@ function r34ics_ajax() {
 			elseif ($value == 'false') { $args[$key] = 0; }
 		}
 		
-		switch ($_POST['subaction']) {
-		
-			case 'display_calendar':
-				if (!empty($args['url'])) {
-					$R34ICS->display_calendar($args);
-					if (!empty($args['debug'])) {
-						_r34ics_wp_footer_debug_output();
+		if (isset($_POST['subaction'])) {
+			switch (sanitize_text_field(wp_unslash($_POST['subaction']))) {
+			
+				case 'display_calendar':
+					if (!empty($args['url'])) {
+						$R34ICS->display_calendar($args);
+						if (!empty($args['debug'])) {
+							_r34ics_wp_footer_debug_output();
+						}
 					}
-				}
-				break;
-		
-			default:
-				break;
-
+					break;
+			
+				default:
+					break;
+	
+			}
 		}
 	}
 	exit;
