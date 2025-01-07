@@ -379,7 +379,7 @@ if (!class_exists('R34ICS')) {
 								<label for="<?php echo esc_attr($toggle_uid); ?>"><input type="checkbox" id="<?php echo esc_attr($toggle_uid); ?>" class="ics-calendar-color-key-toggle" data-feed-key="<?php echo intval($feed_key); ?>" data-feed-color="<?php echo !empty($ics_data['colors'][$feed_key]['base']) ? esc_attr($ics_data['colors'][$feed_key]['base']) : ''; ?>" checked="checked" />
 								<?php
 							}
-							echo wp_kses_post($feed_title);
+							echo wp_kses_post($feed_title ?: '');
 							do_action('r34ics_color_key_html_after_feed_title', $feed_key, $args, $ics_data);
 							?>
 							</label>
@@ -733,7 +733,7 @@ if (!class_exists('R34ICS')) {
 								'dtstart_time' => $dtstart_time,
 								'dtstart' => $event->dtstart,
 								'duration' => ($event->duration ?: ''),
-								'eventdesc' => ($event->x_alt_desc ?? ($event->description ?: '')),
+								'eventdesc' => $this->_event_field_handling('eventdesc', $event, $args),
 								'exdate' => ($event->exdate ?: ''),
 								'feed_key' => $feed_key,
 								'freebusy' => ($event->freebusy ?: ''),
@@ -748,10 +748,10 @@ if (!class_exists('R34ICS')) {
 								'sequence' => ($event->sequence ?: ''),
 								'status' => ($event->status ?: ''),
 								'transp' => ($event->transp ?: ''),
-								'uid' => ($event->uid ?: ''),
-								'url' => empty($args['nolink']) ? ($event->url ?? ($event->uri ?: '')) : '',
 								'tz_start' => (@$args['eventlocaltime'] ? (@$event->dtstart_array[0]['TZID'] ?: $url_tz) : $url_tz),
 								'tz_end' => (@$args['eventlocaltime'] ? (@$event->dtend_array[0]['TZID'] ?: $url_tz) : $url_tz),
+								'uid' => ($event->uid ?: ''),
+								'url' => empty($args['nolink']) ? ($event->url ?? ($event->uri ?: '')) : '',
 							);
 							
 							// Scrape a URL from the description
@@ -1083,7 +1083,7 @@ if (!class_exists('R34ICS')) {
 		
 		
 		public function event_description_html($args, $event, $classes=array(), $has_desc=null) {
-			if (empty($args) || empty($event) || (empty($has_desc) && empty($args['eventdl']))) { return false; }
+			if (empty($args) || empty($event) || (empty($has_desc) && empty($args['eventdl']))) { return ''; }
 			ob_start();
 	
 			// Attachment(s)
@@ -1121,30 +1121,30 @@ if (!class_exists('R34ICS')) {
 			}
 			// Float attachment in list view
 			if ($show_attachment && $attachment_is_image && in_array($args['view'], (array)$this->get_list_style_views())) {
-				echo '<div class="attach attach_float">' . wp_kses_post(strip_tags($event['attach'],'<a><img>')) . '</div>';
+				echo '<div class="attach attach_float">' . wp_kses_post(strip_tags($event['attach'],'<a><img>') ?: '') . '</div>';
 			}
 			
 			// Location
 			if (!empty($args['location']) && (!empty($event['location']) || !empty($event['geo']))) {
 				if ($args['location'] === 'maplinks') {
-					echo '<div class="location">' . wp_kses_post(r34ics_location_map_link($event['location'], ($event['geo'] ?? ''), ($args['mapsource'] ?? 'google'))) . '</div>';
+					echo '<div class="location">' . wp_kses_post(r34ics_location_map_link($event['location'], ($event['geo'] ?? ''), ($args['mapsource'] ?? 'google')) ?: '') . '</div>';
 				}
 				elseif (!empty($event['location'])) {
-					echo '<div class="location">' . wp_kses_post(r34ics_maybe_make_clickable($event['location'])) . '</div>';
+					echo '<div class="location">' . wp_kses_post(r34ics_maybe_make_clickable($event['location']) ?: '') . '</div>';
 				}
 			}
 			
 			// Organizer
 			if (!empty($args['organizer']) && (!empty($event['organizer']) || !empty($event['contact']))) {
 				echo '<div class="organizer">';
-				if (!empty($event['organizer'])) { echo '<div>' . wp_kses_post(r34ics_organizer_format($event['organizer'])) . '</div>'; }
-				if (!empty($event['contact'])) { echo '<div>' . esc_html__('Contact:', 'ics-calendar') . ' ' . wp_kses_post(r34ics_maybe_make_clickable($event['contact'])) . '</div>'; }
+				if (!empty($event['organizer'])) { echo '<div>' . wp_kses_post(r34ics_organizer_format($event['organizer']) ?: '') . '</div>'; }
+				if (!empty($event['contact'])) { echo '<div>' . esc_html__('Contact:', 'ics-calendar') . ' ' . wp_kses_post(r34ics_maybe_make_clickable($event['contact']) ?: '') . '</div>'; }
 				echo '</div>';
 			}
 			
 			// Resources
 			if (!empty($args['resources']) && (!empty($event['resources']))) {
-				echo '<div class="resources">' . esc_html__('Resources:', 'ics-calendar') . ' ' . wp_kses_post(r34ics_maybe_make_clickable($event['resources'])) . '</div>';
+				echo '<div class="resources">' . esc_html__('Resources:', 'ics-calendar') . ' ' . wp_kses_post(r34ics_maybe_make_clickable($event['resources']) ?: '') . '</div>';
 			}
 			
 			// Description
@@ -1184,7 +1184,7 @@ if (!class_exists('R34ICS')) {
 	
 			// Append eventdesc if we have anything to show
 			if (!r34ics_empty_content($eventdesc_content)) {
-				echo '<div class="eventdesc">' . wp_kses_post($eventdesc_content) . '</div>';
+				echo '<div class="eventdesc">' . wp_kses_post($eventdesc_content ?: '') . '</div>';
 			}
 			// Add individual event .ics download link
 			if (!empty($args['eventdl'])) {
@@ -1225,7 +1225,7 @@ if (!class_exists('R34ICS')) {
 					else {
 						$day_label = r34ics_date($date_format, strtotime($event['dtstart_date']));
 					}
-					echo wp_kses_post($day_label);
+					echo wp_kses_post($day_label ?: '');
 					echo '</div>';
 				}
 				
@@ -1244,19 +1244,19 @@ if (!class_exists('R34ICS')) {
 	
 					// Time(s)
 					if (!empty($event['start'])) {
-						echo '<div class="time_in_hover_block">' . wp_kses_post($event['start']);
-						if (!empty($event['end'])) { echo ' &#8211; ' . wp_kses_post($event['end']); }
+						echo '<div class="time_in_hover_block">' . wp_kses_post($event['start'] ?: '');
+						if (!empty($event['end'])) { echo ' &#8211; ' . wp_kses_post($event['end'] ?: ''); }
 						echo '</div>';
 					}
 	
 					// Event title
-					echo '<div class="title_in_hover_block">' . wp_kses_post($this->event_label_html($args, $event, null)) . '</div>';
+					echo '<div class="title_in_hover_block">' . wp_kses_post($this->event_label_html($args, $event, null) ?: '') . '</div>';
 	
 				}
 	
 				// Add recurrence information
 				if (empty($args['skiprecurrence']) && !empty($event['rrule'])) {
-					echo wp_kses_post(r34ics_recurrence_description($event['rrule'], $args['hiderecurrence']));
+					echo wp_kses_post(r34ics_recurrence_description($event['rrule'], $args['hiderecurrence']) ?: '');
 				}
 	
 				// Concatenate output and close div
@@ -1267,12 +1267,12 @@ if (!class_exists('R34ICS')) {
 			$descloc_content = apply_filters('r34ics_event_description_html_filter', $descloc_content, $args, $event, $classes, $has_desc);
 			
 			// Return content
-			return !r34ics_empty_content($descloc_content) ? $descloc_content : null;
+			return !r34ics_empty_content($descloc_content) ? $descloc_content : '';
 		}
 		
 		
 		public function event_label_html($args, $event, $classes=array()) {
-			if (empty($args) || empty($event)) { return false; }
+			if (empty($args) || empty($event)) { return ''; }
 			ob_start();
 	
 			// Set CSS classes
@@ -1282,9 +1282,9 @@ if (!class_exists('R34ICS')) {
 			// Build event label HTML
 			echo '<' . esc_attr($args['htmltageventtitle']) . ' tabindex="0" aria-haspopup="true" class="' . esc_attr(implode(' ', $title_class)) . '">';
 			if (!empty($args['linktitles']) && empty($args['nolink']) && !empty($event['url'])) {
-				echo '<a href="' . esc_url($event['url']) . '" ' . wp_kses_post(r34ics_sametab_target($args['sametab'], $event['url'])) . '>';
+				echo '<a href="' . esc_url($event['url']) . '" ' . wp_kses_post(r34ics_sametab_target($args['sametab'], $event['url']) ?: '') . '>';
 			}
-			echo wp_kses_post(html_entity_decode(str_replace('/', '/<wbr />', $event['label'])));
+			echo wp_kses_post(html_entity_decode(str_replace('/', '/<wbr />', $event['label'])) ?: '');
 			if (!empty($args['linktitles']) && empty($args['nolink']) && !empty($event['url'])) {
 				echo '</a>';
 			}
@@ -1303,12 +1303,12 @@ if (!class_exists('R34ICS')) {
 			$title_content = apply_filters('r34ics_event_label_html_filter', $title_content, $args, $event, $classes);
 	
 			// Return content
-			return !r34ics_empty_content($title_content) ? $title_content : null;
+			return !r34ics_empty_content($title_content) ? $title_content : '';
 		}
 		
 		
 		public function event_sublabel_html($args, $event, $classes=array()) {
-			if (empty($args) || empty($event) || empty($event['sublabel'])) { return false; }
+			if (empty($args) || empty($event) || empty($event['sublabel'])) { return ''; }
 			ob_start();
 	
 			// Set CSS classes
@@ -1319,7 +1319,7 @@ if (!class_exists('R34ICS')) {
 			if (empty($event['start']) && !empty($event['end'])) {
 				echo '<span class="carryover">&#10554;</span>';
 			}
-			echo wp_kses_post(str_replace('/', '/<wbr />', $event['sublabel']));
+			echo wp_kses_post(str_replace('/', '/<wbr />', $event['sublabel']) ?: '');
 			do_action('r34ics_event_sublabel_html', $args, $event, $classes);
 			echo '</span>';
 	
@@ -1330,7 +1330,7 @@ if (!class_exists('R34ICS')) {
 			$sublabel_content = apply_filters('r34ics_event_sublabel_html_filter', $sublabel_content, $args, $event, $classes);
 	
 			// Return content
-			return !r34ics_empty_content($sublabel_content) ? $sublabel_content : null;
+			return !r34ics_empty_content($sublabel_content) ? $sublabel_content : '';
 		}
 	
 	
@@ -2163,7 +2163,80 @@ if (!class_exists('R34ICS')) {
 			}
 			return $events;
 		}
-	
+
+
+		/**
+		 * Encapsulates any complex logic that needs to run when assigning values to the
+		 * $event_item array in R34ICS::display_calendar() and similar functions/methods.
+		 */
+		protected function _event_field_handling($field, $event, $args=null) {
+			$value = '';
+			
+			// Field-specific logic
+			switch ($field) {
+			
+				case 'eventdesc':
+					// Use X_ALT_DESC if it exists
+					if (!empty($event->x_alt_desc)) {
+						$value = $event->x_alt_desc;
+					}
+					/**
+					 * ALTREP = Alternate Text Representation
+					 * https://icalendar.org/iCalendar-RFC-5545/3-2-1-alternate-text-representation.html
+					 * At this time we are only aware of this being used by Thunderbird, and it
+					 * appears to violate the spec by not wrapping the ALTREP value in quotation
+					 * marks; the code here is tailored to Thunderbird's usage.
+					 */
+					elseif (isset($event->additionalProperties['description_array'][0]['ALTREP'])) {
+						if ($event->additionalProperties['description_array'][0]['ALTREP'] == 'data') {
+							/**
+							 * Split by first comma which is the MIME type, then by first colon, which
+							 * delimits between the encoded content and the plain text (apparently)
+							 */
+							$split1 = explode(',', @$event->additionalProperties['description_array'][1], 2);
+							$split2 = explode(':', @$split1[1], 2);
+							/**
+							 * If MIME type is text/html, we'll take the decoded HTML as the value
+							 * and add the non-encoded text as well, *if* it's different
+							 */
+							if ($split1[0] == 'text/html') {
+								$value = rawurldecode($split2[0] ?: '');
+								if (!empty($split2[1]) && $split2[1] != $value) {
+									$value .= "\n" . $split2[1];
+								}
+							}
+							/**
+							 * @todo Handle other MIME types; for now, just take the unencoded text if
+							 * it exists, otherwise, use the encoded version and hope for the best...
+							 */
+							else {
+								$value = $split2[1] ?: ($split2[0] ?: '');
+							}
+						}
+						/**
+						 * @todo Determine how "correct" uses of ALTREP need to be formatted; for now,
+						 * assume ics-parser is correctly splitting the value into the array and
+						 * use it as-is.
+						 */
+						else {
+							$value = $event->description ?: '';
+						}
+					}
+					// Use standard DESCRIPTION
+					else {
+						$value = $event->description ?: '';
+					}
+					break;
+			
+				default: break; // Do nothing;
+			}
+			
+			// Allow external filtering
+			$value = apply_filters('r34ics_event_field_handling', $value, $field, $event, $args);
+			
+			return $value;
+		}
+			
 	
 		protected function _event_ics_download() {
 		
@@ -2239,7 +2312,7 @@ if (!class_exists('R34ICS')) {
 						header('Content-Type: text/calendar');
 						header('Content-Disposition: attachment; filename="' . sanitize_title(esc_html__('calendar event', 'ics-calendar')) . '.ics"');
 						header('Content-Length: ' . strlen($content ?? ''));
-						echo wp_kses_post($content);
+						echo wp_kses_post($content ?: '');
 						exit;
 					}
 				}

@@ -44,7 +44,7 @@
 					?>
 					<p><mark class="success"><?php
 					/* translators: 1: Dynamic value */
-					printf(esc_html__('%1$s received.', 'ics-calendar'), wp_kses_post($url_tester_result['size']));
+					printf(esc_html__('%1$s received.', 'ics-calendar'), wp_kses_post($url_tester_result['size'] ?: ''));
 					?></mark></p>
 					<?php
 				}
@@ -74,7 +74,7 @@
 				if (!empty($url_tester_result['special'])) {
 					foreach ((array)$url_tester_result['special'] as $item) {
 						?>
-						<p><mark class="alert"><?php echo wp_kses_post($item); ?></mark></p>
+						<p><mark class="alert"><?php echo wp_kses_post($item ?: ''); ?></mark></p>
 						<?php
 					}
 				}

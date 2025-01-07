@@ -42,12 +42,12 @@ if ($args['toggle'] === 'lightbox') {
 	// Title and description
 	if (!empty($ics_data['title'])) {
 		?>
-		<<?php echo esc_attr($args['htmltagtitle']); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title']); ?></<?php echo esc_attr($args['htmltagtitle']); ?>>
+		<<?php echo esc_attr($args['htmltagtitle']); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title'] ?: ''); ?></<?php echo esc_attr($args['htmltagtitle']); ?>>
 		<?php
 	}
 	if (!empty($ics_data['description'])) {
 		?>
-		<p class="ics-calendar-description"><?php echo wp_kses_post($ics_data['description']); ?></p>
+		<p class="ics-calendar-description"><?php echo wp_kses_post($ics_data['description'] ?: ''); ?></p>
 		<?php
 	}
 
@@ -56,7 +56,7 @@ if ($args['toggle'] === 'lightbox') {
 
 	// Color code key
 	if (empty($args['legendposition']) || $args['legendposition'] == 'above') {
-		echo wp_kses_post($R34ICS->color_key_html($args, $ics_data));
+		echo wp_kses_post($R34ICS->color_key_html($args, $ics_data) ?: '');
 	}
 
 	// Display calendar
@@ -94,14 +94,14 @@ if ($args['toggle'] === 'lightbox') {
 						for ($day = $day_for_start; $day <= $day_for_max; $day++) {
 							$w = r34ics_date('w', $args['startdate'], null, '+' . ($day-$day_for_start) . ' days');
 							?>
-							<th data-dow="<?php echo esc_attr($w); ?>"><?php echo wp_kses_post($days_of_week[$w]); ?></th>
+							<th data-dow="<?php echo esc_attr($w); ?>"><?php echo wp_kses_post($days_of_week[$w] ?: ''); ?></th>
 							<?php
 						}
 					}
 					else {
 						foreach ((array)$days_of_week as $w => $dow) {
 							?>
-							<th data-dow="<?php echo esc_attr($w); ?>"><?php echo wp_kses_post($dow); ?></th>
+							<th data-dow="<?php echo esc_attr($w); ?>"><?php echo wp_kses_post($dow ?: ''); ?></th>
 							<?php
 						}
 					}
@@ -114,7 +114,7 @@ if ($args['toggle'] === 'lightbox') {
 				if (!empty($args['weeknumbers'])) {
 					$wknum = r34ics_date('W', $ics_data['earliest']);
 					?>
-					<th class="week-number" data-wknum="<?php echo esc_attr($wknum); ?>"><?php echo wp_kses_post($wknum); ?></th>
+					<th class="week-number" data-wknum="<?php echo esc_attr($wknum); ?>"><?php echo wp_kses_post($wknum ?: ''); ?></th>
 					<?php
 				}
 				foreach (array_keys((array)$ics_data['events']) as $year) {
@@ -167,7 +167,7 @@ if ($args['toggle'] === 'lightbox') {
 								if ($day >= $day_for_start) { echo '</tr><tr>'; }
 								if (!empty($args['weeknumbers'])) {
 									?>
-									<th class="week-number" data-wknum="<?php echo esc_attr($wknum); ?>"><?php echo wp_kses_post($wknum); ?></th>
+									<th class="week-number" data-wknum="<?php echo esc_attr($wknum); ?>"><?php echo wp_kses_post($wknum ?: ''); ?></th>
 									<?php
 								}
 							}
@@ -177,13 +177,13 @@ if ($args['toggle'] === 'lightbox') {
 									<?php
 									if (!empty($args['fulldateintable'])) {
 										?>
-										<span id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post(r34ics_date($date_format, $date)); ?></span>
+										<span id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post(r34ics_date($date_format, $date) ?: ''); ?></span>
 										<?php
 									}
 									else {
 										?>
-										<span class="phone_only" id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post(r34ics_date($date_format, $date)); ?></span>
-										<span class="no_phone" aria-hidden="true"><?php echo wp_kses_post(r34ics_date('j', $date)); ?></span>
+										<span class="phone_only" id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post(r34ics_date($date_format, $date) ?: ''); ?></span>
+										<span class="no_phone" aria-hidden="true"><?php echo wp_kses_post(r34ics_date('j', $date) ?: ''); ?></span>
 										<?php
 									}
 									?>
@@ -212,13 +212,13 @@ if ($args['toggle'] === 'lightbox') {
 														}
 
 														// Event label (title)
-														echo wp_kses_post($R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null)));
+														echo wp_kses_post($R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null)) ?: '');
 
 														// Sub-label
-														echo wp_kses_post($R34ICS->event_sublabel_html($args, $event, null));
+														echo wp_kses_post($R34ICS->event_sublabel_html($args, $event, null) ?: '');
 
 														// Description/Location/Organizer
-														echo wp_kses_post($R34ICS->event_description_html($args, $event, (empty($args['toggle']) ? array('hover_block') : null), $has_desc));
+														echo wp_kses_post($R34ICS->event_description_html($args, $event, (empty($args['toggle']) ? array('hover_block') : null), $has_desc) ?: '');
 														?>
 													</li>
 													<?php
@@ -232,16 +232,16 @@ if ($args['toggle'] === 'lightbox') {
 														if (!empty($event['start'])) {
 															?>
 															<span class="time"><?php
-															echo wp_kses_post($event['start']);
+															echo wp_kses_post($event['start'] ?: '');
 															if (!empty($event['end']) && $event['end'] != $event['start']) {
 																if (empty($args['showendtimes'])) {
 																	?>
-																	<span class="end_time show_on_hover">&#8211; <?php echo wp_kses_post($event['end']); ?></span>
+																	<span class="end_time show_on_hover">&#8211; <?php echo wp_kses_post($event['end'] ?: ''); ?></span>
 																	<?php
 																}
 																else {
 																	?>
-																	<span class="end_time">&#8211; <?php echo wp_kses_post($event['end']); ?></span>
+																	<span class="end_time">&#8211; <?php echo wp_kses_post($event['end'] ?: ''); ?></span>
 																	<?php
 																}
 															}
@@ -250,7 +250,7 @@ if ($args['toggle'] === 'lightbox') {
 														}
 
 														// Event label (title)
-														echo wp_kses_post($R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null)));
+														echo wp_kses_post($R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null)) ?: '');
 
 														if (!empty($event['sublabel'])) {
 															?>
@@ -260,12 +260,12 @@ if ($args['toggle'] === 'lightbox') {
 																<span class="carryover">&#10554;</span>
 																<?php
 															}
-															echo wp_kses_post(str_replace('/', '/<wbr />',$event['sublabel']));
+															echo wp_kses_post(str_replace('/', '/<wbr />',$event['sublabel']) ?: '');
 															?></span>
 															<?php
 														}
 														// Description/Location/Organizer
-														echo wp_kses_post($R34ICS->event_description_html($args, $event, (empty($args['toggle']) ? array('hover_block') : null), $has_desc));
+														echo wp_kses_post($R34ICS->event_description_html($args, $event, (empty($args['toggle']) ? array('hover_block') : null), $has_desc) ?: '');
 														?>
 													</li>
 													<?php
@@ -302,7 +302,7 @@ if ($args['toggle'] === 'lightbox') {
 	<?php
 	// Color code key
 	if (!empty($args['legendposition']) && $args['legendposition'] == 'below') {
-		echo wp_kses_post($R34ICS->color_key_html($args, $ics_data));
+		echo wp_kses_post($R34ICS->color_key_html($args, $ics_data) ?: '');
 	}
 
 	// Actions after rendering calendar wrapper (can include additional template output)

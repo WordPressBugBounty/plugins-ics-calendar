@@ -218,10 +218,10 @@ function r34ics_deferred_admin_notices() {
 		foreach ((array)$r34ics_deferred_admin_notices as $notice_key => $notice) {
 			if (!empty($notice['dismissible']) && method_exists('PAnD', 'is_admin_notice_active')) {
 				if (!PAnD::is_admin_notice_active($notice_key . '-' . $notice['dismissible'])) { continue; }
-				echo '<div class="notice notice-' . esc_attr($notice['status']) . ' is-dismissible r34ics-admin-notice" data-dismissible="' . esc_attr($notice_key . '-' . $notice['dismissible']) . '"><div>' . wp_kses_post($notice['content']) . '</div></div>';
+				echo '<div class="notice notice-' . esc_attr($notice['status']) . ' is-dismissible r34ics-admin-notice" data-dismissible="' . esc_attr($notice_key . '-' . $notice['dismissible']) . '"><div>' . wp_kses_post($notice['content'] ?: '') . '</div></div>';
 			}
 			else {
-				echo '<div class="notice notice-' . esc_attr($notice['status']) . ' r34ics-admin-notice"><div>' . wp_kses_post($notice['content']) . '</div></div>';
+				echo '<div class="notice notice-' . esc_attr($notice['status']) . ' r34ics-admin-notice"><div>' . wp_kses_post($notice['content'] ?: '') . '</div></div>';
 			}
 		}
 	}
@@ -233,7 +233,7 @@ function r34ics_deferred_admin_notices() {
 // Check if a URL's domain is the same as the current site
 function r34ics_domain_match($url='') {
 	// Excessive sanitization to placate Plugin Check
-	return (wp_parse_url($url, PHP_URL_HOST) == (isset($_SERVER['SERVER_NAME']) ? wp_kses_post(wp_unslash($_SERVER['SERVER_NAME'])) : ''));
+	return (wp_parse_url($url, PHP_URL_HOST) == (isset($_SERVER['SERVER_NAME']) ? wp_kses_post(wp_unslash($_SERVER['SERVER_NAME']) ?: '') : ''));
 }
 
 
@@ -345,7 +345,7 @@ function r34ics_feed_colors_css($ics_data, $padding=false, $hover=false) {
 		$feed_colors_css = apply_filters('r34ics_feed_colors_css', ob_get_clean(), $ics_data, $padding, $hover);
 		// Output CSS
 		if (!empty($feed_colors_css)) {
-			echo '<style type="text/css">' . wp_kses_post(r34ics_minify_css($feed_colors_css)) . '</style>';
+			echo '<style type="text/css">' . wp_kses_post(r34ics_minify_css($feed_colors_css) ?: '') . '</style>';
 		}
 }
 
@@ -590,7 +590,7 @@ function r34ics_is_html($str='') {
 // Detect if we're running an instance of WordPress Playground (or any PHP.wasm implementation)
 function r34ics_is_playground() {
 	// Excessive sanitization to placate Plugin Check
-	return (isset($_SERVER['SERVER_SOFTWARE']) && (wp_kses_post(wp_unslash($_SERVER['SERVER_SOFTWARE'])) == 'PHP.wasm'));
+	return (isset($_SERVER['SERVER_SOFTWARE']) && (wp_kses_post(wp_unslash($_SERVER['SERVER_SOFTWARE']) ?: '') == 'PHP.wasm'));
 }
 
 
@@ -651,7 +651,7 @@ function r34ics_last_day_of_current($interval, $dt_str=null) {
  */
 function r34ics_lightbox_container($echo=true) {
 	$output = '<div class="r34ics_lightbox"><div class="r34ics_lightbox_inner"><div class="r34ics_lightbox_close" tabindex="0">&times;</div><div class="r34ics_lightbox_content"></div></div></div>';
-	if (!empty($echo)) { echo wp_kses_post($output); return true; }
+	if (!empty($echo)) { echo wp_kses_post($output ?: ''); return true; }
 	return $output;
 }
 
@@ -823,7 +823,7 @@ function r34ics_memory_limit_select($field_name, $field_id=null, $current=null) 
 		$display = ($value < 1024) ? intval($value) . ' MB' : round($value / 1024, 3) . ' GB';
 		$html .= '<option value="' . intval($value) . '"';
 		if ($value == intval($current)) { $html .= ' selected="selected"'; }
-		$html .= '>' . wp_kses_post($display) . '</option>';
+		$html .= '>' . wp_kses_post($display ?: '') . '</option>';
 	}
 	$html .= '</select>';
 	return $html;
@@ -1226,30 +1226,30 @@ function r34ics_system_report($echo=true) {
 	// Output report data
 	if (!empty($echo)) {
 		foreach ((array)$report as $key => $value) {
-			if (!is_int($key)) { echo wp_kses_post($key) . ': '; }
+			if (!is_int($key)) { echo wp_kses_post($key ?: '') . ': '; }
 			if (is_array($value)) {
 				echo "\n";
 				foreach ((array)$value as $key2 => $value2) {
-					echo '&nbsp;&nbsp;' . (!is_int($key2) ? wp_kses_post($key2) . ': ' : '');
+					echo '&nbsp;&nbsp;' . (!is_int($key2) ? wp_kses_post($key2 ?: '') . ': ' : '');
 					if (is_array($value2)) {
 						echo "\n";
 						foreach ((array)$value2 as $key3 => $value3) {
-							echo '&nbsp;&nbsp;&nbsp;&nbsp;' . (!is_int($key3) ? wp_kses_post($key3) . ': ' : '');
+							echo '&nbsp;&nbsp;&nbsp;&nbsp;' . (!is_int($key3) ? wp_kses_post($key3 ?: '') . ': ' : '');
 							if (is_array($value3)) {
 								print_r($value3);
 							}
 							else {
-								echo wp_kses_post($value3) . "\n";
+								echo wp_kses_post($value3 ?: '') . "\n";
 							}
 						}
 					}
 					else {
-						echo wp_kses_post($value2) . "\n";
+						echo wp_kses_post($value2 ?: '') . "\n";
 					}
 				}
 			}
 			else {
-				echo wp_kses_post($value) . "\n";
+				echo wp_kses_post($value ?: '') . "\n";
 			}
 		}
 		return true;
@@ -1538,7 +1538,7 @@ function _r34ics_wp_footer_debug_output() {
 	global $r34ics_debug_output;
 	if (empty($r34ics_debug_output)) { return false; }
 	echo '<div class="r34ics_debug_wrapper minimized"><div class="r34ics_debug_toggle">&#9662;</div><div class="r34ics_debug_header"><h4>ICS Calendar Debugger</h4></div><div class="r34ics_debug_content">';
-	echo wp_kses_post($r34ics_debug_output);
+	echo wp_kses_post($r34ics_debug_output ?: '');
 	echo '</div></div>';
 	return true;
 }

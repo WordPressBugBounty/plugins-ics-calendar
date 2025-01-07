@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.5.0
+Stable tag: 11.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,16 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.1 - 2025.01.07 =
+
+* Functional enhancements:
+  * Added protected `R34ICS::_event_field_handling()` method to facilitate complex logic (i.e. too much to fit in one line of code) when assigning values in the `$event_item` array in `R34ICS::display_calendar()` and related functions. This includes the new `r34ics_event_field_handling` filter for additional external processing of event data. (If working with the filter, be aware that it is currently only applied to the `eventdesc` value.) This functionality was specifically added to accommodate changes needed for the ALTREP property described below, but it is open-ended to support additional future enhancements.
+* iCalendar spec support:
+  * Added limited support for Thunderbird's use of the [ALTREP](https://icalendar.org/iCalendar-RFC-5545/3-2-1-alternate-text-representation.html) parameter in event descriptions. Thunderbird does not appear to conform to the spec — the `ALTREP` value is not wrapped in quotation marks. However, since this is our first observation of ALTREP in use, our solution is tailored to the Thunderbird output we have observed. Additional feedback on this feature is welcomed.
+* PHP deprecation notices:
+ * Modified the `event_description_html()`, `event_label_html()` and `event_sublabel_html()` methods of `R34ICS` to return empty strings rather than null or false values when empty.
+ * Added `?: ''` empty string fallback value to all instances of `wp_kses_post()` added in version 11.5.0, to work around "Deprecated: preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated" warnings. This should technically be addressed within the WordPress core `wp_kses_no_null()` function. We have opened a Trac ticket. If the core function is modified to handle null values, the then-superfluous `?: ''` will be removed from these function calls in a future update.
 
 = 11.5.0 - 2025.01.03 =
 

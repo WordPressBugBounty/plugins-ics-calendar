@@ -42,12 +42,12 @@ else {
 	// Title and description
 	if (!empty($ics_data['title'])) {
 		?>
-		<<?php echo esc_attr($args['htmltagtitle']); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title']); ?></<?php echo esc_attr($args['htmltagtitle']); ?>>
+		<<?php echo esc_attr($args['htmltagtitle']); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title'] ?: ''); ?></<?php echo esc_attr($args['htmltagtitle']); ?>>
 		<?php
 	}
 	if (!empty($ics_data['description'])) {
 		?>
-		<p class="ics-calendar-description"><?php echo wp_kses_post($ics_data['description']); ?></p>
+		<p class="ics-calendar-description"><?php echo wp_kses_post($ics_data['description'] ?: ''); ?></p>
 		<?php
 	}
 	
@@ -66,7 +66,7 @@ else {
 
 		// Color code key
 		if (empty($args['legendposition']) || $args['legendposition'] == 'above') {
-			echo wp_kses_post($R34ICS->color_key_html($args, $ics_data));
+			echo wp_kses_post($R34ICS->color_key_html($args, $ics_data) ?: '');
 		}
 	
 		// Pagination HTML
@@ -206,7 +206,7 @@ else {
 											if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
 											if (isset($p_i)) { echo ' data-p-i="' . intval($p_i) . '"'; }
 										?>>
-											<<?php echo esc_attr($args['htmltagdate']); ?> class="date<?php if (!empty($event['multiday'])) { echo ' multiday'; } ?>"><?php echo wp_kses_post($day_label); ?></<?php echo esc_attr($args['htmltagdate']); ?>>
+											<<?php echo esc_attr($args['htmltagdate']); ?> class="date<?php if (!empty($event['multiday'])) { echo ' multiday'; } ?>"><?php echo wp_kses_post($day_label ?: ''); ?></<?php echo esc_attr($args['htmltagdate']); ?>>
 
 											<div class="event-info">
 												<?php
@@ -214,11 +214,11 @@ else {
 												if (empty($event['multiday']) && empty($args['hidetimes']) && !empty($event['start'])) {
 													?>
 													<<?php echo esc_attr($args['htmltagtime']); ?> class="time">
-														<span class="start_time"><?php echo wp_kses_post($event['start']); ?></span>
+														<span class="start_time"><?php echo wp_kses_post($event['start'] ?: ''); ?></span>
 														<?php
 														if (!empty($args['showendtimes']) && !empty($event['end']) && $event['end'] != $event['start']) {
 															?>
-															<span class="end_time">&#8211; <?php echo wp_kses_post($event['end']); ?></span>
+															<span class="end_time">&#8211; <?php echo wp_kses_post($event['end'] ?: ''); ?></span>
 															<?php
 														}
 														?>
@@ -227,13 +227,13 @@ else {
 												}
 
 												// Event label (title)
-												echo wp_kses_post($R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null)));
+												echo wp_kses_post($R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null)) ?: '');
 
 												// Sub-label
-												echo wp_kses_post($R34ICS->event_sublabel_html($args, $event, null));
+												echo wp_kses_post($R34ICS->event_sublabel_html($args, $event, null) ?: '');
 
 												// Description/Location/Organizer
-												echo wp_kses_post($R34ICS->event_description_html($args, $event, null, $has_desc));
+												echo wp_kses_post($R34ICS->event_description_html($args, $event, null, $has_desc) ?: '');
 												?>
 											</div>
 										
@@ -278,11 +278,11 @@ else {
 		}
 		
 		// Render calendar output
-		echo wp_kses_post($calendar_output);
+		echo wp_kses_post($calendar_output ?: '');
 		
 		// Color code key
 		if (!empty($args['legendposition']) && $args['legendposition'] == 'below') {
-			echo wp_kses_post($R34ICS->color_key_html($args, $ics_data));
+			echo wp_kses_post($R34ICS->color_key_html($args, $ics_data) ?: '');
 		}
 	
 		// Actions after rendering calendar wrapper (can include additional template output)
