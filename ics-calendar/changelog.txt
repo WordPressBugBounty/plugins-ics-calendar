@@ -1,5 +1,14 @@
 === ICS Calendar Changelog ===
 
+= 11.5.1.1 - 2025.01.08 =
+
+* Bug fixes:
+  * Added logic to trim extraneous spaces from the beginning and end of all attribute values when parsing the shortcode, and in sanitization logic in `r34ics-ajax.php`.
+  * Added `r34ics_color_key_allowed()` function and updated `r34ics_select_allowed()` to merge custom allowed fields with `wp_kses_allowed_html('post')`. This resolves issues with the color key (legend) that were introduced with changes in v. 11.5.0 and 11.5.1.
+  * Changed `r34ics_minify_css()` handling of whitespace to resolve issues when output is fed through `wp_kses_post()`.
+  * Fixed duplicate description output that may result with ALTREP handling introduced in 11.5.1.
+  * Fixed handling of feed parsing failures that would cause a fatal error unless the `debug` parameter is set in the shortcode.
+
 = 11.5.1 - 2025.01.07 =
 
 * Functional enhancements:

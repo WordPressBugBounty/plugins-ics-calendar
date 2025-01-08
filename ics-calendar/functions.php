@@ -41,6 +41,26 @@ function r34ics_color_hex_sanitize($color='') {
 }
 
 
+// Return allowed fields array for wp_kses() with methods like R34ICS::color_key_html()
+function r34ics_color_key_allowed() {
+	return array_merge(wp_kses_allowed_html('post'),
+		array(
+			'label' => array(
+				'for' => array(),
+			),
+			'input' => array(
+				'type' => array(),
+				'id' => array(),
+				'class' => array(),
+				'data-feed-key' => array(),
+				'checked' => array(),
+				'for' => array(),
+			),
+		)
+	);
+}
+
+
 // Build array of base and accent colors
 function r34ics_color_set($colors, $alpha=0.75, $highlight_tint=true) {
 	$arr = array();
@@ -812,8 +832,7 @@ function r34ics_memory_limit_mb() {
 function r34ics_memory_limit_select($field_name, $field_id=null, $current=null) {
 	if (empty($field_id)) { $field_id = 'r34ics_' . $field_name; }
 	$system_memory_limit = r34ics_memory_limit_mb();
-	/* If system value is not a multiple of 64, standardize minimum up to
-	   next multiple of 128 for a consistent set of options */
+	/* Standardize minimum up to next multiple of 128 for a consistent set of options */
 	$min_value = $system_memory_limit + ($system_memory_limit % 128);
 	$max_value = 2048;
 	if ($max_value <= $min_value) { $values = array($system_memory_limit); }
@@ -840,8 +859,9 @@ function r34ics_minify_css($css) {
 	// Remove space around braces
 	$css = str_replace(array(' {','{ '), '{', $css);
 	$css = str_replace(array(' }','} '), '}', $css);
-	// Remove whitespace
-	$css = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $css);
+	// Remove extra whitespace
+	// Note: This isn't as compact as it *could* be, but running output through wp_kses_post() causes issues (changed v. 11.5.1.1)
+	$css = preg_replace('/[\s]+/', ' ', $css);
 	return $css;
 }
 
@@ -1081,18 +1101,20 @@ function r34ics_scrub_duplicate_uids($ics_data, $args) {
 
 // Return allowed fields array for wp_kses() with functions like r34ics_memory_limit_select()
 function r34ics_select_allowed() {
-	return array(
-		'select' => array(
-			'class'  => array(),
-			'id'     => array(),
-			'name'   => array(),
-			'value'  => array(),
-			'type'   => array(),
-		),
-		'option' => array(
-			'selected' => array(),
-			'value' => array(),
-		),
+	return array_merge(wp_kses_allowed_html('post'),
+		array(
+			'select' => array(
+				'class' => array(),
+				'id' => array(),
+				'name' => array(),
+				'value' => array(),
+				'type' => array(),
+			),
+			'option' => array(
+				'selected' => array(),
+				'value' => array(),
+			),
+		)
 	);
 }
 
@@ -1265,15 +1287,15 @@ function r34ics_system_report($echo=true) {
  * This is because we want to be able to manipulate a time string *without* involving timezone adjustments!
  *
  * Quick reference:
- * g  12-hour without leading zero
- * G  24-hour without leading zero
- * h  12-hour with leading zero
- * H  24-hour with leading zero
- * i  minutes with leading zero
- * s  seconds with leading zero
- * a  lowercase am/pm
- * A  uppercase AM/PM
- * \  precedes literal character (only needed if also a formatting character)
+ * g	12-hour without leading zero
+ * G	24-hour without leading zero
+ * h	12-hour with leading zero
+ * H	24-hour with leading zero
+ * i	minutes with leading zero
+ * s	seconds with leading zero
+ * a	lowercase am/pm
+ * A	uppercase AM/PM
+ * \	precedes literal character (only needed if also a formatting character)
  * 
  */
 function r34ics_time_format($time_string='', $time_format='', $tz='', $date=null) {
@@ -1482,16 +1504,16 @@ function r34ics_url_uniqid_array_convert($items='') {
 // Note: Converts nested objects to arrays!
 // Based on: https://gist.github.com/benjamw/1690140?permalink_comment_id=3172968#gistcomment-3172968
 function _r34ics_array_filter_recursive($array, $callback=null) {
-  foreach ($array as $key => $value) {
-  	if (is_object($value)) { $value = (array)$value; }
-    if (is_array($value)) {
-      $array[$key] = call_user_func_array(__FUNCTION__, array($value, $callback));
-    }
-    elseif (!empty($callback)) {
-    	$array[$key] = $callback($value);
-    }
-  }
-  return $array;
+	foreach ($array as $key => $value) {
+		if (is_object($value)) { $value = (array)$value; }
+		if (is_array($value)) {
+			$array[$key] = call_user_func_array(__FUNCTION__, array($value, $callback));
+		}
+		elseif (!empty($callback)) {
+			$array[$key] = $callback($value);
+		}
+	}
+	return $array;
 }
 
 

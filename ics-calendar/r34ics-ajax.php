@@ -41,11 +41,11 @@ function r34ics_ajax() {
 			}
 			elseif (is_array($value)) {
 				$args[$key] = array_map(function($v) {
-					return is_string($v) ? stripslashes(wp_kses_post($v ?: '')) : intval($v);
+					return is_string($v) ? wp_kses_post(stripslashes(trim($v ?: ''))) : intval($v);
 				}, $value);
 			}
 			else {
-				$args[$key] = is_string($value) ? stripslashes(wp_kses_post($value ?: '')) : intval($value);
+				$args[$key] = is_string($value) ? wp_kses_post(stripslashes(trim($value ?: ''))) : intval($value);
 			}
 			if ($value == 'true') { $args[$key] = 1; }
 			elseif ($value == 'false') { $args[$key] = 0; }

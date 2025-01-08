@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.5.1
+Stable tag: 11.5.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,15 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.1.1 - 2025.01.08 =
+
+* Bug fixes:
+  * Added logic to trim extraneous spaces from the beginning and end of all attribute values when parsing the shortcode, and in sanitization logic in `r34ics-ajax.php`.
+  * Added `r34ics_color_key_allowed()` function and updated `r34ics_select_allowed()` to merge custom allowed fields with `wp_kses_allowed_html('post')`. This resolves issues with the color key (legend) that were introduced with changes in v. 11.5.0 and 11.5.1.
+  * Changed `r34ics_minify_css()` handling of whitespace to resolve issues when output is fed through `wp_kses_post()`.
+  * Fixed duplicate description output that may result with ALTREP handling introduced in 11.5.1.
+  * Fixed handling of feed parsing failures that would cause a fatal error unless the `debug` parameter is set in the shortcode.
 
 = 11.5.1 - 2025.01.07 =
 

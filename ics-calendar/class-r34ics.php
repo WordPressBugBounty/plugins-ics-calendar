@@ -621,9 +621,12 @@ if (!class_exists('R34ICS')) {
 					// Parse feed URL
 					$ICal = $this->ical_parse_url($url, $url_tz->getName(), $args, $range);
 	
-					// No ICS data present -- throw error and move on to the next feed
-					if (!is_object($ICal) && $this->debug) {
-						trigger_error(esc_html__('ICS file could not be retrieved or was empty. Please verify URL is correct, and check your php.ini configuration to verify either cURL or allow_url_fopen is available. If you are using spaces to delimit multiple URLs, you may also wish to try using the pipe character instead. Affected URL:', 'ics-calendar') . ' ' . esc_url($url), E_USER_NOTICE);
+					// Failed to parse feed into an ICal object; continue to next feed (if exists)
+					if (!is_object($ICal)) {
+						// Display error if debugging is turned on, otherwise just continue
+						if ($this->debug) {
+							trigger_error(esc_html__('ICS file could not be retrieved or was empty. Please verify URL is correct, and check your php.ini configuration to verify either cURL or allow_url_fopen is available. If you are using spaces to delimit multiple URLs, you may also wish to try using the pipe character instead. Affected URL:', 'ics-calendar') . ' ' . esc_url($url), E_USER_NOTICE);
+						}
 						continue;
 					}
 					
@@ -1644,6 +1647,11 @@ if (!class_exists('R34ICS')) {
 			// Workaround for shortcodes that contain HTML in the url attribute
 			if (empty($atts['url']) || strpos($atts['url'], '<') !== false) { $atts['url'] = r34ics_shortcode_url_fix($atts); }
 			
+			// Trim extraneous spaces from all attributes
+			foreach ((array)$atts as $key => $value) {
+				$atts[$key] = trim($value);
+			}
+			
 			// Extract attributes
 			extract(shortcode_atts($defaults, $atts, 'ics_calendar'));
 			
@@ -2197,13 +2205,10 @@ if (!class_exists('R34ICS')) {
 							$split2 = explode(':', @$split1[1], 2);
 							/**
 							 * If MIME type is text/html, we'll take the decoded HTML as the value
-							 * and add the non-encoded text as well, *if* it's different
+							 * and fall back to the non-encoded text, if the decoded value is empty
 							 */
 							if ($split1[0] == 'text/html') {
-								$value = rawurldecode($split2[0] ?: '');
-								if (!empty($split2[1]) && $split2[1] != $value) {
-									$value .= "\n" . $split2[1];
-								}
+								$value = rawurldecode($split2[0] ?: ($split2[1] ?: ''));
 							}
 							/**
 							 * @todo Handle other MIME types; for now, just take the unencoded text if

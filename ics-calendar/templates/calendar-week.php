@@ -56,7 +56,7 @@ if ($args['toggle'] === 'lightbox') {
 
 	// Color code key
 	if (empty($args['legendposition']) || $args['legendposition'] == 'above') {
-		echo wp_kses_post($R34ICS->color_key_html($args, $ics_data) ?: '');
+		echo wp_kses(($R34ICS->color_key_html($args, $ics_data) ?: ''), r34ics_color_key_allowed());
 	}
 
 	// Display calendar
@@ -302,7 +302,7 @@ if ($args['toggle'] === 'lightbox') {
 	<?php
 	// Color code key
 	if (!empty($args['legendposition']) && $args['legendposition'] == 'below') {
-		echo wp_kses_post($R34ICS->color_key_html($args, $ics_data) ?: '');
+		echo wp_kses(($R34ICS->color_key_html($args, $ics_data) ?: ''), r34ics_color_key_allowed());
 	}
 
 	// Actions after rendering calendar wrapper (can include additional template output)
