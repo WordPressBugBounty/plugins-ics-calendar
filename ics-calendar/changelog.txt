@@ -1,5 +1,10 @@
 === ICS Calendar Changelog ===
 
+= 11.5.1.2 - 2025.01.20 =
+
+* Miscellaneous:
+  * Added `r34ics_ajax_bypass_nonce` status to System Report.
+
 = 11.5.1.1 - 2025.01.08 =
 
 * Bug fixes:
