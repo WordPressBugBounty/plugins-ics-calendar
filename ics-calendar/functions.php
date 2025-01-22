@@ -466,11 +466,12 @@ function r34ics_has_desc($args, $event) {
 	global $R34ICS;
 	$has_desc = null;
 	// Override all other factors and return false if using `maskinfo`
-	if (!empty($args['maskinfo'])) {
-		$has_desc = false;
-	}
+	// Removed because this prevents the hover box with start/end times appearing on multi-day events
+	//if (!empty($args['maskinfo'])) {
+	//	$has_desc = false;
+	//}
 	// Assess settings and presence of content to determine whether or not there is a description to display
-	else {
+	//else {
 		$has_desc =
 			// TRUE if ANY of the following conditions are met:
 			// We want the description AND the event has a description, URL or attachment
@@ -487,7 +488,7 @@ function r34ics_has_desc($args, $event) {
 			((!empty($event['multiday'])) && (!in_array($args['view'], (array)$R34ICS->get_list_style_views()) || $args['toggle'] == 'lightbox')) ||
 			// Feed label in description is turned on and we have a feed label
 			(!empty($args['feedlabelindesc']) && !empty($args['feedlabel_array']) && isset($event['feed_key']) && !empty($args['feedlabel_array'][$event['feed_key']]));
-	}
+	//}
 	// Allow external filtering of the value
 	$has_desc = apply_filters('r34ics_has_desc', $has_desc, $args, $event);
 	// Return the value
