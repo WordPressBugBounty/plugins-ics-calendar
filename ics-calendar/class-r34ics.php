@@ -60,6 +60,7 @@ if (!class_exists('R34ICS')) {
 			'arrayonly' => false,
 			'attach' => '',
 			'basicauth' => false,
+			'category' => '',
 			'color' => '',
 			'columnlabels' => '',
 			'combinemultiday' => false,
@@ -157,7 +158,7 @@ if (!class_exists('R34ICS')) {
 			'title' => false,
 		);
 		
-		protected $shortcode_feed_array_params = array('color', 'feedlabel', 'url');
+		protected $shortcode_feed_array_params = array('category', 'color', 'feedlabel', 'url');
 		protected $shortcode_dynamic_values = array('guid', 'startdate');
 		
 		protected $views = array('basic', 'list', 'month', 'week');
@@ -970,6 +971,7 @@ if (!class_exists('R34ICS')) {
 			// Set colors and feed titles for color key
 			$ics_data['colors'] = apply_filters('r34ics_display_calendar_color_set', (!empty($args['color']) ? r34ics_color_set(r34ics_space_pipe_explode($args['color']), 1, (empty($args['whitetext']) && empty($args['solidcolors']))) : ''), $args);
 			$ics_data['tablebg'] = $args['tablebg'] ?? '';
+			// @todo Add category support
 			$ics_data['feed_titles'] = !empty($args['feedlabel']) ? explode('|', $args['feedlabel']) : array();
 			
 			// Allow external modification of data array
@@ -1568,6 +1570,26 @@ if (!class_exists('R34ICS')) {
 			if (!empty($event->additionalProperties['x_microsoft_cdo_busystatus'])) {
 				$event->status = $event->additionalProperties['x_microsoft_cdo_busystatus'];
 			}
+			
+			// Are we filtering the feed by category?
+			if (!empty($args['category'])) {
+				if (empty($event->categories)) { $exclude = true; }
+				else {
+					// Prepare category argument array for case-insensitive comparison
+					$categories = array_map(function($str) { return strtolower(trim($str)); }, (array)(explode('|', $args['category'])));
+					// Prepare the event's categories for case-insensitive comparison
+					$event_categories = array_map(function($str) { return strtolower(trim($str)); }, (array)(explode(',', $event->categories)));
+					// Check for a match
+					$match = false;
+					foreach ((array)$categories as $category) {
+						if (in_array($category, (array)$event_categories)) {
+							$match = true; break;
+						}
+					}
+					// If we didn't find a match, exclude the event
+					if (empty($match)) { $exclude = true; }
+				}
+			}
 	
 			// Don't just set $exclude equal to these expressions; it might evaluate false but true might have been passed in!
 			// Are we hiding private events?
@@ -1593,7 +1615,7 @@ if (!class_exists('R34ICS')) {
 					$exclude = true;
 				}
 			}
-	
+				
 			return $exclude;
 		}
 		
@@ -1676,6 +1698,7 @@ if (!class_exists('R34ICS')) {
 						: ''
 					),
 				'basicauth' => r34ics_boolean_check($basicauth),
+				'category' => $category,
 				'color' => $color,
 				'columnlabels' => (
 					in_array($columnlabels, array('full','short','min'))

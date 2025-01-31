@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.2 - 2025.01.31 =
+
+* Added `category` attribute to allow filtering events by category. Multiple categories may be included, using the pipe character `|` as a delimiter. Category names used must exactly match the category names in the feed (case-insensitive). _Currently this feature simply excludes events that are not in one of the designated categories. A future update will add support for color-coded categories, similar to the current support for multiple feeds in one calendar shortcode._ **Note:** This feature requires that your ICS feed data includes the [`CATEGORIES`](https://icalendar.org/iCalendar-RFC-5545/3-8-1-2-categories.html) property, which is not widely supported by most popular calendar software.
+
 = 11.5.1.3 - 2025.01.22 =
 
 * Modified logic for `maskinfo` that would remove the info hover box on multi-day events with specified start and end times.

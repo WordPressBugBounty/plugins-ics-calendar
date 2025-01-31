@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.5.1.3
+Stable tag: 11.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,10 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.2 - 2025.01.31 =
+
+* Added `category` attribute to allow filtering events by category. Multiple categories may be included, using the pipe character `|` as a delimiter. Category names used must exactly match the category names in the feed (case-insensitive). _Currently this feature simply excludes events that are not in one of the designated categories. A future update will add support for color-coded categories, similar to the current support for multiple feeds in one calendar shortcode._ **Note:** This feature requires that your ICS feed data includes the [`CATEGORIES`](https://icalendar.org/iCalendar-RFC-5545/3-8-1-2-categories.html) property, which is not widely supported by most popular calendar software.
 
 = 11.5.1.3 - 2025.01.22 =
 
