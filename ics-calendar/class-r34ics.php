@@ -1711,7 +1711,7 @@ if (!class_exists('R34ICS')) {
 						? strtolower($compact)
 						: ''
 					),
-				'count' => intval($count),
+				'count' => abs(intval($count)),
 				'curlopts' => false, // Deprecated
 				'customoptions' => explode('|', $customoptions),
 				'debug' => (
@@ -1804,9 +1804,9 @@ if (!class_exists('R34ICS')) {
 				'nostyle' => r34ics_boolean_check($nostyle),
 				'organizer' => r34ics_boolean_check($organizer),
 				'pagination' => (
-					intval($pagination)
-						? intval($pagination)
-						: r34ics_boolean_check($pagination)
+					strtolower($pagination) == 'true'
+						? 5 // Default to 5 if input value is literally the text string 'true'
+						: abs(intval($pagination))
 					),
 				'paginationposition' => (
 					in_array(strtolower($paginationposition), array('above','below','both'))

@@ -1,5 +1,11 @@
 === ICS Calendar Changelog ===
 
+= 11.5.3 - 2025.02.03 =
+
+* Fixed issue with pagination in list view that would include the next single-day event(s) on a "page" when a multi-day event was the correctly counted "last" item on the page.
+* Modified handling of `pagination="1"` in Basic and List views, to literally mean 1 event, rather than being interpreted as a boolean "true" and defaulting to 5 events per page. Setting `pagination="true"` will still default to 5 per page. List view also now omits the month/year headers when displaying one event per page.
+* Modified handling of `count` and `pagination` parameters to force positive integer values.
+
 = 11.5.2.1 - 2025.02.03 =
 
 * Added `r34ics_comparison_string()` function to process strings for comparison purposes. Used by features added to `R34ICS::r34ics_display_calendar_exclude_event()` in 11.5.2 to filter events by category, accounting for possible formatting issues with accented letters.

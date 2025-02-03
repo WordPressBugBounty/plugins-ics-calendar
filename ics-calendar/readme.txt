@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.5.2.1
+Stable tag: 11.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,12 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.3 - 2025.02.03 =
+
+* Fixed issue with pagination in list view that would include the next single-day event(s) on a "page" when a multi-day event was the correctly counted "last" item on the page.
+* Modified handling of `pagination="1"` in Basic and List views, to literally mean 1 event, rather than being interpreted as a boolean "true" and defaulting to 5 events per page. Setting `pagination="true"` will still default to 5 per page. List view also now omits the month/year headers when displaying one event per page.
+* Modified handling of `count` and `pagination` parameters to force positive integer values.
 
 = 11.5.2.1 - 2025.02.03 =
 
