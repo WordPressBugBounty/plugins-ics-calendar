@@ -1,5 +1,10 @@
 === ICS Calendar Changelog ===
 
+= 11.5.2.1 - 2025.02.03 =
+
+* Added `r34ics_comparison_string()` function to process strings for comparison purposes. Used by features added to `R34ICS::r34ics_display_calendar_exclude_event()` in 11.5.2 to filter events by category, accounting for possible formatting issues with accented letters.
+* Modified shortcode logic to force certain parameter values to all-lowercase. This allows the input values to be case-insensitive; previously, non-lowercase values would be treated as invalid. Applies primarily to parameters that have defined arrays of accepted values, e.g. [`columnlabels`](https://icscalendar.com/icsdocs#columnlabels) or [`extendmultiday`](https://icscalendar.com/icsdocs#extendmultiday).
+
 = 11.5.2 - 2025.01.31 =
 
 * Added `category` attribute to allow filtering events by category. Multiple categories may be included, using the pipe character `|` as a delimiter. Category names used must exactly match the category names in the feed (case-insensitive). _Currently this feature simply excludes events that are not in one of the designated categories. A future update will add support for color-coded categories, similar to the current support for multiple feeds in one calendar shortcode._ **Note:** This feature requires that your ICS feed data includes the [`CATEGORIES`](https://icalendar.org/iCalendar-RFC-5545/3-8-1-2-categories.html) property, which is not widely supported by most popular calendar software.

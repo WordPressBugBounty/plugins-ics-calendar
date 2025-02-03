@@ -1576,9 +1576,9 @@ if (!class_exists('R34ICS')) {
 				if (empty($event->categories)) { $exclude = true; }
 				else {
 					// Prepare category argument array for case-insensitive comparison
-					$categories = array_map(function($str) { return strtolower(trim($str)); }, (array)(explode('|', $args['category'])));
+					$categories = array_map('r34ics_comparison_string', (array)(explode('|', $args['category'])));
 					// Prepare the event's categories for case-insensitive comparison
-					$event_categories = array_map(function($str) { return strtolower(trim($str)); }, (array)(explode(',', $event->categories)));
+					$event_categories = array_map('r34ics_comparison_string', (array)(explode(',', $event->categories)));
 					// Check for a match
 					$match = false;
 					foreach ((array)$categories as $category) {
@@ -1693,22 +1693,22 @@ if (!class_exists('R34ICS')) {
 				'ajax' => (get_option('r34ics_ajax_by_default') ?: r34ics_boolean_check($ajax)),
 				'arrayonly' => r34ics_boolean_check($arrayonly),
 				'attach' => (
-					in_array($attach, array('0','false','1','true','image','download'))
-						? $attach
+					in_array(strtolower($attach), array('0','false','1','true','image','download'))
+						? strtolower($attach)
 						: ''
 					),
 				'basicauth' => r34ics_boolean_check($basicauth),
 				'category' => $category,
 				'color' => $color,
 				'columnlabels' => (
-					in_array($columnlabels, array('full','short','min'))
-						? $columnlabels
+					in_array(strtolower($columnlabels), array('full','short','min'))
+						? strtolower($columnlabels)
 						: (r34ics_boolean_check($nomobile) ? 'short' : '')
 					),
 				'combinemultiday' => r34ics_boolean_check($combinemultiday),
 				'compact' => (
-					in_array($compact, array('0','false','1','true','mobile', 'desktop'))
-						? $compact
+					in_array(strtolower($compact), array('0','false','1','true','mobile', 'desktop'))
+						? strtolower($compact)
 						: ''
 					),
 				'count' => intval($count),
@@ -1729,8 +1729,8 @@ if (!class_exists('R34ICS')) {
 				'eventdl' => (r34ics_boolean_check($eventdl) && !r34ics_boolean_check($basicauth)),
 				'eventlocaltime' => r34ics_boolean_check($eventlocaltime),
 				'extendmultiday' => (
-					in_array($extendmultiday, array('both', 'overnight', 'allday'))
-						? $extendmultiday
+					in_array(strtolower($extendmultiday), array('both', 'overnight', 'allday'))
+						? strtolower($extendmultiday)
 						: (r34ics_boolean_check($extendmultiday) ? 'allday' : '')
 					),
 				'feedlabel' => $feedlabel,
@@ -1764,13 +1764,13 @@ if (!class_exists('R34ICS')) {
 				'legacyparser' => r34ics_boolean_check($legacyparser),
 				'legendinline' => false, // Deprecated
 				'legendposition' => (
-					in_array($legendposition, array('above','below'))
-						? $legendposition
+					in_array(strtolower($legendposition), array('above','below'))
+						? strtolower($legendposition)
 						: null
 					),
 				'legendstyle' => (
-					in_array($legendstyle, array('block','inline','none'))
-						? $legendstyle
+					in_array(strtolower($legendstyle), array('block','inline','none'))
+						? strtolower($legendstyle)
 						: (r34ics_boolean_check($legendinline) ? 'inline' : null)
 					),
 				'limitdays' => (
@@ -1782,20 +1782,20 @@ if (!class_exists('R34ICS')) {
 				'linebreakfix' => r34ics_boolean_check($linebreakfix),
 				'linktitles' => r34ics_boolean_check($linktitles),
 				'location' => (
-					in_array($location, array('maplinks'))
-						? $location
+					in_array(strtolower($location), array('maplinks'))
+						? strtolower($location)
 						: r34ics_boolean_check($location)
 					),
 				'mapsource' => (
-					in_array($mapsource, array('google', 'bing', 'openstreetmap'))
-						? $mapsource
+					in_array(strtolower($mapsource), array('google', 'bing', 'openstreetmap'))
+						? strtolower($mapsource)
 						: 'google'
 				),
 				'maskinfo' => $maskinfo,
 				'method' => false, // Deprecated
 				'monthnav' => (
-					in_array($monthnav, array('arrows','select','both','compact'))
-						? $monthnav
+					in_array(strtolower($monthnav), array('arrows','select','both','compact'))
+						? strtolower($monthnav)
 						: null
 					),
 				'nolink' => r34ics_boolean_check($nolink),
@@ -1809,8 +1809,8 @@ if (!class_exists('R34ICS')) {
 						: r34ics_boolean_check($pagination)
 					),
 				'paginationposition' => (
-					in_array($paginationposition, array('above','below','both'))
-						? $paginationposition
+					in_array(strtolower($paginationposition), array('above','below','both'))
+						? strtolower($paginationposition)
 						: (r34ics_boolean_check($pagination) ? 'above' : null)
 					),
 				'pastdays' => intval($pastdays),
@@ -1820,10 +1820,10 @@ if (!class_exists('R34ICS')) {
 						: intval(r34ics_boolean_check($reload))
 					),
 				'resources' => r34ics_boolean_check($resources),
-				'reverse' => (in_array($view, (array)$this->get_list_style_views()) && r34ics_boolean_check($reverse)),
+				'reverse' => (in_array(strtolower($view), (array)$this->get_list_style_views()) && r34ics_boolean_check($reverse)),
 				'sametab' => (
-					in_array($sametab, array('local','all','none'))
-						? $sametab
+					in_array(strtolower($sametab), array('local','all','none'))
+						? strtolower($sametab)
 						: (r34ics_boolean_check($sametab) ? 'all' : 'local')
 					),
 				'showendtimes' => r34ics_boolean_check($showendtimes),
@@ -1833,7 +1833,7 @@ if (!class_exists('R34ICS')) {
 				'solidcolors' => r34ics_boolean_check($solidcolors),
 				'startdate' => (
 					$startdate == 'today'
-					|| (empty($startdate) && $view == 'week' && $limitdays > 7)
+					|| (empty($startdate) && strtolower($view) == 'week' && $limitdays > 7)
 						? r34ics_date('Ymd', null, null, '-' . intval($pastdays) . ' days')
 						: intval($startdate)
 					),
@@ -1847,8 +1847,8 @@ if (!class_exists('R34ICS')) {
 				),
 				'title' => $title,
 				'toggle' => (
-					in_array($toggle, array('lightbox'))
-						? $toggle
+					in_array(strtolower($toggle), array('lightbox'))
+						? strtolower($toggle)
 						: r34ics_boolean_check($toggle)
 					),
 				'tz' => $tz,
@@ -1858,7 +1858,7 @@ if (!class_exists('R34ICS')) {
 						: r34ics_boolean_check($ua)
 				),
 				'url' => $url,
-				'view' => (in_array($view, (array)$this->views) ? $view : 'month'),
+				'view' => (in_array(strtolower($view), (array)$this->views) ? strtolower($view) : 'month'),
 				'weeknumbers' => r34ics_boolean_check($weeknumbers),
 				'whitetext' => r34ics_boolean_check($whitetext),
 			);
@@ -1866,7 +1866,7 @@ if (!class_exists('R34ICS')) {
 			// Workaround: Adjust limitdays to compensate for pastdays when startdate is current date
 			// @todo This is due to the 10.6 change to 'pastdays' default; work out a permanent fix!
 			if (get_option('r34ics_use_new_defaults_10_6')) {
-				if ((empty($startdate) || $startdate == 'today') && intval($pastdays) > intval($limitdays)) {
+				if ((empty($startdate) || strtolower($startdate) == 'today') && intval($pastdays) > intval($limitdays)) {
 					$args['limitdays'] = intval($limitdays) + intval($pastdays);
 				}
 			}

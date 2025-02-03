@@ -88,6 +88,12 @@ function r34ics_color_text4bg($hex='', $trimhash=false) {
 }
 
 
+// Clean up and convert a string for comparison (not for display)
+function r34ics_comparison_string($str='') {
+	return iconv('UTF-8', 'ASCII//TRANSLIT', strtolower(preg_replace('/[\s]+/','',($str ?: ''))));
+}
+
+
 // Create a cURL cookie path (if needed) and return it
 function r34ics_curl_cookie_path($cookie_file='curl_cookie.txt') {
 	global $wp_filesystem;
