@@ -3,7 +3,7 @@
 Plugin Name: ICS Calendar
 Plugin URI: https://icscalendar.com
 Description: Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar into a seamlessly integrated, auto-updating, zero-maintenance WordPress experience.
-Version: 11.5.3
+Version: 11.5.3.1
 Requires at least: 4.9
 Requires PHP: 7.0
 Author: Room 34 Creative Services, LLC
@@ -15,16 +15,15 @@ Domain Path: /i18n/languages/
 */
 
 /*
-  Copyright 2024 Room 34 Creative Services, LLC (email: info@room34.com)
+  Copyright 2025 Room 34 Creative Services, LLC. (Email: info@room34.com)
 
-	This program is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License, version 2, as 
-	published by the Free Software Foundation.
+	This program is free software; you can redistribute it and/or modify it under the terms
+	of the GNU General Public License, version 2, as published by the Free Software
+	Foundation.
 
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful, but WITHOUT ANY
+	WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+	PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 	https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
@@ -73,6 +72,43 @@ if (!class_exists('R34ICS')) {
 		load_plugin_textdomain('ics-calendar', false, basename(plugin_dir_path(__FILE__)) . '/i18n/languages/');
 	}
 	add_action('init', 'r34ics_load_plugin_textdomain', 1 - PHP_INT_MAX);
+
+
+	// Force loading of embedded translation files instead of community translations
+	/**
+	 * Note: This only runs just-in-time, when WordPress first encounters a translation
+	 * string for this domain, for a language that already has a community translation
+	 * file downloaded inside WP_LANG_DIR/plugins.
+	 */
+	function r34ics_load_textdomain_mofile($mofile, $domain) {
+		if ($domain == 'ics-calendar' && strpos($mofile, WP_LANG_DIR . '/plugins') !== false) {
+			$locale = apply_filters('plugin_locale', determine_locale(), $domain);
+			$locales = r34ics_i18n_locales();
+			// Only replace the locales we have translated directly within the plugin
+			if (is_array($locales) && in_array($locale, $locales)) {
+				$mofile = plugin_dir_path(__FILE__) . '/i18n/languages/' . $domain . '-' . $locale . '.mo';
+			}
+		}
+		return $mofile;
+	}
+	add_filter('load_textdomain_mofile', 'r34ics_load_textdomain_mofile', 10, 2);
+
+	
+	// Get list of translated locales
+	function r34ics_i18n_locales() {
+		$locales = get_option('r34ics_i18n_locales');
+		if (empty($locales)) {
+			$locales = array();
+			$files = list_files(plugin_dir_path(__FILE__) . '/i18n/languages', 1);
+			foreach ((array)$files as $file) {
+				if (pathinfo($file, PATHINFO_EXTENSION) == 'mo') {
+					$locales[] = str_replace('ics-calendar-', '', pathinfo($file, PATHINFO_FILENAME));
+				}
+			}
+			update_option('r34ics_i18n_locales', $locales);
+		}
+		return $locales;
+	}	
 	
 	
 	// Install

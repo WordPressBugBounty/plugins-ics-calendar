@@ -1491,6 +1491,7 @@ if (!class_exists('R34ICS')) {
 			if (!empty($args['hidetimes'])) { $ics_calendar_classes[] = 'hide_times'; }
 			if (!empty($args['monthnav'])) { $ics_calendar_classes[] = 'monthnav-' . esc_attr($args['monthnav']); }
 			if (!empty($args['nomobile'])) { $ics_calendar_classes[] = 'nomobile'; }
+			if (!empty($args['reverse'])) { $ics_calendar_classes[] = 'reverse'; }
 			if ($args['sametab'] == 'all') { $ics_calendar_classes[] = 'sametab'; }
 			elseif ($args['sametab'] == 'none') { $ics_calendar_classes[] = 'newtab'; }
 			if (!empty($args['solidcolors'])) { $ics_calendar_classes[] = 'solidcolors'; }

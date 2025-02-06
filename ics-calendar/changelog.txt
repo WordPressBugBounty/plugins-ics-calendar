@@ -1,5 +1,10 @@
 === ICS Calendar Changelog ===
 
+= 11.5.3.1 - 2025.02.03 =
+
+* Fixed bug with `reverse` and `pagination` on Basic and List views that would cause the wrong "page" to display on load.
+* i18n: Updated translation strings. Added logic to force the plugin's embedded translation files to take precedence over any downloaded community translation files in the `WP_LANG_DIR/plugins` directory.
+
 = 11.5.3 - 2025.02.03 =
 
 * Fixed issue with pagination in list view that would include the next single-day event(s) on a "page" when a multi-day event was the correctly counted "last" item on the page.
