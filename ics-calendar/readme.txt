@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.5.3.1
+Stable tag: 11.5.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,7 +99,11 @@ The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional 
 
 == Changelog ==
 
-= 11.5.3.1 - 2025.02.03 =
+= 11.5.3.2 - 2025.02.07 =
+
+* Bug fix: Resolved possible fatal error caused if new `r34ics_i18n_locales()` function added in 11.5.3.1 runs on a logged-out front-end page.
+
+= 11.5.3.1 - 2025.02.06 =
 
 * Fixed bug with `reverse` and `pagination` on Basic and List views that would cause the wrong "page" to display on load.
 * i18n: Updated translation strings. Added logic to force the plugin's embedded translation files to take precedence over any downloaded community translation files in the `WP_LANG_DIR/plugins` directory.

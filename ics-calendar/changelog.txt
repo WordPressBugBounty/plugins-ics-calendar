@@ -1,6 +1,10 @@
 === ICS Calendar Changelog ===
 
-= 11.5.3.1 - 2025.02.03 =
+= 11.5.3.2 - 2025.02.07 =
+
+* Bug fix: Resolved possible fatal error caused if new `r34ics_i18n_locales()` function added in 11.5.3.1 runs on a logged-out front-end page.
+
+= 11.5.3.1 - 2025.02.06 =
 
 * Fixed bug with `reverse` and `pagination` on Basic and List views that would cause the wrong "page" to display on load.
 * i18n: Updated translation strings. Added logic to force the plugin's embedded translation files to take precedence over any downloaded community translation files in the `WP_LANG_DIR/plugins` directory.
