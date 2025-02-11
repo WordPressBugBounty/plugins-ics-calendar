@@ -1,5 +1,12 @@
 === ICS Calendar Changelog ===
 
+= 11.5.4.1 - 2025.02.10 =
+
+* Refactored `r34ics_date()` to use `wp_date()` after applying its offset and other input standardizations, rather than duplicating the code of `wp_date()`. This also resolves an issue where in some rare cases, the passed-in timezone may not be handled correctly.
+* Added missing event timezone inputs to `r34ics_date()` calls in the `R34ICS::event_description_html()` method and `r34ics_multiday_date_label()` function. Without timezones, date ranges for multi-day events could be one day "off" in the event descriptions and labels after the aforementioned refactoring of `r34ics_date()`.
+* Fixed incorrect date display issues in `R34ICS::event_description_html()`. _Note: Version 11.5.4 was withdrawn due to this issue, which was discovered a few minutes after its release._
+* Modified event sorting for multi-day events starting on the same date. Now, list-style views (list, basic) will show these events sorted by earliest ending date. Table-style views (month, week), will show the events sorted by the _latest_ ending date, which helps to reduce situations where events "break" between days in the layout when using `combinemultiday`.
+
 = 11.5.3.2 - 2025.02.07 =
 
 * Bug fix: Resolved possible fatal error caused if new `r34ics_i18n_locales()` function added in 11.5.3.1 runs on a logged-out front-end page.

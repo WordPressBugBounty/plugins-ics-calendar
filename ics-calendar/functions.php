@@ -123,34 +123,8 @@ function r34ics_date($format='', $dt_str='', $tz=null, $offset='') {
 	$offset = str_replace('--', '+', str_replace('+-', '-', $offset));
 	// Create new datetime from date string
 	$dt = new DateTime(trim($dt_str . ' ' . $offset), $tz);
-	// Localize (code from wp_date() in a more compact format)
-	if (empty($wp_locale->month) || empty($wp_locale->weekday)) { $date = $dt->format($format); }
-	else {
-		$format = preg_replace('/(?<!\\\\)r/', DATE_RFC2822, $format);
-		$new_format	= '';
-		$format_length = strlen($format);
-		$month = $wp_locale->get_month($dt->format('m'));
-		$weekday = $wp_locale->get_weekday($dt->format('w'));
-		for ($i=0; $i < $format_length; $i++) {
-			switch ($format[$i]) {
-				case 'D': $new_format .= addcslashes($wp_locale->get_weekday_abbrev($weekday), '\\A..Za..z'); break;
-				case 'F': $new_format .= addcslashes($month, '\\A..Za..z'); break;
-				case 'l': $new_format .= addcslashes($weekday, '\\A..Za..z'); break;
-				case 'M': $new_format .= addcslashes($wp_locale->get_month_abbrev($month), '\\A..Za..z'); break;
-				case 'a': $new_format .= addcslashes($wp_locale->get_meridiem($dt->format('a')), '\\A..Za..z'); break;
-				case 'A': $new_format .= addcslashes($wp_locale->get_meridiem($dt->format('A')), '\\A..Za..z'); break;
-				case '\\':
-					$new_format .= $format[$i];
-					if ($i < $format_length) { $new_format .= $format[++$i]; }
-					break;
-				default: $new_format .= $format[$i]; break;
-			}
-		}
-		$date = $dt->format($new_format);
-		$date = wp_maybe_decline_date($date, $format);
-	}
-	// Return requested format
-	return $date;
+	// Now that we've made our adjustments, we'll just use wp_date() from here
+	return wp_date($format, $dt->getTimestamp(), $tz);
 }
 
 
@@ -895,14 +869,16 @@ function r34ics_multiday_date_label($date_format, $event, $args) {
 		? r34ics_date($date_format,
 			substr($event['multiday']['start_date'],4,2) . '/' .
 			substr($event['multiday']['start_date'],6,2) . '/' .
-			substr($event['multiday']['start_date'],0,4)
+			substr($event['multiday']['start_date'],0,4),
+			$event['tz_start']
 		)
 		: '';
 	$md_end = !empty($event['multiday']['end_date'])
 		? r34ics_date($date_format,
 			substr($event['multiday']['end_date'],4,2) . '/' .
 			substr($event['multiday']['end_date'],6,2) . '/' .
-			substr($event['multiday']['end_date'],0,4)
+			substr($event['multiday']['end_date'],0,4),
+			$event['tz_end']
 		)
 		: '';
 	if (!empty($event['multiday']['start_time'])) {

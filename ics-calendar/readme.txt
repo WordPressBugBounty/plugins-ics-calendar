@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.5.3.2
+Stable tag: 11.5.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,13 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.4.1 - 2025.02.10 =
+
+* Refactored `r34ics_date()` to use `wp_date()` after applying its offset and other input standardizations, rather than duplicating the code of `wp_date()`. This also resolves an issue where in some rare cases, the passed-in timezone may not be handled correctly.
+* Added missing event timezone inputs to `r34ics_date()` calls in the `R34ICS::event_description_html()` method and `r34ics_multiday_date_label()` function. Without timezones, date ranges for multi-day events could be one day "off" in the event descriptions and labels after the aforementioned refactoring of `r34ics_date()`.
+* Fixed incorrect date display issues in `R34ICS::event_description_html()`. _Note: Version 11.5.4 was withdrawn due to this issue, which was discovered a few minutes after its release._
+* Modified event sorting for multi-day events starting on the same date. Now, list-style views (list, basic) will show these events sorted by earliest ending date. Table-style views (month, week), will show the events sorted by the _latest_ ending date, which helps to reduce situations where events "break" between days in the layout when using `combinemultiday`.
 
 = 11.5.3.2 - 2025.02.07 =
 

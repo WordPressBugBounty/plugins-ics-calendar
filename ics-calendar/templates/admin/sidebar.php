@@ -50,7 +50,7 @@
 	<h4 style="margin-bottom: 0;"><?php esc_html_e('Customizer', 'ics-calendar'); ?></h4>
 	<p style="margin-top: 0;"><?php esc_html_e('Easily modify your calendar color palettes, fonts, and more, site-wide.', 'ics-calendar'); ?></p>
 	<h4 style="margin-bottom: 0;"><?php esc_html_e('Enhanced Features', 'ics-calendar'); ?></h4>
-	<p style="margin-top: 0;"><?php esc_html_e('Additional capabilities are added to the core month, basic, list and week views.', 'ics-calendar'); ?></p>
+	<p style="margin-top: 0;"><?php esc_html_e('Additional capabilities are added to the core Month, Basic, List and Week views.', 'ics-calendar'); ?></p>
 	<p><?php
 	/* translators: 1. Link (do not translate) */
 	printf(esc_html__('Visit %1$s to learn more.', 'ics-calendar'), '<strong><a href="https://icscalendar.com/pro/" target="_blank">icscalendar.com/pro</a></strong>');

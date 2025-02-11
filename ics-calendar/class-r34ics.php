@@ -854,7 +854,7 @@ if (!class_exists('R34ICS')) {
 						}
 						
 						// Get the date's events in order
-						$events = $this->_date_events_sort($events);
+						$events = $this->_date_events_sort($events, $view);
 						
 						// Insert the date's events into the year/month/day hierarchical array
 						$year = substr($date,0,4);
@@ -1223,12 +1223,10 @@ if (!class_exists('R34ICS')) {
 					$date_format = r34ics_date_format($args['format'], true);
 					echo '<div class="date_in_hover_block">';
 					if (!empty($event['multiday'])) {
-						$md_start = r34ics_date($date_format, strtotime($event['multiday']['start_date']));
-						$md_end = r34ics_date($date_format, strtotime($event['multiday']['end_date']));
-						$day_label = $md_start . ' &#8211; ' . $md_end;
+						$day_label = r34ics_multiday_date_label($date_format, $event, $args);
 					}
 					else {
-						$day_label = r34ics_date($date_format, strtotime($event['dtstart_date']));
+						$day_label = r34ics_date($date_format, $event['dtstart_date'], $event['tz_start']);
 					}
 					echo wp_kses_post($day_label ?: '');
 					echo '</div>';
@@ -2172,12 +2170,12 @@ if (!class_exists('R34ICS')) {
 		}
 		
 		
-		protected function _date_events_sort($events) {
+		protected function _date_events_sort($events, $view='month') {
 			// Sort the event subarrays by time (key)
 			ksort($events);
 			// Sort each time slot's events alphabetically by the event label (title)
 			foreach (array_keys((array)$events) as $time) {
-				uasort($events[$time], function($a, $b) {
+				uasort($events[$time], function($a, $b) use ($view) {
 					// If one event is multi-day and the other isn't, always put multi-day first
 					if (!empty($a['multiday']) && empty($b['multiday'])) {
 						return -1;
@@ -2185,9 +2183,23 @@ if (!class_exists('R34ICS')) {
 					elseif (empty($a['multiday']) && !empty($b['multiday'])) {
 						return 1;
 					}
-					// If both are multi-day, sort by start date
+					// If both are multi-day...
 					elseif (!empty($a['multiday']) && !empty($b['multiday'])) {
-						return strcmp(($a['multiday']['start_date'] ?? ''), ($b['multiday']['start_date'] ?? ''));
+						// Do they both start on the same day?
+						if ($a['multiday']['start_date'] == $b['multiday']['start_date']) {
+							// If this is a list-style view, sort by earliest end date
+							if (in_array(($view ?: ''), $this->list_style_views)) {
+								return strcmp(($a['multiday']['end_date'] ?? ''), ($b['multiday']['end_date'] ?? ''));
+							}
+							// If this is not a list-style view, sort by latest end date, for better combinemultiday output
+							else {
+								return strcmp(($b['multiday']['end_date'] ?? ''), ($a['multiday']['end_date'] ?? ''));
+							}
+						}
+						// ...otherwise, sort by start date
+						else {
+							return strcmp(($a['multiday']['start_date'] ?? ''), ($b['multiday']['start_date'] ?? ''));
+						}
 					}
 					// If neither is multi-day, sort alphabetically by label
 					return strcmp(($a['label'] ?? ''), ($b['label'] ?? ''));
