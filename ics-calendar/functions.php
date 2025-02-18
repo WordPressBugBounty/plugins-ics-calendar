@@ -1154,6 +1154,10 @@ function r34ics_system_report($echo=true) {
 		
 	// Gather all report data
 	global $wpdb;
+	// Note: Some servers may have the php_uname() function disabled for security reasons
+	$server_os = function_exists('php_uname')
+		? php_uname('s') . ' ' . php_uname('r') . ' ' . php_uname('m')
+		: (defined('PHP_OS') ? PHP_OS : 'Unknown OS');
 	$server_fields = array(
 		'SERVER_SOFTWARE' => '',
 		'SERVER_PROTOCOL' => '',
@@ -1172,10 +1176,10 @@ function r34ics_system_report($echo=true) {
 		'Active Theme' => $theme->name . ' ' . $theme->version . ' (' . pathinfo($theme->template_dir, PATHINFO_BASENAME) . ')',
 		'Active Plugins' => $plugin_list,
 		'Server' => array(
-			php_uname('s') . ' ' . php_uname('r') . ' ' . php_uname('m'),
+			$server_os,
 			implode(' ', (array)$server_fields),
 			'MySQL ' . $wpdb->dbh->server_version . ' ' . $wpdb->dbh->host_info,
-			'PHP ' . phpversion(),
+			'PHP ' . (defined('PHP_VERSION') ? PHP_VERSION : ''),
 		),
 	);
 	

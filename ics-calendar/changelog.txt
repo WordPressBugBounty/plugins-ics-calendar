@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.4.2 - 2025.02.18 =
+
+* Made calls to `php_uname()` in System Report conditional; some servers may remove support for this function for security reasons. Also replaced call to `phpversion()` with `PHP_VERSION` constant, with a conditional in case the constant is undefined. These changes should resolve issues where the ICS Calendar admin page does not load properly on servers with these security measures in place.
+
 = 11.5.4.1 - 2025.02.10 =
 
 * Refactored `r34ics_date()` to use `wp_date()` after applying its offset and other input standardizations, rather than duplicating the code of `wp_date()`. This also resolves an issue where in some rare cases, the passed-in timezone may not be handled correctly.
