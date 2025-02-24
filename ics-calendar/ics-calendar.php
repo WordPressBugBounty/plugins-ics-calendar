@@ -3,7 +3,7 @@
 Plugin Name: ICS Calendar
 Plugin URI: https://icscalendar.com
 Description: Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar into a seamlessly integrated, auto-updating, zero-maintenance WordPress experience.
-Version: 11.5.4.2
+Version: 11.5.5
 Requires at least: 4.9
 Requires PHP: 7.0
 Author: Room 34 Creative Services, LLC
@@ -26,6 +26,11 @@ Domain Path: /i18n/languages/
 	PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 	https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+	
+	NOTE: The ICS Calendar and ICS Calendar Pro names, logos, and related branding assets
+	are trademarks of Room 34 Creative Services, LLC and may not be used without permission.
+	They are distributed with this software for the purpose of identification only. Reuse or
+	redistribution of these assets is NOT covered by the GPL, and is hereby prohibited.
 */
 
 

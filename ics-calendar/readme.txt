@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 11.5.4.2
+Stable tag: 11.5.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,9 +99,14 @@ The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional 
 
 == Changelog ==
 
+= 11.5.5 - 2025.02.24 =
+
+* Added support for using [HTML color names](https://www.w3schools.com/colors/colors_names.asp) in the shortcode, in addition to hex colors, via the new `r34ics_color_name2hex()` function.
+
 = 11.5.4.2 - 2025.02.18 =
 
 * Made calls to `php_uname()` in System Report conditional; some servers may remove support for this function for security reasons. Also replaced call to `phpversion()` with `PHP_VERSION` constant, with a conditional in case the constant is undefined. These changes should resolve issues where the ICS Calendar admin page does not load properly on servers with these security measures in place.
+* Updated copyright terms regarding ICS Calendar name and branding assets.
 
 = 11.5.4.1 - 2025.02.10 =
 
