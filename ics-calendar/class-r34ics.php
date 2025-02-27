@@ -1793,7 +1793,7 @@ if (!class_exists('R34ICS')) {
 				'maskinfo' => $maskinfo,
 				'method' => false, // Deprecated
 				'monthnav' => (
-					in_array(strtolower($monthnav), array('arrows','select','both','compact'))
+					in_array(strtolower($monthnav), array('arrows','select','both','compact','none'))
 						? strtolower($monthnav)
 						: null
 					),

@@ -3,9 +3,9 @@ Contributors: room34
 Donate link: https://icscalendar.com
 Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
-Tested up to: 6.7
+Tested up to: 6.7.2
 Requires PHP: 7.0
-Stable tag: 11.5.5
+Stable tag: 11.5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,11 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.6 - 2025.02.26 =
+
+* Added `none` as a valid option for the `monthnav` parameter, allowing for hiding the month navigation altogether. (Useful when showing month view in a kiosk environment or other settings where the user doesn't need the ability to switch the view to a different month.)
+* Bumped 'tested up to' to 6.7.2.
 
 = 11.5.5 - 2025.02.24 =
 
