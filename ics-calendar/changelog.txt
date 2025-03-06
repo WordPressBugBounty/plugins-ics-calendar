@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.6.1 - 2025.03.06 =
+
+* Updated help text on Settings page.
+
 = 11.5.6 - 2025.02.26 =
 
 * Added `none` as a valid option for the `monthnav` parameter, allowing for hiding the month navigation altogether. (Useful when showing month view in a kiosk environment or other settings where the user doesn't need the ability to switch the view to a different month.)
