@@ -3,7 +3,7 @@
 Plugin Name: ICS Calendar
 Plugin URI: https://icscalendar.com
 Description: Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar into a seamlessly integrated, auto-updating, zero-maintenance WordPress experience.
-Version: 11.5.6.1
+Version: 11.5.7
 Requires at least: 4.9
 Requires PHP: 7.0
 Author: Room 34 Creative Services, LLC
@@ -119,14 +119,10 @@ if (!class_exists('R34ICS')) {
 	}	
 	
 	
-	// Install
-	register_activation_hook(__FILE__, 'r34ics_install');
+	// Install/activate
 	function r34ics_install() {
 		global $R34ICS;
 	
-		// Flush rewrite rules
-		flush_rewrite_rules();
-		
 		// Remember previous version
 		$previous_version = get_option('r34ics_version');
 		update_option('r34ics_previous_version', $previous_version);
@@ -147,17 +143,26 @@ if (!class_exists('R34ICS')) {
 			$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
 		}
 	
-		// Admin notice with link to settings
-		$r34ics_deferred_admin_notices['r34ics_first_load'] = array(
-			/* translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag */
-			'content' => '<p>' . sprintf(esc_html__('Thank you for installing %1$s. Before creating your first calendar shortcode, please visit your %2$sGeneral Settings%3$s page and verify that your site language, timezone and date/time format settings are correct. See our %4$sUser Guide%5$s for more information.', 'ics-calendar'), '<strong>ICS Calendar</strong>', '<a href="' . admin_url('options-general.php') . '">', '</a>', '<a href="https://icscalendar.com/general-wordpress-settings/" target="_blank">', '</a>') . '</p>',
-			'status' => 'info',
-			'dismissible' => 'forever',
-		);
-		
 		// Save deferred admin notices
 		update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices);
+		
+		// Flush rewrite rules
+		flush_rewrite_rules();
+		
+		// Set options for first run redirect (runs on admin_init hook, below)
+		update_option('r34ics_admin_first_run', true);
+		update_option('r34ics_activation_redirect', true);
 	}
+	register_activation_hook(__FILE__, 'r34ics_install');
+	
+	// Redirect to Getting Started page with first run message
+	add_action('admin_init', function() {
+		if (get_option('r34ics_activation_redirect')) {
+			update_option('r34ics_activation_redirect', false);
+			wp_safe_redirect(admin_url('admin.php?page=ics-calendar'));
+			exit;
+		}
+	}, PHP_INT_MAX - 1);
 	
 	
 	// Updates

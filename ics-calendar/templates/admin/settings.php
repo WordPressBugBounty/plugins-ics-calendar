@@ -47,7 +47,10 @@
 	/* translators: 1. HTML tag 2. HTML tag 3. HTML tag 4: Plugin name (do not translate) 5. HTML tag */
 	printf(esc_html__('If your calendar server is hosted on the same physical server as your website, is part of the same local network, or otherwise uses a %1$sreserved IP address%2$s, enter its hostname here to allow access. For multiple calendar servers, enter one hostname per line. See %3$sthe %4$s documentation%5$s for more information.', 'ics-calendar'), '<a href="https://en.wikipedia.org/wiki/Internet_Protocol_version_4#Special-use_addresses" target="_blank">', '</a>', '<a href="https://icscalendar.com/developer/#http_request_host_is_external" target="_blank">', 'ICS Calendar', '</a>');
 	?></span></small></span><br />
-	<small><?php printf(esc_html__('Enter one hostname per line. Hostnames are the base domain name, not a full URL. %1$s For example, you would enter %2$s, not %3$s.', 'ics-calendar'), '<br />', '<code style="font-size: 100%;">example.com</code>', '<code style="font-size: 100%;">https://example.com/path/</code>'); ?></small>
+	<small><?php
+	/* translators: 1. HTML tag 2. HTML tag 3. HTML tag */
+	printf(esc_html__('Enter one hostname per line. Hostnames are the base domain name, not a full URL. %1$s For example, you would enter %2$s, not %3$s.', 'ics-calendar'), '<br />', '<code style="font-size: 100%;">example.com</code>', '<code style="font-size: 100%;">https://example.com/path/</code>');
+	?></small>
 </p>
 
 <?php do_action('r34ics_settings_fields_loading'); ?>

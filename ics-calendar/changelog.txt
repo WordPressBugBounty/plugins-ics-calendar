@@ -1,5 +1,11 @@
 === ICS Calendar Changelog ===
 
+= 11.5.7 - 2025.03.07 =
+
+* Modified activation process to jump directly to **Getting Started** tab of admin page.
+* Redesigned **Getting Started** tab and sidebar of admin page.
+* i18n: Updated translation files, added missing text strings.
+
 = 11.5.6.1 - 2025.03.06 =
 
 * Updated help text on Settings page.
