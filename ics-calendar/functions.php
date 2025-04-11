@@ -274,7 +274,11 @@ function r34ics_date($format='', $dt_str='', $tz=null, $offset='') {
 	// Safely catch Unix timestamps
 	if (strlen($dt_str) >= 10 && is_numeric($dt_str)) { $dt_str = '@' . $dt_str; }
 	// Convert $tz to DateTimeZone object if applicable
-	if (!empty($tz) && is_string($tz)) { $tz = new DateTimeZone($tz); }
+	if (!empty($tz) && is_string($tz)) {
+		try { $tz = new DateTimeZone($tz); }
+		// If $tz is not a valid timezone, set it null; default logic follows
+		catch (Exception $e) { $tz = null; }
+	}
 	// Set default timezone if null
 	if (empty($tz)) { global $R34ICS; $tz = $R34ICS->tz; }
 	// Fix signs in offset

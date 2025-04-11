@@ -1,5 +1,11 @@
 === ICS Calendar Changelog ===
 
+= 11.5.7.1 - 2025.04.11 =
+
+* Bug fix: Added exception handling to prevent a fatal error if `r34ics_date()` is passed a timezone string that is not a valid format recognized by the PHP `DateTimeZone` class.
+* Bug fix: Removed extraneous pagination close tag in list view that may cause the pagination HTML to break if the last item on a "page" is a multi-day event.
+* Changed scope of special date range handling in week view.
+
 = 11.5.7 - 2025.03.07 =
 
 * Modified activation process to jump directly to **Getting Started** tab of admin page.

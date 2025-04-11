@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.7.2
 Requires PHP: 7.0
-Stable tag: 11.5.7
+Stable tag: 11.5.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,12 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.7.1 - 2025.04.11 =
+
+* Bug fix: Added exception handling to prevent a fatal error if `r34ics_date()` is passed a timezone string that is not a valid format recognized by the PHP `DateTimeZone` class.
+* Bug fix: Removed extraneous pagination close tag in list view that may cause the pagination HTML to break if the last item on a "page" is a multi-day event.
+* Changed scope of special date range handling in week view.
 
 = 11.5.7 - 2025.03.07 =
 

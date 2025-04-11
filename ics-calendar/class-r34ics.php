@@ -529,7 +529,7 @@ if (!class_exists('R34ICS')) {
 				// Set exact display date range, per view
 				switch ($view) {
 					case 'week':
-						if (($limitdays >= 1 && $limitdays <= 7) || !empty($startdate)) {
+						if (($limitdays > 0 && $limitdays <= 8) || !empty($startdate)) {
 							if (!empty($startdate) && intval($startdate) > 20000000) {
 								$first_date = $startdate;
 							}

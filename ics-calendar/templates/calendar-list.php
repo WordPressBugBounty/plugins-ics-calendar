@@ -230,7 +230,8 @@ else {
 								if (empty($day_events[$time])) { unset($day_events[$time]); }
 
 								// Pagination?
-								if (!empty($pagination) && $p_i >= $pagination) { echo '</div>'; $p_i = 0; $pagination_open = false; }
+								// @todo Determine why this was added in the first place, as it seems to break the page!
+								//if (!empty($pagination) && $p_i >= $pagination) { echo '</div>'; $p_i = 0; $pagination_open = false; }
 							}
 					
 							// Skip day if all of its events were multi-day
