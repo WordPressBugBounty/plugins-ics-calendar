@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-03-07 08:59-0600\n"
-"PO-Revision-Date: 2025-03-07 08:59-0600\n"
+"POT-Creation-Date: 2025-04-22 11:07-0500\n"
+"PO-Revision-Date: 2025-04-22 11:07-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -10,14 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -84,10 +83,10 @@ msgid ""
 "URLs, you may also wish to try using the pipe character instead. Affected "
 "URL:"
 msgstr ""
-"ICS ファイルを取得できなかったか、空でした。URL が正しいことを確認し、php."
-"ini の設定を確認して、cURL またはallow_url_fopenが使用可能であることを確認し"
-"てください。複数の URL を区切るためにスペースを使用している場合は、代わりにパ"
-"イプ文字を使用することもできます。影響を受ける URL:"
+"ICS ファイルを取得できなかったか、空でした。URL が正しいことを確認し、"
+"php.ini の設定を確認して、cURL またはallow_url_fopenが使用可能であることを確"
+"認してください。複数の URL を区切るためにスペースを使用している場合は、代わり"
+"にパイプ文字を使用することもできます。影響を受ける URL:"
 
 #: class-r34ics.php:1067
 msgid "Hide past events"
@@ -160,7 +159,7 @@ msgstr ""
 "フィードのURLにHTTPベーシック認証の認証情報が含まれているようです。上記の%2$s"
 "タブの%1$sオプションをオフにしてみてください。"
 
-#: class-r34ics.php:2032 class-r34ics.php:2037 templates/admin/settings.php:39
+#: class-r34ics.php:2032 class-r34ics.php:2037 templates/admin/settings.php:31
 msgid "Use legacy feed request method"
 msgstr "レガシーフィードリクエストメソッドを使用する"
 
@@ -203,7 +202,7 @@ msgid "Resolved IP address for %1$s:"
 msgstr "%1$sの解決済みIPアドレス："
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2116
+#: class-r34ics.php:2113
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -212,60 +211,60 @@ msgstr ""
 "%1$s設定を更新しました。%2$sいくつかの変更を確認するには、ページを更新する必"
 "要があるかもしれません。"
 
-#: class-r34ics.php:2354
+#: class-r34ics.php:2351
 msgid "calendar event"
 msgstr "カレンダーイベント"
 
-#: functions.php:880 functions.php:888 functions.php:897
+#: functions.php:884 functions.php:892 functions.php:901
 msgid "Map"
 msgstr "マップ"
 
-#: functions.php:1115
+#: functions.php:1119
 msgid "Recurring event"
 msgstr "繰り返しイベントの新規作成"
 
 #. translators: 1. Dynamic value
-#: functions.php:1121
+#: functions.php:1125
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "%1$s年ごとに再発"
 
-#: functions.php:1121
+#: functions.php:1125
 msgid "Recurs yearly"
 msgstr "毎年繰り返し"
 
 #. translators: 1. Dynamic value
-#: functions.php:1125
+#: functions.php:1129
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "%1$sヵ月ごとに再発"
 
-#: functions.php:1125
+#: functions.php:1129
 msgid "Recurs monthly"
 msgstr "毎月繰り返し"
 
 #. translators: 1. Dynamic value
-#: functions.php:1129
+#: functions.php:1133
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "%1$s週間ごとに再発"
 
-#: functions.php:1129
+#: functions.php:1133
 msgid "Recurs weekly"
 msgstr "毎週繰り返し"
 
 #. translators: 1. Dynamic value
-#: functions.php:1133
+#: functions.php:1137
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "%1$s日ごとに再発"
 
-#: functions.php:1133
+#: functions.php:1137
 msgid "Recurs daily"
 msgstr "毎日繰り返し"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1279
+#: functions.php:1283
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -278,28 +277,12 @@ msgstr ""
 "カレンダーが正しく表示されない可能性があります。ショートコード内のクリッカブ"
 "ルリンクを削除してください。"
 
-#: functions.php:1594
+#: functions.php:1597
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents()関数はサポートされなくなりました。"
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: ics-calendar.php:195
-#, php-format
-msgid ""
-"%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
-"retrieved. This change uses a standard built-in WordPress function, so it "
-"should be fully compatible with all existing installations. If you encounter "
-"any new issues after upgrading to version 11 or later, please visit the "
-"%4$sWordPress Support Forums%5$s for assistance."
-msgstr ""
-"%1$sご注意：%2$s %3$s バージョン11.0では、ICSフィードURLの取得方法を合理化し"
-"ました。この変更は WordPress の標準的な組み込み機能を使用しているため、既存の"
-"すべてのインストールと完全に互換性があります。バージョン 11 以降にアップグ"
-"レードした後に新たな問題が発生した場合は、%4$sWordPress サポートフォーラ"
-"ム%5$s をご覧ください。"
-
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag 8. Additional translation string and HTML tags 9. HTML tag and plugin name (do not translate) 10. HTML tag
-#: ics-calendar.php:207
+#: ics-calendar.php:205
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -316,18 +299,25 @@ msgstr ""
 "フォルトに切り替えるには、%9$s 設定%10$sで%8$sオプションをオンにしてくださ"
 "い。 ページ。"
 
-#: ics-calendar.php:207 templates/admin/settings.php:72
+#: ics-calendar.php:205 templates/admin/settings.php:67
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "新しいパラメータのデフォルトを使用 (v.10.6)"
 
-#. translators: 1: Plugin name (do not translate)
-#: r34ics-ajax.php:22
+#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
+#: ics-calendar.php:218
 #, php-format
 msgid ""
-"%1$s AJAX request bypassed nonce verification, due to configuration setting."
+"%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
+"retrieved. This change uses a standard built-in WordPress function, so it "
+"should be fully compatible with all existing installations. If you encounter "
+"any new issues after upgrading to version 11 or later, please visit the "
+"%4$sWordPress Support Forums%5$s for assistance."
 msgstr ""
-"%1$s コンフィギュレーション設定により、AJAXリクエストがnonce検証をバイパスし"
-"た。"
+"%1$sご注意：%2$s %3$s バージョン11.0では、ICSフィードURLの取得方法を合理化し"
+"ました。この変更は WordPress の標準的な組み込み機能を使用しているため、既存の"
+"すべてのインストールと完全に互換性があります。バージョン 11 以降にアップグ"
+"レードした後に新たな問題が発生した場合は、%4$sWordPress サポートフォーラ"
+"ム%5$s をご覧ください。"
 
 #. translators: 1: Plugin name (do not translate)
 #: templates/admin/add-calendar-button.php:3
@@ -415,8 +405,8 @@ msgid ""
 "Leave %1$s blank to include all upcoming events. %2$s must be a standard "
 "%3$sPHP date format string%4$s."
 msgstr ""
-"%1$s は空白のままにしておくと、今後開催されるすべてのイベントが含まれま"
-"す。%2$sは標準的な%3$sPHPの日付フォーマット文字列%4$sである必要があります。"
+"%1$s は空白のままにしておくと、今後開催されるすべてのイベントが含まれます。"
+"%2$sは標準的な%3$sPHPの日付フォーマット文字列%4$sである必要があります。"
 
 #. translators: 1. HTML tag 2. HTML tag
 #: templates/admin/add-calendar.php:70
@@ -469,7 +459,7 @@ msgstr "システムレポート"
 msgid "Save Changes"
 msgstr "変更を保存"
 
-#: templates/admin/getting-started.php:8
+#: templates/admin/getting-started.php:8 templates/admin/sidebar.php:37
 msgid "Do even more with..."
 msgstr "さらに多くのことを..."
 
@@ -528,7 +518,7 @@ msgid ""
 msgstr "コアとなる月、基本、リスト、週ビューに追加機能が追加されました。"
 
 #. translators: 1. Link (do not translate)
-#: templates/admin/getting-started.php:31
+#: templates/admin/getting-started.php:31 templates/admin/sidebar.php:43
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "詳しくは%1$sをご覧いただきたい。"
@@ -548,8 +538,8 @@ msgid ""
 msgstr ""
 "%1$s をインストールしていただき、ありがとうございます。最初のカレンダーショー"
 "トコードを作成する前に、%2$s一般設定%3$sページで、サイトの言語、タイムゾー"
-"ン、日付/時間形式の設定が正しいかどうかを確認してください。詳細について"
-"は、%4$sユーザーガイド%5$sを参照してください。"
+"ン、日付/時間形式の設定が正しいかどうかを確認してください。詳細については、"
+"%4$sユーザーガイド%5$sを参照してください。"
 
 #. translators: 1. HTML tag 2. HTML tag
 #: templates/admin/getting-started.php:63
@@ -611,33 +601,11 @@ msgstr ""
 "れていない限り、最初のページロードのHTMLで直接送信されます。"
 
 #: templates/admin/settings.php:9
-msgid "Bypass nonce on AJAX requests (recommended with caching plugins)"
-msgstr "AJAXリクエストでnonceをバイパスする（キャッシュプラグインで推奨）"
-
-#. translators: 1: Plugin name (do not translate) 2: Plugin name (do not translate)
-#: templates/admin/settings.php:12
-#, php-format
-msgid ""
-"By default, %1$s uses a nonce on AJAX requests, although this is not "
-"strictly needed, as the AJAX requests do not directly write anything to the "
-"database, and additional sanitization/validation code is in place. The nonce "
-"occasionally causes conflicts with certain caching plugins, especially %2$s. "
-"If you are using a caching plugin and find your AJAX calendars occasionally "
-"do not load, turn on this option to bypass the nonce."
-msgstr ""
-"デフォルトでは、%1$sはAJAXリクエストでnonceを使用しますが、AJAXリクエストは直"
-"接データベースに何も書き込まず、追加のサニタイズ/バリデーションコードが配置さ"
-"れているので、これは厳密には必要ではありません。nonceは特定のキャッシュプラグ"
-"イン、特に%2$sと衝突することがあります。キャッシュプラグインを使用していて、"
-"AJAXカレンダーがロードされないことがある場合は、nonceをバイパスするためにこの"
-"オプションをオンにしてください。"
-
-#: templates/admin/settings.php:17
 msgid "Increase memory limit when rendering calendars"
 msgstr "カレンダーのレンダリング時のメモリ制限を増やす"
 
 #. translators: 1. HTML tag
-#: templates/admin/settings.php:34
+#: templates/admin/settings.php:26
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -652,7 +620,7 @@ msgstr ""
 "とを許可しない場合があります。2) このオプションをサーバーの現在のデフォルトの"
 "メモリ制限より低く設定することはできません。"
 
-#: templates/admin/settings.php:40
+#: templates/admin/settings.php:32
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
 "on this option to use the legacy request method."
@@ -660,12 +628,12 @@ msgstr ""
 "バージョン11のアップデート後にフィードの取得を停止した場合は、このオプション"
 "をオンにしてレガシーリクエストメソッドを使用してください。"
 
-#: templates/admin/settings.php:44
+#: templates/admin/settings.php:36
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr "予約IPアドレスに解決するこれらのホスト名へのアクセスを許可する。"
 
 #. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4: Plugin name (do not translate) 5. HTML tag
-#: templates/admin/settings.php:48
+#: templates/admin/settings.php:40
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -677,10 +645,11 @@ msgstr ""
 "カレンダーサーバーがウェブサイトと同じ物理サーバーでホストされている場合、同"
 "じローカルネットワークの一部である場合、または%1$s予約済みIPアドレス%2$sを使"
 "用している場合は、ここにホスト名を入力してアクセスを許可します。複数のカレン"
-"ダーサーバーの場合は、1行に1つのホスト名を入力してください。詳細について"
-"は、%3$sドキュメント%4$s%5$sを参照してください。"
+"ダーサーバーの場合は、1行に1つのホスト名を入力してください。詳細については、"
+"%3$sドキュメント%4$s%5$sを参照してください。"
 
-#: templates/admin/settings.php:50
+#. translators: 1. HTML tag 2. HTML tag 3. HTML tag
+#: templates/admin/settings.php:44
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -689,19 +658,19 @@ msgstr ""
 "1行に1つのホスト名を入力します。ホスト名は完全なURLではなく、ベースとなるドメ"
 "イン名です。%1$s 例えば、%3$sではなく%2$sと入力します。"
 
-#: templates/admin/settings.php:55
+#: templates/admin/settings.php:50
 msgid "Caching"
 msgstr "キャッシュ"
 
-#: templates/admin/settings.php:58
+#: templates/admin/settings.php:53
 msgid "Transient (cache) expiration"
 msgstr "一時的な（キャッシュの）有効期限"
 
-#: templates/admin/settings.php:58
+#: templates/admin/settings.php:53
 msgid "seconds"
 msgstr "秒"
 
-#: templates/admin/settings.php:59
+#: templates/admin/settings.php:54
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
@@ -709,15 +678,15 @@ msgstr ""
 "カレンダーフィードのデータを再読み込みする前に、サーバにキャッシュする時間"
 "（WordPressの過渡期）を設定します。デフォルトは3600（1時間）です。"
 
-#: templates/admin/settings.php:64
+#: templates/admin/settings.php:59
 msgid "Miscellaneous"
 msgstr "その他"
 
-#: templates/admin/settings.php:67
+#: templates/admin/settings.php:62
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "クラシックエディターの「ICSカレンダーを追加」ボタンを削除"
 
-#: templates/admin/settings.php:68
+#: templates/admin/settings.php:63
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -729,7 +698,7 @@ msgstr ""
 "（Gutenberg）を使用しているサイトには影響しません。"
 
 #. translators: 1: Plugin name (do not translate) 2. HTML tag 3. HTML tag
-#: templates/admin/settings.php:75
+#: templates/admin/settings.php:70
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -871,7 +840,7 @@ msgstr "前のページ"
 msgid "Next Page"
 msgstr "次のページ"
 
-#: templates/calendar-list.php:284 templates/calendar-month.php:200
+#: templates/calendar-list.php:285 templates/calendar-month.php:200
 #: templates/calendar-week.php:209
 msgid "All Day"
 msgstr "終日"
@@ -921,6 +890,34 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#, php-format
+#~ msgid ""
+#~ "%1$s AJAX request bypassed nonce verification, due to configuration "
+#~ "setting."
+#~ msgstr ""
+#~ "%1$s コンフィギュレーション設定により、AJAXリクエストがnonce検証をバイパス"
+#~ "した。"
+
+#~ msgid "Bypass nonce on AJAX requests (recommended with caching plugins)"
+#~ msgstr "AJAXリクエストでnonceをバイパスする（キャッシュプラグインで推奨）"
+
+#, php-format
+#~ msgid ""
+#~ "By default, %1$s uses a nonce on AJAX requests, although this is not "
+#~ "strictly needed, as the AJAX requests do not directly write anything to "
+#~ "the database, and additional sanitization/validation code is in place. "
+#~ "The nonce occasionally causes conflicts with certain caching plugins, "
+#~ "especially %2$s. If you are using a caching plugin and find your AJAX "
+#~ "calendars occasionally do not load, turn on this option to bypass the "
+#~ "nonce."
+#~ msgstr ""
+#~ "デフォルトでは、%1$sはAJAXリクエストでnonceを使用しますが、AJAXリクエスト"
+#~ "は直接データベースに何も書き込まず、追加のサニタイズ/バリデーションコード"
+#~ "が配置されているので、これは厳密には必要ではありません。nonceは特定の"
+#~ "キャッシュプラグイン、特に%2$sと衝突することがあります。キャッシュプラグイ"
+#~ "ンを使用していて、AJAXカレンダーがロードされないことがある場合は、nonceを"
+#~ "バイパスするためにこのオプションをオンにしてください。"
 
 #~ msgid "Enter one hostname per line."
 #~ msgstr "1行に1つのホスト名を入力する。"

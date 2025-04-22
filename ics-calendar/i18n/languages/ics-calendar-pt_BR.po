@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-03-07 08:56-0600\n"
-"PO-Revision-Date: 2025-03-07 08:56-0600\n"
+"POT-Creation-Date: 2025-04-22 11:09-0500\n"
+"PO-Revision-Date: 2025-04-22 11:09-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -10,14 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -164,7 +163,7 @@ msgstr ""
 "Seu URL de feed parece conter credenciais de autenticação básica de HTTP. "
 "Tente desativar a opção %1$s na guia %2$s acima."
 
-#: class-r34ics.php:2032 class-r34ics.php:2037 templates/admin/settings.php:39
+#: class-r34ics.php:2032 class-r34ics.php:2037 templates/admin/settings.php:31
 msgid "Use legacy feed request method"
 msgstr "Usar o método de solicitação de feed herdado"
 
@@ -208,7 +207,7 @@ msgid "Resolved IP address for %1$s:"
 msgstr "Endereço IP resolvido para %1$s:"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2116
+#: class-r34ics.php:2113
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -217,60 +216,60 @@ msgstr ""
 "%1$sConfigurações atualizadas%2$s Talvez seja necessário atualizar a página "
 "para ver algumas alterações."
 
-#: class-r34ics.php:2354
+#: class-r34ics.php:2351
 msgid "calendar event"
 msgstr "evento do calendário"
 
-#: functions.php:880 functions.php:888 functions.php:897
+#: functions.php:884 functions.php:892 functions.php:901
 msgid "Map"
 msgstr "Mapa"
 
-#: functions.php:1115
+#: functions.php:1119
 msgid "Recurring event"
 msgstr "Evento recorrente"
 
 #. translators: 1. Dynamic value
-#: functions.php:1121
+#: functions.php:1125
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Ocorre a cada %1$s anos"
 
-#: functions.php:1121
+#: functions.php:1125
 msgid "Recurs yearly"
 msgstr "Repete anualmente"
 
 #. translators: 1. Dynamic value
-#: functions.php:1125
+#: functions.php:1129
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Ocorre a cada %1$s meses"
 
-#: functions.php:1125
+#: functions.php:1129
 msgid "Recurs monthly"
 msgstr "Repete mensalmente"
 
 #. translators: 1. Dynamic value
-#: functions.php:1129
+#: functions.php:1133
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Ocorre a cada %1$s semanas"
 
-#: functions.php:1129
+#: functions.php:1133
 msgid "Recurs weekly"
 msgstr "Repete semanalmente"
 
 #. translators: 1. Dynamic value
-#: functions.php:1133
+#: functions.php:1137
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Ocorre a cada %1$s dias"
 
-#: functions.php:1133
+#: functions.php:1137
 msgid "Recurs daily"
 msgstr "Repete diariamente"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1279
+#: functions.php:1283
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -283,29 +282,12 @@ msgstr ""
 "seu calendário pode não ser exibido corretamente. Por favor, remova o link "
 "clicável no código de atalho."
 
-#: functions.php:1594
+#: functions.php:1597
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "A função r34ics_url_get_contents() não é mais suportada."
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: ics-calendar.php:195
-#, php-format
-msgid ""
-"%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
-"retrieved. This change uses a standard built-in WordPress function, so it "
-"should be fully compatible with all existing installations. If you encounter "
-"any new issues after upgrading to version 11 or later, please visit the "
-"%4$sWordPress Support Forums%5$s for assistance."
-msgstr ""
-"%1$sObservação:%2$s %3$s a versão 11.0 simplifica a maneira como os URLs de "
-"feed do ICS são recuperados. Essa alteração usa uma função padrão "
-"incorporada do WordPress, portanto, deve ser totalmente compatível com todas "
-"as instalações existentes. Se você encontrar algum novo problema após a "
-"atualização para a versão 11 ou posterior, visite os %4$s Fóruns de suporte "
-"do WordPress%5$s para obter assistência."
-
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag 8. Additional translation string and HTML tags 9. HTML tag and plugin name (do not translate) 10. HTML tag
-#: ics-calendar.php:207
+#: ics-calendar.php:205
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -322,18 +304,26 @@ msgstr ""
 "%6$sblog post%7$s, ou para mudar para as novas configurações padrão, ative a "
 "opção %8$s na página %9$s configurações%10$s."
 
-#: ics-calendar.php:207 templates/admin/settings.php:72
+#: ics-calendar.php:205 templates/admin/settings.php:67
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Usar novos padrões de parâmetros (v.10.6)"
 
-#. translators: 1: Plugin name (do not translate)
-#: r34ics-ajax.php:22
+#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
+#: ics-calendar.php:218
 #, php-format
 msgid ""
-"%1$s AJAX request bypassed nonce verification, due to configuration setting."
+"%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
+"retrieved. This change uses a standard built-in WordPress function, so it "
+"should be fully compatible with all existing installations. If you encounter "
+"any new issues after upgrading to version 11 or later, please visit the "
+"%4$sWordPress Support Forums%5$s for assistance."
 msgstr ""
-"%1$s A solicitação AJAX ignorou a verificação de nonce devido à definição de "
-"configuração."
+"%1$sObservação:%2$s %3$s a versão 11.0 simplifica a maneira como os URLs de "
+"feed do ICS são recuperados. Essa alteração usa uma função padrão "
+"incorporada do WordPress, portanto, deve ser totalmente compatível com todas "
+"as instalações existentes. Se você encontrar algum novo problema após a "
+"atualização para a versão 11 ou posterior, visite os %4$s Fóruns de suporte "
+"do WordPress%5$s para obter assistência."
 
 #. translators: 1: Plugin name (do not translate)
 #: templates/admin/add-calendar-button.php:3
@@ -475,7 +465,7 @@ msgstr "Relatório do sistema"
 msgid "Save Changes"
 msgstr "Salvar Alterações"
 
-#: templates/admin/getting-started.php:8
+#: templates/admin/getting-started.php:8 templates/admin/sidebar.php:37
 msgid "Do even more with..."
 msgstr "Faça ainda mais com..."
 
@@ -538,7 +528,7 @@ msgstr ""
 "Basic, List e Week."
 
 #. translators: 1. Link (do not translate)
-#: templates/admin/getting-started.php:31
+#: templates/admin/getting-started.php:31 templates/admin/sidebar.php:43
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "Visite %1$s para saber mais."
@@ -623,35 +613,11 @@ msgstr ""
 "tenha sido especificado no shortcode."
 
 #: templates/admin/settings.php:9
-msgid "Bypass nonce on AJAX requests (recommended with caching plugins)"
-msgstr ""
-"Ignorar o nonce em solicitações AJAX (recomendado com plug-ins de cache)"
-
-#. translators: 1: Plugin name (do not translate) 2: Plugin name (do not translate)
-#: templates/admin/settings.php:12
-#, php-format
-msgid ""
-"By default, %1$s uses a nonce on AJAX requests, although this is not "
-"strictly needed, as the AJAX requests do not directly write anything to the "
-"database, and additional sanitization/validation code is in place. The nonce "
-"occasionally causes conflicts with certain caching plugins, especially %2$s. "
-"If you are using a caching plugin and find your AJAX calendars occasionally "
-"do not load, turn on this option to bypass the nonce."
-msgstr ""
-"Por padrão, %1$s usa um nonce em solicitações AJAX, embora isso não seja "
-"estritamente necessário, pois as solicitações AJAX não gravam nada "
-"diretamente no banco de dados e há um código adicional de sanitização/"
-"validação. O nonce ocasionalmente causa conflitos com determinados plug-ins "
-"de cache, especialmente o %2$s. Se estiver usando um plug-in de cache e "
-"perceber que seus calendários AJAX ocasionalmente não são carregados, ative "
-"essa opção para ignorar o nonce."
-
-#: templates/admin/settings.php:17
 msgid "Increase memory limit when rendering calendars"
 msgstr "Aumentar o limite de memória ao renderizar calendários"
 
 #. translators: 1. HTML tag
-#: templates/admin/settings.php:34
+#: templates/admin/settings.php:26
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -667,7 +633,7 @@ msgstr ""
 "possível definir essa opção abaixo do limite de memória padrão atual em seu "
 "servidor."
 
-#: templates/admin/settings.php:40
+#: templates/admin/settings.php:32
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
 "on this option to use the legacy request method."
@@ -675,14 +641,14 @@ msgstr ""
 "Se o seu site parou de recuperar feeds após a atualização da versão 11, "
 "ative essa opção para usar o método de solicitação herdado."
 
-#: templates/admin/settings.php:44
+#: templates/admin/settings.php:36
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Permitir o acesso a esses nomes de host que resolvem para endereços IP "
 "reservados"
 
 #. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4: Plugin name (do not translate) 5. HTML tag
-#: templates/admin/settings.php:48
+#: templates/admin/settings.php:40
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -697,7 +663,8 @@ msgstr ""
 "vários servidores de calendário, digite um nome de host por linha. Consulte "
 "%3$sa %4$s documentação%5$s para obter mais informações."
 
-#: templates/admin/settings.php:50
+#. translators: 1. HTML tag 2. HTML tag 3. HTML tag
+#: templates/admin/settings.php:44
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -706,19 +673,19 @@ msgstr ""
 "Digite um nome de host por linha. Os nomes de host são o nome de domínio "
 "básico, não um URL completo. %1$s Por exemplo, você digitaria %2$s, não %3$s."
 
-#: templates/admin/settings.php:55
+#: templates/admin/settings.php:50
 msgid "Caching"
 msgstr "Cache"
 
-#: templates/admin/settings.php:58
+#: templates/admin/settings.php:53
 msgid "Transient (cache) expiration"
 msgstr "Validade transitória (cache)"
 
-#: templates/admin/settings.php:58
+#: templates/admin/settings.php:53
 msgid "seconds"
 msgstr "segundos"
 
-#: templates/admin/settings.php:59
+#: templates/admin/settings.php:54
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
@@ -727,15 +694,15 @@ msgstr ""
 "armazenados em cache no servidor (transientes do WordPress) antes de serem "
 "recarregados. O padrão é 3600 (1 hora)."
 
-#: templates/admin/settings.php:64
+#: templates/admin/settings.php:59
 msgid "Miscellaneous"
 msgstr "Diversos"
 
-#: templates/admin/settings.php:67
+#: templates/admin/settings.php:62
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Remover o botão \"Adicionar calendário ICS\" no Editor Clássico"
 
-#: templates/admin/settings.php:68
+#: templates/admin/settings.php:63
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -747,7 +714,7 @@ msgstr ""
 "(Gutenberg)."
 
 #. translators: 1: Plugin name (do not translate) 2. HTML tag 3. HTML tag
-#: templates/admin/settings.php:75
+#: templates/admin/settings.php:70
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -893,7 +860,7 @@ msgstr "Página anterior"
 msgid "Next Page"
 msgstr "Próxima página"
 
-#: templates/calendar-list.php:284 templates/calendar-month.php:200
+#: templates/calendar-list.php:285 templates/calendar-month.php:200
 #: templates/calendar-week.php:209
 msgid "All Day"
 msgstr "Todos os Dias"
@@ -944,6 +911,36 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#, php-format
+#~ msgid ""
+#~ "%1$s AJAX request bypassed nonce verification, due to configuration "
+#~ "setting."
+#~ msgstr ""
+#~ "%1$s A solicitação AJAX ignorou a verificação de nonce devido à definição "
+#~ "de configuração."
+
+#~ msgid "Bypass nonce on AJAX requests (recommended with caching plugins)"
+#~ msgstr ""
+#~ "Ignorar o nonce em solicitações AJAX (recomendado com plug-ins de cache)"
+
+#, php-format
+#~ msgid ""
+#~ "By default, %1$s uses a nonce on AJAX requests, although this is not "
+#~ "strictly needed, as the AJAX requests do not directly write anything to "
+#~ "the database, and additional sanitization/validation code is in place. "
+#~ "The nonce occasionally causes conflicts with certain caching plugins, "
+#~ "especially %2$s. If you are using a caching plugin and find your AJAX "
+#~ "calendars occasionally do not load, turn on this option to bypass the "
+#~ "nonce."
+#~ msgstr ""
+#~ "Por padrão, %1$s usa um nonce em solicitações AJAX, embora isso não seja "
+#~ "estritamente necessário, pois as solicitações AJAX não gravam nada "
+#~ "diretamente no banco de dados e há um código adicional de sanitização/"
+#~ "validação. O nonce ocasionalmente causa conflitos com determinados plug-"
+#~ "ins de cache, especialmente o %2$s. Se estiver usando um plug-in de cache "
+#~ "e perceber que seus calendários AJAX ocasionalmente não são carregados, "
+#~ "ative essa opção para ignorar o nonce."
 
 #~ msgid "Enter one hostname per line."
 #~ msgstr "Digite um nome de host por linha."

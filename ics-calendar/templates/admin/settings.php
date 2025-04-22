@@ -6,14 +6,6 @@
 </p>
 
 <p class="r34ics-input">
-	<label for="r34ics_ajax_bypass_nonce"><input type="checkbox" name="ajax_bypass_nonce" id="r34ics_ajax_bypass_nonce"<?php if (get_option('r34ics_ajax_bypass_nonce')) { echo ' checked="checked"'; } ?> /> <strong><?php esc_html_e('Bypass nonce on AJAX requests (recommended with caching plugins)', 'ics-calendar'); ?></strong></label>
-	<span class="description"><small class="r34ics-help"><span class="help_content"><?php
-	/* translators: 1: Plugin name (do not translate) 2: Plugin name (do not translate) */
-	printf(esc_html__('By default, %1$s uses a nonce on AJAX requests, although this is not strictly needed, as the AJAX requests do not directly write anything to the database, and additional sanitization/validation code is in place. The nonce occasionally causes conflicts with certain caching plugins, especially %2$s. If you are using a caching plugin and find your AJAX calendars occasionally do not load, turn on this option to bypass the nonce.', 'ics-calendar'), 'ICS Calendar', 'LiteSpeed Cache');
-	?></span></small></span>
-</p>
-
-<p class="r34ics-input">
 	<label for="r34ics_display_calendar_memory_limit"><strong><?php esc_html_e('Increase memory limit when rendering calendars', 'ics-calendar'); ?>:</strong>
 	<?php
 	echo wp_kses(

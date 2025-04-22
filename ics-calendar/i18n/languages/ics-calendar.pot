@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-03-07 08:54-0600\n"
+"POT-Creation-Date: 2025-04-22 11:05-0500\n"
 "PO-Revision-Date: 2020-10-21 13:18-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,14 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -143,7 +142,7 @@ msgid ""
 msgstr ""
 
 #: class-r34ics.php:2032 class-r34ics.php:2037
-#: templates/admin/settings.php:39
+#: templates/admin/settings.php:31
 msgid "Use legacy feed request method"
 msgstr ""
 
@@ -179,67 +178,67 @@ msgid "Resolved IP address for %1$s:"
 msgstr ""
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2116
+#: class-r34ics.php:2113
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
 "changes."
 msgstr ""
 
-#: class-r34ics.php:2354
+#: class-r34ics.php:2351
 msgid "calendar event"
 msgstr ""
 
-#: functions.php:880 functions.php:888 functions.php:897
+#: functions.php:884 functions.php:892 functions.php:901
 msgid "Map"
 msgstr ""
 
-#: functions.php:1115
+#: functions.php:1119
 msgid "Recurring event"
 msgstr ""
 
 #. translators: 1. Dynamic value
-#: functions.php:1121
+#: functions.php:1125
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr ""
 
-#: functions.php:1121
+#: functions.php:1125
 msgid "Recurs yearly"
 msgstr ""
 
 #. translators: 1. Dynamic value
-#: functions.php:1125
+#: functions.php:1129
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr ""
 
-#: functions.php:1125
+#: functions.php:1129
 msgid "Recurs monthly"
 msgstr ""
 
 #. translators: 1. Dynamic value
-#: functions.php:1129
+#: functions.php:1133
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr ""
 
-#: functions.php:1129
+#: functions.php:1133
 msgid "Recurs weekly"
 msgstr ""
 
 #. translators: 1. Dynamic value
-#: functions.php:1133
+#: functions.php:1137
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr ""
 
-#: functions.php:1133
+#: functions.php:1137
 msgid "Recurs daily"
 msgstr ""
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1279
+#: functions.php:1283
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -248,23 +247,12 @@ msgid ""
 "the shortcode."
 msgstr ""
 
-#: functions.php:1594
+#: functions.php:1597
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: ics-calendar.php:195
-#, php-format
-msgid ""
-"%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs "
-"are retrieved. This change uses a standard built-in WordPress function, so "
-"it should be fully compatible with all existing installations. If you "
-"encounter any new issues after upgrading to version 11 or later, please "
-"visit the %4$sWordPress Support Forums%5$s for assistance."
-msgstr ""
-
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag 8. Additional translation string and HTML tags 9. HTML tag and plugin name (do not translate) 10. HTML tag
-#: ics-calendar.php:207
+#: ics-calendar.php:205
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -275,16 +263,19 @@ msgid ""
 "%9$s settings%10$s page."
 msgstr ""
 
-#: ics-calendar.php:207 templates/admin/settings.php:72
+#: ics-calendar.php:205 templates/admin/settings.php:67
 msgid "Use new parameter defaults (v.10.6)"
 msgstr ""
 
-#. translators: 1: Plugin name (do not translate)
-#: r34ics-ajax.php:22
+#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
+#: ics-calendar.php:218
 #, php-format
 msgid ""
-"%1$s AJAX request bypassed nonce verification, due to configuration "
-"setting."
+"%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs "
+"are retrieved. This change uses a standard built-in WordPress function, so "
+"it should be fully compatible with all existing installations. If you "
+"encounter any new issues after upgrading to version 11 or later, please "
+"visit the %4$sWordPress Support Forums%5$s for assistance."
 msgstr ""
 
 #. translators: 1: Plugin name (do not translate)
@@ -415,7 +406,7 @@ msgstr ""
 msgid "Save Changes"
 msgstr ""
 
-#: templates/admin/getting-started.php:8
+#: templates/admin/getting-started.php:8 templates/admin/sidebar.php:37
 msgid "Do even more with..."
 msgstr ""
 
@@ -470,7 +461,7 @@ msgid ""
 msgstr ""
 
 #. translators: 1. Link (do not translate)
-#: templates/admin/getting-started.php:31
+#: templates/admin/getting-started.php:31 templates/admin/sidebar.php:43
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr ""
@@ -543,28 +534,11 @@ msgid ""
 msgstr ""
 
 #: templates/admin/settings.php:9
-msgid "Bypass nonce on AJAX requests (recommended with caching plugins)"
-msgstr ""
-
-#. translators: 1: Plugin name (do not translate) 2: Plugin name (do not translate)
-#: templates/admin/settings.php:12
-#, php-format
-msgid ""
-"By default, %1$s uses a nonce on AJAX requests, although this is not "
-"strictly needed, as the AJAX requests do not directly write anything to "
-"the database, and additional sanitization/validation code is in place. The "
-"nonce occasionally causes conflicts with certain caching plugins, "
-"especially %2$s. If you are using a caching plugin and find your AJAX "
-"calendars occasionally do not load, turn on this option to bypass the "
-"nonce."
-msgstr ""
-
-#: templates/admin/settings.php:17
 msgid "Increase memory limit when rendering calendars"
 msgstr ""
 
 #. translators: 1. HTML tag
-#: templates/admin/settings.php:34
+#: templates/admin/settings.php:26
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -574,18 +548,18 @@ msgid ""
 "than the current default memory limit on your server."
 msgstr ""
 
-#: templates/admin/settings.php:40
+#: templates/admin/settings.php:32
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, "
 "turn on this option to use the legacy request method."
 msgstr ""
 
-#: templates/admin/settings.php:44
+#: templates/admin/settings.php:36
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 
 #. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4: Plugin name (do not translate) 5. HTML tag
-#: templates/admin/settings.php:48
+#: templates/admin/settings.php:40
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -595,40 +569,41 @@ msgid ""
 "documentation%5$s for more information."
 msgstr ""
 
-#: templates/admin/settings.php:50
+#. translators: 1. HTML tag 2. HTML tag 3. HTML tag
+#: templates/admin/settings.php:44
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a "
 "full URL. %1$s For example, you would enter %2$s, not %3$s."
 msgstr ""
 
-#: templates/admin/settings.php:55
+#: templates/admin/settings.php:50
 msgid "Caching"
 msgstr ""
 
-#: templates/admin/settings.php:58
+#: templates/admin/settings.php:53
 msgid "Transient (cache) expiration"
 msgstr ""
 
-#: templates/admin/settings.php:58
+#: templates/admin/settings.php:53
 msgid "seconds"
 msgstr ""
 
-#: templates/admin/settings.php:59
+#: templates/admin/settings.php:54
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
 msgstr ""
 
-#: templates/admin/settings.php:64
+#: templates/admin/settings.php:59
 msgid "Miscellaneous"
 msgstr ""
 
-#: templates/admin/settings.php:67
+#: templates/admin/settings.php:62
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr ""
 
-#: templates/admin/settings.php:68
+#: templates/admin/settings.php:63
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the "
 "toolbar above the WYSIWYG editor when using Classic Editor. Check this box "
@@ -637,7 +612,7 @@ msgid ""
 msgstr ""
 
 #. translators: 1: Plugin name (do not translate) 2. HTML tag 3. HTML tag
-#: templates/admin/settings.php:75
+#: templates/admin/settings.php:70
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -761,7 +736,7 @@ msgstr ""
 msgid "Next Page"
 msgstr ""
 
-#: templates/calendar-list.php:284 templates/calendar-month.php:200
+#: templates/calendar-list.php:285 templates/calendar-month.php:200
 #: templates/calendar-week.php:209
 msgid "All Day"
 msgstr ""

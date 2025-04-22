@@ -3,7 +3,7 @@
 Plugin Name: ICS Calendar
 Plugin URI: https://icscalendar.com
 Description: Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar into a seamlessly integrated, auto-updating, zero-maintenance WordPress experience.
-Version: 11.5.7.1
+Version: 11.5.8
 Requires at least: 4.9
 Requires PHP: 7.0
 Author: Room 34 Creative Services, LLC
@@ -198,18 +198,6 @@ if (!class_exists('R34ICS')) {
 			$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
 		}
 	
-		// Admin notice about refactored R34ICS::_url_get_contents() method
-		if (version_compare($previous_version, '11.0.0', '<')) {
-			$r34ics_deferred_admin_notices['r34ics_refactoring_in_v_11'] = array(
-				/* translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag */
-				'content' => '<p>' . sprintf(esc_html__('%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are retrieved. This change uses a standard built-in WordPress function, so it should be fully compatible with all existing installations. If you encounter any new issues after upgrading to version 11 or later, please visit the %4$sWordPress Support Forums%5$s for assistance.', 'ics-calendar'), '<strong>', '</strong>', 'ICS Calendar', '<a href="https://wordpress.org/support/plugin/ics-calendar/" target="_blank">', '</a>') . '</p>',
-				'status' => 'info',
-				'dismissible' => 'forever',
-			);
-		}
-		else {
-			unset($r34ics_deferred_admin_notices['r34ics_refactoring_in_v_11']);
-		}
 		// Admin notice about new default options
 		if (version_compare($previous_version, '10.6.0', '<')) {
 			$r34ics_deferred_admin_notices['r34ics_new_parameter_defaults_10_6'] = array(
@@ -223,6 +211,24 @@ if (!class_exists('R34ICS')) {
 			unset($r34ics_deferred_admin_notices['r34ics_new_parameter_defaults_10_6']);
 		}
 	
+		// Admin notice about refactored R34ICS::_url_get_contents() method
+		if (version_compare($previous_version, '11.0.0', '<')) {
+			$r34ics_deferred_admin_notices['r34ics_refactoring_in_v_11'] = array(
+				/* translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag */
+				'content' => '<p>' . sprintf(esc_html__('%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are retrieved. This change uses a standard built-in WordPress function, so it should be fully compatible with all existing installations. If you encounter any new issues after upgrading to version 11 or later, please visit the %4$sWordPress Support Forums%5$s for assistance.', 'ics-calendar'), '<strong>', '</strong>', 'ICS Calendar', '<a href="https://wordpress.org/support/plugin/ics-calendar/" target="_blank">', '</a>') . '</p>',
+				'status' => 'info',
+				'dismissible' => 'forever',
+			);
+		}
+		else {
+			unset($r34ics_deferred_admin_notices['r34ics_refactoring_in_v_11']);
+		}
+		
+		// Remove r34ics_ajax_bypass_nonce option because the nonce was removed
+		if (version_compare($previous_version, '11.5.8', '<')) {
+			delete_option('r34ics_ajax_bypass_nonce');
+		}
+		
 		// Save deferred admin notices
 		update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices);
 	

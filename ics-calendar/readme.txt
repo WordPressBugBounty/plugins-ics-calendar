@@ -3,9 +3,9 @@ Contributors: room34
 Donate link: https://icscalendar.com
 Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
-Tested up to: 6.7.2
+Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 11.5.7.1
+Stable tag: 11.5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,14 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.8 - 2025.04.22 =
+
+* Removed `r34ics_ajax_bypass_nonce` option. Nonce has now been removed from ICS Calendar AJAX requests altogether, as the requests do not have the ability to write to the database, making the nonce unnecessary. The nonce has consistently caused issues with AJAX requests in conjunction with third-party caching plugins.
+* CSS tweaks on admin page.
+* i18n:
+  * Removed disused translation strings.
+  * Removed Norwegian Nynorsk translation files, due to consistent issues with Poedit machine translations.
 
 = 11.5.7.1 - 2025.04.11 =
 

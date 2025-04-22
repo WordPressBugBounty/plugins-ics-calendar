@@ -1,5 +1,13 @@
 === ICS Calendar Changelog ===
 
+= 11.5.8 - 2025.04.22 =
+
+* Removed `r34ics_ajax_bypass_nonce` option. Nonce has now been removed from ICS Calendar AJAX requests altogether, as the requests do not have the ability to write to the database, making the nonce unnecessary. The nonce has consistently caused issues with AJAX requests in conjunction with third-party caching plugins.
+* CSS tweaks on admin page.
+* i18n:
+  * Removed disused translation strings.
+  * Removed Norwegian Nynorsk translation files, due to consistent issues with Poedit machine translations.
+
 = 11.5.7.1 - 2025.04.11 =
 
 * Bug fix: Added exception handling to prevent a fatal error if `r34ics_date()` is passed a timezone string that is not a valid format recognized by the PHP `DateTimeZone` class.
