@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.9 - 2025.04.24 =
+
+* Added `wp_get_remote()` status check to System Report; refactored System Report to use transients.
+
 = 11.5.8 - 2025.04.22 =
 
 * Removed `r34ics_ajax_bypass_nonce` option. Nonce has now been removed from ICS Calendar AJAX requests altogether, as the requests do not have the ability to write to the database, making the nonce unnecessary. The nonce has consistently caused issues with AJAX requests in conjunction with third-party caching plugins.

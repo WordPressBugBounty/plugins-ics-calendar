@@ -1299,102 +1299,115 @@ function r34ics_space_pipe_explode($str='') {
 
 // Prepare a system report for diagnostic support
 function r34ics_system_report($echo=true) {
-	// Get info about current theme
-	$theme = wp_get_theme();
+	$transient_name = 'r34ics_system_report';
+	$report = get_transient($transient_name);
 
-	// Get list of active plugins and their versions
-	$plugins = get_plugins();
-	$active_plugins = get_option('active_plugins');
-	$plugin_list = array();
-	foreach ((array)$active_plugins as $plugin) {
-		if (isset($plugins[$plugin]['Name']) && isset($plugins[$plugin]['Version'])) {
-			$plugin_list[] = $plugins[$plugin]['Name'] . ' ' . $plugins[$plugin]['Version'];
-		}
-		else {
-			$plugin_list[] = $plugin;
-		}
-	}
-	sort($plugin_list);
+	if (empty($report) || !is_array($report)) {
 		
-	// Gather all report data
-	global $wpdb;
-	// Note: Some servers may have the php_uname() function disabled for security reasons
-	$server_os = function_exists('php_uname')
-		? php_uname('s') . ' ' . php_uname('r') . ' ' . php_uname('m')
-		: (defined('PHP_OS') ? PHP_OS : 'Unknown OS');
-	$server_fields = array(
-		'SERVER_SOFTWARE' => '',
-		'SERVER_PROTOCOL' => '',
-		'LOCAL_ADDR' => '',
-		'SERVER_ADDR' => '',
-		'SERVER_PORT' => '',
-	);
-	foreach ((array)$server_fields as $key => $value) {
-		if (!empty($_SERVER[$key])) { $server_fields[$key] = wp_strip_all_tags(wp_unslash($_SERVER[$key])); }
-	}
-	$server_fields = array_filter($server_fields);
-	$report = array(
-		'Site' => get_bloginfo('name') . ' / ' . get_bloginfo('wpurl'),
-		'WordPress' => get_bloginfo('version') . (function_exists('get_sites') ? ' Multisite (' . count(get_sites()) . ')' : ''),
-		'Locale' => get_bloginfo('language') . ' ' . get_option('timezone_string'),
-		'Active Theme' => $theme->name . ' ' . $theme->version . ' (' . pathinfo($theme->template_dir, PATHINFO_BASENAME) . ')',
-		'Active Plugins' => $plugin_list,
-		'Server' => array(
-			$server_os,
-			implode(' ', (array)$server_fields),
-			'MySQL ' . $wpdb->dbh->server_version . ' ' . $wpdb->dbh->host_info,
-			'PHP ' . (defined('PHP_VERSION') ? PHP_VERSION : ''),
-		),
-	);
+		// Get info about current theme
+		$theme = wp_get_theme();
 	
-	// Add PHP settings
-	$php_settings = array(
-		'allow_url_fopen',
-		'date.timezone',
-		'default_charset',
-		'display_errors',
-		'max_execution_time',
-		'memory_limit',
-		'post_max_size',
-		'upload_max_filesize',
-	);
-	foreach ((array)$php_settings as $setting_name) {
-		$report['PHP Settings'][$setting_name] = ini_get($setting_name);
-	}
+		// Get list of active plugins and their versions
+		$plugins = get_plugins();
+		$active_plugins = get_option('active_plugins');
+		$plugin_list = array();
+		foreach ((array)$active_plugins as $plugin) {
+			if (isset($plugins[$plugin]['Name']) && isset($plugins[$plugin]['Version'])) {
+				$plugin_list[] = $plugins[$plugin]['Name'] . ' ' . $plugins[$plugin]['Version'];
+			}
+			else {
+				$plugin_list[] = $plugin;
+			}
+		}
+		sort($plugin_list);
+			
+		// Gather all report data
+		global $wpdb;
+		// Note: Some servers may have the php_uname() function disabled for security reasons
+		$server_os = function_exists('php_uname')
+			? php_uname('s') . ' ' . php_uname('r') . ' ' . php_uname('m')
+			: (defined('PHP_OS') ? PHP_OS : 'Unknown OS');
+		$server_fields = array(
+			'SERVER_SOFTWARE' => '',
+			'SERVER_PROTOCOL' => '',
+			'LOCAL_ADDR' => '',
+			'SERVER_ADDR' => '',
+			'SERVER_PORT' => '',
+		);
+		foreach ((array)$server_fields as $key => $value) {
+			if (!empty($_SERVER[$key])) { $server_fields[$key] = wp_strip_all_tags(wp_unslash($_SERVER[$key])); }
+		}
+		$server_fields = array_filter($server_fields);
+		$report = array(
+			'Site' => get_bloginfo('name') . ' / ' . get_bloginfo('wpurl'),
+			'WordPress' => get_bloginfo('version') . (function_exists('get_sites') ? ' Multisite (' . count(get_sites()) . ')' : ''),
+			'Locale' => get_bloginfo('language') . ' ' . get_option('timezone_string'),
+			'Active Theme' => $theme->name . ' ' . $theme->version . ' (' . pathinfo($theme->template_dir, PATHINFO_BASENAME) . ')',
+			'Active Plugins' => $plugin_list,
+			'Server' => array(
+				$server_os,
+				implode(' ', (array)$server_fields),
+				'MySQL ' . $wpdb->dbh->server_version . ' ' . $wpdb->dbh->host_info,
+				'PHP ' . (defined('PHP_VERSION') ? PHP_VERSION : ''),
+			),
+		);
 		
-	// Note: cURL settings were removed here in version 11.0.0 switch to wp_remote_get()
-	
-	// Add relevant WordPress core settings
-	$wp_settings = array(
-		'blog_charset',
-		'date_format',
-		'gmt_offset',
-		'start_of_week',
-		'time_format',
-	);
-	foreach ((array)$wp_settings as $setting_name) {
-		$report['WordPress Settings'][$setting_name] = get_option($setting_name);
-	}
+		// Add PHP settings
+		$php_settings = array(
+			'allow_url_fopen',
+			'date.timezone',
+			'default_charset',
+			'display_errors',
+			'max_execution_time',
+			'memory_limit',
+			'post_max_size',
+			'upload_max_filesize',
+		);
+		foreach ((array)$php_settings as $setting_name) {
+			$report['PHP Settings'][$setting_name] = ini_get($setting_name);
+		}
+			
+		// Note: cURL settings were removed here in version 11.0.0 switch to wp_remote_get()
+		
+		// Add relevant WordPress core settings
+		$wp_settings = array(
+			'blog_charset',
+			'date_format',
+			'gmt_offset',
+			'start_of_week',
+			'time_format',
+		);
+		foreach ((array)$wp_settings as $setting_name) {
+			$report['WordPress Settings'][$setting_name] = get_option($setting_name);
+		}
 
-	// Add ICS Calendar saved settings
-	$settings_fields = array(
-		'r34ics_ajax_by_default',
-		'r34ics_allowed_hosts',
-		'r34ics_display_add_calendar_button_false',
-		'r34ics_display_calendar_memory_limit',
-		'r34ics_feed_urls',
-		'r34ics_previous_version',
-		'r34ics_transients_expiration',
-		'r34ics_url_get_contents_legacy_method',
-		'r34ics_use_new_defaults_10_6',
-		'r34ics_version',
-	);
-	foreach ((array)$settings_fields as $field) {
-		$report['Plugin Settings'][$field] = get_option($field);
+		// Test wp_remote_get() with sample feed
+		$wp_remote_get_test = wp_remote_get('https://api.icscalendar.com/sample/1.ics');
+		$report['WordPress Settings']['wp_remote_get() HTTP status'] =  wp_remote_retrieve_response_code($wp_remote_get_test);
+			
+		// Add ICS Calendar saved settings
+		$settings_fields = array(
+			'r34ics_ajax_by_default',
+			'r34ics_allowed_hosts',
+			'r34ics_display_add_calendar_button_false',
+			'r34ics_display_calendar_memory_limit',
+			'r34ics_feed_urls',
+			'r34ics_previous_version',
+			'r34ics_transients_expiration',
+			'r34ics_url_get_contents_legacy_method',
+			'r34ics_use_new_defaults_10_6',
+			'r34ics_version',
+		);
+		foreach ((array)$settings_fields as $field) {
+			$report['Plugin Settings'][$field] = get_option($field);
+		}
+		
+		// Add external report details
+		$report = apply_filters('r34ics_system_report_array', $report);
+		
+		// Save transient (one hour expiration)
+		set_transient($transient_name, $report, 3600);
 	}
-	
-	// Add external report details
-	$report = apply_filters('r34ics_system_report_array', $report);
 
 	// Output report data
 	if (!empty($echo)) {
