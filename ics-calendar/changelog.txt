@@ -1,5 +1,11 @@
 === ICS Calendar Changelog ===
 
+= 11.5.9.1 - 2025.04.28 =
+
+* Modified `r34ics_url_tester_result_debug` hook to be able to account for situations where the response is empty.
+* Vendors:
+  * ics-parser: Changed timezone string mappings for "(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius" and "FLE Standard Time" from "Europe/Kiev" to "Europe/Helsinki". This is because the ics-parser library uses the spelling "Kiev", whereas ICS Calendar code uses the spelling "Kyiv". This discrepancy was causing time calculation issues, specifically for Microsoft source calendars, which use the "FLE Standard Time" designation. "Europe/Helsinki" was chosen to avoid alternate spelling confusion, and also because "FLE" stands for "Finland Latvia Estonia", making Helsinki a more logical choice than Kyiv. (Both cities share the same timezone rules.)
+
 = 11.5.9 - 2025.04.24 =
 
 * Added `wp_get_remote()` status check to System Report; refactored System Report to use transients.

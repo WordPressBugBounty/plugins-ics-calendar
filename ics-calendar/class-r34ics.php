@@ -2008,7 +2008,6 @@ if (!class_exists('R34ICS')) {
 				if ($url_to_test = filter_input(INPUT_POST, 'url_to_test', FILTER_SANITIZE_URL)) {
 					$results['url'] = $url_to_test;
 					if ($response = $this->_url_get_contents($url_to_test)) {
-						do_action('r34ics_url_tester_result_debug', $response);
 						$results['size'] = size_format(strlen($response), 2);
 						if (strpos($response,'BEGIN:VCALENDAR') === 0) {
 							$results['status'] = 'valid';
@@ -2020,6 +2019,8 @@ if (!class_exists('R34ICS')) {
 					else {
 						$results['status'] = 'failed';
 					}
+					// Allow additional external debugging
+					do_action('r34ics_url_tester_result_debug', (@$response ?: ''), $url_to_test);
 				}
 				else {
 					$results['status'] = 'unknown';

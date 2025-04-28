@@ -1,6 +1,6 @@
 <?php
 
-namespace R34ICS_ICal; // Renamed to avoid plugin conflicts
+namespace R34ICS_ICal; // r34ics - Renamed to avoid plugin conflicts
 
 class Event
 {

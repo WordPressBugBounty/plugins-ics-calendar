@@ -11,7 +11,7 @@
  * @version 3.4.1
  */
 
-namespace R34ICS_ICal; // Renamed to avoid plugin conflicts
+namespace R34ICS_ICal; // r34ics - Renamed to avoid plugin conflicts
 
 class ICal
 {
@@ -269,7 +269,7 @@ class ICal
         '(UTC+02:00) Chisinau'                                          => 'Europe/Chisinau',
         '(UTC+02:00) Damascus'                                          => 'Asia/Damascus',
         '(UTC+02:00) Harare, Pretoria'                                  => 'Africa/Johannesburg',
-        '(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius'     => 'Europe/Kiev',
+        '(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius'     => 'Europe/Helsinki', // r34ics - Changed for ICS Calendar due to Kiev/Kyiv discrepancy
         '(UTC+02:00) Jerusalem'                                         => 'Asia/Jerusalem',
         '(UTC+02:00) Kaliningrad'                                       => 'Europe/Kaliningrad',
         '(UTC+02:00) Tripoli'                                           => 'Africa/Tripoli',
@@ -382,7 +382,7 @@ class ICal
         'Eastern Standard Time'           => 'America/New_York',
         'Egypt Standard Time'             => 'Africa/Cairo',
         'Ekaterinburg Standard Time'      => 'Asia/Yekaterinburg',
-        'FLE Standard Time'               => 'Europe/Kiev',
+        'FLE Standard Time'               => 'Europe/Helsinki', // r34ics - Changed for ICS Calendar due to Kiev/Kyiv discrepancy
         'Fiji Standard Time'              => 'Pacific/Fiji',
         'GMT Standard Time'               => 'Europe/London',
         'GTB Standard Time'               => 'Europe/Bucharest',
