@@ -186,6 +186,7 @@ if ($args['toggle'] === 'lightbox') {
 										<span class="no_phone" aria-hidden="true"><?php echo wp_kses_post(r34ics_date('j', $date) ?: ''); ?></span>
 										<?php
 									}
+									do_action('r34ics_display_calendar_after_day_label', $view, $args, $date, $day_events);
 									?>
 								</div>
 								<?php
@@ -276,6 +277,7 @@ if ($args['toggle'] === 'lightbox') {
 									</ul>
 									<?php
 								}
+								do_action('r34ics_display_calendar_after_events_list', $view, $args, $date, $day_events);
 								?>
 							</td>
 							<?php

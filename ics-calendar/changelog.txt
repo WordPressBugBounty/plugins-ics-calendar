@@ -1,5 +1,10 @@
 === ICS Calendar Changelog ===
 
+= 11.5.10 - 2025.05.02 =
+
+* Actions and Filters:
+  * Added actions to Month and Week view templates: `r34ics_display_calendar_after_day_label` and `r34ics_display_calendar_after_events_list`. As the names indicate, these actions allow for custom output after the day label and day events lists for each day in the table in these views. Hooked functions have access to four input parameters: `$view`, `$args`, `$date` and `$day_events`.
+
 = 11.5.9.1 - 2025.04.28 =
 
 * Modified `r34ics_url_tester_result_debug` hook to be able to account for situations where the response is empty.
