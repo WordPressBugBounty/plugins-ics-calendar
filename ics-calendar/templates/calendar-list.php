@@ -377,11 +377,10 @@ else {
 		
 		// Pagination?
 		if (!empty($pagination_html) && $p_c > 1) {
-			if (in_array($args['paginationposition'], array('below','both'))) {
-				$calendar_output .= $pagination_html;
-			}
-			else {
-				$calendar_output = $pagination_html . $calendar_output;
+			switch ($args['paginationposition']) {
+				case 'below': $calendar_output .= $pagination_html; break;
+				case 'both': $calendar_output = $pagination_html . $calendar_output . $pagination_html; break;
+				case 'above': default: $calendar_output = $pagination_html . $calendar_output; break;
 			}
 		}
 		

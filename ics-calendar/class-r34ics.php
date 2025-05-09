@@ -1927,7 +1927,8 @@ if (!class_exists('R34ICS')) {
 			
 			// Filter the current calendar view
 			// Note: Fallback value needs to be empty, not 'month'!
-			$view = apply_filters('r34ics_calendar_view', (@$atts['view'] ?: ''), $atts);
+			// Also note: Using the pithier (@$atts['view'] ?: '') was still triggering warnings on AJAX requests
+			$view = apply_filters('r34ics_calendar_view', (!empty($atts['view']) ? $atts['view'] : ''), $atts);
 			
 			// Collapse array defaults by view
 			foreach ((array)$defaults as $key => $value) {

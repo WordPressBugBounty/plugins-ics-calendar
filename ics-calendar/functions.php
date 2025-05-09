@@ -1598,9 +1598,10 @@ function r34ics_guid($deprecated1=true, $deprecated2=true) { return r34ics_uid()
 
 // Return the URL associated with a uniqid value
 function r34ics_uniqid_url($uniqid='') {
-	if (empty($uniqid)) { return false; }
-	$r34ics_feed_urls = get_option('r34ics_feed_urls');
-	return sanitize_url($r34ics_feed_urls[$uniqid]) ?? false;
+	if (!empty($uniqid) && $r34ics_feed_urls = get_option('r34ics_feed_urls')) {
+		if (isset($r34ics_feed_urls[$uniqid])) { return sanitize_url($r34ics_feed_urls[$uniqid] ?: ''); }
+	}
+	return false;
 }
 
 

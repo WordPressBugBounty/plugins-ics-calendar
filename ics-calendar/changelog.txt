@@ -1,5 +1,10 @@
 === ICS Calendar Changelog ===
 
+= 11.5.10.1 - 2025.05.09 =
+
+* Bug fix: Basic and List views now handle `paginationposition="both"` correctly.
+* Improved error handling in `r34ics_uniqid_url()` function and `R34ICS::shortcode_defaults_merge()` method.
+
 = 11.5.10 - 2025.05.02 =
 
 * Actions and Filters:
