@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-04-22 11:09-0500\n"
-"PO-Revision-Date: 2025-04-22 11:09-0500\n"
+"POT-Creation-Date: 2025-05-16 14:54-0500\n"
+"PO-Revision-Date: 2025-05-16 14:54-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: sl\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:292
+#: class-r34ics.php:294
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -34,7 +34,7 @@ msgstr ""
 "funkcije morda ne bodo na voljo ali ne bodo delovale pravilno."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:302
+#: class-r34ics.php:304
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -51,33 +51,33 @@ msgstr ""
 "najbližje vaši lokaciji, v istem časovnem pasu. Za dodatne informacije o tem "
 "vprašanju si ogledajte našo %6$sdokumentacijo%7$s."
 
-#: class-r34ics.php:345 templates/admin/admin.php:17
+#: class-r34ics.php:347 templates/admin/admin.php:55
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "Pripomočki"
 
-#: class-r34ics.php:346 class-r34ics.php:2032 class-r34ics.php:2037
-#: templates/admin/admin.php:19 templates/admin/admin.php:31
+#: class-r34ics.php:348 class-r34ics.php:2040 class-r34ics.php:2045
+#: templates/admin/admin.php:57 templates/admin/admin.php:69
 msgid "Settings"
 msgstr "Nastavitve"
 
-#: class-r34ics.php:347 templates/admin/sidebar.php:5
+#: class-r34ics.php:349 templates/admin/sidebar.php:5
 msgid "User Guide"
 msgstr "Priročnik za uporabo"
 
-#: class-r34ics.php:348 templates/admin/sidebar.php:10
+#: class-r34ics.php:350 templates/admin/sidebar.php:10
 msgid "Support"
 msgstr "Podpora"
 
-#: class-r34ics.php:350
+#: class-r34ics.php:352
 msgid "Upgrade to PRO!"
 msgstr "Nadgradite na PRO!"
 
-#: class-r34ics.php:368
+#: class-r34ics.php:370
 msgid "Show/hide all"
 msgstr "Prikaži/skrij vse"
 
-#: class-r34ics.php:629
+#: class-r34ics.php:631
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -91,40 +91,36 @@ msgstr ""
 "uporabljate presledke, lahko namesto tega poskusite uporabiti znak pipe. "
 "Prizadeti URL:"
 
-#: class-r34ics.php:1067
+#: class-r34ics.php:1069
 msgid "Hide past events"
 msgstr "Skrij pretekle dogodke"
 
-#: class-r34ics.php:1068 templates/calendar-month.php:83
+#: class-r34ics.php:1070 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "Prikaži pretekle dogodke"
 
-#: class-r34ics.php:1146
+#: class-r34ics.php:1148
 msgid "Contact:"
 msgstr "Kontaktna oseba:"
 
-#: class-r34ics.php:1152
+#: class-r34ics.php:1154
 msgid "Resources:"
 msgstr "Viri:"
 
-#: class-r34ics.php:1162
+#: class-r34ics.php:1164
 msgid "Click for more..."
 msgstr "Kliknite za več..."
 
-#: class-r34ics.php:1196
+#: class-r34ics.php:1198
 msgid "Save to your calendar"
 msgstr "Shranite v koledar"
 
-#: class-r34ics.php:1196
-msgid "Download"
-msgstr "Prenesi"
-
-#: class-r34ics.php:1299
+#: class-r34ics.php:1301
 msgid "Cancelled"
 msgstr "Preklicano"
 
-#: class-r34ics.php:1684
+#: class-r34ics.php:1686
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -132,7 +128,7 @@ msgstr ""
 "Atribut bližnjice \"currentweek\" je zastarel. Namesto tega za bližnjico "
 "uporabite view=\"week\"."
 
-#: class-r34ics.php:1687
+#: class-r34ics.php:1689
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -141,19 +137,19 @@ msgstr ""
 "uporabite legendstyle=\"inline\"."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:1985
+#: class-r34ics.php:1992
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Izbrisano %1$s %2$s prehodno(-e) stanje(-a)."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:1993
+#: class-r34ics.php:2000
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Prehodnih pojavov %1$s ni bilo ugotovljenih."
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2032
+#: class-r34ics.php:2040
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -162,12 +158,12 @@ msgstr ""
 "Zdi se, da URL vašega vira vsebuje poverilnice za osnovno preverjanje "
 "pristnosti HTTP. Poskusite izklopiti možnost %1$s v zgornjem zavihku %2$s."
 
-#: class-r34ics.php:2032 class-r34ics.php:2037 templates/admin/settings.php:31
+#: class-r34ics.php:2040 class-r34ics.php:2045 templates/admin/settings.php:31
 msgid "Use legacy feed request method"
 msgstr "Uporaba starejšega načina zahtevka za dovod"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2037
+#: class-r34ics.php:2045
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -177,7 +173,7 @@ msgstr ""
 "poskusite vklopiti možnost %3$s v zgornjem zavihku %4$s."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2044
+#: class-r34ics.php:2052
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -194,19 +190,19 @@ msgstr ""
 "%4$sUporabniški priročnik %5$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2051
+#: class-r34ics.php:2059
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Napaka: %1$s ni bilo mogoče razrešiti IP-naslova."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2055
+#: class-r34ics.php:2063
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Rešen naslov IP za %1$s:"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2113
+#: class-r34ics.php:2121
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -215,7 +211,7 @@ msgstr ""
 "%1$sNastavitve so posodobljene.%2$s Morda boste morali osvežiti stran, da "
 "boste videli nekatere spremembe."
 
-#: class-r34ics.php:2351
+#: class-r34ics.php:2359
 msgid "calendar event"
 msgstr "dogodek koledarja"
 
@@ -281,7 +277,7 @@ msgstr ""
 "mogoče klikniti. Zaradi tega vaš koledar morda ne bo pravilno prikazan. "
 "Odstranite povezavo, na katero je mogoče klikniti, iz kratke kode."
 
-#: functions.php:1597
+#: functions.php:1611
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() ni več podprta."
 
@@ -451,29 +447,52 @@ msgstr ""
 msgid "Insert %1$s"
 msgstr "Vstavi %1$s"
 
-#: templates/admin/admin.php:16 templates/admin/getting-started.php:47
-#: templates/admin/getting-started.php:68
-msgid "Getting Started"
-msgstr "Začetek"
-
-#: templates/admin/admin.php:18 templates/admin/utilities.php:102
-msgid "System Report"
-msgstr "Sistemsko poročilo"
-
-#: templates/admin/admin.php:40
-msgid "Save Changes"
-msgstr "Shrani spremembe"
-
-#: templates/admin/getting-started.php:8 templates/admin/sidebar.php:37
+#: templates/admin/admin.php:8
 msgid "Do even more with..."
 msgstr "Naredite še več z..."
 
-#: templates/admin/getting-started.php:14
+#: templates/admin/admin.php:13
+msgid "Calendar Builder"
+msgstr "Graditelj koledarja"
+
+#: templates/admin/admin.php:14
+msgid ""
+"Configure all calendar settings with an easy visual interface... no need to "
+"manually type shortcodes."
+msgstr ""
+"Konfigurirajte vse nastavitve koledarja z enostavnim vizualnim vmesnikom... "
+"ni potrebe po ročnem vnosu kratkih kod."
+
+#: templates/admin/admin.php:15
+msgid "Additional Views and Enhanced Features"
+msgstr "Dodatni pogledi in izboljšane funkcije"
+
+#: templates/admin/admin.php:16
+msgid ""
+"New ways to display your calendar including Full, Up Next, Masonry, Month "
+"with Sidebar, Widget, and more. Additional capabilities are added to the "
+"core Month, Basic, List and Week views."
+msgstr ""
+"Novi načini prikaza koledarja, vključno s polnim, naslednjim, zidanim, "
+"mesecem s stransko vrstico, pripomočkom in drugimi. Osnovnim pogledom Month, "
+"Basic, List in Week so dodane dodatne možnosti."
+
+#: templates/admin/admin.php:17
+msgid "Customizer"
+msgstr "Prilagojevalnik"
+
+#: templates/admin/admin.php:18
+msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
+msgstr ""
+"Enostavno spreminjajte barvne palete koledarja, pisave in še več na celotnem "
+"spletnem mestu."
+
+#: templates/admin/admin.php:22
 msgid "ICS Events"
 msgstr "Dogodki ICS"
 
 #. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/getting-started.php:17
+#: templates/admin/admin.php:25
 #, php-format
 msgid ""
 "%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
@@ -484,60 +503,31 @@ msgstr ""
 "upravljajte dogodke neposredno v WordPressu in jih celo brezhibno vključite "
 "v obstoječe vire."
 
-#: templates/admin/getting-started.php:19
-msgid "Additional Views"
-msgstr "Dodatni pogledi"
-
-#: templates/admin/getting-started.php:20
-msgid "Full, Up Next, Masonry, Month with Sidebar, Widget, and more."
-msgstr "Polni, Naslednji, Masonry, Mesec s stransko vrstico, Widget in še več."
-
-#: templates/admin/getting-started.php:21
-msgid "Customizer"
-msgstr "Prilagojevalnik"
-
-#: templates/admin/getting-started.php:22
-msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
-msgstr ""
-"Enostavno spreminjajte barvne palete koledarja, pisave in še več na celotnem "
-"spletnem mestu."
-
-#: templates/admin/getting-started.php:25
-msgid "Calendar Builder"
-msgstr "Graditelj koledarja"
-
-#: templates/admin/getting-started.php:26
-msgid ""
-"Configure all calendar settings with an easy visual interface... no need to "
-"manually type shortcodes."
-msgstr ""
-"Konfigurirajte vse nastavitve koledarja z enostavnim vizualnim vmesnikom... "
-"ni potrebe po ročnem vnosu kratkih kod."
-
-#: templates/admin/getting-started.php:27
-msgid "Enhanced Features"
-msgstr "Izboljšane funkcije"
-
-#: templates/admin/getting-started.php:28
-msgid ""
-"Additional capabilities are added to the core Month, Basic, List and Week "
-"views."
-msgstr ""
-"Osnovnim pogledom Mesec, Osnovni pogled, Seznam in Teden so dodane dodatne "
-"možnosti."
-
 #. translators: 1. Link (do not translate)
-#: templates/admin/getting-started.php:31 templates/admin/sidebar.php:43
+#: templates/admin/admin.php:29
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "Če želite izvedeti več, obiščite %1$s."
 
-#: templates/admin/getting-started.php:36
+#: templates/admin/admin.php:34
 msgid "Go PRO!"
 msgstr "Go PRO!"
 
+#: templates/admin/admin.php:54 templates/admin/getting-started.php:3
+#: templates/admin/getting-started.php:24
+msgid "Getting Started"
+msgstr "Začetek"
+
+#: templates/admin/admin.php:56 templates/admin/utilities.php:102
+msgid "System Report"
+msgstr "Sistemsko poročilo"
+
+#: templates/admin/admin.php:78
+msgid "Save Changes"
+msgstr "Shrani spremembe"
+
 #. translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag
-#: templates/admin/getting-started.php:54
+#: templates/admin/getting-started.php:10
 #, php-format
 msgid ""
 "Thank you for installing %1$s. Before creating your first calendar "
@@ -551,7 +541,7 @@ msgstr ""
 "več informacij si oglejte naš %4$sUporabniški priročnik%5$s."
 
 #. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/getting-started.php:63
+#: templates/admin/getting-started.php:19
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
@@ -560,31 +550,31 @@ msgstr ""
 "Na našem spletnem mestu je na voljo obsežen %1$suporabniški priročnik%2$s. "
 "Spodaj je nekaj hitrih povezav do ključnih virov v dokumentaciji."
 
-#: templates/admin/getting-started.php:69
+#: templates/admin/getting-started.php:25
 msgid "General WordPress Settings"
 msgstr "Splošne nastavitve WordPressa"
 
-#: templates/admin/getting-started.php:70
+#: templates/admin/getting-started.php:26
 msgid "Shortcode Overview"
 msgstr "Pregled kratkih kod"
 
-#: templates/admin/getting-started.php:71
+#: templates/admin/getting-started.php:27
 msgid "Shortcode Builder"
 msgstr "Graditelj kratkih kod"
 
-#: templates/admin/getting-started.php:72
+#: templates/admin/getting-started.php:28
 msgid "Shortcode Parameters Reference"
 msgstr "Sklic na parametre kratke kode"
 
-#: templates/admin/getting-started.php:73
+#: templates/admin/getting-started.php:29
 msgid "FAQs and Tips"
 msgstr "Pogosta vprašanja in nasveti"
 
-#: templates/admin/getting-started.php:74
+#: templates/admin/getting-started.php:30
 msgid "CSS Guide"
 msgstr "Vodnik CSS"
 
-#: templates/admin/getting-started.php:75
+#: templates/admin/getting-started.php:31
 msgid "Developer Resources"
 msgstr "Viri za razvijalce"
 
@@ -748,6 +738,20 @@ msgid ""
 msgstr ""
 "Ko se obrnete na podporo, vključite %1$sSistemsko poročilo%2$s s te strani."
 
+#: templates/admin/sidebar.php:33
+msgid "Spread the word!"
+msgstr "Razširi besedo!"
+
+#. translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag
+#: templates/admin/sidebar.php:37
+#, php-format
+msgid ""
+"If you find %1$s useful, you can help support our continued growth and "
+"development with a %2$sfive-star review%3$s. Thank you!"
+msgstr ""
+"Če se vam zdi %1$s koristno, lahko našo nadaljnjo rast in razvoj podprete z "
+"oceno %2$ss petimi zvezdicami%3$s. Hvala!"
+
 #. translators: 1: Plugin name (do not translate)
 #: templates/admin/utilities.php:9
 #, php-format
@@ -854,8 +858,8 @@ msgstr "Prejšnja stran"
 msgid "Next Page"
 msgstr "Naslednja stran"
 
-#: templates/calendar-list.php:285 templates/calendar-month.php:200
-#: templates/calendar-week.php:209
+#: templates/calendar-list.php:285 templates/calendar-month.php:201
+#: templates/calendar-week.php:210
 msgid "All Day"
 msgstr "Cel dan"
 
@@ -863,11 +867,11 @@ msgstr "Cel dan"
 msgid "Today"
 msgstr "Danes"
 
-#: templates/calendar-month.php:282 templates/calendar-week.php:294
+#: templates/calendar-month.php:284 templates/calendar-week.php:296
 msgid "No events."
 msgstr "Brez dogodkov."
 
-#: templates/calendar-month.php:294
+#: templates/calendar-month.php:296
 msgid "No additional events this month."
 msgstr "Ta mesec ni dodatnih dogodkov."
 
@@ -905,6 +909,16 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Soba 34 Kreativne storitve, LLC"
+
+#~ msgid "Download"
+#~ msgstr "Prenesi"
+
+#~ msgid "Additional Views"
+#~ msgstr "Dodatni pogledi"
+
+#~ msgid "Full, Up Next, Masonry, Month with Sidebar, Widget, and more."
+#~ msgstr ""
+#~ "Polni, Naslednji, Masonry, Mesec s stransko vrstico, Widget in še več."
 
 #, php-format
 #~ msgid ""

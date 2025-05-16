@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 11.5.10.1
+Stable tag: 11.5.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,15 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.11 - 2025.05.16 =
+
+* Event downloads (`eventdl`):
+  * Added "Save to your calendar" text in addition to icon. You can revert to the previous icon-only display by changing the shortcode parameter from `eventdl="true"` to `eventdl="minimal"`.
+  * Fixed output errors in downloaded `.ics` files when the event includes the `EXDATE` or `RDATE` property.
+* Admin page: Updated promotional content.
+* CSS: Removed base64 encoding on embedded SVG background images, to reduce data size and eliminate unnecessary obfuscation.
+* i18n: Updated translation strings.
 
 = 11.5.10.1 - 2025.05.09 =
 

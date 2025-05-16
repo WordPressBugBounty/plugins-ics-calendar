@@ -1,5 +1,14 @@
 === ICS Calendar Changelog ===
 
+= 11.5.11 - 2025.05.16 =
+
+* Admin page: Updated promotional content.
+* CSS: Removed base64 encoding on embedded SVG background images, to reduce data size and eliminate unnecessary obfuscation.
+* Event downloads:
+  * Added "Save to your calendar" text in addition to icon. You can revert to the previous icon-only display by changing the shortcode parameter from `eventdl="true"` to `eventdl="minimal"`.
+  * Fixed output errors in downloaded `.ics` files when the event includes the `EXDATE` or `RDATE` property.
+* i18n: Updated translation strings.
+
 = 11.5.10.1 - 2025.05.09 =
 
 * Bug fix: Basic and List views now handle `paginationposition="both"` correctly.

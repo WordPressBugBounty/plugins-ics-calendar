@@ -335,10 +335,7 @@ will be retained permanently, so they can be used to create custom color palette
 				padding: 1px 2px !important;
 			}
 
-.r34ics-pro-mo {
-	font-size: 120%;
-	padding: 1.5rem;
-}
+.r34ics-pro-mo {}
 
 .r34ics-pro-mo h3 {
 	font-size: 1.75rem !important;
@@ -347,7 +344,7 @@ will be retained permanently, so they can be used to create custom color palette
 
 .r34ics-pro-mo h3 img {
 	display: inline-block;
-	height: 84px;
+	height: 72px;
 	margin: 0.5rem 1rem;
 	vertical-align: middle;
 	width: auto;

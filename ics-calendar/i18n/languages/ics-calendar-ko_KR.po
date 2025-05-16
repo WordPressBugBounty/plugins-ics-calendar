@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-04-22 11:07-0500\n"
-"PO-Revision-Date: 2025-04-22 11:07-0500\n"
+"POT-Creation-Date: 2025-05-16 14:56-0500\n"
+"PO-Revision-Date: 2025-05-16 14:56-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ko_KR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:292
+#: class-r34ics.php:294
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -33,7 +33,7 @@ msgstr ""
 "로 작동하지 않을 수 있습니다."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:302
+#: class-r34ics.php:304
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -49,33 +49,33 @@ msgstr ""
 "하여 동일한 시간대에서 사용자 위치에서 가장 가까운 도시로 변경하십시오. 이 문"
 "제에 대한 추가 정보는 %6$s문서%7$s를 참조하십시오."
 
-#: class-r34ics.php:345 templates/admin/admin.php:17
+#: class-r34ics.php:347 templates/admin/admin.php:55
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "도구"
 
-#: class-r34ics.php:346 class-r34ics.php:2032 class-r34ics.php:2037
-#: templates/admin/admin.php:19 templates/admin/admin.php:31
+#: class-r34ics.php:348 class-r34ics.php:2040 class-r34ics.php:2045
+#: templates/admin/admin.php:57 templates/admin/admin.php:69
 msgid "Settings"
 msgstr "설정"
 
-#: class-r34ics.php:347 templates/admin/sidebar.php:5
+#: class-r34ics.php:349 templates/admin/sidebar.php:5
 msgid "User Guide"
 msgstr "사용자 설명서"
 
-#: class-r34ics.php:348 templates/admin/sidebar.php:10
+#: class-r34ics.php:350 templates/admin/sidebar.php:10
 msgid "Support"
 msgstr "지원"
 
-#: class-r34ics.php:350
+#: class-r34ics.php:352
 msgid "Upgrade to PRO!"
 msgstr "프로로 업그레이드!"
 
-#: class-r34ics.php:368
+#: class-r34ics.php:370
 msgid "Show/hide all"
 msgstr "모두 표시/숨기기"
 
-#: class-r34ics.php:629
+#: class-r34ics.php:631
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -88,40 +88,36 @@ msgstr ""
 "URL을 구분하기 위해 공백을 사용하는 경우 파이프 문자를 대신 사용해 볼 수도 있"
 "습니다. 영향을 받는 URL:"
 
-#: class-r34ics.php:1067
+#: class-r34ics.php:1069
 msgid "Hide past events"
 msgstr "과거 이벤트 숨기기"
 
-#: class-r34ics.php:1068 templates/calendar-month.php:83
+#: class-r34ics.php:1070 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "지난 이벤트 보기"
 
-#: class-r34ics.php:1146
+#: class-r34ics.php:1148
 msgid "Contact:"
 msgstr "연락:"
 
-#: class-r34ics.php:1152
+#: class-r34ics.php:1154
 msgid "Resources:"
 msgstr "자원:"
 
-#: class-r34ics.php:1162
+#: class-r34ics.php:1164
 msgid "Click for more..."
 msgstr "더 보려면 클릭하세요..."
 
-#: class-r34ics.php:1196
+#: class-r34ics.php:1198
 msgid "Save to your calendar"
 msgstr "캘린더에 저장"
 
-#: class-r34ics.php:1196
-msgid "Download"
-msgstr "다운로드"
-
-#: class-r34ics.php:1299
+#: class-r34ics.php:1301
 msgid "Cancelled"
 msgstr "취소"
 
-#: class-r34ics.php:1684
+#: class-r34ics.php:1686
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -129,7 +125,7 @@ msgstr ""
 "\"currentweek\" 쇼트코드 속성은 더 이상 사용되지 않습니다. 대신 쇼트코드에서 "
 "view=\"week\"를 사용하십시오."
 
-#: class-r34ics.php:1687
+#: class-r34ics.php:1689
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -138,19 +134,19 @@ msgstr ""
 "legendstyle=\"inline\"을 사용하십시오."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:1985
+#: class-r34ics.php:1992
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$s 과도 현상을 제거했습니다."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:1993
+#: class-r34ics.php:2000
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s 과도 현상이 발견되지 않았습니다."
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2032
+#: class-r34ics.php:2040
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -159,12 +155,12 @@ msgstr ""
 "피드 URL에 HTTP 기본 인증 자격 증명이 포함된 것 같습니다. 위의 %2$s 탭에서 "
 "%1$s 옵션을 해제해 보세요."
 
-#: class-r34ics.php:2032 class-r34ics.php:2037 templates/admin/settings.php:31
+#: class-r34ics.php:2040 class-r34ics.php:2045 templates/admin/settings.php:31
 msgid "Use legacy feed request method"
 msgstr "레거시 피드 요청 방법 사용"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2037
+#: class-r34ics.php:2045
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -174,7 +170,7 @@ msgstr ""
 "%3$s 옵션을 켜보세요."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2044
+#: class-r34ics.php:2052
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -189,19 +185,19 @@ msgstr ""
 "%4$s 사용자 가이드%5$s를 참조하세요."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2051
+#: class-r34ics.php:2059
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "오류가 발생했습니다: %1$s의 IP 주소를 확인할 수 없습니다."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2055
+#: class-r34ics.php:2063
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$s에 대해 확인된 IP 주소입니다:"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2113
+#: class-r34ics.php:2121
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -210,7 +206,7 @@ msgstr ""
 "%1$s설정이 업데이트되었습니다.%2$s 일부 변경 사항을 확인하려면 페이지를 새로 "
 "고쳐야 할 수 있습니다."
 
-#: class-r34ics.php:2351
+#: class-r34ics.php:2359
 msgid "calendar event"
 msgstr "캘린더 이벤트"
 
@@ -275,7 +271,7 @@ msgstr ""
 "능한 링크로 바뀌었을 가능성이 큽니다. 결과적으로 캘린더가 제대로 표시되지 않"
 "을 수 있습니다. 쇼트코드에서 클릭 가능한 링크를 제거하십시오."
 
-#: functions.php:1597
+#: functions.php:1611
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "R34ics_url_get_contents() 함수는 더 이상 지원되지 않습니다."
 
@@ -441,29 +437,50 @@ msgstr ""
 msgid "Insert %1$s"
 msgstr "%1$s 삽입"
 
-#: templates/admin/admin.php:16 templates/admin/getting-started.php:47
-#: templates/admin/getting-started.php:68
-msgid "Getting Started"
-msgstr "시작하기"
-
-#: templates/admin/admin.php:18 templates/admin/utilities.php:102
-msgid "System Report"
-msgstr "시스템 보고서"
-
-#: templates/admin/admin.php:40
-msgid "Save Changes"
-msgstr "변경 사항 저장"
-
-#: templates/admin/getting-started.php:8 templates/admin/sidebar.php:37
+#: templates/admin/admin.php:8
 msgid "Do even more with..."
 msgstr "더 많은 작업을..."
 
-#: templates/admin/getting-started.php:14
+#: templates/admin/admin.php:13
+msgid "Calendar Builder"
+msgstr "캘린더 빌더"
+
+#: templates/admin/admin.php:14
+msgid ""
+"Configure all calendar settings with an easy visual interface... no need to "
+"manually type shortcodes."
+msgstr ""
+"단축 코드를 수동으로 입력할 필요 없이 간편한 시각적 인터페이스로 모든 캘린더 "
+"설정을 구성할 수 있습니다."
+
+#: templates/admin/admin.php:15
+msgid "Additional Views and Enhanced Features"
+msgstr "추가 보기 및 향상된 기능"
+
+#: templates/admin/admin.php:16
+msgid ""
+"New ways to display your calendar including Full, Up Next, Masonry, Month "
+"with Sidebar, Widget, and more. Additional capabilities are added to the "
+"core Month, Basic, List and Week views."
+msgstr ""
+"전체, 다음 달, 벽돌, 사이드바가 있는 달, 위젯 등 캘린더를 표시하는 새로운 방"
+"식이 추가되었습니다. 핵심 월, 기본, 목록 및 주 보기에 추가 기능이 추가되었습"
+"니다."
+
+#: templates/admin/admin.php:17
+msgid "Customizer"
+msgstr "사용자 정의 도구"
+
+#: templates/admin/admin.php:18
+msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
+msgstr "캘린더 색상 팔레트, 글꼴 등을 사이트 전체에서 쉽게 수정할 수 있습니다."
+
+#: templates/admin/admin.php:22
 msgid "ICS Events"
 msgstr "ICS 이벤트"
 
 #. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/getting-started.php:17
+#: templates/admin/admin.php:25
 #, php-format
 msgid ""
 "%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
@@ -473,56 +490,31 @@ msgstr ""
 "%1$s신규!%2$s %3$s를 전체 캘린더 시스템으로 전환합니다. 워드프레스에서 직접 "
 "이벤트를 생성하고 관리하며 기존 피드와 원활하게 통합할 수도 있습니다."
 
-#: templates/admin/getting-started.php:19
-msgid "Additional Views"
-msgstr "추가 보기"
-
-#: templates/admin/getting-started.php:20
-msgid "Full, Up Next, Masonry, Month with Sidebar, Widget, and more."
-msgstr "전체, 다음 항목, 벽돌, 사이드바가 있는 달, 위젯 등이 있습니다."
-
-#: templates/admin/getting-started.php:21
-msgid "Customizer"
-msgstr "사용자 정의 도구"
-
-#: templates/admin/getting-started.php:22
-msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
-msgstr "캘린더 색상 팔레트, 글꼴 등을 사이트 전체에서 쉽게 수정할 수 있습니다."
-
-#: templates/admin/getting-started.php:25
-msgid "Calendar Builder"
-msgstr "캘린더 빌더"
-
-#: templates/admin/getting-started.php:26
-msgid ""
-"Configure all calendar settings with an easy visual interface... no need to "
-"manually type shortcodes."
-msgstr ""
-"단축 코드를 수동으로 입력할 필요 없이 간편한 시각적 인터페이스로 모든 캘린더 "
-"설정을 구성할 수 있습니다."
-
-#: templates/admin/getting-started.php:27
-msgid "Enhanced Features"
-msgstr "향상된 기능"
-
-#: templates/admin/getting-started.php:28
-msgid ""
-"Additional capabilities are added to the core Month, Basic, List and Week "
-"views."
-msgstr "핵심 월, 기본, 목록 및 주 보기에 추가 기능이 추가되었습니다."
-
 #. translators: 1. Link (do not translate)
-#: templates/admin/getting-started.php:31 templates/admin/sidebar.php:43
+#: templates/admin/admin.php:29
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "자세히 알아보려면 %1$s을 방문하세요."
 
-#: templates/admin/getting-started.php:36
+#: templates/admin/admin.php:34
 msgid "Go PRO!"
 msgstr "프로로 가세요!"
 
+#: templates/admin/admin.php:54 templates/admin/getting-started.php:3
+#: templates/admin/getting-started.php:24
+msgid "Getting Started"
+msgstr "시작하기"
+
+#: templates/admin/admin.php:56 templates/admin/utilities.php:102
+msgid "System Report"
+msgstr "시스템 보고서"
+
+#: templates/admin/admin.php:78
+msgid "Save Changes"
+msgstr "변경 사항 저장"
+
 #. translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag
-#: templates/admin/getting-started.php:54
+#: templates/admin/getting-started.php:10
 #, php-format
 msgid ""
 "Thank you for installing %1$s. Before creating your first calendar "
@@ -536,7 +528,7 @@ msgstr ""
 "오."
 
 #. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/getting-started.php:63
+#: templates/admin/getting-started.php:19
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
@@ -545,31 +537,31 @@ msgstr ""
 "광범위한 %1$s사용자 가이드%2$s는 웹사이트에서 확인할 수 있습니다. 아래는 설명"
 "서의 주요 리소스에 대한 빠른 링크입니다."
 
-#: templates/admin/getting-started.php:69
+#: templates/admin/getting-started.php:25
 msgid "General WordPress Settings"
 msgstr "일반 워드프레스 설정"
 
-#: templates/admin/getting-started.php:70
+#: templates/admin/getting-started.php:26
 msgid "Shortcode Overview"
 msgstr "쇼트코드 개요"
 
-#: templates/admin/getting-started.php:71
+#: templates/admin/getting-started.php:27
 msgid "Shortcode Builder"
 msgstr "쇼트코드 빌더"
 
-#: templates/admin/getting-started.php:72
+#: templates/admin/getting-started.php:28
 msgid "Shortcode Parameters Reference"
 msgstr "쇼트코드 매개변수 참조"
 
-#: templates/admin/getting-started.php:73
+#: templates/admin/getting-started.php:29
 msgid "FAQs and Tips"
 msgstr "자주 묻는 질문 및 팁"
 
-#: templates/admin/getting-started.php:74
+#: templates/admin/getting-started.php:30
 msgid "CSS Guide"
 msgstr "CSS 가이드"
 
-#: templates/admin/getting-started.php:75
+#: templates/admin/getting-started.php:31
 msgid "Developer Resources"
 msgstr "개발자 리소스"
 
@@ -722,6 +714,20 @@ msgid ""
 "page."
 msgstr "지원팀에 문의할 때 이 페이지의 %1$s시스템 보고서%2$s를 첨부해 주세요."
 
+#: templates/admin/sidebar.php:33
+msgid "Spread the word!"
+msgstr "소문을 퍼뜨리세요!"
+
+#. translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag
+#: templates/admin/sidebar.php:37
+#, php-format
+msgid ""
+"If you find %1$s useful, you can help support our continued growth and "
+"development with a %2$sfive-star review%3$s. Thank you!"
+msgstr ""
+"%1$s 도움이 되었다면 %2$s 별점 5개 리뷰%3$s로 저희의 지속적인 성장과 발전을 "
+"도와주세요. 감사합니다!"
+
 #. translators: 1: Plugin name (do not translate)
 #: templates/admin/utilities.php:9
 #, php-format
@@ -822,8 +828,8 @@ msgstr "이전 페이지"
 msgid "Next Page"
 msgstr "다음 페이지"
 
-#: templates/calendar-list.php:285 templates/calendar-month.php:200
-#: templates/calendar-week.php:209
+#: templates/calendar-list.php:285 templates/calendar-month.php:201
+#: templates/calendar-week.php:210
 msgid "All Day"
 msgstr "하루 종일"
 
@@ -831,11 +837,11 @@ msgstr "하루 종일"
 msgid "Today"
 msgstr "오늘"
 
-#: templates/calendar-month.php:282 templates/calendar-week.php:294
+#: templates/calendar-month.php:284 templates/calendar-week.php:296
 msgid "No events."
 msgstr "일정이 없습니다."
 
-#: templates/calendar-month.php:294
+#: templates/calendar-month.php:296
 msgid "No additional events this month."
 msgstr "이번 달에는 추가 이벤트가 없습니다."
 
@@ -872,6 +878,15 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "Download"
+#~ msgstr "다운로드"
+
+#~ msgid "Additional Views"
+#~ msgstr "추가 보기"
+
+#~ msgid "Full, Up Next, Masonry, Month with Sidebar, Widget, and more."
+#~ msgstr "전체, 다음 항목, 벽돌, 사이드바가 있는 달, 위젯 등이 있습니다."
 
 #, php-format
 #~ msgid ""

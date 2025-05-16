@@ -40,6 +40,8 @@ if (!class_exists('R34ICS')) {
 		public $debug = false;
 		public $debug_messages = array();
 	
+		// Note: This is required to be base64 encoded; unencoded (data:image/svg+xml;utf8) doesn't work.
+		// See: https://developer.wordpress.org/reference/functions/add_menu_page/
 		public $icon_logo = 'data:image/svg+xml;base64,PHN2ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiIHZpZXdCb3g9IjAgMCAyMzMgMjU3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xNTEuODA1IDIzLjI3M2gtNzIuODMydi05LjMwOWMwLTcuNzA3LTYuMjU3LTEzLjk2NC0xMy45NjQtMTMuOTY0cy0xMy45NjMgNi4yNTctMTMuOTYzIDEzLjk2NHY5Ljc0M2MtMjguNzQ5IDMuNTIxLTUxLjA0NiAyOC4wNTEtNTEuMDQ2IDU3Ljc0OHYxMTYuMzYzYzAgMzIuMTEyIDI2LjA3MSA1OC4xODIgNTguMTgyIDU4LjE4MmgxMTYuMzY0YzMyLjExMSAwIDU4LjE4Mi0yNi4wNyA1OC4xODItNTguMTgydi0xMTYuMzYzYzAtMzAuMzY1LTIzLjMxMS01NS4zMjgtNTIuOTk2LTU3Ljk1NHYtOS41MzdjMC03LjcwNy02LjI1Ny0xMy45NjQtMTMuOTYzLTEzLjk2NC03LjcwNyAwLTEzLjk2NCA2LjI1Ny0xMy45NjQgMTMuOTY0em0tMTI5LjUwNyAxNzIuNjEzYzAgMjAuMzMzIDE2LjUwOCAzNi44NDIgMzYuODQxIDM2Ljg0MmgxMTIuNDk5YzIwLjMzNCAwIDM2Ljg0Mi0xNi41MDkgMzYuODQyLTM2Ljg0MnYtMTAyLjc5M2gtMTg2LjE4MnptMTQxLjM4OCAxNi4yNDZjMTUuMDY5IDAgMjkuMTg4LTcuNDY3IDI5LjE4OC0yMy4yMTUgMC0yNS42NTgtMzcuMDYyLTE5LjI3OC0zNy4wNjItMjcuOTY2IDAtMi40NDQgMi44NTEtNC43NTIgNy43MzgtNC43NTIgNC40OCAwIDcuODc0IDIuMDM3IDcuODc0IDUuNDMxdjEuMzU3aDIwLjA5MnYtMS4zNTdjMC0xMy4xNjktMTEuMjY3LTIyLjgwOC0yNy44My0yMi44MDgtMTYuNDI3IDAtMjcuOTY2IDkuNTAzLTI3Ljk2NiAyMy40ODcgMCAyNS4xMTUgMzYuOTI2IDE4LjE5MSAzNi45MjYgMjcuODMgMCAyLjg1MS0zLjM5NCA0LjYxNi04LjE0NSA0LjYxNi01LjE1OSAwLTkuNTAzLTIuMTcyLTkuNTAzLTYuMTA5di0xLjYzaC0yMC4yMjh2MS42M2MwIDEzLjU3NSAxMS41MzkgMjMuNDg2IDI4LjkxNiAyMy40ODZ6bS02My45NDIgMGMxOC4xOTEgMCAzMC4xMzgtMTEuNDA0IDMwLjEzOC0yOC43ODF2LTIuMDM2aC0yMC41djIuNTc5YzAgNi4yNDUtMy45MzYgOS45MS05LjYzOCA5LjkxLTcuMTk1IDAtMTAuNzI1LTQuMDcyLTEwLjcyNS0xMS44MTF2LTEzLjAzMmMwLTcuNzM5IDMuNjY1LTExLjgxMSAxMC43MjUtMTEuODExIDUuNzAyIDAgOS42MzggMy42NjUgOS42MzggOS45MXYyLjU3OWgyMC41di0yLjAzNmMwLTE3LjM3Ny0xMS45NDctMjguNzgxLTMwLjI3NC0yOC43ODEtMTkuMjc4IDAtMzAuOTUzIDExLjY3Ni0zMC45NTMgMzAuMDAzdjEzLjMwNGMwIDE4LjMyOCAxMS42NzUgMzAuMDAzIDMxLjA4OSAzMC4wMDN6bS02MC40MTMtMi4wMzdoMjAuMzY0di02OS4yMzZoLTIwLjM2NHptMC03Ni41NjdoMjAuMzY0di0xOS44MjFoLTIwLjM2NHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=';
 		
 		public $limit_days = 365;
@@ -347,7 +349,7 @@ if (!class_exists('R34ICS')) {
 					'<a href="https://icscalendar.com/user-guide/" target="_blank">' . esc_html__('User Guide', 'ics-calendar') . '</a>',
 					'<a href="https://wordpress.org/support/plugin/ics-calendar/" target="_blank">' . esc_html__('Support', 'ics-calendar') . '</a>'
 				);
-				$links[] = '<a href="https://icscalendar.com/pro/" target="_blank" style="font-weight: bold; color: crimson;">' . esc_html__('Upgrade to PRO!', 'ics-calendar') . '</a>';
+				$links[] = '<a href="https://icscalendar.com/pro/" target="_blank" style="font-weight: bold; color: dodgerblue;">' . esc_html__('Upgrade to PRO!', 'ics-calendar') . '</a>';
 			}
 			return $links;
 		}
@@ -1193,7 +1195,7 @@ if (!class_exists('R34ICS')) {
 			}
 			// Add individual event .ics download link
 			if (!empty($args['eventdl'])) {
-				echo '<div><button class="r34ics_event_ics_download" data-eventdl-feed-key="' . intval($event['feed_key']) . '" data-eventdl-uid="' . esc_attr($event['uid']) . '" title="' . esc_attr__('Save to your calendar', 'ics-calendar') . '">' . esc_html__('Download', 'ics-calendar') . '</button></div>';
+				echo '<div><button class="r34ics_event_ics_download' . ($args['eventdl'] == 'minimal' ? ' minimal' : '') . '" data-eventdl-feed-key="' . intval($event['feed_key']) . '" data-eventdl-uid="' . esc_attr($event['uid']) . '">' . esc_attr__('Save to your calendar', 'ics-calendar') . '</button></div>';
 			}
 			
 			// Action for additional content
@@ -1725,7 +1727,11 @@ if (!class_exists('R34ICS')) {
 						: r34ics_boolean_check($eventdesc)
 					),
 				// eventdl doesn't support feeds using basic auth
-				'eventdl' => (r34ics_boolean_check($eventdl) && !r34ics_boolean_check($basicauth)),
+				'eventdl' => r34ics_boolean_check($basicauth) ? false : (
+					in_array(strtolower($eventdl), array('minimal'))
+						? strtolower($eventdl)
+						: r34ics_boolean_check($eventdl)
+				),
 				'eventlocaltime' => r34ics_boolean_check($eventlocaltime),
 				'extendmultiday' => (
 					in_array(strtolower($extendmultiday), array('both', 'overnight', 'allday'))
@@ -2322,18 +2328,18 @@ if (!class_exists('R34ICS')) {
 						if ($event_item->dtstamp) { $content[] = 'DTSTAMP:' . $event_item->dtstamp; }
 						if ($event_item->dtstart) { $content[] = 'DTSTART:' . $event_item->dtstart; }
 						if ($event_item->duration) { $content[] = 'DURATION:' . $event_item->duration; }
-						if ($event_item->exdate_array) {
+						if (!empty($event_item->exdate_array)) {
 							$item_key = key($event_item->exdate_array[0]);
-							$content[] = 'EXDATE;' . $item_key . '=' . $event_item->exdate_array[0][$item_key] . ':' . $event_item->exdate_array[1];
+							$content[] = 'EXDATE;' . $item_key . '=' . $event_item->exdate_array[0][$item_key] . ':' . implode(',', (array)$event_item->exdate_array[1]);
 						}
 						if ($event_item->freebusy) { $content[] = 'FREEBUSY:' . $event_item->freebusy; }
 						if ($event_item->geo) { $content[] = 'GEO:' . $event_item->geo; }
 						if ($event_item->last_modified) { $content[] = 'LAST-MODIFIED:' . $event_item->last_modified; }
 						if ($event_item->location) { $content[] = 'LOCATION:' . r34ics_maybe_enfold($event_item->location, 9); }
 						if ($event_item->organizer) { $content[] = 'ORGANIZER:' . r34ics_maybe_enfold($event_item->organizer, 10); }
-						if ($event_item->rdate_array) {
+						if (!empty($event_item->rdate_array)) {
 							$item_key = key($event_item->rdate_array[0]);
-							$content[] = 'RDATE;' . $item_key . '=' . $event_item->rdate_array[0][$item_key] . ':' . $event_item->rdate_array[1];
+							$content[] = 'RDATE;' . $item_key . '=' . $event_item->rdate_array[0][$item_key] . ':' . implode(',', $event_item->rdate_array[1]);
 						}
 						if ($event_item->recurrence_id) { $content[] = 'RECURRENCE-ID:' . $event_item->recurrence_id; }
 						if ($event_item->resources) { $content[] = 'RESOURCES:' . $event_item->resources; }

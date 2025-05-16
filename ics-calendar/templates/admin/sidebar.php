@@ -30,19 +30,13 @@
 	}
 	?>
 
-</div></div>
-
-<div class="postbox"><div class="inside">
-
-	<h3 style="text-align: center;"><?php esc_html_e('Do even more with...', 'ics-calendar'); ?></h3>
-
-	<a href="https://icscalendar.com/pro" target="_blank"><img src="<?php echo esc_url(plugins_url('assets/ics-calendar-pro-logo-2023.svg', dirname(dirname(__FILE__)))); ?>" alt="ICS Calendar Pro" style="display: block; height: auto; margin: 1.5em auto; width: 180px;" width="180" height="62" /></a>
+	<h3><?php esc_html_e('Spread the word!', 'ics-calendar'); ?></h3>
 	
 	<p><?php
-	/* translators: 1. Link (do not translate) */
-	printf(esc_html__('Visit %1$s to learn more.', 'ics-calendar'), '<strong><a href="https://icscalendar.com/pro/" target="_blank">icscalendar.com/pro</a></strong>');
+	/* translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag */
+	printf(esc_html__('If you find %1$s useful, you can help support our continued growth and development with a %2$sfive-star review%3$s. Thank you!', 'ics-calendar'), '<strong>ICS Calendar</strong>', '<strong><a href="https://wordpress.org/support/plugin/ics-calendar/reviews/#new-post" target="_blank" style="white-space: nowrap;">', '</a></strong>');
 	?></p>
-	
+
 </div></div>
 
 <div class="postbox"><div class="inside">

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-04-22 11:05-0500\n"
-"PO-Revision-Date: 2025-04-22 11:05-0500\n"
+"POT-Creation-Date: 2025-05-16 14:57-0500\n"
+"PO-Revision-Date: 2025-05-16 14:57-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: cs\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:292
+#: class-r34ics.php:294
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -33,7 +33,7 @@ msgstr ""
 "nedostupné nebo nemusí fungovat správně."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:302
+#: class-r34ics.php:304
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -50,33 +50,33 @@ msgstr ""
 "vaší poloze, ve stejném časovém pásmu. Další informace o tomto problému "
 "naleznete v naší %6$sdokumentaci%7$s."
 
-#: class-r34ics.php:345 templates/admin/admin.php:17
+#: class-r34ics.php:347 templates/admin/admin.php:55
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "Utility"
 
-#: class-r34ics.php:346 class-r34ics.php:2032 class-r34ics.php:2037
-#: templates/admin/admin.php:19 templates/admin/admin.php:31
+#: class-r34ics.php:348 class-r34ics.php:2040 class-r34ics.php:2045
+#: templates/admin/admin.php:57 templates/admin/admin.php:69
 msgid "Settings"
 msgstr "Nastavení"
 
-#: class-r34ics.php:347 templates/admin/sidebar.php:5
+#: class-r34ics.php:349 templates/admin/sidebar.php:5
 msgid "User Guide"
 msgstr "Uživatelská příručka"
 
-#: class-r34ics.php:348 templates/admin/sidebar.php:10
+#: class-r34ics.php:350 templates/admin/sidebar.php:10
 msgid "Support"
 msgstr "Podpora"
 
-#: class-r34ics.php:350
+#: class-r34ics.php:352
 msgid "Upgrade to PRO!"
 msgstr "Přejděte na verzi PRO!"
 
-#: class-r34ics.php:368
+#: class-r34ics.php:370
 msgid "Show/hide all"
 msgstr "Zobrazit/skrýt vše"
 
-#: class-r34ics.php:629
+#: class-r34ics.php:631
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -89,40 +89,36 @@ msgstr ""
 "cURL nebo allow_url_fopen. Pokud používáte mezery pro ohraničení více adres "
 "URL, můžete také zkusit místo nich použít znak pipe. Postižená adresa URL:"
 
-#: class-r34ics.php:1067
+#: class-r34ics.php:1069
 msgid "Hide past events"
 msgstr "Skrýt minulé události"
 
-#: class-r34ics.php:1068 templates/calendar-month.php:83
+#: class-r34ics.php:1070 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "Zobrazit proběhlé akce <br>"
 
-#: class-r34ics.php:1146
+#: class-r34ics.php:1148
 msgid "Contact:"
 msgstr "Kontakt:"
 
-#: class-r34ics.php:1152
+#: class-r34ics.php:1154
 msgid "Resources:"
 msgstr "Zdroje:"
 
-#: class-r34ics.php:1162
+#: class-r34ics.php:1164
 msgid "Click for more..."
 msgstr "Klikněte pro více informací..."
 
-#: class-r34ics.php:1196
+#: class-r34ics.php:1198
 msgid "Save to your calendar"
 msgstr "Uložit do kalendáře"
 
-#: class-r34ics.php:1196
-msgid "Download"
-msgstr "Stáhnout"
-
-#: class-r34ics.php:1299
+#: class-r34ics.php:1301
 msgid "Cancelled"
 msgstr "Zrušeno"
 
-#: class-r34ics.php:1684
+#: class-r34ics.php:1686
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -130,7 +126,7 @@ msgstr ""
 "Atribut \"currentweek\" je zastaralý. Místo toho použijte ve svém zkráceném "
 "kódu view=\"week\"."
 
-#: class-r34ics.php:1687
+#: class-r34ics.php:1689
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -139,19 +135,19 @@ msgstr ""
 "kódu legendstyle=\"inline\"."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:1985
+#: class-r34ics.php:1992
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Vymazáno %1$s %2$s přechodných jevů."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:1993
+#: class-r34ics.php:2000
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nebyly nalezeny žádné přechodné jevy %1$s."
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2032
+#: class-r34ics.php:2040
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -160,12 +156,12 @@ msgstr ""
 "Zdá se, že adresa URL vašeho kanálu obsahuje pověření HTTP Basic "
 "Authentication. Zkuste vypnout možnost %1$s na kartě %2$s výše."
 
-#: class-r34ics.php:2032 class-r34ics.php:2037 templates/admin/settings.php:31
+#: class-r34ics.php:2040 class-r34ics.php:2045 templates/admin/settings.php:31
 msgid "Use legacy feed request method"
 msgstr "Použití staršího způsobu vyžádání feedu"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2037
+#: class-r34ics.php:2045
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -175,7 +171,7 @@ msgstr ""
 "%1$sNáhled%2$s, zkuste zapnout možnost %3$s na kartě %4$s výše."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2044
+#: class-r34ics.php:2052
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -191,19 +187,19 @@ msgstr ""
 "URL dynamického zdroje naleznete v naší %4$suživatelské příručce%5$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2051
+#: class-r34ics.php:2059
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Chyba: Nepodařilo se přeložit IP adresu pro %1$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2055
+#: class-r34ics.php:2063
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Vyřešená IP adresa pro %1$s:"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2113
+#: class-r34ics.php:2121
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -212,7 +208,7 @@ msgstr ""
 "%1$sNastavení aktualizováno.%2$s Pro zobrazení některých změn bude možná "
 "nutné stránku obnovit."
 
-#: class-r34ics.php:2351
+#: class-r34ics.php:2359
 msgid "calendar event"
 msgstr "událost v kalendáři"
 
@@ -278,7 +274,7 @@ msgstr ""
 "kliknout. V důsledku toho se váš kalendář nemusí zobrazovat správně. "
 "Odstraňte prosím klikací odkaz v krátkém kódu."
 
-#: functions.php:1597
+#: functions.php:1611
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkce r34ics_url_get_contents() již není podporována."
 
@@ -447,29 +443,52 @@ msgstr ""
 msgid "Insert %1$s"
 msgstr "Vložit %1$s"
 
-#: templates/admin/admin.php:16 templates/admin/getting-started.php:47
-#: templates/admin/getting-started.php:68
-msgid "Getting Started"
-msgstr "Začínáme"
-
-#: templates/admin/admin.php:18 templates/admin/utilities.php:102
-msgid "System Report"
-msgstr "Systémová zpráva"
-
-#: templates/admin/admin.php:40
-msgid "Save Changes"
-msgstr "Uložit změny"
-
-#: templates/admin/getting-started.php:8 templates/admin/sidebar.php:37
+#: templates/admin/admin.php:8
 msgid "Do even more with..."
 msgstr "Udělejte ještě více s..."
 
-#: templates/admin/getting-started.php:14
+#: templates/admin/admin.php:13
+msgid "Calendar Builder"
+msgstr "Tvůrce kalendáře"
+
+#: templates/admin/admin.php:14
+msgid ""
+"Configure all calendar settings with an easy visual interface... no need to "
+"manually type shortcodes."
+msgstr ""
+"Konfigurace všech nastavení kalendáře pomocí snadného vizuálního rozhraní... "
+"není třeba ručně zadávat zkratky."
+
+#: templates/admin/admin.php:15
+msgid "Additional Views and Enhanced Features"
+msgstr "Další zobrazení a rozšířené funkce"
+
+#: templates/admin/admin.php:16
+msgid ""
+"New ways to display your calendar including Full, Up Next, Masonry, Month "
+"with Sidebar, Widget, and more. Additional capabilities are added to the "
+"core Month, Basic, List and Week views."
+msgstr ""
+"Nové způsoby zobrazení kalendáře, včetně Plný, Další, Zděný, Měsíc s "
+"postranním panelem, Widget a další. Do základních zobrazení Měsíc, Základní, "
+"Seznam a Týden byly přidány další možnosti."
+
+#: templates/admin/admin.php:17
+msgid "Customizer"
+msgstr "Přizpůsobení"
+
+#: templates/admin/admin.php:18
+msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
+msgstr ""
+"Snadno upravte barevné palety kalendáře, písma a další prvky v rámci celého "
+"webu."
+
+#: templates/admin/admin.php:22
 msgid "ICS Events"
 msgstr "Události ICS"
 
 #. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/getting-started.php:17
+#: templates/admin/admin.php:25
 #, php-format
 msgid ""
 "%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
@@ -480,60 +499,31 @@ msgstr ""
 "spravujte události přímo ve WordPressu a dokonce je můžete hladce integrovat "
 "se stávajícími kanály."
 
-#: templates/admin/getting-started.php:19
-msgid "Additional Views"
-msgstr "Další pohledy"
-
-#: templates/admin/getting-started.php:20
-msgid "Full, Up Next, Masonry, Month with Sidebar, Widget, and more."
-msgstr "Úplný, Další, Zděný, Měsíc s postranním panelem, Widget a další."
-
-#: templates/admin/getting-started.php:21
-msgid "Customizer"
-msgstr "Přizpůsobení"
-
-#: templates/admin/getting-started.php:22
-msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
-msgstr ""
-"Snadno upravte barevné palety kalendáře, písma a další prvky v rámci celého "
-"webu."
-
-#: templates/admin/getting-started.php:25
-msgid "Calendar Builder"
-msgstr "Tvůrce kalendáře"
-
-#: templates/admin/getting-started.php:26
-msgid ""
-"Configure all calendar settings with an easy visual interface... no need to "
-"manually type shortcodes."
-msgstr ""
-"Konfigurace všech nastavení kalendáře pomocí snadného vizuálního rozhraní... "
-"není třeba ručně zadávat zkratky."
-
-#: templates/admin/getting-started.php:27
-msgid "Enhanced Features"
-msgstr "Vylepšené funkce"
-
-#: templates/admin/getting-started.php:28
-msgid ""
-"Additional capabilities are added to the core Month, Basic, List and Week "
-"views."
-msgstr ""
-"Do základních zobrazení Měsíc, Základní, Seznam a Týden byly přidány další "
-"možnosti."
-
 #. translators: 1. Link (do not translate)
-#: templates/admin/getting-started.php:31 templates/admin/sidebar.php:43
+#: templates/admin/admin.php:29
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "Navštivte %1$s a dozvíte se více."
 
-#: templates/admin/getting-started.php:36
+#: templates/admin/admin.php:34
 msgid "Go PRO!"
 msgstr "Go PRO!"
 
+#: templates/admin/admin.php:54 templates/admin/getting-started.php:3
+#: templates/admin/getting-started.php:24
+msgid "Getting Started"
+msgstr "Začínáme"
+
+#: templates/admin/admin.php:56 templates/admin/utilities.php:102
+msgid "System Report"
+msgstr "Systémová zpráva"
+
+#: templates/admin/admin.php:78
+msgid "Save Changes"
+msgstr "Uložit změny"
+
 #. translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag
-#: templates/admin/getting-started.php:54
+#: templates/admin/getting-started.php:10
 #, php-format
 msgid ""
 "Thank you for installing %1$s. Before creating your first calendar "
@@ -547,7 +537,7 @@ msgstr ""
 "Další informace naleznete v naší %4$sUživatelské příručce%5$s."
 
 #. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/getting-started.php:63
+#: templates/admin/getting-started.php:19
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
@@ -557,31 +547,31 @@ msgstr ""
 "stránkách. Níže uvádíme několik rychlých odkazů na klíčové zdroje v "
 "dokumentaci."
 
-#: templates/admin/getting-started.php:69
+#: templates/admin/getting-started.php:25
 msgid "General WordPress Settings"
 msgstr "Obecná nastavení WordPressu"
 
-#: templates/admin/getting-started.php:70
+#: templates/admin/getting-started.php:26
 msgid "Shortcode Overview"
 msgstr "Přehled krátkých kódů"
 
-#: templates/admin/getting-started.php:71
+#: templates/admin/getting-started.php:27
 msgid "Shortcode Builder"
 msgstr "Stavitel Shortcodů"
 
-#: templates/admin/getting-started.php:72
+#: templates/admin/getting-started.php:28
 msgid "Shortcode Parameters Reference"
 msgstr "Odkaz na parametry krátkého kódu"
 
-#: templates/admin/getting-started.php:73
+#: templates/admin/getting-started.php:29
 msgid "FAQs and Tips"
 msgstr "Nejčastější dotazy a tipy"
 
-#: templates/admin/getting-started.php:74
+#: templates/admin/getting-started.php:30
 msgid "CSS Guide"
 msgstr "Průvodce CSS"
 
-#: templates/admin/getting-started.php:75
+#: templates/admin/getting-started.php:31
 msgid "Developer Resources"
 msgstr "Zdroje pro vývojáře"
 
@@ -748,6 +738,20 @@ msgid ""
 msgstr ""
 "Při kontaktování podpory uveďte %1$sSystémovou zprávu%2$s z této stránky."
 
+#: templates/admin/sidebar.php:33
+msgid "Spread the word!"
+msgstr "Zmieňte se o nás!"
+
+#. translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag
+#: templates/admin/sidebar.php:37
+#, php-format
+msgid ""
+"If you find %1$s useful, you can help support our continued growth and "
+"development with a %2$sfive-star review%3$s. Thank you!"
+msgstr ""
+"Pokud se vám %1$s zdá užitečné, můžete podpořit náš další růst a rozvoj "
+"%2$spětihvězdičkovým hodnocením%3$s. Děkujeme!"
+
 #. translators: 1: Plugin name (do not translate)
 #: templates/admin/utilities.php:9
 #, php-format
@@ -853,8 +857,8 @@ msgstr "Předchozí stránka"
 msgid "Next Page"
 msgstr "Další stránka"
 
-#: templates/calendar-list.php:285 templates/calendar-month.php:200
-#: templates/calendar-week.php:209
+#: templates/calendar-list.php:285 templates/calendar-month.php:201
+#: templates/calendar-week.php:210
 msgid "All Day"
 msgstr "Celý den"
 
@@ -862,11 +866,11 @@ msgstr "Celý den"
 msgid "Today"
 msgstr "Dnes"
 
-#: templates/calendar-month.php:282 templates/calendar-week.php:294
+#: templates/calendar-month.php:284 templates/calendar-week.php:296
 msgid "No events."
 msgstr "Žádné události."
 
-#: templates/calendar-month.php:294
+#: templates/calendar-month.php:296
 msgid "No additional events this month."
 msgstr "Tento měsíc se nekonají žádné další akce."
 
@@ -904,6 +908,15 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "Download"
+#~ msgstr "Stáhnout"
+
+#~ msgid "Additional Views"
+#~ msgstr "Další pohledy"
+
+#~ msgid "Full, Up Next, Masonry, Month with Sidebar, Widget, and more."
+#~ msgstr "Úplný, Další, Zděný, Měsíc s postranním panelem, Widget a další."
 
 #, php-format
 #~ msgid ""
