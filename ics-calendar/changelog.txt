@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.11.1 - 2025.05.28 =
+
+* Changed output of `r34ics_first_day_of()` and `r34ics_last_day_of()` functions to be strings in `Y-m-d` format, rather than Unix timestamps. This resolves a timezone related issue where the returned date may actually be one day earlier than intended, causing Month view to display one extra past month, showing only the events on the last day of that month. (Note: Because the output of these functions has changed, corresponding changes were made to code that handles the output of the functions where they are called in `class-r34ics.php`.)
+
 = 11.5.11 - 2025.05.16 =
 
 * Admin page: Updated promotional content.

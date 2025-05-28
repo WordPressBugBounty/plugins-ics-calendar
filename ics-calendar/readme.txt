@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 11.5.11
+Stable tag: 11.5.11.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,10 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.11.1 - 2025.05.28 =
+
+* Changed output of `r34ics_first_day_of()` and `r34ics_last_day_of()` functions to be strings in `Y-m-d` format, rather than Unix timestamps. This resolves a timezone related issue where the returned date may actually be one day earlier than intended, causing Month view to display one extra past month, showing only the events on the last day of that month. (Note: Because the output of these functions has changed, corresponding changes were made to code that handles the output of the functions where they are called in `class-r34ics.php`.)
 
 = 11.5.11 - 2025.05.16 =
 

@@ -577,10 +577,10 @@ if (!class_exists('R34ICS')) {
 						else {
 							$first_date_base = '';
 						}
-						$first_date = r34ics_date('Ymd', '@' . r34ics_first_day_of('month', $first_date_base));
+						$first_date = r34ics_date('Ymd', r34ics_first_day_of('month', $first_date_base));
 						$first_ts = strtotime($first_date);
 						$limit_date_base = r34ics_date('Ymd', $first_date, null, '+' . intval($limitdays-1) . ' days');
-						$limit_date = r34ics_date('Ymd', '@' . r34ics_last_day_of('month', $limit_date_base));
+						$limit_date = r34ics_date('Ymd', r34ics_last_day_of('month', $limit_date_base));
 						break;
 					default:
 						// Handle other views externally

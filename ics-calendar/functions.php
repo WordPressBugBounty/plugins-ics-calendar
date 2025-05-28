@@ -534,18 +534,18 @@ function r34ics_first_day_of($interval, $dt_str='') {
 	$first_day = false;
 	switch ($interval) {
 		case 'year':
-			$first_day = strtotime(r34ics_date('Y', $dt_str) . '0101');
+			$first_day = r34ics_date('Y', $dt_str) . '-01-01';
 			break;
 		case 'week':
 			$start_of_week = get_option('start_of_week', 0);
 			$this_day = r34ics_date('w', $dt_str);
 			$days_offset = $this_day - $start_of_week;
 			if ($days_offset < 0) { $days_offset = $days_offset + 7; }
-			$first_day = strtotime(r34ics_date('Ymd', $dt_str, null, '-' . intval($days_offset) . ' days'));
+			$first_day = r34ics_date('Y-m-d', $dt_str, null, '-' . intval($days_offset) . ' days');
 			break;
 		case 'month':
 		default:
-			$first_day = strtotime(r34ics_date('Ym', $dt_str) . '01');
+			$first_day = r34ics_date('Y-m', $dt_str) . '-01';
 			break;
 	}
 	return $first_day;
@@ -785,7 +785,7 @@ function r34ics_last_day_of($interval, $dt_str='') {
 	$last_day = false;
 	switch ($interval) {
 		case 'year':
-			$last_day = strtotime(r34ics_date('Y', $dt_str) . '1231');
+			$last_day = r34ics_date('Y', $dt_str) . '-12-31';
 			break;
 		case 'week':
 			$end_of_week = get_option('start_of_week', 0) - 1;
@@ -793,11 +793,11 @@ function r34ics_last_day_of($interval, $dt_str='') {
 			$this_day = r34ics_date('w', $dt_str);
 			$days_offset = $end_of_week - $this_day;
 			if ($days_offset < 0) { $days_offset = $days_offset + 7; }
-			$last_day = strtotime(r34ics_date('Ymd', $dt_str, null, '+' . intval($days_offset) . ' days'));
+			$last_day = r34ics_date('Y-m-d', $dt_str, null, '+' . intval($days_offset) . ' days');
 			break;
 		case 'month':
 		default:
-			$last_day = strtotime(r34ics_date('n', $dt_str) . '/' . r34ics_date('t', $dt_str) . '/' . r34ics_date('Y', $dt_str));
+			$last_day = r34ics_date('Y-m-t', $dt_str); // t = number of days in month
 			break;
 	}
 	return $last_day;
