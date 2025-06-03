@@ -219,6 +219,7 @@ if (!class_exists('R34ICS')) {
 			add_filter('query_vars', array(&$this, 'query_vars'));
 			
 			// Core WP actions
+			add_action('post_updated', array(&$this, 'post_updated'), 10, 3);
 			
 			// Core WP filters
 			add_filter('http_request_host_is_external', array(&$this, 'http_request_host_is_external'), 10, 3);
@@ -543,9 +544,9 @@ if (!class_exists('R34ICS')) {
 						}
 						else {
 							$cw1 = r34ics_first_day_of('week');
-							$first_date = r34ics_date('Ymd', '@' . $cw1, null, '-7 days');
+							$first_date = r34ics_date('Ymd', $cw1, null, '-7 days');
 							$first_ts = strtotime($first_date);
-							$limit_date = r34ics_date('Ymd', '@' . $cw1, null, '+13 days');
+							$limit_date = r34ics_date('Ymd', $cw1, null, '+13 days');
 						}
 						break;
 					case 'basic':
@@ -1077,6 +1078,9 @@ if (!class_exists('R34ICS')) {
 	
 			// ICS Calendar CSS
 			wp_enqueue_style('ics-calendar');
+			if (get_option('r34ics_colors_darkmode') || get_option('r34ics_colors_match_theme_json')) {
+				wp_add_inline_style('ics-calendar', r34ics_colors_match_theme_json(get_option('r34ics_colors_darkmode'), empty(get_option('r34ics_colors_match_theme_json'))));
+			}
 			if (current_user_can('manage_options')) {
 				wp_enqueue_style('ics-calendar-debug');
 			}
@@ -1461,6 +1465,14 @@ if (!class_exists('R34ICS')) {
 		}
 		
 		
+		public function post_updated($post_id, $post_after, $post_before) {
+			// Clear ICS Calendar's cache after updating global styles (Site Editor)
+			if (get_post_type($post_id) == 'wp_global_styles') {
+				r34ics_purge_calendar_transients();
+			}
+		}
+		
+		
 		public function query_vars($qvars) {
 			$qvars[] = 'r34ics-feed-key';
 			$qvars[] = 'r34ics-urlids';
@@ -1504,6 +1516,9 @@ if (!class_exists('R34ICS')) {
 			
 			// View-specific classes
 			if (!empty($args['view']) && $args['view'] == 'week') { $ics_calendar_classes[] = 'current_week_only'; }
+			
+			// Site option-specific classes
+			if (get_option('r34ics_colors_darkmode')) { $ics_calendar_classes[] = 'darkmode'; }
 			
 			// Return the CSS classes as a string or an array
 			if (!empty($implode)) {
@@ -2104,6 +2119,12 @@ if (!class_exists('R34ICS')) {
 						: ini_get('memory_limit')
 				));
 				
+				// colors_match_theme_json
+				update_option('r34ics_colors_match_theme_json', !empty($_POST['colors_match_theme_json']));
+
+				// colors_darkmode
+				update_option('r34ics_colors_darkmode', !empty($_POST['colors_darkmode']));
+				
 				// display_add_calendar_button_false
 				update_option('r34ics_display_add_calendar_button_false', !empty($_POST['display_add_calendar_button_false']));
 			
@@ -2122,6 +2143,9 @@ if (!class_exists('R34ICS')) {
 					'status' => 'success',
 					'dismissible' => false,
 				);
+				
+				// Purge ICS Calendar transients
+				r34ics_purge_calendar_transients();
 
 				// Save deferred admin notices
 				update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices);

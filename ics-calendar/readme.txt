@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 11.5.11.1
+Stable tag: 11.5.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,15 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.12 - 2025.06.03 =
+
+* Block Themes / Site Editor Styles:
+  * Added **Match calendar color palette to current Block Theme colors** setting. For sites that are using color palettes defined in a Block Theme or with the Site Editor, this option automatically replaces ICS Calendar's default neutral gray color palette with closest-match colors from your theme's color palette. _Note: This is a BETA feature and is still in development. Added and/or modified several color-related functions in `functions.php`. [Feedback](https://icscalendar.com/support) on this feature is welcomed._
+  * Modified CSS and some logic for `solidcolors` and `whitetext` to accommodate the **Dark mode** option under the new **Match calendar color palette to current Block Theme colors** setting.
+  * **Clear Cached Calendar Data** utility now runs automatically when saving ICS Calendar settings or Site Editor configuration, so any changes to these settings will take effect immediately without needing to manually run the utility.
+* Bug Fixes: Fixed issue in Week view that might cause "Double timezone specification" PHP fatal errors after changes introduced in version 11.5.11.1.
+* i18n: Updated translation strings.
 
 = 11.5.11.1 - 2025.05.28 =
 

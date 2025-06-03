@@ -1,3 +1,36 @@
+<h3><?php esc_html_e('Appearance', 'ics-calendar'); ?></h3>
+
+<p class="r34ics-input">
+	<label for="r34ics_colors_match_theme_json"><input type="checkbox" name="colors_match_theme_json" id="r34ics_colors_match_theme_json"<?php if (get_option('r34ics_colors_match_theme_json')) { echo ' checked="checked"'; } ?> /> <strong><?php esc_html_e('Match calendar color palette to current Block Theme colors', 'ics-calendar'); ?></strong><small class="beta-indicator"><?php esc_html_e('beta', 'ics-calendar'); ?></small></label>
+	<span class="description"><small class="r34ics-help"><span class="help_content">
+	<?php
+	/* translators: 1: Plugin name (do not translate) 2: HTML tag and filename 3: HTML tag and filename */
+	printf(esc_html__('Replaces the %1$s default neutral color palette with nearest matches from the current Site Editor Styles color palette or the %2$s file in your theme. Color selections are algorithmic, and some combinations may not pass accessibility contrast tests. This setting has no effect if you are using a "classic" theme that does not include a %3$s file.', 'ics-calendar'), 'ICS Calendar', '<code>theme.json</code>', '<code>theme.json</code>');
+	?>
+	<br /><br />
+	<?php
+	/* translators: 1: HTML tag 2: HTML tag */
+	printf(esc_html__('%1$sThis is currently a beta feature.%2$s It may require making some adjustments to your calendar settings or CSS for optimal display, especially if you have color-coded your feeds. Functionality is subject to change.', 'ics-calendar'), '<strong style="color: crimson;">', '</strong>');
+	?>
+	</span></small></span>
+</p>
+
+<p class="r34ics-input">
+	<label for="r34ics_colors_darkmode"><input type="checkbox" name="colors_darkmode" id="r34ics_colors_darkmode"<?php if (get_option('r34ics_colors_darkmode')) { echo ' checked="checked"'; } ?> /> <strong><?php esc_html_e('Dark mode', 'r34ics'); ?></strong><small class="beta-indicator"><?php esc_html_e('beta', 'ics-calendar'); ?></small></label>
+	<span class="description"><small class="r34ics-help"><span class="help_content"><?php
+	/* translators: 1: HTML tags 2: HTML tag 3: HTML tag and code 4: HTML tag and code */
+	printf(esc_html__('Inverts color palette (light colors on a dark background). %1$sNote:%2$s Dark mode also automatically applies style changes similar to the %3$s and %4$s shortcode parameters, so you do not need to include them in your shortcode.', 'r34ics'), '<br /><br /><strong>', '</strong>', '<code>solidcolors</code>', '<code>whitetext</code>');
+	?>
+	<br /><br />
+	<?php
+	/* translators: 1: HTML tag 2: HTML tag */
+	printf(esc_html__('%1$sThis is currently a beta feature.%2$s It may require making some adjustments to your calendar settings or CSS for optimal display, especially if you have color-coded your feeds. Functionality is subject to change.', 'ics-calendar'), '<strong style="color: crimson;">', '</strong>');
+	?>
+	</span></small></span>
+</p>
+
+<?php do_action('r34ics_settings_fields_appearance'); ?>
+
 <h3><?php esc_html_e('Loading', 'ics-calendar'); ?></h3>
 
 <p class="r34ics-input">
@@ -22,7 +55,7 @@
 	?>
 	</label>
 	<span class="description"><small class="r34ics-help"><span class="help_content"><?php
-	/* translators: 1. HTML tag */
+	/* translators: 1: HTML tag */
 	printf(esc_html__('If your calendar is failing to load with an "out of memory" fatal error, try increasing the memory limit. A minimum of 512 MB is recommended. %1$s Notes: 1) Some hosting providers may not allow applications to override the server default setting. 2) It is not possible to set this option lower than the current default memory limit on your server.', 'ics-calendar'), '<br /><br />');
 	?></span></small></span>
 </p>
@@ -36,11 +69,11 @@
 	<label for="r34ics_allowed_hosts"><strong><?php esc_html_e('Allow access to these hostnames that resolve to reserved IP addresses', 'ics-calendar'); ?>:</strong><br />
 	<textarea name="allowed_hosts" id="r34ics_allowed_hosts" style="max-width: 400px; width: 100%; height: 4.5rem;" /><?php echo esc_attr(implode("\n", get_option('r34ics_allowed_hosts') ? get_option('r34ics_allowed_hosts') : array())); ?></textarea></label>
 	<span class="description"><small class="r34ics-help"><span class="help_content"><?php
-	/* translators: 1. HTML tag 2. HTML tag 3. HTML tag 4: Plugin name (do not translate) 5. HTML tag */
+	/* translators: 1: HTML tag 2: HTML tag 3: HTML tag 4: Plugin name (do not translate) 5: HTML tag */
 	printf(esc_html__('If your calendar server is hosted on the same physical server as your website, is part of the same local network, or otherwise uses a %1$sreserved IP address%2$s, enter its hostname here to allow access. For multiple calendar servers, enter one hostname per line. See %3$sthe %4$s documentation%5$s for more information.', 'ics-calendar'), '<a href="https://en.wikipedia.org/wiki/Internet_Protocol_version_4#Special-use_addresses" target="_blank">', '</a>', '<a href="https://icscalendar.com/developer/#http_request_host_is_external" target="_blank">', 'ICS Calendar', '</a>');
 	?></span></small></span><br />
 	<small><?php
-	/* translators: 1. HTML tag 2. HTML tag 3. HTML tag */
+	/* translators: 1: HTML tag 2: HTML tag 3: HTML tag */
 	printf(esc_html__('Enter one hostname per line. Hostnames are the base domain name, not a full URL. %1$s For example, you would enter %2$s, not %3$s.', 'ics-calendar'), '<br />', '<code style="font-size: 100%;">example.com</code>', '<code style="font-size: 100%;">https://example.com/path/</code>');
 	?></small>
 </p>
@@ -66,7 +99,7 @@
 <p class="r34ics-input">
 	<label for="r34ics_use_new_defaults_10_6"><input type="checkbox" name="use_new_defaults_10_6" id="r34ics_use_new_defaults_10_6"<?php if (get_option('r34ics_use_new_defaults_10_6')) { echo ' checked="checked"'; } ?> /> <strong><?php esc_html_e('Use new parameter defaults (v.10.6)', 'ics-calendar'); ?></strong></label>
 	<span class="description"><small class="r34ics-help"><span class="help_content"><?php
-	/* translators: 1: Plugin name (do not translate) 2. HTML tag 3. HTML tag */
+	/* translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag */
 	printf(esc_html__('%1$s version 10.6 introduced new default values for several shortcode parameters. New installations automatically use the new default values, but upgraded installations will continue to use the old default values, unless this box is checked. Read more about these changes on %2$sour blog%3$s.', 'ics-calendar'), 'ICS Calendar', '<a href="https://icscalendar.com/updated-parameter-defaults-in-ics-calendar-10-6/" target="_blank">', '</a>');
 	?></span></small></span>
 </p>

@@ -38,6 +38,26 @@ will be retained permanently, so they can be used to create custom color palette
 	--r34ics--color--trans90: rgba(105,105,105,0.9);
 }
 
+.beta-indicator, .deprecated-indicator {
+	border-radius: 3px;
+	display: inline-block;
+	font-size: 10px;
+	font-variant: small-caps;
+	font-weight: 600;
+	margin-left: 5px;
+	padding: 2px 5px;
+	text-transform: uppercase;
+}
+
+.beta-indicator {
+	background: rgba(220,20,60,0.15);
+	color: #dc143c;
+}
+
+.deprecated-indicator {
+	background: rgba(105,105,105,0.15);
+	color: #696969;
+}
 
 .notice.r34ics-admin-notice {
 	align-items: center;
@@ -47,7 +67,6 @@ will be retained permanently, so they can be used to create custom color palette
 	min-height: 64px;
 	padding-left: 72px;
 }
-
 
 .r34ics h4 code { font-weight: normal; }
 

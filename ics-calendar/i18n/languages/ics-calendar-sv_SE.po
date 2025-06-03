@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-05-16 14:54-0500\n"
-"PO-Revision-Date: 2025-05-16 14:54-0500\n"
+"POT-Creation-Date: 2025-06-03 14:51-0500\n"
+"PO-Revision-Date: 2025-06-03 14:51-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:294
+#: class-r34ics.php:295
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -33,7 +33,7 @@ msgstr ""
 "funktioner vara otillgängliga eller inte fungera korrekt."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:304
+#: class-r34ics.php:305
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -50,33 +50,33 @@ msgstr ""
 "för korrekt tidsvisning. Se vår %6$sdokumentation%7$s för ytterligare "
 "information om detta problem."
 
-#: class-r34ics.php:347 templates/admin/admin.php:55
+#: class-r34ics.php:348 templates/admin/admin.php:55
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "Verktyg"
 
-#: class-r34ics.php:348 class-r34ics.php:2040 class-r34ics.php:2045
+#: class-r34ics.php:349 class-r34ics.php:2055 class-r34ics.php:2060
 #: templates/admin/admin.php:57 templates/admin/admin.php:69
 msgid "Settings"
 msgstr "Inställningar"
 
-#: class-r34ics.php:349 templates/admin/sidebar.php:5
+#: class-r34ics.php:350 templates/admin/sidebar.php:5
 msgid "User Guide"
 msgstr "Användarhandbok"
 
-#: class-r34ics.php:350 templates/admin/sidebar.php:10
+#: class-r34ics.php:351 templates/admin/sidebar.php:10
 msgid "Support"
 msgstr "Support"
 
-#: class-r34ics.php:352
+#: class-r34ics.php:353
 msgid "Upgrade to PRO!"
 msgstr "Uppgradera till PRO!"
 
-#: class-r34ics.php:370
+#: class-r34ics.php:371
 msgid "Show/hide all"
 msgstr "Visa/dölj alla"
 
-#: class-r34ics.php:631
+#: class-r34ics.php:632
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -90,36 +90,36 @@ msgstr ""
 "mellanslag för att avgränsa flera webbadresser kan du också vilja prova att "
 "använda rörtecknet istället. Berörd webbadress:"
 
-#: class-r34ics.php:1069
+#: class-r34ics.php:1070
 msgid "Hide past events"
 msgstr "Dölj tidigare evenemang"
 
-#: class-r34ics.php:1070 templates/calendar-month.php:83
+#: class-r34ics.php:1071 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "Visa tidigare evenemang"
 
-#: class-r34ics.php:1148
+#: class-r34ics.php:1152
 msgid "Contact:"
 msgstr "Kontakt:"
 
-#: class-r34ics.php:1154
+#: class-r34ics.php:1158
 msgid "Resources:"
 msgstr "Resurser:"
 
-#: class-r34ics.php:1164
+#: class-r34ics.php:1168
 msgid "Click for more..."
 msgstr "Klicka för mer..."
 
-#: class-r34ics.php:1198
+#: class-r34ics.php:1202
 msgid "Save to your calendar"
 msgstr "Spara i din kalender"
 
-#: class-r34ics.php:1301
+#: class-r34ics.php:1305
 msgid "Cancelled"
 msgstr "Avbruten"
 
-#: class-r34ics.php:1686
+#: class-r34ics.php:1701
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -127,7 +127,7 @@ msgstr ""
 "Kortkodsattributet \"currentweek\" är inaktuelt. Använd view=\"week\" i "
 "kortkoden i stället."
 
-#: class-r34ics.php:1689
+#: class-r34ics.php:1704
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -136,19 +136,19 @@ msgstr ""
 "legendstyle=\"inline\" i din kortkod."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:1992
+#: class-r34ics.php:2007
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Rensade %1$s %2$s transient(er)."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2000
+#: class-r34ics.php:2015
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Inga %1$s-övergångar hittades."
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2040
+#: class-r34ics.php:2055
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -158,12 +158,12 @@ msgstr ""
 "autentiseringsuppgifter. Försök att stänga av alternativet %1$s under fliken "
 "%2$s ovan."
 
-#: class-r34ics.php:2040 class-r34ics.php:2045 templates/admin/settings.php:31
+#: class-r34ics.php:2055 class-r34ics.php:2060 templates/admin/settings.php:64
 msgid "Use legacy feed request method"
 msgstr "Använd äldre metod för begäran om matning"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2045
+#: class-r34ics.php:2060
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -173,7 +173,7 @@ msgstr ""
 "att aktivera alternativet %3$s under fliken %4$s ovan."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2052
+#: class-r34ics.php:2067
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -190,19 +190,19 @@ msgstr ""
 "dynamiskt flöde."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2059
+#: class-r34ics.php:2074
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Fel: Det gick inte att fastställa IP-adressen för %1$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2063
+#: class-r34ics.php:2078
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Löst IP-adress för %1$s:"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2121
+#: class-r34ics.php:2142
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -211,60 +211,60 @@ msgstr ""
 "%1$sInställningarna uppdaterade.%2$s Du kan behöva uppdatera sidan för att "
 "se vissa ändringar."
 
-#: class-r34ics.php:2359
+#: class-r34ics.php:2383
 msgid "calendar event"
 msgstr "kalenderhändelse"
 
-#: functions.php:884 functions.php:892 functions.php:901
+#: functions.php:983 functions.php:991 functions.php:1000
 msgid "Map"
 msgstr "Karta"
 
-#: functions.php:1119
+#: functions.php:1218
 msgid "Recurring event"
 msgstr "Återkommande händelse"
 
 #. translators: 1. Dynamic value
-#: functions.php:1125
+#: functions.php:1224
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Återkommer varje %1$s år"
 
-#: functions.php:1125
+#: functions.php:1224
 msgid "Recurs yearly"
 msgstr "Återkommer årligen"
 
 #. translators: 1. Dynamic value
-#: functions.php:1129
+#: functions.php:1228
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Återkommer varje %1$s månad"
 
-#: functions.php:1129
+#: functions.php:1228
 msgid "Recurs monthly"
 msgstr "Återkommer varje månad"
 
 #. translators: 1. Dynamic value
-#: functions.php:1133
+#: functions.php:1232
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Återkommer varje %1$s vecka"
 
-#: functions.php:1133
+#: functions.php:1232
 msgid "Recurs weekly"
 msgstr "Återkommer varje vecka"
 
 #. translators: 1. Dynamic value
-#: functions.php:1137
+#: functions.php:1236
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Återkommer varje %1$s dag"
 
-#: functions.php:1137
+#: functions.php:1236
 msgid "Recurs daily"
 msgstr "Återkommer dagligen"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1283
+#: functions.php:1382
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -276,7 +276,7 @@ msgstr ""
 "har din URL förvandlats till en klickbar länk. Det kan hända att din "
 "kalender inte visas korrekt. Ta bort den klickbara länken i kortkoden."
 
-#: functions.php:1611
+#: functions.php:1710
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funktionen r34ics_url_get_contents() stöds inte längre."
 
@@ -298,7 +298,7 @@ msgstr ""
 "om du vill byta till de nya standardvärdena kan du aktivera alternativet "
 "%8$s på sidan %9$s inställningar%10$s."
 
-#: ics-calendar.php:205 templates/admin/settings.php:67
+#: ics-calendar.php:205 templates/admin/settings.php:100
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Använd nya standardparametrar (v.10.6)"
 
@@ -576,14 +576,74 @@ msgid "Developer Resources"
 msgstr "Resurser för utvecklare"
 
 #: templates/admin/settings.php:1
+msgid "Appearance"
+msgstr "Utseende"
+
+#: templates/admin/settings.php:4
+msgid "Match calendar color palette to current Block Theme colors"
+msgstr "Anpassa kalenderns färgpalett till aktuella Block Theme-färger"
+
+#: templates/admin/settings.php:4 templates/admin/settings.php:19
+msgid "beta"
+msgstr "beta"
+
+#. translators: 1: Plugin name (do not translate) 2: HTML tag and filename 3: HTML tag and filename
+#: templates/admin/settings.php:8
+#, php-format
+msgid ""
+"Replaces the %1$s default neutral color palette with nearest matches from "
+"the current Site Editor Styles color palette or the %2$s file in your theme. "
+"Color selections are algorithmic, and some combinations may not pass "
+"accessibility contrast tests. This setting has no effect if you are using a "
+"\"classic\" theme that does not include a %3$s file."
+msgstr ""
+"Ersätter den neutrala standardfärgpaletten %1$s med de närmaste "
+"matchningarna från den aktuella färgpaletten Site Editor Styles eller filen "
+"%2$s i ditt tema. Färgvalen är algoritmiska och vissa kombinationer kanske "
+"inte klarar kontrasttester för tillgänglighet. Den här inställningen har "
+"ingen effekt om du använder ett \"klassiskt\" tema som inte innehåller en "
+"%3$s-fil."
+
+#. translators: 1: HTML tag 2: HTML tag
+#: templates/admin/settings.php:13 templates/admin/settings.php:27
+#, php-format
+msgid ""
+"%1$sThis is currently a beta feature.%2$s It may require making some "
+"adjustments to your calendar settings or CSS for optimal display, especially "
+"if you have color-coded your feeds. Functionality is subject to change."
+msgstr ""
+"%1$sDetta är för närvarande en beta-funktion.%2$s Det kan krävas vissa "
+"justeringar av dina kalenderinställningar eller CSS för optimal visning, "
+"särskilt om du har färgkodat dina flöden. Funktionaliteten kan komma att "
+"ändras."
+
+#: templates/admin/settings.php:19
+msgid "Dark mode"
+msgstr "Mörkt läge"
+
+#. translators: 1: HTML tags 2: HTML tag 3: HTML tag and code 4: HTML tag and code
+#: templates/admin/settings.php:22
+#, php-format
+msgid ""
+"Inverts color palette (light colors on a dark background). %1$sNote:%2$s "
+"Dark mode also automatically applies style changes similar to the %3$s and "
+"%4$s shortcode parameters, so you do not need to include them in your "
+"shortcode."
+msgstr ""
+"Inverterar färgpaletten (ljusa färger på en mörk bakgrund). %1$sObs:%2$s "
+"Mörkt läge tillämpar också automatiskt stiländringar som liknar "
+"kortkodsparametrarna %3$s och %4$s, så du behöver inte inkludera dem i din "
+"kortkod."
+
+#: templates/admin/settings.php:34
 msgid "Loading"
 msgstr "Laddar"
 
-#: templates/admin/settings.php:4
+#: templates/admin/settings.php:37
 msgid "Always use AJAX to render calendars (recommended)"
 msgstr "Använd alltid AJAX för att rendera kalendrar (rekommenderas)"
 
-#: templates/admin/settings.php:5
+#: templates/admin/settings.php:38
 msgid ""
 "When checked, all calendars will render via AJAX (asynchronously after the "
 "page loads). This is especially useful in conjunction with other caching "
@@ -597,12 +657,12 @@ msgstr ""
 "händelser. Normalt skickas kalenderdata direkt i HTML-koden vid den första "
 "sidladdningen om inte AJAX har angetts i kortkoden."
 
-#: templates/admin/settings.php:9
+#: templates/admin/settings.php:42
 msgid "Increase memory limit when rendering calendars"
 msgstr "Öka minnesgränsen vid rendering av kalendrar"
 
-#. translators: 1. HTML tag
-#: templates/admin/settings.php:26
+#. translators: 1: HTML tag
+#: templates/admin/settings.php:59
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -617,7 +677,7 @@ msgstr ""
 "serverns standardinställning. 2) Det är inte möjligt att ställa in det här "
 "alternativet lägre än den aktuella standardminnesgränsen på din server."
 
-#: templates/admin/settings.php:32
+#: templates/admin/settings.php:65
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
 "on this option to use the legacy request method."
@@ -626,13 +686,13 @@ msgstr ""
 "aktiverar du det här alternativet för att använda den gamla "
 "förfrågningsmetoden."
 
-#: templates/admin/settings.php:36
+#: templates/admin/settings.php:69
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Tillåt åtkomst till dessa värdnamn som leder till reserverade IP-adresser"
 
-#. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4: Plugin name (do not translate) 5. HTML tag
-#: templates/admin/settings.php:40
+#. translators: 1: HTML tag 2: HTML tag 3: HTML tag 4: Plugin name (do not translate) 5: HTML tag
+#: templates/admin/settings.php:73
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -647,8 +707,8 @@ msgstr ""
 "kalenderservrar anger du ett värdnamn per rad. Se "
 "%3$sdokumentationen%4$s%5$s för mer information."
 
-#. translators: 1. HTML tag 2. HTML tag 3. HTML tag
-#: templates/admin/settings.php:44
+#. translators: 1: HTML tag 2: HTML tag 3: HTML tag
+#: templates/admin/settings.php:77
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -657,19 +717,19 @@ msgstr ""
 "Ange ett värdnamn per rad. Värdnamn är basdomännamnet, inte en fullständig "
 "URL. %1$s Du ska till exempel ange %2$s, inte %3$s."
 
-#: templates/admin/settings.php:50
+#: templates/admin/settings.php:83
 msgid "Caching"
 msgstr "Cachelagring"
 
-#: templates/admin/settings.php:53
+#: templates/admin/settings.php:86
 msgid "Transient (cache) expiration"
 msgstr "Tillfälligt upphörande (cache)"
 
-#: templates/admin/settings.php:53
+#: templates/admin/settings.php:86
 msgid "seconds"
 msgstr "sekunder"
 
-#: templates/admin/settings.php:54
+#: templates/admin/settings.php:87
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
@@ -677,15 +737,15 @@ msgstr ""
 "Ställer in hur länge kalendermatningsdata ska cachas på servern (WordPress "
 "transients) innan de laddas om. Standardvärdet är 3600 (1 timme)."
 
-#: templates/admin/settings.php:59
+#: templates/admin/settings.php:92
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: templates/admin/settings.php:62
+#: templates/admin/settings.php:95
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Ta bort knappen \"Lägg till ICS-kalender\" i Classic Editor"
 
-#: templates/admin/settings.php:63
+#: templates/admin/settings.php:96
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -696,8 +756,8 @@ msgstr ""
 "Markera den här rutan för att ta bort knappen. Har ingen effekt på "
 "webbplatser som använder Blockredigeraren (Gutenberg)."
 
-#. translators: 1: Plugin name (do not translate) 2. HTML tag 3. HTML tag
-#: templates/admin/settings.php:70
+#. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
+#: templates/admin/settings.php:103
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

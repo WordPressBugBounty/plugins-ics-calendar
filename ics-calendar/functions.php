@@ -25,13 +25,28 @@ function r34ics_boolean_check($val) {
 }
 
 
+// Get the closest match for a hex color from a palette array
+// $palette must be an array with hex values as the keys and corresponding luminosity as the values!
+// Based on: https://stackoverflow.com/a/5464961
+function r34ics_color_closest($luminosity, $palette, $darkmode=false) {
+	if ($darkmode) { $luminosity = 1 - $luminosity; } // Invert the luminosity for dark mode
+	$closest = null;
+	foreach ((array)$palette as $hex => $item) {
+		if ($closest === null || abs($luminosity - $closest) > abs($item - $luminosity)) {
+			$closest = $item;
+		}
+	}
+	return array_search($closest, $palette);
+}
+
+
 // Sanitize a hex color string
 function r34ics_color_hex_sanitize($color='') {
 	if (empty($color)) { return ''; }
 	// Allow 'transparent' as-is
 	if ($color == 'transparent') { return $color; }
 	// Strip invalid characters from string
-	$output = preg_replace('/[^0-9a-f]/', '', $color);
+	$output = preg_replace('/[^0-9a-f]/', '', strtolower($color));
 	// Convert 3-character hex to 6-character hex
 	if (strlen($output ?? '') == 3) {
 		$output = str_repeat(substr($output,0,1),2) . str_repeat(substr($output,1,1),2) . str_repeat(substr($output,2,1),2);
@@ -58,6 +73,17 @@ function r34ics_color_key_allowed() {
 			),
 		)
 	);
+}
+
+
+// Calculate luminosity of an RGB color array
+// Based on: https://www.splitbrain.org/blog/2008-09/18-calculating_color_contrast_with_php
+function r34ics_color_luminosity($rgb) {
+	if (!is_array($rgb) || count($rgb) != 3) { return false; }
+	$luminosity = 0.2126 * pow($rgb[0]/255, 2.2) + // Red luminosity
+		0.7152 * pow($rgb[1]/255, 2.2) + // Green luminosity
+		0.0722 * pow($rgb[2]/255, 2.2); // Blue luminosity
+	return $luminosity;
 }
 
 
@@ -222,6 +248,7 @@ function r34ics_color_name2hex($name) {
 // Build array of base and accent colors
 function r34ics_color_set($colors, $alpha=0.75, $highlight_tint=true) {
 	$arr = array();
+	if (get_option('r34ics_colors_darkmode')) { $highlight_tint = false; }
 	foreach ((array)$colors as $key => $color) {
 		if (empty($color)) { continue; }
 		$arr[$key] = array(
@@ -237,12 +264,84 @@ function r34ics_color_set($colors, $alpha=0.75, $highlight_tint=true) {
 function r34ics_color_text4bg($hex='', $trimhash=false) {
 	$hex = (string)$hex; // Avoid PHP 8.1 "Passing null to parameter" deprecation notice
 	$rgb = r34ics_hex2rgba($hex, null, false, true);
-	// Calculate luminosity
-	// Based on: https://www.splitbrain.org/blog/2008-09/18-calculating_color_contrast_with_php
-	$luminosity = 0.2126 * pow($rgb[0]/255, 2.2) + // Red luminosity
-		0.7152 * pow($rgb[1]/255, 2.2) + // Green luminosity
-		0.0722 * pow($rgb[2]/255, 2.2); // Blue luminosity
+	$luminosity = r34ics_color_luminosity($rgb);
 	return ($luminosity > 0.5) ? 'black' : 'white';
+}
+
+
+// Automatically redefine ICS Calendar's CSS color variables based on closest matches from theme.json
+// Has no effect if site does not use Block Theme color palettes!
+function r34ics_colors_match_theme_json($darkmode=false, $use_default_palette=false) {
+	$transient_name = 'r34ics_colors_match_theme_json_css';
+	$css = ''; //get_transient($transient_name);
+	if (empty($css)) {
+		$named = r34ics_colors_named();
+		if (!empty($use_default_palette)) {
+			$palette = array();
+			foreach ((array)$named as $color) {
+				$palette[] = array(
+					'color' => r34ics_color_name2hex($color),
+					'name' => $color,
+					'slug' => $color,
+				);
+			}
+		}
+		else {
+			$palette = wp_get_global_settings(array('color', 'palette', 'theme')) ?: wp_get_global_settings(array('color', 'palette', 'default'));
+		}
+		if (!empty($palette)) {
+			$colors = array();
+			foreach ((array)$palette as $item) {
+				if ($hex = r34ics_color_hex_sanitize($item['color'])) {
+					$luminosity = r34ics_color_luminosity(r34ics_hex2rgba($hex, 1, false, true));
+					$colors[$hex] = $luminosity;
+				}
+			}
+			$mapped = array();
+			foreach ((array)$named as $color) {
+				$hex = r34ics_color_name2hex($color);
+				$luminosity = r34ics_color_luminosity(r34ics_hex2rgba($hex, 1, false, true));
+				$new = r34ics_color_closest($luminosity, $colors, $darkmode);
+				$mapped[] = array(
+					'named' => $color,
+					'original' => $hex,
+					'new' => ($new ?: $hex),
+				);
+				// Don't reuse this color
+				unset($colors[$new]);
+			}
+			// We still return some empty CSS even if there's nothing to customize, just so the transient isn't empty
+			// @todo Rethink this transient situation
+			ob_start();
+			?>
+			.ics-calendar, .r34ics_lightbox {
+				<?php
+				if (!empty($mapped)) {
+					foreach ((array)$mapped as $item) {
+						?>
+						--r34ics--color--<?php echo esc_attr($item['named']); ?>: <?php echo esc_attr($item['new']); ?> !important;
+						<?php
+					}
+				}
+				?>
+			}
+			<?php
+			$css = ob_get_clean();
+		}
+		set_transient($transient_name, $css, 3600);
+	}
+	return $css;
+}
+
+
+// List of HTML named colors used in ICS Calendar CSS variables
+// Note: The colors are ranked by how commonly they're used in the plugin's CSS, for most effective matching with no repeats
+function r34ics_colors_named($include_accent_colors=false) {
+	$arr = array('black', 'white', 'gainsboro', 'gray', 'whitesmoke', 'dimgray', 'darkgray');
+	if (!empty($include_accent_colors)) {
+		$arr = array_merge($arr, array('dodgerblue', 'gold', 'lemonchiffon', 'limegreen', 'orangered'));
+	}
+	return $arr;
 }
 
 

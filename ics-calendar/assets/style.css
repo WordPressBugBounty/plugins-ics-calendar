@@ -109,10 +109,10 @@ will be retained permanently, so they can be used to create custom color palette
 		color: var(--r34ics--color--black);
 		overflow: visible;
 	}
-	.ics-calendar.solidcolors .events,
-	.ics-calendar.whitetext .events,
-	.ics-calendar.solidcolors .events a,
-	.ics-calendar.whitetext .events a {
+	.ics-calendar.solidcolors:not(.darkmode) .events,
+	.ics-calendar.whitetext:not(.darkmode) .events,
+	.ics-calendar.solidcolors:not(.darkmode) .events a,
+	.ics-calendar.whitetext:not(.darkmode) .events a {
 		color: var(--r34ics--color--white);
 	}
 	
@@ -515,6 +515,7 @@ will be retained permanently, so they can be used to create custom color palette
 			
 			.ics-calendar-month-grid .day {
 				background: var(--r34ics--color--whitesmoke);
+				color: var(--r34ics--color--black);
 				font-weight: bold;
 				padding: 0.2em 0.8em;
 			}
@@ -633,8 +634,9 @@ will be retained permanently, so they can be used to create custom color palette
 	background: transparent !important; /* Override possible theme alternating row colors */
 }
 
-.ics-calendar.whitetext *:not(select),
-.ics-calendar.solidcolors .ics-calendar-color-key {
+.ics-calendar.whitetext:not(.darkmode) *:not(.ics-calendar-select),
+.ics-calendar.darkmode .ics-calendar-select,
+.ics-calendar.solidcolors:not(.darkmode) .ics-calendar-color-key {
 	color: var(--r34ics--color--white) !important;
 }
 
@@ -784,8 +786,8 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 		padding: 0.4em 0.6em;
 		position: absolute; top: 2em; left: 3em;
 	}
-	.ics-calendar.solidcolors .event .hover_block,
-	.ics-calendar.whitetext .event .hover_block {
+	.ics-calendar.solidcolors:not(.darkmode) .event .hover_block,
+	.ics-calendar.whitetext:not(.darkmode) .event .hover_block {
 		background: var(--r34ics--color--dimgray);
 	}
 	/* [data-month-table-list-toggle=list] is a Pro feature */
