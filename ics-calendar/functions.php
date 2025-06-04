@@ -273,7 +273,7 @@ function r34ics_color_text4bg($hex='', $trimhash=false) {
 // Has no effect if site does not use Block Theme color palettes!
 function r34ics_colors_match_theme_json($darkmode=false, $use_default_palette=false) {
 	$transient_name = 'r34ics_colors_match_theme_json_css';
-	$css = ''; //get_transient($transient_name);
+	$css = get_transient($transient_name);
 	if (empty($css)) {
 		$named = r34ics_colors_named();
 		if (!empty($use_default_palette)) {
@@ -302,6 +302,13 @@ function r34ics_colors_match_theme_json($darkmode=false, $use_default_palette=fa
 				$hex = r34ics_color_name2hex($color);
 				$luminosity = r34ics_color_luminosity(r34ics_hex2rgba($hex, 1, false, true));
 				$new = r34ics_color_closest($luminosity, $colors, $darkmode);
+				// If there's no new color (because we ran out of options) and we're in dark mode, invert luminosity of the default color
+				if (!empty($darkmode) && empty($new)) {
+					// Note: Directly inverting the luminosity may make colors too dark due to most displays' gamma curves
+					// This is a rather crude formula but it is adequate for this purpose!
+					$inverted_luminosity = (1.25 - $luminosity) / 1.25;
+					$new = 'hsl(0,0%,' . round($inverted_luminosity * 100, 2) . '%)';
+				}
 				$mapped[] = array(
 					'named' => $color,
 					'original' => $hex,
@@ -335,9 +342,9 @@ function r34ics_colors_match_theme_json($darkmode=false, $use_default_palette=fa
 
 
 // List of HTML named colors used in ICS Calendar CSS variables
-// Note: The colors are ranked by how commonly they're used in the plugin's CSS, for most effective matching with no repeats
+// Note: The gray shades are ranked for most effective matching and contrast, with no repeats
 function r34ics_colors_named($include_accent_colors=false) {
-	$arr = array('black', 'white', 'gainsboro', 'gray', 'whitesmoke', 'dimgray', 'darkgray');
+	$arr = array('black', 'white', 'dimgray', 'gainsboro', 'gray', 'whitesmoke', 'darkgray');
 	if (!empty($include_accent_colors)) {
 		$arr = array_merge($arr, array('dodgerblue', 'gold', 'lemonchiffon', 'limegreen', 'orangered'));
 	}
