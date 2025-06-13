@@ -1426,6 +1426,20 @@ function r34ics_system_report($echo=true) {
 			}
 		}
 		sort($plugin_list);
+		
+		// Append Multisite "network active" plugins to list
+		if (is_multisite()) {
+			$active_network_plugins = get_network_option(null, 'active_sitewide_plugins');
+			foreach (array_keys((array)$active_network_plugins) as $plugin) {
+				if (isset($plugins[$plugin]['Name']) && isset($plugins[$plugin]['Version'])) {
+					$plugin_list['Network Active'][] = $plugins[$plugin]['Name'] . ' ' . $plugins[$plugin]['Version'];
+				}
+				else {
+					$plugin_list['Network Active'][] = $plugin;
+				}
+			}
+			sort($plugin_list['Network Active']);
+		}
 			
 		// Gather all report data
 		global $wpdb;

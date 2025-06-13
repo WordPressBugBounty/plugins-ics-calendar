@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.12.2 - 2025.06.12 =
+
+* On Multisite installations, added "network active" plugins to System Report.
+
 = 11.5.12.1 - 2025.06.04 =
 
 * Fixed bug in new `r34ics_colors_match_theme_json()` that prevented transient storage of the adjusted CSS color palette.
