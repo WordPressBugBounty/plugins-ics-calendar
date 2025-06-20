@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.12.3 - 2025.06.20 =
+
+* Fixed issue with the `r34ics_purge_calendar_transients()` function (the function used by the **Clear Cached Calendar Data** utility) that was causing the **Transient (cache) expiration** setting to get reset. This problem was exacerbated by the change introduced in version 11.5.12 that automatically runs the utility every time the ICS Calendar settings are saved. (A SQL statement in the function needed backslashes added for literal underscores.)
+
 = 11.5.12.2 - 2025.06.12 =
 
 * On Multisite installations, added "network active" plugins to System Report.

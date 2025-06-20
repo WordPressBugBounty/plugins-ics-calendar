@@ -1191,7 +1191,7 @@ function r34ics_purge_calendar_transients() {
 	// Now we purge the plugin's transients and return the results of the query
 	// We do this with a custom SQL query because it's a lot simpler!
 	global $wpdb;
-	return $wpdb->query($wpdb->prepare("DELETE FROM `" . $wpdb->options . "` WHERE `option_name` LIKE %s AND `option_name` LIKE %s", '%_transient_%', '%R34ICS%'));
+	return $wpdb->query($wpdb->prepare("DELETE FROM `" . $wpdb->options . "` WHERE `option_name` LIKE %s AND `option_name` LIKE %s", '%\_transient\_%', '%R34ICS%'));
 }
 
 
