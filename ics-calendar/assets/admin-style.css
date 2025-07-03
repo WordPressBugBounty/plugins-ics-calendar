@@ -284,7 +284,7 @@ will be retained permanently, so they can be used to create custom color palette
 			border-bottom: 5px solid transparent;
 			color: inherit;
 			display: inline-block;
-			padding: 1rem 0 0.5rem 0;
+			padding: 1rem 0 calc(1rem - 5px) 0;
 			text-decoration: none;
 		}
 
@@ -353,6 +353,14 @@ will be retained permanently, so they can be used to create custom color palette
 				font-size: 90% !important;
 				padding: 1px 2px !important;
 			}
+
+.r34ics-gradient-bg {
+	background-image: url('red-purple-gradient-background.png');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 75%;
+}
 
 .r34ics-pro-mo {}
 

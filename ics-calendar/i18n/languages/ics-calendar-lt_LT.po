@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-06-03 14:54-0500\n"
-"PO-Revision-Date: 2025-06-03 14:54-0500\n"
+"POT-Creation-Date: 2025-07-03 10:40-0500\n"
+"PO-Revision-Date: 2025-07-03 10:40-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: lt_LT\n"
@@ -215,56 +215,56 @@ msgstr ""
 msgid "calendar event"
 msgstr "kalendoriaus įvykis"
 
-#: functions.php:983 functions.php:991 functions.php:1000
+#: functions.php:990 functions.php:998 functions.php:1007
 msgid "Map"
 msgstr "Žemėlapis"
 
-#: functions.php:1218
+#: functions.php:1225
 msgid "Recurring event"
 msgstr "Pasikartojantis įvykis"
 
 #. translators: 1. Dynamic value
-#: functions.php:1224
+#: functions.php:1231
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Pasikartoja kas %1$s metų"
 
-#: functions.php:1224
+#: functions.php:1231
 msgid "Recurs yearly"
 msgstr "Kartojasi kasmet"
 
 #. translators: 1. Dynamic value
-#: functions.php:1228
+#: functions.php:1235
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Pasikartoja kas %1$s mėnesių"
 
-#: functions.php:1228
+#: functions.php:1235
 msgid "Recurs monthly"
 msgstr "Kartojasi kas mėnesį"
 
 #. translators: 1. Dynamic value
-#: functions.php:1232
+#: functions.php:1239
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Pasikartoja kas %1$s savaičių"
 
-#: functions.php:1232
+#: functions.php:1239
 msgid "Recurs weekly"
 msgstr "Kartojasi kas savaitę"
 
 #. translators: 1. Dynamic value
-#: functions.php:1236
+#: functions.php:1243
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Pasikartoja kas %1$s dienų"
 
-#: functions.php:1236
+#: functions.php:1243
 msgid "Recurs daily"
 msgstr "Kartojasi kasdien"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1382
+#: functions.php:1389
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -277,7 +277,7 @@ msgstr ""
 "spustelėti. Dėl to jūsų kalendorius gali būti rodomas netinkamai. "
 "Pašalinkite trumpojo kodo paspaudžiamą nuorodą."
 
-#: functions.php:1710
+#: functions.php:1731
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() nebepalaikoma."
 
@@ -513,7 +513,7 @@ msgid "Go PRO!"
 msgstr "Eiti PRO!"
 
 #: templates/admin/admin.php:54 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:24
+#: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "Pradėkime"
 
@@ -551,33 +551,59 @@ msgstr ""
 "pateikiamos kelios trumpos nuorodos į pagrindinius dokumentuose esančius "
 "šaltinius."
 
+#: templates/admin/getting-started.php:24
+msgid "Quick Start Guide"
+msgstr "Greito pasirengimo darbui vadovas"
+
 #: templates/admin/getting-started.php:25
+msgid "General:"
+msgstr "Bendros:"
+
+#: templates/admin/getting-started.php:28
 msgid "General WordPress Settings"
 msgstr "Bendrieji \"WordPress\" nustatymai"
 
-#: templates/admin/getting-started.php:26
-msgid "Shortcode Overview"
-msgstr "Trumpojo kodo apžvalga"
+#. translators: 1: Plugin name (do not translate)
+#: templates/admin/getting-started.php:31
+#, php-format
+msgid "%1$s Settings"
+msgstr "%1$s Nustatymai"
 
-#: templates/admin/getting-started.php:27
-msgid "Shortcode Builder"
-msgstr "Trumpųjų kodų kūrėjas"
-
-#: templates/admin/getting-started.php:28
-msgid "Shortcode Parameters Reference"
-msgstr "Trumpojo kodo parametrų nuoroda"
-
-#: templates/admin/getting-started.php:29
+#: templates/admin/getting-started.php:33
 msgid "FAQs and Tips"
 msgstr "DUK ir patarimai"
 
-#: templates/admin/getting-started.php:30
+#: templates/admin/getting-started.php:36
+msgid "Working with Shortcodes:"
+msgstr "Darbas su trumpaisiais kodais:"
+
+#: templates/admin/getting-started.php:38
+msgid "Shortcode Overview"
+msgstr "Trumpojo kodo apžvalga"
+
+#: templates/admin/getting-started.php:39
+msgid "Shortcode Builder"
+msgstr "Trumpųjų kodų kūrėjas"
+
+#: templates/admin/getting-started.php:40
+msgid "Shortcode Parameters Reference"
+msgstr "Trumpojo kodo parametrų nuoroda"
+
+#: templates/admin/getting-started.php:43
+msgid "Advanced Topics:"
+msgstr "Išplėstinės temos:"
+
+#: templates/admin/getting-started.php:45
 msgid "CSS Guide"
 msgstr "CSS vadovas"
 
-#: templates/admin/getting-started.php:31
+#: templates/admin/getting-started.php:46
 msgid "Developer Resources"
 msgstr "Kūrėjų ištekliai"
+
+#: templates/admin/getting-started.php:47
+msgid "GDPR"
+msgstr "BDAR"
 
 #: templates/admin/settings.php:1
 msgid "Appearance"

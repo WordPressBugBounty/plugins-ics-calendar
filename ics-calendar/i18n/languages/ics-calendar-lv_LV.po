@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-06-03 14:53-0500\n"
-"PO-Revision-Date: 2025-06-03 14:53-0500\n"
+"POT-Creation-Date: 2025-07-03 10:40-0500\n"
+"PO-Revision-Date: 2025-07-03 10:40-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: lv_LV\n"
@@ -216,56 +216,56 @@ msgstr ""
 msgid "calendar event"
 msgstr "kalendāra notikums"
 
-#: functions.php:983 functions.php:991 functions.php:1000
+#: functions.php:990 functions.php:998 functions.php:1007
 msgid "Map"
 msgstr "Karte"
 
-#: functions.php:1218
+#: functions.php:1225
 msgid "Recurring event"
 msgstr "Periodisks notikums"
 
 #. translators: 1. Dynamic value
-#: functions.php:1224
+#: functions.php:1231
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Atkārtojas ik pēc %1$s gadiem"
 
-#: functions.php:1224
+#: functions.php:1231
 msgid "Recurs yearly"
 msgstr "Atkārtojas katru gadu"
 
 #. translators: 1. Dynamic value
-#: functions.php:1228
+#: functions.php:1235
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Atkārtojas ik pēc %1$s mēnešiem"
 
-#: functions.php:1228
+#: functions.php:1235
 msgid "Recurs monthly"
 msgstr "Atkārtojas katru mēnesi"
 
 #. translators: 1. Dynamic value
-#: functions.php:1232
+#: functions.php:1239
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Atkārtojas ik pēc %1$s nedēļām"
 
-#: functions.php:1232
+#: functions.php:1239
 msgid "Recurs weekly"
 msgstr "Atkārtojas katru nedēļu"
 
 #. translators: 1. Dynamic value
-#: functions.php:1236
+#: functions.php:1243
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Atkārtojas ik pēc %1$s dienām"
 
-#: functions.php:1236
+#: functions.php:1243
 msgid "Recurs daily"
 msgstr "Atkārtojas katru dienu"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1382
+#: functions.php:1389
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -277,7 +277,7 @@ msgstr ""
 "jūsu URL ir pārvērsts par klikšķināmu saiti. Rezultātā jūsu kalendārs var "
 "netikt pareizi parādīts. Lūdzu, noņemiet klikšķināmo saiti īsajā kodā."
 
-#: functions.php:1710
+#: functions.php:1731
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() vairs netiek atbalstīta."
 
@@ -514,7 +514,7 @@ msgid "Go PRO!"
 msgstr "Ej PRO!"
 
 #: templates/admin/admin.php:54 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:24
+#: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "Darba uzsākšana"
 
@@ -551,33 +551,59 @@ msgstr ""
 "Plaša %1$sLietotāja rokasgrāmata%2$s ir pieejama mūsu tīmekļa vietnē. Zemāk "
 "ir dažas īsas saites uz galvenajiem dokumentācijas resursiem."
 
+#: templates/admin/getting-started.php:24
+msgid "Quick Start Guide"
+msgstr "Ātrās palaišanas ceļvedis"
+
 #: templates/admin/getting-started.php:25
+msgid "General:"
+msgstr "Vispārīgi:"
+
+#: templates/admin/getting-started.php:28
 msgid "General WordPress Settings"
 msgstr "Vispārīgie WordPress iestatījumi"
 
-#: templates/admin/getting-started.php:26
-msgid "Shortcode Overview"
-msgstr "Īsā koda pārskats"
+#. translators: 1: Plugin name (do not translate)
+#: templates/admin/getting-started.php:31
+#, php-format
+msgid "%1$s Settings"
+msgstr "%1$s Iestatījumi"
 
-#: templates/admin/getting-started.php:27
-msgid "Shortcode Builder"
-msgstr "Īsā koda konstruktors"
-
-#: templates/admin/getting-started.php:28
-msgid "Shortcode Parameters Reference"
-msgstr "Īsā koda parametru atsauce"
-
-#: templates/admin/getting-started.php:29
+#: templates/admin/getting-started.php:33
 msgid "FAQs and Tips"
 msgstr "Bieži uzdotie jautājumi un padomi"
 
-#: templates/admin/getting-started.php:30
+#: templates/admin/getting-started.php:36
+msgid "Working with Shortcodes:"
+msgstr "Darbs ar īsajām kodēm:"
+
+#: templates/admin/getting-started.php:38
+msgid "Shortcode Overview"
+msgstr "Īsā koda pārskats"
+
+#: templates/admin/getting-started.php:39
+msgid "Shortcode Builder"
+msgstr "Īsā koda konstruktors"
+
+#: templates/admin/getting-started.php:40
+msgid "Shortcode Parameters Reference"
+msgstr "Īsā koda parametru atsauce"
+
+#: templates/admin/getting-started.php:43
+msgid "Advanced Topics:"
+msgstr "Padziļinātas tēmas:"
+
+#: templates/admin/getting-started.php:45
 msgid "CSS Guide"
 msgstr "CSS ceļvedis"
 
-#: templates/admin/getting-started.php:31
+#: templates/admin/getting-started.php:46
 msgid "Developer Resources"
 msgstr "Izstrādātāju resursi"
+
+#: templates/admin/getting-started.php:47
+msgid "GDPR"
+msgstr "GDPR"
 
 #: templates/admin/settings.php:1
 msgid "Appearance"

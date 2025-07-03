@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-06-03 14:54-0500\n"
-"PO-Revision-Date: 2025-06-03 14:54-0500\n"
+"POT-Creation-Date: 2025-07-03 10:40-0500\n"
+"PO-Revision-Date: 2025-07-03 10:40-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -211,56 +211,56 @@ msgstr ""
 msgid "calendar event"
 msgstr "カレンダーイベント"
 
-#: functions.php:983 functions.php:991 functions.php:1000
+#: functions.php:990 functions.php:998 functions.php:1007
 msgid "Map"
 msgstr "マップ"
 
-#: functions.php:1218
+#: functions.php:1225
 msgid "Recurring event"
 msgstr "繰り返しイベントの新規作成"
 
 #. translators: 1. Dynamic value
-#: functions.php:1224
+#: functions.php:1231
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "%1$s年ごとに再発"
 
-#: functions.php:1224
+#: functions.php:1231
 msgid "Recurs yearly"
 msgstr "毎年繰り返し"
 
 #. translators: 1. Dynamic value
-#: functions.php:1228
+#: functions.php:1235
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "%1$sヵ月ごとに再発"
 
-#: functions.php:1228
+#: functions.php:1235
 msgid "Recurs monthly"
 msgstr "毎月繰り返し"
 
 #. translators: 1. Dynamic value
-#: functions.php:1232
+#: functions.php:1239
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "%1$s週間ごとに再発"
 
-#: functions.php:1232
+#: functions.php:1239
 msgid "Recurs weekly"
 msgstr "毎週繰り返し"
 
 #. translators: 1. Dynamic value
-#: functions.php:1236
+#: functions.php:1243
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "%1$s日ごとに再発"
 
-#: functions.php:1236
+#: functions.php:1243
 msgid "Recurs daily"
 msgstr "毎日繰り返し"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1382
+#: functions.php:1389
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -273,7 +273,7 @@ msgstr ""
 "カレンダーが正しく表示されない可能性があります。ショートコード内のクリッカブ"
 "ルリンクを削除してください。"
 
-#: functions.php:1710
+#: functions.php:1731
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents()関数はサポートされなくなりました。"
 
@@ -507,7 +507,7 @@ msgid "Go PRO!"
 msgstr "プロに行く!"
 
 #: templates/admin/admin.php:54 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:24
+#: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "はじめに"
 
@@ -543,33 +543,59 @@ msgstr ""
 "広範な%1$sユーザーガイド%2$sは、私たちのウェブサイト上で利用可能です。以下"
 "は、ドキュメント内の主要リソースへのクイックリンクです。"
 
+#: templates/admin/getting-started.php:24
+msgid "Quick Start Guide"
+msgstr "登録情報の更新"
+
 #: templates/admin/getting-started.php:25
+msgid "General:"
+msgstr "全般:"
+
+#: templates/admin/getting-started.php:28
 msgid "General WordPress Settings"
 msgstr "WordPressの一般設定"
 
-#: templates/admin/getting-started.php:26
-msgid "Shortcode Overview"
-msgstr "ショートコードの概要"
+#. translators: 1: Plugin name (do not translate)
+#: templates/admin/getting-started.php:31
+#, php-format
+msgid "%1$s Settings"
+msgstr "%1$s の設定"
 
-#: templates/admin/getting-started.php:27
-msgid "Shortcode Builder"
-msgstr "ショートコードビルダー"
-
-#: templates/admin/getting-started.php:28
-msgid "Shortcode Parameters Reference"
-msgstr "ショートコード・パラメータ・リファレンス"
-
-#: templates/admin/getting-started.php:29
+#: templates/admin/getting-started.php:33
 msgid "FAQs and Tips"
 msgstr "よくある質問とヒント"
 
-#: templates/admin/getting-started.php:30
+#: templates/admin/getting-started.php:36
+msgid "Working with Shortcodes:"
+msgstr "ショートコードを使う"
+
+#: templates/admin/getting-started.php:38
+msgid "Shortcode Overview"
+msgstr "ショートコードの概要"
+
+#: templates/admin/getting-started.php:39
+msgid "Shortcode Builder"
+msgstr "ショートコードビルダー"
+
+#: templates/admin/getting-started.php:40
+msgid "Shortcode Parameters Reference"
+msgstr "ショートコード・パラメータ・リファレンス"
+
+#: templates/admin/getting-started.php:43
+msgid "Advanced Topics:"
+msgstr "高度なトピック"
+
+#: templates/admin/getting-started.php:45
 msgid "CSS Guide"
 msgstr "CSSガイド"
 
-#: templates/admin/getting-started.php:31
+#: templates/admin/getting-started.php:46
 msgid "Developer Resources"
 msgstr "開発者向けリソース"
+
+#: templates/admin/getting-started.php:47
+msgid "GDPR"
+msgstr "GDPR"
 
 #: templates/admin/settings.php:1
 msgid "Appearance"

@@ -2420,7 +2420,7 @@ if (!class_exists('R34ICS')) {
 		/**
 		 * Retrieve file from remote server (previous cURL/fopen methods replaced with wp_remote_get() in version 11.0.0)
 		 */
-		protected function _url_get_contents($url, $recursion=0, $use_transients=false, $basicauth=false, $skip_domain_errors=false, $ua=false) {
+		protected function _url_get_contents($url, $recursion=0, $use_transients=false, $basicauth=false, $skip_domain_errors=false, $ua=false, $trim=true) {
 			// Use legacy method?
 			if (get_option('r34ics_url_get_contents_legacy_method')) {
 				return $this->_url_get_contents_legacy($url, '', $recursion, null, $use_transients, $basicauth, $skip_domain_errors);
@@ -2628,6 +2628,24 @@ if (!class_exists('R34ICS')) {
 			}
 			else {
 				if ($this->debug) { $this->debug_messages[$url]['URL contents retrieved'] = strlen($url_contents ?? '') . ' bytes'; }
+			}
+			
+			/**
+			 * Trim whitespace from contents
+			 *
+			 * NOTE: Some feeds may include blank lines at the beginning. (This has specifically
+			 * been observed with the Simply Schedule Appointments plugin, but the problem may
+			 * exist with other sources as well.)
+			 *
+			 * Feeds _should_ begin with the line BEGIN:VCALENDAR and the ics-parser library
+			 * specifically checks for that as the very first line in the file, causing feeds
+			 * that begin with blank lines to fail to parse, even if they are otherwise valid.
+			 *
+			 * Since this method exists primarily to read ICS feeds, trimming the content to
+			 * alleviate this blank line problem is the default. (Added in v. 11.5.12.4.)
+			 */
+			if (!empty($trim)) {
+				$url_contents = trim($url_contents);
 			}
 			
 			// Write URL contents to transient

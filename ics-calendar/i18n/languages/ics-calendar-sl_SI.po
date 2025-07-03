@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-06-03 14:51-0500\n"
-"PO-Revision-Date: 2025-06-03 14:51-0500\n"
+"POT-Creation-Date: 2025-07-03 10:38-0500\n"
+"PO-Revision-Date: 2025-07-03 10:38-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: sl\n"
@@ -215,56 +215,56 @@ msgstr ""
 msgid "calendar event"
 msgstr "dogodek koledarja"
 
-#: functions.php:983 functions.php:991 functions.php:1000
+#: functions.php:990 functions.php:998 functions.php:1007
 msgid "Map"
 msgstr "Zemljevid"
 
-#: functions.php:1218
+#: functions.php:1225
 msgid "Recurring event"
 msgstr "Ponavljajoči se dogodek"
 
 #. translators: 1. Dynamic value
-#: functions.php:1224
+#: functions.php:1231
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Ponovi se na %1$s let"
 
-#: functions.php:1224
+#: functions.php:1231
 msgid "Recurs yearly"
 msgstr "Ponavlja se vsako leto"
 
 #. translators: 1. Dynamic value
-#: functions.php:1228
+#: functions.php:1235
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Ponovi se vsakih %1$s mesecev"
 
-#: functions.php:1228
+#: functions.php:1235
 msgid "Recurs monthly"
 msgstr "Ponavlja se mesečno"
 
 #. translators: 1. Dynamic value
-#: functions.php:1232
+#: functions.php:1239
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Ponovi se vsakih %1$s tednov"
 
-#: functions.php:1232
+#: functions.php:1239
 msgid "Recurs weekly"
 msgstr "Ponavlja se tedensko"
 
 #. translators: 1. Dynamic value
-#: functions.php:1236
+#: functions.php:1243
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Ponovi se vsakih %1$s dni"
 
-#: functions.php:1236
+#: functions.php:1243
 msgid "Recurs daily"
 msgstr "Ponavlja se vsak dan"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1382
+#: functions.php:1389
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -277,7 +277,7 @@ msgstr ""
 "mogoče klikniti. Zaradi tega vaš koledar morda ne bo pravilno prikazan. "
 "Odstranite povezavo, na katero je mogoče klikniti, iz kratke kode."
 
-#: functions.php:1710
+#: functions.php:1731
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() ni več podprta."
 
@@ -514,7 +514,7 @@ msgid "Go PRO!"
 msgstr "Go PRO!"
 
 #: templates/admin/admin.php:54 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:24
+#: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "Začetek"
 
@@ -550,33 +550,59 @@ msgstr ""
 "Na našem spletnem mestu je na voljo obsežen %1$suporabniški priročnik%2$s. "
 "Spodaj je nekaj hitrih povezav do ključnih virov v dokumentaciji."
 
+#: templates/admin/getting-started.php:24
+msgid "Quick Start Guide"
+msgstr "Kratek priročnik za začetek uporabe"
+
 #: templates/admin/getting-started.php:25
+msgid "General:"
+msgstr "Splošno:"
+
+#: templates/admin/getting-started.php:28
 msgid "General WordPress Settings"
 msgstr "Splošne nastavitve WordPressa"
 
-#: templates/admin/getting-started.php:26
-msgid "Shortcode Overview"
-msgstr "Pregled kratkih kod"
+#. translators: 1: Plugin name (do not translate)
+#: templates/admin/getting-started.php:31
+#, php-format
+msgid "%1$s Settings"
+msgstr "%1$s nastavitve"
 
-#: templates/admin/getting-started.php:27
-msgid "Shortcode Builder"
-msgstr "Graditelj kratkih kod"
-
-#: templates/admin/getting-started.php:28
-msgid "Shortcode Parameters Reference"
-msgstr "Sklic na parametre kratke kode"
-
-#: templates/admin/getting-started.php:29
+#: templates/admin/getting-started.php:33
 msgid "FAQs and Tips"
 msgstr "Pogosta vprašanja in nasveti"
 
-#: templates/admin/getting-started.php:30
+#: templates/admin/getting-started.php:36
+msgid "Working with Shortcodes:"
+msgstr "Delo s kratkimi kodami:"
+
+#: templates/admin/getting-started.php:38
+msgid "Shortcode Overview"
+msgstr "Pregled kratkih kod"
+
+#: templates/admin/getting-started.php:39
+msgid "Shortcode Builder"
+msgstr "Graditelj kratkih kod"
+
+#: templates/admin/getting-started.php:40
+msgid "Shortcode Parameters Reference"
+msgstr "Sklic na parametre kratke kode"
+
+#: templates/admin/getting-started.php:43
+msgid "Advanced Topics:"
+msgstr "Napredne teme:"
+
+#: templates/admin/getting-started.php:45
 msgid "CSS Guide"
 msgstr "Vodnik CSS"
 
-#: templates/admin/getting-started.php:31
+#: templates/admin/getting-started.php:46
 msgid "Developer Resources"
 msgstr "Viri za razvijalce"
+
+#: templates/admin/getting-started.php:47
+msgid "GDPR"
+msgstr "GDPR"
 
 #: templates/admin/settings.php:1
 msgid "Appearance"

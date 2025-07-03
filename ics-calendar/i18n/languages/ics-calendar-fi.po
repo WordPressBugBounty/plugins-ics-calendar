@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-06-03 14:56-0500\n"
-"PO-Revision-Date: 2025-06-03 14:56-0500\n"
+"POT-Creation-Date: 2025-07-03 10:41-0500\n"
+"PO-Revision-Date: 2025-07-03 10:41-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: fi_FI\n"
@@ -215,56 +215,56 @@ msgstr ""
 msgid "calendar event"
 msgstr "kalenteritapahtuma"
 
-#: functions.php:983 functions.php:991 functions.php:1000
+#: functions.php:990 functions.php:998 functions.php:1007
 msgid "Map"
 msgstr "Kartta"
 
-#: functions.php:1218
+#: functions.php:1225
 msgid "Recurring event"
 msgstr "Toistuva tapahtuma"
 
 #. translators: 1. Dynamic value
-#: functions.php:1224
+#: functions.php:1231
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Toistuu %1$s vuoden välein"
 
-#: functions.php:1224
+#: functions.php:1231
 msgid "Recurs yearly"
 msgstr "Toistuu vuosittain"
 
 #. translators: 1. Dynamic value
-#: functions.php:1228
+#: functions.php:1235
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Toistuu %1$s kuukauden välein"
 
-#: functions.php:1228
+#: functions.php:1235
 msgid "Recurs monthly"
 msgstr "Toistuu kuukausittain"
 
 #. translators: 1. Dynamic value
-#: functions.php:1232
+#: functions.php:1239
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Toistuu %1$s viikon välein"
 
-#: functions.php:1232
+#: functions.php:1239
 msgid "Recurs weekly"
 msgstr "Toistuu viikoittain"
 
 #. translators: 1. Dynamic value
-#: functions.php:1236
+#: functions.php:1243
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Toistuu %1$s päivän välein"
 
-#: functions.php:1236
+#: functions.php:1243
 msgid "Recurs daily"
 msgstr "Toistuu päivittäin"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1382
+#: functions.php:1389
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -277,7 +277,7 @@ msgstr ""
 "seurauksena kalenterisi ei ehkä näy oikein. Poista klikattava linkki "
 "lyhytkoodista."
 
-#: functions.php:1710
+#: functions.php:1731
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funktiota r34ics_url_get_contents() ei enää tueta."
 
@@ -513,7 +513,7 @@ msgid "Go PRO!"
 msgstr "Hyvä, PRO!"
 
 #: templates/admin/admin.php:54 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:24
+#: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "Käytön aloittaminen"
 
@@ -549,33 +549,59 @@ msgstr ""
 "Sivustollamme on saatavilla laaja %1$skäyttöopas%2$s. Alla on joitakin "
 "pikalinkkejä dokumentaation tärkeimpiin resursseihin."
 
+#: templates/admin/getting-started.php:24
+msgid "Quick Start Guide"
+msgstr "Pikaopas"
+
 #: templates/admin/getting-started.php:25
+msgid "General:"
+msgstr "Yleistä:"
+
+#: templates/admin/getting-started.php:28
 msgid "General WordPress Settings"
 msgstr "Yleiset WordPress-asetukset"
 
-#: templates/admin/getting-started.php:26
-msgid "Shortcode Overview"
-msgstr "Shortcode yleiskatsaus"
+#. translators: 1: Plugin name (do not translate)
+#: templates/admin/getting-started.php:31
+#, php-format
+msgid "%1$s Settings"
+msgstr "%1$s Asetukset"
 
-#: templates/admin/getting-started.php:27
-msgid "Shortcode Builder"
-msgstr "Lyhytkoodityökalu"
-
-#: templates/admin/getting-started.php:28
-msgid "Shortcode Parameters Reference"
-msgstr "Lyhytkoodin parametrien viite"
-
-#: templates/admin/getting-started.php:29
+#: templates/admin/getting-started.php:33
 msgid "FAQs and Tips"
 msgstr "Usein kysytyt kysymykset ja vinkit"
 
-#: templates/admin/getting-started.php:30
+#: templates/admin/getting-started.php:36
+msgid "Working with Shortcodes:"
+msgstr "Työskentely lyhytkoodien kanssa:"
+
+#: templates/admin/getting-started.php:38
+msgid "Shortcode Overview"
+msgstr "Shortcode yleiskatsaus"
+
+#: templates/admin/getting-started.php:39
+msgid "Shortcode Builder"
+msgstr "Lyhytkoodityökalu"
+
+#: templates/admin/getting-started.php:40
+msgid "Shortcode Parameters Reference"
+msgstr "Lyhytkoodin parametrien viite"
+
+#: templates/admin/getting-started.php:43
+msgid "Advanced Topics:"
+msgstr "Edistyneet aiheet:"
+
+#: templates/admin/getting-started.php:45
 msgid "CSS Guide"
 msgstr "CSS-opas"
 
-#: templates/admin/getting-started.php:31
+#: templates/admin/getting-started.php:46
 msgid "Developer Resources"
 msgstr "Kehittäjän resurssit"
+
+#: templates/admin/getting-started.php:47
+msgid "GDPR"
+msgstr "GDPR"
 
 #: templates/admin/settings.php:1
 msgid "Appearance"

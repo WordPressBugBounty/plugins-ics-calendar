@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-06-03 14:55-0500\n"
-"PO-Revision-Date: 2025-06-03 14:55-0500\n"
+"POT-Creation-Date: 2025-07-03 10:40-0500\n"
+"PO-Revision-Date: 2025-07-03 10:40-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: it_CH\n"
@@ -216,56 +216,56 @@ msgstr ""
 msgid "calendar event"
 msgstr "evento del calendario"
 
-#: functions.php:983 functions.php:991 functions.php:1000
+#: functions.php:990 functions.php:998 functions.php:1007
 msgid "Map"
 msgstr "Mappa"
 
-#: functions.php:1218
+#: functions.php:1225
 msgid "Recurring event"
 msgstr "Evento ricorrente"
 
 #. translators: 1. Dynamic value
-#: functions.php:1224
+#: functions.php:1231
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Si ripete ogni %1$s anni"
 
-#: functions.php:1224
+#: functions.php:1231
 msgid "Recurs yearly"
 msgstr "Ricorre ogni anno"
 
 #. translators: 1. Dynamic value
-#: functions.php:1228
+#: functions.php:1235
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Si ripete ogni %1$s mesi"
 
-#: functions.php:1228
+#: functions.php:1235
 msgid "Recurs monthly"
 msgstr "Ricorre mensilmente"
 
 #. translators: 1. Dynamic value
-#: functions.php:1232
+#: functions.php:1239
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Si ripete ogni %1$s settimane"
 
-#: functions.php:1232
+#: functions.php:1239
 msgid "Recurs weekly"
 msgstr "Ricorre settimanalmente"
 
 #. translators: 1. Dynamic value
-#: functions.php:1236
+#: functions.php:1243
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Si ripete ogni %1$s giorni"
 
-#: functions.php:1236
+#: functions.php:1243
 msgid "Recurs daily"
 msgstr "Ricorre ogni giorno"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1382
+#: functions.php:1389
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -278,7 +278,7 @@ msgstr ""
 "conseguenza, il calendario potrebbe non essere visualizzato correttamente. "
 "Si prega di rimuovere il link cliccabile nel codice breve."
 
-#: functions.php:1710
+#: functions.php:1731
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "La funzione r34ics_url_get_contents() non è più supportata."
 
@@ -517,7 +517,7 @@ msgid "Go PRO!"
 msgstr "Vai PRO!"
 
 #: templates/admin/admin.php:54 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:24
+#: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "Come iniziare"
 
@@ -554,33 +554,59 @@ msgstr ""
 "seguito sono riportati alcuni collegamenti rapidi alle risorse chiave della "
 "documentazione."
 
+#: templates/admin/getting-started.php:24
+msgid "Quick Start Guide"
+msgstr "Guida rapida"
+
 #: templates/admin/getting-started.php:25
+msgid "General:"
+msgstr "Generale:"
+
+#: templates/admin/getting-started.php:28
 msgid "General WordPress Settings"
 msgstr "Impostazioni generali di WordPress"
 
-#: templates/admin/getting-started.php:26
-msgid "Shortcode Overview"
-msgstr "Panoramica dei codici brevi"
+#. translators: 1: Plugin name (do not translate)
+#: templates/admin/getting-started.php:31
+#, php-format
+msgid "%1$s Settings"
+msgstr "%1$s Impostazioni"
 
-#: templates/admin/getting-started.php:27
-msgid "Shortcode Builder"
-msgstr "Costruttore di shortcode"
-
-#: templates/admin/getting-started.php:28
-msgid "Shortcode Parameters Reference"
-msgstr "Riferimento ai parametri dello shortcode"
-
-#: templates/admin/getting-started.php:29
+#: templates/admin/getting-started.php:33
 msgid "FAQs and Tips"
 msgstr "Domande frequenti e suggerimenti"
 
-#: templates/admin/getting-started.php:30
+#: templates/admin/getting-started.php:36
+msgid "Working with Shortcodes:"
+msgstr "Lavorare con gli shortcode:"
+
+#: templates/admin/getting-started.php:38
+msgid "Shortcode Overview"
+msgstr "Panoramica dei codici brevi"
+
+#: templates/admin/getting-started.php:39
+msgid "Shortcode Builder"
+msgstr "Costruttore di shortcode"
+
+#: templates/admin/getting-started.php:40
+msgid "Shortcode Parameters Reference"
+msgstr "Riferimento ai parametri dello shortcode"
+
+#: templates/admin/getting-started.php:43
+msgid "Advanced Topics:"
+msgstr "Argomenti avanzati:"
+
+#: templates/admin/getting-started.php:45
 msgid "CSS Guide"
 msgstr "Guida CSS"
 
-#: templates/admin/getting-started.php:31
+#: templates/admin/getting-started.php:46
 msgid "Developer Resources"
 msgstr "Risorse per gli sviluppatori"
+
+#: templates/admin/getting-started.php:47
+msgid "GDPR"
+msgstr "GDPR"
 
 #: templates/admin/settings.php:1
 msgid "Appearance"

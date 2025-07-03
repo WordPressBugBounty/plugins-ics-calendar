@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-06-03 14:50-0500\n"
-"PO-Revision-Date: 2025-06-03 14:51-0500\n"
+"POT-Creation-Date: 2025-07-03 10:43-0500\n"
+"PO-Revision-Date: 2025-07-03 10:43-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -202,56 +202,56 @@ msgstr "%1$s设置已更新。%2$s 您可能需要刷新页面才能看到某些
 msgid "calendar event"
 msgstr "日历事件"
 
-#: functions.php:983 functions.php:991 functions.php:1000
+#: functions.php:990 functions.php:998 functions.php:1007
 msgid "Map"
 msgstr "地图"
 
-#: functions.php:1218
+#: functions.php:1225
 msgid "Recurring event"
 msgstr "定期事件"
 
 #. translators: 1. Dynamic value
-#: functions.php:1224
+#: functions.php:1231
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "每 %1$s 年出现一次"
 
-#: functions.php:1224
+#: functions.php:1231
 msgid "Recurs yearly"
 msgstr "每年递归"
 
 #. translators: 1. Dynamic value
-#: functions.php:1228
+#: functions.php:1235
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "每 %1$s 个月出现一次"
 
-#: functions.php:1228
+#: functions.php:1235
 msgid "Recurs monthly"
 msgstr "每月递归"
 
 #. translators: 1. Dynamic value
-#: functions.php:1232
+#: functions.php:1239
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "每 %1$s 周复发一次"
 
-#: functions.php:1232
+#: functions.php:1239
 msgid "Recurs weekly"
 msgstr "每周重复"
 
 #. translators: 1. Dynamic value
-#: functions.php:1236
+#: functions.php:1243
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "每 %1$s 天出现一次"
 
-#: functions.php:1236
+#: functions.php:1243
 msgid "Recurs daily"
 msgstr "每天重复"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1382
+#: functions.php:1389
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -262,7 +262,7 @@ msgstr ""
 "您的%1$s短代码中的 \"url \"属性似乎包含HTML标签；很可能您的URL已经变成了一个"
 "可点击的链接。您的日历可能因此而不能正常显示。请删除短代码中的可点击链接。"
 
-#: functions.php:1710
+#: functions.php:1731
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "不再支持 r34ics_url_get_contents() 函数。"
 
@@ -480,7 +480,7 @@ msgid "Go PRO!"
 msgstr "去专业！"
 
 #: templates/admin/admin.php:54 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:24
+#: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "入门指南"
 
@@ -514,33 +514,59 @@ msgid ""
 msgstr ""
 "我们的网站上有详尽的 %1$s 用户指南%2$s。下面是文档中一些关键资源的快速链接。"
 
+#: templates/admin/getting-started.php:24
+msgid "Quick Start Guide"
+msgstr "快速指导"
+
 #: templates/admin/getting-started.php:25
+msgid "General:"
+msgstr "常规："
+
+#: templates/admin/getting-started.php:28
 msgid "General WordPress Settings"
 msgstr "WordPress 常规设置"
 
-#: templates/admin/getting-started.php:26
-msgid "Shortcode Overview"
-msgstr "简码概述"
+#. translators: 1: Plugin name (do not translate)
+#: templates/admin/getting-started.php:31
+#, php-format
+msgid "%1$s Settings"
+msgstr "%1$s 设置"
 
-#: templates/admin/getting-started.php:27
-msgid "Shortcode Builder"
-msgstr "短码生成器"
-
-#: templates/admin/getting-started.php:28
-msgid "Shortcode Parameters Reference"
-msgstr "简码参数参考"
-
-#: templates/admin/getting-started.php:29
+#: templates/admin/getting-started.php:33
 msgid "FAQs and Tips"
 msgstr "常见问题和提示"
 
-#: templates/admin/getting-started.php:30
+#: templates/admin/getting-started.php:36
+msgid "Working with Shortcodes:"
+msgstr "使用简码"
+
+#: templates/admin/getting-started.php:38
+msgid "Shortcode Overview"
+msgstr "简码概述"
+
+#: templates/admin/getting-started.php:39
+msgid "Shortcode Builder"
+msgstr "短码生成器"
+
+#: templates/admin/getting-started.php:40
+msgid "Shortcode Parameters Reference"
+msgstr "简码参数参考"
+
+#: templates/admin/getting-started.php:43
+msgid "Advanced Topics:"
+msgstr "高级主题："
+
+#: templates/admin/getting-started.php:45
 msgid "CSS Guide"
 msgstr "CSS 指南"
 
-#: templates/admin/getting-started.php:31
+#: templates/admin/getting-started.php:46
 msgid "Developer Resources"
 msgstr "开发人员资源"
+
+#: templates/admin/getting-started.php:47
+msgid "GDPR"
+msgstr "GDPR"
 
 #: templates/admin/settings.php:1
 msgid "Appearance"

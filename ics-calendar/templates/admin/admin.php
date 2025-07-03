@@ -4,7 +4,7 @@ global $R34ICS;
 function r34ics_getting_started_go_pro_html() {
 	ob_start();
 	?>
-	<div class="r34ics-pro-mo postbox"><div class="inside">
+	<div class="r34ics-pro-mo r34ics-gradient-bg postbox"><div class="inside">
 		<h3><?php esc_html_e('Do even more with...', 'ics-calendar'); ?></h3>
 				
 		<div class="r34ics-pro-features">
@@ -16,8 +16,6 @@ function r34ics_getting_started_go_pro_html() {
 				<p><?php esc_html_e('New ways to display your calendar including Full, Up Next, Masonry, Month with Sidebar, Widget, and more. Additional capabilities are added to the core Month, Basic, List and Week views.', 'ics-calendar'); ?></p>
 				<h4><?php esc_html_e('Customizer', 'ics-calendar'); ?></h4>
 				<p><?php esc_html_e('Easily modify your calendar color palettes, fonts, and more, site-wide.', 'ics-calendar'); ?></p>
-			</div>
-			<div>
 				<div style="text-align: center;"><a href="https://icscalendar.com/pro" target="_blank"><img src="<?php echo esc_url(plugins_url('assets/ics-events-logo.svg', dirname(dirname(__FILE__)))); ?>" alt="ICS Events" width="171" height="72" /></a></div>
 				<h4><?php esc_html_e('ICS Events', 'ics-calendar'); ?></h4>
 				<p><?php
@@ -28,6 +26,9 @@ function r34ics_getting_started_go_pro_html() {
 				/* translators: 1. Link (do not translate) */
 				printf(esc_html__('Visit %1$s to learn more.', 'ics-calendar'), '<strong><a href="https://icscalendar.com/pro/" target="_blank">icscalendar.com/pro</a></strong>');
 				?></p>
+			</div>
+			<div style="position: relative;">
+				<img src="<?php echo esc_url(plugins_url('assets/ics-mockups-2025.png', dirname(dirname(__FILE__)))); ?>" alt="" style="width: 100%; height: auto;" />
 			</div>
 		</div>
 
@@ -52,14 +53,18 @@ function r34ics_getting_started_go_pro_html() {
 		
 				<nav class="r34ics-menu"><ul>
 					<li><a href="#getting-started"><?php esc_html_e('Getting Started', 'ics-calendar'); ?></a></li>
+					<?php
+					if (current_user_can('manage_options')) {
+						?>
+						<li><a href="#settings"><?php esc_html_e('Settings', 'ics-calendar'); ?></a></li>
+						<?php
+					}
+					?>
 					<li><a href="#utilities"><?php esc_html_e('Utilities', 'ics-calendar'); ?></a></li>
 					<li><a href="#system-report"><?php esc_html_e('System Report', 'ics-calendar'); ?></a></li>
-					<li><a href="#settings"><?php esc_html_e('Settings', 'ics-calendar'); ?></a></li>
 				</ul></nav>
 			
 				<?php include_once(plugin_dir_path(__FILE__) . 'getting-started.php'); ?>
-	
-				<?php include_once(plugin_dir_path(__FILE__) . 'utilities.php'); ?>
 	
 				<?php
 				if (current_user_can('manage_options')) {
@@ -83,6 +88,8 @@ function r34ics_getting_started_go_pro_html() {
 				}
 				?>
 			
+				<?php include_once(plugin_dir_path(__FILE__) . 'utilities.php'); ?>
+	
 			</div>
 	
 			<?php echo wp_kses_post(r34ics_getting_started_go_pro_html()); ?>

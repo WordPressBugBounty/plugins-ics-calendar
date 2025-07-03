@@ -1,4 +1,4 @@
-<div class="postbox"><div class="inside">
+<div class="r34ics-gradient-bg postbox"><div class="inside">
 
 	<a href="https://icscalendar.com/" target="_blank"><img src="<?php echo esc_url(plugins_url('assets/ics-calendar-logo-2023.svg', dirname(dirname(__FILE__)))); ?>" alt="ICS Calendar" style="display: block; height: auto; margin: 0 auto 1.5em auto; width: 180px;" width="180" height="62" /></a>
 	
