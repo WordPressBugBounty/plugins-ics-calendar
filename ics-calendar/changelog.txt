@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.12.6 - 2025.07.12 =
+
+* CSS: Added `!important` to margin and padding on list elements in month grid views to force override of theme CSS.
+
 = 11.5.12.5 - 2025.07.03 =
 
 * Admin:

@@ -555,19 +555,19 @@ will be retained permanently, so they can be used to create custom color palette
 			
 			.ics-calendar-month-grid ul.events {
 				list-style: none !important;
-				margin: 0;
-				padding: 0;
+				margin: 0 !important;
+				padding: 0 !important;
 			}
 			
 				.ics-calendar-month-grid ul.events li {
 					border-bottom: 1px solid var(--r34ics--color--gainsboro);
 					list-style: none !important;
-					margin: 0;
-					padding: 0.4em 0.8em;
+					margin: 0 !important;
+					padding: 0.4em 0.8em !important;
 				}
 				.ics-calendar-month-grid ul.events li.all-day {
 					font-weight: bold;
-					padding: 0.4em 0.8em;
+					padding: 0.4em 0.8em !important;
 				}
 				.ics-calendar-month-grid ul.events > li:last-of-type { border-bottom: 0; }
 				
