@@ -1,5 +1,12 @@
 === ICS Calendar Changelog ===
 
+= 11.5.12.7 - 2025.07.20 =
+
+* Admin: Added **Permanent feed URL mask IDs** setting, to address an issue with Cloudflare (and possibly other caching systems) where pages may continue to request old masked feed URL IDs after they have been cleared/expired.
+* CSS: Added `!important` to `text-align` and `vertical-align` in month grid views to force override of theme CSS.
+* Miscellaneous: Minor code refactoring.
+* i18n: Fixed text domain for two translation strings on admin page; updated translation strings.
+
 = 11.5.12.6 - 2025.07.12 =
 
 * CSS: Added `!important` to margin and padding on list elements in month grid views to force override of theme CSS.

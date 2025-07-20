@@ -475,8 +475,8 @@ will be retained permanently, so they can be used to create custom color palette
 				font-size: 70%;
 				overflow: visible;
 				/*position: relative;*/
-				text-align: left;
-				vertical-align: top;
+				text-align: left !important;
+				vertical-align: top !important; /* Override themes */
 				width: auto;
 				z-index: 1;
 			}
@@ -491,7 +491,7 @@ will be retained permanently, so they can be used to create custom color palette
 				background: var(--r34ics--color--gainsboro);
 				color: var(--r34ics--color--black);
 				padding: 0.5em 0.8em 0.2em 0.8em !important;
-				text-align: center;
+				text-align: center !important;
 				text-transform: uppercase;
 			}
 			.ics-calendar.whitetext .ics-calendar-month-grid th {
@@ -500,7 +500,7 @@ will be retained permanently, so they can be used to create custom color palette
 
 			.ics-calendar-month-grid th.week-number {
 				padding: 0.2em !important;
-				text-align: center;
+				text-align: center !important;
 				white-space: nowrap;
 				width: 2em !important;
 			}

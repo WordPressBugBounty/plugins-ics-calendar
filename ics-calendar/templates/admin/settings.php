@@ -16,10 +16,10 @@
 </p>
 
 <p class="r34ics-input">
-	<label for="r34ics_colors_darkmode"><input type="checkbox" name="colors_darkmode" id="r34ics_colors_darkmode"<?php if (get_option('r34ics_colors_darkmode')) { echo ' checked="checked"'; } ?> /> <strong><?php esc_html_e('Dark mode', 'r34ics'); ?></strong><small class="beta-indicator"><?php esc_html_e('beta', 'ics-calendar'); ?></small></label>
+	<label for="r34ics_colors_darkmode"><input type="checkbox" name="colors_darkmode" id="r34ics_colors_darkmode"<?php if (get_option('r34ics_colors_darkmode')) { echo ' checked="checked"'; } ?> /> <strong><?php esc_html_e('Dark mode', 'ics-calendar'); ?></strong><small class="beta-indicator"><?php esc_html_e('beta', 'ics-calendar'); ?></small></label>
 	<span class="description"><small class="r34ics-help"><span class="help_content"><?php
 	/* translators: 1: HTML tags 2: HTML tag 3: HTML tag and code 4: HTML tag and code */
-	printf(esc_html__('Inverts color palette (light colors on a dark background). %1$sNote:%2$s Dark mode also automatically applies style changes similar to the %3$s and %4$s shortcode parameters, so you do not need to include them in your shortcode.', 'r34ics'), '<br /><br /><strong>', '</strong>', '<code>solidcolors</code>', '<code>whitetext</code>');
+	printf(esc_html__('Inverts color palette (light colors on a dark background). %1$sNote:%2$s Dark mode also automatically applies style changes similar to the %3$s and %4$s shortcode parameters, so you do not need to include them in your shortcode.', 'ics-calendar'), '<br /><br /><strong>', '</strong>', '<code>solidcolors</code>', '<code>whitetext</code>');
 	?>
 	<br /><br />
 	<?php
@@ -85,6 +85,11 @@
 <p class="r34ics-input">
 	<label for="r34ics_transients_expiration"><strong><?php esc_html_e('Transient (cache) expiration', 'ics-calendar'); ?>:</strong> <input type="number" name="transients_expiration" id="r34ics_transients_expiration" value="<?php echo esc_attr(get_option('r34ics_transients_expiration') ? get_option('r34ics_transients_expiration') : 3600); ?>" min="0" max="86400" style="width: 100px;" /> <?php esc_html_e('seconds', 'ics-calendar'); ?></label>
 	<span class="description"><small class="r34ics-help"><span class="help_content"><?php esc_html_e('Sets how long calendar feed data should be cached on the server (WordPress transients) before reloading. Default is 3600 (1 hour).', 'ics-calendar'); ?></span></small></span>
+</p>
+
+<p class="r34ics-input">
+	<label for="r34ics_feed_urls_permanent"><input type="checkbox" name="feed_urls_permanent" id="r34ics_feed_urls_permanent"<?php if (get_option('r34ics_feed_urls_permanent')) { echo ' checked="checked"'; } ?> /> <strong><?php esc_html_e('Permanent feed URL mask IDs', 'ics-calendar'); ?></strong></label>
+	<span class="description"><small class="r34ics-help"><span class="help_content"><?php esc_html_e('The AJAX loading method generates masked feed URL IDs, to avoid sending source feed URLs directly in the page HTML. These are normally recycled whenever saving settings or running the "Clear Cached Calendar Data" utility. This can cause problems with certain external caching systems (e.g. Cloudflare), which may continue to request expired IDs. Check this box to permanently retain the masked feed URL IDs.', 'ics-calendar'); ?></span></small></span>
 </p>
 
 <?php do_action('r34ics_settings_fields_caching'); ?>

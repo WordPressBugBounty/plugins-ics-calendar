@@ -1183,7 +1183,9 @@ function r34ics_organizer_format($organizer='') {
 function r34ics_purge_calendar_transients() {
 
 	// First we delete the saved feed URL list
-	delete_option('r34ics_feed_urls');
+	if (empty(get_option('r34ics_feed_urls_permanent'))) {
+		delete_option('r34ics_feed_urls');
+	}
 	
 	// Hook in external actions (e.g. for purging ICS Calendar Pro data)
 	do_action('r34ics_purge_calendar_transients');

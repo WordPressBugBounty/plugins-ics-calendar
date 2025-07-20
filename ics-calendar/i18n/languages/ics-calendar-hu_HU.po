@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-07-03 10:40-0500\n"
-"PO-Revision-Date: 2025-07-03 10:40-0500\n"
+"POT-Creation-Date: 2025-07-14 09:16-0500\n"
+"PO-Revision-Date: 2025-07-14 09:16-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: hu_HU\n"
@@ -50,13 +50,13 @@ msgstr ""
 "lévő városra a megfelelő időmegjelenítés érdekében. További információért "
 "lásd a %6$sdokumentációnkat%7$s."
 
-#: class-r34ics.php:348 templates/admin/admin.php:55
+#: class-r34ics.php:348 templates/admin/admin.php:63
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "Segédprogramok"
 
 #: class-r34ics.php:349 class-r34ics.php:2055 class-r34ics.php:2060
-#: templates/admin/admin.php:57 templates/admin/admin.php:69
+#: templates/admin/admin.php:59 templates/admin/admin.php:74
 msgid "Settings"
 msgstr "Beállítások"
 
@@ -200,7 +200,7 @@ msgid "Resolved IP address for %1$s:"
 msgstr "Megoldott IP-cím a %1$s számára:"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2142
+#: class-r34ics.php:2145
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -209,7 +209,7 @@ msgstr ""
 "%1$sBeállítások frissítve.%2$s Lehet, hogy frissítenie kell az oldalt, hogy "
 "lássa a változásokat."
 
-#: class-r34ics.php:2383
+#: class-r34ics.php:2386
 msgid "calendar event"
 msgstr "naptári esemény"
 
@@ -217,52 +217,52 @@ msgstr "naptári esemény"
 msgid "Map"
 msgstr "Bản đồ"
 
-#: functions.php:1225
+#: functions.php:1227
 msgid "Recurring event"
 msgstr "Ismétlődő esemény"
 
 #. translators: 1. Dynamic value
-#: functions.php:1231
+#: functions.php:1233
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Minden %1$s évben ismétlődik"
 
-#: functions.php:1231
+#: functions.php:1233
 msgid "Recurs yearly"
 msgstr "Évente ismétlődik"
 
 #. translators: 1. Dynamic value
-#: functions.php:1235
+#: functions.php:1237
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Minden %1$s hónapban ismétlődik"
 
-#: functions.php:1235
+#: functions.php:1237
 msgid "Recurs monthly"
 msgstr "Havonta ismétlődik"
 
 #. translators: 1. Dynamic value
-#: functions.php:1239
+#: functions.php:1241
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Minden %1$s héten ismétlődik"
 
-#: functions.php:1239
+#: functions.php:1241
 msgid "Recurs weekly"
 msgstr "Hetente ismétlődik"
 
 #. translators: 1. Dynamic value
-#: functions.php:1243
+#: functions.php:1245
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Minden %1$s nap ismétlődik"
 
-#: functions.php:1243
+#: functions.php:1245
 msgid "Recurs daily"
 msgstr "Naponta ismétlődik"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1389
+#: functions.php:1391
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -275,7 +275,7 @@ msgstr ""
 "Ennek következtében előfordulhat, hogy a naptárad nem jelenik meg "
 "megfelelően. Kérjük, távolítsa el a kattintható linket a rövidkódból."
 
-#: functions.php:1731
+#: functions.php:1733
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Az r34ics_url_get_contents() függvény már nem támogatott."
 
@@ -298,7 +298,7 @@ msgstr ""
 "alapértelmezett beállításokra való áttéréshez kapcsolja be a %8$s opciót a "
 "%9$s beállítások%10$s oldalon."
 
-#: ics-calendar.php:205 templates/admin/settings.php:100
+#: ics-calendar.php:205 templates/admin/settings.php:105
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Új paraméter alapértelmezések használata (v.10.6)"
 
@@ -486,12 +486,12 @@ msgstr ""
 "Könnyedén módosíthatja a naptár színpalettáját, betűtípusait és egyebeket, "
 "az egész webhelyen."
 
-#: templates/admin/admin.php:22
+#: templates/admin/admin.php:20
 msgid "ICS Events"
 msgstr "ICS események"
 
 #. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/admin.php:25
+#: templates/admin/admin.php:23
 #, php-format
 msgid ""
 "%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
@@ -503,25 +503,25 @@ msgstr ""
 "integrálja őket a meglévő feedjeibe."
 
 #. translators: 1. Link (do not translate)
-#: templates/admin/admin.php:29
+#: templates/admin/admin.php:27
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "Látogasson el a %1$s oldalra, ha többet szeretne megtudni."
 
-#: templates/admin/admin.php:34
+#: templates/admin/admin.php:35
 msgid "Go PRO!"
 msgstr "Menj PRO!"
 
-#: templates/admin/admin.php:54 templates/admin/getting-started.php:3
+#: templates/admin/admin.php:55 templates/admin/getting-started.php:3
 #: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "Kezdjük el"
 
-#: templates/admin/admin.php:56 templates/admin/utilities.php:102
+#: templates/admin/admin.php:64 templates/admin/utilities.php:102
 msgid "System Report"
 msgstr "Rendszerjelentés"
 
-#: templates/admin/admin.php:78
+#: templates/admin/admin.php:83
 msgid "Save Changes"
 msgstr "Módosítások mentése"
 
@@ -569,29 +569,29 @@ msgstr "Általános WordPress beállítások"
 msgid "%1$s Settings"
 msgstr "%1$s Beállítások"
 
-#: templates/admin/getting-started.php:33
-msgid "FAQs and Tips"
-msgstr "GYIK és tippek"
-
-#: templates/admin/getting-started.php:36
+#: templates/admin/getting-started.php:35
 msgid "Working with Shortcodes:"
 msgstr "Shortcode-okkal való munka:"
 
-#: templates/admin/getting-started.php:38
+#: templates/admin/getting-started.php:37
 msgid "Shortcode Overview"
 msgstr "Shortcode áttekintés"
 
-#: templates/admin/getting-started.php:39
+#: templates/admin/getting-started.php:38
 msgid "Shortcode Builder"
 msgstr "Rövidkód építő"
 
-#: templates/admin/getting-started.php:40
+#: templates/admin/getting-started.php:39
 msgid "Shortcode Parameters Reference"
 msgstr "Shortcode paraméterek hivatkozása"
 
-#: templates/admin/getting-started.php:43
+#: templates/admin/getting-started.php:42
 msgid "Advanced Topics:"
 msgstr "Haladó témák:"
+
+#: templates/admin/getting-started.php:44
+msgid "FAQs and Tips"
+msgstr "GYIK és tippek"
 
 #: templates/admin/getting-started.php:45
 msgid "CSS Guide"
@@ -769,15 +769,36 @@ msgstr ""
 "gyorsítótárazni (WordPress tranziensek) az újratöltés előtt. Az "
 "alapértelmezett érték 3600 (1 óra)."
 
+#: templates/admin/settings.php:91
+msgid "Permanent feed URL mask IDs"
+msgstr "Állandó takarmány URL-maszk azonosítók"
+
 #: templates/admin/settings.php:92
+msgid ""
+"The AJAX loading method generates masked feed URL IDs, to avoid sending "
+"source feed URLs directly in the page HTML. These are normally recycled "
+"whenever saving settings or running the \"Clear Cached Calendar Data\" "
+"utility. This can cause problems with certain external caching systems (e.g. "
+"Cloudflare), which may continue to request expired IDs. Check this box to "
+"permanently retain the masked feed URL IDs."
+msgstr ""
+"Az AJAX betöltési módszer maszkolt URL-azonosítókat generál, hogy elkerülje, "
+"hogy a forrás URL-eket közvetlenül az oldal HTML-jeibe küldje. Ezek "
+"általában újrahasznosításra kerülnek a beállítások mentésekor vagy a \"Clear "
+"Cached Calendar Data\" segédprogram futtatásakor. Ez problémákat okozhat "
+"bizonyos külső gyorsítótárazási rendszerekkel (pl. Cloudflare), amelyek "
+"továbbra is kérhetik a lejárt azonosítókat. Jelölje be ezt a négyzetet a "
+"maszkolt takarmány-URL-azonosítók végleges megtartásához."
+
+#: templates/admin/settings.php:97
 msgid "Miscellaneous"
 msgstr "Vegyes"
 
-#: templates/admin/settings.php:95
+#: templates/admin/settings.php:100
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "\"ICS naptár hozzáadása\" gomb eltávolítása a klasszikus szerkesztőben"
 
-#: templates/admin/settings.php:96
+#: templates/admin/settings.php:101
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -789,7 +810,7 @@ msgstr ""
 "Nincs hatással a blokkszerkesztőt (Gutenberg) használó webhelyekre."
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:103
+#: templates/admin/settings.php:108
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

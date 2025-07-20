@@ -2092,12 +2092,27 @@ if (!class_exists('R34ICS')) {
 					$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
 				}
 			
-				// transients_expiration
-				update_option('r34ics_transients_expiration', (
-					isset($_POST['transients_expiration'])
-						? intval(sanitize_text_field(wp_unslash($_POST['transients_expiration'])))
-						: 3600
+				// ajax_by_default
+				update_option('r34ics_ajax_by_default', !empty($_POST['ajax_by_default']));
+				
+				// colors_darkmode
+				update_option('r34ics_colors_darkmode', !empty($_POST['colors_darkmode']));
+				
+				// colors_match_theme_json
+				update_option('r34ics_colors_match_theme_json', !empty($_POST['colors_match_theme_json']));
+
+				// display_add_calendar_button_false
+				update_option('r34ics_display_add_calendar_button_false', !empty($_POST['display_add_calendar_button_false']));
+			
+				// display_calendar_memory_limit
+				update_option('r34ics_display_calendar_memory_limit', (
+					isset($_POST['display_calendar_memory_limit'])
+						? intval(sanitize_text_field(wp_unslash($_POST['display_calendar_memory_limit']))) . 'M'
+						: ini_get('memory_limit')
 				));
+				
+				// feed_urls_permanent
+				update_option('r34ics_feed_urls_permanent', !empty($_POST['feed_urls_permanent']));
 				
 				// allowed_hosts
 				// Need to allow $_POST['allowed_hosts'] to be empty for erasing existing entries
@@ -2109,25 +2124,13 @@ if (!class_exists('R34ICS')) {
 					));
 				}
 				
-				// ajax_by_default
-				update_option('r34ics_ajax_by_default', !empty($_POST['ajax_by_default']));
-				
-				// display_calendar_memory_limit
-				update_option('r34ics_display_calendar_memory_limit', (
-					isset($_POST['display_calendar_memory_limit'])
-						? intval(sanitize_text_field(wp_unslash($_POST['display_calendar_memory_limit']))) . 'M'
-						: ini_get('memory_limit')
+				// transients_expiration
+				update_option('r34ics_transients_expiration', (
+					isset($_POST['transients_expiration'])
+						? intval(sanitize_text_field(wp_unslash($_POST['transients_expiration'])))
+						: 3600
 				));
 				
-				// colors_match_theme_json
-				update_option('r34ics_colors_match_theme_json', !empty($_POST['colors_match_theme_json']));
-
-				// colors_darkmode
-				update_option('r34ics_colors_darkmode', !empty($_POST['colors_darkmode']));
-				
-				// display_add_calendar_button_false
-				update_option('r34ics_display_add_calendar_button_false', !empty($_POST['display_add_calendar_button_false']));
-			
 				// url_get_contents_legacy_method
 				update_option('r34ics_url_get_contents_legacy_method', !empty($_POST['url_get_contents_legacy_method']));
 			

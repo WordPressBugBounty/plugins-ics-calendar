@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-07-03 10:38-0500\n"
-"PO-Revision-Date: 2025-07-03 10:39-0500\n"
+"POT-Creation-Date: 2025-07-14 09:15-0500\n"
+"PO-Revision-Date: 2025-07-14 09:15-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -52,13 +52,13 @@ msgstr ""
 "времени. Дополнительную информацию по этому вопросу см. в "
 "%6$sдокументации%7$s."
 
-#: class-r34ics.php:348 templates/admin/admin.php:55
+#: class-r34ics.php:348 templates/admin/admin.php:63
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "Утилиты"
 
 #: class-r34ics.php:349 class-r34ics.php:2055 class-r34ics.php:2060
-#: templates/admin/admin.php:57 templates/admin/admin.php:69
+#: templates/admin/admin.php:59 templates/admin/admin.php:74
 msgid "Settings"
 msgstr "Настройки"
 
@@ -204,7 +204,7 @@ msgid "Resolved IP address for %1$s:"
 msgstr "Разрешенный IP-адрес для %1$s:"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2142
+#: class-r34ics.php:2145
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -213,7 +213,7 @@ msgstr ""
 "%1$sНастройки обновлены.%2$s Вам может потребоваться обновить страницу, "
 "чтобы увидеть некоторые изменения."
 
-#: class-r34ics.php:2383
+#: class-r34ics.php:2386
 msgid "calendar event"
 msgstr "календарное событие"
 
@@ -221,52 +221,52 @@ msgstr "календарное событие"
 msgid "Map"
 msgstr "Карта"
 
-#: functions.php:1225
+#: functions.php:1227
 msgid "Recurring event"
 msgstr "Повторяющееся событие"
 
 #. translators: 1. Dynamic value
-#: functions.php:1231
+#: functions.php:1233
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Повторяется каждые %1$s лет"
 
-#: functions.php:1231
+#: functions.php:1233
 msgid "Recurs yearly"
 msgstr "Повторяется ежегодно"
 
 #. translators: 1. Dynamic value
-#: functions.php:1235
+#: functions.php:1237
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Повторяется каждые %1$s месяцев"
 
-#: functions.php:1235
+#: functions.php:1237
 msgid "Recurs monthly"
 msgstr "Повторяется ежемесячно"
 
 #. translators: 1. Dynamic value
-#: functions.php:1239
+#: functions.php:1241
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Повторяется каждые %1$s недель"
 
-#: functions.php:1239
+#: functions.php:1241
 msgid "Recurs weekly"
 msgstr "Повторяется еженедельно"
 
 #. translators: 1. Dynamic value
-#: functions.php:1243
+#: functions.php:1245
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Повторяется каждые %1$s дней"
 
-#: functions.php:1243
+#: functions.php:1245
 msgid "Recurs daily"
 msgstr "Повторяется ежедневно"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1389
+#: functions.php:1391
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -278,7 +278,7 @@ msgstr ""
 "URL был превращен в кликабельную ссылку. В результате ваш календарь может "
 "отображаться некорректно. Пожалуйста, удалите кликабельную ссылку в шорткоде."
 
-#: functions.php:1731
+#: functions.php:1733
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Функция r34ics_url_get_contents() больше не поддерживается."
 
@@ -300,7 +300,7 @@ msgstr ""
 "прочтите нашу %6$sстатью в блоге%7$s, а чтобы переключиться на новые "
 "параметры по умолчанию, включите опцию %8$s на странице %9$s настроек%10$s."
 
-#: ics-calendar.php:205 templates/admin/settings.php:100
+#: ics-calendar.php:205 templates/admin/settings.php:105
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Используйте новые значения параметров по умолчанию (v.10.6)"
 
@@ -489,12 +489,12 @@ msgstr ""
 "Легко изменяйте цветовую палитру календаря, шрифты и многое другое в "
 "масштабах всего сайта."
 
-#: templates/admin/admin.php:22
+#: templates/admin/admin.php:20
 msgid "ICS Events"
 msgstr "События ICS"
 
 #. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/admin.php:25
+#: templates/admin/admin.php:23
 #, php-format
 msgid ""
 "%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
@@ -506,25 +506,25 @@ msgstr ""
 "существующими лентами."
 
 #. translators: 1. Link (do not translate)
-#: templates/admin/admin.php:29
+#: templates/admin/admin.php:27
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "Посетите %1$s, чтобы узнать больше."
 
-#: templates/admin/admin.php:34
+#: templates/admin/admin.php:35
 msgid "Go PRO!"
 msgstr "Go PRO!"
 
-#: templates/admin/admin.php:54 templates/admin/getting-started.php:3
+#: templates/admin/admin.php:55 templates/admin/getting-started.php:3
 #: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "Начало работы"
 
-#: templates/admin/admin.php:56 templates/admin/utilities.php:102
+#: templates/admin/admin.php:64 templates/admin/utilities.php:102
 msgid "System Report"
 msgstr "Отчет о системе"
 
-#: templates/admin/admin.php:78
+#: templates/admin/admin.php:83
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
@@ -571,29 +571,29 @@ msgstr "Общие настройки WordPress"
 msgid "%1$s Settings"
 msgstr "%1$s настройки"
 
-#: templates/admin/getting-started.php:33
-msgid "FAQs and Tips"
-msgstr "Вопросы и советы"
-
-#: templates/admin/getting-started.php:36
+#: templates/admin/getting-started.php:35
 msgid "Working with Shortcodes:"
 msgstr "Работа с шорткодами:"
 
-#: templates/admin/getting-started.php:38
+#: templates/admin/getting-started.php:37
 msgid "Shortcode Overview"
 msgstr "Обзор шорткодов"
 
-#: templates/admin/getting-started.php:39
+#: templates/admin/getting-started.php:38
 msgid "Shortcode Builder"
 msgstr "Конструктор шорткодов"
 
-#: templates/admin/getting-started.php:40
+#: templates/admin/getting-started.php:39
 msgid "Shortcode Parameters Reference"
 msgstr "Справочник параметров шорткода"
 
-#: templates/admin/getting-started.php:43
+#: templates/admin/getting-started.php:42
 msgid "Advanced Topics:"
 msgstr "Продвинутые темы:"
+
+#: templates/admin/getting-started.php:44
+msgid "FAQs and Tips"
+msgstr "Вопросы и советы"
 
 #: templates/admin/getting-started.php:45
 msgid "CSS Guide"
@@ -771,15 +771,36 @@ msgstr ""
 "сервере (переходные процессы WordPress) перед перезагрузкой. По умолчанию "
 "3600 (1 час)."
 
+#: templates/admin/settings.php:91
+msgid "Permanent feed URL mask IDs"
+msgstr "Идентификаторы масок URL постоянных фидов"
+
 #: templates/admin/settings.php:92
+msgid ""
+"The AJAX loading method generates masked feed URL IDs, to avoid sending "
+"source feed URLs directly in the page HTML. These are normally recycled "
+"whenever saving settings or running the \"Clear Cached Calendar Data\" "
+"utility. This can cause problems with certain external caching systems (e.g. "
+"Cloudflare), which may continue to request expired IDs. Check this box to "
+"permanently retain the masked feed URL IDs."
+msgstr ""
+"Метод загрузки AJAX генерирует маскированные идентификаторы URL фида, чтобы "
+"избежать отправки URL исходного фида непосредственно в HTML страницы. Обычно "
+"они перерабатываются при сохранении настроек или запуске утилиты \"Очистить "
+"кэшированные данные календаря\". Это может вызвать проблемы с некоторыми "
+"внешними системами кэширования (например, Cloudflare), которые могут "
+"продолжать запрашивать истекшие идентификаторы. Установите этот флажок, "
+"чтобы навсегда сохранить маскированные идентификаторы URL фидов."
+
+#: templates/admin/settings.php:97
 msgid "Miscellaneous"
 msgstr "Разное"
 
-#: templates/admin/settings.php:95
+#: templates/admin/settings.php:100
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Убрать кнопку \"Добавить календарь ICS\" в классическом редакторе"
 
-#: templates/admin/settings.php:96
+#: templates/admin/settings.php:101
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -791,7 +812,7 @@ msgstr ""
 "использующие редактор блоков (Gutenberg)."
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:103
+#: templates/admin/settings.php:108
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
