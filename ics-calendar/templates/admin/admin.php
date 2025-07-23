@@ -1,4 +1,6 @@
 <?php
+// phpcs:disable PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Images are part of the plugin, not Media Library.
+
 global $R34ICS;
 
 function r34ics_getting_started_go_pro_html() {
@@ -105,3 +107,6 @@ function r34ics_getting_started_go_pro_html() {
 	</div>
 
 </div>
+
+<?php
+// phpcs:enable

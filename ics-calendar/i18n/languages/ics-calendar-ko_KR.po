@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-07-14 09:16-0500\n"
-"PO-Revision-Date: 2025-07-14 09:16-0500\n"
+"POT-Creation-Date: 2025-07-23 13:07-0500\n"
+"PO-Revision-Date: 2025-07-23 13:07-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ko_KR\n"
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Utilities"
 msgstr "도구"
 
-#: class-r34ics.php:349 class-r34ics.php:2055 class-r34ics.php:2060
+#: class-r34ics.php:349 class-r34ics.php:2068 class-r34ics.php:2073
 #: templates/admin/admin.php:59 templates/admin/admin.php:74
 msgid "Settings"
 msgstr "설정"
@@ -134,19 +134,19 @@ msgstr ""
 "legendstyle=\"inline\"을 사용하십시오."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2007
+#: class-r34ics.php:2020
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$s 과도 현상을 제거했습니다."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2015
+#: class-r34ics.php:2028
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s 과도 현상이 발견되지 않았습니다."
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2055
+#: class-r34ics.php:2068
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -155,12 +155,12 @@ msgstr ""
 "피드 URL에 HTTP 기본 인증 자격 증명이 포함된 것 같습니다. 위의 %2$s 탭에서 "
 "%1$s 옵션을 해제해 보세요."
 
-#: class-r34ics.php:2055 class-r34ics.php:2060 templates/admin/settings.php:64
+#: class-r34ics.php:2068 class-r34ics.php:2073 templates/admin/settings.php:64
 msgid "Use legacy feed request method"
 msgstr "레거시 피드 요청 방법 사용"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2060
+#: class-r34ics.php:2073
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -170,7 +170,7 @@ msgstr ""
 "%3$s 옵션을 켜보세요."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2067
+#: class-r34ics.php:2080
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -185,19 +185,27 @@ msgstr ""
 "%4$s 사용자 가이드%5$s를 참조하세요."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2074
+#: class-r34ics.php:2087
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "오류가 발생했습니다: %1$s의 IP 주소를 확인할 수 없습니다."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2078
+#: class-r34ics.php:2091
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$s에 대해 확인된 IP 주소입니다:"
 
+#: class-r34ics.php:2128
+msgid ""
+"The text entered in the \"Default shortcode\" field is not a valid "
+"shortcode, and was not saved."
+msgstr ""
+"'기본 단축 코드' 필드에 입력한 텍스트가 유효한 단축 코드가 아니며 저장되지 않"
+"았습니다."
+
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2145
+#: class-r34ics.php:2176
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -206,7 +214,7 @@ msgstr ""
 "%1$s설정이 업데이트되었습니다.%2$s 일부 변경 사항을 확인하려면 페이지를 새로 "
 "고쳐야 할 수 있습니다."
 
-#: class-r34ics.php:2386
+#: class-r34ics.php:2417
 msgid "calendar event"
 msgstr "캘린더 이벤트"
 
@@ -292,7 +300,7 @@ msgstr ""
 "물%7$s을 참조하거나 새 기본값으로 전환하려면 %9$s 설정%10$s에서 %8$s 옵션을 "
 "켜십시오. 페이지."
 
-#: ics-calendar.php:205 templates/admin/settings.php:105
+#: ics-calendar.php:205 templates/admin/settings.php:114
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "새 매개변수 기본값 사용(v.10.6)"
 
@@ -696,11 +704,32 @@ msgstr ""
 "요청 방법을 사용하세요."
 
 #: templates/admin/settings.php:69
+msgid "Default shortcode"
+msgstr "기본 단축 코드"
+
+#. translators: 1: HTML tag and sample code
+#: templates/admin/settings.php:73
+#, php-format
+msgid ""
+"If your site will include a large number of similarly configured calendar "
+"shortcodes, you can enter a default \"base\" shortcode here with the "
+"parameters that should be the same for all of the calendars. Individual "
+"shortcodes on the site can then include only the parameters that are unique "
+"to that calendar, as such: %1$s Any parameters included in the individual "
+"shortcode will override what is set here."
+msgstr ""
+"사이트에 유사하게 구성된 캘린더 쇼트코드가 많이 포함되는 경우 여기에 모든 캘"
+"린더에 대해 동일해야 하는 매개변수와 함께 기본 \"기본\" 쇼트코드를 입력할 수 "
+"있습니다. 그러면 사이트의 개별 쇼트코드에는 해당 캘린더에 고유한 매개변수만 "
+"포함할 수 있습니다: %1$s 개별 쇼트코드에 포함된 모든 매개변수는 여기에 설정"
+"된 내용을 재정의합니다."
+
+#: templates/admin/settings.php:78
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr "예약된 IP 주소로 확인되는 다음 호스트 이름에 대한 액세스 허용"
 
 #. translators: 1: HTML tag 2: HTML tag 3: HTML tag 4: Plugin name (do not translate) 5: HTML tag
-#: templates/admin/settings.php:73
+#: templates/admin/settings.php:82
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -715,7 +744,7 @@ msgstr ""
 "름을 하나씩 입력합니다. 자세한 내용은 %3$s문서%4$s%5$s를 참조하세요."
 
 #. translators: 1: HTML tag 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:77
+#: templates/admin/settings.php:86
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -724,19 +753,19 @@ msgstr ""
 "한 줄에 호스트명을 하나씩 입력합니다. 호스트명은 전체 URL이 아닌 기본 도메인 "
 "이름입니다. %1$s 예를 들어 %3$s가 아닌 %2$s을 입력합니다."
 
-#: templates/admin/settings.php:83
+#: templates/admin/settings.php:92
 msgid "Caching"
 msgstr "캐싱"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:95
 msgid "Transient (cache) expiration"
 msgstr "임시(캐시) 만료"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:95
 msgid "seconds"
 msgstr "초"
 
-#: templates/admin/settings.php:87
+#: templates/admin/settings.php:96
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
@@ -744,11 +773,11 @@ msgstr ""
 "다시 로드하기 전에 일정 피드 데이터를 서버(워드프레스 임시)에 캐시해야 하는 "
 "기간을 설정합니다. 기본값은 3600(1시간)입니다."
 
-#: templates/admin/settings.php:91
+#: templates/admin/settings.php:100
 msgid "Permanent feed URL mask IDs"
 msgstr "영구 피드 URL 마스크 ID"
 
-#: templates/admin/settings.php:92
+#: templates/admin/settings.php:101
 msgid ""
 "The AJAX loading method generates masked feed URL IDs, to avoid sending "
 "source feed URLs directly in the page HTML. These are normally recycled "
@@ -764,15 +793,15 @@ msgstr ""
 "수 있습니다. 마스크된 피드 URL ID를 영구적으로 유지하려면 이 확인란을 선택합"
 "니다."
 
-#: templates/admin/settings.php:97
+#: templates/admin/settings.php:106
 msgid "Miscellaneous"
 msgstr "기타"
 
-#: templates/admin/settings.php:100
+#: templates/admin/settings.php:109
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "클래식 편집기에서 'ICS 캘린더 추가' 버튼 제거하기"
 
-#: templates/admin/settings.php:101
+#: templates/admin/settings.php:110
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -783,7 +812,7 @@ msgstr ""
 "합니다. 블록 편집기(구텐베르크)를 사용하는 사이트에는 영향을 주지 않습니다."
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:108
+#: templates/admin/settings.php:117
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

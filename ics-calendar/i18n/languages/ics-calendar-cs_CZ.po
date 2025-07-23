@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-07-14 09:18-0500\n"
-"PO-Revision-Date: 2025-07-14 09:18-0500\n"
+"POT-Creation-Date: 2025-07-23 13:09-0500\n"
+"PO-Revision-Date: 2025-07-23 13:09-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: cs\n"
@@ -55,7 +55,7 @@ msgstr ""
 msgid "Utilities"
 msgstr "Utility"
 
-#: class-r34ics.php:349 class-r34ics.php:2055 class-r34ics.php:2060
+#: class-r34ics.php:349 class-r34ics.php:2068 class-r34ics.php:2073
 #: templates/admin/admin.php:59 templates/admin/admin.php:74
 msgid "Settings"
 msgstr "Nastavení"
@@ -135,19 +135,19 @@ msgstr ""
 "kódu legendstyle=\"inline\"."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2007
+#: class-r34ics.php:2020
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Vymazáno %1$s %2$s přechodných jevů."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2015
+#: class-r34ics.php:2028
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nebyly nalezeny žádné přechodné jevy %1$s."
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2055
+#: class-r34ics.php:2068
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -156,12 +156,12 @@ msgstr ""
 "Zdá se, že adresa URL vašeho kanálu obsahuje pověření HTTP Basic "
 "Authentication. Zkuste vypnout možnost %1$s na kartě %2$s výše."
 
-#: class-r34ics.php:2055 class-r34ics.php:2060 templates/admin/settings.php:64
+#: class-r34ics.php:2068 class-r34ics.php:2073 templates/admin/settings.php:64
 msgid "Use legacy feed request method"
 msgstr "Použití staršího způsobu vyžádání feedu"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2060
+#: class-r34ics.php:2073
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -171,7 +171,7 @@ msgstr ""
 "%1$sNáhled%2$s, zkuste zapnout možnost %3$s na kartě %4$s výše."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2067
+#: class-r34ics.php:2080
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -187,19 +187,26 @@ msgstr ""
 "URL dynamického zdroje naleznete v naší %4$suživatelské příručce%5$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2074
+#: class-r34ics.php:2087
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Chyba: Nepodařilo se přeložit IP adresu pro %1$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2078
+#: class-r34ics.php:2091
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Vyřešená IP adresa pro %1$s:"
 
+#: class-r34ics.php:2128
+msgid ""
+"The text entered in the \"Default shortcode\" field is not a valid "
+"shortcode, and was not saved."
+msgstr ""
+"Text zadaný do pole \"Výchozí zkratka\" není platnou zkratkou a nebyl uložen."
+
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2145
+#: class-r34ics.php:2176
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -208,7 +215,7 @@ msgstr ""
 "%1$sNastavení aktualizováno.%2$s Pro zobrazení některých změn bude možná "
 "nutné stránku obnovit."
 
-#: class-r34ics.php:2386
+#: class-r34ics.php:2417
 msgid "calendar event"
 msgstr "událost v kalendáři"
 
@@ -296,7 +303,7 @@ msgstr ""
 "nebo pro přepnutí na nové výchozí nastavení zapněte %8$s možnost na stránce "
 "%9$s nastavení%10$s."
 
-#: ics-calendar.php:205 templates/admin/settings.php:105
+#: ics-calendar.php:205 templates/admin/settings.php:114
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Použití nových výchozích parametrů (v.10.6)"
 
@@ -710,13 +717,36 @@ msgstr ""
 "možnost, abyste použili starší metodu vyžádání."
 
 #: templates/admin/settings.php:69
+msgid "Default shortcode"
+msgstr "Výchozí zkrácený kód"
+
+#. translators: 1: HTML tag and sample code
+#: templates/admin/settings.php:73
+#, php-format
+msgid ""
+"If your site will include a large number of similarly configured calendar "
+"shortcodes, you can enter a default \"base\" shortcode here with the "
+"parameters that should be the same for all of the calendars. Individual "
+"shortcodes on the site can then include only the parameters that are unique "
+"to that calendar, as such: %1$s Any parameters included in the individual "
+"shortcode will override what is set here."
+msgstr ""
+"Pokud bude váš web obsahovat velké množství podobně nakonfigurovaných "
+"zkratek kalendáře, můžete zde zadat výchozí \"základní\" zkratku s "
+"parametry, které by měly být pro všechny kalendáře stejné. Jednotlivé "
+"zkrácené kódy na webu pak mohou obsahovat pouze parametry, které jsou pro "
+"daný kalendář jako takový jedinečné: %1$s Jakékoli parametry obsažené v "
+"jednotlivých zkrácených kódech budou mít přednost před parametry nastavenými "
+"zde."
+
+#: templates/admin/settings.php:78
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Povolení přístupu k těmto hostitelským jménům, která se překládají na "
 "vyhrazené IP adresy"
 
 #. translators: 1: HTML tag 2: HTML tag 3: HTML tag 4: Plugin name (do not translate) 5: HTML tag
-#: templates/admin/settings.php:73
+#: templates/admin/settings.php:82
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -733,7 +763,7 @@ msgstr ""
 "%4$s%5$s."
 
 #. translators: 1: HTML tag 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:77
+#: templates/admin/settings.php:86
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -743,19 +773,19 @@ msgstr ""
 "název domény, nikoli celá adresa URL. %1$s Například zadejte %2$s, nikoli "
 "%3$s."
 
-#: templates/admin/settings.php:83
+#: templates/admin/settings.php:92
 msgid "Caching"
 msgstr "Mezipaměť"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:95
 msgid "Transient (cache) expiration"
 msgstr "Přechodné vypršení platnosti (mezipaměti)"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:95
 msgid "seconds"
 msgstr "sekund"
 
-#: templates/admin/settings.php:87
+#: templates/admin/settings.php:96
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
@@ -764,11 +794,11 @@ msgstr ""
 "serveru (přechodné stavy WordPressu) před opětovným načtením. Výchozí "
 "hodnota je 3600 (1 hodina)."
 
-#: templates/admin/settings.php:91
+#: templates/admin/settings.php:100
 msgid "Permanent feed URL mask IDs"
 msgstr "ID masky URL stálého kanálu"
 
-#: templates/admin/settings.php:92
+#: templates/admin/settings.php:101
 msgid ""
 "The AJAX loading method generates masked feed URL IDs, to avoid sending "
 "source feed URLs directly in the page HTML. These are normally recycled "
@@ -785,15 +815,15 @@ msgstr ""
 "mohou nadále požadovat prošlá ID. Zaškrtněte toto políčko, chcete-li trvale "
 "zachovat maskované identifikátory URL kanálů."
 
-#: templates/admin/settings.php:97
+#: templates/admin/settings.php:106
 msgid "Miscellaneous"
 msgstr "Ostatní"
 
-#: templates/admin/settings.php:100
+#: templates/admin/settings.php:109
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Odstranění tlačítka \"Přidat kalendář ICS\" v editoru Classic"
 
-#: templates/admin/settings.php:101
+#: templates/admin/settings.php:110
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -805,7 +835,7 @@ msgstr ""
 "používající blokový editor (Gutenberg)."
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:108
+#: templates/admin/settings.php:117
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

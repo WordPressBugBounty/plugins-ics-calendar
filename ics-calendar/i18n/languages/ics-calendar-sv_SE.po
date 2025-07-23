@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-07-14 09:14-0500\n"
-"PO-Revision-Date: 2025-07-14 09:15-0500\n"
+"POT-Creation-Date: 2025-07-23 13:06-0500\n"
+"PO-Revision-Date: 2025-07-23 13:06-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -55,7 +55,7 @@ msgstr ""
 msgid "Utilities"
 msgstr "Verktyg"
 
-#: class-r34ics.php:349 class-r34ics.php:2055 class-r34ics.php:2060
+#: class-r34ics.php:349 class-r34ics.php:2068 class-r34ics.php:2073
 #: templates/admin/admin.php:59 templates/admin/admin.php:74
 msgid "Settings"
 msgstr "Inställningar"
@@ -136,19 +136,19 @@ msgstr ""
 "legendstyle=\"inline\" i din kortkod."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2007
+#: class-r34ics.php:2020
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Rensade %1$s %2$s transient(er)."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2015
+#: class-r34ics.php:2028
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Inga %1$s-övergångar hittades."
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2055
+#: class-r34ics.php:2068
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -158,12 +158,12 @@ msgstr ""
 "autentiseringsuppgifter. Försök att stänga av alternativet %1$s under fliken "
 "%2$s ovan."
 
-#: class-r34ics.php:2055 class-r34ics.php:2060 templates/admin/settings.php:64
+#: class-r34ics.php:2068 class-r34ics.php:2073 templates/admin/settings.php:64
 msgid "Use legacy feed request method"
 msgstr "Använd äldre metod för begäran om matning"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2060
+#: class-r34ics.php:2073
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -173,7 +173,7 @@ msgstr ""
 "att aktivera alternativet %3$s under fliken %4$s ovan."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2067
+#: class-r34ics.php:2080
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -190,19 +190,27 @@ msgstr ""
 "dynamiskt flöde."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2074
+#: class-r34ics.php:2087
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Fel: Det gick inte att fastställa IP-adressen för %1$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2078
+#: class-r34ics.php:2091
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Löst IP-adress för %1$s:"
 
+#: class-r34ics.php:2128
+msgid ""
+"The text entered in the \"Default shortcode\" field is not a valid "
+"shortcode, and was not saved."
+msgstr ""
+"Texten som angavs i fältet \"Standardkortkod\" är inte en giltig kortkod och "
+"sparades inte."
+
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2145
+#: class-r34ics.php:2176
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -211,7 +219,7 @@ msgstr ""
 "%1$sInställningarna uppdaterade.%2$s Du kan behöva uppdatera sidan för att "
 "se vissa ändringar."
 
-#: class-r34ics.php:2386
+#: class-r34ics.php:2417
 msgid "calendar event"
 msgstr "kalenderhändelse"
 
@@ -298,7 +306,7 @@ msgstr ""
 "om du vill byta till de nya standardvärdena kan du aktivera alternativet "
 "%8$s på sidan %9$s inställningar%10$s."
 
-#: ics-calendar.php:205 templates/admin/settings.php:105
+#: ics-calendar.php:205 templates/admin/settings.php:114
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Använd nya standardparametrar (v.10.6)"
 
@@ -713,12 +721,34 @@ msgstr ""
 "förfrågningsmetoden."
 
 #: templates/admin/settings.php:69
+msgid "Default shortcode"
+msgstr "Standard kortkod"
+
+#. translators: 1: HTML tag and sample code
+#: templates/admin/settings.php:73
+#, php-format
+msgid ""
+"If your site will include a large number of similarly configured calendar "
+"shortcodes, you can enter a default \"base\" shortcode here with the "
+"parameters that should be the same for all of the calendars. Individual "
+"shortcodes on the site can then include only the parameters that are unique "
+"to that calendar, as such: %1$s Any parameters included in the individual "
+"shortcode will override what is set here."
+msgstr ""
+"Om din webbplats kommer att innehålla ett stort antal liknande konfigurerade "
+"kalenderkortkoder kan du ange en standard \"bas\"-kortkod här med de "
+"parametrar som ska vara desamma för alla kalendrar. Enskilda kortkoder på "
+"webbplatsen kan sedan endast innehålla de parametrar som är unika för den "
+"kalendern, som t.ex: %1$s Alla parametrar som ingår i den enskilda kortkoden "
+"kommer att åsidosätta det som anges här."
+
+#: templates/admin/settings.php:78
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Tillåt åtkomst till dessa värdnamn som leder till reserverade IP-adresser"
 
 #. translators: 1: HTML tag 2: HTML tag 3: HTML tag 4: Plugin name (do not translate) 5: HTML tag
-#: templates/admin/settings.php:73
+#: templates/admin/settings.php:82
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -734,7 +764,7 @@ msgstr ""
 "%3$sdokumentationen%4$s%5$s för mer information."
 
 #. translators: 1: HTML tag 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:77
+#: templates/admin/settings.php:86
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -743,19 +773,19 @@ msgstr ""
 "Ange ett värdnamn per rad. Värdnamn är basdomännamnet, inte en fullständig "
 "URL. %1$s Du ska till exempel ange %2$s, inte %3$s."
 
-#: templates/admin/settings.php:83
+#: templates/admin/settings.php:92
 msgid "Caching"
 msgstr "Cachelagring"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:95
 msgid "Transient (cache) expiration"
 msgstr "Tillfälligt upphörande (cache)"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:95
 msgid "seconds"
 msgstr "sekunder"
 
-#: templates/admin/settings.php:87
+#: templates/admin/settings.php:96
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
@@ -763,11 +793,11 @@ msgstr ""
 "Ställer in hur länge kalendermatningsdata ska cachas på servern (WordPress "
 "transients) innan de laddas om. Standardvärdet är 3600 (1 timme)."
 
-#: templates/admin/settings.php:91
+#: templates/admin/settings.php:100
 msgid "Permanent feed URL mask IDs"
 msgstr "ID för URL-mask för permanent flöde"
 
-#: templates/admin/settings.php:92
+#: templates/admin/settings.php:101
 msgid ""
 "The AJAX loading method generates masked feed URL IDs, to avoid sending "
 "source feed URLs directly in the page HTML. These are normally recycled "
@@ -784,15 +814,15 @@ msgstr ""
 "utgångna ID:n. Markera den här rutan för att permanent behålla de maskerade "
 "URL-ID:n för flödet."
 
-#: templates/admin/settings.php:97
+#: templates/admin/settings.php:106
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: templates/admin/settings.php:100
+#: templates/admin/settings.php:109
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Ta bort knappen \"Lägg till ICS-kalender\" i Classic Editor"
 
-#: templates/admin/settings.php:101
+#: templates/admin/settings.php:110
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -804,7 +834,7 @@ msgstr ""
 "webbplatser som använder Blockredigeraren (Gutenberg)."
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:108
+#: templates/admin/settings.php:117
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

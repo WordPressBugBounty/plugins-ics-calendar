@@ -66,6 +66,15 @@
 </p>
 
 <p class="r34ics-input">
+	<label for="r34ics_default_shortcode"><strong><?php esc_html_e('Default shortcode', 'ics-calendar'); ?>:</strong><br />
+	<textarea name="default_shortcode" id="r34ics_default_shortcode" style="max-width: 400px; width: 100%; height: 4.5rem;" /><?php echo esc_attr(get_option('r34ics_default_shortcode')); ?></textarea></label>
+	<span class="description"><small class="r34ics-help"><span class="help_content"><?php
+	/* translators: 1: HTML tag and sample code */
+	printf(esc_html__('If your site will include a large number of similarly configured calendar shortcodes, you can enter a default "base" shortcode here with the parameters that should be the same for all of the calendars. Individual shortcodes on the site can then include only the parameters that are unique to that calendar, as such: %1$s Any parameters included in the individual shortcode will override what is set here.', 'ics-calendar'), '<code>[ics_calendar url="&hellip;"]</code><br /><br />');
+	?></span></small></span>
+</p>
+
+<p class="r34ics-input">
 	<label for="r34ics_allowed_hosts"><strong><?php esc_html_e('Allow access to these hostnames that resolve to reserved IP addresses', 'ics-calendar'); ?>:</strong><br />
 	<textarea name="allowed_hosts" id="r34ics_allowed_hosts" style="max-width: 400px; width: 100%; height: 4.5rem;" /><?php echo esc_attr(implode("\n", get_option('r34ics_allowed_hosts') ? get_option('r34ics_allowed_hosts') : array())); ?></textarea></label>
 	<span class="description"><small class="r34ics-help"><span class="help_content"><?php

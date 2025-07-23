@@ -1,6 +1,20 @@
 <?php
 
 function r34ics_ajax() {
+	// phpcs:disable WordPress.Security.NonceVerification.Missing
+	// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+	/**
+	 * Note about WordPress.Security.NonceVerification.Missing:
+	 *
+	 * Nonce was removed in version 11.5.8, due to caching plugin conflicts.
+	 * Custom data sanitization in the following block, combined with the limited
+	 * functionality of the methods called in response, should obviate the nonce.
+	 *
+	 * Note about WordPress.Security.ValidatedSanitizedInput.InputNotSanitized:
+	 *
+	 * We have our own specific requirements for sanitizing this data, so we can't use
+	 * a built-in WordPress function to do it.
+	 */
 	global $R34ICS;
 	
 	// Get list of valid shortcode attributes
@@ -15,20 +29,7 @@ function r34ics_ajax() {
 	
 	if (!empty($_POST)) {
 
-		// Validate nonce
-		/**
-		 * Note: Nonce was removed in version 11.5.8, due to caching plugin conflicts.
-		 * Custom data sanitization in the following block, combined with the limited
-		 * functionality of the methods called in response, should obviate the nonce.
-		 */
-		
 		// Sanitize input
-		/**
-		 * Note: Plugin Check throws a warning about a non-sanitized variable but that is
-		 * literally what this entire block of code is for! We have our own specific
-		 * requirements for sanitizing this data, so we can't use a built-in WordPress
-		 * function to do it.
-		 */
 		$args = isset($_POST['args']) ? wp_unslash($_POST['args']) : array();
 		foreach ((array)$args as $key => $value) {
 			// Only allow keys that match a valid shortcode attribute
@@ -72,6 +73,7 @@ function r34ics_ajax() {
 		}
 	}
 	exit;
+	// phpcs:enable
 }
 
 add_action('wp_ajax_r34ics_ajax', 'r34ics_ajax');

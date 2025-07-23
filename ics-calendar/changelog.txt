@@ -1,5 +1,11 @@
 === ICS Calendar Changelog ===
 
+= 11.5.13 - 2025.07.23 =
+
+* Added **Default shortcode** setting on the ICS Calendar Settings admin page. This is useful for sites that will contain a large number of calendar shortcodes with mostly identical parameters. Individual shortcodes' settings will override the default, but only need to include the parameters that are unique.
+* Added [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage) code comments where relevant.
+* i18n: Updated translation strings.
+
 = 11.5.12.7 - 2025.07.20 =
 
 * Admin: Added **Permanent feed URL mask IDs** setting, to address an issue with Cloudflare (and possibly other caching systems) where pages may continue to request old masked feed URL IDs after they have been cleared/expired.

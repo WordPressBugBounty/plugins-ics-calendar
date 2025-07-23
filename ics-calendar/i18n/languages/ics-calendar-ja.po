@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-07-14 09:16-0500\n"
-"PO-Revision-Date: 2025-07-14 09:16-0500\n"
+"POT-Creation-Date: 2025-07-23 13:07-0500\n"
+"PO-Revision-Date: 2025-07-23 13:07-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Utilities"
 msgstr "ユーティリティー"
 
-#: class-r34ics.php:349 class-r34ics.php:2055 class-r34ics.php:2060
+#: class-r34ics.php:349 class-r34ics.php:2068 class-r34ics.php:2073
 #: templates/admin/admin.php:59 templates/admin/admin.php:74
 msgid "Settings"
 msgstr "設定"
@@ -134,19 +134,19 @@ msgstr ""
 "legendstyle=\"inline\" を使用してください。"
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2007
+#: class-r34ics.php:2020
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$sトランジェントをクリアしました。"
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2015
+#: class-r34ics.php:2028
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s トランジェントは見つかりませんでした。"
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2055
+#: class-r34ics.php:2068
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -155,12 +155,12 @@ msgstr ""
 "フィードのURLにHTTPベーシック認証の認証情報が含まれているようです。上記の%2$s"
 "タブの%1$sオプションをオフにしてみてください。"
 
-#: class-r34ics.php:2055 class-r34ics.php:2060 templates/admin/settings.php:64
+#: class-r34ics.php:2068 class-r34ics.php:2073 templates/admin/settings.php:64
 msgid "Use legacy feed request method"
 msgstr "レガシーフィードリクエストメソッドを使用する"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2060
+#: class-r34ics.php:2073
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -170,7 +170,7 @@ msgstr ""
 "の%4$sタブにある%3$sオプションをオンにしてみてください。"
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2067
+#: class-r34ics.php:2080
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -186,19 +186,27 @@ msgstr ""
 "イド%5$sをご覧ください。"
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2074
+#: class-r34ics.php:2087
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "エラー：%1$sのIPアドレスを解決できませんでした。"
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2078
+#: class-r34ics.php:2091
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$sの解決済みIPアドレス："
 
+#: class-r34ics.php:2128
+msgid ""
+"The text entered in the \"Default shortcode\" field is not a valid "
+"shortcode, and was not saved."
+msgstr ""
+"デフォルトのショートコード」フィールドに入力されたテキストは有効なショート"
+"コードではなく、保存されませんでした。"
+
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2145
+#: class-r34ics.php:2176
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -207,7 +215,7 @@ msgstr ""
 "%1$s設定を更新しました。%2$sいくつかの変更を確認するには、ページを更新する必"
 "要があるかもしれません。"
 
-#: class-r34ics.php:2386
+#: class-r34ics.php:2417
 msgid "calendar event"
 msgstr "カレンダーイベント"
 
@@ -295,7 +303,7 @@ msgstr ""
 "フォルトに切り替えるには、%9$s 設定%10$sで%8$sオプションをオンにしてくださ"
 "い。 ページ。"
 
-#: ics-calendar.php:205 templates/admin/settings.php:105
+#: ics-calendar.php:205 templates/admin/settings.php:114
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "新しいパラメータのデフォルトを使用 (v.10.6)"
 
@@ -704,11 +712,32 @@ msgstr ""
 "をオンにしてレガシーリクエストメソッドを使用してください。"
 
 #: templates/admin/settings.php:69
+msgid "Default shortcode"
+msgstr "デフォルトのショートコード"
+
+#. translators: 1: HTML tag and sample code
+#: templates/admin/settings.php:73
+#, php-format
+msgid ""
+"If your site will include a large number of similarly configured calendar "
+"shortcodes, you can enter a default \"base\" shortcode here with the "
+"parameters that should be the same for all of the calendars. Individual "
+"shortcodes on the site can then include only the parameters that are unique "
+"to that calendar, as such: %1$s Any parameters included in the individual "
+"shortcode will override what is set here."
+msgstr ""
+"もし、あなたのサイトに似たような設定のカレンダーショートコードが多数ある場"
+"合、すべてのカレンダーで同じパラメータを持つデフォルトの \"ベース \"ショート"
+"コードをここに入力することができます。そして、サイト上の個々のショートコード"
+"には、そのカレンダーに固有のパラメータのみを含めることができます：%1$s 個々の"
+"ショートコードに含まれるパラメータは、ここで設定されたものを上書きします。"
+
+#: templates/admin/settings.php:78
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr "予約IPアドレスに解決するこれらのホスト名へのアクセスを許可する。"
 
 #. translators: 1: HTML tag 2: HTML tag 3: HTML tag 4: Plugin name (do not translate) 5: HTML tag
-#: templates/admin/settings.php:73
+#: templates/admin/settings.php:82
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -724,7 +753,7 @@ msgstr ""
 "%3$sドキュメント%4$s%5$sを参照してください。"
 
 #. translators: 1: HTML tag 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:77
+#: templates/admin/settings.php:86
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -733,19 +762,19 @@ msgstr ""
 "1行に1つのホスト名を入力します。ホスト名は完全なURLではなく、ベースとなるドメ"
 "イン名です。%1$s 例えば、%3$sではなく%2$sと入力します。"
 
-#: templates/admin/settings.php:83
+#: templates/admin/settings.php:92
 msgid "Caching"
 msgstr "キャッシュ"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:95
 msgid "Transient (cache) expiration"
 msgstr "一時的な（キャッシュの）有効期限"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:95
 msgid "seconds"
 msgstr "秒"
 
-#: templates/admin/settings.php:87
+#: templates/admin/settings.php:96
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
@@ -753,11 +782,11 @@ msgstr ""
 "カレンダーフィードのデータを再読み込みする前に、サーバにキャッシュする時間"
 "（WordPressの過渡期）を設定します。デフォルトは3600（1時間）です。"
 
-#: templates/admin/settings.php:91
+#: templates/admin/settings.php:100
 msgid "Permanent feed URL mask IDs"
 msgstr "永久フィードURLマスクID"
 
-#: templates/admin/settings.php:92
+#: templates/admin/settings.php:101
 msgid ""
 "The AJAX loading method generates masked feed URL IDs, to avoid sending "
 "source feed URLs directly in the page HTML. These are normally recycled "
@@ -773,15 +802,15 @@ msgstr ""
 "IDを要求し続けるという問題が発生することがあります。このボックスにチェックを"
 "入れると、マスクされたフィードURLのIDが永久に保持されます。"
 
-#: templates/admin/settings.php:97
+#: templates/admin/settings.php:106
 msgid "Miscellaneous"
 msgstr "その他"
 
-#: templates/admin/settings.php:100
+#: templates/admin/settings.php:109
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "クラシックエディターの「ICSカレンダーを追加」ボタンを削除"
 
-#: templates/admin/settings.php:101
+#: templates/admin/settings.php:110
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -793,7 +822,7 @@ msgstr ""
 "（Gutenberg）を使用しているサイトには影響しません。"
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:108
+#: templates/admin/settings.php:117
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

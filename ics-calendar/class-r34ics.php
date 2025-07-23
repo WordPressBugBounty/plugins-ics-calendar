@@ -494,6 +494,7 @@ if (!class_exists('R34ICS')) {
 			if ($display_calendar_memory_limit = get_option('r34ics_display_calendar_memory_limit')) {
 				// Check against current memory limit
 				if (r34ics_memory_limit_mb() < intval($display_calendar_memory_limit)) {
+					// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged -- No alternative!
 					ini_set('memory_limit', $display_calendar_memory_limit);
 				}
 			}
@@ -629,6 +630,7 @@ if (!class_exists('R34ICS')) {
 					if (!is_object($ICal)) {
 						// Display error if debugging is turned on, otherwise just continue
 						if ($this->debug) {
+							// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
 							trigger_error(esc_html__('ICS file could not be retrieved or was empty. Please verify URL is correct, and check your php.ini configuration to verify either cURL or allow_url_fopen is available. If you are using spaces to delimit multiple URLs, you may also wish to try using the pipe character instead. Affected URL:', 'ics-calendar') . ' ' . esc_url($url), E_USER_NOTICE);
 						}
 						continue;
@@ -1446,7 +1448,8 @@ if (!class_exists('R34ICS')) {
 				}
 				
 				// Handle images as an image tag (MIME type MUST be passed or this may not actually be a direct image link (e.g. a Google Drive preview link)
-				elseif (!empty($mime) && strpos($mime, 'image/') === 0) { 
+				elseif (!empty($mime) && strpos($mime, 'image/') === 0) {
+					// phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Images are from calendar feeds, not Media Library.
 					$output .= '<div><img src="' . esc_url($url) . '" alt="" style="position: relative; height: auto; width: 100%;" /></div>';
 				}
 			
@@ -1678,7 +1681,7 @@ if (!class_exists('R34ICS')) {
 			
 			// Enqueue ICS Calendar's scripts and styles, if needed (method includes check to prevent duplicate enqueuing)
 			$this->enqueue_scripts();
-	
+			
 			// Merge new defaults
 			$defaults = $this->shortcode_defaults_merge($atts);
 			
@@ -1698,9 +1701,11 @@ if (!class_exists('R34ICS')) {
 			
 			// Report deprecated attributes
 			if (!empty($currentweek) && $this->debug) {
+				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
 				trigger_error(esc_html__('The "currentweek" shortcode attribute is deprecated. Please use view="week" in your shortcode instead.', 'ics-calendar'), E_USER_DEPRECATED);
 			}
 			if (!empty($legendinline) && $this->debug) {
+				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
 				trigger_error(esc_html__('The "legendinline" shortcode attribute is deprecated. Please use legendstyle="inline" in your shortcode instead.', 'ics-calendar'), E_USER_DEPRECATED);
 			}
 			
@@ -1938,12 +1943,25 @@ if (!class_exists('R34ICS')) {
 		
 		
 		public function shortcode_defaults_merge($atts=array()) {
+			// Get the site's default shortcode attributes (setting added in version 11.5.13)
+			$default_shortcode_atts = shortcode_parse_atts(trim(get_option('r34ics_default_shortcode', ''), '[]'));
+			
+			// Update the view based on the default shortcode (needs to precede merging defaults)
+			if (!empty($default_shortcode_atts['view'])) {
+				$atts['view'] = $default_shortcode_atts['view'];
+			}
+		
 			// Merge new defaults
 			if (get_option('r34ics_use_new_defaults_10_6')) {
 				$defaults = array_merge($this->shortcode_defaults, $this->shortcode_defaults_new_10_6);
 			}
 			else {
 				$defaults = $this->shortcode_defaults;
+			}
+			
+			// Merge the site's default shortcode attributes (added in version 11.5.13)
+			if ($default_shortcode = get_option('r34ics_default_shortcode')) {
+				$defaults = array_merge($defaults, $default_shortcode_atts);
 			}
 			
 			// Filter the current calendar view
@@ -2100,6 +2118,27 @@ if (!class_exists('R34ICS')) {
 				
 				// colors_match_theme_json
 				update_option('r34ics_colors_match_theme_json', !empty($_POST['colors_match_theme_json']));
+				
+				// default_shortcode
+				if (!empty($_POST['default_shortcode'])) {
+					// Sanitize the input
+					$default_shortcode = trim(wp_strip_all_tags(wp_unslash($_POST['default_shortcode'])));
+					// Make sure the string ONLY contains the shortcode
+					if (strpos($default_shortcode, '[') === 0 && strrpos($default_shortcode, ']') === strlen($default_shortcode) - 1 && has_shortcode($default_shortcode, 'ics_calendar')) {
+						update_option('r34ics_default_shortcode', $default_shortcode);
+					}
+					else {
+						delete_option('r34ics_default_shortcode', $default_shortcode);
+						$r34ics_deferred_admin_notices['r34ics_settings_default_shortcode'] = array(
+							'content' => '<p>' . esc_html__('The text entered in the "Default shortcode" field is not a valid shortcode, and was not saved.', 'ics-calendar') . '</p>',
+							'status' => 'error',
+							'dismissible' => false,
+						);
+					}
+				}
+				else {
+					delete_option('r34ics_default_shortcode', $default_shortcode);
+				}
 
 				// display_add_calendar_button_false
 				update_option('r34ics_display_add_calendar_button_false', !empty($_POST['display_add_calendar_button_false']));
@@ -2775,7 +2814,13 @@ if (!class_exists('R34ICS')) {
 			$user_agent = (is_array($curlopts) && in_array('useragent', $curlopts)) ? $user_agent_real : $user_agent_ics;
 		
 			// Attempt to use cURL functions
-			if (defined('CURLVERSION_NOW') && function_exists('curl_exec') && (empty($method) || $method == 'curl')) { 
+			// phpcs:disable WordPress.WP.AlternativeFunctions.curl_curl_init
+			// phpcs:disable WordPress.WP.AlternativeFunctions.curl_curl_setopt
+			// phpcs:disable WordPress.WP.AlternativeFunctions.curl_curl_getinfo
+			// phpcs:disable WordPress.WP.AlternativeFunctions.curl_curl_exec
+			// phpcs:disable WordPress.WP.AlternativeFunctions.curl_curl_close
+			// This is a legacy function for users who encounter errors with wp_remote_get()!
+			if (defined('CURLVERSION_NOW') && function_exists('curl_exec') && (empty($method) || $method == 'curl')) {
 				if ($this->debug) { $this->debug_messages[$url]['Load status'][] = 'Attempted to load URL via cURL'; }
 				$conn = curl_init($url);
 				if (file_exists(ABSPATH . 'wp-includes/certificates/ca-bundle.crt')) {
@@ -2837,6 +2882,7 @@ if (!class_exists('R34ICS')) {
 				}
 				elseif ($this->debug) { $this->debug_messages[$url]['Load status'][] = 'HTTP response: ' . $curl_response_code; }
 				curl_close($conn);
+				// phpcs:enable
 			}
 	
 			// Attempt to use fopen functions if cURL failed

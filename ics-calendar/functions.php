@@ -1193,7 +1193,10 @@ function r34ics_purge_calendar_transients() {
 	// Now we purge the plugin's transients and return the results of the query
 	// We do this with a custom SQL query because it's a lot simpler!
 	global $wpdb;
+	// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery
+	// phpcs:disable WordPress.DB.DirectDatabaseQuery.NoCaching
 	return $wpdb->query($wpdb->prepare("DELETE FROM `" . $wpdb->options . "` WHERE `option_name` LIKE %s AND `option_name` LIKE %s", '%\_transient\_%', '%R34ICS%'));
+	// phpcs:enable
 }
 
 
@@ -1387,8 +1390,10 @@ function r34ics_shortcode_url_fix($atts) {
 	if (!empty($atts['url'])) { return wp_strip_all_tags($atts['url']); }
 	elseif (!empty($atts['href'])) {
 		// Trigger an error so hopefully users will clean up their shortcodes
+		// phpcs:disable WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
 		/* translators: 1: Plugin name (do not translate) */
 		trigger_error(sprintf(esc_html__('The "url" property in your %1$s shortcode appears to contain HTML tags; most likely your URL has been turned into a clickable link. Your calendar may not display properly as a result. Please remove the clickable link in the shortcode.', 'ics-calendar'), 'ICS Calendar'), E_USER_WARNING);
+		// phpcs:enable
 		return $atts['href'];
 	}
 	return false;
@@ -1544,6 +1549,7 @@ function r34ics_system_report($echo=true) {
 						foreach ((array)$value2 as $key3 => $value3) {
 							echo '&nbsp;&nbsp;&nbsp;&nbsp;' . (!is_int($key3) ? wp_kses_post($key3 ?: '') . ': ' : '');
 							if (is_array($value3)) {
+								// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r -- Diagnostic tool.
 								print_r($value3);
 							}
 							else {
@@ -1730,6 +1736,7 @@ function r34ics_uniqid_url($uniqid='') {
 // This function has been replaced with the protected method R34ICS::_url_get_contents()
 // There is no graceful deprecation, as the function had no legitimate uses outside of this plugin
 function r34ics_url_get_contents($deprecated_1=null, $deprecated_2=null, $deprecated_3=null, $deprecated_4=null, $deprecated_5=null) {
+	// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
 	trigger_error(esc_html__('The r34ics_url_get_contents() function is no longer supported.', 'ics-calendar'), E_USER_DEPRECATED);
 	return false;
 }
@@ -1835,6 +1842,7 @@ function _r34ics_debug($arr) {
 	// Buffer and prepare output
 	ob_start();
 	echo '<hr /><pre>';
+	// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r -- Only displays in debug mode.
 	print_r($arr);
 	echo '</pre>';
 	$r34ics_debug_output .= ob_get_clean();
