@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-07-23 13:07-0500\n"
-"PO-Revision-Date: 2025-07-23 13:07-0500\n"
+"POT-Creation-Date: 2025-08-01 17:18-0500\n"
+"PO-Revision-Date: 2025-08-01 17:18-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:295
+#: class-r34ics.php:296
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -33,7 +33,7 @@ msgstr ""
 "用できなかったり、正しく機能しない場合があります。"
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:305
+#: class-r34ics.php:306
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -49,33 +49,34 @@ msgstr ""
 "に変更し、正しく時間を表示してください。この問題の詳細については、%6$sドキュ"
 "メント%7$s を参照してください。"
 
-#: class-r34ics.php:348 templates/admin/admin.php:63
+#: class-r34ics.php:349 templates/admin/admin.php:65
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "ユーティリティー"
 
-#: class-r34ics.php:349 class-r34ics.php:2068 class-r34ics.php:2073
-#: templates/admin/admin.php:59 templates/admin/admin.php:74
+#: class-r34ics.php:350 class-r34ics.php:2084 class-r34ics.php:2089
+#: templates/admin/admin.php:61 templates/admin/admin.php:77
 msgid "Settings"
 msgstr "設定"
 
-#: class-r34ics.php:350 templates/admin/sidebar.php:5
+#: class-r34ics.php:351 templates/admin/sidebar.php:9
 msgid "User Guide"
 msgstr "ユーザーガイド"
 
-#: class-r34ics.php:351 templates/admin/sidebar.php:10
+#: class-r34ics.php:352 templates/admin/admin.php:67
+#: templates/admin/sidebar.php:14
 msgid "Support"
 msgstr "サポート"
 
-#: class-r34ics.php:353
+#: class-r34ics.php:354
 msgid "Upgrade to PRO!"
 msgstr "プロ版へアップグレード!"
 
-#: class-r34ics.php:371
+#: class-r34ics.php:372
 msgid "Show/hide all"
 msgstr "すべて表示/非表示"
 
-#: class-r34ics.php:632
+#: class-r34ics.php:645
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -88,36 +89,36 @@ msgstr ""
 "認してください。複数の URL を区切るためにスペースを使用している場合は、代わり"
 "にパイプ文字を使用することもできます。影響を受ける URL:"
 
-#: class-r34ics.php:1070
+#: class-r34ics.php:1083
 msgid "Hide past events"
 msgstr "過去のイベントを非表示にする"
 
-#: class-r34ics.php:1071 templates/calendar-month.php:83
+#: class-r34ics.php:1084 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "過去のイベントを表示"
 
-#: class-r34ics.php:1152
+#: class-r34ics.php:1165
 msgid "Contact:"
 msgstr "連絡先:"
 
-#: class-r34ics.php:1158
+#: class-r34ics.php:1171
 msgid "Resources:"
 msgstr "リソースです："
 
-#: class-r34ics.php:1168
+#: class-r34ics.php:1181
 msgid "Click for more..."
 msgstr "詳細については、ここをクリックしてください。"
 
-#: class-r34ics.php:1202
+#: class-r34ics.php:1215
 msgid "Save to your calendar"
 msgstr "カレンダーへの保存"
 
-#: class-r34ics.php:1305
+#: class-r34ics.php:1318
 msgid "Cancelled"
 msgstr "キャンセル"
 
-#: class-r34ics.php:1701
+#: class-r34ics.php:1716
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -125,7 +126,7 @@ msgstr ""
 "「現在の週」のショートコード属性は推奨されていません。代わりに、ショートコー"
 "ドでview=\"week\"を使用してください。"
 
-#: class-r34ics.php:1704
+#: class-r34ics.php:1720
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -134,19 +135,19 @@ msgstr ""
 "legendstyle=\"inline\" を使用してください。"
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2020
+#: class-r34ics.php:2036
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$sトランジェントをクリアしました。"
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2028
+#: class-r34ics.php:2044
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s トランジェントは見つかりませんでした。"
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2068
+#: class-r34ics.php:2084
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -155,12 +156,12 @@ msgstr ""
 "フィードのURLにHTTPベーシック認証の認証情報が含まれているようです。上記の%2$s"
 "タブの%1$sオプションをオフにしてみてください。"
 
-#: class-r34ics.php:2068 class-r34ics.php:2073 templates/admin/settings.php:64
+#: class-r34ics.php:2084 class-r34ics.php:2089 templates/admin/settings.php:64
 msgid "Use legacy feed request method"
 msgstr "レガシーフィードリクエストメソッドを使用する"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2073
+#: class-r34ics.php:2089
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -170,7 +171,7 @@ msgstr ""
 "の%4$sタブにある%3$sオプションをオンにしてみてください。"
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2080
+#: class-r34ics.php:2096
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -186,18 +187,18 @@ msgstr ""
 "イド%5$sをご覧ください。"
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2087
+#: class-r34ics.php:2103
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "エラー：%1$sのIPアドレスを解決できませんでした。"
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2091
+#: class-r34ics.php:2107
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$sの解決済みIPアドレス："
 
-#: class-r34ics.php:2128
+#: class-r34ics.php:2154
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -206,7 +207,7 @@ msgstr ""
 "コードではなく、保存されませんでした。"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2176
+#: class-r34ics.php:2195
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -215,7 +216,7 @@ msgstr ""
 "%1$s設定を更新しました。%2$sいくつかの変更を確認するには、ページを更新する必"
 "要があるかもしれません。"
 
-#: class-r34ics.php:2417
+#: class-r34ics.php:2436
 msgid "calendar event"
 msgstr "カレンダーイベント"
 
@@ -223,52 +224,52 @@ msgstr "カレンダーイベント"
 msgid "Map"
 msgstr "マップ"
 
-#: functions.php:1227
+#: functions.php:1230
 msgid "Recurring event"
 msgstr "繰り返しイベントの新規作成"
 
 #. translators: 1. Dynamic value
-#: functions.php:1233
+#: functions.php:1236
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "%1$s年ごとに再発"
 
-#: functions.php:1233
+#: functions.php:1236
 msgid "Recurs yearly"
 msgstr "毎年繰り返し"
 
 #. translators: 1. Dynamic value
-#: functions.php:1237
+#: functions.php:1240
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "%1$sヵ月ごとに再発"
 
-#: functions.php:1237
+#: functions.php:1240
 msgid "Recurs monthly"
 msgstr "毎月繰り返し"
 
 #. translators: 1. Dynamic value
-#: functions.php:1241
+#: functions.php:1244
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "%1$s週間ごとに再発"
 
-#: functions.php:1241
+#: functions.php:1244
 msgid "Recurs weekly"
 msgstr "毎週繰り返し"
 
 #. translators: 1. Dynamic value
-#: functions.php:1245
+#: functions.php:1248
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "%1$s日ごとに再発"
 
-#: functions.php:1245
+#: functions.php:1248
 msgid "Recurs daily"
 msgstr "毎日繰り返し"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1391
+#: functions.php:1395
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -281,7 +282,7 @@ msgstr ""
 "カレンダーが正しく表示されない可能性があります。ショートコード内のクリッカブ"
 "ルリンクを削除してください。"
 
-#: functions.php:1733
+#: functions.php:1744
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents()関数はサポートされなくなりました。"
 
@@ -450,15 +451,16 @@ msgstr ""
 msgid "Insert %1$s"
 msgstr "インサート %1$s"
 
-#: templates/admin/admin.php:8
-msgid "Do even more with..."
-msgstr "さらに多くのことを..."
+#: templates/admin/admin.php:10
+#, php-format
+msgid "Do even more with %1$s!"
+msgstr "%1$sでさらに多くのことができる！"
 
-#: templates/admin/admin.php:13
+#: templates/admin/admin.php:15
 msgid "Calendar Builder"
 msgstr "カレンダービルダー"
 
-#: templates/admin/admin.php:14
+#: templates/admin/admin.php:16
 msgid ""
 "Configure all calendar settings with an easy visual interface... no need to "
 "manually type shortcodes."
@@ -466,11 +468,11 @@ msgstr ""
 "簡単なビジュアルインターフェイスですべてのカレンダー設定を行うことができま"
 "す。"
 
-#: templates/admin/admin.php:15
+#: templates/admin/admin.php:17
 msgid "Additional Views and Enhanced Features"
 msgstr "追加ビューと拡張機能"
 
-#: templates/admin/admin.php:16
+#: templates/admin/admin.php:18
 msgid ""
 "New ways to display your calendar including Full, Up Next, Masonry, Month "
 "with Sidebar, Widget, and more. Additional capabilities are added to the "
@@ -480,21 +482,21 @@ msgstr ""
 "ンダーの新しい表示方法。コアとなる月、基本、リスト、週ビューに追加機能が追加"
 "されました。"
 
-#: templates/admin/admin.php:17
+#: templates/admin/admin.php:19
 msgid "Customizer"
 msgstr "カスタマイザー"
 
-#: templates/admin/admin.php:18
+#: templates/admin/admin.php:20
 msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
 msgstr ""
 "カレンダーのカラーパレットやフォントなどを、サイト全体で簡単に変更できます。"
 
-#: templates/admin/admin.php:20
+#: templates/admin/admin.php:22
 msgid "ICS Events"
 msgstr "ICSイベント"
 
 #. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/admin.php:23
+#: templates/admin/admin.php:25
 #, php-format
 msgid ""
 "%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
@@ -505,25 +507,25 @@ msgstr ""
 "トを作成・管理し、既存のフィードとシームレスに統合することもできます。"
 
 #. translators: 1. Link (do not translate)
-#: templates/admin/admin.php:27
+#: templates/admin/admin.php:29
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "詳しくは%1$sをご覧いただきたい。"
 
-#: templates/admin/admin.php:35
+#: templates/admin/admin.php:37
 msgid "Go PRO!"
 msgstr "プロに行く!"
 
-#: templates/admin/admin.php:55 templates/admin/getting-started.php:3
+#: templates/admin/admin.php:57 templates/admin/getting-started.php:3
 #: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "はじめに"
 
-#: templates/admin/admin.php:64 templates/admin/utilities.php:102
+#: templates/admin/admin.php:66 templates/admin/utilities.php:102
 msgid "System Report"
 msgstr "システムレポート"
 
-#: templates/admin/admin.php:83
+#: templates/admin/admin.php:86
 msgid "Save Changes"
 msgstr "変更を保存"
 
@@ -836,7 +838,7 @@ msgstr ""
 "れていない限り、引き続き古いデフォルト値が使用されます。 これらの変更について"
 "詳しくは、%2$sour ブログ%3$s をご覧ください。"
 
-#: templates/admin/sidebar.php:7
+#: templates/admin/sidebar.php:11
 msgid ""
 "Our complete user guide is available with full translation into dozens of "
 "languages on our website:"
@@ -844,14 +846,14 @@ msgstr ""
 "ユーザーガイドの全文を、数十ヶ国語に翻訳してホームページで公開しています。"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/sidebar.php:14
+#: templates/admin/sidebar.php:18
 #, php-format
 msgid "For assistance, please use our %1$ssupport request form%2$s."
 msgstr ""
 "サポートについては、%1$sサポートリクエストフォーム%2$sをご利用ください。"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/sidebar.php:27
+#. translators: 1. HTML tags 2. HTML tags
+#: templates/admin/sidebar.php:31
 #, php-format
 msgid ""
 "When contacting support, please include the %1$sSystem Report%2$s from this "
@@ -860,12 +862,12 @@ msgstr ""
 "サポートにご連絡の際は、本ページの%1$sシステムレポート%2$sを明記してくださ"
 "い。"
 
-#: templates/admin/sidebar.php:33
+#: templates/admin/sidebar.php:37
 msgid "Spread the word!"
 msgstr "評判を広める"
 
 #. translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/sidebar.php:37
+#: templates/admin/sidebar.php:41
 #, php-format
 msgid ""
 "If you find %1$s useful, you can help support our continued growth and "

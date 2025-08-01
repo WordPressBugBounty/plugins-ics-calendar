@@ -7,7 +7,10 @@ function r34ics_getting_started_go_pro_html() {
 	ob_start();
 	?>
 	<div class="r34ics-pro-mo r34ics-gradient-bg postbox"><div class="inside">
-		<h3><?php esc_html_e('Do even more with...', 'ics-calendar'); ?></h3>
+		<h3><?php
+		/* translators: 1: Plugin name (do not translate) */
+		printf(esc_html__('Do even more with %1$s!', 'ics-calendar'), 'ICS Calendar Pro');
+		?></h3>
 				
 		<div class="r34ics-pro-features">
 			<div>
@@ -54,16 +57,17 @@ function r34ics_getting_started_go_pro_html() {
 			<div class="postbox">
 		
 				<nav class="r34ics-menu"><ul>
-					<li><a href="#getting-started"><?php esc_html_e('Getting Started', 'ics-calendar'); ?></a></li>
+					<li><a href="#getting-started"><span class="dashicons dashicons-sos"></span><?php esc_html_e('Getting Started', 'ics-calendar'); ?></a></li>
 					<?php
 					if (current_user_can('manage_options')) {
 						?>
-						<li><a href="#settings"><?php esc_html_e('Settings', 'ics-calendar'); ?></a></li>
+						<li><a href="#settings"><span class="dashicons dashicons-admin-settings"></span><?php esc_html_e('Settings', 'ics-calendar'); ?></a></li>
 						<?php
 					}
 					?>
-					<li><a href="#utilities"><?php esc_html_e('Utilities', 'ics-calendar'); ?></a></li>
-					<li><a href="#system-report"><?php esc_html_e('System Report', 'ics-calendar'); ?></a></li>
+					<li><a href="#utilities"><span class="dashicons dashicons-admin-tools"></span><?php esc_html_e('Utilities', 'ics-calendar'); ?></a></li>
+					<li><a href="#system-report"><span class="dashicons dashicons-clipboard"></span><?php esc_html_e('System Report', 'ics-calendar'); ?></a></li>
+					<li><a href="https://icscalendar.com/support/" target="_blank"><span class="dashicons dashicons-email-alt"></span><?php esc_html_e('Support', 'ics-calendar'); ?></a></li>
 				</ul></nav>
 			
 				<?php include_once(plugin_dir_path(__FILE__) . 'getting-started.php'); ?>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-07-23 13:05-0500\n"
-"PO-Revision-Date: 2025-07-23 13:06-0500\n"
+"POT-Creation-Date: 2025-08-01 17:16-0500\n"
+"PO-Revision-Date: 2025-08-01 17:16-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:295
+#: class-r34ics.php:296
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -32,7 +32,7 @@ msgstr ""
 "在网络服务器上运行的，因此某些功能可能不可用或无法正常运行。"
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:305
+#: class-r34ics.php:306
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -47,33 +47,34 @@ msgstr ""
 "市，在同一个时区，以获得正确的时间显示。请参阅我们的%6$s文件%7$s，了解有关这"
 "个问题的其他信息。"
 
-#: class-r34ics.php:348 templates/admin/admin.php:63
+#: class-r34ics.php:349 templates/admin/admin.php:65
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "工具"
 
-#: class-r34ics.php:349 class-r34ics.php:2068 class-r34ics.php:2073
-#: templates/admin/admin.php:59 templates/admin/admin.php:74
+#: class-r34ics.php:350 class-r34ics.php:2084 class-r34ics.php:2089
+#: templates/admin/admin.php:61 templates/admin/admin.php:77
 msgid "Settings"
 msgstr "设置"
 
-#: class-r34ics.php:350 templates/admin/sidebar.php:5
+#: class-r34ics.php:351 templates/admin/sidebar.php:9
 msgid "User Guide"
 msgstr "用户指南"
 
-#: class-r34ics.php:351 templates/admin/sidebar.php:10
+#: class-r34ics.php:352 templates/admin/admin.php:67
+#: templates/admin/sidebar.php:14
 msgid "Support"
 msgstr "支持"
 
-#: class-r34ics.php:353
+#: class-r34ics.php:354
 msgid "Upgrade to PRO!"
 msgstr "升级到PRO！"
 
-#: class-r34ics.php:371
+#: class-r34ics.php:372
 msgid "Show/hide all"
 msgstr "显示/隐藏所有"
 
-#: class-r34ics.php:632
+#: class-r34ics.php:645
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -85,42 +86,42 @@ msgstr ""
 "cURL 或allow_url_fopen是否可用。如果使用空格来分隔多个 URL，您可能还希望尝试"
 "使用管道字符。受影响的 URL:"
 
-#: class-r34ics.php:1070
+#: class-r34ics.php:1083
 msgid "Hide past events"
 msgstr "隐藏过去的活动"
 
-#: class-r34ics.php:1071 templates/calendar-month.php:83
+#: class-r34ics.php:1084 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "显示过去的事件"
 
-#: class-r34ics.php:1152
+#: class-r34ics.php:1165
 msgid "Contact:"
 msgstr "联系人:"
 
-#: class-r34ics.php:1158
+#: class-r34ics.php:1171
 msgid "Resources:"
 msgstr "相关资源:"
 
-#: class-r34ics.php:1168
+#: class-r34ics.php:1181
 msgid "Click for more..."
 msgstr "点击查看更多..."
 
-#: class-r34ics.php:1202
+#: class-r34ics.php:1215
 msgid "Save to your calendar"
 msgstr "保存到你的日历"
 
-#: class-r34ics.php:1305
+#: class-r34ics.php:1318
 msgid "Cancelled"
 msgstr "已取消"
 
-#: class-r34ics.php:1701
+#: class-r34ics.php:1716
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
 msgstr "\"currentweek\"短代码属性已弃用。请在短代码中使用 view=\"week\"。"
 
-#: class-r34ics.php:1704
+#: class-r34ics.php:1720
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -129,19 +130,19 @@ msgstr ""
 "替。"
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2020
+#: class-r34ics.php:2036
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "清除了%1$s%2$s个瞬态。"
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2028
+#: class-r34ics.php:2044
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "没有发现%1$s的瞬态。"
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2068
+#: class-r34ics.php:2084
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -150,12 +151,12 @@ msgstr ""
 "您的馈送 URL 似乎包含 HTTP 基本身份验证凭据。请尝试关闭上述 %2$s 标签下的 "
 "%1$s 选项。"
 
-#: class-r34ics.php:2068 class-r34ics.php:2073 templates/admin/settings.php:64
+#: class-r34ics.php:2084 class-r34ics.php:2089 templates/admin/settings.php:64
 msgid "Use legacy feed request method"
 msgstr "使用传统的馈送请求方法"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2073
+#: class-r34ics.php:2089
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -165,7 +166,7 @@ msgstr ""
 "%4$s 标签下的 %3$s 选项。"
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2080
+#: class-r34ics.php:2096
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -179,32 +180,32 @@ msgstr ""
 "们的 %4$s 用户指南%5$s，了解如何获取正确的动态源 URL。"
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2087
+#: class-r34ics.php:2103
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "错误：无法解析 %1$s 的 IP 地址。"
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2091
+#: class-r34ics.php:2107
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "已解决 %1$s 的 IP 地址："
 
-#: class-r34ics.php:2128
+#: class-r34ics.php:2154
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
 msgstr "在 \"默认简码 \"字段中输入的文本不是有效的简码，因此没有保存。"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2176
+#: class-r34ics.php:2195
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
 "changes."
 msgstr "%1$s设置已更新。%2$s 您可能需要刷新页面才能看到某些更改。"
 
-#: class-r34ics.php:2417
+#: class-r34ics.php:2436
 msgid "calendar event"
 msgstr "日历事件"
 
@@ -212,52 +213,52 @@ msgstr "日历事件"
 msgid "Map"
 msgstr "地图"
 
-#: functions.php:1227
+#: functions.php:1230
 msgid "Recurring event"
 msgstr "定期事件"
 
 #. translators: 1. Dynamic value
-#: functions.php:1233
+#: functions.php:1236
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "每 %1$s 年出现一次"
 
-#: functions.php:1233
+#: functions.php:1236
 msgid "Recurs yearly"
 msgstr "每年递归"
 
 #. translators: 1. Dynamic value
-#: functions.php:1237
+#: functions.php:1240
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "每 %1$s 个月出现一次"
 
-#: functions.php:1237
+#: functions.php:1240
 msgid "Recurs monthly"
 msgstr "每月递归"
 
 #. translators: 1. Dynamic value
-#: functions.php:1241
+#: functions.php:1244
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "每 %1$s 周复发一次"
 
-#: functions.php:1241
+#: functions.php:1244
 msgid "Recurs weekly"
 msgstr "每周重复"
 
 #. translators: 1. Dynamic value
-#: functions.php:1245
+#: functions.php:1248
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "每 %1$s 天出现一次"
 
-#: functions.php:1245
+#: functions.php:1248
 msgid "Recurs daily"
 msgstr "每天重复"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1391
+#: functions.php:1395
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -268,7 +269,7 @@ msgstr ""
 "您的%1$s短代码中的 \"url \"属性似乎包含HTML标签；很可能您的URL已经变成了一个"
 "可点击的链接。您的日历可能因此而不能正常显示。请删除短代码中的可点击链接。"
 
-#: functions.php:1733
+#: functions.php:1744
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "不再支持 r34ics_url_get_contents() 函数。"
 
@@ -424,25 +425,26 @@ msgstr "%1$s注意：%2$s额外的%3$s显示选项%4$s可以在插入后通过�
 msgid "Insert %1$s"
 msgstr "插入 %1$s"
 
-#: templates/admin/admin.php:8
-msgid "Do even more with..."
-msgstr "使用..."
+#: templates/admin/admin.php:10
+#, php-format
+msgid "Do even more with %1$s!"
+msgstr "用 %1$s 做得更多！"
 
-#: templates/admin/admin.php:13
+#: templates/admin/admin.php:15
 msgid "Calendar Builder"
 msgstr "日历生成器"
 
-#: templates/admin/admin.php:14
+#: templates/admin/admin.php:16
 msgid ""
 "Configure all calendar settings with an easy visual interface... no need to "
 "manually type shortcodes."
 msgstr "通过简单的可视化界面配置所有日历设置......无需手动输入简码。"
 
-#: templates/admin/admin.php:15
+#: templates/admin/admin.php:17
 msgid "Additional Views and Enhanced Features"
 msgstr "其他视图和增强功能"
 
-#: templates/admin/admin.php:16
+#: templates/admin/admin.php:18
 msgid ""
 "New ways to display your calendar including Full, Up Next, Masonry, Month "
 "with Sidebar, Widget, and more. Additional capabilities are added to the "
@@ -452,20 +454,20 @@ msgstr ""
 "\"、\"小部件 \"等。核心的 \"月\"、\"基本\"、\"列表 \"和 \"周 \"视图还增加了其"
 "他功能。"
 
-#: templates/admin/admin.php:17
+#: templates/admin/admin.php:19
 msgid "Customizer"
 msgstr "自定义"
 
-#: templates/admin/admin.php:18
+#: templates/admin/admin.php:20
 msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
 msgstr "在全站范围内轻松修改日历调色板、字体等。"
 
-#: templates/admin/admin.php:20
+#: templates/admin/admin.php:22
 msgid "ICS Events"
 msgstr "ICS 活动"
 
 #. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/admin.php:23
+#: templates/admin/admin.php:25
 #, php-format
 msgid ""
 "%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
@@ -476,25 +478,25 @@ msgstr ""
 "理事件，甚至将它们与您现有的信息源无缝整合。"
 
 #. translators: 1. Link (do not translate)
-#: templates/admin/admin.php:27
+#: templates/admin/admin.php:29
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "请访问 %1$s 了解更多信息。"
 
-#: templates/admin/admin.php:35
+#: templates/admin/admin.php:37
 msgid "Go PRO!"
 msgstr "去专业！"
 
-#: templates/admin/admin.php:55 templates/admin/getting-started.php:3
+#: templates/admin/admin.php:57 templates/admin/getting-started.php:3
 #: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "入门指南"
 
-#: templates/admin/admin.php:64 templates/admin/utilities.php:102
+#: templates/admin/admin.php:66 templates/admin/utilities.php:102
 msgid "System Report"
 msgstr "系统报告"
 
-#: templates/admin/admin.php:83
+#: templates/admin/admin.php:86
 msgid "Save Changes"
 msgstr "保存更改"
 
@@ -790,32 +792,32 @@ msgstr ""
 "级后的安装将继续使用旧的默认值，除非勾选此框。在%2$s我们的博客%3$s上阅读更多"
 "关于这些变化的信息。"
 
-#: templates/admin/sidebar.php:7
+#: templates/admin/sidebar.php:11
 msgid ""
 "Our complete user guide is available with full translation into dozens of "
 "languages on our website:"
 msgstr "我们网站上有完整的用户指南，可翻译成数十种语言："
 
 #. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/sidebar.php:14
+#: templates/admin/sidebar.php:18
 #, php-format
 msgid "For assistance, please use our %1$ssupport request form%2$s."
 msgstr "如需帮助，请使用我们的 %1$s 支持申请表%2$s。"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/sidebar.php:27
+#. translators: 1. HTML tags 2. HTML tags
+#: templates/admin/sidebar.php:31
 #, php-format
 msgid ""
 "When contacting support, please include the %1$sSystem Report%2$s from this "
 "page."
 msgstr "联系技术支持时，请附上本页中的 %1$sSystem Report%2$s （系统报告）。"
 
-#: templates/admin/sidebar.php:33
+#: templates/admin/sidebar.php:37
 msgid "Spread the word!"
 msgstr "传播信息！"
 
 #. translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/sidebar.php:37
+#: templates/admin/sidebar.php:41
 #, php-format
 msgid ""
 "If you find %1$s useful, you can help support our continued growth and "

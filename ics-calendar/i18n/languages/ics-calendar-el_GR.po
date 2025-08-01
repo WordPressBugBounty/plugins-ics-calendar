@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-07-23 13:08-0500\n"
-"PO-Revision-Date: 2025-07-23 13:08-0500\n"
+"POT-Creation-Date: 2025-08-01 17:20-0500\n"
+"PO-Revision-Date: 2025-08-01 17:20-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: el_GR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:295
+#: class-r34ics.php:296
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -34,7 +34,7 @@ msgstr ""
 "σωστά."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:305
+#: class-r34ics.php:306
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -51,33 +51,34 @@ msgstr ""
 "σας πόλη, στην ίδια ζώνη ώρας, για σωστή απεικόνιση της ώρας. Ανατρέξτε στην "
 "%6$s τεκμηρίωση%7$s για περισσότερες πληροφορίες σχετικά με αυτό το θέμα."
 
-#: class-r34ics.php:348 templates/admin/admin.php:63
+#: class-r34ics.php:349 templates/admin/admin.php:65
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "Παροχές"
 
-#: class-r34ics.php:349 class-r34ics.php:2068 class-r34ics.php:2073
-#: templates/admin/admin.php:59 templates/admin/admin.php:74
+#: class-r34ics.php:350 class-r34ics.php:2084 class-r34ics.php:2089
+#: templates/admin/admin.php:61 templates/admin/admin.php:77
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-#: class-r34ics.php:350 templates/admin/sidebar.php:5
+#: class-r34ics.php:351 templates/admin/sidebar.php:9
 msgid "User Guide"
 msgstr "Οδηγός χρήσης"
 
-#: class-r34ics.php:351 templates/admin/sidebar.php:10
+#: class-r34ics.php:352 templates/admin/admin.php:67
+#: templates/admin/sidebar.php:14
 msgid "Support"
 msgstr "Υποστήριξη"
 
-#: class-r34ics.php:353
+#: class-r34ics.php:354
 msgid "Upgrade to PRO!"
 msgstr "Αναβάθμιση σε PRO!"
 
-#: class-r34ics.php:371
+#: class-r34ics.php:372
 msgid "Show/hide all"
 msgstr "Εμφάνιση/απόκρυψη όλων"
 
-#: class-r34ics.php:632
+#: class-r34ics.php:645
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -92,36 +93,36 @@ msgstr ""
 "μπορείτε επίσης να δοκιμάσετε να χρησιμοποιήσετε το χαρακτήρα διοχέτευσης. "
 "Διεύθυνση URL που επηρεάζεται:"
 
-#: class-r34ics.php:1070
+#: class-r34ics.php:1083
 msgid "Hide past events"
 msgstr "Απόκρυψη προηγούμενων συμβάντων"
 
-#: class-r34ics.php:1071 templates/calendar-month.php:83
+#: class-r34ics.php:1084 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "Εμφάνιση προηγούμενων συμβάντων"
 
-#: class-r34ics.php:1152
+#: class-r34ics.php:1165
 msgid "Contact:"
 msgstr "Επαφή:"
 
-#: class-r34ics.php:1158
+#: class-r34ics.php:1171
 msgid "Resources:"
 msgstr "Πόροι:"
 
-#: class-r34ics.php:1168
+#: class-r34ics.php:1181
 msgid "Click for more..."
 msgstr "Κάντε κλικ για περισσότερα..."
 
-#: class-r34ics.php:1202
+#: class-r34ics.php:1215
 msgid "Save to your calendar"
 msgstr "Αποθήκευση στο ημερολόγιό σας"
 
-#: class-r34ics.php:1305
+#: class-r34ics.php:1318
 msgid "Cancelled"
 msgstr "Ακυρώθηκε"
 
-#: class-r34ics.php:1701
+#: class-r34ics.php:1716
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -129,7 +130,7 @@ msgstr ""
 "Το χαρακτηριστικό σύντομου κώδικα \"currentweek\" υποτιμάται. Χρησιμοποιήστε "
 "την view=\"week\" στον σύντομο κώδικά σας."
 
-#: class-r34ics.php:1704
+#: class-r34ics.php:1720
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -138,19 +139,19 @@ msgstr ""
 "Παρακαλούμε χρησιμοποιήστε το legendstyle=\"inline\" στο shortcode σας."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2020
+#: class-r34ics.php:2036
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Εκκαθάριση %1$s %2$s μεταβατικών στοιχείων."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2028
+#: class-r34ics.php:2044
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Δεν βρέθηκαν μεταβατικές καταστάσεις %1$s."
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2068
+#: class-r34ics.php:2084
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -160,12 +161,12 @@ msgstr ""
 "Basic Authentication. Δοκιμάστε να απενεργοποιήσετε την επιλογή %1$s στην "
 "καρτέλα %2$s παραπάνω."
 
-#: class-r34ics.php:2068 class-r34ics.php:2073 templates/admin/settings.php:64
+#: class-r34ics.php:2084 class-r34ics.php:2089 templates/admin/settings.php:64
 msgid "Use legacy feed request method"
 msgstr "Χρήση παλαιάς μεθόδου αίτησης τροφοδοσίας"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2073
+#: class-r34ics.php:2089
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -176,7 +177,7 @@ msgstr ""
 "καρτέλα %4$s παραπάνω."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2080
+#: class-r34ics.php:2096
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -194,18 +195,18 @@ msgstr ""
 "διεύθυνσης URL δυναμικής τροφοδοσίας."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2087
+#: class-r34ics.php:2103
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Σφάλμα: %1$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2091
+#: class-r34ics.php:2107
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Επιλυμένη διεύθυνση IP για %1$s:"
 
-#: class-r34ics.php:2128
+#: class-r34ics.php:2154
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -214,7 +215,7 @@ msgstr ""
 "είναι έγκυρος σύντομος κωδικός και δεν αποθηκεύτηκε."
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2176
+#: class-r34ics.php:2195
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -223,7 +224,7 @@ msgstr ""
 "%1$sΟι ρυθμίσεις ενημερώθηκαν%2$s Ίσως χρειαστεί να ανανεώσετε τη σελίδα για "
 "να δείτε κάποιες αλλαγές."
 
-#: class-r34ics.php:2417
+#: class-r34ics.php:2436
 msgid "calendar event"
 msgstr "ημερολογιακή εκδήλωση"
 
@@ -231,52 +232,52 @@ msgstr "ημερολογιακή εκδήλωση"
 msgid "Map"
 msgstr "Χάρτης"
 
-#: functions.php:1227
+#: functions.php:1230
 msgid "Recurring event"
 msgstr "Διαχωριστικά συμβάντων"
 
 #. translators: 1. Dynamic value
-#: functions.php:1233
+#: functions.php:1236
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Επαναλαμβάνεται κάθε %1$s χρόνια"
 
-#: functions.php:1233
+#: functions.php:1236
 msgid "Recurs yearly"
 msgstr "Επαναλαμβάνεται ετησίως"
 
 #. translators: 1. Dynamic value
-#: functions.php:1237
+#: functions.php:1240
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Επαναλαμβάνεται κάθε %1$s μήνες"
 
-#: functions.php:1237
+#: functions.php:1240
 msgid "Recurs monthly"
 msgstr "Επαναλαμβάνεται κάθε μήνα"
 
 #. translators: 1. Dynamic value
-#: functions.php:1241
+#: functions.php:1244
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Επαναλαμβάνεται κάθε %1$s εβδομάδες"
 
-#: functions.php:1241
+#: functions.php:1244
 msgid "Recurs weekly"
 msgstr "Επαναλαμβάνεται εβδομαδιαία"
 
 #. translators: 1. Dynamic value
-#: functions.php:1245
+#: functions.php:1248
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Επαναλαμβάνεται κάθε %1$s ημέρες"
 
-#: functions.php:1245
+#: functions.php:1248
 msgid "Recurs daily"
 msgstr "Επαναλαμβάνεται καθημερινά"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1391
+#: functions.php:1395
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -289,7 +290,7 @@ msgstr ""
 "γίνει κλικ. Το ημερολόγιό σας μπορεί να μην εμφανίζεται σωστά ως αποτέλεσμα. "
 "Παρακαλούμε αφαιρέστε τον σύνδεσμο με δυνατότητα κλικ στον σύντομο κώδικα."
 
-#: functions.php:1733
+#: functions.php:1744
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Η συνάρτηση r34ics_url_get_contents() δεν υποστηρίζεται πλέον."
 
@@ -460,15 +461,16 @@ msgstr ""
 msgid "Insert %1$s"
 msgstr "Εισαγωγή %1$s"
 
-#: templates/admin/admin.php:8
-msgid "Do even more with..."
-msgstr "Κάντε ακόμα περισσότερα με..."
+#: templates/admin/admin.php:10
+#, php-format
+msgid "Do even more with %1$s!"
+msgstr "Κάντε ακόμα περισσότερα με το %1$s!"
 
-#: templates/admin/admin.php:13
+#: templates/admin/admin.php:15
 msgid "Calendar Builder"
 msgstr "Δημιουργία ημερολογίου"
 
-#: templates/admin/admin.php:14
+#: templates/admin/admin.php:16
 msgid ""
 "Configure all calendar settings with an easy visual interface... no need to "
 "manually type shortcodes."
@@ -476,11 +478,11 @@ msgstr ""
 "Διαμορφώστε όλες τις ρυθμίσεις του ημερολογίου με ένα εύκολο οπτικό "
 "περιβάλλον... δεν χρειάζεται να πληκτρολογείτε χειροκίνητα shortcodes."
 
-#: templates/admin/admin.php:15
+#: templates/admin/admin.php:17
 msgid "Additional Views and Enhanced Features"
 msgstr "Πρόσθετες προβολές και βελτιωμένες λειτουργίες"
 
-#: templates/admin/admin.php:16
+#: templates/admin/admin.php:18
 msgid ""
 "New ways to display your calendar including Full, Up Next, Masonry, Month "
 "with Sidebar, Widget, and more. Additional capabilities are added to the "
@@ -490,22 +492,22 @@ msgstr ""
 "Μήνας με πλαϊνή μπάρα, Widget και άλλα. Προστίθενται πρόσθετες δυνατότητες "
 "στις βασικές προβολές Μήνας, Βασική, Λίστα και Εβδομάδα."
 
-#: templates/admin/admin.php:17
+#: templates/admin/admin.php:19
 msgid "Customizer"
 msgstr "Εξατομικευτής"
 
-#: templates/admin/admin.php:18
+#: templates/admin/admin.php:20
 msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
 msgstr ""
 "Τροποποιήστε εύκολα τις παλέτες χρωμάτων του ημερολογίου σας, τις "
 "γραμματοσειρές και πολλά άλλα, σε ολόκληρο τον ιστότοπο."
 
-#: templates/admin/admin.php:20
+#: templates/admin/admin.php:22
 msgid "ICS Events"
 msgstr "Εκδηλώσεις ICS"
 
 #. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/admin.php:23
+#: templates/admin/admin.php:25
 #, php-format
 msgid ""
 "%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
@@ -517,25 +519,25 @@ msgstr ""
 "και ενσωματώστε τις απρόσκοπτα με τις υπάρχουσες ροές σας."
 
 #. translators: 1. Link (do not translate)
-#: templates/admin/admin.php:27
+#: templates/admin/admin.php:29
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "Επισκεφθείτε το %1$s για να μάθετε περισσότερα."
 
-#: templates/admin/admin.php:35
+#: templates/admin/admin.php:37
 msgid "Go PRO!"
 msgstr "Πηγαίνετε PRO!"
 
-#: templates/admin/admin.php:55 templates/admin/getting-started.php:3
+#: templates/admin/admin.php:57 templates/admin/getting-started.php:3
 #: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "Ξεκινώντας"
 
-#: templates/admin/admin.php:64 templates/admin/utilities.php:102
+#: templates/admin/admin.php:66 templates/admin/utilities.php:102
 msgid "System Report"
 msgstr "Αναφορά Συστήματος"
 
-#: templates/admin/admin.php:83
+#: templates/admin/admin.php:86
 msgid "Save Changes"
 msgstr "Αποθήκευση αλλαγών"
 
@@ -873,7 +875,7 @@ msgstr ""
 "επιλεγμένο αυτό το πλαίσιο. Διαβάστε περισσότερα σχετικά με αυτές τις "
 "αλλαγές στο %2$sιστολόγιό μας%3$s."
 
-#: templates/admin/sidebar.php:7
+#: templates/admin/sidebar.php:11
 msgid ""
 "Our complete user guide is available with full translation into dozens of "
 "languages on our website:"
@@ -882,13 +884,13 @@ msgstr ""
 "γλώσσες στον ιστότοπό μας:"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/sidebar.php:14
+#: templates/admin/sidebar.php:18
 #, php-format
 msgid "For assistance, please use our %1$ssupport request form%2$s."
 msgstr "Για βοήθεια, χρησιμοποιήστε τη φόρμα %1$sαίτησης υποστήριξης%2$s."
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/sidebar.php:27
+#. translators: 1. HTML tags 2. HTML tags
+#: templates/admin/sidebar.php:31
 #, php-format
 msgid ""
 "When contacting support, please include the %1$sSystem Report%2$s from this "
@@ -897,12 +899,12 @@ msgstr ""
 "Όταν επικοινωνείτε με την υποστήριξη, παρακαλούμε αναφέρετε την %1$sΑναφορά "
 "συστήματος%2$s από αυτή τη σελίδα."
 
-#: templates/admin/sidebar.php:33
+#: templates/admin/sidebar.php:37
 msgid "Spread the word!"
 msgstr "Διέδωσέ το!"
 
 #. translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/sidebar.php:37
+#: templates/admin/sidebar.php:41
 #, php-format
 msgid ""
 "If you find %1$s useful, you can help support our continued growth and "

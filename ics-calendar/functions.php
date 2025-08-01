@@ -1516,9 +1516,13 @@ function r34ics_system_report($echo=true) {
 		$settings_fields = array(
 			'r34ics_ajax_by_default',
 			'r34ics_allowed_hosts',
+			'r34ics_colors_darkmode',
+			'r34ics_colors_match_theme_json',
+			'r34ics_default_shortcode',
 			'r34ics_display_add_calendar_button_false',
 			'r34ics_display_calendar_memory_limit',
 			'r34ics_feed_urls',
+			'r34ics_feed_urls_permanent',
 			'r34ics_previous_version',
 			'r34ics_transients_expiration',
 			'r34ics_url_get_contents_legacy_method',
@@ -1819,9 +1823,13 @@ function _r34ics_debug($arr) {
 	$settings_fields = array(
 		'r34ics_ajax_by_default',
 		'r34ics_allowed_hosts',
+		'r34ics_colors_darkmode',
+		'r34ics_colors_match_theme_json',
+		'r34ics_default_shortcode',
 		'r34ics_display_add_calendar_button_false',
 		'r34ics_display_calendar_memory_limit',
 		'r34ics_feed_urls',
+		'r34ics_feed_urls_permanent',
 		'r34ics_previous_version',
 		'r34ics_transients_expiration',
 		'r34ics_url_get_contents_legacy_method',
@@ -1848,7 +1856,9 @@ function _r34ics_debug($arr) {
 	$r34ics_debug_output .= ob_get_clean();
 	return null;
 }
-// Prepare debugging output
+
+
+// Prepare and output final debugging results
 function _r34ics_wp_footer_debug_output() {
 	if (!current_user_can('manage_options')) { return false; }
 	global $r34ics_debug_output;
@@ -1858,8 +1868,4 @@ function _r34ics_wp_footer_debug_output() {
 	echo '</div></div>';
 	return true;
 }
-// Output final debugging results
 add_action('wp_footer', '_r34ics_wp_footer_debug_output');
-// Deprecated alias functions
-function r34ics_debug($arr) { return _r34ics_debug($arr); }
-function r34ics_wp_footer_debug_output() { return _r34ics_wp_footer_debug_output(); }

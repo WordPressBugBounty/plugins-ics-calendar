@@ -296,6 +296,17 @@ will be retained permanently, so they can be used to create custom color palette
 			border-bottom-color: var(--r34ics--color--ics-red);
 		}
 
+		.r34ics-menu a:has(.dashicons) {
+			padding-left: 24px;
+			position: relative;
+		}
+		
+		.r34ics-menu a .dashicons {
+			position: absolute; top: 50%; left: 0;
+			transform: translateY(-7px);
+		}
+		
+		
 .r34ics .column-1 .r34ics-menu ~ div.inside:not([data-current="current"]) {
 	display: none;
 }

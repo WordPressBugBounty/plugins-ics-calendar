@@ -1,5 +1,18 @@
 === ICS Calendar Changelog ===
 
+= 11.5.14 - 2025.08.01 =
+
+* Admin:
+  * Added icons and Support link to tab bar; updated text of Pro promo.
+* Debugging:
+  * Added `R34ICS::shortcode_required_params` property to allow for error messages when required parameters are missing. (Technically `url` and `view` are both required; however, `view` defaults to `"month"` if omitted.)
+  * Added new settings to System Report and debugger panel.
+  * Refactored logic in `R34ICS::display_calendar()` to initiate debug mode earlier.
+  * Moved debugging output function call outside of excessively restrictive conditional on AJAX requests.
+  * Removed deprecated debug function aliases.
+* i18n:
+  * Updated translation strings.
+
 = 11.5.13 - 2025.07.23 =
 
 * Added **Default shortcode** setting on the ICS Calendar Settings admin page. This is useful for sites that will contain a large number of calendar shortcodes with mostly identical parameters. Individual shortcodes' settings will override the default, but only need to include the parameters that are unique.

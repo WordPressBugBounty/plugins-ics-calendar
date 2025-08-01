@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 11.5.13
+Stable tag: 11.5.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,21 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.14 - 2025.08.01 =
+
+* Admin:
+  * Added icons and Support link to tab bar; updated text of Pro promo.
+* Debugging:
+  * Added `R34ICS::shortcode_required_params` property to allow for error messages when required parameters are missing. (Technically `url` and `view` are both required; however, `view` defaults to `"month"` if omitted.)
+  * Added new settings to System Report and debugger panel.
+  * Refactored logic in `R34ICS::display_calendar()` to initiate debug mode earlier.
+  * Moved debugging output function call outside of excessively restrictive conditional on AJAX requests.
+  * Removed deprecated debug function aliases.
+* i18n:
+  * Updated translation strings.
+
+**Note:** Debugging-related changes in this version originated from a user observation that shortcode attributes are ignored if the shortcode is entered on multiple lines. _Shortcodes are intended to be entered on a single line; adding line breaks inside your shortcode may yield unpredictable results. This is due to how WordPress itself handles shortcodes prior to handing off the shortcode details to ICS Calendar._
 
 = 11.5.13 - 2025.07.23 =
 

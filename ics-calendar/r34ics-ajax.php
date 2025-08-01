@@ -60,9 +60,6 @@ function r34ics_ajax() {
 				case 'display_calendar':
 					if (!empty($args['url'])) {
 						$R34ICS->display_calendar($args);
-						if (!empty($args['debug'])) {
-							_r34ics_wp_footer_debug_output();
-						}
 					}
 					break;
 			
@@ -71,6 +68,12 @@ function r34ics_ajax() {
 	
 			}
 		}
+
+		// Render debugging output
+		if (!empty($args['debug'])) {
+			_r34ics_wp_footer_debug_output();
+		}
+
 	}
 	exit;
 	// phpcs:enable

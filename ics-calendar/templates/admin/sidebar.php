@@ -26,10 +26,10 @@
 			)
 	{
 		?>
-		<p><mark class="alert"><?php
-		/* translators: 1. HTML tag 2. HTML tag */
-		printf(esc_html__('When contacting support, please include the %1$sSystem Report%2$s from this page.', 'ics-calendar'), '<a href="#system-report" style="white-space: nowrap;">', '</a>');
-		?></mark></p>
+		<p><?php
+		/* translators: 1. HTML tags 2. HTML tags */
+		printf(esc_html__('When contacting support, please include the %1$sSystem Report%2$s from this page.', 'ics-calendar'), '<strong><a href="#system-report" style="white-space: nowrap;">', '</a></strong>');
+		?></p>
 		<?php
 	}
 	?>

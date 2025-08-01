@@ -162,6 +162,7 @@ if (!class_exists('R34ICS')) {
 		
 		protected $shortcode_feed_array_params = array('category', 'color', 'feedlabel', 'url');
 		protected $shortcode_dynamic_values = array('guid', 'startdate');
+		protected $shortcode_required_params = array('url', 'view');
 		
 		protected $views = array('basic', 'list', 'month', 'week');
 		protected $list_style_views = array('basic', 'list');
@@ -476,6 +477,20 @@ if (!class_exists('R34ICS')) {
 			$args = array_merge($this->shortcode_defaults, $args);
 			extract($args);
 			
+			// Reset debug messages for this call (Administrator role only)
+			$this->debug = current_user_can('manage_options') ? $debug : false;
+			if ($this->debug) { $this->debug_messages = array('args' => $args); }
+
+			// Check for required args
+			if ($this->debug) {
+				foreach ((array)$this->shortcode_required_params as $required) {
+					if (empty($args[$required])) {
+						$this->debug_messages['Missing required shortcode attributes'][] = $required;
+					}
+				}
+			}
+		
+			// Actions to run immediately after gathering args
 			do_action('r34ics_display_calendar_after_args', $args);
 			
 			// Early render -- bypass regular parsing process if an external view requires it
@@ -486,10 +501,6 @@ if (!class_exists('R34ICS')) {
 					return;
 			}
 					
-			// Reset debug messages for this call (Administrator role only)
-			$this->debug = current_user_can('manage_options') ? $debug : false;
-			if ($this->debug) { $this->debug_messages = array('args' => $args); }
-		
 			// Adjust memory limit if appropriate
 			if ($display_calendar_memory_limit = get_option('r34ics_display_calendar_memory_limit')) {
 				// Check against current memory limit
@@ -2113,6 +2124,16 @@ if (!class_exists('R34ICS')) {
 				// ajax_by_default
 				update_option('r34ics_ajax_by_default', !empty($_POST['ajax_by_default']));
 				
+				// allowed_hosts
+				// Need to allow $_POST['allowed_hosts'] to be empty for erasing existing entries
+				if (function_exists('r34ics_sanitize_hosts')) {
+					update_option('r34ics_allowed_hosts', (
+						isset($_POST['allowed_hosts'])
+							? r34ics_sanitize_hosts(sanitize_textarea_field(wp_unslash($_POST['allowed_hosts'])))
+							: ''
+					));
+				}
+				
 				// colors_darkmode
 				update_option('r34ics_colors_darkmode', !empty($_POST['colors_darkmode']));
 				
@@ -2152,16 +2173,6 @@ if (!class_exists('R34ICS')) {
 				
 				// feed_urls_permanent
 				update_option('r34ics_feed_urls_permanent', !empty($_POST['feed_urls_permanent']));
-				
-				// allowed_hosts
-				// Need to allow $_POST['allowed_hosts'] to be empty for erasing existing entries
-				if (function_exists('r34ics_sanitize_hosts')) {
-					update_option('r34ics_allowed_hosts', (
-						isset($_POST['allowed_hosts'])
-							? r34ics_sanitize_hosts(sanitize_textarea_field(wp_unslash($_POST['allowed_hosts'])))
-							: ''
-					));
-				}
 				
 				// transients_expiration
 				update_option('r34ics_transients_expiration', (
