@@ -292,7 +292,7 @@ function r34ics_colors_match_theme_json($darkmode=false, $use_default_palette=fa
 		if (!empty($palette)) {
 			$colors = array();
 			foreach ((array)$palette as $item) {
-				if ($hex = r34ics_color_hex_sanitize($item['color'])) {
+				if (!empty($item['color']) && $hex = r34ics_color_hex_sanitize($item['color'])) {
 					$luminosity = r34ics_color_luminosity(r34ics_hex2rgba($hex, 1, false, true));
 					$colors[$hex] = $luminosity;
 				}

@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.14.1 - 2025.08.06 =
+
+* Bug fix: Modified conditional in `r34ics_colors_match_theme_json()` function to avoid possible 'Undefined array key "color"' error logs.
+
 = 11.5.14 - 2025.08.01 =
 
 * Admin:
