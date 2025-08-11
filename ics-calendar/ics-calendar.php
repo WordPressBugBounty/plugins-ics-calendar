@@ -3,7 +3,7 @@
 Plugin Name: ICS Calendar
 Plugin URI: https://icscalendar.com
 Description: Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar into a seamlessly integrated, auto-updating, zero-maintenance WordPress experience.
-Version: 11.5.14.1
+Version: 11.5.14.2
 Requires at least: 4.9
 Requires PHP: 7.0
 Author: Room 34 Creative Services, LLC
@@ -223,6 +223,19 @@ if (!class_exists('R34ICS')) {
 		}
 		else {
 			unset($r34ics_deferred_admin_notices['r34ics_refactoring_in_v_11']);
+		}
+		
+		// Admin notice about new AJAX key method
+		if (version_compare($previous_version, '11.5.14.2', '<')) {
+			$r34ics_deferred_admin_notices['r34ics_ajax_keys_11_5_14_2'] = array(
+				/* translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) */
+				'content' => '<p>' . sprintf(esc_html__('%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure method for handling calendar parameters when loading via AJAX. Please clear any caching plugins you are using, to ensure that your calendars are loading properly with the new method.', 'ics-calendar'), '<strong>', '</strong>', 'ICS Calendar') . '</p>',
+				'status' => 'info',
+				'dismissible' => 'forever',
+			);
+		}
+		else {
+			unset($r34ics_deferred_admin_notices['r34ics_ajax_keys_11_5_14_2']);
 		}
 		
 		// Remove r34ics_ajax_bypass_nonce option because the nonce was removed

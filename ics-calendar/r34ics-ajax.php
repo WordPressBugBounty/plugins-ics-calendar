@@ -30,28 +30,30 @@ function r34ics_ajax() {
 	if (!empty($_POST)) {
 
 		// Sanitize input
-		$args = isset($_POST['args']) ? wp_unslash($_POST['args']) : array();
-		foreach ((array)$args as $key => $value) {
-			// Only allow keys that match a valid shortcode attribute
-			if (!in_array($key, array_keys($valid_atts))) { continue; }
-			// Sanitize values
-			// Convert URL code to the corresponding real URL in the database
-			if ($key == 'url') {
-				$args['url'] = r34ics_url_uniqid_array_convert($args['url']);
+		$args = isset($_POST['args']) ? $R34ICS->ajax_args_get(wp_unslash($_POST['args'])) : null;
+		if (is_array($args)) {	
+			foreach ((array)$args as $key => $value) {
+				// Only allow keys that match a valid shortcode attribute
+				if (!in_array($key, array_keys($valid_atts))) { continue; }
+				// Sanitize values
+				// Convert URL code to the corresponding real URL in the database
+				if ($key == 'url') {
+					$args['url'] = r34ics_url_uniqid_array_convert($args['url']);
+				}
+				// Sanitize array values
+				elseif (is_array($value)) {
+					$args[$key] = array_map(function($v) {
+						return is_string($v) ? wp_kses_post(stripslashes(trim($v ?: ''))) : intval($v);
+					}, $value);
+				}
+				// Sanitize scalar values
+				else {
+					$args[$key] = is_string($value) ? wp_kses_post(stripslashes(trim($value ?: ''))) : intval($value);
+				}
+				// Sanitize boolean values
+				if ($value == 'true') { $args[$key] = 1; }
+				elseif ($value == 'false') { $args[$key] = 0; }
 			}
-			// Sanitize array values
-			elseif (is_array($value)) {
-				$args[$key] = array_map(function($v) {
-					return is_string($v) ? wp_kses_post(stripslashes(trim($v ?: ''))) : intval($v);
-				}, $value);
-			}
-			// Sanitize scalar values
-			else {
-				$args[$key] = is_string($value) ? wp_kses_post(stripslashes(trim($value ?: ''))) : intval($value);
-			}
-			// Sanitize boolean values
-			if ($value == 'true') { $args[$key] = 1; }
-			elseif ($value == 'false') { $args[$key] = 0; }
 		}
 		
 		if (isset($_POST['subaction'])) {

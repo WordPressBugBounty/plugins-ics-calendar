@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 11.5.14.1
+Stable tag: 11.5.14.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,11 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.14.2 - 2025.08.11 =
+
+* AJAX: Refactored AJAX request method to remove shortcode parameter details from front-end HTML. AJAX requests now only pass a key string, which must match the existing shortcode configuration on the back end.
+* Bug fix: Resolved an issue when multiple month view calendars with different date ranges are included on the same page, where the page might load with no month selected in one or more of the calendars if the `r34icsym` query string variable is outside that calendar's date range. (Previously all calendars were evaluated by jQuery simultaneously; now each is evaluated individually.)
 
 = 11.5.14.1 - 2025.08.06 =
 

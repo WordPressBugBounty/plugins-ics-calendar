@@ -59,6 +59,7 @@ if (!class_exists('R34ICS')) {
 		
 		protected $shortcode_defaults = array(
 			'ajax' => false,
+			'ajax_key' => '',
 			'arrayonly' => false,
 			'attach' => '',
 			'basicauth' => false,
@@ -161,7 +162,7 @@ if (!class_exists('R34ICS')) {
 		);
 		
 		protected $shortcode_feed_array_params = array('category', 'color', 'feedlabel', 'url');
-		protected $shortcode_dynamic_values = array('guid', 'startdate');
+		protected $shortcode_dynamic_values = array('ajax_key', 'guid', 'startdate');
 		protected $shortcode_required_params = array('url', 'view');
 		
 		protected $views = array('basic', 'list', 'month', 'week');
@@ -355,7 +356,18 @@ if (!class_exists('R34ICS')) {
 			}
 			return $links;
 		}
-		
+
+
+		// Read shortcode arguments from options table based on unique key (for AJAX)
+		public function ajax_args_get($key) {
+			$prefix = 'r34ics_ajax_args_';
+			// Key must be a hexadecimal string
+			if (ctype_xdigit($key)) {
+				return get_option($prefix . $key);
+			}
+			return false;
+		}
+
 		
 		public function color_key_html($args, $ics_data, $no_toggles=false) {
 			if (!empty($args['legendstyle']) && $args['legendstyle'] == 'none') { return null; }
@@ -1381,6 +1393,11 @@ if (!class_exists('R34ICS')) {
 		}
 		
 		
+		public function get_shortcode_dynamic_values() {
+			return $this->shortcode_dynamic_values;
+		}
+		
+		
 		public function http_request_host_is_external($external, $host, $url) {
 			if ($allowed_hosts = get_option('r34ics_allowed_hosts')) {
 				if (in_array($host, (array)$allowed_hosts)) { $external = true; }
@@ -1723,6 +1740,7 @@ if (!class_exists('R34ICS')) {
 			// Assemble display arguments array
 			$args = array(
 				'ajax' => (get_option('r34ics_ajax_by_default') ?: r34ics_boolean_check($ajax)),
+				'ajax_key' => ctype_xdigit($ajax_key) ? $ajax_key : '',
 				'arrayonly' => r34ics_boolean_check($arrayonly),
 				'attach' => (
 					in_array(strtolower($attach), array('0','false','1','true','image','download'))
@@ -1931,10 +1949,11 @@ if (!class_exists('R34ICS')) {
 			
 			// AJAX mode
 			if (!empty($args['ajax'])) {
-				$args['url'] = r34ics_url_uniqid_array_convert($args['url']);
-				$is_list_style = intval(in_array($args['view'], $this->list_style_views));
-				$is_list_long = intval($is_list_style && (!empty($args['eventdesc']) || !empty($args['location']) || !empty($args['organizer']) || $args['count'] > 5));
-				echo '<div class="r34ics-ajax-container loading" id="' . esc_attr($args['guid']) . '" data-view="' . esc_attr($args['view']) . '" data-view-is-list-style="' . esc_attr($is_list_style) . '" data-view-is-list-long="' . esc_attr($is_list_long) . '" data-args="' . esc_attr(wp_json_encode($args)) . '">&nbsp;</div>';
+				$args['url'] = r34ics_url_uniqid_array_convert($args['url'] ?: '');
+				$is_list_style = intval(in_array(($args['view'] ?: ''), $this->list_style_views));
+				$is_list_long = intval($is_list_style && (!empty($args['eventdesc']) || !empty($args['location']) || !empty($args['organizer']) || (!empty($args['count']) && $args['count'] > 5)));
+				$ajax_args = $this->_ajax_args_update($args, ($args['ajax_key'] ?: ''));
+				echo '<div class="r34ics-ajax-container loading" id="' . esc_attr($args['guid'] ?: '') . '" data-view="' . esc_attr($args['view'] ?: '') . '" data-view-is-list-style="' . esc_attr($is_list_style) . '" data-view-is-list-long="' . esc_attr($is_list_long) . '" data-args="' . esc_attr($ajax_args) . '">&nbsp;</div>';
 			}
 	
 			// Standard mode
@@ -2204,8 +2223,33 @@ if (!class_exists('R34ICS')) {
 				update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices);
 			}
 		}
-		
+
+
+		// Generate an AJAX key for the set of arguments (excluding the key itself)
+		protected function _ajax_args_generate_key($args) {
+			if (!is_array($args)) { return false; }
+			// Exclude dynamic values so we don't keep generating new keys on each page load
+			foreach ((array)$this->get_shortcode_dynamic_values() as $k) {
+				unset($args[$k]);
+			}
+			// There is a minuscule possibility of hash collision
+			return sha1(wp_salt('nonce') . serialize($args));
+		}
+				
 	
+		// Write shortcode arguments to options table and return a unique key, for AJAX
+		protected function _ajax_args_update($args, $key='') {
+			$prefix = 'r34ics_ajax_args_';
+			// Key must be a hexadecimal string
+			if (empty($key) || !ctype_xdigit($key)) {
+				$key = $this->_ajax_args_generate_key($args);
+			}
+			$args['ajax_key'] = $key;
+			update_option($prefix . $key, $args);
+			return $key;
+		}
+
+		
 		/**
 		 * Note: This handling addresses an issue with, at least, Outlook/Office 365, where an
 		 * individual instance that deviates from the recurrence rules appears in the array,

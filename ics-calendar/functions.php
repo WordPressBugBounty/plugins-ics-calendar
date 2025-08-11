@@ -1181,10 +1181,16 @@ function r34ics_organizer_format($organizer='') {
 
 // Purge all of this plugin's transient calendar data (does not affect any of the plugin's other transients)
 function r34ics_purge_calendar_transients() {
+	global $wpdb;
 
-	// First we delete the saved feed URL list
 	if (empty(get_option('r34ics_feed_urls_permanent'))) {
+		// First we delete the saved feed URL list
 		delete_option('r34ics_feed_urls');
+		// Delete saved AJAX shortcode arguments as well
+		// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery
+		// phpcs:disable WordPress.DB.DirectDatabaseQuery.NoCaching
+		return $wpdb->query($wpdb->prepare("DELETE FROM `" . $wpdb->options . "` WHERE `option_name` LIKE %s", 'r34ics\_ajax\_args\_%'));
+		// phpcs:enable
 	}
 	
 	// Hook in external actions (e.g. for purging ICS Calendar Pro data)
@@ -1192,7 +1198,6 @@ function r34ics_purge_calendar_transients() {
 	
 	// Now we purge the plugin's transients and return the results of the query
 	// We do this with a custom SQL query because it's a lot simpler!
-	global $wpdb;
 	// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery
 	// phpcs:disable WordPress.DB.DirectDatabaseQuery.NoCaching
 	return $wpdb->query($wpdb->prepare("DELETE FROM `" . $wpdb->options . "` WHERE `option_name` LIKE %s AND `option_name` LIKE %s", '%\_transient\_%', '%R34ICS%'));

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-08-01 17:18-0500\n"
-"PO-Revision-Date: 2025-08-01 17:18-0500\n"
+"POT-Creation-Date: 2025-08-11 14:12-0500\n"
+"PO-Revision-Date: 2025-08-11 14:12-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: lv_LV\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:296
+#: class-r34ics.php:297
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -34,7 +34,7 @@ msgstr ""
 "funkcijas var būt nepieejamas vai var nedarboties pareizi."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:306
+#: class-r34ics.php:307
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -51,34 +51,34 @@ msgstr ""
 "pareizi parādītu laiku. Papildu informāciju par šo jautājumu skatiet mūsu "
 "%6$sdokumentācijā%7$s."
 
-#: class-r34ics.php:349 templates/admin/admin.php:65
+#: class-r34ics.php:350 templates/admin/admin.php:68
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "Utilītas"
 
-#: class-r34ics.php:350 class-r34ics.php:2084 class-r34ics.php:2089
-#: templates/admin/admin.php:61 templates/admin/admin.php:77
+#: class-r34ics.php:351 class-r34ics.php:2103 class-r34ics.php:2108
+#: templates/admin/admin.php:64 templates/admin/admin.php:80
 msgid "Settings"
 msgstr "Iestatījumi"
 
-#: class-r34ics.php:351 templates/admin/sidebar.php:9
+#: class-r34ics.php:352 templates/admin/sidebar.php:9
 msgid "User Guide"
 msgstr "Lietotāja pamācība"
 
-#: class-r34ics.php:352 templates/admin/admin.php:67
+#: class-r34ics.php:353 templates/admin/admin.php:70
 #: templates/admin/sidebar.php:14
 msgid "Support"
 msgstr "Atbalsts"
 
-#: class-r34ics.php:354
+#: class-r34ics.php:355
 msgid "Upgrade to PRO!"
 msgstr "Jauniniet uz PRO!"
 
-#: class-r34ics.php:372
+#: class-r34ics.php:384
 msgid "Show/hide all"
 msgstr "Rādīt/paslēpt visu"
 
-#: class-r34ics.php:645
+#: class-r34ics.php:657
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -92,36 +92,36 @@ msgstr ""
 "vairākus vietrāžus URL, iespējams, vēlēsieties arī mēģināt izmantot caurules "
 "rakstzīmi. Ietekmētais URL:"
 
-#: class-r34ics.php:1083
+#: class-r34ics.php:1095
 msgid "Hide past events"
 msgstr "Paslēpt pagātnes notikumus"
 
-#: class-r34ics.php:1084 templates/calendar-month.php:83
+#: class-r34ics.php:1096 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "Rādīt pagātnes notikumus"
 
-#: class-r34ics.php:1165
+#: class-r34ics.php:1177
 msgid "Contact:"
 msgstr "Kontaktpersona:"
 
-#: class-r34ics.php:1171
+#: class-r34ics.php:1183
 msgid "Resources:"
 msgstr "Resursi:"
 
-#: class-r34ics.php:1181
+#: class-r34ics.php:1193
 msgid "Click for more..."
 msgstr "Noklikšķiniet, lai uzzinātu vairāk..."
 
-#: class-r34ics.php:1215
+#: class-r34ics.php:1227
 msgid "Save to your calendar"
 msgstr "Saglabāt kalendārā"
 
-#: class-r34ics.php:1318
+#: class-r34ics.php:1330
 msgid "Cancelled"
 msgstr "Atcelts"
 
-#: class-r34ics.php:1716
+#: class-r34ics.php:1733
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -129,7 +129,7 @@ msgstr ""
 "\"Currentweek\" īsā koda atribūts ir novecojis. Tā vietā, lūdzu, izmantojiet "
 "view=\"week\" savā īsajā kodā."
 
-#: class-r34ics.php:1720
+#: class-r34ics.php:1737
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -138,19 +138,19 @@ msgstr ""
 "izmantojiet legendstyle=\"inline\"."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2036
+#: class-r34ics.php:2055
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Notīrīts %1$s %2$s pārejošais(-ie) process(-i)."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2044
+#: class-r34ics.php:2063
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Netika atrasti %1$s pārejas procesi."
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2084
+#: class-r34ics.php:2103
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -160,12 +160,12 @@ msgstr ""
 "akreditācijas datus. Mēģiniet izslēgt opciju %1$s, kas atrodas %2$s cilnē "
 "iepriekš."
 
-#: class-r34ics.php:2084 class-r34ics.php:2089 templates/admin/settings.php:64
+#: class-r34ics.php:2103 class-r34ics.php:2108 templates/admin/settings.php:64
 msgid "Use legacy feed request method"
 msgstr "Izmantot mantoto barības pieprasījuma metodi"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2089
+#: class-r34ics.php:2108
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -175,7 +175,7 @@ msgstr ""
 "rīku, mēģiniet ieslēgt %3$s opciju %4$s cilnē iepriekš."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2096
+#: class-r34ics.php:2115
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -192,18 +192,18 @@ msgstr ""
 "pareiza dinamiskās plūsmas URL adresāta iegūšanu."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2103
+#: class-r34ics.php:2122
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Kļūda: Nevarēja atrisināt IP adresi %1$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2107
+#: class-r34ics.php:2126
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Atrisināta IP adrese %1$s:"
 
-#: class-r34ics.php:2154
+#: class-r34ics.php:2173
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -212,7 +212,7 @@ msgstr ""
 "netika saglabāts."
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2195
+#: class-r34ics.php:2214
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -221,7 +221,7 @@ msgstr ""
 "%1$sIestatījumi atjaunināti.%2$s Lai redzētu dažas izmaiņas, jums var būt "
 "jāatjauno lapa."
 
-#: class-r34ics.php:2436
+#: class-r34ics.php:2480
 msgid "calendar event"
 msgstr "kalendāra notikums"
 
@@ -291,7 +291,7 @@ msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() vairs netiek atbalstīta."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag 8. Additional translation string and HTML tags 9. HTML tag and plugin name (do not translate) 10. HTML tag
-#: ics-calendar.php:205
+#: ics-calendar.php:206
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -308,12 +308,12 @@ msgstr ""
 "izlasiet mūsu %6$sbloga ierakstu%7$s vai, lai pārslēgtos uz jaunajiem "
 "noklusējuma iestatījumiem, ieslēdziet %8$s opciju %9$s iestatījumu%10$s lapā."
 
-#: ics-calendar.php:205 templates/admin/settings.php:114
+#: ics-calendar.php:206 templates/admin/settings.php:114
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Jaunu parametru noklusējuma iestatījumu izmantošana (v.10.6)"
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: ics-calendar.php:218
+#: ics-calendar.php:219
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -328,6 +328,20 @@ msgstr ""
 "esošajām instalācijām. Ja pēc atjaunināšanas līdz 11. vai jaunākajai "
 "versijai rodas jaunas problēmas, lūdzu, apmeklējiet %4$sWordPress atbalsta "
 "forumus%5$s, lai saņemtu palīdzību."
+
+#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate)
+#: ics-calendar.php:232
+#, php-format
+msgid ""
+"%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
+"method for handling calendar parameters when loading via AJAX. Please clear "
+"any caching plugins you are using, to ensure that your calendars are loading "
+"properly with the new method."
+msgstr ""
+"%1$sLūdzu, ņemiet vērā: %2$s %3$s 11.5.14.2 versijā ir ieviesta jauna, "
+"drošāka metode kalendāra parametru apstrādei, kad ielādēšana notiek, "
+"izmantojot AJAX. Lūdzu, notīriet visus izmantotos kešēšanas spraudņus, lai "
+"nodrošinātu, ka kalendāri tiek ielādēti pareizi, izmantojot jauno metodi."
 
 #. translators: 1: Plugin name (do not translate)
 #: templates/admin/add-calendar-button.php:3
@@ -456,16 +470,17 @@ msgstr ""
 msgid "Insert %1$s"
 msgstr "Ievietot %1$s"
 
-#: templates/admin/admin.php:10
+#. translators: 1: Plugin name (do not translate)
+#: templates/admin/admin.php:12
 #, php-format
 msgid "Do even more with %1$s!"
 msgstr "Ar %1$s varat paveikt vēl vairāk!"
 
-#: templates/admin/admin.php:15
+#: templates/admin/admin.php:18
 msgid "Calendar Builder"
 msgstr "Kalendāru veidotājs"
 
-#: templates/admin/admin.php:16
+#: templates/admin/admin.php:19
 msgid ""
 "Configure all calendar settings with an easy visual interface... no need to "
 "manually type shortcodes."
@@ -473,11 +488,11 @@ msgstr ""
 "Konfigurējiet visus kalendāra iestatījumus, izmantojot vienkāršu vizuālo "
 "interfeisu... nav nepieciešams manuāli ievadīt īsceļu kodus."
 
-#: templates/admin/admin.php:17
+#: templates/admin/admin.php:20
 msgid "Additional Views and Enhanced Features"
 msgstr "Papildu skati un uzlabotas funkcijas"
 
-#: templates/admin/admin.php:18
+#: templates/admin/admin.php:21
 msgid ""
 "New ways to display your calendar including Full, Up Next, Masonry, Month "
 "with Sidebar, Widget, and more. Additional capabilities are added to the "
@@ -487,22 +502,22 @@ msgstr ""
 "ar sānu joslu, Logrīks un citi. Galvenajiem Mēneša, Pamata, Saraksta un "
 "Nedēļas skatiem ir pievienotas papildu iespējas."
 
-#: templates/admin/admin.php:19
+#: templates/admin/admin.php:22
 msgid "Customizer"
 msgstr "Pielāgotājs"
 
-#: templates/admin/admin.php:20
+#: templates/admin/admin.php:23
 msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
 msgstr ""
 "Viegli modificējiet kalendāra krāsu paletes, fontus un daudz ko citu vietnes "
 "mērogā."
 
-#: templates/admin/admin.php:22
+#: templates/admin/admin.php:25
 msgid "ICS Events"
 msgstr "ICS pasākumi"
 
 #. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/admin.php:25
+#: templates/admin/admin.php:28
 #, php-format
 msgid ""
 "%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
@@ -514,25 +529,25 @@ msgstr ""
 "plūsmām."
 
 #. translators: 1. Link (do not translate)
-#: templates/admin/admin.php:29
+#: templates/admin/admin.php:32
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "Apmeklējiet %1$s, lai uzzinātu vairāk."
 
-#: templates/admin/admin.php:37
+#: templates/admin/admin.php:40
 msgid "Go PRO!"
 msgstr "Ej PRO!"
 
-#: templates/admin/admin.php:57 templates/admin/getting-started.php:3
+#: templates/admin/admin.php:60 templates/admin/getting-started.php:3
 #: templates/admin/getting-started.php:27
 msgid "Getting Started"
 msgstr "Darba uzsākšana"
 
-#: templates/admin/admin.php:66 templates/admin/utilities.php:102
+#: templates/admin/admin.php:69 templates/admin/utilities.php:102
 msgid "System Report"
 msgstr "Sistēmas atskaite"
 
-#: templates/admin/admin.php:86
+#: templates/admin/admin.php:89
 msgid "Save Changes"
 msgstr "Saglabāt izmaiņas"
 

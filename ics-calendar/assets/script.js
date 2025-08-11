@@ -425,13 +425,15 @@ function r34ics_init(elem) {
 		jQuery('.ics-calendar.layout-month .ics-calendar-month-wrapper[data-year-month="' + jQuery('.ics-calendar-select').val() + '"]').show();
 		// Set dropdown/display to requested month from query string (r34icsym)
 		var r34icsym = r34ics_qs_val('r34icsym');
-		if (r34icsym != null && jQuery('.ics-calendar.layout-month .ics-calendar-select option[value="' + r34icsym + '"]').length == 1) {
-			jQuery('.ics-calendar.layout-month .ics-calendar-select').val(r34icsym).trigger('change');
-		}
-		// If r34icsym is not in query string, or if the requested month is not in the dropdown, default to current month
-		else {
-			jQuery('.ics-calendar.layout-month .ics-calendar-select').trigger('change');
-		}
+		jQuery('.ics-calendar.layout-month').each(function() {
+			if (r34icsym != null && jQuery(this).find('.ics-calendar-select option[value="' + r34icsym + '"]').length == 1) {
+				jQuery(this).find('.ics-calendar-select').val(r34icsym).trigger('change');
+			}
+			// If r34icsym is not in query string, or if the requested month is not in the dropdown, default to current month
+			else {
+				jQuery(this).find('.ics-calendar-select').trigger('change');
+			}
+		});
 		// Remove Show Past Events link if there *are* no past events
 		// Note: .month_list_all class is an ICS Calendar Pro-only feature
 		jQuery('.ics-calendar:not(.month_list_all).layout-month').each(function() {
