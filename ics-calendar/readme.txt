@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 11.5.14.2
+Stable tag: 11.5.14.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,10 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.14.3 - 2025.08.14 =
+
+* Removed `load_plugin_textdomain()` call (restored in 11.3.4.4 after initially being removed in 11.3.4.3). A user reported on 2025.08.13 that the call was causing "triggered too early" warnings, although we have been unable to duplicate. Current best practice is to omit this function call altogether, but we had left it in due to observed issues in WP 6.7 with some portions of the plugin not being translated without it; however our current testing under WP 6.8.2 does not indicate any translation problems with the call omitted. If you are receiving error messages or if some translations appear to have gone missing after this update, please let us know in the [support forums](https://wordpress.org/support/plugin/ics-calendar/).
 
 = 11.5.14.2 - 2025.08.11 =
 

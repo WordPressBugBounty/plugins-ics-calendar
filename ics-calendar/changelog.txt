@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.14.3 - 2025.08.14 =
+
+* Removed `load_plugin_textdomain()` call (restored in 11.3.4.4 after initially being removed in 11.3.4.3). A user reported on 2025.08.13 that the call was causing "triggered too early" warnings, although we have been unable to duplicate. Current best practice is to omit this function call altogether, but we had left it in due to observed issues in WP 6.7 with some portions of the plugin not being translated without it; however our current testing under WP 6.8.2 does not indicate any translation problems with the call omitted. If you are receiving error messages or if some translations appear to have gone missing after this update, please let us know in the [support forums](https://wordpress.org/support/plugin/ics-calendar/).
+
 = 11.5.14.2 - 2025.08.11 =
 
 * AJAX: Refactored AJAX request method to remove shortcode parameter details from front-end HTML. AJAX requests now only pass a key string, which must match the existing shortcode configuration on the back end.
