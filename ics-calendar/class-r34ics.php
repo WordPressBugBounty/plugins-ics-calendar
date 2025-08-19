@@ -2415,7 +2415,7 @@ if (!class_exists('R34ICS')) {
 			if ($url = r34ics_uniqid_url($feed_urlids[$feed_key])) {
 			
 				// Retrieve the feed
-				$ics_contents = $this->_url_get_contents($url, false, true);
+				$ics_contents = $this->_url_get_contents($url, 0, true);
 				
 				// Parse ICS contents
 				if (!$this->parser_loaded) {
@@ -2529,6 +2529,12 @@ if (!class_exists('R34ICS')) {
 			// Are we at debug level 3 or greater? If so, don't use transients
 			if (!empty($this->debug) && $this->debug >= 3) { $use_transients = false; }
 	
+			/**
+			 * Cast $recursion as an integer if it's a boolean to avoid later PHP 8.x warning;
+			 * prior to v. 11.5.14.4 some calls to this method passed a boolean value
+			 */
+			$recursion = intval($recursion);
+			
 			// We'll keep track of any domains that didn't return contents
 			global $r34ics_url_get_contents_domain_errors;
 			if (!isset($r34ics_url_get_contents_domain_errors)) {
@@ -2649,7 +2655,8 @@ if (!class_exists('R34ICS')) {
 			
 			// Set user agent string
 			$user_agent = 'WordPress/' . get_bloginfo('version') . '; ICS Calendar/' . $this->_get_version() . '; ' . get_bloginfo('url');
-			$user_agent_real = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15';
+			$user_agent_real = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0';
+
 			// Allow user agent override
 			if (!empty($ua)) {
 				switch (gettype($ua)) {
@@ -2657,6 +2664,10 @@ if (!class_exists('R34ICS')) {
 					case 'boolean': case 'integer': $user_agent = $user_agent_real; break; // Use our "real" UA string
 					default: break;
 				}
+			}
+			// Workaround for Microsoft 365 requiring a real user agent string (added v.11.5.14.4) 
+			elseif (strpos($url, 'office365.com') !== false || strpos($url, 'microsoft.com') !== false) {
+				$user_agent = $user_agent_real;
 			}
 			
 			// Build array of request argments

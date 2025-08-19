@@ -1,5 +1,11 @@
 === ICS Calendar Changelog ===
 
+= 11.5.14.4 - 2025.08.14 =
+
+* Resolved an issue with Microsoft Office 365 calendars not loading after recent Microsoft changes. Requests for Microsoft source feeds now use a real web browser user agent string (Windows/Chrome) instead of ICS Calendar's default user agent.
+* Fixed a boolean/integer variable type issue in the `R34ICS::_url_get_contents()` method that may "Increment on type bool has no effect" warnings under PHP 8.
+* Corrected required minimum PHP version from 7.0 to 7.2. (The code that requires PHP 7.2 is in the `ics-parser` library, and has been present in ICS Calendar since 2018.)
+
 = 11.5.14.3 - 2025.08.14 =
 
 * Removed `load_plugin_textdomain()` call (restored in 11.3.4.4 after initially being removed in 11.3.4.3). A user reported on 2025.08.13 that the call was causing "triggered too early" warnings, although we have been unable to duplicate. Current best practice is to omit this function call altogether, but we had left it in due to observed issues in WP 6.7 with some portions of the plugin not being translated without it; however our current testing under WP 6.8.2 does not indicate any translation problems with the call omitted. If you are receiving error messages or if some translations appear to have gone missing after this update, please let us know in the [support forums](https://wordpress.org/support/plugin/ics-calendar/).

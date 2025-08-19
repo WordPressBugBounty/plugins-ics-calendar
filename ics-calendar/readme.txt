@@ -4,8 +4,8 @@ Donate link: https://icscalendar.com
 Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.8
-Requires PHP: 7.0
-Stable tag: 11.5.14.3
+Requires PHP: 7.2
+Stable tag: 11.5.14.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,12 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 11.5.14.4 - 2025.08.14 =
+
+* Resolved an issue with Microsoft Office 365 calendars not loading after recent Microsoft changes. Requests for Microsoft source feeds now use a real web browser user agent string (Windows/Chrome) instead of ICS Calendar's default user agent.
+* Fixed a boolean/integer variable type issue in the `R34ICS::_url_get_contents()` method that may "Increment on type bool has no effect" warnings under PHP 8.
+* Corrected required minimum PHP version from 7.0 to 7.2. (The code that requires PHP 7.2 is in the `ics-parser` library, and has been present in ICS Calendar since 2018.)
 
 = 11.5.14.3 - 2025.08.14 =
 
