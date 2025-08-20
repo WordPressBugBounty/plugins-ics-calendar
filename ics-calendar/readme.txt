@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 11.5.14.4
+Stable tag: 11.5.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,9 +99,16 @@ The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional 
 
 == Changelog ==
 
-= 11.5.14.4 - 2025.08.14 =
+= 11.5.15 - 2025.08.20 =
 
-* Resolved an issue with Microsoft Office 365 calendars not loading after recent Microsoft changes. Requests for Microsoft source feeds now use a real web browser user agent string (Windows/Chrome) instead of ICS Calendar's default user agent.
+* AJAX:
+  * Added `r34ics_ajax_js_args` filter and `data-js-args` attribute to HTML output when using AJAX. This allows for arguments that need to be accessed by JavaScript.
+* CSS: Created a new set of CSS variables based on element context rather than colors, to allow for specific adjustments to the style of the relevant elements. An extended [CSS Guide](https://icscalendar.com/css-guide/) will be available soon on our website.
+* Modified Microsoft Office 365 user agent solution (added in 11.5.14.4) to _append_ the Windows/Edge user agent string to the standard ICS Calendar user agent string, rather than replacing it. This is verified to still resolve the issue, while retaining ICS Calendar's user agent details.
+
+= 11.5.14.4 - 2025.08.19 =
+
+* Resolved an issue with Microsoft Office 365 calendars not loading after recent Microsoft changes. Requests for Microsoft source feeds now use a real web browser user agent string (Windows/Edge) instead of ICS Calendar's default user agent.
 * Fixed a boolean/integer variable type issue in the `R34ICS::_url_get_contents()` method that may "Increment on type bool has no effect" warnings under PHP 8.
 * Corrected required minimum PHP version from 7.0 to 7.2. (The code that requires PHP 7.2 is in the `ics-parser` library, and has been present in ICS Calendar since 2018.)
 
@@ -301,7 +308,7 @@ The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional 
 
 * Bug fixes:
   * Added logic to trim extraneous spaces from the beginning and end of all attribute values when parsing the shortcode, and in sanitization logic in `r34ics-ajax.php`.
-  * Added `r34ics_color_key_allowed()` function and updated `r34ics_select_allowed()` to merge custom allowed fields with `wp_kses_allowed_html('post')`. This resolves issues with the color key (legend) that were introduced with changes in v. 11.5.0 and 11.5.1.
+  * Added `r34ics_color_key_allowed()` function and updated `r34ics_select_allowed()` to merge custom allowed fields with `wp_kses_allowed_html('post')`. This resolves issues with the color key (legend) that were introduced with changes in 11.5.0 and 11.5.1.
   * Changed `r34ics_minify_css()` handling of whitespace to resolve issues when output is fed through `wp_kses_post()`.
   * Fixed duplicate description output that may result with ALTREP handling introduced in 11.5.1.
   * Fixed handling of feed parsing failures that would cause a fatal error unless the `debug` parameter is set in the shortcode.

@@ -22,6 +22,7 @@ function r34ics_ajax_request(r34ics_elem, deprecated) {
 			'r34ics_nonce': r34ics_ajax_obj.r34ics_nonce,
 			'subaction': 'display_calendar',
 			'args': r34ics_elem.data('args'),
+			'js_args': r34ics_elem.data('js-args'),
 		},
 		dataType: 'text',
 		type: 'POST',
@@ -29,12 +30,12 @@ function r34ics_ajax_request(r34ics_elem, deprecated) {
 			r34ics_elem.removeClass('loading');
 			// AJAX request returns '1' when nonce verification fails
 			if (data == '1') {
-				if (typeof r34ics_elem.data('args').debug != '' && parseInt(r34ics_elem.data('args').debug) > 0) {
+				if (typeof r34ics_elem.data('js-args').debug != '' && parseInt(r34ics_elem.data('js-args').debug) > 0) {
 					console.error('ICS Calendar AJAX request failed for element #' + r34ics_elem.attr('id'));
 				}
 			}
 			else {
-				if (typeof r34ics_elem.data('args').debug != '' && parseInt(r34ics_elem.data('args').debug) > 0) {
+				if (typeof r34ics_elem.data('js-args').debug != '' && parseInt(r34ics_elem.data('js-args').debug) > 0) {
 					console.log('ICS Calendar AJAX request succeeded for element #' + r34ics_elem.attr('id'));
 				}
 				r34ics_elem.html(data);

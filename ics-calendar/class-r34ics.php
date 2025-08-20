@@ -1952,8 +1952,14 @@ if (!class_exists('R34ICS')) {
 				$args['url'] = r34ics_url_uniqid_array_convert($args['url'] ?: '');
 				$is_list_style = intval(in_array(($args['view'] ?: ''), $this->list_style_views));
 				$is_list_long = intval($is_list_style && (!empty($args['eventdesc']) || !empty($args['location']) || !empty($args['organizer']) || (!empty($args['count']) && $args['count'] > 5)));
-				$ajax_args = $this->_ajax_args_update($args, ($args['ajax_key'] ?: ''));
-				echo '<div class="r34ics-ajax-container loading" id="' . esc_attr($args['guid'] ?: '') . '" data-view="' . esc_attr($args['view'] ?: '') . '" data-view-is-list-style="' . esc_attr($is_list_style) . '" data-view-is-list-long="' . esc_attr($is_list_long) . '" data-args="' . esc_attr($ajax_args) . '">&nbsp;</div>';
+				// Store args and pass the associated key (for security purposes)
+				$args_ajax_key = $this->_ajax_args_update($args, ($args['ajax_key'] ?: ''));
+				// Some args must be passed directly, to be accessible to JavaScript
+				$js_args = apply_filters('r34ics_ajax_js_args', array(
+					'debug' => $args['debug'],
+				), $args);
+				// Output AJAX container HTML
+				echo '<div class="r34ics-ajax-container loading" id="' . esc_attr($args['guid'] ?: '') . '" data-view="' . esc_attr($args['view'] ?: '') . '" data-view-is-list-style="' . esc_attr($is_list_style) . '" data-view-is-list-long="' . esc_attr($is_list_long) . '" data-args="' . esc_attr($args_ajax_key) . '" data-js-args="' . esc_attr(wp_json_encode($js_args)) . '">&nbsp;</div>';
 			}
 	
 			// Standard mode
@@ -2655,6 +2661,7 @@ if (!class_exists('R34ICS')) {
 			
 			// Set user agent string
 			$user_agent = 'WordPress/' . get_bloginfo('version') . '; ICS Calendar/' . $this->_get_version() . '; ' . get_bloginfo('url');
+			// Set a "real" user agent string (Windows 10 / Microsoft Edge)
 			$user_agent_real = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0';
 
 			// Allow user agent override
@@ -2665,9 +2672,13 @@ if (!class_exists('R34ICS')) {
 					default: break;
 				}
 			}
-			// Workaround for Microsoft 365 requiring a real user agent string (added v.11.5.14.4) 
-			elseif (strpos($url, 'office365.com') !== false || strpos($url, 'microsoft.com') !== false) {
-				$user_agent = $user_agent_real;
+			/**
+			 * As of August 2025, Microsoft 365 does a browser sniff on ICS feed requests;
+			 * appending the "real" user agent string to ours passes the test, while still
+			 * sending our actual user agent details.
+			 */
+			elseif (stripos($url, 'office365.com') !== false || stripos($url, 'microsoft.com') !== false) {
+				$user_agent .= '; ' . $user_agent_real;
 			}
 			
 			// Build array of request argments

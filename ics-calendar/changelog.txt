@@ -1,8 +1,15 @@
 === ICS Calendar Changelog ===
 
-= 11.5.14.4 - 2025.08.14 =
+= 11.5.15 - 2025.08.20 =
 
-* Resolved an issue with Microsoft Office 365 calendars not loading after recent Microsoft changes. Requests for Microsoft source feeds now use a real web browser user agent string (Windows/Chrome) instead of ICS Calendar's default user agent.
+* AJAX:
+  * Added `r34ics_ajax_js_args` filter and `data-js-args` attribute to HTML output when using AJAX. This allows for arguments that need to be accessed by JavaScript.
+* CSS: Created a new set of CSS variables based on element context rather than colors, to allow for specific adjustments to the style of the relevant elements. An extended [CSS Guide](https://icscalendar.com/css-guide/) will be available soon on our website.
+* Modified Microsoft Office 365 user agent solution (added in 11.5.14.4) to _append_ the Windows/Edge user agent string to the standard ICS Calendar user agent string, rather than replacing it. This is verified to still resolve the issue, while retaining ICS Calendar's user agent details.
+
+= 11.5.14.4 - 2025.08.19 =
+
+* Resolved an issue with Microsoft Office 365 calendars not loading after recent Microsoft changes. Requests for Microsoft source feeds now use a real web browser user agent string (Windows/Edge) instead of ICS Calendar's default user agent.
 * Fixed a boolean/integer variable type issue in the `R34ICS::_url_get_contents()` method that may "Increment on type bool has no effect" warnings under PHP 8.
 * Corrected required minimum PHP version from 7.0 to 7.2. (The code that requires PHP 7.2 is in the `ics-parser` library, and has been present in ICS Calendar since 2018.)
 
@@ -31,6 +38,8 @@
   * Removed deprecated debug function aliases.
 * i18n:
   * Updated translation strings.
+
+**Note:** Debugging-related changes in this version originated from a user observation that shortcode attributes are ignored if the shortcode is entered on multiple lines. _Shortcodes are intended to be entered on a single line; adding line breaks inside your shortcode may yield unpredictable results. This is due to how WordPress itself handles shortcodes prior to handing off the shortcode details to ICS Calendar._
 
 = 11.5.13 - 2025.07.23 =
 
@@ -91,11 +100,11 @@
 
 = 11.5.11 - 2025.05.16 =
 
-* Admin page: Updated promotional content.
-* CSS: Removed base64 encoding on embedded SVG background images, to reduce data size and eliminate unnecessary obfuscation.
-* Event downloads:
+* Event downloads (`eventdl`):
   * Added "Save to your calendar" text in addition to icon. You can revert to the previous icon-only display by changing the shortcode parameter from `eventdl="true"` to `eventdl="minimal"`.
   * Fixed output errors in downloaded `.ics` files when the event includes the `EXDATE` or `RDATE` property.
+* Admin page: Updated promotional content.
+* CSS: Removed base64 encoding on embedded SVG background images, to reduce data size and eliminate unnecessary obfuscation.
 * i18n: Updated translation strings.
 
 = 11.5.10.1 - 2025.05.09 =
@@ -200,7 +209,7 @@
 
 * Bug fixes:
   * Added logic to trim extraneous spaces from the beginning and end of all attribute values when parsing the shortcode, and in sanitization logic in `r34ics-ajax.php`.
-  * Added `r34ics_color_key_allowed()` function and updated `r34ics_select_allowed()` to merge custom allowed fields with `wp_kses_allowed_html('post')`. This resolves issues with the color key (legend) that were introduced with changes in v. 11.5.0 and 11.5.1.
+  * Added `r34ics_color_key_allowed()` function and updated `r34ics_select_allowed()` to merge custom allowed fields with `wp_kses_allowed_html('post')`. This resolves issues with the color key (legend) that were introduced with changes in 11.5.0 and 11.5.1.
   * Changed `r34ics_minify_css()` handling of whitespace to resolve issues when output is fed through `wp_kses_post()`.
   * Fixed duplicate description output that may result with ALTREP handling introduced in 11.5.1.
   * Fixed handling of feed parsing failures that would cause a fatal error unless the `debug` parameter is set in the shortcode.
@@ -232,7 +241,7 @@
   * Updated handling of server variables in System Report.
 * Vendors:
   * Updated embedded ics-parser library to version 3.4.1 (with namespace change to prevent plugin conflicts, and removal of variables from error messages due to [Plugin Check](https://wordpress.org/plugins/plugin-check) reporting them as coding errors).
-  
+
 = 11.4.2 - 2024.12.16 =
 
 * Added IP address resolution to ICS Feed URL Tester, to help troubleshoot network-related issues.

@@ -2,12 +2,17 @@
 
 /* Variables */
 
-/*
-Note: Colors with hex values do not match the corresponding HTML color names. The named
-colors are true neutral grays with values close to those defined. These variable names
-will be retained permanently, so they can be used to create custom color palettes.
-*/
+/**
+ * Note: Colors with hex values do not match the corresponding HTML color names. The named
+ * colors are true neutral grays with values close to those defined. These variable names
+ * will be retained permanently, so they can be used to create custom color palettes.
+ */
 .ics-calendar, .r34ics_lightbox {
+
+	/**
+	 * Color variables
+	 * These allow for easy application of a full color palette
+	 */
 	--r34ics--color--ics-red: #dc143c;
 	--r34ics--color--ics-purple: #312a85;
 	--r34ics--color--white: #ffffff;
@@ -31,6 +36,54 @@ will be retained permanently, so they can be used to create custom color palette
 	--r34ics--color--trans70: rgba(105,105,105,0.7);
 	--r34ics--color--trans80: rgba(105,105,105,0.8);
 	--r34ics--color--trans90: rgba(105,105,105,0.9);
+	
+	/**
+	 * Selector property variables
+	 * These allow for greater customization by applying different colors or styles
+	 * to specific elements when the default color palette combinations are insufficient
+	 */
+	--r34ics--element--basic--date--background: var(--r34ics--color--trans10);
+	--r34ics--element--basic--date--border: 2px solid var(--r34ics--color--trans40);
+	--r34ics--element--color--whitetext: var(--r34ics--color--white);
+	--r34ics--element--descloc-feed-label--border-bottom: 1px solid var(--r34ics--color--trans30);
+	--r34ics--element--descloc-feed-label--border-left: 6px solid var(--r34ics--color--trans30);
+	--r34ics--element--descloc-feed-label-before--background: var(--r34ics--color--trans30);
+	--r34ics--element--events--color--whitetext: var(--r34ics--color--white);
+	--r34ics--element--events--color: var(--r34ics--color--black);
+	--r34ics--element--hover-block--background--whitetext: var(--r34ics--color--dimgray);
+	--r34ics--element--hover-block--background: var(--r34ics--color--white);
+	--r34ics--element--hover-block--border: 1px solid var(--r34ics--color--darkgray);
+	--r34ics--element--hover-block--box-shadow: 2px 2px 5px var(--r34ics--color--trans20);
+	--r34ics--element--lightbox--background: var(--r34ics--color--trans50);
+	--r34ics--element--lightbox-close--background: var(--r34ics--color--black);
+	--r34ics--element--lightbox-close--box-shadow: 3px 3px 9px var(--r34ics--color--trans50);
+	--r34ics--element--lightbox-close--color: var(--r34ics--color--white);
+	--r34ics--element--lightbox-content--background: var(--r34ics--color--white);
+	--r34ics--element--lightbox-content--box-shadow: 3px 3px 9px var(--r34ics--color--trans50);
+	--r34ics--element--lightbox-content--color: var(--r34ics--color--black);
+	--r34ics--element--month--background--whitetext: var(--r34ics--color--black);
+	--r34ics--element--month--background: var(--r34ics--color--white);
+	--r34ics--element--month--day--background--whitetext: var(--r34ics--color--dimgray);
+	--r34ics--element--month--day--background: var(--r34ics--color--whitesmoke);
+	--r34ics--element--month--day--color: var(--r34ics--color--black);
+	--r34ics--element--month--events-li--border-bottom: 1px solid var(--r34ics--color--gainsboro);
+	--r34ics--element--month--off--background--whitetext: var(--r34ics--color--dimgray);
+	--r34ics--element--month--off--background: var(--r34ics--color--whitesmoke);
+	--r34ics--element--month--off--color: var(--r34ics--color--gray);
+	--r34ics--element--month--th--background--whitetext: var(--r34ics--color--dimgray);
+	--r34ics--element--month--th--background: var(--r34ics--color--gainsboro);
+	--r34ics--element--month--th--color: var(--r34ics--color--black);
+	--r34ics--element--month--th-td--border: 1px solid var(--r34ics--color--gainsboro);
+	--r34ics--element--month--today-day--background--whitetext: var(--r34ics--color--gainsboro);
+	--r34ics--element--month--today-day--background: var(--r34ics--color--gray);
+	--r34ics--element--month--today-day--color--whitetext: var(--r34ics--color--black);
+	--r34ics--element--month--today-day--color: var(--r34ics--color--white);
+	--r34ics--element--multiday--background: var(--r34ics--color--gainsboro);
+	--r34ics--element--print--background: var(--r34ics--color--white);
+	--r34ics--element--print--border: 1px solid var(--r34ics--color--gainsboro);
+	--r34ics--element--print--color: var(--r34ics--color--black);
+	--r34ics--element--select--color: var(--r34ics--color--black);
+	
 }
 
 
@@ -58,7 +111,7 @@ will be retained permanently, so they can be used to create custom color palette
 	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td .multiday_middle,
 	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td .multiday_last
 	{
-		background-color: var(--r34ics--color--gainsboro);
+		background-color: var(--r34ics--element--multiday--background);
 		border-bottom: 0 !important;
 		margin-top: 1px;
 		margin-bottom: 1px;
@@ -106,14 +159,14 @@ will be retained permanently, so they can be used to create custom color palette
 	.ics-calendar .hidden { display: none !important; }
 	
 	.ics-calendar .events {
-		color: var(--r34ics--color--black);
+		color: var(--r34ics--element--events--color);
 		overflow: visible;
 	}
 	.ics-calendar.solidcolors:not(.darkmode) .events,
 	.ics-calendar.whitetext:not(.darkmode) .events,
 	.ics-calendar.solidcolors:not(.darkmode) .events a,
 	.ics-calendar.whitetext:not(.darkmode) .events a {
-		color: var(--r34ics--color--white);
+		color: var(--r34ics--element--events--color--whitetext);
 	}
 	
 		.ics-calendar dl.events { margin: 0 0 1.5rem 0; }
@@ -241,7 +294,7 @@ will be retained permanently, so they can be used to create custom color palette
 			}
 			
 			.ics-calendar .event .descloc .descloc_feed_label {
-				border-bottom: 1px solid var(--r34ics--color--trans30);
+				border-bottom: 1px solid var(--r34ics--element--descloc-feed-label--border-color);
 				font-size: 90%;
 				font-weight: 600;
 				padding-bottom: 2px;
@@ -249,7 +302,7 @@ will be retained permanently, so they can be used to create custom color palette
 			}
 			
 			.ics-calendar .event[data-feed-color] .descloc.hover_block .descloc_feed_label:before {
-				background-color: var(--r34ics--color--trans30);
+				background-color: var(--r34ics--element--descloc-feed-label-before--background);
 				border-radius: 8px;
 				content: '';
 				display: inline-block;
@@ -260,8 +313,8 @@ will be retained permanently, so they can be used to create custom color palette
 			}
 			
 			.r34ics_lightbox_content .descloc_feed_label {
-				border-bottom: 1px solid var(--r34ics--color--trans30);
-				border-left: 6px solid var(--r34ics--color--trans30);
+				border-bottom: var(--r34ics--element--descloc-feed-label--border-bottom);
+				border-left: var(--r34ics--element--descloc-feed-label--border-left);
 				font-size: 75%;
 				font-weight: 600;
 				margin-bottom: 0.75rem;
@@ -293,7 +346,7 @@ will be retained permanently, so they can be used to create custom color palette
 	.ics-calendar-description { }
 	
 	.ics-calendar-select {
-		color: var(--r34ics--color--black); /* Resolves issues in some browsers when site has default text color set to white */
+		color: var(--r34ics--element--select--color);
 		float: right;
 		font-size: 80%;
 		margin: 0.5em 0 0.5em 0.5em;
@@ -337,8 +390,8 @@ will be retained permanently, so they can be used to create custom color palette
 	
 			.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date {
 				align-self: flex-start;
-				background: var(--r34ics--color--trans10);
-				border: 2px solid var(--r34ics--color--trans40);
+				background: var(--r34ics--element--basic--date--background);
+				border: var(--r34ics--element--basic--date--border);
 				border-radius: 4px;
 				display: inline-block;
 				margin: 0 8px 8px 0;
@@ -459,7 +512,7 @@ will be retained permanently, so they can be used to create custom color palette
 		}
 		
 		.ics-calendar-month-grid {
-			background-color: var(--r34ics--color--white);
+			background-color: var(--r34ics--element--month--background);
 			border-collapse: collapse;
 			line-height: 1.5em;
 			margin: 0.5em 0;
@@ -467,11 +520,11 @@ will be retained permanently, so they can be used to create custom color palette
 			width: 100%;
 		}
 		.ics-calendar.whitetext .ics-calendar-month-grid {
-			background-color: var(--r34ics--color--black);
+			background-color: var(--r34ics--element--month--background--whitetext);
 		}
 		
 			.ics-calendar-month-grid th, .ics-calendar-month-grid td {
-				border: 1px solid var(--r34ics--color--gainsboro);
+				border: var(--r34ics--element--month--th-td--border);
 				font-size: 70%;
 				overflow: visible;
 				/*position: relative;*/
@@ -488,14 +541,14 @@ will be retained permanently, so they can be used to create custom color palette
 			}
 			
 			.ics-calendar-month-grid th {
-				background: var(--r34ics--color--gainsboro);
-				color: var(--r34ics--color--black);
+				background: var(--r34ics--element--month--th--background);
+				color: var(--r34ics--element--month--th--color);
 				padding: 0.5em 0.8em 0.2em 0.8em !important;
 				text-align: center !important;
 				text-transform: uppercase;
 			}
 			.ics-calendar.whitetext .ics-calendar-month-grid th {
-				background: var(--r34ics--color--dimgray);
+				background: var(--r34ics--element--month--th--background--whitetext);
 			}
 
 			.ics-calendar-month-grid th.week-number {
@@ -514,43 +567,34 @@ will be retained permanently, so they can be used to create custom color palette
 			}
 			
 			.ics-calendar-month-grid .day {
-				background: var(--r34ics--color--whitesmoke);
-				color: var(--r34ics--color--black);
+				background: var(--r34ics--element--month--day--background);
+				color: var(--r34ics--element--month--day--color);
 				font-weight: bold;
 				padding: 0.2em 0.8em;
 			}
 			.ics-calendar.whitetext .ics-calendar-month-grid .day {
-				background: var(--r34ics--color--dimgray);
+				background: var(--r34ics--element--month--day--background--whitetext);
 			}
 						
 			.ics-calendar-month-grid .off {
-				background: var(--r34ics--color--whitesmoke);
-				color: var(--r34ics--color--gray) !important;
+				background: var(--r34ics--element--month--off--background);
+				color: var(--r34ics--element--month--off--color) !important;
 			}
 			.ics-calendar.whitetext .ics-calendar-month-grid .off {
-				background: var(--r34ics--color--dimgray);
+				background: var(--r34ics--element--month--off--background--whitetext);
 			}
-			
-			/*
-			.ics-calendar-month-grid .past {
-				background: var(--r34ics--color--whitesmoke);
-			}
-			.ics-calendar.whitetext .ics-calendar-month-grid .past {
-				background: var(--r34ics--color--dimgray);
-			}
-			*/
 			
 			.ics-calendar-month-grid .today .day {
-				background: var(--r34ics--color--gray);
+				background: var(--r34ics--element--month--today-day--background);
 			}
 			.ics-calendar-month-grid .today .day * {
-				color: var(--r34ics--color--white);
+				color: var(--r34ics--element--month--today-day--color);
 			}
 			.ics-calendar.whitetext .ics-calendar-month-grid .today .day {
-				background: var(--r34ics--color--gainsboro);
+				background: var(--r34ics--element--month--today-day--background--whitetext);
 			}
 			.ics-calendar.whitetext .ics-calendar-month-grid .today .day * {
-				color: var(--r34ics--color--black) !important;
+				color: var(--r34ics--element--month--today-day--color--whitetext) !important;
 			}
 			
 			.ics-calendar-month-grid ul.events {
@@ -560,7 +604,7 @@ will be retained permanently, so they can be used to create custom color palette
 			}
 			
 				.ics-calendar-month-grid ul.events li {
-					border-bottom: 1px solid var(--r34ics--color--gainsboro);
+					border-bottom: var(--r34ics--element--month--events-li--border-bottom);
 					list-style: none !important;
 					margin: 0 !important;
 					padding: 0.4em 0.8em !important;
@@ -637,7 +681,7 @@ will be retained permanently, so they can be used to create custom color palette
 .ics-calendar.whitetext:not(.darkmode) *:not(.ics-calendar-select),
 .ics-calendar.darkmode .ics-calendar-select,
 .ics-calendar.solidcolors:not(.darkmode) .ics-calendar-color-key {
-	color: var(--r34ics--color--white) !important;
+	color: var(--r34ics--element--color--whitetext) !important;
 }
 
 .r34ics-ajax-container.loading {
@@ -711,7 +755,7 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	z-index: -1;
 }
 .r34ics_lightbox.open {
-	background: var(--r34ics--color--trans50);
+	background: var(--r34ics--element--lightbox--background);
 	display: block;
 	z-index: 999999;
 }
@@ -727,10 +771,10 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	}
 
 	.r34ics_lightbox .r34ics_lightbox_close {
-		background-color: var(--r34ics--color--black);
+		background-color: var(--r34ics--element--lightbox-close--background);
 		border-radius: 100%;
-		box-shadow: 3px 3px 9px var(--r34ics--color--trans50);
-		color: var(--r34ics--color--white);
+		box-shadow: var(--r34ics--element--lightbox-close--box-shadow);
+		color: var(--r34ics--element--lightbox-close--color);
 		cursor: pointer;
 		font-size: 28px;
 		height: 44px;
@@ -742,9 +786,9 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	}
 
 	.r34ics_lightbox .r34ics_lightbox_content {
-		background: var(--r34ics--color--white);
-		box-shadow: 3px 3px 9px var(--r34ics--color--trans50);
-		color: var(--r34ics--color--black);
+		background: var(--r34ics--element--lightbox-content--background);
+		box-shadow: var(--r34ics--element--lightbox-content--box-shadow);
+		color: var(--r34ics--element--lightbox-content--color);
 		overflow-x: hidden;
 		overflow-y: auto;
 		padding: 1.5em;
@@ -779,16 +823,16 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 @media screen and (min-width: 783px) {
 
 	.ics-calendar .event .hover_block {
-		background: var(--r34ics--color--white);
-		border: 1px solid var(--r34ics--color--darkgray);
-		box-shadow: 2px 2px 5px var(--r34ics--color--trans20);
+		background: var(--r34ics--element--hover-block--background);
+		border: var(--r34ics--element--hover-block--border);
+		box-shadow: var(--r34ics--element--hover-block--box-shadow);
 		display: none;
 		padding: 0.4em 0.6em;
 		position: absolute; top: 2em; left: 3em;
 	}
 	.ics-calendar.solidcolors:not(.darkmode) .event .hover_block,
 	.ics-calendar.whitetext:not(.darkmode) .event .hover_block {
-		background: var(--r34ics--color--dimgray);
+		background: var(--r34ics--element--hover-block--background--whitetext);
 	}
 	/* [data-month-table-list-toggle=list] is a Pro feature */
 	.ics-calendar:not([data-month-table-list-toggle=list]) .event .hover_block {
@@ -964,14 +1008,14 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	}
 	
 	.ics-calendar table th, .ics-calendar table td {
-		background: var(--r34ics--color--white) !important;
-		border: 1px solid var(--r34ics--color--gainsboro) !important;
+		background: var(--r34ics--element--print--background) !important;
+		border: var(--r34ics--element--print--border) !important;
 	}
 
 	.ics-calendar table th *, .ics-calendar table td * {
-		background: var(--r34ics--color--white) !important;
+		background: var(--r34ics--element--print--background) !important;
 		border: none !important;
-		color: var(--r34ics--color--black) !important;
+		color: var(--r34ics--element--print--color) !important;
 	}
 	
 	.ics-calendar table .descloc {

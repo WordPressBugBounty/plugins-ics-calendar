@@ -29,9 +29,12 @@ function r34ics_ajax() {
 	
 	if (!empty($_POST)) {
 
-		// Sanitize input
+		// Merge argument arrays
 		$args = isset($_POST['args']) ? $R34ICS->ajax_args_get(wp_unslash($_POST['args'])) : null;
-		if (is_array($args)) {	
+		$js_args = isset($_POST['js_args']) ? wp_unslash($_POST['js_args']) : null;
+		if (is_array($args) && is_array($js_args)) { $args = array_merge($args, $js_args); }
+		// Sanitize input
+		if (is_array($args)) {
 			foreach ((array)$args as $key => $value) {
 				// Only allow keys that match a valid shortcode attribute
 				if (!in_array($key, array_keys($valid_atts))) { continue; }
