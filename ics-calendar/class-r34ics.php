@@ -37,9 +37,6 @@ if (!class_exists('R34ICS')) {
 			'trans90' => 'rgba(105,105,105,0.9)',
 		);
 	
-		public $debug = false;
-		public $debug_messages = array();
-	
 		// Note: This is required to be base64 encoded; unencoded (data:image/svg+xml;utf8) doesn't work.
 		// See: https://developer.wordpress.org/reference/functions/add_menu_page/
 		public $icon_logo = 'data:image/svg+xml;base64,PHN2ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiIHZpZXdCb3g9IjAgMCAyMzMgMjU3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xNTEuODA1IDIzLjI3M2gtNzIuODMydi05LjMwOWMwLTcuNzA3LTYuMjU3LTEzLjk2NC0xMy45NjQtMTMuOTY0cy0xMy45NjMgNi4yNTctMTMuOTYzIDEzLjk2NHY5Ljc0M2MtMjguNzQ5IDMuNTIxLTUxLjA0NiAyOC4wNTEtNTEuMDQ2IDU3Ljc0OHYxMTYuMzYzYzAgMzIuMTEyIDI2LjA3MSA1OC4xODIgNTguMTgyIDU4LjE4MmgxMTYuMzY0YzMyLjExMSAwIDU4LjE4Mi0yNi4wNyA1OC4xODItNTguMTgydi0xMTYuMzYzYzAtMzAuMzY1LTIzLjMxMS01NS4zMjgtNTIuOTk2LTU3Ljk1NHYtOS41MzdjMC03LjcwNy02LjI1Ny0xMy45NjQtMTMuOTYzLTEzLjk2NC03LjcwNyAwLTEzLjk2NCA2LjI1Ny0xMy45NjQgMTMuOTY0em0tMTI5LjUwNyAxNzIuNjEzYzAgMjAuMzMzIDE2LjUwOCAzNi44NDIgMzYuODQxIDM2Ljg0MmgxMTIuNDk5YzIwLjMzNCAwIDM2Ljg0Mi0xNi41MDkgMzYuODQyLTM2Ljg0MnYtMTAyLjc5M2gtMTg2LjE4MnptMTQxLjM4OCAxNi4yNDZjMTUuMDY5IDAgMjkuMTg4LTcuNDY3IDI5LjE4OC0yMy4yMTUgMC0yNS42NTgtMzcuMDYyLTE5LjI3OC0zNy4wNjItMjcuOTY2IDAtMi40NDQgMi44NTEtNC43NTIgNy43MzgtNC43NTIgNC40OCAwIDcuODc0IDIuMDM3IDcuODc0IDUuNDMxdjEuMzU3aDIwLjA5MnYtMS4zNTdjMC0xMy4xNjktMTEuMjY3LTIyLjgwOC0yNy44My0yMi44MDgtMTYuNDI3IDAtMjcuOTY2IDkuNTAzLTI3Ljk2NiAyMy40ODcgMCAyNS4xMTUgMzYuOTI2IDE4LjE5MSAzNi45MjYgMjcuODMgMCAyLjg1MS0zLjM5NCA0LjYxNi04LjE0NSA0LjYxNi01LjE1OSAwLTkuNTAzLTIuMTcyLTkuNTAzLTYuMTA5di0xLjYzaC0yMC4yMjh2MS42M2MwIDEzLjU3NSAxMS41MzkgMjMuNDg2IDI4LjkxNiAyMy40ODZ6bS02My45NDIgMGMxOC4xOTEgMCAzMC4xMzgtMTEuNDA0IDMwLjEzOC0yOC43ODF2LTIuMDM2aC0yMC41djIuNTc5YzAgNi4yNDUtMy45MzYgOS45MS05LjYzOCA5LjkxLTcuMTk1IDAtMTAuNzI1LTQuMDcyLTEwLjcyNS0xMS44MTF2LTEzLjAzMmMwLTcuNzM5IDMuNjY1LTExLjgxMSAxMC43MjUtMTEuODExIDUuNzAyIDAgOS42MzggMy42NjUgOS42MzggOS45MXYyLjU3OWgyMC41di0yLjAzNmMwLTE3LjM3Ny0xMS45NDctMjguNzgxLTMwLjI3NC0yOC43ODEtMTkuMjc4IDAtMzAuOTUzIDExLjY3Ni0zMC45NTMgMzAuMDAzdjEzLjMwNGMwIDE4LjMyOCAxMS42NzUgMzAuMDAzIDMxLjA4OSAzMC4wMDN6bS02MC40MTMtMi4wMzdoMjAuMzY0di02OS4yMzZoLTIwLjM2NHptMC03Ni41NjdoMjAuMzY0di0xOS44MjFoLTIwLjM2NHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=';
@@ -47,6 +44,8 @@ if (!class_exists('R34ICS')) {
 		public $limit_days = 365;
 		public $tz = null;
 		
+		protected $debug = false;
+		protected $debug_messages = array();
 		protected $r34ics_path = '';
 		protected $ical_path = '/vendors/ics-parser/src/ICal/ICal.php';
 		protected $event_path = '/vendors/ics-parser/src/ICal/Event.php';
@@ -97,7 +96,7 @@ if (!class_exists('R34ICS')) {
 			'htmltagmonth' => '',
 			'htmltagtime' => '',
 			'htmltagtitle' => '',
-			'legacyparser' => false,
+			'legacyparser' => false, // Deprecated
 			'legendinline' => false, // Deprecated
 			'legendposition' => '',
 			'legendstyle' => '',
@@ -1436,7 +1435,13 @@ if (!class_exists('R34ICS')) {
 			$ics_contents = apply_filters('r34ics_display_calendar_preprocess_raw_feed', $ics_contents, $range['start'], $range['end'], $args);
 	
 			// Initialize parser
-			if (!$this->parser_loaded) { $this->_load_parser(!empty($args['legacyparser'])); }
+			if (!$this->parser_loaded) {
+				$this->_load_parser(!empty($args['legacyparser']));
+				if ($this->debug && !empty($args['legacyparser'])) {
+					// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
+					trigger_error(esc_html__('The legacy parser option is deprecated and will be removed in a future update.', 'ics-calendar'), E_USER_DEPRECATED);
+				}
+			}
 			$ICal = new R34ICS_ICal\ICal('ICal.ics', array(
 				'defaultSpan' => intval(ceil(($args['limitdays'] ?? 365) / 365)),
 				'defaultTimeZone' => $url_tz_name,
@@ -1815,7 +1820,7 @@ if (!class_exists('R34ICS')) {
 				'hidetentativeevents' => r34ics_boolean_check($hidetentativeevents),
 				'hiderecurrence' => r34ics_hiderecurrence_parse($hiderecurrence),
 				'hidetimes' => r34ics_boolean_check($hidetimes),
-				'legacyparser' => r34ics_boolean_check($legacyparser),
+				'legacyparser' => r34ics_boolean_check($legacyparser), // Deprecated
 				'legendinline' => false, // Deprecated
 				'legendposition' => (
 					in_array(strtolower($legendposition), array('above','below'))
@@ -2111,7 +2116,9 @@ if (!class_exists('R34ICS')) {
 					// Suggest "Use legacy feed request method" option
 					else {
 						/* translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags */
+						/* Commented out in 11.5.15.1; we don't want to encourage using the legacy method!
 						$results['special'][] = sprintf(esc_html__('If your feed URL works with our online %1$sPreview%2$s tool, try turning on the %3$s option under the %4$s tab above.', 'ics-calendar'), '<a href="https://icscalendar.com/preview/" target="_blank">', '</a>', '<strong style="white-space: nowrap;">' . esc_html__('Use legacy feed request method', 'ics-calendar') . '</strong>', '<a href="#settings">' . esc_html__('Settings', 'ics-calendar') . '</a>');
+						*/
 					}
 				}
 				// The feed URL appears to be a media library file
@@ -2660,7 +2667,7 @@ if (!class_exists('R34ICS')) {
 			}
 			
 			// Set user agent string
-			$user_agent = 'WordPress/' . get_bloginfo('version') . '; ICS Calendar/' . $this->_get_version() . '; ' . get_bloginfo('url');
+			$user_agent = 'WordPress/' . get_bloginfo('version') . ' ICS Calendar/' . $this->_get_version() . ' (' . get_bloginfo('url') . ')';
 			// Set a "real" user agent string (Windows 10 / Microsoft Edge)
 			$user_agent_real = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0';
 
@@ -2677,8 +2684,13 @@ if (!class_exists('R34ICS')) {
 			 * appending the "real" user agent string to ours passes the test, while still
 			 * sending our actual user agent details.
 			 */
-			elseif (stripos($url, 'office365.com') !== false || stripos($url, 'microsoft.com') !== false) {
-				$user_agent .= '; ' . $user_agent_real;
+			elseif (
+				stripos($url, 'live.com') !== false ||
+				stripos($url, 'microsoft.com') !== false ||
+				stripos($url, 'office365.com') !== false ||
+				stripos($url, 'outlook.com') !== false
+			) {
+				$user_agent .= ' ' . $user_agent_real;
 			}
 			
 			// Build array of request argments
@@ -2886,8 +2898,8 @@ if (!class_exists('R34ICS')) {
 			$url_contents = null;
 			$curl_response_code = null;
 			$curl_redirect_url = null;
-			$user_agent_ics = 'ICS Calendar ' . get_option('r34ics_version') . ' for WordPress';
-			$user_agent_real = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15';
+			$user_agent_ics = 'WordPress/' . get_bloginfo('version') . ' ICS Calendar/' . $this->_get_version() . ' (' . get_bloginfo('url') . ')';
+			$user_agent_real = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0';
 			$user_agent = (is_array($curlopts) && in_array('useragent', $curlopts)) ? $user_agent_real : $user_agent_ics;
 		
 			// Attempt to use cURL functions

@@ -1166,7 +1166,13 @@ function r34ics_organizer_format($organizer='') {
 	$output = '';
 	if (is_array($organizer)) {
 		if (count((array)$organizer) == 2 && isset($organizer[0]['CN'])) {
-			$output .= '<div class="organizer_email"><a href="' . esc_url($organizer[1]) . '" rel="noopener noreferrer nofollow">' . rawurldecode($organizer[0]['CN']) . '</a></div>';
+			/**
+			 * Note: $organizer[0]['CN'] gets exploded as an array if it contains commas.
+			 * Is this a bug in the ics-parser library, or should the text string be escaped
+			 * in the feed if it contains commas? @todo Investigate further!
+			 */
+			$organizer_name = rawurldecode(implode(', ', (array)$organizer[0]['CN']));
+			$output .= '<div class="organizer_email"><a href="' . esc_url($organizer[1]) . '" rel="noopener noreferrer nofollow">' . $organizer_name . '</a></div>';
 		}
 		elseif (!empty($organizer[1]) && is_scalar($organizer[1])) {
 			$output .= '<div>' . $organizer[1] . '</div>';

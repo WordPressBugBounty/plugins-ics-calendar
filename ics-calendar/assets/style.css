@@ -13,20 +13,20 @@
 	 * Color variables
 	 * These allow for easy application of a full color palette
 	 */
-	--r34ics--color--ics-red: #dc143c;
-	--r34ics--color--ics-purple: #312a85;
-	--r34ics--color--white: #ffffff;
-	--r34ics--color--whitesmoke: #f0f3f6;
-	--r34ics--color--gainsboro: #d9dcdf;
-	--r34ics--color--darkgray: #a3a8ac;
-	--r34ics--color--gray: #70787f;
-	--r34ics--color--dimgray: #60686f;
 	--r34ics--color--black: #10181f;
+	--r34ics--color--darkgray: #a3a8ac;
+	--r34ics--color--dimgray: #60686f;
 	--r34ics--color--dodgerblue: dodgerblue;
+	--r34ics--color--gainsboro: #d9dcdf;
 	--r34ics--color--gold: gold;
+	--r34ics--color--gray: #70787f;
+	--r34ics--color--ics-purple: #312a85;
+	--r34ics--color--ics-red: #dc143c;
 	--r34ics--color--lemonchiffon: lemonchiffon;
 	--r34ics--color--limegreen: limegreen;
 	--r34ics--color--orangered: orangered;
+	--r34ics--color--white: #ffffff;
+	--r34ics--color--whitesmoke: #f0f3f6;
 	--r34ics--color--trans10: rgba(105,105,105,0.1);
 	--r34ics--color--trans20: rgba(105,105,105,0.2);
 	--r34ics--color--trans30: rgba(105,105,105,0.3);
