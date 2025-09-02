@@ -27,7 +27,7 @@ function r34ics_getting_started_go_pro_html() {
 				/* translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate) */
 				printf(esc_html__('%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage events directly in WordPress and even integrate them seamlessly with your existing feeds.', 'ics-calendar'), '<strong style="color: crimson;">', '</strong>', 'ICS Calendar Pro');
 				?></p>
-				<p class="large"><?php
+				<p style="font-size: larger;"><?php
 				/* translators: 1. Link (do not translate) */
 				printf(esc_html__('Visit %1$s to learn more.', 'ics-calendar'), '<strong><a href="https://icscalendar.com/pro/" target="_blank">icscalendar.com/pro</a></strong>');
 				?></p>
@@ -37,7 +37,7 @@ function r34ics_getting_started_go_pro_html() {
 			</div>
 		</div>
 
-		<p class="aligncenter"><a href="https://icscalendar.com/pro/" target="_blank" class="button button-primary" style="font-size: larger;"><?php esc_html_e('Go PRO!', 'ics-calendar'); ?></a></p>
+		<p class="aligncenter"><a href="https://icscalendar.com/pro/" target="_blank" class="button button-primary" style="font-size: large;"><?php esc_html_e('Go PRO!', 'ics-calendar'); ?></a></p>
 	</div></div>
 	<?php
 	$output = apply_filters('r34ics_getting_started_go_pro_html', ob_get_clean());
@@ -77,7 +77,7 @@ function r34ics_getting_started_go_pro_html() {
 					?>
 					<div class="inside" id="settings">
 	
-						<h2><?php esc_html_e('Settings', 'ics-calendar'); ?></h2>
+						<h2 class="screen-reader-text"><?php esc_html_e('Settings', 'ics-calendar'); ?></h2>
 	
 						<form id="r34ics-settings" method="post" action="#settings">
 							<?php

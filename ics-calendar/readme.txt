@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 11.5.15.1
+Stable tag: 11.5.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,6 +99,13 @@ The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional 
 
 == Changelog ==
 
+= 11.5.16 - 2025.09.01 =
+
+* Admin:
+  * Refactored ICS Feed URL Tester with additional response details.
+  * UI visual refinements on admin page.
+* i18n: Updated translation strings.
+
 = 11.5.15.1 - 2025.08.26 =
 
 * Additional refinements to recent user agent string changes. Modified the default user agent string to conform to the [spec](https://httpwg.org/specs/rfc9110.html#field.user-agent). Updated legacy request method user agent strings. Note: The recently implemented fixes for Microsoft 365 support are available with the newer request method only. If you are using Microsoft 365 calendars, please turn _off_ the **Use legacy feed request method** setting on the ICS Calendar admin page.
@@ -106,6 +113,7 @@ The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional 
 * Removed a status message from the **ICS Feed URL Tester** utility that encourages turning on the legacy request method. The legacy method will be removed in a future update.
 * Added deprecation notice for legacy parser when in debug mode.
 * Changed `$debug` and `$debug_messages` from `public` to `protected` in `R34ICS` class.
+* Minor CSS refactoring (alphabetized color variables).
 
 = 11.5.15 - 2025.08.20 =
 

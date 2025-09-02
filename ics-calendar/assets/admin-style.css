@@ -26,6 +26,7 @@ will be retained permanently, so they can be used to create custom color palette
 	--r34ics--color--lemonchiffon: lemonchiffon;
 	--r34ics--color--limegreen: limegreen;
 	--r34ics--color--orangered: orangered;
+	--r34ics--color--trans03: rgba(105,105,105,0.03);
 	--r34ics--color--trans05: rgba(105,105,105,0.05);
 	--r34ics--color--trans10: rgba(105,105,105,0.1);
 	--r34ics--color--trans20: rgba(105,105,105,0.2);
@@ -247,9 +248,11 @@ will be retained permanently, so they can be used to create custom color palette
 }
 
 .r34ics-inner-box {
-	background: #fcfcfc;
+	background: var(--r34ics--color--trans03);
 	border: 1px solid var(--r34ics--color--trans20);
-	margin: 1.5rem 0;
+	border-radius: 4px;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
+	margin: 1rem 0;
 	padding: 1rem;
 }
 
@@ -259,6 +262,10 @@ will be retained permanently, so they can be used to create custom color palette
 
 	.r34ics-inner-box *:last-child {
 		margin-bottom: 0;
+	}
+	
+	.r34ics-inner-box h3 {
+		margin: 0;
 	}
 
 .r34ics-menu {

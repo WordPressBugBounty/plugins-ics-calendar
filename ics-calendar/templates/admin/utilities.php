@@ -1,8 +1,8 @@
 <div class="inside" id="utilities">
 
-	<h2><?php esc_html_e('Utilities', 'ics-calendar'); ?></h2>
+	<h2 class="screen-reader-text"><?php esc_html_e('Utilities', 'ics-calendar'); ?></h2>
 
-	<div id="data-cache">
+	<div id="data-cache" class="r34ics-inner-box">
 	
 		<h3><?php
 		/* translators: 1: Plugin name (do not translate) */
@@ -19,7 +19,7 @@
 	
 	</div>
 		
-	<div id="ics-feed-url-tester">
+	<div id="ics-feed-url-tester" class="r34ics-inner-box">
 	
 		<h3><?php esc_html_e('ICS Feed URL Tester', 'ics-calendar'); ?></h3>
 	
@@ -42,21 +42,24 @@
 				<?php
 				if (!empty($url_tester_result['size'])) {
 					?>
-					<p><mark class="success"><?php
-					/* translators: 1: Dynamic value */
-					printf(esc_html__('%1$s received.', 'ics-calendar'), wp_kses_post($url_tester_result['size'] ?: ''));
-					?></mark></p>
+					<p><mark class="success">
+						<?php
+						/* translators: 1: Dynamic value */
+						printf(esc_html__('%1$s received.', 'ics-calendar'), wp_kses_post(@$url_tester_result['size_display']));
+						?>
+						[HTTP <?php echo wp_kses_post($url_tester_result['response']); ?>]
+					</mark></p>
 					<?php
 				}
 				switch ($url_tester_result['status']) {
 					case 'valid':
 						?>
-						<p><mark class="success"><?php esc_html_e('This appears to be a valid ICS feed URL.', 'ics-calendar'); ?></mark></p>
+						<p><mark class="success"><?php esc_html_e('This appears to be a valid ICS feed URL.', 'ics-calendar'); ?> [MIME <?php echo wp_kses_post($url_tester_result['content-type']); ?>]</mark></p>
 						<?php
 						break;
 					case 'invalid':
 						?>
-						<p><mark class="error"><?php esc_html_e('This does not appear to be a valid ICS feed URL.', 'ics-calendar'); ?></mark></p>
+						<p><mark class="error"><?php esc_html_e('This does not appear to be a valid ICS feed URL.', 'ics-calendar'); ?> [MIME <?php echo wp_kses_post($url_tester_result['content-type']); ?>]</mark></p>
 						<?php
 						break;
 					case 'failed':
@@ -99,7 +102,7 @@ if	(
 	?>	
 	<div class="inside" id="system-report">
 
-		<h2><?php esc_html_e('System Report', 'ics-calendar'); ?></h2>
+		<h2 class="screen-reader-text"><?php esc_html_e('System Report', 'ics-calendar'); ?></h2>
 
 		<p><mark class="alert"><?php esc_html_e('Please copy the following text and include it in your message when emailing support.', 'ics-calendar'); ?><br />
 		<?php

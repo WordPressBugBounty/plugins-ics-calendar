@@ -2085,24 +2085,54 @@ if (!class_exists('R34ICS')) {
 		
 		protected function _admin_page_callback_url_tester() {
 			if (isset($_POST['r34ics-url-tester-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-url-tester-nonce'])), 'r34ics')) {
-				$results = array('size' => '', 'status' => '', 'special' => array());
+				// Initialize the results array
+				$results = array(
+					'response' => '',
+					'size' => '',
+					'content-type' => '',
+					'status' => '',
+					'special' => array()
+				);
+				// Get the URL to test
 				if ($url_to_test = filter_input(INPUT_POST, 'url_to_test', FILTER_SANITIZE_URL)) {
 					$results['url'] = $url_to_test;
-					if ($response = $this->_url_get_contents($url_to_test)) {
-						$results['size'] = size_format(strlen($response), 2);
-						if (strpos($response,'BEGIN:VCALENDAR') === 0) {
+					// Request the feed
+					if ($response = $this->_url_get_contents($url_to_test, 0, false, false, false, false, true, true)) {
+						// Get the response status
+						$results['response'] = $response['response_code'] . ' ' . $response['response_message'];
+						// Get size (content-length header may be empty)
+						$results['size'] = intval(@$response['headers']['content-length']) ?: strlen(@$response['body'] ?: ''); unset($response['body']);
+						if ($results['size'] > (1024 * 1024)) {
+							$results['size_display'] = round($results['size'] / (1024 * 1024), 2) . ' MB';
+					}
+						elseif ($results['size'] > 1024) {
+							$results['size_display'] = round($results['size'] / 1024, 2) . ' KB';
+						}
+						else {
+							$results['size_display'] = $results['size'] . ' B';
+						}
+						// Get content type
+						$results['content-type'] = @$response['headers']['content-type'] ?: '';
+						if (strpos($results['content-type'], ';') !== false) {
+							$results['content-type'] = explode(';', $results['content-type'])[0];
+						}
+						// Does this look like a valid ICS feed?
+						if ($results['content-type'] == 'text/calendar' && $results['size'] > 0) {
 							$results['status'] = 'valid';
 						}
+						// No, it doesn't
 						else {
 							$results['status'] = 'invalid';
 						}
 					}
+					// Request failed
 					else {
 						$results['status'] = 'failed';
 					}
 					// Allow additional external debugging
 					do_action('r34ics_url_tester_result_debug', (@$response ?: ''), $url_to_test);
 				}
+				// URL not found
 				else {
 					$results['status'] = 'unknown';
 				}
@@ -2112,13 +2142,6 @@ if (!class_exists('R34ICS')) {
 					if (strpos($url_to_test, '@') !== false && get_option('r34ics_url_get_contents_legacy_method')) {
 						/* translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags */
 						$results['special'][] = sprintf(esc_html__('Your feed URL appears to contain HTTP Basic Authentication credentials. Try turning off the %1$s option under the %2$s tab above.', 'ics-calendar'), '<strong style="white-space: nowrap;">' . esc_html__('Use legacy feed request method', 'ics-calendar') . '</strong>', '<a href="#settings">' . esc_html__('Settings', 'ics-calendar') . '</a>');
-					}
-					// Suggest "Use legacy feed request method" option
-					else {
-						/* translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags */
-						/* Commented out in 11.5.15.1; we don't want to encourage using the legacy method!
-						$results['special'][] = sprintf(esc_html__('If your feed URL works with our online %1$sPreview%2$s tool, try turning on the %3$s option under the %4$s tab above.', 'ics-calendar'), '<a href="https://icscalendar.com/preview/" target="_blank">', '</a>', '<strong style="white-space: nowrap;">' . esc_html__('Use legacy feed request method', 'ics-calendar') . '</strong>', '<a href="#settings">' . esc_html__('Settings', 'ics-calendar') . '</a>');
-						*/
 					}
 				}
 				// The feed URL appears to be a media library file
@@ -2530,9 +2553,9 @@ if (!class_exists('R34ICS')) {
 		/**
 		 * Retrieve file from remote server (previous cURL/fopen methods replaced with wp_remote_get() in version 11.0.0)
 		 */
-		protected function _url_get_contents($url, $recursion=0, $use_transients=false, $basicauth=false, $skip_domain_errors=false, $ua=false, $trim=true) {
-			// Use legacy method?
-			if (get_option('r34ics_url_get_contents_legacy_method')) {
+		protected function _url_get_contents($url, $recursion=0, $use_transients=false, $basicauth=false, $skip_domain_errors=false, $ua=false, $trim=true, $response_array=false) {
+			// Use legacy method? (Can't use legacy method with $response_array)
+			if (get_option('r34ics_url_get_contents_legacy_method') && empty($response_array)) {
 				return $this->_url_get_contents_legacy($url, '', $recursion, null, $use_transients, $basicauth, $skip_domain_errors);
 			}
 		
@@ -2784,6 +2807,23 @@ if (!class_exists('R34ICS')) {
 				$transient_expiration = get_option('r34ics_transients_expiration');
 				set_transient($transient_name, $url_contents, $transient_expiration);
 			}
+			
+			// Are we returning the full response array? (Admin troubleshooting only)
+			if (is_admin() && !empty($response_array)) {
+				// We only want to allow this to run for the URL tester
+				$caller = @debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,2)[1]['function'];
+				if ($caller == '_admin_page_callback_url_tester') {
+					return array(
+						'headers' => array(
+							'content-length' => wp_remote_retrieve_header($response, 'content-length'),
+							'content-type' => wp_remote_retrieve_header($response, 'content-type'),
+						),
+						'response_code' => wp_remote_retrieve_response_code($response),
+						'response_message' => wp_remote_retrieve_response_message($response),
+						'body' => $url_contents,
+					);
+				}
+			}
 		
 			return $url_contents;
 		}
@@ -2807,7 +2847,11 @@ if (!class_exists('R34ICS')) {
 	
 			// Report that we are using the legacy method
 			// Reminder: This refers to the class method; it has nothing to do with the $method variable!
-			if ($this->debug) { $this->debug_messages[$url]['Method'][] = __METHOD__; }
+			if ($this->debug) {
+				$this->debug_messages[$url]['Method'][] = __METHOD__;
+				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
+				trigger_error(esc_html__('The legacy feed request method is deprecated, and will be removed in an update in the near future. Please test your feeds with the legacy feed request method turned off.', 'ics-calendar'), E_USER_NOTICE);
+			}
 			
 			// Are we at debug level 3 or greater? If so, don't use transients
 			if (!empty($this->debug) && $this->debug >= 3) { $use_transients = false; }
