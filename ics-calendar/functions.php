@@ -1189,16 +1189,6 @@ function r34ics_organizer_format($organizer='') {
 function r34ics_purge_calendar_transients() {
 	global $wpdb;
 
-	if (empty(get_option('r34ics_feed_urls_permanent'))) {
-		// First we delete the saved feed URL list
-		delete_option('r34ics_feed_urls');
-		// Delete saved AJAX shortcode arguments as well
-		// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery
-		// phpcs:disable WordPress.DB.DirectDatabaseQuery.NoCaching
-		return $wpdb->query($wpdb->prepare("DELETE FROM `" . $wpdb->options . "` WHERE `option_name` LIKE %s", 'r34ics\_ajax\_args\_%'));
-		// phpcs:enable
-	}
-	
 	// Hook in external actions (e.g. for purging ICS Calendar Pro data)
 	do_action('r34ics_purge_calendar_transients');
 	
@@ -1533,7 +1523,6 @@ function r34ics_system_report($echo=true) {
 			'r34ics_display_add_calendar_button_false',
 			'r34ics_display_calendar_memory_limit',
 			'r34ics_feed_urls',
-			'r34ics_feed_urls_permanent',
 			'r34ics_previous_version',
 			'r34ics_transients_expiration',
 			'r34ics_url_get_contents_legacy_method',
@@ -1840,7 +1829,6 @@ function _r34ics_debug($arr) {
 		'r34ics_display_add_calendar_button_false',
 		'r34ics_display_calendar_memory_limit',
 		'r34ics_feed_urls',
-		'r34ics_feed_urls_permanent',
 		'r34ics_previous_version',
 		'r34ics_transients_expiration',
 		'r34ics_url_get_contents_legacy_method',

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-02 13:09-0500\n"
+"POT-Creation-Date: 2025-09-04 09:59-0500\n"
 "PO-Revision-Date: 2020-10-21 13:18-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -200,52 +200,52 @@ msgstr ""
 msgid "Map"
 msgstr ""
 
-#: functions.php:1241
+#: functions.php:1231
 msgid "Recurring event"
 msgstr ""
 
 #. translators: 1. Dynamic value
-#: functions.php:1247
+#: functions.php:1237
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr ""
 
-#: functions.php:1247
+#: functions.php:1237
 msgid "Recurs yearly"
 msgstr ""
 
 #. translators: 1. Dynamic value
-#: functions.php:1251
+#: functions.php:1241
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr ""
 
-#: functions.php:1251
+#: functions.php:1241
 msgid "Recurs monthly"
 msgstr ""
 
 #. translators: 1. Dynamic value
-#: functions.php:1255
+#: functions.php:1245
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr ""
 
-#: functions.php:1255
+#: functions.php:1245
 msgid "Recurs weekly"
 msgstr ""
 
 #. translators: 1. Dynamic value
-#: functions.php:1259
+#: functions.php:1249
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr ""
 
-#: functions.php:1259
+#: functions.php:1249
 msgid "Recurs daily"
 msgstr ""
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1406
+#: functions.php:1396
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -254,7 +254,7 @@ msgid ""
 "the shortcode."
 msgstr ""
 
-#: functions.php:1755
+#: functions.php:1744
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr ""
 
@@ -270,7 +270,7 @@ msgid ""
 "%9$s settings%10$s page."
 msgstr ""
 
-#: ics-calendar.php:208 templates/admin/settings.php:128
+#: ics-calendar.php:208 templates/admin/settings.php:123
 msgid "Use new parameter defaults (v.10.6)"
 msgstr ""
 
@@ -633,10 +633,15 @@ msgid ""
 "than the current default memory limit on your server."
 msgstr ""
 
+#: templates/admin/settings.php:70
+msgid "deprecated"
+msgstr ""
+
 #: templates/admin/settings.php:71
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, "
-"turn on this option to use the legacy request method."
+"turn on this option to use the legacy request method. This feature is "
+"deprecated and will be removed in an update in the near future."
 msgstr ""
 
 #: templates/admin/settings.php:75
@@ -696,29 +701,15 @@ msgid ""
 "transients) before reloading. Default is 3600 (1 hour)."
 msgstr ""
 
-#: templates/admin/settings.php:110
-msgid "Permanent feed URL mask IDs"
-msgstr ""
-
-#: templates/admin/settings.php:111
-msgid ""
-"The AJAX loading method generates masked feed URL IDs, to avoid sending "
-"source feed URLs directly in the page HTML. These are normally recycled "
-"whenever saving settings or running the \"Clear Cached Calendar Data\" "
-"utility. This can cause problems with certain external caching systems "
-"(e.g. Cloudflare), which may continue to request expired IDs. Check this "
-"box to permanently retain the masked feed URL IDs."
-msgstr ""
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:115
 msgid "Miscellaneous"
 msgstr ""
 
-#: templates/admin/settings.php:123
+#: templates/admin/settings.php:118
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr ""
 
-#: templates/admin/settings.php:124
+#: templates/admin/settings.php:119
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the "
 "toolbar above the WYSIWYG editor when using Classic Editor. Check this box "
@@ -727,7 +718,7 @@ msgid ""
 msgstr ""
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:126
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

@@ -2226,9 +2226,6 @@ if (!class_exists('R34ICS')) {
 						: ini_get('memory_limit')
 				));
 				
-				// feed_urls_permanent
-				update_option('r34ics_feed_urls_permanent', !empty($_POST['feed_urls_permanent']));
-				
 				// transients_expiration
 				update_option('r34ics_transients_expiration', (
 					isset($_POST['transients_expiration'])
@@ -2244,6 +2241,9 @@ if (!class_exists('R34ICS')) {
 			
 				// load_css_js_on_wp_enqueue_scripts (removed in 10.7.1)
 				delete_option('r34ics_load_css_js_on_wp_enqueue_scripts');
+				
+				// feed_urls_permanent (removed in 11.5.16.1)
+				delete_option('r34ics_feed_urls_permanent');
 				
 				$r34ics_deferred_admin_notices['r34ics_settings_updated'] = array(
 					/* translators: 1. HTML tag 2. HTML tag */

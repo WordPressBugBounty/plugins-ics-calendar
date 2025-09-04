@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-02 13:12-0500\n"
-"PO-Revision-Date: 2025-09-02 13:12-0500\n"
+"POT-Creation-Date: 2025-09-04 10:02-0500\n"
+"PO-Revision-Date: 2025-09-04 10:02-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: cs\n"
@@ -232,52 +232,52 @@ msgstr ""
 msgid "Map"
 msgstr "Mapa"
 
-#: functions.php:1241
+#: functions.php:1231
 msgid "Recurring event"
 msgstr "Opakující se akce"
 
 #. translators: 1. Dynamic value
-#: functions.php:1247
+#: functions.php:1237
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Opakuje se každých %1$s let"
 
-#: functions.php:1247
+#: functions.php:1237
 msgid "Recurs yearly"
 msgstr "Opakuje se každoročně"
 
 #. translators: 1. Dynamic value
-#: functions.php:1251
+#: functions.php:1241
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Opakuje se každých %1$s měsíců"
 
-#: functions.php:1251
+#: functions.php:1241
 msgid "Recurs monthly"
 msgstr "Opakuje se každý měsíc"
 
 #. translators: 1. Dynamic value
-#: functions.php:1255
+#: functions.php:1245
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Opakuje se každých %1$s týdnů"
 
-#: functions.php:1255
+#: functions.php:1245
 msgid "Recurs weekly"
 msgstr "Opakuje se každý týden"
 
 #. translators: 1. Dynamic value
-#: functions.php:1259
+#: functions.php:1249
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Opakuje se každých %1$s dní"
 
-#: functions.php:1259
+#: functions.php:1249
 msgid "Recurs daily"
 msgstr "Opakuje se denně"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1406
+#: functions.php:1396
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -290,7 +290,7 @@ msgstr ""
 "kliknout. V důsledku toho se váš kalendář nemusí zobrazovat správně. "
 "Odstraňte prosím klikací odkaz v krátkém kódu."
 
-#: functions.php:1755
+#: functions.php:1744
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkce r34ics_url_get_contents() již není podporována."
 
@@ -312,7 +312,7 @@ msgstr ""
 "nebo pro přepnutí na nové výchozí nastavení zapněte %8$s možnost na stránce "
 "%9$s nastavení%10$s."
 
-#: ics-calendar.php:208 templates/admin/settings.php:128
+#: ics-calendar.php:208 templates/admin/settings.php:123
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Použití nových výchozích parametrů (v.10.6)"
 
@@ -733,13 +733,19 @@ msgstr ""
 "nastavení serveru. 2) Tuto možnost není možné nastavit níže, než je aktuální "
 "výchozí limit paměti na serveru."
 
+#: templates/admin/settings.php:70
+msgid "deprecated"
+msgstr "zastaralé"
+
 #: templates/admin/settings.php:71
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
-"on this option to use the legacy request method."
+"on this option to use the legacy request method. This feature is deprecated "
+"and will be removed in an update in the near future."
 msgstr ""
 "Pokud váš web přestal načítat kanály po aktualizaci verze 11, zapněte tuto "
-"možnost, abyste použili starší metodu vyžádání."
+"možnost, abyste použili starší metodu vyžádání. Tato funkce je zastaralá a v "
+"blízké budoucnosti bude v rámci aktualizace odstraněna."
 
 #: templates/admin/settings.php:75
 msgid "Default shortcode"
@@ -819,36 +825,15 @@ msgstr ""
 "serveru (přechodné stavy WordPressu) před opětovným načtením. Výchozí "
 "hodnota je 3600 (1 hodina)."
 
-#: templates/admin/settings.php:110
-msgid "Permanent feed URL mask IDs"
-msgstr "ID masky URL stálého kanálu"
-
-#: templates/admin/settings.php:111
-msgid ""
-"The AJAX loading method generates masked feed URL IDs, to avoid sending "
-"source feed URLs directly in the page HTML. These are normally recycled "
-"whenever saving settings or running the \"Clear Cached Calendar Data\" "
-"utility. This can cause problems with certain external caching systems (e.g. "
-"Cloudflare), which may continue to request expired IDs. Check this box to "
-"permanently retain the masked feed URL IDs."
-msgstr ""
-"Metoda načítání AJAX generuje maskované ID adresy URL kanálu, aby se "
-"zabránilo odesílání zdrojových adres URL kanálu přímo ve stránce HTML. Ty se "
-"obvykle recyklují při každém ukládání nastavení nebo spuštění nástroje "
-"\"Vymazat data kalendáře v mezipaměti\". To může způsobit problémy s "
-"některými externími systémy ukládání do mezipaměti (např. Cloudflare), které "
-"mohou nadále požadovat prošlá ID. Zaškrtněte toto políčko, chcete-li trvale "
-"zachovat maskované identifikátory URL kanálů."
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:115
 msgid "Miscellaneous"
 msgstr "Ostatní"
 
-#: templates/admin/settings.php:123
+#: templates/admin/settings.php:118
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Odstranění tlačítka \"Přidat kalendář ICS\" v editoru Classic"
 
-#: templates/admin/settings.php:124
+#: templates/admin/settings.php:119
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -860,7 +845,7 @@ msgstr ""
 "používající blokový editor (Gutenberg)."
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:126
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -1067,6 +1052,25 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "Permanent feed URL mask IDs"
+#~ msgstr "ID masky URL stálého kanálu"
+
+#~ msgid ""
+#~ "The AJAX loading method generates masked feed URL IDs, to avoid sending "
+#~ "source feed URLs directly in the page HTML. These are normally recycled "
+#~ "whenever saving settings or running the \"Clear Cached Calendar Data\" "
+#~ "utility. This can cause problems with certain external caching systems "
+#~ "(e.g. Cloudflare), which may continue to request expired IDs. Check this "
+#~ "box to permanently retain the masked feed URL IDs."
+#~ msgstr ""
+#~ "Metoda načítání AJAX generuje maskované ID adresy URL kanálu, aby se "
+#~ "zabránilo odesílání zdrojových adres URL kanálu přímo ve stránce HTML. Ty "
+#~ "se obvykle recyklují při každém ukládání nastavení nebo spuštění nástroje "
+#~ "\"Vymazat data kalendáře v mezipaměti\". To může způsobit problémy s "
+#~ "některými externími systémy ukládání do mezipaměti (např. Cloudflare), "
+#~ "které mohou nadále požadovat prošlá ID. Zaškrtněte toto políčko, chcete-"
+#~ "li trvale zachovat maskované identifikátory URL kanálů."
 
 #, php-format
 #~ msgid ""

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-02 13:09-0500\n"
-"PO-Revision-Date: 2025-09-02 13:09-0500\n"
+"POT-Creation-Date: 2025-09-04 09:59-0500\n"
+"PO-Revision-Date: 2025-09-04 09:59-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -236,52 +236,52 @@ msgstr ""
 msgid "Map"
 msgstr "Karta"
 
-#: functions.php:1241
+#: functions.php:1231
 msgid "Recurring event"
 msgstr "Återkommande händelse"
 
 #. translators: 1. Dynamic value
-#: functions.php:1247
+#: functions.php:1237
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Återkommer varje %1$s år"
 
-#: functions.php:1247
+#: functions.php:1237
 msgid "Recurs yearly"
 msgstr "Återkommer årligen"
 
 #. translators: 1. Dynamic value
-#: functions.php:1251
+#: functions.php:1241
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Återkommer varje %1$s månad"
 
-#: functions.php:1251
+#: functions.php:1241
 msgid "Recurs monthly"
 msgstr "Återkommer varje månad"
 
 #. translators: 1. Dynamic value
-#: functions.php:1255
+#: functions.php:1245
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Återkommer varje %1$s vecka"
 
-#: functions.php:1255
+#: functions.php:1245
 msgid "Recurs weekly"
 msgstr "Återkommer varje vecka"
 
 #. translators: 1. Dynamic value
-#: functions.php:1259
+#: functions.php:1249
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Återkommer varje %1$s dag"
 
-#: functions.php:1259
+#: functions.php:1249
 msgid "Recurs daily"
 msgstr "Återkommer dagligen"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1406
+#: functions.php:1396
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -293,7 +293,7 @@ msgstr ""
 "har din URL förvandlats till en klickbar länk. Det kan hända att din "
 "kalender inte visas korrekt. Ta bort den klickbara länken i kortkoden."
 
-#: functions.php:1755
+#: functions.php:1744
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funktionen r34ics_url_get_contents() stöds inte längre."
 
@@ -315,7 +315,7 @@ msgstr ""
 "om du vill byta till de nya standardvärdena kan du aktivera alternativet "
 "%8$s på sidan %9$s inställningar%10$s."
 
-#: ics-calendar.php:208 templates/admin/settings.php:128
+#: ics-calendar.php:208 templates/admin/settings.php:123
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Använd nya standardparametrar (v.10.6)"
 
@@ -736,14 +736,20 @@ msgstr ""
 "serverns standardinställning. 2) Det är inte möjligt att ställa in det här "
 "alternativet lägre än den aktuella standardminnesgränsen på din server."
 
+#: templates/admin/settings.php:70
+msgid "deprecated"
+msgstr "utfasad"
+
 #: templates/admin/settings.php:71
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
-"on this option to use the legacy request method."
+"on this option to use the legacy request method. This feature is deprecated "
+"and will be removed in an update in the near future."
 msgstr ""
-"Om din webbplats har slutat hämta flöden efter uppdateringen av version 11, "
-"aktiverar du det här alternativet för att använda den gamla "
-"förfrågningsmetoden."
+"Om din webbplats har slutat hämta flöden efter uppdateringen av version 11 "
+"kan du aktivera det här alternativet för att använda den äldre "
+"förfrågningsmetoden. Den här funktionen är föråldrad och kommer att tas bort "
+"i en uppdatering inom en snar framtid."
 
 #: templates/admin/settings.php:75
 msgid "Default shortcode"
@@ -818,36 +824,15 @@ msgstr ""
 "Ställer in hur länge kalendermatningsdata ska cachas på servern (WordPress "
 "transients) innan de laddas om. Standardvärdet är 3600 (1 timme)."
 
-#: templates/admin/settings.php:110
-msgid "Permanent feed URL mask IDs"
-msgstr "ID för URL-mask för permanent flöde"
-
-#: templates/admin/settings.php:111
-msgid ""
-"The AJAX loading method generates masked feed URL IDs, to avoid sending "
-"source feed URLs directly in the page HTML. These are normally recycled "
-"whenever saving settings or running the \"Clear Cached Calendar Data\" "
-"utility. This can cause problems with certain external caching systems (e.g. "
-"Cloudflare), which may continue to request expired IDs. Check this box to "
-"permanently retain the masked feed URL IDs."
-msgstr ""
-"AJAX-laddningsmetoden genererar maskerade URL-ID:n för flöden för att "
-"undvika att skicka URL:er för källflöden direkt i sidans HTML. Dessa "
-"återanvänds normalt när du sparar inställningar eller kör verktyget \"Clear "
-"Cached Calendar Data\". Detta kan orsaka problem med vissa externa "
-"cachelagringssystem (t.ex. Cloudflare), som kan fortsätta att begära "
-"utgångna ID:n. Markera den här rutan för att permanent behålla de maskerade "
-"URL-ID:n för flödet."
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:115
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: templates/admin/settings.php:123
+#: templates/admin/settings.php:118
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Ta bort knappen \"Lägg till ICS-kalender\" i Classic Editor"
 
-#: templates/admin/settings.php:124
+#: templates/admin/settings.php:119
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -859,7 +844,7 @@ msgstr ""
 "webbplatser som använder Blockredigeraren (Gutenberg)."
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:126
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -1068,6 +1053,25 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "Permanent feed URL mask IDs"
+#~ msgstr "ID för URL-mask för permanent flöde"
+
+#~ msgid ""
+#~ "The AJAX loading method generates masked feed URL IDs, to avoid sending "
+#~ "source feed URLs directly in the page HTML. These are normally recycled "
+#~ "whenever saving settings or running the \"Clear Cached Calendar Data\" "
+#~ "utility. This can cause problems with certain external caching systems "
+#~ "(e.g. Cloudflare), which may continue to request expired IDs. Check this "
+#~ "box to permanently retain the masked feed URL IDs."
+#~ msgstr ""
+#~ "AJAX-laddningsmetoden genererar maskerade URL-ID:n för flöden för att "
+#~ "undvika att skicka URL:er för källflöden direkt i sidans HTML. Dessa "
+#~ "återanvänds normalt när du sparar inställningar eller kör verktyget "
+#~ "\"Clear Cached Calendar Data\". Detta kan orsaka problem med vissa "
+#~ "externa cachelagringssystem (t.ex. Cloudflare), som kan fortsätta att "
+#~ "begära utgångna ID:n. Markera den här rutan för att permanent behålla de "
+#~ "maskerade URL-ID:n för flödet."
 
 #, php-format
 #~ msgid ""

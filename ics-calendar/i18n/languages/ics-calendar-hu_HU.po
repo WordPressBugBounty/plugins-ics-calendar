@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-02 13:11-0500\n"
-"PO-Revision-Date: 2025-09-02 13:11-0500\n"
+"POT-Creation-Date: 2025-09-04 10:01-0500\n"
+"PO-Revision-Date: 2025-09-04 10:01-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: hu_HU\n"
@@ -234,52 +234,52 @@ msgstr ""
 msgid "Map"
 msgstr "Bản đồ"
 
-#: functions.php:1241
+#: functions.php:1231
 msgid "Recurring event"
 msgstr "Ismétlődő esemény"
 
 #. translators: 1. Dynamic value
-#: functions.php:1247
+#: functions.php:1237
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Minden %1$s évben ismétlődik"
 
-#: functions.php:1247
+#: functions.php:1237
 msgid "Recurs yearly"
 msgstr "Évente ismétlődik"
 
 #. translators: 1. Dynamic value
-#: functions.php:1251
+#: functions.php:1241
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Minden %1$s hónapban ismétlődik"
 
-#: functions.php:1251
+#: functions.php:1241
 msgid "Recurs monthly"
 msgstr "Havonta ismétlődik"
 
 #. translators: 1. Dynamic value
-#: functions.php:1255
+#: functions.php:1245
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Minden %1$s héten ismétlődik"
 
-#: functions.php:1255
+#: functions.php:1245
 msgid "Recurs weekly"
 msgstr "Hetente ismétlődik"
 
 #. translators: 1. Dynamic value
-#: functions.php:1259
+#: functions.php:1249
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Minden %1$s nap ismétlődik"
 
-#: functions.php:1259
+#: functions.php:1249
 msgid "Recurs daily"
 msgstr "Naponta ismétlődik"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1406
+#: functions.php:1396
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -292,7 +292,7 @@ msgstr ""
 "Ennek következtében előfordulhat, hogy a naptárad nem jelenik meg "
 "megfelelően. Kérjük, távolítsa el a kattintható linket a rövidkódból."
 
-#: functions.php:1755
+#: functions.php:1744
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Az r34ics_url_get_contents() függvény már nem támogatott."
 
@@ -315,7 +315,7 @@ msgstr ""
 "alapértelmezett beállításokra való áttéréshez kapcsolja be a %8$s opciót a "
 "%9$s beállítások%10$s oldalon."
 
-#: ics-calendar.php:208 templates/admin/settings.php:128
+#: ics-calendar.php:208 templates/admin/settings.php:123
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Új paraméter alapértelmezések használata (v.10.6)"
 
@@ -741,13 +741,19 @@ msgstr ""
 "2) Ezt az opciót nem lehet a szerver aktuális alapértelmezett "
 "memóriakorlátjánál alacsonyabbra állítani."
 
+#: templates/admin/settings.php:70
+msgid "deprecated"
+msgstr "elavult"
+
 #: templates/admin/settings.php:71
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
-"on this option to use the legacy request method."
+"on this option to use the legacy request method. This feature is deprecated "
+"and will be removed in an update in the near future."
 msgstr ""
-"Ha webhelye a 11-es verziófrissítés után már nem kérte le a tápokat, "
-"kapcsolja be ezt a lehetőséget a régi kérési módszer használatához."
+"Ha webhelye a 11-es verzió frissítése után már nem kérte le a tápokat, "
+"kapcsolja be ezt a lehetőséget a régi kérési módszer használatához. Ez a "
+"funkció elavult, és a közeljövőben egy frissítéssel eltávolításra kerül."
 
 #: templates/admin/settings.php:75
 msgid "Default shortcode"
@@ -824,36 +830,15 @@ msgstr ""
 "gyorsítótárazni (WordPress tranziensek) az újratöltés előtt. Az "
 "alapértelmezett érték 3600 (1 óra)."
 
-#: templates/admin/settings.php:110
-msgid "Permanent feed URL mask IDs"
-msgstr "Állandó takarmány URL-maszk azonosítók"
-
-#: templates/admin/settings.php:111
-msgid ""
-"The AJAX loading method generates masked feed URL IDs, to avoid sending "
-"source feed URLs directly in the page HTML. These are normally recycled "
-"whenever saving settings or running the \"Clear Cached Calendar Data\" "
-"utility. This can cause problems with certain external caching systems (e.g. "
-"Cloudflare), which may continue to request expired IDs. Check this box to "
-"permanently retain the masked feed URL IDs."
-msgstr ""
-"Az AJAX betöltési módszer maszkolt URL-azonosítókat generál, hogy elkerülje, "
-"hogy a forrás URL-eket közvetlenül az oldal HTML-jeibe küldje. Ezek "
-"általában újrahasznosításra kerülnek a beállítások mentésekor vagy a \"Clear "
-"Cached Calendar Data\" segédprogram futtatásakor. Ez problémákat okozhat "
-"bizonyos külső gyorsítótárazási rendszerekkel (pl. Cloudflare), amelyek "
-"továbbra is kérhetik a lejárt azonosítókat. Jelölje be ezt a négyzetet a "
-"maszkolt takarmány-URL-azonosítók végleges megtartásához."
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:115
 msgid "Miscellaneous"
 msgstr "Vegyes"
 
-#: templates/admin/settings.php:123
+#: templates/admin/settings.php:118
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "\"ICS naptár hozzáadása\" gomb eltávolítása a klasszikus szerkesztőben"
 
-#: templates/admin/settings.php:124
+#: templates/admin/settings.php:119
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -865,7 +850,7 @@ msgstr ""
 "Nincs hatással a blokkszerkesztőt (Gutenberg) használó webhelyekre."
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:126
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -1074,6 +1059,25 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "Permanent feed URL mask IDs"
+#~ msgstr "Állandó takarmány URL-maszk azonosítók"
+
+#~ msgid ""
+#~ "The AJAX loading method generates masked feed URL IDs, to avoid sending "
+#~ "source feed URLs directly in the page HTML. These are normally recycled "
+#~ "whenever saving settings or running the \"Clear Cached Calendar Data\" "
+#~ "utility. This can cause problems with certain external caching systems "
+#~ "(e.g. Cloudflare), which may continue to request expired IDs. Check this "
+#~ "box to permanently retain the masked feed URL IDs."
+#~ msgstr ""
+#~ "Az AJAX betöltési módszer maszkolt URL-azonosítókat generál, hogy "
+#~ "elkerülje, hogy a forrás URL-eket közvetlenül az oldal HTML-jeibe küldje. "
+#~ "Ezek általában újrahasznosításra kerülnek a beállítások mentésekor vagy a "
+#~ "\"Clear Cached Calendar Data\" segédprogram futtatásakor. Ez problémákat "
+#~ "okozhat bizonyos külső gyorsítótárazási rendszerekkel (pl. Cloudflare), "
+#~ "amelyek továbbra is kérhetik a lejárt azonosítókat. Jelölje be ezt a "
+#~ "négyzetet a maszkolt takarmány-URL-azonosítók végleges megtartásához."
 
 #, php-format
 #~ msgid ""

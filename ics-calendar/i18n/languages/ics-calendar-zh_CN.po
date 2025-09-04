@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-02 13:09-0500\n"
-"PO-Revision-Date: 2025-09-02 13:09-0500\n"
+"POT-Creation-Date: 2025-09-04 09:59-0500\n"
+"PO-Revision-Date: 2025-09-04 09:59-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -218,52 +218,52 @@ msgstr ""
 msgid "Map"
 msgstr "地图"
 
-#: functions.php:1241
+#: functions.php:1231
 msgid "Recurring event"
 msgstr "定期事件"
 
 #. translators: 1. Dynamic value
-#: functions.php:1247
+#: functions.php:1237
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "每 %1$s 年出现一次"
 
-#: functions.php:1247
+#: functions.php:1237
 msgid "Recurs yearly"
 msgstr "每年递归"
 
 #. translators: 1. Dynamic value
-#: functions.php:1251
+#: functions.php:1241
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "每 %1$s 个月出现一次"
 
-#: functions.php:1251
+#: functions.php:1241
 msgid "Recurs monthly"
 msgstr "每月递归"
 
 #. translators: 1. Dynamic value
-#: functions.php:1255
+#: functions.php:1245
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "每 %1$s 周复发一次"
 
-#: functions.php:1255
+#: functions.php:1245
 msgid "Recurs weekly"
 msgstr "每周重复"
 
 #. translators: 1. Dynamic value
-#: functions.php:1259
+#: functions.php:1249
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "每 %1$s 天出现一次"
 
-#: functions.php:1259
+#: functions.php:1249
 msgid "Recurs daily"
 msgstr "每天重复"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1406
+#: functions.php:1396
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -274,7 +274,7 @@ msgstr ""
 "您的%1$s短代码中的 \"url \"属性似乎包含HTML标签；很可能您的URL已经变成了一个"
 "可点击的链接。您的日历可能因此而不能正常显示。请删除短代码中的可点击链接。"
 
-#: functions.php:1755
+#: functions.php:1744
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "不再支持 r34ics_url_get_contents() 函数。"
 
@@ -294,7 +294,7 @@ msgstr ""
 "请阅读我们的%6$s博客文章%7$s，或切换到新的默认值，打开%9$s设置%10$s页面上"
 "的%8$s选项。"
 
-#: ics-calendar.php:208 templates/admin/settings.php:128
+#: ics-calendar.php:208 templates/admin/settings.php:123
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "使用新的参数默认值 (v.10.6)"
 
@@ -687,13 +687,18 @@ msgstr ""
 "至少为 512 MB。%1$s 注意1) 某些主机提供商可能不允许应用程序覆盖服务器默认设"
 "置。2) 无法将此选项设置为低于服务器当前默认内存限制。"
 
+#: templates/admin/settings.php:70
+msgid "deprecated"
+msgstr "禁用"
+
 #: templates/admin/settings.php:71
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
-"on this option to use the legacy request method."
+"on this option to use the legacy request method. This feature is deprecated "
+"and will be removed in an update in the near future."
 msgstr ""
-"如果您的网站在第 11 版更新后已停止检索 feed，请打开此选项以使用传统的请求方"
-"法。"
+"如果您的网站在版本 11 更新后已停止检索 feed，请打开此选项以使用传统的请求方"
+"法。该功能已过时，将在不久的将来的更新中删除。"
 
 #: templates/admin/settings.php:75
 msgid "Default shortcode"
@@ -762,33 +767,15 @@ msgstr ""
 "设置在重新加载之前，在服务器上缓存多长时间的日历馈送数据（WordPress瞬时）。默"
 "认是3600（1小时）。"
 
-#: templates/admin/settings.php:110
-msgid "Permanent feed URL mask IDs"
-msgstr "永久供稿 URL 掩码 ID"
-
-#: templates/admin/settings.php:111
-msgid ""
-"The AJAX loading method generates masked feed URL IDs, to avoid sending "
-"source feed URLs directly in the page HTML. These are normally recycled "
-"whenever saving settings or running the \"Clear Cached Calendar Data\" "
-"utility. This can cause problems with certain external caching systems (e.g. "
-"Cloudflare), which may continue to request expired IDs. Check this box to "
-"permanently retain the masked feed URL IDs."
-msgstr ""
-"AJAX 加载方法会生成屏蔽的 feed URL ID，以避免在页面 HTML 中直接发送源 feed "
-"URL。通常在保存设置或运行 \"清除缓存日历数据 \"工具时，这些数据会被回收。这可"
-"能会给某些外部缓存系统（如 Cloudflare）带来问题，因为它们可能会继续请求过期"
-"的 ID。选中此复选框可永久保留屏蔽的 feed URL ID。"
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:115
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: templates/admin/settings.php:123
+#: templates/admin/settings.php:118
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "移除经典编辑器中的 \"添加 ICS 日历 \"按钮"
 
-#: templates/admin/settings.php:124
+#: templates/admin/settings.php:119
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -799,7 +786,7 @@ msgstr ""
 "的网站没有影响。"
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:126
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -991,6 +978,22 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "Permanent feed URL mask IDs"
+#~ msgstr "永久供稿 URL 掩码 ID"
+
+#~ msgid ""
+#~ "The AJAX loading method generates masked feed URL IDs, to avoid sending "
+#~ "source feed URLs directly in the page HTML. These are normally recycled "
+#~ "whenever saving settings or running the \"Clear Cached Calendar Data\" "
+#~ "utility. This can cause problems with certain external caching systems "
+#~ "(e.g. Cloudflare), which may continue to request expired IDs. Check this "
+#~ "box to permanently retain the masked feed URL IDs."
+#~ msgstr ""
+#~ "AJAX 加载方法会生成屏蔽的 feed URL ID，以避免在页面 HTML 中直接发送源 "
+#~ "feed URL。通常在保存设置或运行 \"清除缓存日历数据 \"工具时，这些数据会被回"
+#~ "收。这可能会给某些外部缓存系统（如 Cloudflare）带来问题，因为它们可能会继"
+#~ "续请求过期的 ID。选中此复选框可永久保留屏蔽的 feed URL ID。"
 
 #, php-format
 #~ msgid ""

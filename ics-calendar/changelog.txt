@@ -1,5 +1,14 @@
 === ICS Calendar Changelog ===
 
+= 11.5.16.1 2025.09.04 =
+
+* Admin settings:
+  * Added deprecation notice to "Use legacy feed request method" option.
+  * Removed "Permanent feed URL mask IDs" option from page removed associated logic. Feed URL mask IDs are now always permanent.
+* Bug fix: Removed code that was causing the **Clear Cached Calendar Data** utility to exit early if the "Permanent feed URL mask IDs" option was turned off (default). This issue may have been preventing some calendars from updating.
+* Miscellaneous: Admin CSS tweaks.
+* i18n: Updated translation strings.
+
 = 11.5.16 - 2025.09.01 =
 
 * Admin:

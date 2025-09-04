@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-02 13:11-0500\n"
-"PO-Revision-Date: 2025-09-02 13:11-0500\n"
+"POT-Creation-Date: 2025-09-04 10:01-0500\n"
+"PO-Revision-Date: 2025-09-04 10:01-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: fi_FI\n"
@@ -236,52 +236,52 @@ msgstr ""
 msgid "Map"
 msgstr "Kartta"
 
-#: functions.php:1241
+#: functions.php:1231
 msgid "Recurring event"
 msgstr "Toistuva tapahtuma"
 
 #. translators: 1. Dynamic value
-#: functions.php:1247
+#: functions.php:1237
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Toistuu %1$s vuoden välein"
 
-#: functions.php:1247
+#: functions.php:1237
 msgid "Recurs yearly"
 msgstr "Toistuu vuosittain"
 
 #. translators: 1. Dynamic value
-#: functions.php:1251
+#: functions.php:1241
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Toistuu %1$s kuukauden välein"
 
-#: functions.php:1251
+#: functions.php:1241
 msgid "Recurs monthly"
 msgstr "Toistuu kuukausittain"
 
 #. translators: 1. Dynamic value
-#: functions.php:1255
+#: functions.php:1245
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Toistuu %1$s viikon välein"
 
-#: functions.php:1255
+#: functions.php:1245
 msgid "Recurs weekly"
 msgstr "Toistuu viikoittain"
 
 #. translators: 1. Dynamic value
-#: functions.php:1259
+#: functions.php:1249
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Toistuu %1$s päivän välein"
 
-#: functions.php:1259
+#: functions.php:1249
 msgid "Recurs daily"
 msgstr "Toistuu päivittäin"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1406
+#: functions.php:1396
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -294,7 +294,7 @@ msgstr ""
 "seurauksena kalenterisi ei ehkä näy oikein. Poista klikattava linkki "
 "lyhytkoodista."
 
-#: functions.php:1755
+#: functions.php:1744
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funktiota r34ics_url_get_contents() ei enää tueta."
 
@@ -316,7 +316,7 @@ msgstr ""
 "%6$sblogikirjoituksemme%7$s, tai jos haluat siirtyä uusiin oletusasetuksiin, "
 "ota %8$s-vaihtoehto käyttöön %9$sasetukset%10$s-sivulla."
 
-#: ics-calendar.php:208 templates/admin/settings.php:128
+#: ics-calendar.php:208 templates/admin/settings.php:123
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Käytä uusia parametrien oletusasetuksia (v.10.6)"
 
@@ -738,14 +738,20 @@ msgstr ""
 "ei ole mahdollista asettaa pienemmäksi kuin palvelimen nykyinen "
 "oletusmuistiraja."
 
+#: templates/admin/settings.php:70
+msgid "deprecated"
+msgstr "vanhentunut"
+
 #: templates/admin/settings.php:71
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
-"on this option to use the legacy request method."
+"on this option to use the legacy request method. This feature is deprecated "
+"and will be removed in an update in the near future."
 msgstr ""
 "Jos sivustosi on lopettanut syötteiden hakemisen version 11 päivityksen "
 "jälkeen, ota tämä vaihtoehto käyttöön, jotta voit käyttää vanhaa "
-"pyyntömenetelmää."
+"pyyntömenetelmää. Tämä ominaisuus on vanhentunut ja se poistetaan "
+"lähitulevaisuuden päivityksessä."
 
 #: templates/admin/settings.php:75
 msgid "Default shortcode"
@@ -822,37 +828,15 @@ msgstr ""
 "välimuistiin palvelimelle (WordPressin siirtymät) ennen uudelleenlatausta. "
 "Oletusarvo on 3600 (1 tunti)."
 
-#: templates/admin/settings.php:110
-msgid "Permanent feed URL mask IDs"
-msgstr "Pysyvän syötteen URL-osoitteen maskin tunnukset"
-
-#: templates/admin/settings.php:111
-msgid ""
-"The AJAX loading method generates masked feed URL IDs, to avoid sending "
-"source feed URLs directly in the page HTML. These are normally recycled "
-"whenever saving settings or running the \"Clear Cached Calendar Data\" "
-"utility. This can cause problems with certain external caching systems (e.g. "
-"Cloudflare), which may continue to request expired IDs. Check this box to "
-"permanently retain the masked feed URL IDs."
-msgstr ""
-"AJAX-latausmenetelmä luo peitetyt syötteen URL-tunnukset, jotta "
-"lähdesyötteen URL-osoitteita ei tarvitse lähettää suoraan sivun HTML-"
-"koodiin. Nämä kierrätetään tavallisesti aina, kun asetuksia tallennetaan tai "
-"\"Tyhjennä välimuistissa olevat kalenteritiedot\" -apuohjelma suoritetaan. "
-"Tämä voi aiheuttaa ongelmia tiettyjen ulkoisten välimuistijärjestelmien "
-"(esim. Cloudflare) kanssa, jotka saattavat edelleen pyytää vanhentuneita "
-"tunnuksia. Merkitse tämä ruutu, jos haluat säilyttää peitetyt syötteen URL-"
-"tunnukset pysyvästi."
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:115
 msgid "Miscellaneous"
 msgstr "Sekalaiset"
 
-#: templates/admin/settings.php:123
+#: templates/admin/settings.php:118
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Poista \"Lisää ICS-kalenteri\" -painike Classic Editorista"
 
-#: templates/admin/settings.php:124
+#: templates/admin/settings.php:119
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -864,7 +848,7 @@ msgstr ""
 "käyttävät lohkoeditoria (Gutenberg)."
 
 #. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:126
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -1073,6 +1057,26 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "Permanent feed URL mask IDs"
+#~ msgstr "Pysyvän syötteen URL-osoitteen maskin tunnukset"
+
+#~ msgid ""
+#~ "The AJAX loading method generates masked feed URL IDs, to avoid sending "
+#~ "source feed URLs directly in the page HTML. These are normally recycled "
+#~ "whenever saving settings or running the \"Clear Cached Calendar Data\" "
+#~ "utility. This can cause problems with certain external caching systems "
+#~ "(e.g. Cloudflare), which may continue to request expired IDs. Check this "
+#~ "box to permanently retain the masked feed URL IDs."
+#~ msgstr ""
+#~ "AJAX-latausmenetelmä luo peitetyt syötteen URL-tunnukset, jotta "
+#~ "lähdesyötteen URL-osoitteita ei tarvitse lähettää suoraan sivun HTML-"
+#~ "koodiin. Nämä kierrätetään tavallisesti aina, kun asetuksia tallennetaan "
+#~ "tai \"Tyhjennä välimuistissa olevat kalenteritiedot\" -apuohjelma "
+#~ "suoritetaan. Tämä voi aiheuttaa ongelmia tiettyjen ulkoisten "
+#~ "välimuistijärjestelmien (esim. Cloudflare) kanssa, jotka saattavat "
+#~ "edelleen pyytää vanhentuneita tunnuksia. Merkitse tämä ruutu, jos haluat "
+#~ "säilyttää peitetyt syötteen URL-tunnukset pysyvästi."
 
 #, php-format
 #~ msgid ""
