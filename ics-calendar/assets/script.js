@@ -658,8 +658,3 @@ jQuery(window).on('resize', function() {
 	r34ics_week_reset();
 
 });
-
-
-jQuery(document).on('r34ics_init_end', function() {
-
-});

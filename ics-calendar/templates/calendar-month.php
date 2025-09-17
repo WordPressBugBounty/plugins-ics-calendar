@@ -194,6 +194,7 @@ if ($args['toggle'] === 'lightbox') {
 														<li class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 															if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 															if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
+															if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
 														?>>
 															<?php
 															if (!$all_day_indicator_shown) {
@@ -220,6 +221,7 @@ if ($args['toggle'] === 'lightbox') {
 														<li class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 															if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 															if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
+															if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
 														?>>
 															<?php
 															if (!empty($event['start'])) {

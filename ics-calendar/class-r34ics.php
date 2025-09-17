@@ -739,6 +739,8 @@ if (!class_exists('R34ICS')) {
 								$event->additionalProperties = array();
 								$event->attach = '';
 								$event->attendee = '';
+								$event->categories = '';
+								$event->color = '';
 								$event->contact = '';
 								$event->description = '';
 								$event->geo = '';
@@ -755,6 +757,7 @@ if (!class_exists('R34ICS')) {
 								'attach' => $this->parse_attach_array($event->attach_array, $sametab),
 								'categories' => ($event->categories ?: ''),
 								'class' => ($event->class ?: ''),
+								'color' => ($event->color ?: ($event->x_apple_calendar_color ?: '')),
 								'contact' => ($event->contact ?: ''),
 								'dtend_date' => $dtend_date,
 								'dtend_time' => $dtend_time,

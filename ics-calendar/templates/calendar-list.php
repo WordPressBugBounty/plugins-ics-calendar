@@ -192,6 +192,7 @@ else {
 												?><dd class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 													if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 													if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
+													if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
 												?>>
 													<?php
 													// Event label (title)
@@ -282,6 +283,7 @@ else {
 											?><dt class="all-day-indicator" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 												if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 												if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
+												if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
 											?>><?php esc_html_e('All Day', 'ics-calendar'); ?></dt><?php
 									
 											$all_day_indicator_shown = true;
@@ -290,6 +292,7 @@ else {
 										?><dd class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 											if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 											if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
+											if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
 										?>>
 											<?php
 											// Event label (title)
@@ -311,6 +314,7 @@ else {
 											?><dt class="time" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 												if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 												if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
+												if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
 											?>><?php
 											echo wp_kses_post($event['start'] ?: '');
 											if (!empty($event['end']) && $event['end'] != $event['start']) {
@@ -332,6 +336,7 @@ else {
 										?><dd class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 											if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 											if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
+											if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
 										?>>
 											<?php
 											// Event label (title)

@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 11.5.16.1
+Stable tag: 11.5.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,12 +99,19 @@ The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional 
 
 == Changelog ==
 
-= 11.5.16.1 2025.09.04 =
+= 11.5.17 - 2025.09.17 =
+
+* Added basic stub support for the [iCalendar `COLOR` property](https://icalendar.org/New-Properties-for-iCalendar-RFC-7986/5-9-color-property.html) (and the similar, vendor-specific `X-APPLE-CALENDAR-COLOR`). There is currently no functionality around this property, but events that contain `COLOR` will now include a `data-color` attribute on their HTML wrappers, which can be used with custom CSS or JavaScript to modify the appearance of the events.
+* Added `CATEGORIES` and `COLOR` to the event properties that are masked by the `maskinfo` parameter.
+* Changed color of spinner animation on AJAX loading to gray for optimal visibility on both light and dark backgrounds.
+* Removed empty jQuery function for `r34ics_init_end` event.
+
+= 11.5.16.1 - 2025.09.04 =
 
 * Admin settings:
-  * Added deprecation notice to "Use legacy feed request method" option.
-  * Removed "Permanent feed URL mask IDs" option from page removed associated logic. Feed URL mask IDs are now always permanent.
-* Bug fix: Removed code that was causing the **Clear Cached Calendar Data** utility to exit early if the "Permanent feed URL mask IDs" option was turned off (default). This issue may have been preventing some calendars from updating.
+  * Added deprecation notice to **Use legacy feed request method** option.
+  * Removed **Permanent feed URL mask IDs** option and associated logic. Feed URL mask IDs are now always permanent.
+* Bug fix: Removed code related to the now-removed **Permanent feed URL mask IDs** option, that was causing the **Clear Cached Calendar Data** utility to exit early if that option was turned off (default). This issue may have been preventing some calendars from updating.
 * Miscellaneous: Admin CSS tweaks.
 * i18n: Updated translation strings.
 

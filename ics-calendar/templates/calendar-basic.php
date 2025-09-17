@@ -202,6 +202,7 @@ else {
 										<li class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); ?>" data-dow="<?php echo esc_attr($dow); ?>" data-wknum="<?php echo esc_attr($wknum); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 											if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 											if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
+											if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
 											if (isset($p_i)) { echo ' data-p-i="' . intval($p_i) . '"'; }
 										?>>
 											<<?php echo esc_attr($args['htmltagdate']); ?> class="date<?php if (!empty($event['multiday'])) { echo ' multiday'; } ?>"><?php echo wp_kses_post($day_label ?: ''); ?></<?php echo esc_attr($args['htmltagdate']); ?>>
