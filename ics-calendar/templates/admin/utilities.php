@@ -14,7 +14,32 @@
 			wp_nonce_field('r34ics', 'r34ics-purge-calendar-transients-nonce');
 			?>
 			<p><input type="submit" class="button button-primary" value="<?php esc_attr_e('Clear Cached Calendar Data', 'ics-calendar'); ?>" /></p>
+			<p>
+				<?php
+				/* translators: 1: Plugin name (do not modify) */
+				$confirm = sprintf(esc_attr__('Are you sure? This will reset all %1$s settings to their defaults. Your saved calendar configurations and shortcodes will be retained, but resetting the defaults may change the appearance of your calendars. If you are using a third-party caching plugin, you may need to clear your site-wide cache after running this utility.', 'ics-calendar'), 'ICS Calendar');
+				?>
+				<label><strong>
+					<input type="checkbox" name="reset_all" onclick="if (jQuery(this).prop('checked') == true) { if (!confirm('<?php echo esc_attr($confirm); ?>')) { jQuery(this).prop('checked', false); } }" />
+					<?php
+					/* translators: 1: Plugin name (do not modify) */
+					printf(esc_html__('Also reset all %1$s settings', 'ics-calendar'), 'ICS Calendar');
+					?>
+				</strong></label>
+			</p>
 			<p><?php esc_html_e('This will immediately clear all existing cached calendar data (purge transients), forcing WordPress to reload all calendars the next time they are viewed. Caching will then resume as before.', 'ics-calendar'); ?></p>
+			
+			<p><em>
+				<?php
+				esc_html_e('Last cleared:', 'ics-calendar');
+				if ($r34ics_refreshed = get_option('r34ics_refreshed')) {
+					echo ' ' . wp_kses_post(wp_date(get_option('date_format') . ' ' . get_option('time_format'), $r34ics_refreshed));
+				}
+				else {
+					esc_html_e('never', 'ics-calendar');
+				}
+				?> 
+			</em></p>
 		</form>
 	
 	</div>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-04 10:00-0500\n"
-"PO-Revision-Date: 2025-09-04 10:00-0500\n"
+"POT-Creation-Date: 2025-09-18 15:13-0500\n"
+"PO-Revision-Date: 2025-09-18 15:13-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -55,7 +55,7 @@ msgstr ""
 msgid "Utilities"
 msgstr "Opties"
 
-#: class-r34ics.php:350 class-r34ics.php:2144 templates/admin/admin.php:64
+#: class-r34ics.php:350 class-r34ics.php:2155 templates/admin/admin.php:64
 #: templates/admin/admin.php:80
 msgid "Settings"
 msgstr "Instellingen"
@@ -91,36 +91,36 @@ msgstr ""
 "af te bakenen, in plaats daarvan probeer het pip-eteken te gebruiken. "
 "Getroffen URL:"
 
-#: class-r34ics.php:1094
+#: class-r34ics.php:1097
 msgid "Hide past events"
 msgstr "Verberg verlopen evenementen"
 
-#: class-r34ics.php:1095 templates/calendar-month.php:83
+#: class-r34ics.php:1098 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "Toon oudere evenementen"
 
-#: class-r34ics.php:1176
+#: class-r34ics.php:1179
 msgid "Contact:"
 msgstr "Contact:"
 
-#: class-r34ics.php:1182
+#: class-r34ics.php:1185
 msgid "Resources:"
 msgstr "Middelen:"
 
-#: class-r34ics.php:1192
+#: class-r34ics.php:1195
 msgid "Click for more..."
 msgstr "Klik voor meer..."
 
-#: class-r34ics.php:1226
+#: class-r34ics.php:1229
 msgid "Save to your calendar"
 msgstr "Opslaan in uw kalender"
 
-#: class-r34ics.php:1329
+#: class-r34ics.php:1332
 msgid "Cancelled"
 msgstr "Geannuleerd"
 
-#: class-r34ics.php:1442
+#: class-r34ics.php:1445
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -128,7 +128,7 @@ msgstr ""
 "De legacy parser optie is verouderd en zal in een toekomstige update worden "
 "verwijderd."
 
-#: class-r34ics.php:1738
+#: class-r34ics.php:1741
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -136,7 +136,7 @@ msgstr ""
 "Het shortcode attribuut \"currentweek\" is afgeschaft. Gebruik in plaats "
 "daarvan view=\"week\" in uw shortcode."
 
-#: class-r34ics.php:1742
+#: class-r34ics.php:1745
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -145,19 +145,25 @@ msgstr ""
 "daarvan legendstyle=\"inline\" in uw shortcode."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2066
+#: class-r34ics.php:2069
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Gewist %1$s %2$s transiënt(en)."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2074
+#: class-r34ics.php:2077
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Er zijn geen %1$s-transiënten gevonden."
 
+#. translators: 1: Plugin name (do not translate)
+#: class-r34ics.php:2085
+#, php-format
+msgid "All %1$s settings have been reset to defaults."
+msgstr "Alle %1$s-instellingen zijn teruggezet naar de standaardwaarden."
+
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2144
+#: class-r34ics.php:2155
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -166,12 +172,12 @@ msgstr ""
 "De URL van je feed lijkt HTTP Basic Authentication-gegevens te bevatten. "
 "Probeer de optie %1$s onder het tabblad %2$s hierboven uit te schakelen."
 
-#: class-r34ics.php:2144 templates/admin/settings.php:70
+#: class-r34ics.php:2155 templates/admin/settings.php:70
 msgid "Use legacy feed request method"
 msgstr "Gebruik de oude feed-verzoekmethode"
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2151
+#: class-r34ics.php:2162
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -188,18 +194,18 @@ msgstr ""
 "over het verkrijgen van de juiste dynamische feed URL."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2158
+#: class-r34ics.php:2169
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Fout: Kan IP-adres voor %1$s niet oplossen."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2162
+#: class-r34ics.php:2173
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Opgelost IP-adres voor %1$s:"
 
-#: class-r34ics.php:2209
+#: class-r34ics.php:2220
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -208,7 +214,7 @@ msgstr ""
 "geldige shortcode en is niet opgeslagen."
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2250
+#: class-r34ics.php:2261
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -217,11 +223,11 @@ msgstr ""
 "%1$sInstellingen bijgewerkt.%2$s Mogelijk moet u de pagina vernieuwen om "
 "enkele wijzigingen te zien."
 
-#: class-r34ics.php:2516
+#: class-r34ics.php:2527
 msgid "calendar event"
 msgstr "kalender evenement"
 
-#: class-r34ics.php:2853
+#: class-r34ics.php:2864
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -235,52 +241,52 @@ msgstr ""
 msgid "Map"
 msgstr "Kaart"
 
-#: functions.php:1231
+#: functions.php:1257
 msgid "Recurring event"
 msgstr "Terugkerende evenement"
 
 #. translators: 1. Dynamic value
-#: functions.php:1237
+#: functions.php:1263
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Komt elke %1$s jaar terug"
 
-#: functions.php:1237
+#: functions.php:1263
 msgid "Recurs yearly"
 msgstr "Herhaalt zich jaarlijks"
 
 #. translators: 1. Dynamic value
-#: functions.php:1241
+#: functions.php:1267
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Komt elke %1$s maanden terug"
 
-#: functions.php:1241
+#: functions.php:1267
 msgid "Recurs monthly"
 msgstr "Herhaalt zich maandelijks"
 
 #. translators: 1. Dynamic value
-#: functions.php:1245
+#: functions.php:1271
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Komt elke %1$s weken terug"
 
-#: functions.php:1245
+#: functions.php:1271
 msgid "Recurs weekly"
 msgstr "Herhaalt zich wekelijks"
 
 #. translators: 1. Dynamic value
-#: functions.php:1249
+#: functions.php:1275
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Komt elke %1$s dagen terug"
 
-#: functions.php:1249
+#: functions.php:1275
 msgid "Recurs daily"
 msgstr "Herhaalt zich dagelijks"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1396
+#: functions.php:1422
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -293,7 +299,7 @@ msgstr ""
 "daardoor mogelijk niet goed weergegeven. Verwijder de klikbare link in de "
 "shortcode."
 
-#: functions.php:1744
+#: functions.php:1770
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "De functie r34ics_url_get_contents() wordt niet langer ondersteund."
 
@@ -551,11 +557,11 @@ msgstr "Ga PRO!"
 msgid "Getting Started"
 msgstr "Aan de slag"
 
-#: templates/admin/admin.php:69 templates/admin/utilities.php:105
+#: templates/admin/admin.php:69 templates/admin/utilities.php:130
 msgid "System Report"
 msgstr "Systeemrapport"
 
-#: templates/admin/admin.php:89
+#: templates/admin/admin.php:90
 msgid "Save Changes"
 msgstr "Wijzigingen opslaan"
 
@@ -914,7 +920,30 @@ msgstr "%1$s Data Cache"
 msgid "Clear Cached Calendar Data"
 msgstr "Kalendergegevens in cache wissen"
 
-#: templates/admin/utilities.php:17
+#. translators: 1: Plugin name (do not modify)
+#: templates/admin/utilities.php:20
+#, php-format
+msgid ""
+"Are you sure? This will reset all %1$s settings to their defaults. Your "
+"saved calendar configurations and shortcodes will be retained, but resetting "
+"the defaults may change the appearance of your calendars. If you are using a "
+"third-party caching plugin, you may need to clear your site-wide cache after "
+"running this utility."
+msgstr ""
+"Weet u het zeker? Hiermee worden alle %1$s-instellingen teruggezet naar de "
+"standaardwaarden. Uw opgeslagen kalenderconfiguraties en shortcodes blijven "
+"behouden, maar het resetten van de standaardinstellingen kan het uiterlijk "
+"van uw kalenders veranderen. Als u een caching-plugin van derden gebruikt, "
+"moet u mogelijk uw site-cache wissen nadat u dit hulpprogramma hebt "
+"uitgevoerd."
+
+#. translators: 1: Plugin name (do not modify)
+#: templates/admin/utilities.php:26
+#, php-format
+msgid "Also reset all %1$s settings"
+msgstr "Reset ook alle %1$s instellingen"
+
+#: templates/admin/utilities.php:30
 msgid ""
 "This will immediately clear all existing cached calendar data (purge "
 "transients), forcing WordPress to reload all calendars the next time they "
@@ -924,11 +953,19 @@ msgstr ""
 "waardoor WordPress wordt gedwongen om alle kalenders opnieuw te laden de "
 "volgende keer dat ze worden bekeken. Caching wordt dan hervat zoals voorheen."
 
-#: templates/admin/utilities.php:24
+#: templates/admin/utilities.php:34
+msgid "Last cleared:"
+msgstr "Laatst gewist:"
+
+#: templates/admin/utilities.php:39
+msgid "never"
+msgstr "nooit"
+
+#: templates/admin/utilities.php:49
 msgid "ICS Feed URL Tester"
 msgstr "URL-tester van ICS-feed"
 
-#: templates/admin/utilities.php:26
+#: templates/admin/utilities.php:51
 msgid ""
 "If you are concerned that the plugin is not properly retrieving your feed, "
 "you can test the URL here."
@@ -936,43 +973,43 @@ msgstr ""
 "Als je je zorgen maakt dat de plugin je feed niet goed ophaalt, kun je de "
 "URL hier testen."
 
-#: templates/admin/utilities.php:33
+#: templates/admin/utilities.php:58
 msgid "Enter feed URL..."
 msgstr "Voer de feed-URL in..."
 
-#: templates/admin/utilities.php:33
+#: templates/admin/utilities.php:58
 msgid "Test URL"
 msgstr "Test URL"
 
-#: templates/admin/utilities.php:41
+#: templates/admin/utilities.php:66
 msgid "Results:"
 msgstr "Resultaten:"
 
 #. translators: 1: Dynamic value
-#: templates/admin/utilities.php:48
+#: templates/admin/utilities.php:73
 #, php-format
 msgid "%1$s received."
 msgstr "%1$s ontvangen."
 
-#: templates/admin/utilities.php:57
+#: templates/admin/utilities.php:82
 msgid "This appears to be a valid ICS feed URL."
 msgstr "Dit lijkt een geldige ICS-feed URL te zijn."
 
-#: templates/admin/utilities.php:62
+#: templates/admin/utilities.php:87
 msgid "This does not appear to be a valid ICS feed URL."
 msgstr "Dit lijkt geen geldige ICS feed URL te zijn."
 
-#: templates/admin/utilities.php:67
+#: templates/admin/utilities.php:92
 msgid "Could not retrieve data from the requested URL."
 msgstr "Kan geen gegevens ophalen van de gevraagde URL."
 
-#: templates/admin/utilities.php:72
+#: templates/admin/utilities.php:97
 msgid ""
 "An unknown error occurred while attempting to retrieve the requested URL."
 msgstr ""
 "Er is een onbekende fout opgetreden tijdens het ophalen van de gevraagde URL."
 
-#: templates/admin/utilities.php:107
+#: templates/admin/utilities.php:132
 msgid ""
 "Please copy the following text and include it in your message when emailing "
 "support."
@@ -981,7 +1018,7 @@ msgstr ""
 "ondersteuning e-mailt."
 
 #. translators: 1: Plugin name (do not translate)
-#: templates/admin/utilities.php:110
+#: templates/admin/utilities.php:135
 #, php-format
 msgid ""
 "Also please include the %1$s shortcode exactly as you have it entered on the "
@@ -990,7 +1027,7 @@ msgstr ""
 "Vermeld ook de %1$s shortcode precies zoals u die op de betreffende pagina "
 "hebt ingevoerd."
 
-#: templates/admin/utilities.php:111
+#: templates/admin/utilities.php:136
 msgid ""
 "For your site security please do NOT post the System Report in the support "
 "forums."
@@ -1010,8 +1047,8 @@ msgstr "Vorige pagina"
 msgid "Next Page"
 msgstr "Volgende pagina"
 
-#: templates/calendar-list.php:285 templates/calendar-month.php:201
-#: templates/calendar-week.php:210
+#: templates/calendar-list.php:287 templates/calendar-month.php:202
+#: templates/calendar-week.php:211
 msgid "All Day"
 msgstr "Hele dag"
 
@@ -1019,11 +1056,11 @@ msgstr "Hele dag"
 msgid "Today"
 msgstr "Vandaag"
 
-#: templates/calendar-month.php:284 templates/calendar-week.php:296
+#: templates/calendar-month.php:286 templates/calendar-week.php:298
 msgid "No events."
 msgstr "Geen evenementen."
 
-#: templates/calendar-month.php:296
+#: templates/calendar-month.php:298
 msgid "No additional events this month."
 msgstr "Geen extra evenementen deze maand."
 

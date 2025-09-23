@@ -1186,18 +1186,44 @@ function r34ics_organizer_format($organizer='') {
 
 
 // Purge all of this plugin's transient calendar data (does not affect any of the plugin's other transients)
-function r34ics_purge_calendar_transients() {
+function r34ics_purge_calendar_transients($reset_all=false) {
+	// Only allow this function to run from admin
+	if (!is_admin()) { return; }
+
 	global $wpdb;
 
-	// Hook in external actions (e.g. for purging ICS Calendar Pro data)
+	// Hook in external actions
 	do_action('r34ics_purge_calendar_transients');
 	
 	// Now we purge the plugin's transients and return the results of the query
 	// We do this with a custom SQL query because it's a lot simpler!
 	// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery
 	// phpcs:disable WordPress.DB.DirectDatabaseQuery.NoCaching
-	return $wpdb->query($wpdb->prepare("DELETE FROM `" . $wpdb->options . "` WHERE `option_name` LIKE %s AND `option_name` LIKE %s", '%\_transient\_%', '%R34ICS%'));
+	$status = $wpdb->query($wpdb->prepare("DELETE FROM `" . $wpdb->options . "` WHERE `option_name` LIKE %s AND `option_name` LIKE %s", '%\_transient\_%', '%R34ICS%'));
 	// phpcs:enable
+
+	// Reset ALL settings (requires potentially redundant nonce check as this can ONLY be run manually from the Utilities page)
+	if ($reset_all && (isset($_POST['r34ics-purge-calendar-transients-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-purge-calendar-transients-nonce'])), 'r34ics'))) {
+		$alloptions = wp_load_alloptions();
+		// Options we should retain even when purging the rest
+		$exclusions = array(
+			'r34ics_previous_version',
+			'r34ics_use_new_defaults_10_6',
+			'r34ics_version',
+		);
+		foreach (array_keys((array)$alloptions) as $option) {
+			if (!in_array($option, $exclusions) && stripos($option, 'r34ics_') === 0) { delete_option($option); }
+		}
+		// Reset non-empty default values
+		update_option('r34ics_use_new_defaults_10_6', true);
+	}
+	
+	// Remember when we did this and force reload of options for current Settings page
+	update_option('r34ics_refreshed', time());
+	wp_load_alloptions(true);
+	
+	// Return status (count) for admin notice
+	return $status;
 }
 
 

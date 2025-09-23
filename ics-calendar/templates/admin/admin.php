@@ -86,7 +86,9 @@ function r34ics_getting_started_go_pro_html() {
 							include_once(plugin_dir_path(__FILE__) . 'settings.php');
 							?>
 	
-							<p><input type="submit" class="button button-primary" value="<?php esc_attr_e('Save Changes', 'ics-calendar'); ?>" /></p>
+							<footer class="r34ics-admin-sticky-footer" style="position: sticky; bottom: 0; z-index: 10;">
+								<input type="submit" class="button button-primary" value="<?php esc_attr_e('Save Changes', 'ics-calendar'); ?>" />
+							</footer>
 						</form>
 	
 					</div>

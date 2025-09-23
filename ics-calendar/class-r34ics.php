@@ -2062,7 +2062,7 @@ if (!class_exists('R34ICS')) {
 			}
 
 			if (isset($_POST['r34ics-purge-calendar-transients-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-purge-calendar-transients-nonce'])), 'r34ics')) {
-				$cleared = r34ics_purge_calendar_transients();
+				$cleared = r34ics_purge_calendar_transients(!empty($_POST['reset_all']));
 				if ($cleared > 0) {
 					$r34ics_deferred_admin_notices['r34ics_purge_transients'] = array(
 						/* translators: 1: Plugin name (do not translate) */
@@ -2076,6 +2076,14 @@ if (!class_exists('R34ICS')) {
 						/* translators: 1: Plugin name (do not translate) */
 						'content' => '<p>' . sprintf(esc_html__('No %1$s transients were found.', 'ics-calendar'), 'ICS Calendar') . '</p>',
 						'status' => 'info',
+						'dismissible' => false,
+					);
+				}
+				if (!empty($_POST['reset_all'])) {
+					$r34ics_deferred_admin_notices['r34ics_settings_reset_all'] = array(
+						/* translators: 1: Plugin name (do not translate) */
+						'content' => '<p>' . sprintf(esc_html__('All %1$s settings have been reset to defaults.', 'ics-calendar'), 'ICS Calendar') . '</p>',
+						'status' => 'success',
 						'dismissible' => false,
 					);
 				}
@@ -2814,6 +2822,7 @@ if (!class_exists('R34ICS')) {
 			// Are we returning the full response array? (Admin troubleshooting only)
 			if (is_admin() && !empty($response_array)) {
 				// We only want to allow this to run for the URL tester
+				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace
 				$caller = @debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,2)[1]['function'];
 				if ($caller == '_admin_page_callback_url_tester') {
 					return array(

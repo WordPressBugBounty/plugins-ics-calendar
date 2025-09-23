@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-04 10:01-0500\n"
-"PO-Revision-Date: 2025-09-04 10:01-0500\n"
+"POT-Creation-Date: 2025-09-18 15:14-0500\n"
+"PO-Revision-Date: 2025-09-18 15:14-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: hu_HU\n"
@@ -55,7 +55,7 @@ msgstr ""
 msgid "Utilities"
 msgstr "Segédprogramok"
 
-#: class-r34ics.php:350 class-r34ics.php:2144 templates/admin/admin.php:64
+#: class-r34ics.php:350 class-r34ics.php:2155 templates/admin/admin.php:64
 #: templates/admin/admin.php:80
 msgid "Settings"
 msgstr "Beállítások"
@@ -91,36 +91,36 @@ msgstr ""
 "elhatárolódására, akkor érdemes lehet inkább a csőkaraktert használni. "
 "Érintett URL:Affected URL:"
 
-#: class-r34ics.php:1094
+#: class-r34ics.php:1097
 msgid "Hide past events"
 msgstr "Múltbeli események elrejtése"
 
-#: class-r34ics.php:1095 templates/calendar-month.php:83
+#: class-r34ics.php:1098 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "Elmúlt események megjelenítése"
 
-#: class-r34ics.php:1176
+#: class-r34ics.php:1179
 msgid "Contact:"
 msgstr "Kapcsolat:"
 
-#: class-r34ics.php:1182
+#: class-r34ics.php:1185
 msgid "Resources:"
 msgstr "Források:"
 
-#: class-r34ics.php:1192
+#: class-r34ics.php:1195
 msgid "Click for more..."
 msgstr "Kattintson a további ..."
 
-#: class-r34ics.php:1226
+#: class-r34ics.php:1229
 msgid "Save to your calendar"
 msgstr "Mentés a naptárba"
 
-#: class-r34ics.php:1329
+#: class-r34ics.php:1332
 msgid "Cancelled"
 msgstr "Törölve"
 
-#: class-r34ics.php:1442
+#: class-r34ics.php:1445
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -128,7 +128,7 @@ msgstr ""
 "A régi elemző opció elavult, és egy jövőbeli frissítéssel eltávolításra "
 "kerül."
 
-#: class-r34ics.php:1738
+#: class-r34ics.php:1741
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -136,7 +136,7 @@ msgstr ""
 "A \"currentweek\" shortcode attribútum elavult. Kérjük, használja a "
 "view=\"week\" elemet a rövid kódjában."
 
-#: class-r34ics.php:1742
+#: class-r34ics.php:1745
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -145,19 +145,25 @@ msgstr ""
 "legendstyle=\"inline\" attribútumot a rövidkódban."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2066
+#: class-r34ics.php:2069
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Törölt %1$s %2$s tranziens(ek)."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2074
+#: class-r34ics.php:2077
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nem találtunk %1$s tranzienseket."
 
+#. translators: 1: Plugin name (do not translate)
+#: class-r34ics.php:2085
+#, php-format
+msgid "All %1$s settings have been reset to defaults."
+msgstr "Minden %1$s beállítás visszaállt az alapértelmezett értékre."
+
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2144
+#: class-r34ics.php:2155
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -166,12 +172,12 @@ msgstr ""
 "Úgy tűnik, hogy a táp URL-címe HTTP Basic Authentication hitelesítő adatokat "
 "tartalmaz. Próbálja meg kikapcsolni a %1$s opciót a fenti %2$s fül alatt."
 
-#: class-r34ics.php:2144 templates/admin/settings.php:70
+#: class-r34ics.php:2155 templates/admin/settings.php:70
 msgid "Use legacy feed request method"
 msgstr "Hagyományos takarmánykérési módszer használata"
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2151
+#: class-r34ics.php:2162
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -187,18 +193,18 @@ msgstr ""
 "utasításokat lásd a %4$sFelhasználói útmutatóban%5$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2158
+#: class-r34ics.php:2169
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Hiba: %1$s IP-címét nem sikerült feloldani."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2162
+#: class-r34ics.php:2173
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Megoldott IP-cím a %1$s számára:"
 
-#: class-r34ics.php:2209
+#: class-r34ics.php:2220
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -207,7 +213,7 @@ msgstr ""
 "és nem lett elmentve."
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2250
+#: class-r34ics.php:2261
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -216,11 +222,11 @@ msgstr ""
 "%1$sBeállítások frissítve.%2$s Lehet, hogy frissítenie kell az oldalt, hogy "
 "lássa a változásokat."
 
-#: class-r34ics.php:2516
+#: class-r34ics.php:2527
 msgid "calendar event"
 msgstr "naptári esemény"
 
-#: class-r34ics.php:2853
+#: class-r34ics.php:2864
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -234,52 +240,52 @@ msgstr ""
 msgid "Map"
 msgstr "Bản đồ"
 
-#: functions.php:1231
+#: functions.php:1257
 msgid "Recurring event"
 msgstr "Ismétlődő esemény"
 
 #. translators: 1. Dynamic value
-#: functions.php:1237
+#: functions.php:1263
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Minden %1$s évben ismétlődik"
 
-#: functions.php:1237
+#: functions.php:1263
 msgid "Recurs yearly"
 msgstr "Évente ismétlődik"
 
 #. translators: 1. Dynamic value
-#: functions.php:1241
+#: functions.php:1267
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Minden %1$s hónapban ismétlődik"
 
-#: functions.php:1241
+#: functions.php:1267
 msgid "Recurs monthly"
 msgstr "Havonta ismétlődik"
 
 #. translators: 1. Dynamic value
-#: functions.php:1245
+#: functions.php:1271
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Minden %1$s héten ismétlődik"
 
-#: functions.php:1245
+#: functions.php:1271
 msgid "Recurs weekly"
 msgstr "Hetente ismétlődik"
 
 #. translators: 1. Dynamic value
-#: functions.php:1249
+#: functions.php:1275
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Minden %1$s nap ismétlődik"
 
-#: functions.php:1249
+#: functions.php:1275
 msgid "Recurs daily"
 msgstr "Naponta ismétlődik"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1396
+#: functions.php:1422
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -292,7 +298,7 @@ msgstr ""
 "Ennek következtében előfordulhat, hogy a naptárad nem jelenik meg "
 "megfelelően. Kérjük, távolítsa el a kattintható linket a rövidkódból."
 
-#: functions.php:1744
+#: functions.php:1770
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Az r34ics_url_get_contents() függvény már nem támogatott."
 
@@ -550,11 +556,11 @@ msgstr "Menj PRO!"
 msgid "Getting Started"
 msgstr "Kezdjük el"
 
-#: templates/admin/admin.php:69 templates/admin/utilities.php:105
+#: templates/admin/admin.php:69 templates/admin/utilities.php:130
 msgid "System Report"
 msgstr "Rendszerjelentés"
 
-#: templates/admin/admin.php:89
+#: templates/admin/admin.php:90
 msgid "Save Changes"
 msgstr "Módosítások mentése"
 
@@ -912,7 +918,30 @@ msgstr "%1$s Adat gyorsítótár"
 msgid "Clear Cached Calendar Data"
 msgstr "Gyorsítótárazott naptáradatok törlése"
 
-#: templates/admin/utilities.php:17
+#. translators: 1: Plugin name (do not modify)
+#: templates/admin/utilities.php:20
+#, php-format
+msgid ""
+"Are you sure? This will reset all %1$s settings to their defaults. Your "
+"saved calendar configurations and shortcodes will be retained, but resetting "
+"the defaults may change the appearance of your calendars. If you are using a "
+"third-party caching plugin, you may need to clear your site-wide cache after "
+"running this utility."
+msgstr ""
+"Biztos vagy benne? Ez visszaállítja az összes %1$s beállítást az "
+"alapértelmezettre. Az elmentett naptárkonfigurációk és rövidkódok "
+"megmaradnak, de az alapértelmezett beállítások visszaállítása "
+"megváltoztathatja a naptárak megjelenését. Ha harmadik féltől származó "
+"gyorsítótárazási bővítményt használ, előfordulhat, hogy a segédprogram "
+"futtatása után törölnie kell az egész webhelyre kiterjedő gyorsítótárat."
+
+#. translators: 1: Plugin name (do not modify)
+#: templates/admin/utilities.php:26
+#, php-format
+msgid "Also reset all %1$s settings"
+msgstr "Az összes %1$s beállítás visszaállítása is"
+
+#: templates/admin/utilities.php:30
 msgid ""
 "This will immediately clear all existing cached calendar data (purge "
 "transients), forcing WordPress to reload all calendars the next time they "
@@ -923,11 +952,19 @@ msgstr ""
 "megtekintéskor töltse újra az összes naptárat. A caching ezután folytatódik, "
 "mint korábban."
 
-#: templates/admin/utilities.php:24
+#: templates/admin/utilities.php:34
+msgid "Last cleared:"
+msgstr "Utoljára tisztázva:"
+
+#: templates/admin/utilities.php:39
+msgid "never"
+msgstr "soha"
+
+#: templates/admin/utilities.php:49
 msgid "ICS Feed URL Tester"
 msgstr "ICS-hírcsatorna URL-tesztelője"
 
-#: templates/admin/utilities.php:26
+#: templates/admin/utilities.php:51
 msgid ""
 "If you are concerned that the plugin is not properly retrieving your feed, "
 "you can test the URL here."
@@ -935,42 +972,42 @@ msgstr ""
 "Ha aggódik, hogy a plugin nem megfelelően kéri le a feedjét, itt tesztelheti "
 "az URL-t."
 
-#: templates/admin/utilities.php:33
+#: templates/admin/utilities.php:58
 msgid "Enter feed URL..."
 msgstr "Adja meg a hírcsatorna URL-címét..."
 
-#: templates/admin/utilities.php:33
+#: templates/admin/utilities.php:58
 msgid "Test URL"
 msgstr "Teszt URL-címe"
 
-#: templates/admin/utilities.php:41
+#: templates/admin/utilities.php:66
 msgid "Results:"
 msgstr "Eredmények:"
 
 #. translators: 1: Dynamic value
-#: templates/admin/utilities.php:48
+#: templates/admin/utilities.php:73
 #, php-format
 msgid "%1$s received."
 msgstr "%1$s érkezett."
 
-#: templates/admin/utilities.php:57
+#: templates/admin/utilities.php:82
 msgid "This appears to be a valid ICS feed URL."
 msgstr "Úgy tűnik, hogy ez egy érvényes ICS feed URL."
 
-#: templates/admin/utilities.php:62
+#: templates/admin/utilities.php:87
 msgid "This does not appear to be a valid ICS feed URL."
 msgstr "Úgy tűnik, hogy ez nem egy érvényes ICS feed URL."
 
-#: templates/admin/utilities.php:67
+#: templates/admin/utilities.php:92
 msgid "Could not retrieve data from the requested URL."
 msgstr "Nem lehetett adatokat lekérni a kért URL-címről."
 
-#: templates/admin/utilities.php:72
+#: templates/admin/utilities.php:97
 msgid ""
 "An unknown error occurred while attempting to retrieve the requested URL."
 msgstr "Ismeretlen hiba történt a kért URL lekérése közben."
 
-#: templates/admin/utilities.php:107
+#: templates/admin/utilities.php:132
 msgid ""
 "Please copy the following text and include it in your message when emailing "
 "support."
@@ -979,7 +1016,7 @@ msgstr ""
 "mailt küld a támogatásnak."
 
 #. translators: 1: Plugin name (do not translate)
-#: templates/admin/utilities.php:110
+#: templates/admin/utilities.php:135
 #, php-format
 msgid ""
 "Also please include the %1$s shortcode exactly as you have it entered on the "
@@ -988,7 +1025,7 @@ msgstr ""
 "Kérjük, hogy a %1$s rövidkódot is pontosan úgy adja meg, ahogyan azt az "
 "érintett oldalon beírta."
 
-#: templates/admin/utilities.php:111
+#: templates/admin/utilities.php:136
 msgid ""
 "For your site security please do NOT post the System Report in the support "
 "forums."
@@ -1008,8 +1045,8 @@ msgstr "Előző oldal"
 msgid "Next Page"
 msgstr "Következő oldal"
 
-#: templates/calendar-list.php:285 templates/calendar-month.php:201
-#: templates/calendar-week.php:210
+#: templates/calendar-list.php:287 templates/calendar-month.php:202
+#: templates/calendar-week.php:211
 msgid "All Day"
 msgstr "Egész nap"
 
@@ -1017,11 +1054,11 @@ msgstr "Egész nap"
 msgid "Today"
 msgstr "Ma"
 
-#: templates/calendar-month.php:284 templates/calendar-week.php:296
+#: templates/calendar-month.php:286 templates/calendar-week.php:298
 msgid "No events."
 msgstr "Nincsenek események."
 
-#: templates/calendar-month.php:296
+#: templates/calendar-month.php:298
 msgid "No additional events this month."
 msgstr "Ebben a hónapban nincs további esemény."
 

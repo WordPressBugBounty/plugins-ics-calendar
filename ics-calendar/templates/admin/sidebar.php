@@ -47,7 +47,8 @@
 
 	<a href="https://room34.com/" target="_blank"><img src="<?php echo esc_url(plugins_url('assets/room34-logo-on-white.svg', dirname(dirname(__FILE__)))); ?>" alt="Room 34 Creative Services" style="display: block; height: auto; margin: 1.5em auto; width: 180px;" width="180" height="55" /></a> 
 			
-	<p style="text-align: center;">ICS Calendar v. <?php echo esc_html(get_option('r34ics_version')); ?></p>
+	<p style="text-align: center;">ICS Calendar v. <?php echo esc_html(get_option('r34ics_version')); ?><br />
+	&copy; <?php echo intval(wp_date('Y')); ?> Room 34 Creative Services, LLC</p>
 
 </div></div>
 
