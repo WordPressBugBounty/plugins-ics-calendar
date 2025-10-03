@@ -141,7 +141,7 @@ if (!class_exists('R34ICS')) {
 		);
 		
 		protected $shortcode_defaults_new_10_6 = array(
-			'count' => array('list' => 5, 'default' => 0),
+			'count' => array('list' => 5, 'default' => 0), // @todo Set a value for 'basic'
 			'description' => false,
 			'eventdesc' => true,
 			'htmltagdate' => array('basic' => 'div', 'default' => 'h4'),

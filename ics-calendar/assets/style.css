@@ -143,7 +143,9 @@
 	{ border-left-color: transparent !important; margin-left: -1px !important; }
 	
 	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td:not(:first-child):not(.d_01) .multiday_middle > *:not(.descloc),
-	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td:not(:first-child):not(.d_01) .multiday_last > *:not(.descloc)
+	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td:not(:first-child):not(.d_01) .multiday_last > *:not(.descloc),
+	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td:not(:first-child):not(.d_01) .multiday_middle > *:not(.descloc) a,
+	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td:not(:first-child):not(.d_01) .multiday_last > *:not(.descloc) a
 	{ color: transparent !important; }
 
 	.ics-calendar.r34ics_compact { font-size: 85%; }

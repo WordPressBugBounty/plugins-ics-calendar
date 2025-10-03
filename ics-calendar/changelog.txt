@@ -1,5 +1,9 @@
 === ICS Calendar Changelog ===
 
+= 11.5.17.3 - 2025.10.03 =
+
+* Fixed conflict between `combinemultiday` and `linktitles`.
+
 = 11.5.17.2 - 2025.09.23 =
 
 * Minor code tweak on admin utilities page.
