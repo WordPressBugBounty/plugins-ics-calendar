@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-18 15:15-0500\n"
-"PO-Revision-Date: 2025-09-18 15:16-0500\n"
+"POT-Creation-Date: 2026-01-07 15:23-0600\n"
+"PO-Revision-Date: 2026-01-07 15:23-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
-"Language: el_GR\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -20,21 +20,30 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:296
+#: class-r34ics.php:307
+#, php-format
+msgid ""
+"%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
+"pages. You can resume serving calendars under the %4$sUtilities%5$s tab "
+"%6$shere%7$s."
+msgstr ""
+"%1$s είναι επί του παρόντος %2$sσε παύση%3$s και δεν εμφανίζει ημερολόγια "
+"στις σελίδες του front end. Μπορείτε να συνεχίσετε την εμφάνιση ημερολογίων "
+"στην καρτέλα %4$sΒοηθητικά προγράμματα%5$s %6$sεδώ%7$s."
+
+#: class-r34ics.php:316
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
 "%2$s Because ICS Calendar is intended to run on a web server, some features "
 "may be unavailable or may not function properly."
 msgstr ""
-"%1$sΕκτελείτε το ICS Calendar σε μια εφαρμογή WordPress Playground %2$s "
-"Επειδή το ICS Calendar προορίζεται να εκτελείται σε διακομιστή ιστού, "
-"ορισμένες λειτουργίες ενδέχεται να μην είναι διαθέσιμες ή να μην λειτουργούν "
-"σωστά."
+"%1$sΧρησιμοποιείτε το ICS Calendar σε μια εφαρμογή WordPress Playground.%2$s "
+"Επειδή το ICS Calendar έχει σχεδιαστεί για να λειτουργεί σε έναν διακομιστή "
+"ιστού, ορισμένες λειτουργίες ενδέχεται να μην είναι διαθέσιμες ή να μην "
+"λειτουργούν σωστά."
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:306
+#: class-r34ics.php:325
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -44,271 +53,116 @@ msgid ""
 "display. See our %6$sdocumentation%7$s for additional information on this "
 "issue."
 msgstr ""
-"%1$sΗ τοποθεσία σας χρησιμοποιεί επί του παρόντος μια ρύθμιση χρονοζώνης με "
-"βάση τη μετατόπιση UTC.%2$s Αυτό μπορεί να προκαλέσει σφάλματα εμφάνισης της "
-"ώρας στο πρόσθετο %3$s σε τοποθεσίες που τηρούν θερινή ώρα. Παρακαλούμε "
-"%4$sαλλάξτε τη ρύθμιση της ζώνης ώρας%5$s στην πλησιέστερη στην τοποθεσία "
-"σας πόλη, στην ίδια ζώνη ώρας, για σωστή απεικόνιση της ώρας. Ανατρέξτε στην "
-"%6$s τεκμηρίωση%7$s για περισσότερες πληροφορίες σχετικά με αυτό το θέμα."
+"%1$s Ο ιστότοπός σας χρησιμοποιεί αυτήν τη στιγμή μια ρύθμιση ζώνης ώρας "
+"βάσει μετατόπισης UTC. %2$s Αυτό μπορεί να προκαλέσει σφάλματα εμφάνισης "
+"χρόνου στο πρόσθετο %3$s σε τοποθεσίες που τηρούν τη θερινή ώρα. Κάντε "
+"%4$sαλλάξτε τη ρύθμιση ζώνης ώρας%5$s στην πλησιέστερη πόλη της τοποθεσίας "
+"σας, στην ίδια ζώνη ώρας, για σωστή εμφάνιση της ώρας. Ανατρέξτε στην "
+"%6$sτεκμηριώση%7$s για περισσότερες πληροφορίες σχετικά με αυτό το ζήτημα."
 
-#: class-r34ics.php:349 templates/admin/admin.php:68
-#: templates/admin/utilities.php:3
-msgid "Utilities"
-msgstr "Παροχές"
-
-#: class-r34ics.php:350 class-r34ics.php:2155 templates/admin/admin.php:64
-#: templates/admin/admin.php:80
-msgid "Settings"
-msgstr "Ρυθμίσεις"
-
-#: class-r34ics.php:351 templates/admin/sidebar.php:9
-msgid "User Guide"
-msgstr "Οδηγός χρήσης"
-
-#: class-r34ics.php:352 templates/admin/admin.php:70
-#: templates/admin/sidebar.php:14
-msgid "Support"
-msgstr "Υποστήριξη"
-
-#: class-r34ics.php:354
-msgid "Upgrade to PRO!"
-msgstr "Αναβάθμιση σε PRO!"
-
-#: class-r34ics.php:383
-msgid "Show/hide all"
-msgstr "Εμφάνιση/απόκρυψη όλων"
-
-#: class-r34ics.php:656
-msgid ""
-"ICS file could not be retrieved or was empty. Please verify URL is correct, "
-"and check your php.ini configuration to verify either cURL or "
-"allow_url_fopen is available. If you are using spaces to delimit multiple "
-"URLs, you may also wish to try using the pipe character instead. Affected "
-"URL:"
-msgstr ""
-"Δεν ήταν δυνατή η ανάκτηση του αρχείου ICS ή ήταν κενό. Βεβαιωθείτε ότι η "
-"διεύθυνση URL είναι σωστή και ελέγξτε τη διαμόρφωση του php.ini για να "
-"επαληθεύσετε ότι είναι διαθέσιμο το cURL ή το allow_url_fopen. Εάν "
-"χρησιμοποιείτε κενά διαστήματα για να οριοθετήσετε πολλές διευθύνσεις URL, "
-"μπορείτε επίσης να δοκιμάσετε να χρησιμοποιήσετε το χαρακτήρα διοχέτευσης. "
-"Διεύθυνση URL που επηρεάζεται:"
-
-#: class-r34ics.php:1097
-msgid "Hide past events"
-msgstr "Απόκρυψη προηγούμενων συμβάντων"
-
-#: class-r34ics.php:1098 templates/calendar-month.php:83
-#: templates/calendar-week.php:76
-msgid "Show past events"
-msgstr "Εμφάνιση προηγούμενων συμβάντων"
-
-#: class-r34ics.php:1179
-msgid "Contact:"
-msgstr "Επαφή:"
-
-#: class-r34ics.php:1185
-msgid "Resources:"
-msgstr "Πόροι:"
-
-#: class-r34ics.php:1195
-msgid "Click for more..."
-msgstr "Κάντε κλικ για περισσότερα..."
-
-#: class-r34ics.php:1229
-msgid "Save to your calendar"
-msgstr "Αποθήκευση στο ημερολόγιό σας"
-
-#: class-r34ics.php:1332
-msgid "Cancelled"
-msgstr "Ακυρώθηκε"
-
-#: class-r34ics.php:1445
-msgid ""
-"The legacy parser option is deprecated and will be removed in a future "
-"update."
-msgstr ""
-"Η επιλογή legacy parser έχει ξεπεραστεί και θα καταργηθεί σε μελλοντική "
-"ενημέρωση."
-
-#: class-r34ics.php:1741
-msgid ""
-"The \"currentweek\" shortcode attribute is deprecated. Please use "
-"view=\"week\" in your shortcode instead."
-msgstr ""
-"Το χαρακτηριστικό σύντομου κώδικα \"currentweek\" υποτιμάται. Χρησιμοποιήστε "
-"την view=\"week\" στον σύντομο κώδικά σας."
-
-#: class-r34ics.php:1745
-msgid ""
-"The \"legendinline\" shortcode attribute is deprecated. Please use "
-"legendstyle=\"inline\" in your shortcode instead."
-msgstr ""
-"Το χαρακτηριστικό \"legendinline\" του σύντομου κωδικού έχει ξεπεραστεί. "
-"Παρακαλούμε χρησιμοποιήστε το legendstyle=\"inline\" στο shortcode σας."
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2069
-#, php-format
-msgid "Cleared %1$s %2$s transient(s)."
-msgstr "Εκκαθάριση %1$s %2$s μεταβατικών στοιχείων."
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2077
-#, php-format
-msgid "No %1$s transients were found."
-msgstr "Δεν βρέθηκαν μεταβατικές καταστάσεις %1$s."
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2085
-#, php-format
-msgid "All %1$s settings have been reset to defaults."
-msgstr "Όλες οι ρυθμίσεις %1$s έχουν επανέλθει στις προεπιλογές."
-
-#. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2155
+#: class-r34ics.php:337
 #, php-format
 msgid ""
-"Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
-"turning off the %1$s option under the %2$s tab above."
+"Important! Your %1$s configuration appears to be exceeding source calendar "
+"provider rate limits."
 msgstr ""
-"Η διεύθυνση URL της τροφοδοσίας σας φαίνεται να περιέχει διαπιστευτήρια HTTP "
-"Basic Authentication. Δοκιμάστε να απενεργοποιήσετε την επιλογή %1$s στην "
-"καρτέλα %2$s παραπάνω."
+"Σημαντικό! Η διαμόρφωση %1$s φαίνεται να υπερβαίνει τα όρια ταχύτητας του "
+"παρόχου του ημερολογίου προέλευσης."
 
-#: class-r34ics.php:2155 templates/admin/settings.php:70
-msgid "Use legacy feed request method"
-msgstr "Χρήση παλαιάς μεθόδου αίτησης τροφοδοσίας"
-
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2162
+#: class-r34ics.php:339
 #, php-format
 msgid ""
-"%1$sThis URL points to a file in your Media Library.%2$s While you should be "
-"able to use this URL in an %3$s shortcode, it will be a static snapshot of "
-"the calendar at the time the file was created, and will not reflect any "
-"future updates to the source calendar. Please see our %4$sUser Guide%5$s for "
-"instructions on obtaining your correct dynamic feed URL."
+"If your calendars are not loading properly, please review your %1$s settings "
+"and usage:"
 msgstr ""
-"%1$sΑυτή η διεύθυνση URL παραπέμπει σε ένα αρχείο στη Βιβλιοθήκη πολυμέσων "
-"σας %2$s.Ενώ θα πρέπει να μπορείτε να χρησιμοποιήσετε αυτή τη διεύθυνση URL "
-"σε έναν %3$s σύντομο κώδικα, θα είναι ένα στατικό στιγμιότυπο του "
-"ημερολογίου τη στιγμή που δημιουργήθηκε το αρχείο και δεν θα αντικατοπτρίζει "
-"τυχόν μελλοντικές ενημερώσεις του ημερολογίου προέλευσης. Ανατρέξτε στον "
-"%4$sΟδηγό χρήσης%5$s για οδηγίες σχετικά με την απόκτηση της σωστής "
-"διεύθυνσης URL δυναμικής τροφοδοσίας."
+"Εάν τα ημερολόγιά σας δεν φορτώνονται σωστά, ελέγξτε τις ρυθμίσεις και τη "
+"χρήση του %1$s:"
 
-#. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2169
-#, php-format
-msgid "Error: Could not resolve IP address for %1$s."
-msgstr "Σφάλμα: %1$s."
-
-#. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2173
-#, php-format
-msgid "Resolved IP address for %1$s:"
-msgstr "Επιλυμένη διεύθυνση IP για %1$s:"
-
-#: class-r34ics.php:2220
-msgid ""
-"The text entered in the \"Default shortcode\" field is not a valid "
-"shortcode, and was not saved."
-msgstr ""
-"Το κείμενο που εισήχθη στο πεδίο \"Προεπιλεγμένος σύντομος κωδικός\" δεν "
-"είναι έγκυρος σύντομος κωδικός και δεν αποθηκεύτηκε."
-
-#. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2261
+#: class-r34ics.php:341
 #, php-format
 msgid ""
-"%1$sSettings updated.%2$s You may need to refresh the page to see some "
-"changes."
+"Do not use %1$s in your shortcodes. This feature is intended for "
+"troubleshooting only, and should not be left on permanently."
 msgstr ""
-"%1$sΟι ρυθμίσεις ενημερώθηκαν%2$s Ίσως χρειαστεί να ανανεώσετε τη σελίδα για "
-"να δείτε κάποιες αλλαγές."
+"Μην χρησιμοποιείτε το %1$s στους σύντομους κωδικούς σας. Αυτή η λειτουργία "
+"προορίζεται μόνο για την αντιμετώπιση προβλημάτων και δεν πρέπει να "
+"παραμένει ενεργοποιημένη μόνιμα."
 
-#: class-r34ics.php:2527
-msgid "calendar event"
-msgstr "ημερολογιακή εκδήλωση"
-
-#: class-r34ics.php:2864
-msgid ""
-"The legacy feed request method is deprecated, and will be removed in an "
-"update in the near future. Please test your feeds with the legacy feed "
-"request method turned off."
-msgstr ""
-"Η παλαιά μέθοδος αίτησης τροφοδοσίας έχει καταργηθεί και θα καταργηθεί με "
-"μια ενημέρωση στο εγγύς μέλλον. Παρακαλούμε δοκιμάστε τις τροφοδοσίες σας με "
-"απενεργοποιημένη τη μέθοδο αίτησης τροφοδοσίας."
-
-#: functions.php:990 functions.php:998 functions.php:1007
-msgid "Map"
-msgstr "Χάρτης"
-
-#: functions.php:1257
-msgid "Recurring event"
-msgstr "Διαχωριστικά συμβάντων"
-
-#. translators: 1. Dynamic value
-#: functions.php:1263
-#, php-format
-msgid "Recurs every %1$s years"
-msgstr "Επαναλαμβάνεται κάθε %1$s χρόνια"
-
-#: functions.php:1263
-msgid "Recurs yearly"
-msgstr "Επαναλαμβάνεται ετησίως"
-
-#. translators: 1. Dynamic value
-#: functions.php:1267
-#, php-format
-msgid "Recurs every %1$s months"
-msgstr "Επαναλαμβάνεται κάθε %1$s μήνες"
-
-#: functions.php:1267
-msgid "Recurs monthly"
-msgstr "Επαναλαμβάνεται κάθε μήνα"
-
-#. translators: 1. Dynamic value
-#: functions.php:1271
-#, php-format
-msgid "Recurs every %1$s weeks"
-msgstr "Επαναλαμβάνεται κάθε %1$s εβδομάδες"
-
-#: functions.php:1271
-msgid "Recurs weekly"
-msgstr "Επαναλαμβάνεται εβδομαδιαία"
-
-#. translators: 1. Dynamic value
-#: functions.php:1275
-#, php-format
-msgid "Recurs every %1$s days"
-msgstr "Επαναλαμβάνεται κάθε %1$s ημέρες"
-
-#: functions.php:1275
-msgid "Recurs daily"
-msgstr "Επαναλαμβάνεται καθημερινά"
-
-#. translators: 1: Plugin name (do not translate)
-#: functions.php:1422
+#: class-r34ics.php:343
 #, php-format
 msgid ""
-"The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
-"most likely your URL has been turned into a clickable link. Your calendar "
-"may not display properly as a result. Please remove the clickable link in "
-"the shortcode."
+"Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
+"%4$s43200%5$s (12 hours) or greater, to reduce the frequency of requests to "
+"the provider. (See note below.)"
 msgstr ""
-"Η ιδιότητα \"url\" στον σύντομο κωδικό %1$s φαίνεται να περιέχει ετικέτες "
-"HTML- πιθανότατα η διεύθυνση URL έχει μετατραπεί σε σύνδεσμο που μπορεί να "
-"γίνει κλικ. Το ημερολόγιό σας μπορεί να μην εμφανίζεται σωστά ως αποτέλεσμα. "
-"Παρακαλούμε αφαιρέστε τον σύνδεσμο με δυνατότητα κλικ στον σύντομο κώδικα."
+"Αυξήστε τη ρύθμιση %1$s %2$s Λήξη προσωρινής αποθήκευσης (cache) %3$s σε "
+"%4$s 43200 %5$s (12 ώρες) ή μεγαλύτερη, για να μειώσετε τη συχνότητα των "
+"αιτήσεων προς τον πάροχο. (Δείτε τη σημείωση παρακάτω.)"
 
-#: functions.php:1770
-msgid "The r34ics_url_get_contents() function is no longer supported."
-msgstr "Η συνάρτηση r34ics_url_get_contents() δεν υποστηρίζεται πλέον."
+#: class-r34ics.php:345
+#, php-format
+msgid ""
+"Avoid including a large number of feeds (10 or more) from the same provider "
+"in a single %1$s shortcode."
+msgstr ""
+"Αποφύγετε να συμπεριλάβετε μεγάλο αριθμό τροφοδοσιών (10 ή περισσότερες) από "
+"τον ίδιο πάροχο σε ένα μόνο σύντομο κωδικό %1$s."
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag 8. Additional translation string and HTML tags 9. HTML tag and plugin name (do not translate) 10. HTML tag
-#: ics-calendar.php:208
+#: class-r34ics.php:347
+#, php-format
+msgid ""
+"Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
+"Calendars%2$s utility. (24-48 hours is recommended.)"
+msgstr ""
+"Παύστε προσωρινά το ICS Calendar στις σελίδες του front-end χρησιμοποιώντας "
+"το βοηθητικό πρόγραμμα %1$sPause Calendars%2$s. (Συνιστάται για 24-48 ώρες.)"
+
+#: class-r34ics.php:349
+#, php-format
+msgid ""
+"%1$s includes built-in caching, specifically to improve performance and "
+"avoid exceeding provider rate limits. Circumventing this caching with a very "
+"low %2$sreload%3$s setting may trigger a temporary block on your web server "
+"IP address, or possibly on your entire hosting network, by the calendar "
+"provider."
+msgstr ""
+"%1$s περιλαμβάνει ενσωματωμένη προσωρινή αποθήκευση, ειδικά για τη βελτίωση "
+"της απόδοσης και την αποφυγή υπέρβασης των ορίων ταχύτητας του παρόχου. Η "
+"παράκαμψη αυτής της προσωρινής αποθήκευσης με μια πολύ χαμηλή ρύθμιση "
+"%2$sreload%3$s μπορεί να προκαλέσει προσωρινό αποκλεισμό της διεύθυνσης IP "
+"του διακομιστή ιστού σας ή, ενδεχομένως, ολόκληρου του δικτύου φιλοξενίας "
+"σας από τον πάροχο ημερολογίου."
+
+#: class-r34ics.php:351
+#, php-format
+msgid ""
+"After making the recommended changes, please allow up to 24 hours for your "
+"calendar provider to remove any temporary blocks on your IP address. If you "
+"find that the problem persists, please use our %1$ssupport request form%2$s "
+"to contact us, and be sure to include your %3$ssystem report%4$s."
+msgstr ""
+"Αφού πραγματοποιήσετε τις προτεινόμενες αλλαγές, περιμένετε έως και 24 ώρες "
+"για να αφαιρέσει ο πάροχος του ημερολογίου σας τυχόν προσωρινά μπλοκαρίσματα "
+"της διεύθυνσης IP σας. Εάν το πρόβλημα παραμένει, χρησιμοποιήστε τη "
+"%1$sφόρμα αίτησης υποστήριξης%2$s για να επικοινωνήσετε μαζί μας και "
+"φροντίστε να συμπεριλάβετε την %3$sαναφορά συστήματος%4$s."
+
+#: class-r34ics.php:353
+#, php-format
+msgid ""
+"Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
+"considering how frequently event information in your calendar is typically "
+"updated. %3$s Remember that you can use the %4$sClear Cached Calendar "
+"Data%5$s utility to manually clear the cache at any time, if needed."
+msgstr ""
+"Σημείωση: Ορίστε την %1$sΛήξη προσωρινής αποθήκευσης (cache)%2$s στο μέγιστο "
+"δυνατό μέγεθος, λαμβάνοντας υπόψη τη συχνότητα με την οποία ενημερώνονται "
+"συνήθως οι πληροφορίες εκδηλώσεων στο ημερολόγιό σας. %3$s Να θυμάστε ότι "
+"μπορείτε να χρησιμοποιήσετε το βοηθητικό πρόγραμμα %4$sΕκκαθάριση προσωρινά "
+"αποθηκευμένων δεδομένων ημερολογίου%5$s για να εκκαθαρίσετε χειροκίνητα την "
+"προσωρινή μνήμη ανά πάσα στιγμή, αν χρειαστεί."
+
+#: class-r34ics.php:374
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -318,20 +172,18 @@ msgid ""
 "post%7$s, or to switch to the new defaults, turn on the %8$s option on the "
 "%9$s settings%10$s page."
 msgstr ""
-"%1$sΠαρακαλώ σημειώστε: %2$s %3$s Η έκδοση 10.6 αλλάζει τις προεπιλεγμένες "
-"επιλογές για αρκετές ρυθμίσεις σύντομων κωδικών. Προκειμένου να διατηρηθεί η "
-"συνοχή, αυτές οι νέες προεπιλογές %4$s δεν %5$s ενεργοποιούνται κατά την "
-"αναβάθμιση από προηγούμενη έκδοση. Αν θέλετε να μάθετε περισσότερα σχετικά "
-"με τις αλλαγές, διαβάστε την %6$sανάρτηση%7$s στο ιστολόγιό μας ή για να "
-"μεταβείτε στις νέες προεπιλογές, ενεργοποιήστε την επιλογή %8$s στη σελίδα "
-"%9$s ρυθμίσεων%10$s."
+"%1$sΣημείωση:%2$s %3$s Η έκδοση 10.6 αλλάζει τις προεπιλεγμένες επιλογές για "
+"αρκετές ρυθμίσεις σύντομων κωδικών. Για λόγους συνέπειας, αυτές οι νέες "
+"προεπιλογές %4$sδεν%5$s ενεργοποιούνται κατά την αναβάθμιση από παλαιότερη "
+"έκδοση. Αν θέλετε να μάθετε περισσότερα για τις αλλαγές, διαβάστε την "
+"%6$sανάρτηση στο blog%7$s μας ή, για να μεταβείτε στις νέες προεπιλογές, "
+"ενεργοποιήστε την %8$s επιλογή στη σελίδα %9$s ρυθμίσεων%10$s."
 
-#: ics-calendar.php:208 templates/admin/settings.php:123
+#: class-r34ics.php:374 templates/admin/settings.php:183
 msgid "Use new parameter defaults (v.10.6)"
-msgstr "Χρήση νέων προεπιλογών παραμέτρων (v.10.6)"
+msgstr "Χρήση νέων προεπιλεγμένων παραμέτρων (v.10.6)"
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: ics-calendar.php:221
+#: class-r34ics.php:386
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -340,15 +192,14 @@ msgid ""
 "any new issues after upgrading to version 11 or later, please visit the "
 "%4$sWordPress Support Forums%5$s for assistance."
 msgstr ""
-"%1$sΠαρακαλώ σημειώστε: %2$s %3$s η έκδοση 11.0 βελτιώνει τον τρόπο "
-"ανάκτησης των διευθύνσεων URL της τροφοδοσίας ICS. Αυτή η αλλαγή "
-"χρησιμοποιεί μια τυπική ενσωματωμένη λειτουργία του WordPress, οπότε θα "
-"πρέπει να είναι πλήρως συμβατή με όλες τις υπάρχουσες εγκαταστάσεις. Αν "
-"αντιμετωπίσετε νέα προβλήματα μετά την αναβάθμιση στην έκδοση 11 ή νεότερη, "
-"παρακαλούμε επισκεφθείτε τα %4$sΦόρουμ υποστήριξης WordPress%5$s για βοήθεια."
+"%1$sΣημείωση:%2$s %3$s Η έκδοση 11.0 βελτιστοποιεί τον τρόπο ανάκτησης των "
+"URL τροφοδοσίας ICS. Αυτή η αλλαγή χρησιμοποιεί μια τυπική ενσωματωμένη "
+"λειτουργία του WordPress, οπότε θα πρέπει να είναι πλήρως συμβατή με όλες "
+"τις υπάρχουσες εγκαταστάσεις. Εάν αντιμετωπίσετε νέα προβλήματα μετά την "
+"αναβάθμιση στην έκδοση 11 ή μεταγενέστερη, επισκεφθείτε τα %4$sΦόρουμ "
+"υποστήριξης WordPress%5$s για βοήθεια."
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate)
-#: ics-calendar.php:234
+#: class-r34ics.php:398
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -356,222 +207,637 @@ msgid ""
 "any caching plugins you are using, to ensure that your calendars are loading "
 "properly with the new method."
 msgstr ""
-"%1$sΣημείωση: %2$s %3$s Η έκδοση 11.5.14.2 εισάγει μια νέα, πιο ασφαλή "
-"μέθοδο για το χειρισμό των παραμέτρων του ημερολογίου κατά τη φόρτωση μέσω "
-"AJAX. Παρακαλείστε να καταργήσετε τυχόν πρόσθετα προσωρινής αποθήκευσης που "
-"χρησιμοποιείτε, για να διασφαλίσετε ότι τα ημερολόγιά σας φορτώνονται σωστά "
-"με τη νέα μέθοδο."
+"%1$sΣημείωση:%2$s %3$s Η έκδοση 11.5.14.2 εισάγει μια νέα, πιο ασφαλή μέθοδο "
+"για τη διαχείριση των παραμέτρων του ημερολογίου κατά τη φόρτωση μέσω AJAX. "
+"Διαγράψτε τυχόν πρόσθετα cache που χρησιμοποιείτε, για να βεβαιωθείτε ότι τα "
+"ημερολόγιά σας φορτώνονται σωστά με τη νέα μέθοδο."
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/add-calendar-button.php:3
-#: templates/admin/add-calendar-button.php:6 templates/admin/add-calendar.php:8
+#: class-r34ics.php:411
+#, php-format
+msgid ""
+"%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
+"troubleshooting tools, plus a number of performance improvements and "
+"interface refinements throughout. Please see the %4$schangelog%5$s for more "
+"details on this update."
+msgstr ""
+"%1$sΚαλώς ήρθατε στην %2$s έκδοση 12!%3$s Η έκδοση 12.0 εισάγει επιπλέον "
+"εργαλεία αντιμετώπισης προβλημάτων, καθώς και μια σειρά βελτιώσεων στην "
+"απόδοση και στη διεπαφή. Για περισσότερες λεπτομέρειες σχετικά με αυτήν την "
+"ενημέρωση, ανατρέξτε στο %4$sαρχείο αλλαγών%5$s."
+
+#: class-r34ics.php:460 templates/admin/admin.php:24
+#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
+msgid "Getting Started"
+msgstr "Ξεκινώντας"
+
+#: class-r34ics.php:461 class-r34ics.php:2365 templates/admin/admin.php:28
+#: templates/admin/settings.php:11
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: class-r34ics.php:462 templates/admin/admin.php:29
+#: templates/admin/appearance.php:10
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#: class-r34ics.php:463 templates/admin/admin.php:33
+#: templates/admin/utilities.php:10
+msgid "Utilities"
+msgstr "Παροχές"
+
+#: class-r34ics.php:464 templates/admin/admin.php:37
+#: templates/admin/utilities.php:209 templates/admin/utilities.php:218
+msgid "System Report"
+msgstr "Αναφορά Συστήματος"
+
+#: class-r34ics.php:465 templates/admin/admin.php:41
+#: templates/admin/sidebar.php:18
+msgid "Support"
+msgstr "Υποστήριξη"
+
+#: class-r34ics.php:468
+#, php-format
+msgid "Upgrade to %1$s!"
+msgstr "Αναβάθμιση σε %1$s!"
+
+#: class-r34ics.php:498
+msgid "Show/hide all"
+msgstr "Εμφάνιση/απόκρυψη όλων"
+
+#: class-r34ics.php:770
+msgid ""
+"ICS file could not be retrieved or was empty. Please verify URL is correct, "
+"and check your php.ini configuration to verify either cURL or "
+"allow_url_fopen is available. If you are using spaces to delimit multiple "
+"URLs, you may also wish to try using the pipe character instead. Affected "
+"URL:"
+msgstr ""
+"Το αρχείο ICS δεν μπόρεσε να ανακτηθεί ή ήταν κενό. Ελέγξτε ότι η διεύθυνση "
+"URL είναι σωστή και ελέγξτε τη διαμόρφωση του αρχείου php.ini για να "
+"βεβαιωθείτε ότι είναι διαθέσιμα τα cURL ή allow_url_fopen. Εάν "
+"χρησιμοποιείτε κενά για να οριοθετήσετε πολλαπλές διευθύνσεις URL, μπορείτε "
+"επίσης να δοκιμάσετε να χρησιμοποιήσετε τον χαρακτήρα pipe. Διεύθυνση URL "
+"που επηρεάζεται:"
+
+#: class-r34ics.php:1214
+msgid "Hide past events"
+msgstr "Απόκρυψη προηγούμενων εκδηλώσεων"
+
+#: class-r34ics.php:1215 templates/calendar-month.php:96
+#: templates/calendar-week.php:87
+msgid "Show past events"
+msgstr "Εμφάνιση παρελθοντικών εκδηλώσεων"
+
+#: class-r34ics.php:1296
+msgid "Contact:"
+msgstr "Επαφή:"
+
+#: class-r34ics.php:1302
+msgid "Resources:"
+msgstr "Πόροι:"
+
+#: class-r34ics.php:1312
+msgid "Click for more..."
+msgstr "Κάντε κλικ για περισσότερα..."
+
+#: class-r34ics.php:1346
+msgid "Save to your calendar"
+msgstr "Αποθήκευση στο ημερολόγιό σας"
+
+#: class-r34ics.php:1449
+msgid "Cancelled"
+msgstr "Ακυρώθηκε"
+
+#: class-r34ics.php:1562
+msgid ""
+"The legacy parser option is deprecated and will be removed in a future "
+"update."
+msgstr ""
+"Η επιλογή του παλαιού αναλυτή είναι παρωχημένη και θα καταργηθεί σε "
+"μελλοντική ενημέρωση."
+
+#: class-r34ics.php:1641
+msgid "Print"
+msgstr "Εκτύπωση"
+
+#: class-r34ics.php:1898
+msgid ""
+"The \"currentweek\" shortcode attribute is deprecated. Please use "
+"view=\"week\" in your shortcode instead."
+msgstr ""
+"Η ιδιότητα \"currentweek\" από το shortcode έτσι καταργηθεί. Χρησιμοποιήστε "
+"το view =\"week\" στο shortcode σας."
+
+#: class-r34ics.php:1902
+msgid ""
+"The \"legendinline\" shortcode attribute is deprecated. Please use "
+"legendstyle=\"inline\" in your shortcode instead."
+msgstr ""
+"Το χαρακτηριστικό \"legendinline\" του shortcode έχει καταργηθεί. "
+"Χρησιμοποιήστε αντ' αυτού το legendstyle=\"inline\" στο shortcode σας."
+
+#: class-r34ics.php:2239
+#, php-format
+msgid ""
+"%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
+"uses a caching plugin, you may need to clear the cache."
+msgstr ""
+"%1$s έχει %2$sεπανεκκινήσει%3$s την προβολή ημερολογίων στις αρχικές "
+"σελίδες. Εάν ο ιστότοπός σας χρησιμοποιεί plugin προσωρινής αποθήκευσης, "
+"ίσως χρειαστεί να καθαρίσετε την προσωρινή μνήμη."
+
+#: class-r34ics.php:2247
+#, php-format
+msgid ""
+"%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
+"uses a caching plugin, you may need to clear the cache."
+msgstr ""
+"%1$s έχει %2$sσταματήσει%3$s την προβολή ημερολογίων στις αρχικές σελίδες. "
+"Εάν ο ιστότοπός σας χρησιμοποιεί ένα πρόσθετο προσωρινής αποθήκευσης, ίσως "
+"χρειαστεί να καθαρίσετε την προσωρινή μνήμη."
+
+#: class-r34ics.php:2259
+#, php-format
+msgid "Cleared %1$s %2$s transient(s)."
+msgstr "Εκκαθάριση %1$s %2$s παροδικών στοιχείων."
+
+#: class-r34ics.php:2266
+#, php-format
+msgid "No %1$s transients were found."
+msgstr "Δεν βρέθηκαν %1$s μεταβατικά φαινόμενα."
+
+#: class-r34ics.php:2275
+msgid "All saved ICS feed URLs have been cleared."
+msgstr "Όλες οι αποθηκευμένες διευθύνσεις URL τροφοδοσίας ICS έχουν διαγραφεί."
+
+#: class-r34ics.php:2282
+#, php-format
+msgid ""
+"All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
+"been cleared."
+msgstr ""
+"Όλες οι %1$s ρυθμίσεις έχουν επαναφερθεί στις προεπιλεγμένες τιμές και οι "
+"αποθηκευμένες διευθύνσεις URL τροφοδοσίας ICS έχουν διαγραφεί."
+
+#: class-r34ics.php:2365
+#, php-format
+msgid ""
+"Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
+"turning off the %1$s option under the %2$s tab above."
+msgstr ""
+"Η διεύθυνση URL της ροής σας φαίνεται να περιέχει διαπιστευτήρια βασικής "
+"πιστοποίησης HTTP. Δοκιμάστε να απενεργοποιήσετε την επιλογή %1$s στην "
+"καρτέλα %2$s παραπάνω."
+
+#: class-r34ics.php:2365 templates/admin/settings.php:59
+msgid "Use legacy feed request method"
+msgstr "Χρησιμοποιήστε την παλιά μέθοδο αιτήματος τροφοδοσίας"
+
+#: class-r34ics.php:2371
+#, php-format
+msgid ""
+"%1$sThis URL points to a file in your Media Library.%2$s While you should be "
+"able to use this URL in an %3$s shortcode, it will be a static snapshot of "
+"the calendar at the time the file was created, and will not reflect any "
+"future updates to the source calendar. Please see our %4$sUser Guide%5$s for "
+"instructions on obtaining your correct dynamic feed URL."
+msgstr ""
+"%1$sΑυτή η διεύθυνση URL παραπέμπει σε ένα αρχείο στη Βιβλιοθήκη πολυμέσων "
+"σας.%2$s Αν και θα πρέπει να μπορείτε να χρησιμοποιήσετε αυτή τη διεύθυνση "
+"URL σε έναν %3$s σύντομο κωδικό, θα είναι ένα στατικό στιγμιότυπο του "
+"ημερολογίου τη στιγμή που δημιουργήθηκε το αρχείο και δεν θα αντικατοπτρίζει "
+"τυχόν μελλοντικές ενημερώσεις του ημερολογίου προέλευσης. Ανατρέξτε στον "
+"%4$sΟδηγό χρήστη%5$s για οδηγίες σχετικά με την απόκτηση της σωστής "
+"δυναμικής διεύθυνσης URL τροφοδοσίας."
+
+#: class-r34ics.php:2377
+#, php-format
+msgid "Error: Could not resolve IP address for %1$s."
+msgstr "Σφάλμα: Δεν ήταν δυνατή η ανάλυση της διεύθυνσης IP για το %1$s."
+
+#: class-r34ics.php:2380
+#, php-format
+msgid "Resolved IP address for %1$s:"
+msgstr "Επίλυση διεύθυνσης IP για %1$s:"
+
+#: class-r34ics.php:2405
+#, php-format
+msgid ""
+"%1$sAppearance updated.%2$s You may need to refresh the page to see some "
+"changes."
+msgstr ""
+"%1$sΕμφάνιση ενημερωμένη.%2$s Ίσως χρειαστεί να ανανεώσετε τη σελίδα για να "
+"δείτε ορισμένες αλλαγές."
+
+#: class-r34ics.php:2465
+msgid ""
+"The text entered in the \"Default shortcode\" field is not a valid "
+"shortcode, and was not saved."
+msgstr ""
+"Το κείμενο που εισήχθη στο πεδίο \"Προεπιλεγμένος σύντομος κωδικός\" δεν "
+"είναι έγκυρος σύντομος κωδικός και δεν αποθηκεύτηκε."
+
+#: class-r34ics.php:2508
+#, php-format
+msgid ""
+"%1$sSettings updated.%2$s You may need to refresh the page to see some "
+"changes."
+msgstr ""
+"%1$sΟι ρυθμίσεις ενημερώθηκαν.%2$s Ίσως χρειαστεί να ανανεώσετε τη σελίδα "
+"για να δείτε ορισμένες αλλαγές."
+
+#: class-r34ics.php:2804
+msgid "calendar event"
+msgstr "γεγονός ημερολογίου"
+
+#: class-r34ics.php:3245
+msgid ""
+"The legacy feed request method is deprecated, and will be removed in an "
+"update in the near future. Please test your feeds with the legacy feed "
+"request method turned off."
+msgstr ""
+"Η παλιά μέθοδος αιτήματος τροφοδοσίας είναι παρωχημένη και θα καταργηθεί σε "
+"μια επικείμενη ενημέρωση. Δοκιμάστε τις τροφοδοσίες σας με την παλιά μέθοδο "
+"αιτήματος τροφοδοσίας απενεργοποιημένη."
+
+#: compatibility.php:38
+#, php-format
+msgid ""
+"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+"your site to a newer version of WordPress as soon as possible."
+msgstr ""
+"Οι μελλοντικές ενημερώσεις του %1$s θα απαιτούν WordPress 5.3 ή νεότερη "
+"έκδοση. Ενημερώστε τον ιστότοπό σας σε νεότερη έκδοση του WordPress το "
+"συντομότερο δυνατό."
+
+#: functions.php:1116 functions.php:1124 functions.php:1133
+msgid "Map"
+msgstr "Χάρτης"
+
+#: functions.php:1434
+msgid "Recurring event"
+msgstr "Επαναλαμβανόμενο γεγονός"
+
+#: functions.php:1439
+#, php-format
+msgid "Recurs every %1$s years"
+msgstr "Επαναλαμβάνεται κάθε %1$s χρόνια"
+
+#: functions.php:1439
+msgid "Recurs yearly"
+msgstr "Επαναλαμβάνεται κάθε χρόνο"
+
+#: functions.php:1442
+#, php-format
+msgid "Recurs every %1$s months"
+msgstr "Επαναλαμβάνεται κάθε %1$s μήνες"
+
+#: functions.php:1442
+msgid "Recurs monthly"
+msgstr "Επαναλαμβάνεται κάθε μήνα"
+
+#: functions.php:1445
+#, php-format
+msgid "Recurs every %1$s weeks"
+msgstr "Επαναλαμβάνεται κάθε %1$s εβδομάδες"
+
+#: functions.php:1445
+msgid "Recurs weekly"
+msgstr "Επαναλαμβάνεται κάθε εβδομάδα"
+
+#: functions.php:1448
+#, php-format
+msgid "Recurs every %1$s days"
+msgstr "Επαναλαμβάνεται κάθε %1$s ημέρες"
+
+#: functions.php:1448
+msgid "Recurs daily"
+msgstr "Επαναλαμβάνεται καθημερινά"
+
+#: functions.php:1621
+#, php-format
+msgid ""
+"The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
+"most likely your URL has been turned into a clickable link. Your calendar "
+"may not display properly as a result. Please remove the clickable link in "
+"the shortcode."
+msgstr ""
+"Η ιδιότητα \"url\" στον σύντομο κωδικό %1$s φαίνεται να περιέχει ετικέτες "
+"HTML. Πιθανότατα, η διεύθυνση URL σας έχει μετατραπεί σε ενεργό σύνδεσμο. Ως "
+"αποτέλεσμα, το ημερολόγιό σας ενδέχεται να μην εμφανίζεται σωστά. "
+"Παρακαλούμε, αφαιρέστε τον ενεργό σύνδεσμο από τον σύντομο κωδικό."
+
+#: functions.php:1950
+msgid "The r34ics_url_get_contents() function is no longer supported."
+msgstr "Η συνάρτηση r34ics_url_get_contents() δεν υποστηρίζεται πλέον."
+
+#: templates/admin/add-calendar-button.php:7
+#: templates/admin/add-calendar-button.php:10
+#: templates/admin/add-calendar.php:12
 #, php-format
 msgid "Add %1$s"
 msgstr "Προσθήκη %1$s"
 
-#: templates/admin/add-calendar.php:10
+#: templates/admin/add-calendar.php:14
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: templates/admin/add-calendar.php:19
-msgid "ICS Feed URL:"
-msgstr "ICS Feed URL:"
-
-#. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag 6. Do not translate
 #: templates/admin/add-calendar.php:23
+msgid "ICS Feed URL:"
+msgstr "URL ροής ICS:"
+
+#: templates/admin/add-calendar.php:27
 #, php-format
 msgid ""
 "Be sure you are using a %1$ssubscribe%2$s URL, not a %3$sweb view%4$s URL."
 "%5$s (Entering the URL directly in your web browser should download an %6$s "
 "file.)"
 msgstr ""
-"Βεβαιωθείτε ότι χρησιμοποιείτε ένα %1$ssubscribe%2$s URL και όχι ένα %3$sweb "
-"view%4$s URL.%5$s (Η εισαγωγή του URL απευθείας στο πρόγραμμα περιήγησης "
-"ιστού θα πρέπει να κατεβάσει ένα %6$s αρχείο.)"
+"Βεβαιωθείτε ότι χρησιμοποιείτε μια διεύθυνση URL %1$sεγγραφής%2$s και όχι "
+"μια διεύθυνση URL %3$sπροβολής ιστού%4$s. %5$s (Η εισαγωγή της διεύθυνσης "
+"URL απευθείας στο πρόγραμμα περιήγησης ιστού θα πρέπει να κάνει λήψη ενός "
+"αρχείου %6$s.)"
 
-#: templates/admin/add-calendar.php:28
+#: templates/admin/add-calendar.php:32
 msgid "Calendar Title:"
 msgstr "Τίτλος ημερολογίου:"
 
-#. translators: 1. Do not translate
-#: templates/admin/add-calendar.php:32
+#: templates/admin/add-calendar.php:36
 #, php-format
 msgid ""
 "Leave empty to use calendar&rsquo;s default title. Enter %1$s to omit title "
 "altogether."
 msgstr ""
-"Αφήστε το κενό για να χρησιμοποιήσετε τον προεπιλεγμένο τίτλο του "
-"ημερολογίου. Πληκτρολογήστε %1$s για να παραλείψετε τον τίτλο εντελώς."
+"Αφήστε κενό για να χρησιμοποιήσετε τον προεπιλεγμένο τίτλο του ημερολογίου. "
+"Εισάγετε %1$s για να παραλείψετε εντελώς τον τίτλο."
 
-#: templates/admin/add-calendar.php:37
+#: templates/admin/add-calendar.php:41
 msgid "Calendar Description:"
 msgstr "Περιγραφή ημερολογίου:"
 
-#. translators: 1. Do not translate
-#: templates/admin/add-calendar.php:41
+#: templates/admin/add-calendar.php:45
 #, php-format
 msgid ""
 "Leave empty to use calendar&rsquo;s default description. Enter %1$s to omit "
 "description altogether."
 msgstr ""
-"Αφήστε το κενό για να χρησιμοποιήσετε την προεπιλεγμένη περιγραφή του "
-"ημερολογίου. Εισάγετε %1$s για να παραλείψετε την περιγραφή εντελώς."
+"Αφήστε κενό για να χρησιμοποιήσετε την προεπιλεγμένη περιγραφή του "
+"ημερολογίου. Εισαγάγετε %1$s για να παραλείψετε εντελώς την περιγραφή."
 
-#: templates/admin/add-calendar.php:46
+#: templates/admin/add-calendar.php:50
 msgid "View:"
 msgstr "Εμφάνιση:"
 
-#: templates/admin/add-calendar.php:48
+#: templates/admin/add-calendar.php:52
 msgid "month"
 msgstr "μήνας"
 
-#: templates/admin/add-calendar.php:49
+#: templates/admin/add-calendar.php:53
 msgid "list"
 msgstr "λίστα"
 
-#: templates/admin/add-calendar.php:50
+#: templates/admin/add-calendar.php:54
 msgid "week"
 msgstr "εβδομάδα"
 
-#: templates/admin/add-calendar.php:55 templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:59 templates/admin/add-calendar.php:66
 msgid "Count:"
 msgstr "Μέτρηση:"
 
-#: templates/admin/add-calendar.php:58 templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:62 templates/admin/add-calendar.php:66
 msgid "Format:"
 msgstr "Μορφή:"
 
-#. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags 3. HTML tag 4. HTML tag
-#: templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:66
 #, php-format
 msgid ""
 "Leave %1$s blank to include all upcoming events. %2$s must be a standard "
 "%3$sPHP date format string%4$s."
 msgstr ""
-"Αφήστε το %1$s κενό για να συμπεριλάβετε όλες τις επερχόμενες εκδηλώσεις. "
+"Αφήστε το %1$s κενό για να συμπεριλάβετε όλες τις επερχόμενες εκδηλώσεις. Το "
 "%2$s πρέπει να είναι μια τυπική συμβολοσειρά μορφής ημερομηνίας %3$sPHP%4$s."
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:70
+#: templates/admin/add-calendar.php:74
 #, php-format
 msgid ""
 "Show event descriptions %1$s(change to a number in inserted shortcode to set "
 "word limit)%2$s"
 msgstr ""
-"Εμφάνιση περιγραφών συμβάντων %1$s(αλλάξτε σε αριθμό στο εισαγόμενο σύντομο "
-"κώδικα για να ορίσετε όριο λέξεων)%2$s"
+"Εμφάνιση περιγραφών εκδηλώσεων %1$s (αλλάξτε τον αριθμό στον εισαγόμενο "
+"σύντομο κωδικό για να ορίσετε το όριο λέξεων) %2$s"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:78
+#: templates/admin/add-calendar.php:82
 #, php-format
 msgid "Show event locations %1$s(if available)%2$s"
-msgstr "Εμφάνιση τοποθεσιών συμβάντων %1$s(αν υπάρχουν)%2$s"
+msgstr "Εμφάνιση τοποθεσιών συμβάντων %1$s(εάν είναι διαθέσιμες)%2$s"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:86
+#: templates/admin/add-calendar.php:90
 #, php-format
 msgid "Show event organizers %1$s(if available)%2$s"
-msgstr "Εμφάνιση διοργανωτών εκδηλώσεων %1$s(αν υπάρχει)%2$s"
+msgstr "Εμφάνιση διοργανωτών εκδηλώσεων %1$s(εάν είναι διαθέσιμοι)%2$s"
 
-#. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4. HTML tag
-#: templates/admin/add-calendar.php:93
+#: templates/admin/add-calendar.php:97
 #, php-format
 msgid ""
 "%1$sNote:%2$s Additional %3$sdisplay options%4$s are available by manually "
 "editing the shortcode after insertion."
 msgstr ""
 "%1$sΣημείωση:%2$s Πρόσθετες %3$sεπιλογές εμφάνισης%4$s είναι διαθέσιμες με "
-"χειροκίνητη επεξεργασία του σύντομου κώδικα μετά την εισαγωγή."
+"τη χειροκίνητη επεξεργασία του σύντομου κώδικα μετά την εισαγωγή."
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/add-calendar.php:100
+#: templates/admin/add-calendar.php:104
 #, php-format
 msgid "Insert %1$s"
 msgstr "Εισαγωγή %1$s"
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/admin.php:12
+#: templates/admin/admin.php:63
 #, php-format
-msgid "Do even more with %1$s!"
-msgstr "Κάντε ακόμα περισσότερα με το %1$s!"
+msgid "Do even more with %1$s version 6!"
+msgstr "Κάντε ακόμα περισσότερα με την έκδοση %1$s 6!"
 
-#: templates/admin/admin.php:18
-msgid "Calendar Builder"
-msgstr "Δημιουργία ημερολογίου"
+#: templates/admin/admin.php:69
+msgid "Calendar Builder + Block Editor"
+msgstr "Δημιουργία ημερολογίου + Επεξεργαστής μπλοκ"
 
-#: templates/admin/admin.php:19
+#: templates/admin/admin.php:72
+#, php-format
 msgid ""
-"Configure all calendar settings with an easy visual interface... no need to "
-"manually type shortcodes."
+"Configure all calendar settings with an easy visual interface, and use the "
+"new %1$s block to select your saved calendars from a dropdown in the Block "
+"Editor, no shortcode needed! %2$sLearn more...%3$s"
 msgstr ""
-"Διαμορφώστε όλες τις ρυθμίσεις του ημερολογίου με ένα εύκολο οπτικό "
-"περιβάλλον... δεν χρειάζεται να πληκτρολογείτε χειροκίνητα shortcodes."
+"Διαμορφώστε όλες τις ρυθμίσεις του ημερολογίου με μια εύκολη οπτική διεπαφή "
+"και χρησιμοποιήστε το νέο μπλοκ %1$s για να επιλέξετε τα αποθηκευμένα "
+"ημερολόγιά σας από ένα αναπτυσσόμενο μενού στον Επεξεργαστή μπλοκ, χωρίς να "
+"χρειάζεστε σύντομο κωδικό! %2$sΜάθετε περισσότερα...%3$s"
 
-#: templates/admin/admin.php:20
+#: templates/admin/admin.php:74
 msgid "Additional Views and Enhanced Features"
 msgstr "Πρόσθετες προβολές και βελτιωμένες λειτουργίες"
 
-#: templates/admin/admin.php:21
+#: templates/admin/admin.php:77
+#, php-format
 msgid ""
-"New ways to display your calendar including Full, Up Next, Masonry, Month "
-"with Sidebar, Widget, and more. Additional capabilities are added to the "
-"core Month, Basic, List and Week views."
+"%1$s offers many new ways to display your calendar, including integrations "
+"with the popular %2$s and %3$s open source libraries. Month and year views "
+"with a sidebar for the selected day. \"Up Next\" works great for radio or TV "
+"station schedules. Widget and year availability are perfect for holiday "
+"bookings. Plus, additional capabilities are added to the core Month, Basic, "
+"List and Week views. %4$sView sample calendars...%5$s"
 msgstr ""
-"Νέοι τρόποι εμφάνισης του ημερολογίου σας, όπως Πλήρης, Επόμενο, Τοιχοποιία, "
-"Μήνας με πλαϊνή μπάρα, Widget και άλλα. Προστίθενται πρόσθετες δυνατότητες "
-"στις βασικές προβολές Μήνας, Βασική, Λίστα και Εβδομάδα."
+"%1$s προσφέρει πολλούς νέους τρόπους εμφάνισης του ημερολογίου σας, "
+"συμπεριλαμβανομένων ενσωματώσεων με τις δημοφιλείς βιβλιοθήκες ανοιχτού "
+"κώδικα %2$s και %3$s. Προβολές μήνα και έτους με πλαϊνή στήλη για την "
+"επιλεγμένη ημέρα. Η λειτουργία \"Up Next\" λειτουργεί εξαιρετικά για "
+"προγράμματα ραδιοφωνικών ή τηλεοπτικών σταθμών. Τα widget και η "
+"διαθεσιμότητα ανά έτος είναι ιδανικά για κρατήσεις διακοπών. Επιπλέον, "
+"προστίθενται πρόσθετες δυνατότητες στις βασικές προβολές Μήνας, Βασική, "
+"Λίστα και Εβδομάδα. %4$sΔείτε δείγματα ημερολογίων...%5$s"
 
-#: templates/admin/admin.php:22
-msgid "Customizer"
-msgstr "Εξατομικευτής"
+#: templates/admin/admin.php:79
+msgid "Customization"
+msgstr "Παραμετροποιήσεις"
 
-#: templates/admin/admin.php:23
-msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
+#: templates/admin/admin.php:80
+#, php-format
+msgid ""
+"Easy-to-use tools to completely customize your calendar colors, typography "
+"and more. Select one of our preset color palettes or create your own, with "
+"options to individually customize the color of each element in the calendar "
+"layout. Choose between your theme fonts, system fonts, or more than 20 "
+"included open source fonts. %1$sLearn more...%2$s"
 msgstr ""
-"Τροποποιήστε εύκολα τις παλέτες χρωμάτων του ημερολογίου σας, τις "
-"γραμματοσειρές και πολλά άλλα, σε ολόκληρο τον ιστότοπο."
+"Εύχρηστα εργαλεία για να προσαρμόσετε πλήρως τα χρώματα, τη τυπογραφία και "
+"άλλα στοιχεία του ημερολογίου σας. Επιλέξτε μία από τις προκαθορισμένες "
+"παλέτες χρωμάτων ή δημιουργήστε τη δική σας, με επιλογές για να προσαρμόσετε "
+"ξεχωριστά το χρώμα κάθε στοιχείου στη διάταξη του ημερολογίου. Επιλέξτε "
+"μεταξύ των γραμματοσειρών του θέματος, των γραμματοσειρών του συστήματος ή "
+"των περισσότερων από 20 γραμματοσειρών ανοιχτού κώδικα που περιλαμβάνονται. "
+"%1$sΜάθετε περισσότερα...%2$s"
 
-#: templates/admin/admin.php:25
+#: templates/admin/admin.php:81
 msgid "ICS Events"
 msgstr "Εκδηλώσεις ICS"
 
-#. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/admin.php:28
+#: templates/admin/admin.php:84
 #, php-format
 msgid ""
-"%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
-"events directly in WordPress and even integrate them seamlessly with your "
-"existing feeds."
+"Turns %1$s into a full calendar management system. Create and edit new "
+"events directly in WordPress, and even integrate them seamlessly with your "
+"existing external ICS feeds. %2$sLearn more...%3$s"
 msgstr ""
-"%1$sΝέο!%2$s Μετατρέπει το %3$s σε ένα πλήρες σύστημα ημερολογίου. "
-"Δημιουργήστε και διαχειριστείτε εκδηλώσεις απευθείας στο WordPress και ακόμη "
-"και ενσωματώστε τις απρόσκοπτα με τις υπάρχουσες ροές σας."
+"Μετατρέπει το %1$s σε ένα πλήρες σύστημα διαχείρισης ημερολογίου. "
+"Δημιουργήστε και επεξεργαστείτε νέα συμβάντα απευθείας στο WordPress και "
+"ενσωματώστε τα απρόσκοπτα με τις υπάρχουσες εξωτερικές ροές ICS. %2$sΜάθετε "
+"περισσότερα...%3$s"
 
-#. translators: 1. Link (do not translate)
-#: templates/admin/admin.php:32
+#: templates/admin/admin.php:86
+msgid "Localized Admin Interface"
+msgstr "Τοπική διεπαφή διαχειριστή"
+
+#: templates/admin/admin.php:89
+#, php-format
+msgid ""
+"All %1$s admin pages are translated into dozens of languages, including "
+"English, Czech, Danish, German, Greek, Spanish, Estonian, Finnish, French, "
+"Hungarian, Italian, Japanese, Korean, Lithuanian, Latvian, Norwegian, Dutch, "
+"Polish, Portuguese, Romanian, Russian, Slovak, Serbian, Swedish, Turkish, "
+"Ukrainian, and Chinese."
+msgstr ""
+"Όλες οι %1$s σελίδες διαχείρισης έχουν μεταφραστεί σε δεκάδες γλώσσες, "
+"συμπεριλαμβανομένων των αγγλικών, τσεχικών, δανικών, γερμανικών, ελληνικών, "
+"ισπανικών, εσθονικών, φινλανδικών, γαλλικών, ουγγρικών, ιταλικών, ιαπωνικών, "
+"κορεατικών, λιθουανικών, λετονικών, νορβηγικών, ολλανδικών, πολωνικών, "
+"πορτογαλικών, ρουμανικών, ρωσικών, σλοβακικών, σερβικών, σουηδικών, "
+"τουρκικών, ουκρανικών και κινεζικών."
+
+#: templates/admin/admin.php:93
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "Επισκεφθείτε το %1$s για να μάθετε περισσότερα."
 
-#: templates/admin/admin.php:40
-msgid "Go PRO!"
-msgstr "Πηγαίνετε PRO!"
+#: templates/admin/admin.php:97
+msgid "Calendar Builder screenshot"
+msgstr "Στιγμιότυπο οθόνης του Calendar Builder"
 
-#: templates/admin/admin.php:60 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:31
-msgid "Getting Started"
-msgstr "Ξεκινώντας"
+#: templates/admin/admin.php:98
+msgid "Appearance screenshot"
+msgstr "Οθόνη εμφάνισης"
 
-#: templates/admin/admin.php:69 templates/admin/utilities.php:130
-msgid "System Report"
-msgstr "Αναφορά Συστήματος"
+#: templates/admin/admin.php:102
+msgid "Available now!"
+msgstr "Διαθέσιμο τώρα!"
 
-#: templates/admin/admin.php:90
+#: templates/admin/admin.php:107
+#, php-format
+msgid "Get %1$s!"
+msgstr "Αποκτήστε το %1$s!"
+
+#: templates/admin/appearance.php:23
+#, php-format
+msgid ""
+"Extensive color palette and typography options are available with %1$s. "
+"%2$sLearn More%3$s"
+msgstr ""
+"Με το %1$s διατίθενται εκτεταμένες επιλογές χρωμάτων και τυπογραφίας. "
+"%2$sΜάθετε περισσότερα%3$s"
+
+#: templates/admin/appearance.php:32
+msgid "Color Palette"
+msgstr "Επιλέξτε μια παλέτα χρωμάτων για το κατάστημά σας."
+
+#: templates/admin/appearance.php:37
+msgid "Match calendar color palette to current Block Theme colors"
+msgstr ""
+"Προσαρμόστε την παλέτα χρωμάτων του ημερολογίου αγώνων στα τρέχοντα χρώματα "
+"του θέματος μπλοκ"
+
+#: templates/admin/appearance.php:38
+msgid "beta"
+msgstr "δοκιμαστική έκδοση"
+
+#: templates/admin/appearance.php:42
+#, php-format
+msgid ""
+"Replaces the %1$s default neutral color palette with nearest matches from "
+"the current Site Editor Styles color palette or the %2$s file in your theme. "
+"Color selections are algorithmic, and some combinations may not pass "
+"accessibility contrast tests. This setting has no effect if you are using a "
+"\"classic\" theme that does not include a %3$s file."
+msgstr ""
+"Αντικαθιστά την προεπιλεγμένη ουδέτερη παλέτα χρωμάτων %1$s με τα πιο "
+"κοντινά χρώματα από την τρέχουσα παλέτα χρωμάτων του Site Editor Styles ή το "
+"αρχείο %2$s στο θέμα σας. Οι επιλογές χρωμάτων είναι αλγοριθμικές και "
+"ορισμένοι συνδυασμοί ενδέχεται να μην περάσουν τις δοκιμές προσβασιμότητας "
+"αντίθεσης. Αυτή η ρύθμιση δεν έχει αποτέλεσμα εάν χρησιμοποιείτε ένα "
+"«κλασικό» θέμα που δεν περιλαμβάνει αρχείο %3$s."
+
+#: templates/admin/appearance.php:47
+#, php-format
+msgid ""
+"%1$sThis is currently a beta feature.%2$s It may require making some "
+"adjustments to your calendar appearance or CSS for optimal display, "
+"especially if you have color-coded your feeds. Functionality is subject to "
+"change."
+msgstr ""
+"%1$sΑυτή τη στιγμή πρόκειται για μια λειτουργία σε φάση δοκιμής.%2$s "
+"Ενδέχεται να χρειαστεί να κάνετε κάποιες προσαρμογές στην εμφάνιση του "
+"ημερολογίου σας ή στο CSS για βέλτιστη εμφάνιση, ειδικά αν έχετε χρωματικά "
+"κωδικοποιήσει τις ροές σας. Η λειτουργικότητα ενδέχεται να αλλάξει."
+
+#: templates/admin/appearance.php:56
+msgid "Dark mode"
+msgstr "Σκοτεινό θέμα"
+
+#: templates/admin/appearance.php:58
+msgid "Inverts color palette (light colors on a dark background)."
+msgstr "Αντιστρέφει την παλέτα χρωμάτων (ανοιχτά χρώματα σε σκούρο φόντο)."
+
+#: templates/admin/appearance.php:70 templates/admin/settings.php:200
 msgid "Save Changes"
 msgstr "Αποθήκευση αλλαγών"
 
-#. translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag
-#: templates/admin/getting-started.php:10
+#: templates/admin/getting-started.php:14
 #, php-format
 msgid ""
 "Thank you for installing %1$s. Before creating your first calendar "
@@ -585,162 +851,99 @@ msgstr ""
 "και οι ρυθμίσεις μορφής ημερομηνίας/ώρας είναι σωστές. Ανατρέξτε στον "
 "%4$sΟδηγό χρήσης%5$s για περισσότερες πληροφορίες."
 
-#: templates/admin/getting-started.php:17
+#: templates/admin/getting-started.php:23
+#, php-format
+msgid ""
+"Get started with %1$s in four easy steps... and you've already completed "
+"step one! Check out our %2$sQuick Start Guide%3$s for the rest."
+msgstr ""
+"Ξεκινήστε με το %1$s σε τέσσερα εύκολα βήματα... και έχετε ήδη ολοκληρώσει "
+"το πρώτο βήμα! Δείτε τον %2$sΟδηγό γρήγορης εκκίνησης%3$s για τα υπόλοιπα."
+
+#: templates/admin/getting-started.php:26
 msgid "Quick Start Guide"
 msgstr "Οδηγός γρήγορης εκκίνησης"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/getting-started.php:23
+#: templates/admin/getting-started.php:32
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
 "quick links to key resources in the documentation."
 msgstr ""
-"Ένας εκτενής %1$sΟδηγός χρήσης%2$s είναι διαθέσιμος στην ιστοσελίδα μας. "
-"Παρακάτω παρατίθενται ορισμένοι γρήγοροι σύνδεσμοι προς τους βασικούς πόρους "
-"της τεκμηρίωσης."
+"Ένας αναλυτικός %1$sΟδηγός χρήστη%2$s είναι διαθέσιμος στον ιστότοπό μας. "
+"Ακολουθούν μερικοί γρήγοροι σύνδεσμοι προς βασικούς πόρους της τεκμηρίωσης."
 
-#: templates/admin/getting-started.php:29
+#: templates/admin/getting-started.php:38
 msgid "General:"
 msgstr "Γενικά:"
 
-#: templates/admin/getting-started.php:32
+#: templates/admin/getting-started.php:41
 msgid "General WordPress Settings"
 msgstr "Γενικές ρυθμίσεις WordPress"
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/getting-started.php:35
+#: templates/admin/getting-started.php:44
 #, php-format
 msgid "%1$s Settings"
 msgstr "%1$s Ρυθμίσεις"
 
-#: templates/admin/getting-started.php:40
+#: templates/admin/getting-started.php:49
 msgid "Working with Shortcodes:"
-msgstr "Εργασία με Shortcodes:"
+msgstr "Εργασία με σύντομους κωδικούς:"
 
-#: templates/admin/getting-started.php:42
+#: templates/admin/getting-started.php:51
 msgid "Shortcode Overview"
 msgstr "Επισκόπηση σύντομων κωδικών"
 
-#: templates/admin/getting-started.php:43
+#: templates/admin/getting-started.php:52
 msgid "Shortcode Builder"
-msgstr "Δημιουργός σύντομων κωδικών"
+msgstr "Δημιουργία σύντομων κωδικών"
 
-#: templates/admin/getting-started.php:44
+#: templates/admin/getting-started.php:53
 msgid "Shortcode Parameters Reference"
 msgstr "Αναφορά παραμέτρων σύντομου κώδικα"
 
-#: templates/admin/getting-started.php:48
+#: templates/admin/getting-started.php:57
 msgid "Advanced Topics:"
 msgstr "Προχωρημένα θέματα:"
 
-#: templates/admin/getting-started.php:50
+#: templates/admin/getting-started.php:59
 msgid "FAQs and Tips"
 msgstr "Συχνές ερωτήσεις και συμβουλές"
 
-#: templates/admin/getting-started.php:51
+#: templates/admin/getting-started.php:60
 msgid "CSS Guide"
 msgstr "Οδηγός CSS"
 
-#: templates/admin/getting-started.php:52
+#: templates/admin/getting-started.php:61
 msgid "Developer Resources"
 msgstr "Πόροι για προγραμματιστές"
 
-#: templates/admin/getting-started.php:53
+#: templates/admin/getting-started.php:62
 msgid "GDPR"
 msgstr "GDPR"
 
-#: templates/admin/settings.php:3
-msgid "Appearance"
-msgstr "Εμφάνιση"
-
-#: templates/admin/settings.php:6
-msgid "Match calendar color palette to current Block Theme colors"
-msgstr ""
-"Ταιριάξτε την παλέτα χρωμάτων του ημερολογίου με τα τρέχοντα χρώματα του "
-"Block Theme"
-
-#: templates/admin/settings.php:6 templates/admin/settings.php:21
-msgid "beta"
-msgstr "δοκιμαστική έκδοση"
-
-#. translators: 1: Plugin name (do not translate) 2: HTML tag and filename 3: HTML tag and filename
-#: templates/admin/settings.php:10
-#, php-format
-msgid ""
-"Replaces the %1$s default neutral color palette with nearest matches from "
-"the current Site Editor Styles color palette or the %2$s file in your theme. "
-"Color selections are algorithmic, and some combinations may not pass "
-"accessibility contrast tests. This setting has no effect if you are using a "
-"\"classic\" theme that does not include a %3$s file."
-msgstr ""
-"Αντικαθιστά την προεπιλεγμένη ουδέτερη παλέτα χρωμάτων %1$s με τα "
-"πλησιέστερα αντίστοιχα χρώματα από την τρέχουσα παλέτα χρωμάτων Site Editor "
-"Styles ή το αρχείο %2$s στο θέμα σας. Οι επιλογές χρωμάτων είναι "
-"αλγοριθμικές και ορισμένοι συνδυασμοί ενδέχεται να μην περάσουν τα τεστ "
-"αντίθεσης προσβασιμότητας. Αυτή η ρύθμιση δεν έχει καμία επίδραση εάν "
-"χρησιμοποιείτε ένα \"κλασικό\" θέμα που δεν περιλαμβάνει αρχείο %3$s."
-
-#. translators: 1: HTML tag 2: HTML tag
-#: templates/admin/settings.php:15 templates/admin/settings.php:29
-#, php-format
-msgid ""
-"%1$sThis is currently a beta feature.%2$s It may require making some "
-"adjustments to your calendar settings or CSS for optimal display, especially "
-"if you have color-coded your feeds. Functionality is subject to change."
-msgstr ""
-"%1$sΑυτή είναι προς το παρόν μια λειτουργία beta.%2$s Μπορεί να χρειαστεί να "
-"κάνετε κάποιες προσαρμογές στις ρυθμίσεις του ημερολογίου σας ή στο CSS για "
-"βέλτιστη εμφάνιση, ειδικά αν έχετε κωδικοποιήσει τις τροφοδοσίες σας με "
-"χρώμα. Η λειτουργικότητα υπόκειται σε αλλαγές."
-
-#: templates/admin/settings.php:21
-msgid "Dark mode"
-msgstr "Σκοτεινό θέμα"
-
-#. translators: 1: HTML tags 2: HTML tag 3: HTML tag and code 4: HTML tag and code
-#: templates/admin/settings.php:24
-#, php-format
-msgid ""
-"Inverts color palette (light colors on a dark background). %1$sNote:%2$s "
-"Dark mode also automatically applies style changes similar to the %3$s and "
-"%4$s shortcode parameters, so you do not need to include them in your "
-"shortcode."
-msgstr ""
-"Αντιστρέφει την παλέτα χρωμάτων (ανοιχτά χρώματα σε σκούρο φόντο). "
-"%1$sΣημείωση: %2$s Η σκοτεινή λειτουργία εφαρμόζει επίσης αυτόματα αλλαγές "
-"στυλ παρόμοιες με τις παραμέτρους %3$s και %4$s του σύντομου κώδικα, οπότε "
-"δεν χρειάζεται να τις συμπεριλάβετε στον σύντομο κώδικά σας."
-
-#: templates/admin/settings.php:40
+#: templates/admin/settings.php:20
 msgid "Loading"
 msgstr "Φόρτωση"
 
-#: templates/admin/settings.php:43
-msgid "Always use AJAX to render calendars (recommended)"
-msgstr "Χρησιμοποιείτε πάντα AJAX για την απόδοση ημερολογίων (συνιστάται)"
+#: templates/admin/settings.php:24
+msgid "Always use AJAX to render calendars"
+msgstr "Χρησιμοποιείτε πάντα AJAX για την απόδοση ημερολογίων"
 
-#: templates/admin/settings.php:44
+#: templates/admin/settings.php:28
+#, php-format
 msgid ""
-"When checked, all calendars will render via AJAX (asynchronously after the "
-"page loads). This is especially useful in conjunction with other caching "
-"plugins, or if your calendars contain a large number of events. Normally, "
-"calendar data is sent directly in the HTML of the initial page load unless "
-"AJAX has been specified in the shortcode."
+"AJAX loading is now automatic. You can override AJAX, if necessary, by "
+"adding %1$s to your shortcode."
 msgstr ""
-"Όταν είναι επιλεγμένο, όλα τα ημερολόγια θα εμφανίζονται μέσω AJAX "
-"(ασύγχρονα μετά τη φόρτωση της σελίδας). Αυτό είναι ιδιαίτερα χρήσιμο σε "
-"συνδυασμό με άλλα πρόσθετα προσωρινής αποθήκευσης ή αν τα ημερολόγιά σας "
-"περιέχουν μεγάλο αριθμό εκδηλώσεων. Κανονικά, τα δεδομένα του ημερολογίου "
-"αποστέλλονται απευθείας στην HTML της αρχικής φόρτωσης της σελίδας, εκτός "
-"εάν έχει καθοριστεί AJAX στον σύντομο κώδικα."
+"Η φόρτωση AJAX είναι πλέον αυτόματη. Μπορείτε να παρακάμψετε το AJAX, αν "
+"χρειαστεί, προσθέτοντας %1$s στον σύντομο κωδικό σας."
 
-#: templates/admin/settings.php:48
+#: templates/admin/settings.php:36
 msgid "Increase memory limit when rendering calendars"
 msgstr "Αύξηση του ορίου μνήμης κατά την απόδοση ημερολογίων"
 
-#. translators: 1: HTML tag
-#: templates/admin/settings.php:65
+#: templates/admin/settings.php:50
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -749,34 +952,33 @@ msgid ""
 "server default setting. 2) It is not possible to set this option lower than "
 "the current default memory limit on your server."
 msgstr ""
-"Αν το ημερολόγιό σας δεν φορτώνεται με ένα μοιραίο σφάλμα \"δεν υπάρχει "
-"μνήμη\", δοκιμάστε να αυξήσετε το όριο μνήμης. Συνιστάται τουλάχιστον 512 "
+"Εάν το ημερολόγιό σας δεν φορτώνεται και εμφανίζεται το σφάλμα \"out of "
+"memory\", δοκιμάστε να αυξήσετε το όριο μνήμης. Συνιστάται ελάχιστο όριο 512 "
 "MB. %1$s Σημειώσεις: 1) Ορισμένοι πάροχοι φιλοξενίας ενδέχεται να μην "
-"επιτρέπουν στις εφαρμογές να παρακάμπτουν την προεπιλεγμένη ρύθμιση του "
-"διακομιστή. 2) Δεν είναι δυνατό να ορίσετε αυτή την επιλογή χαμηλότερα από "
-"το τρέχον προεπιλεγμένο όριο μνήμης του διακομιστή σας."
+"επιτρέπουν στις εφαρμογές να παρακάμψουν την προεπιλεγμένη ρύθμιση του "
+"διακομιστή. 2) Δεν είναι δυνατό να ορίσετε αυτήν την επιλογή σε τιμή "
+"χαμηλότερη από το τρέχον προεπιλεγμένο όριο μνήμης στον διακομιστή σας."
 
-#: templates/admin/settings.php:70
+#: templates/admin/settings.php:60
 msgid "deprecated"
-msgstr "deprecated"
+msgstr "απαρχαιωμένος"
 
-#: templates/admin/settings.php:71
+#: templates/admin/settings.php:62
 msgid ""
-"If your site has stopped retrieving feeds after the version 11 update, turn "
-"on this option to use the legacy request method. This feature is deprecated "
-"and will be removed in an update in the near future."
+"Some servers may not support the default feed request method. If your feeds "
+"are not loading, turn on this option to use the legacy request method. This "
+"feature is deprecated and will be removed in a future update."
 msgstr ""
-"Εάν ο ιστότοπός σας έχει σταματήσει να ανακτά τροφοδοσίες μετά την ενημέρωση "
-"της έκδοσης 11, ενεργοποιήστε αυτή την επιλογή για να χρησιμοποιήσετε τη "
-"μέθοδο παλαιών αιτήσεων. Αυτή η λειτουργία έχει καταργηθεί και θα καταργηθεί "
-"με μια ενημέρωση στο εγγύς μέλλον."
+"Ορισμένοι διακομιστές ενδέχεται να μην υποστηρίζουν την προεπιλεγμένη μέθοδο "
+"αιτήματος τροφοδοσίας. Εάν οι τροφοδοσίες σας δεν φορτώνονται, ενεργοποιήστε "
+"αυτήν την επιλογή για να χρησιμοποιήσετε την παλαιά μέθοδο αιτήματος. Αυτή η "
+"λειτουργία έχει καταργηθεί και θα αφαιρεθεί σε μελλοντική ενημέρωση."
 
-#: templates/admin/settings.php:75
+#: templates/admin/settings.php:69
 msgid "Default shortcode"
-msgstr "Προεπιλεγμένος σύντομος κώδικας"
+msgstr "Προεπιλεγμένος σύντομος κωδικός"
 
-#. translators: 1: HTML tag and sample code
-#: templates/admin/settings.php:79
+#: templates/admin/settings.php:73
 #, php-format
 msgid ""
 "If your site will include a large number of similarly configured calendar "
@@ -786,23 +988,21 @@ msgid ""
 "to that calendar, as such: %1$s Any parameters included in the individual "
 "shortcode will override what is set here."
 msgstr ""
-"Εάν ο ιστότοπός σας θα περιλαμβάνει μεγάλο αριθμό παρόμοια ρυθμισμένων "
-"συντομευτικών κωδικών ημερολογίου, μπορείτε να εισάγετε εδώ έναν "
-"προεπιλεγμένο \"βασικό\" συντομευτικό κωδικό με τις παραμέτρους που θα "
-"πρέπει να είναι ίδιες για όλα τα ημερολόγια. Οι μεμονωμένοι σύντομοι κωδικοί "
-"στον ιστότοπο μπορούν στη συνέχεια να περιλαμβάνουν μόνο τις παραμέτρους που "
-"είναι μοναδικές για το συγκεκριμένο ημερολόγιο, ως τέτοιες: %1$s "
-"Οποιεσδήποτε παράμετροι περιλαμβάνονται στον ατομικό σύντομο κωδικό θα "
-"παρακάμπτουν τις παραμέτρους που έχουν οριστεί εδώ."
+"Εάν ο ιστότοπός σας περιλαμβάνει μεγάλο αριθμό παρόμοιων συντομογραφιών "
+"ημερολογίου, μπορείτε να εισαγάγετε εδώ μια προεπιλεγμένη «βασική» "
+"συντομογραφία με τις παραμέτρους που πρέπει να είναι ίδιες για όλα τα "
+"ημερολόγια. Οι μεμονωμένες συντομογραφίες στον ιστότοπο μπορούν στη συνέχεια "
+"να περιλαμβάνουν μόνο τις παραμέτρους που είναι μοναδικές για το "
+"συγκεκριμένο ημερολόγιο, όπως: %1$s Οποιεσδήποτε παράμετροι περιλαμβάνονται "
+"στη μεμονωμένη συντομογραφία θα αντικαταστήσουν ό,τι έχει οριστεί εδώ."
 
-#: templates/admin/settings.php:84
+#: templates/admin/settings.php:82
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Επιτρέψτε την πρόσβαση σε αυτά τα ονόματα κεντρικών υπολογιστών που "
-"επιλύονται σε δεσμευμένες διευθύνσεις IP"
+"αντιστοιχούν σε δεσμευμένες διευθύνσεις IP."
 
-#. translators: 1: HTML tag 2: HTML tag 3: HTML tag 4: Plugin name (do not translate) 5: HTML tag
-#: templates/admin/settings.php:88
+#: templates/admin/settings.php:86
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -812,67 +1012,119 @@ msgid ""
 "documentation%5$s for more information."
 msgstr ""
 "Εάν ο διακομιστής ημερολογίου σας φιλοξενείται στον ίδιο φυσικό διακομιστή "
-"με τον ιστότοπό σας, είναι μέρος του ίδιου τοπικού δικτύου ή χρησιμοποιεί "
-"μια %1$sδεσμευμένη διεύθυνση IP%2$s, πληκτρολογήστε το όνομα κεντρικού "
-"υπολογιστή του εδώ για να επιτρέψετε την πρόσβαση. Για πολλαπλούς "
-"διακομιστές ημερολογίου, εισαγάγετε ένα όνομα κεντρικού υπολογιστή ανά "
-"γραμμή. Ανατρέξτε στην %3$sτεκμηρίωση %4$s%5$s για περισσότερες πληροφορίες."
+"με τον ιστότοπό σας, αποτελεί μέρος του ίδιου τοπικού δικτύου ή χρησιμοποιεί "
+"με άλλο τρόπο μια %1$sδιατηρημένη διεύθυνση IP%2$s, εισαγάγετε το όνομα του "
+"διακομιστή εδώ για να επιτρέψετε την πρόσβαση. Για πολλαπλούς διακομιστές "
+"ημερολογίου, εισαγάγετε ένα όνομα διακομιστή ανά γραμμή. Ανατρέξτε στην "
+"%3$sτεκμηρίωση%4$s%5$s για περισσότερες πληροφορίες."
 
-#. translators: 1: HTML tag 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:92
+#: templates/admin/settings.php:93
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
 "URL. %1$s For example, you would enter %2$s, not %3$s."
 msgstr ""
 "Εισάγετε ένα όνομα κεντρικού υπολογιστή ανά γραμμή. Τα ονόματα κεντρικών "
-"υπολογιστών είναι το βασικό όνομα τομέα, όχι μια πλήρης διεύθυνση URL. %1$s "
-"Για παράδειγμα, θα πληκτρολογούσατε %2$s και όχι %3$s."
+"υπολογιστών είναι το βασικό όνομα τομέα, όχι η πλήρης διεύθυνση URL. %1$s "
+"Για παράδειγμα, θα εισάγατε %2$s, όχι %3$s."
+
+#: templates/admin/settings.php:99
+msgid "Allow access to these ports"
+msgstr "Επιτρέψτε την πρόσβαση σε αυτές τις θύρες"
 
 #: templates/admin/settings.php:102
+msgid ""
+"WordPress automatically allows access to ports 80, 443, and 8080. If you "
+"need to be able to access source calendars that use non-standard ports, "
+"enter the port numbers here, separated by commas."
+msgstr ""
+"Το WordPress επιτρέπει αυτόματα την πρόσβαση στις θύρες 80, 443 και 8080. "
+"Εάν πρέπει να έχετε πρόσβαση σε ημερολόγια πηγής που χρησιμοποιούν μη "
+"τυπικές θύρες, εισαγάγετε εδώ τους αριθμούς των θυρών, διαχωρισμένους με "
+"κόμματα."
+
+#: templates/admin/settings.php:113
 msgid "Caching"
 msgstr "Προσωρινή αποθήκευση"
 
-#: templates/admin/settings.php:105
+#: templates/admin/settings.php:117
 msgid "Transient (cache) expiration"
-msgstr "Παροδική λήξη"
+msgstr "Προσωρινή (cache) λήξη"
 
-#: templates/admin/settings.php:105
+#: templates/admin/settings.php:118
 msgid "seconds"
 msgstr "δευτερόλεπτα"
 
-#: templates/admin/settings.php:106
+#: templates/admin/settings.php:120
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
-"transients) before reloading. Default is 3600 (1 hour)."
+"transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
+"value is 120 (2 minutes)."
 msgstr ""
-"Ορίζει πόσο καιρό θα πρέπει να αποθηκεύονται τα δεδομένα τροφοδοσίας "
-"ημερολογίου στον διακομιστή (μεταβατικά στοιχεία WordPress) πριν από την "
-"επαναφόρτωση. Η προεπιλογή είναι 3600 (1 ώρα)."
+"Ορίζει για πόσο χρόνο τα δεδομένα του ημερολογίου θα αποθηκεύονται προσωρινά "
+"στον διακομιστή (WordPress transients) πριν από την επαναφόρτωση. Η "
+"προεπιλεγμένη τιμή είναι 3600 (1 ώρα). Η ελάχιστη επιτρεπόμενη τιμή είναι "
+"120 (2 λεπτά)."
 
-#: templates/admin/settings.php:115
-msgid "Miscellaneous"
-msgstr "Διάφορα"
+#: templates/admin/settings.php:131
+msgid "Admin"
+msgstr "Διαχειριστής"
 
-#: templates/admin/settings.php:118
+#: templates/admin/settings.php:135
+msgid "Minimum access role"
+msgstr "Ελάχιστος ρόλος πρόσβασης"
+
+#: templates/admin/settings.php:155
+#, php-format
+msgid ""
+"Identifies the minimum user role that is allowed to access %1$s admin pages. "
+"Certain areas such as Settings are further restricted to %2$s users only "
+"(%3$s users on Multisite configurations)."
+msgstr ""
+"Προσδιορίζει τον ελάχιστο ρόλο χρήστη που επιτρέπεται να έχει πρόσβαση %1$s "
+"στις σελίδες διαχειριστή. Ορισμένες περιοχές, όπως οι Ρυθμίσεις, "
+"περιορίζονται περαιτέρω μόνο σε %2$s χρήστες (%3$s χρήστες σε διαμορφώσεις "
+"πολλαπλών ιστότοπων)."
+
+#: templates/admin/settings.php:163
+msgid "Register Customizer"
+msgstr "Εγγραφή Προσαρμογέα"
+
+#: templates/admin/settings.php:165
+msgid ""
+"WordPress no longer includes a link to the Customizer in the Appearance menu "
+"when a Block Theme is active. Check this box if you wish to use the "
+"Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
+"may already register the Customizer, in which case, this setting will have "
+"no effect. (The checkbox only enables the Customizer when checked; it does "
+"not disable the Customizer when unchecked."
+msgstr ""
+"Το WordPress δεν περιλαμβάνει πλέον σύνδεσμο προς το Customizer στο μενού "
+"Appearance όταν είναι ενεργό ένα Block Theme. Επιλέξτε αυτό το πλαίσιο αν "
+"θέλετε να χρησιμοποιήσετε το Customizer, π.χ. για την εισαγωγή επιπλέον CSS. "
+"Σημείωση: Ορισμένα θέματα ή plugins ενδέχεται να έχουν ήδη καταχωρίσει το "
+"Customizer, οπότε αυτή η ρύθμιση δεν θα έχει κανένα αποτέλεσμα. (Το πλαίσιο "
+"ελέγχου ενεργοποιεί το Customizer μόνο όταν είναι επιλεγμένο. Δεν "
+"απενεργοποιεί το Customizer όταν δεν είναι επιλεγμένο."
+
+#: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr ""
-"Αφαίρεση του κουμπιού \"Προσθήκη ημερολογίου ICS\" στον κλασικό επεξεργαστή"
+"Κατάργηση του κουμπιού \"Προσθήκη ημερολογίου ICS\" στον κλασικό επεξεργαστή"
 
-#: templates/admin/settings.php:119
+#: templates/admin/settings.php:175
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
 "the button. Has no effect on sites using the Block Editor (Gutenberg)."
 msgstr ""
-"Από προεπιλογή, το Ημερολόγιο ICS προσθέτει ένα κουμπί \"Προσθήκη "
-"Ημερολογίου ICS\" στη γραμμή εργαλείων πάνω από τον επεξεργαστή WYSIWYG όταν "
-"χρησιμοποιείτε τον Κλασικό επεξεργαστή. Επιλέξτε αυτό το πλαίσιο για να "
-"αφαιρέσετε το κουμπί. Δεν έχει καμία επίδραση στις τοποθεσίες που "
-"χρησιμοποιούν τον Block Editor (Gutenberg)."
+"Από προεπιλογή, το ICS Calendar προσθέτει ένα κουμπί \"Προσθήκη ICS "
+"Calendar\" στη γραμμή εργαλείων πάνω από τον επεξεργαστή WYSIWYG όταν "
+"χρησιμοποιείτε τον κλασικό επεξεργαστή. Επιλέξτε αυτό το πλαίσιο για να "
+"καταργήσετε το κουμπί. Δεν έχει καμία επίδραση σε ιστότοπους που "
+"χρησιμοποιούν τον επεξεργαστή μπλοκ (Gutenberg)."
 
-#. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:126
+#: templates/admin/settings.php:187
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -880,14 +1132,18 @@ msgid ""
 "upgraded installations will continue to use the old default values, unless "
 "this box is checked. Read more about these changes on %2$sour blog%3$s."
 msgstr ""
-"%1$s Η έκδοση 10.6 εισήγαγε νέες προεπιλεγμένες τιμές για αρκετές "
-"παραμέτρους σύντομου κώδικα. Οι νέες εγκαταστάσεις χρησιμοποιούν αυτόματα "
+"%1$s Η έκδοση 10.6 εισήγαγε νέες προεπιλεγμένες τιμές για διάφορες "
+"παραμέτρους σύντομων κωδικών. Οι νέες εγκαταστάσεις χρησιμοποιούν αυτόματα "
 "τις νέες προεπιλεγμένες τιμές, αλλά οι αναβαθμισμένες εγκαταστάσεις θα "
-"συνεχίσουν να χρησιμοποιούν τις παλιές προεπιλεγμένες τιμές, εκτός εάν είναι "
-"επιλεγμένο αυτό το πλαίσιο. Διαβάστε περισσότερα σχετικά με αυτές τις "
-"αλλαγές στο %2$sιστολόγιό μας%3$s."
+"συνεχίσουν να χρησιμοποιούν τις παλιές προεπιλεγμένες τιμές, εκτός αν "
+"επιλεγεί αυτό το πλαίσιο. Διαβάστε περισσότερα για αυτές τις αλλαγές στο "
+"%2$sblog μας%3$s."
 
-#: templates/admin/sidebar.php:11
+#: templates/admin/sidebar.php:13
+msgid "User Guide"
+msgstr "Οδηγός χρήστη"
+
+#: templates/admin/sidebar.php:15
 msgid ""
 "Our complete user guide is available with full translation into dozens of "
 "languages on our website:"
@@ -895,48 +1151,105 @@ msgstr ""
 "Ο πλήρης οδηγός χρήσης είναι διαθέσιμος με πλήρη μετάφραση σε δεκάδες "
 "γλώσσες στον ιστότοπό μας:"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/sidebar.php:18
+#: templates/admin/sidebar.php:22
 #, php-format
 msgid "For assistance, please use our %1$ssupport request form%2$s."
-msgstr "Για βοήθεια, χρησιμοποιήστε τη φόρμα %1$sαίτησης υποστήριξης%2$s."
+msgstr "Για βοήθεια, χρησιμοποιήστε τη %1$sφόρμα αίτησης υποστήριξης%2$s."
 
-#. translators: 1. HTML tags 2. HTML tags
 #: templates/admin/sidebar.php:31
 #, php-format
 msgid ""
-"When contacting support, please include the %1$sSystem Report%2$s from this "
+"When contacting support, please include the %1$ssystem report%2$s from this "
 "page."
 msgstr ""
-"Όταν επικοινωνείτε με την υποστήριξη, παρακαλούμε αναφέρετε την %1$sΑναφορά "
-"συστήματος%2$s από αυτή τη σελίδα."
+"Όταν επικοινωνείτε με την υποστήριξη, παρακαλούμε να συμπεριλάβετε την "
+"%1$sαναφορά συστήματος%2$s από αυτή τη σελίδα."
 
 #: templates/admin/sidebar.php:37
 msgid "Spread the word!"
 msgstr "Διέδωσέ το!"
 
-#. translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag
 #: templates/admin/sidebar.php:41
 #, php-format
 msgid ""
 "If you find %1$s useful, you can help support our continued growth and "
 "development with a %2$sfive-star review%3$s. Thank you!"
 msgstr ""
-"Αν θεωρείτε το %1$s χρήσιμο, μπορείτε να βοηθήσετε στη συνεχή ανάπτυξη και "
-"εξέλιξή μας με μια %2$sκριτική πέντε αστέρων%3$s. Σας ευχαριστούμε!"
+"Αν θεωρείτε το %1$s χρήσιμο, μπορείτε να συμβάλλετε στη συνεχή ανάπτυξη και "
+"εξέλιξή μας με μια %2$sαξιολόγηση πέντε αστέρων%3$s. Σας ευχαριστούμε!"
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/utilities.php:9
+#: templates/admin/utilities.php:19
+#, php-format
+msgid "Calendar Status: %1$sPaused%2$s"
+msgstr "Κατάσταση ημερολογίου: %1$sΣε παύση%2$s"
+
+#: templates/admin/utilities.php:23
+#, php-format
+msgid "Calendar Status: %1$sActive%2$s"
+msgstr "Κατάσταση ημερολογίου: %1$sΕνεργό%2$s"
+
+#: templates/admin/utilities.php:29
+#, php-format
+msgid ""
+"Use the pause button if you need to temporarily turn off %1$s on your front "
+"end pages."
+msgstr ""
+"Χρησιμοποιήστε το κουμπί παύσης αν χρειαστεί να απενεργοποιήσετε προσωρινά "
+"το %1$s στις αρχικές σελίδες σας."
+
+#: templates/admin/utilities.php:41
+msgid "Resume Calendars"
+msgstr "Ημερολόγια βιογραφικών"
+
+#: templates/admin/utilities.php:52
+msgid "Pause Calendars"
+msgstr "Παύση Ημερολόγια"
+
+#: templates/admin/utilities.php:64
+#, php-format
+msgid ""
+"No content will be altered, but your calendars will be hidden and no %1$s "
+"asset files (JavaScript, CSS) will be loaded on front-end pages. If you are "
+"using caching via a plugin or through your hosting provider, you may need to "
+"clear the cache after changing this setting."
+msgstr ""
+"Δεν θα αλλάξει κανένα περιεχόμενο, αλλά τα ημερολόγιά σας θα κρυφτούν και "
+"δεν θα φορτωθούν αρχεία %1$s (JavaScript, CSS) στις σελίδες του front-end. "
+"Εάν χρησιμοποιείτε προσωρινή αποθήκευση μέσω ενός plugin ή μέσω του παρόχου "
+"φιλοξενίας σας, ίσως χρειαστεί να καθαρίσετε την προσωρινή μνήμη μετά την "
+"αλλαγή αυτής της ρύθμισης."
+
+#: templates/admin/utilities.php:73
 #, php-format
 msgid "%1$s Data Cache"
-msgstr "%1$s Κρυφή μνήμη δεδομένων"
+msgstr "%1$s Προσωρινή μνήμη δεδομένων"
 
-#: templates/admin/utilities.php:16
+#: templates/admin/utilities.php:79
+msgid ""
+"This will immediately clear all existing cached calendar data (purge "
+"transients), forcing WordPress to reload all calendars the next time they "
+"are viewed. Caching will then resume as before."
+msgstr ""
+"Αυτό θα διαγράψει αμέσως όλα τα υπάρχοντα δεδομένα του ημερολογίου που έχουν "
+"αποθηκευτεί στην προσωρινή μνήμη (καθαρισμός προσωρινών αρχείων), "
+"αναγκάζοντας το WordPress να φορτώσει εκ νέου όλα τα ημερολόγια την επόμενη "
+"φορά που θα προβληθούν. Η αποθήκευση στην προσωρινή μνήμη θα συνεχιστεί όπως "
+"πριν."
+
+#: templates/admin/utilities.php:81
 msgid "Clear Cached Calendar Data"
-msgstr "Απαλοιφή αποθηκευμένων δεδομένων ημερολογίου"
+msgstr "Εκκαθάριση προσωρινά αποθηκευμένων δεδομένων ημερολογίου"
 
-#. translators: 1: Plugin name (do not modify)
-#: templates/admin/utilities.php:20
+#: templates/admin/utilities.php:89
+msgid ""
+"If you are using a third-party caching plugin, you may need to clear your "
+"site-wide cache after running this utility."
+msgstr ""
+"Εάν χρησιμοποιείτε plugin προσωρινής αποθήκευσης τρίτου κατασκευαστή, ίσως "
+"χρειαστεί να καθαρίσετε την προσωρινή μνήμη ολόκληρου του ιστότοπου μετά την "
+"εκτέλεση αυτού του βοηθητικού προγράμματος."
+
+#: templates/admin/utilities.php:91
 #, php-format
 msgid ""
 "Are you sure? This will reset all %1$s settings to their defaults. Your "
@@ -945,155 +1258,163 @@ msgid ""
 "third-party caching plugin, you may need to clear your site-wide cache after "
 "running this utility."
 msgstr ""
-"Είσαι σίγουρος Αυτό θα επαναφέρει όλες τις ρυθμίσεις %1$s στις προεπιλογές "
-"τους. Οι αποθηκευμένες ρυθμίσεις ημερολογίου και οι συντομεύσεις σας θα "
-"διατηρηθούν, αλλά η επαναφορά των προεπιλογών μπορεί να αλλάξει την εμφάνιση "
-"των ημερολογίων σας. Εάν χρησιμοποιείτε ένα πρόσθετο προσωρινής αποθήκευσης "
-"τρίτου μέρους, ενδέχεται να χρειαστεί να καθαρίσετε την προσωρινή μνήμη "
-"cache ολόκληρης της τοποθεσίας σας μετά την εκτέλεση αυτού του βοηθητικού "
+"Είστε σίγουροι; Αυτό θα επαναφέρει όλες τις %1$s ρυθμίσεις στις "
+"προεπιλεγμένες τιμές τους. Οι αποθηκευμένες ρυθμίσεις του ημερολογίου και οι "
+"σύντομοι κωδικοί θα διατηρηθούν, αλλά η επαναφορά των προεπιλεγμένων τιμών "
+"ενδέχεται να αλλάξει την εμφάνιση των ημερολογίων σας. Εάν χρησιμοποιείτε "
+"ένα πρόσθετο cache τρίτου κατασκευαστή, ενδέχεται να χρειαστεί να καθαρίσετε "
+"το cache ολόκληρου του ιστότοπου μετά την εκτέλεση αυτού του βοηθητικού "
 "προγράμματος."
 
-#. translators: 1: Plugin name (do not modify)
-#: templates/admin/utilities.php:26
-#, php-format
-msgid "Also reset all %1$s settings"
-msgstr "Επίσης, επαναφέρετε όλες τις ρυθμίσεις %1$s"
+#: templates/admin/utilities.php:95
+msgid "Only clear transients (default)"
+msgstr "Μόνο σαφείς μεταβατικές καταστάσεις (προεπιλογή)"
 
-#: templates/admin/utilities.php:30
-msgid ""
-"This will immediately clear all existing cached calendar data (purge "
-"transients), forcing WordPress to reload all calendars the next time they "
-"are viewed. Caching will then resume as before."
+#: templates/admin/utilities.php:99
+msgid "Also clear all saved ICS feed URLs"
 msgstr ""
-"Αυτό θα διαγράψει αμέσως όλα τα υπάρχοντα προσωρινά αποθηκευμένα δεδομένα "
-"ημερολογίου (εκκαθάριση μεταβατικών), αναγκάζοντας το WordPress να φορτώσει "
-"ξανά όλα τα ημερολόγια την επόμενη φορά που θα προβληθούν. Η κατάτηση θα "
-"συνεχιστεί όπως πριν."
+"Επίσης, διαγράψτε όλες τις αποθηκευμένες διευθύνσεις URL τροφοδοσίας ICS."
 
-#: templates/admin/utilities.php:34
+#: templates/admin/utilities.php:105
+#, php-format
+msgid "Reset %1$sall%2$s %3$s settings (including transients and feed URLs)"
+msgstr ""
+"Επαναφορά %1$sόλων%2$s %3$s των ρυθμίσεων (συμπεριλαμβανομένων των "
+"μεταβατικών και των URL τροφοδοσίας)"
+
+#: templates/admin/utilities.php:115
 msgid "Last cleared:"
 msgstr "Τελευταία εκκαθάριση:"
 
-#: templates/admin/utilities.php:39
+#: templates/admin/utilities.php:121
 msgid "never"
 msgstr "ποτέ"
 
-#: templates/admin/utilities.php:49
+#: templates/admin/utilities.php:133
 msgid "ICS Feed URL Tester"
-msgstr "Ελεγκτής URL τροφοδοσίας κοινόχρηστης σύνδεσης στο Internet"
+msgstr "Δοκιμαστής URL ροής ICS"
 
-#: templates/admin/utilities.php:51
+#: templates/admin/utilities.php:135
 msgid ""
 "If you are concerned that the plugin is not properly retrieving your feed, "
 "you can test the URL here."
 msgstr ""
-"Αν ανησυχείτε ότι το πρόσθετο δεν ανακτά σωστά την τροφοδοσία σας, μπορείτε "
-"να δοκιμάσετε τη διεύθυνση URL εδώ."
+"Εάν ανησυχείτε ότι το πρόσθετο δεν ανακτά σωστά τη ροή σας, μπορείτε να "
+"δοκιμάσετε τη διεύθυνση URL εδώ."
 
-#: templates/admin/utilities.php:58
+#: templates/admin/utilities.php:141 templates/admin/utilities.php:142
 msgid "Enter feed URL..."
-msgstr "Εισαγωγή διεύθυνσης URL τροφοδοσίας..."
+msgstr "Εισάγετε τη διεύθυνση URL της τροφοδοσίας..."
 
-#: templates/admin/utilities.php:58
+#: templates/admin/utilities.php:143
 msgid "Test URL"
 msgstr "URL Δοκιμών"
 
-#: templates/admin/utilities.php:66
+#: templates/admin/utilities.php:151
 msgid "Results:"
 msgstr "Αποτελέσματα:"
 
-#. translators: 1: Dynamic value
-#: templates/admin/utilities.php:73
+#: templates/admin/utilities.php:155
 #, php-format
 msgid "%1$s received."
-msgstr "%1$s λαμβάνεται."
+msgstr "%1$s ελήφθη."
 
-#: templates/admin/utilities.php:82
+#: templates/admin/utilities.php:163
 msgid "This appears to be a valid ICS feed URL."
 msgstr "Αυτή φαίνεται να είναι μια έγκυρη διεύθυνση URL τροφοδοσίας ICS."
 
-#: templates/admin/utilities.php:87
+#: templates/admin/utilities.php:163 templates/admin/utilities.php:168
+msgid "unknown"
+msgstr "άγνωστο"
+
+#: templates/admin/utilities.php:168
 msgid "This does not appear to be a valid ICS feed URL."
-msgstr "Αυτό δεν φαίνεται να είναι έγκυρο URL τροφοδοσίας ICS."
+msgstr "Αυτή η διεύθυνση URL δεν φαίνεται να είναι έγκυρη για τροφοδοσία ICS."
 
-#: templates/admin/utilities.php:92
+#: templates/admin/utilities.php:173
 msgid "Could not retrieve data from the requested URL."
-msgstr ""
-"Δεν ήταν δυνατή η ανάκτηση δεδομένων από τη διεύθυνση URL που ζητήθηκε."
+msgstr "Δεν ήταν δυνατή η ανάκτηση δεδομένων από τη ζητούμενη διεύθυνση URL."
 
-#: templates/admin/utilities.php:97
+#: templates/admin/utilities.php:178
 msgid ""
 "An unknown error occurred while attempting to retrieve the requested URL."
 msgstr ""
-"Παρουσιάστηκε άγνωστο σφάλμα κατά την προσπάθεια ανάκτησης της διεύθυνσης "
-"URL που ζητήθηκε."
+"Παρουσιάστηκε ένα άγνωστο σφάλμα κατά την προσπάθεια ανάκτησης της "
+"ζητούμενης διεύθυνσης URL."
 
-#: templates/admin/utilities.php:132
+#: templates/admin/utilities.php:211
 msgid ""
 "Please copy the following text and include it in your message when emailing "
 "support."
 msgstr ""
-"Αντιγράψτε το παρακάτω κείμενο και συμπεριλάβετε το στο μήνυμά σας κατά την "
-"αποστολή της υποστήριξης μέσω ηλεκτρονικού ταχυδρομείου."
+"Αντιγράψτε το παρακάτω κείμενο και συμπεριλάβετέ το στο μήνυμά σας όταν "
+"στέλνετε email στην υποστήριξη."
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/utilities.php:135
+#: templates/admin/utilities.php:214
 #, php-format
 msgid ""
 "Also please include the %1$s shortcode exactly as you have it entered on the "
 "affected page."
 msgstr ""
-"Επίσης, παρακαλούμε να συμπεριλάβετε τον σύντομο κωδικό %1$s ακριβώς όπως "
-"τον έχετε εισάγει στην επηρεαζόμενη σελίδα."
+"Επίσης, παρακαλώ συμπεριλάβετε τον σύντομο κωδικό %1$s ακριβώς όπως τον "
+"έχετε εισάγει στη σελίδα που αφορά το πρόβλημα."
 
-#: templates/admin/utilities.php:136
-msgid ""
-"For your site security please do NOT post the System Report in the support "
-"forums."
-msgstr ""
-"Για την ασφάλεια του ιστότοπού σας, παρακαλούμε ΜΗΝ δημοσιεύετε την Αναφορά "
-"συστήματος στα φόρουμ υποστήριξης."
-
-#: templates/calendar-basic.php:55 templates/calendar-list.php:57
+#: templates/calendar-basic.php:60 templates/calendar-list.php:62
 msgid "No events found."
 msgstr "Δεν βρέθηκαν συμβάντα."
 
-#: templates/calendar-basic.php:76 templates/calendar-list.php:78
+#: templates/calendar-basic.php:86 templates/calendar-list.php:88
 msgid "Previous Page"
 msgstr "Προηγούμενη Σελίδα"
 
-#: templates/calendar-basic.php:77 templates/calendar-list.php:79
+#: templates/calendar-basic.php:87 templates/calendar-list.php:89
 msgid "Next Page"
 msgstr "Επόμενη Σελίδα"
 
-#: templates/calendar-list.php:287 templates/calendar-month.php:202
-#: templates/calendar-week.php:211
+#: templates/calendar-list.php:297 templates/calendar-month.php:215
+#: templates/calendar-week.php:222
 msgid "All Day"
 msgstr "Ολοήμερο"
 
-#: templates/calendar-month.php:58
+#: templates/calendar-month.php:61
+msgid "Previous Month"
+msgstr "Προηγούμενος μήνας"
+
+#: templates/calendar-month.php:62
+msgid "Next Month"
+msgstr "Επόμενος μήνας"
+
+#: templates/calendar-month.php:63
 msgid "Today"
 msgstr "Σήμερα"
 
-#: templates/calendar-month.php:286 templates/calendar-week.php:298
-msgid "No events."
-msgstr "Όχι γεγονότα."
+#: templates/calendar-month.php:69 templates/calendar-month.php:70
+msgid "Month selection"
+msgstr "Επιλογή μήνα"
 
-#: templates/calendar-month.php:298
+#: templates/calendar-month.php:299 templates/calendar-week.php:309
+msgid "No events."
+msgstr "Δεν υπάρχουν εκδηλώσεις."
+
+#: templates/calendar-month.php:311
 msgid "No additional events this month."
 msgstr "Δεν υπάρχουν επιπλέον εκδηλώσεις αυτό το μήνα."
 
-#: templates/calendar-week.php:66
+#: templates/calendar-week.php:70 templates/calendar-week.php:71
+msgid "Week selection"
+msgstr "Επιλογή εβδομάδας"
+
+#: templates/calendar-week.php:72
 msgid "Last week"
 msgstr "Την προηγούμενη εβδομάδα"
 
-#: templates/calendar-week.php:67
+#: templates/calendar-week.php:73
 msgid "This week"
 msgstr "Αυτή την εβδομάδα"
 
-#: templates/calendar-week.php:68
+#: templates/calendar-week.php:74
 msgid "Next week"
-msgstr "Επόμενη Εβδομάδα"
+msgstr "Την επόμενη εβδομάδα"
 
 #. Plugin Name of the plugin/theme
 msgid "ICS Calendar"
@@ -1110,13 +1431,86 @@ msgid ""
 "into a seamlessly integrated, auto-updating, zero-maintenance WordPress "
 "experience."
 msgstr ""
-"Μετατρέψτε το Ημερολόγιο Google, το Ημερολόγιο Microsoft Office 365 ή το "
-"Ημερολόγιο iCloud της Apple σε μια απρόσκοπτα ενσωματωμένη εμπειρία "
-"WordPress με αυτόματη ενημέρωση και μηδενική συντήρηση."
+"Μετατρέψτε το Ημερολόγιο Google, το Microsoft Office 365 ή το Ημερολόγιο "
+"Apple iCloud σε μια απρόσκοπτα ενσωματωμένη, αυτόματα ενημερωμένη εμπειρία "
+"WordPress που δεν απαιτεί συντήρηση."
 
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid ""
+#~ "Configure all calendar settings with an easy visual interface... no need "
+#~ "to manually type shortcodes."
+#~ msgstr ""
+#~ "Διαμορφώστε όλες τις ρυθμίσεις του ημερολογίου με μια εύκολη οπτική "
+#~ "διεπαφή... χωρίς να χρειάζεται να πληκτρολογείτε χειροκίνητα κωδικούς "
+#~ "συντόμευσης."
+
+#~ msgid ""
+#~ "New ways to display your calendar including Full, Up Next, Masonry, Month "
+#~ "with Sidebar, Widget, and more. Additional capabilities are added to the "
+#~ "core Month, Basic, List and Week views."
+#~ msgstr ""
+#~ "Νέοι τρόποι εμφάνισης του ημερολογίου σας, όπως Πλήρης, Επόμενο, Masonry, "
+#~ "Μήνας με πλαϊνή στήλη, Widget και άλλοι. Πρόσθετες δυνατότητες έχουν "
+#~ "προστεθεί στις βασικές προβολές Μήνας, Βασική, Λίστα και Εβδομάδα."
+
+#~ msgid ""
+#~ "Easy-to-use tools to completely customize your calendar colors, "
+#~ "typography and more."
+#~ msgstr ""
+#~ "Εύχρηστα εργαλεία για να προσαρμόσετε πλήρως τα χρώματα, τη γραμματοσειρά "
+#~ "και άλλα στοιχεία του ημερολογίου σας."
+
+#~ msgid "Go PRO!"
+#~ msgstr "Αγορά PRO!"
+
+#, php-format
+#~ msgid "Also reset all %1$s settings"
+#~ msgstr "Επίσης, επαναφέρετε όλες τις ρυθμίσεις %1$s"
+
+#~ msgid ""
+#~ "Easily modify your calendar color palettes, fonts, and more, site-wide."
+#~ msgstr ""
+#~ "Τροποποιήστε εύκολα τις παλέτες χρωμάτων του ημερολογίου σας, τις "
+#~ "γραμματοσειρές και πολλά άλλα, σε ολόκληρο τον ιστότοπο."
+
+#, php-format
+#~ msgid ""
+#~ "Inverts color palette (light colors on a dark background). %1$sNote:%2$s "
+#~ "Dark mode also automatically applies style changes similar to the %3$s "
+#~ "and %4$s shortcode parameters, so you do not need to include them in your "
+#~ "shortcode."
+#~ msgstr ""
+#~ "Αντιστρέφει την παλέτα χρωμάτων (ανοιχτά χρώματα σε σκούρο φόντο). "
+#~ "%1$sΣημείωση: %2$s Η σκοτεινή λειτουργία εφαρμόζει επίσης αυτόματα "
+#~ "αλλαγές στυλ παρόμοιες με τις παραμέτρους %3$s και %4$s του σύντομου "
+#~ "κώδικα, οπότε δεν χρειάζεται να τις συμπεριλάβετε στον σύντομο κώδικά σας."
+
+#~ msgid ""
+#~ "When checked, all calendars will render via AJAX (asynchronously after "
+#~ "the page loads). This is especially useful in conjunction with other "
+#~ "caching plugins, or if your calendars contain a large number of events. "
+#~ "Normally, calendar data is sent directly in the HTML of the initial page "
+#~ "load unless AJAX has been specified in the shortcode."
+#~ msgstr ""
+#~ "Όταν είναι επιλεγμένο, όλα τα ημερολόγια θα εμφανίζονται μέσω AJAX "
+#~ "(ασύγχρονα μετά τη φόρτωση της σελίδας). Αυτό είναι ιδιαίτερα χρήσιμο σε "
+#~ "συνδυασμό με άλλα πρόσθετα προσωρινής αποθήκευσης ή αν τα ημερολόγιά σας "
+#~ "περιέχουν μεγάλο αριθμό εκδηλώσεων. Κανονικά, τα δεδομένα του ημερολογίου "
+#~ "αποστέλλονται απευθείας στην HTML της αρχικής φόρτωσης της σελίδας, εκτός "
+#~ "εάν έχει καθοριστεί AJAX στον σύντομο κώδικα."
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Διάφορα"
+
+#~ msgid ""
+#~ "For your site security please do NOT post the System Report in the "
+#~ "support forums."
+#~ msgstr ""
+#~ "Για την ασφάλεια του ιστότοπού σας, παρακαλούμε ΜΗΝ δημοσιεύετε την "
+#~ "Αναφορά συστήματος στα φόρουμ υποστήριξης."
 
 #~ msgid "Permanent feed URL mask IDs"
 #~ msgstr "Μόνιμα αναγνωριστικά μάσκας URL τροφοδοσίας"

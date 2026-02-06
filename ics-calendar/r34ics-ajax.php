@@ -1,8 +1,11 @@
 <?php
+// phpcs:disable WordPress.Security.NonceVerification.Missing
+// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+
+// Don't load directly
+if (!defined('ABSPATH')) { exit; }
 
 function r34ics_ajax() {
-	// phpcs:disable WordPress.Security.NonceVerification.Missing
-	// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 	/**
 	 * Note about WordPress.Security.NonceVerification.Missing:
 	 *
@@ -21,11 +24,7 @@ function r34ics_ajax() {
 	$valid_atts = $R34ICS->shortcode_defaults_merge();
 		
 	// Don't do anything in Block Editor
-	if (function_exists('get_current_screen') && $current_screen = get_current_screen()) {
-		if (method_exists($current_screen, 'is_block_editor') && $current_screen->is_block_editor()) {
-			exit;
-		}
-	}
+	if (r34ics_is_block_editor()) { exit; }
 	
 	if (!empty($_POST)) {
 
@@ -76,12 +75,11 @@ function r34ics_ajax() {
 
 		// Render debugging output
 		if (!empty($args['debug'])) {
-			_r34ics_wp_footer_debug_output();
+			r34ics__wp_footer_debug_output();
 		}
 
 	}
 	exit;
-	// phpcs:enable
 }
 
 add_action('wp_ajax_r34ics_ajax', 'r34ics_ajax');

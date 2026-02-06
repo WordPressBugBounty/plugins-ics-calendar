@@ -1,4 +1,9 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+
+// Don't load directly
+if (!defined('ABSPATH')) { exit; }
+
 // Require object
 if (empty($ics_data)) { return false; }
 
@@ -62,12 +67,18 @@ if ($args['toggle'] === 'lightbox') {
 	// Display calendar
 	if (empty($fixed_dates)) {
 		?>
-		<select class="ics-calendar-select" style="display: none;" autocomplete="off">
+		<label class="screen-reader-text" for="<?php echo esc_attr($ics_data['guid']); ?>-select"><?php esc_html_e('Week selection', 'ics-calendar'); ?></label>
+		<select role="listbox" aria-label="<?php esc_attr_e('Week selection', 'ics-calendar'); ?>" id="<?php echo esc_attr($ics_data['guid']); ?>-select" class="ics-calendar-select" style="display: none;" autocomplete="off">
 			<option value="previous-week"><?php esc_html_e('Last week', 'ics-calendar'); ?></option>
 			<option value="current-week" selected="selected"><?php esc_html_e('This week', 'ics-calendar'); ?></option>
 			<option value="next-week"><?php esc_html_e('Next week', 'ics-calendar'); ?></option>
 		</select>
 		<?php
+	}
+
+	// Print
+	if (!empty($args['print'])) {
+		echo wp_kses_post($R34ICS->print_button_html($args));
 	}
 
 	// Toggle show/hide past events on mobile

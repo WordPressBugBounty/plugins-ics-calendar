@@ -13,20 +13,25 @@
 	 * Color variables
 	 * These allow for easy application of a full color palette
 	 */
-	--r34ics--color--black: #10181f;
-	--r34ics--color--darkgray: #a3a8ac;
-	--r34ics--color--dimgray: #60686f;
-	--r34ics--color--dodgerblue: dodgerblue;
-	--r34ics--color--gainsboro: #d9dcdf;
-	--r34ics--color--gold: gold;
-	--r34ics--color--gray: #70787f;
-	--r34ics--color--ics-purple: #312a85;
-	--r34ics--color--ics-red: #dc143c;
-	--r34ics--color--lemonchiffon: lemonchiffon;
-	--r34ics--color--limegreen: limegreen;
-	--r34ics--color--orangered: orangered;
+	--r34ics--color--ics-red: #ee0055; /* rgb(238,0,85); previously #dc143c */
+	--r34ics--color--ics-purple: #3300bb; /* rgb(51,0,187); previously #312a85 */
+	--r34ics--color--ics-blue: #0099ff; /* rgb(0,153,255); previously dodgerblue #1e90ff */
 	--r34ics--color--white: #ffffff;
 	--r34ics--color--whitesmoke: #f0f3f6;
+	--r34ics--color--gainsboro: #d9dcdf;
+	--r34ics--color--darkgray: #a3a8ac;
+	--r34ics--color--gray: #70787f;
+	--r34ics--color--dimgray: #60686f;
+	--r34ics--color--black: #10181f;
+	--r34ics--color--darkorange: darkorange; /* #ff8c00 */
+	--r34ics--color--dodgerblue: dodgerblue; /* #1e90ff */
+	--r34ics--color--forestgreen: forestgreen; /* #228b22 */
+	--r34ics--color--gold: gold; /* #ffd700 */
+	--r34ics--color--lemonchiffon: lemonchiffon; /* #fffacd */
+	--r34ics--color--limegreen: limegreen; /* #32cd32 */
+	--r34ics--color--orangered: orangered; /* #ff4500 */
+	--r34ics--color--trans03: rgba(105,105,105,0.03);
+	--r34ics--color--trans05: rgba(105,105,105,0.05);
 	--r34ics--color--trans10: rgba(105,105,105,0.1);
 	--r34ics--color--trans20: rgba(105,105,105,0.2);
 	--r34ics--color--trans30: rgba(105,105,105,0.3);
@@ -43,16 +48,31 @@
 	 * to specific elements when the default color palette combinations are insufficient
 	 */
 	--r34ics--element--basic--date--background: var(--r34ics--color--trans10);
-	--r34ics--element--basic--date--border: 2px solid var(--r34ics--color--trans40);
-	--r34ics--element--color--whitetext: var(--r34ics--color--white);
-	--r34ics--element--descloc-feed-label--border-bottom: 1px solid var(--r34ics--color--trans30);
-	--r34ics--element--descloc-feed-label--border-left: 6px solid var(--r34ics--color--trans30);
+	--r34ics--element--basic--date--border: 2px solid var(--r34ics--element--basic--date--border-color);
+	--r34ics--element--basic--date--border-color: var(--r34ics--color--trans40);
+	--r34ics--element--basic--date--color: var(--r34ics--color--black);
+	--r34ics--element--button--background: var(--r34ics--color--gray);
+	--r34ics--element--button--background-hover: var(--r34ics--color--darkgray);
+	--r34ics--element--button--border: 1px solid var(--r34ics--element--button--border-color);
+	--r34ics--element--button--border-color: var(--r34ics--color--gray);
+	--r34ics--element--button--border-color-hover: var(--r34ics--color--darkgray);
+	--r34ics--element--button--border-radius: 4px;
+	--r34ics--element--button--color: var(--r34ics--color--white);
+	--r34ics--element--button--color-hover: var(--r34ics--color--white);
+	--r34ics--element--descloc-feed-label--border-bottom: 1px solid var(--r34ics--element--descloc-feed-label--border-bottom-color);
+	--r34ics--element--descloc-feed-label--border-bottom-color: var(--r34ics--color--trans30);
+	--r34ics--element--descloc-feed-label--border-left: 6px solid var(--r34ics--element--descloc-feed-label--border-left-color);
+	--r34ics--element--descloc-feed-label--border-left-color: var(--r34ics--color--trans30);
 	--r34ics--element--descloc-feed-label-before--background: var(--r34ics--color--trans30);
-	--r34ics--element--events--color--whitetext: var(--r34ics--color--white);
+	--r34ics--element--events--accent--background: var(--r34ics--color--gray);
+	--r34ics--element--events--accent--border-color: var(--r34ics--color--gray);
+	--r34ics--element--events--accent--color: var(--r34ics--color--white);
 	--r34ics--element--events--color: var(--r34ics--color--black);
-	--r34ics--element--hover-block--background--whitetext: var(--r34ics--color--dimgray);
+	--r34ics--element--events--color--link: inherit; /* Use the theme's default color for this element */
+	--r34ics--element--events--color--link-hover: inherit; /* Use the theme's default color for this element */
 	--r34ics--element--hover-block--background: var(--r34ics--color--white);
-	--r34ics--element--hover-block--border: 1px solid var(--r34ics--color--darkgray);
+	--r34ics--element--hover-block--border: 1px solid var(--r34ics--element--hover-block--border-color);
+	--r34ics--element--hover-block--border-color: var(--r34ics--color--darkgray);
 	--r34ics--element--hover-block--box-shadow: 2px 2px 5px var(--r34ics--color--trans20);
 	--r34ics--element--lightbox--background: var(--r34ics--color--trans50);
 	--r34ics--element--lightbox-close--background: var(--r34ics--color--black);
@@ -61,29 +81,62 @@
 	--r34ics--element--lightbox-content--background: var(--r34ics--color--white);
 	--r34ics--element--lightbox-content--box-shadow: 3px 3px 9px var(--r34ics--color--trans50);
 	--r34ics--element--lightbox-content--color: var(--r34ics--color--black);
-	--r34ics--element--month--background--whitetext: var(--r34ics--color--black);
 	--r34ics--element--month--background: var(--r34ics--color--white);
-	--r34ics--element--month--day--background--whitetext: var(--r34ics--color--dimgray);
 	--r34ics--element--month--day--background: var(--r34ics--color--whitesmoke);
 	--r34ics--element--month--day--color: var(--r34ics--color--black);
-	--r34ics--element--month--events-li--border-bottom: 1px solid var(--r34ics--color--gainsboro);
-	--r34ics--element--month--off--background--whitetext: var(--r34ics--color--dimgray);
+	--r34ics--element--month--events-li--border-bottom: 1px solid var(--r34ics--element--month--events-li--border-bottom-color);
+	--r34ics--element--month--events-li--border-bottom-color: var(--r34ics--color--gainsboro);
+	--r34ics--element--month-label--color: inherit; /* Use the theme's default color for this element */
 	--r34ics--element--month--off--background: var(--r34ics--color--whitesmoke);
 	--r34ics--element--month--off--color: var(--r34ics--color--gray);
-	--r34ics--element--month--th--background--whitetext: var(--r34ics--color--dimgray);
 	--r34ics--element--month--th--background: var(--r34ics--color--gainsboro);
 	--r34ics--element--month--th--color: var(--r34ics--color--black);
-	--r34ics--element--month--th-td--border: 1px solid var(--r34ics--color--gainsboro);
-	--r34ics--element--month--today-day--background--whitetext: var(--r34ics--color--gainsboro);
+	--r34ics--element--month--th-td--border: 1px solid var(--r34ics--element--month--th-td--border-color);
+	--r34ics--element--month--th-td--border-color: var(--r34ics--color--gainsboro);
 	--r34ics--element--month--today-day--background: var(--r34ics--color--gray);
-	--r34ics--element--month--today-day--color--whitetext: var(--r34ics--color--black);
 	--r34ics--element--month--today-day--color: var(--r34ics--color--white);
-	--r34ics--element--multiday--background: var(--r34ics--color--gainsboro);
 	--r34ics--element--print--background: var(--r34ics--color--white);
-	--r34ics--element--print--border: 1px solid var(--r34ics--color--gainsboro);
+	--r34ics--element--print--border: 1px solid var(--r34ics--element--print--border-color);
+	--r34ics--element--print--border-color: var(--r34ics--color--gainsboro);
 	--r34ics--element--print--color: var(--r34ics--color--black);
+	--r34ics--element--select--background: var(--r34ics--color--whitesmoke);
 	--r34ics--element--select--color: var(--r34ics--color--black);
 	
+}
+
+.ics-calendar.darkmode {
+
+	--r34ics--element--basic--date--color: var(--r34ics--color--white);
+	--r34ics--element--events--color: var(--r34ics--color--white);
+	--r34ics--element--hover-block--background: var(--r34ics--color--black);
+	--r34ics--element--hover-block--border-color: var(--r34ics--color--dimgray);
+	--r34ics--element--lightbox-close--background: var(--r34ics--color--white);
+	--r34ics--element--lightbox-close--color: var(--r34ics--color--black);
+	--r34ics--element--lightbox-content--background: var(--r34ics--color--black);
+	--r34ics--element--lightbox-content--color: var(--r34ics--color--white);
+	--r34ics--element--month--background: var(--r34ics--color--black);
+	--r34ics--element--month--day--background: var(--r34ics--color--trans30);
+	--r34ics--element--month--day--color: var(--r34ics--color--white);
+	--r34ics--element--month--events-li--border-bottom-color: var(--r34ics--color--dimgray);
+	--r34ics--element--month-label--color: var(--r34ics--color--white);
+	--r34ics--element--month--off--background: var(--r34ics--color--trans50);
+	--r34ics--element--month--off--color: var(--r34ics--color--gray);
+	--r34ics--element--month--th--background: var(--r34ics--color--dimgray);
+	--r34ics--element--month--th--color: var(--r34ics--color--white);
+	--r34ics--element--month--th-td--border-color: var(--r34ics--color--trans50);
+	--r34ics--element--month--today-day--background: var(--r34ics--color--gray);
+	--r34ics--element--month--today-day--color: var(--r34ics--color--white);
+	--r34ics--element--multiday--background: var(--r34ics--color--dimgray);
+	--r34ics--element--print--background: var(--r34ics--color--black);
+	--r34ics--element--print--border-color: var(--r34ics--color--trans50);
+	--r34ics--element--print--color: var(--r34ics--color--white);
+	--r34ics--element--select--background: var(--r34ics--color--trans30);
+	--r34ics--element--select--color: var(--r34ics--color--white);
+
+}
+
+.ics-calendar.solidcolors {
+	--r34ics--element--events--color: var(--r34ics--color--white);
 }
 
 
@@ -111,8 +164,9 @@
 	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td .multiday_middle,
 	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td .multiday_last
 	{
-		background-color: var(--r34ics--element--multiday--background);
+		background-color: var(--r34ics--element--events--accent--background);
 		border-bottom: 0 !important;
+		color: var(--r34ics--element--events--accent--color);
 		margin-top: 1px;
 		margin-bottom: 1px;
 		padding-right: 0.8em !important;
@@ -120,15 +174,15 @@
 	}
 	
 	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td .multiday_first {
-		border-top-left-radius: 4px;
-		border-bottom-left-radius: 4px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
 		margin-left: 2px !important;
 		padding-left: calc(0.8em - 2px) !important;
 	}
 	
 	.ics-calendar.combinemultiday:not([data-month-table-list-toggle=list]) td .multiday_last {
-		border-top-right-radius: 4px;
-		border-bottom-right-radius: 4px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
 		margin-right: 2px !important;
 		padding-right: calc(0.8em - 2px) !important;
 	}
@@ -163,12 +217,6 @@
 	.ics-calendar .events {
 		color: var(--r34ics--element--events--color);
 		overflow: visible;
-	}
-	.ics-calendar.solidcolors:not(.darkmode) .events,
-	.ics-calendar.whitetext:not(.darkmode) .events,
-	.ics-calendar.solidcolors:not(.darkmode) .events a,
-	.ics-calendar.whitetext:not(.darkmode) .events a {
-		color: var(--r34ics--element--events--color--whitetext);
 	}
 	
 		.ics-calendar dl.events { margin: 0 0 1.5rem 0; }
@@ -226,6 +274,7 @@
 		.ics-calendar .events .title.cancelled { text-decoration: line-through; }
 	
 		.ics-calendar .event {
+			color: var(--r34ics--element--events--color);
 			position: relative;
 			z-index: 1;
 		}
@@ -236,25 +285,30 @@
 			transition: none !important;
 		}
 		
-			/* Source:  https://kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/ */
 			.ics-calendar .event * {
-				-ms-word-break: break-all;
-				word-break: break-all;
 				word-break: break-word;
-				-webkit-hyphens: auto;
-				-moz-hyphens: auto;
-				-ms-hyphens: auto;
 				hyphens: auto;
+			}
+			
+			.ics-calendar .event a {
+				color: var(--r34ics--element--events--color--link);
+			}
+			
+			.ics-calendar .event a:hover,
+			.ics-calendar .event a:focus {
+				color: var(--r34ics--element--events--color--link-hover);
 			}
 
 			.ics-calendar .event .descloc {
+				background-color: var(--r34ics--element--events--background);
 				display: block;
 				font-size: 85%;
 				font-weight: normal;
 				line-height: 1.5em;
 			}
 			
-				.ics-calendar .event .descloc * {
+				.ics-calendar .event .descloc *:not(a) {
+					color: var(--r34ics--element--events--color);
 					font-size: 100%;
 					letter-spacing: 0;
 					line-height: 1.5em;
@@ -288,7 +342,7 @@
 				position: relative;
 			}
 			
-			.ics-calendar .event .descloc .attach_float img {
+			.ics-calendar .event .descloc img {
 				display: block;
 				height: auto;
 				max-width: 100%;
@@ -305,7 +359,7 @@
 			
 			.ics-calendar .event[data-feed-color] .descloc.hover_block .descloc_feed_label:before {
 				background-color: var(--r34ics--element--descloc-feed-label-before--background);
-				border-radius: 8px;
+				border-radius: 1.5rem;
 				content: '';
 				display: inline-block;
 				height: 8px;
@@ -348,6 +402,7 @@
 	.ics-calendar-description { }
 	
 	.ics-calendar-select {
+		background-color: var(--r34ics--element--select--background);
 		color: var(--r34ics--element--select--color);
 		float: right;
 		font-size: 80%;
@@ -390,46 +445,47 @@
 				flex-direction: row;
 			}
 	
-			.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date {
+			.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date {
 				align-self: flex-start;
-				background: var(--r34ics--element--basic--date--background);
+				background-color: var(--r34ics--element--basic--date--background);
 				border: var(--r34ics--element--basic--date--border);
 				border-radius: 4px;
+				color: var(--r34ics--element--basic--date--color);
 				display: inline-block;
 				margin: 0 8px 8px 0;
 				padding: 4px 8px;
 				text-align: center;
 			}
 
-			.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date.multiday {
+			.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date.multiday {
 				align-items: center;
 				display: flex;
 				flex-direction: column;
 			}
 			
-				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date *[data-date-format],
-				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date .time-inline {
+				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date *[data-date-format],
+				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date .time-inline {
 					display: block !important;
 					font-size: 70% !important;
 					line-height: 1.3em !important;
 				}
 			
-				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date *[data-date-format='d'],
-				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date *[data-date-format='j'] {
+				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date *[data-date-format='d'],
+				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date *[data-date-format='j'] {
 					font-size: 210% !important;
 					font-weight: 800;
 					line-height: 1em !important;
 					width: 2em;
 				}
 	
-				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date *[data-date-format='F'],
-				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date *[data-date-format='m'],
-				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date *[data-date-format='M'],
-				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date *[data-date-format='n'] {
+				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date *[data-date-format='F'],
+				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date *[data-date-format='m'],
+				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date *[data-date-format='M'],
+				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date *[data-date-format='n'] {
 					font-weight: 600;
 				}
 	
-				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .date.multiday .multiday-sep {
+				.ics-calendar:not(.nostyle) .ics-calendar-basic-wrapper .ics-calendar-date.multiday .multiday-sep {
 					font-size: 210%;
 					line-height: 0.5em;
 				}
@@ -510,6 +566,7 @@
 	
 		.ics-calendar-label {
 			clear: none !important;
+			color: var(--r34ics--element--month-label--color);
 			margin: 0 !important;
 		}
 		
@@ -520,9 +577,6 @@
 			margin: 0.5em 0;
 			table-layout: fixed;
 			width: 100%;
-		}
-		.ics-calendar.whitetext .ics-calendar-month-grid {
-			background-color: var(--r34ics--element--month--background--whitetext);
 		}
 		
 			.ics-calendar-month-grid th, .ics-calendar-month-grid td {
@@ -543,14 +597,11 @@
 			}
 			
 			.ics-calendar-month-grid th {
-				background: var(--r34ics--element--month--th--background);
+				background-color: var(--r34ics--element--month--th--background);
 				color: var(--r34ics--element--month--th--color);
 				padding: 0.5em 0.8em 0.2em 0.8em !important;
 				text-align: center !important;
 				text-transform: uppercase;
-			}
-			.ics-calendar.whitetext .ics-calendar-month-grid th {
-				background: var(--r34ics--element--month--th--background--whitetext);
 			}
 
 			.ics-calendar-month-grid th.week-number {
@@ -569,34 +620,23 @@
 			}
 			
 			.ics-calendar-month-grid .day {
-				background: var(--r34ics--element--month--day--background);
+				background-color: var(--r34ics--element--month--day--background);
 				color: var(--r34ics--element--month--day--color);
 				font-weight: bold;
 				padding: 0.2em 0.8em;
-			}
-			.ics-calendar.whitetext .ics-calendar-month-grid .day {
-				background: var(--r34ics--element--month--day--background--whitetext);
+				text-align: right;
 			}
 						
 			.ics-calendar-month-grid .off {
-				background: var(--r34ics--element--month--off--background);
+				background-color: var(--r34ics--element--month--off--background);
 				color: var(--r34ics--element--month--off--color) !important;
-			}
-			.ics-calendar.whitetext .ics-calendar-month-grid .off {
-				background: var(--r34ics--element--month--off--background--whitetext);
 			}
 			
 			.ics-calendar-month-grid .today .day {
-				background: var(--r34ics--element--month--today-day--background);
+				background-color: var(--r34ics--element--month--today-day--background);
 			}
 			.ics-calendar-month-grid .today .day * {
 				color: var(--r34ics--element--month--today-day--color);
-			}
-			.ics-calendar.whitetext .ics-calendar-month-grid .today .day {
-				background: var(--r34ics--element--month--today-day--background--whitetext);
-			}
-			.ics-calendar.whitetext .ics-calendar-month-grid .today .day * {
-				color: var(--r34ics--element--month--today-day--color--whitetext) !important;
 			}
 			
 			.ics-calendar-month-grid ul.events {
@@ -664,6 +704,10 @@
 			padding: 0.1em 0.5em;
 		}
 		
+		.ics-calendar-color-key-item {
+			color: var(--r34ics--element--events--color);
+		}
+		
 		.ics-calendar-color-key.inline .ics-calendar-color-key-item {
 			display: inline-block;
 		}
@@ -678,12 +722,6 @@
 
 .ics-calendar table tbody tr {
 	background: transparent !important; /* Override possible theme alternating row colors */
-}
-
-.ics-calendar.whitetext:not(.darkmode) *:not(.ics-calendar-select),
-.ics-calendar.darkmode .ics-calendar-select,
-.ics-calendar.solidcolors:not(.darkmode) .ics-calendar-color-key {
-	color: var(--r34ics--element--color--whitetext) !important;
 }
 
 .r34ics-ajax-container.loading {
@@ -710,7 +748,7 @@
 	display: inline-block;
 	height: 24px;
 	opacity: 0.5;
-	overflow: hidden;
+	overflow: clip;
 	position: absolute; top: calc(50% - 12px); left: calc(50% - 12px);
 	text-indent: -999px;
 	vertical-align: middle;
@@ -730,7 +768,7 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	height: 16px;
 	line-height: 10px;
 	margin: 5px 0;
-	overflow: hidden;
+	overflow: clip;
 	padding: 0 0 0 20px;
 	position: relative;
 	vertical-align: baseline;
@@ -742,9 +780,9 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	text-indent: -999px;
 	width: 16px;
 }
-.ics-calendar.whitetext button:not(.components-button):not([role=presentation]).r34ics_event_ics_download,
-.ics-calendar.whitetext button:not(.components-button):not([role=presentation]).r34ics_event_ics_download:focus,
-.ics-calendar.whitetext button:not(.components-button):not([role=presentation]).r34ics_event_ics_download:hover {
+.ics-calendar.darkmode button:not(.components-button):not([role=presentation]).r34ics_event_ics_download,
+.ics-calendar.darkmode button:not(.components-button):not([role=presentation]).r34ics_event_ics_download:focus,
+.ics-calendar.darkmode button:not(.components-button):not([role=presentation]).r34ics_event_ics_download:hover {
 	background-image: url('data:image/svg+xml;utf8,<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 602 585" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="m216-20c-24.383 0-44 19.617-44 44v148h-67.8c-35.627 0-53.461 43.023-28.242 68.242l152.305 152.205c15.265 15.266 40.309 15.266 55.579-.005l152.105-152.205c25.214-25.214 7.38-68.237-28.247-68.237h-67.7v-148c0-24.383-19.617-44-44-44zm0 20h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1l-152.1 152.2c-7.5 7.5-19.8 7.5-27.3 0l-152.3-152.2c-12.6-12.6-3.7-34.1 14.1-34.1h87.8v-168c0-13.3 10.7-24 24-24z" transform="translate(44.7214 44.7214)"/><path fill="#fff" d="m532 376c0-24.383-19.617-44-44-44h-154.984l-54.858 54.858c-12.269 12.269-32.047 12.269-44.316 0 0 0-54.858-54.858-54.858-54.858h-154.984c-24.383 0-44 19.617-44 44v112c0 24.383 19.617 44 44 44h464c24.383 0 44-19.617 44-44zm-20 0v112c0 13.3-10.7 24-24 24h-464c-13.3 0-24-10.7-24-24v-112c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49h146.7c13.3 0 24 10.7 24 24zm-60 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z" transform="translate(44.7214 27.7214)"/></svg>');
 }
 
@@ -754,7 +792,7 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	z-index: -1;
 }
 .r34ics_lightbox.open {
-	background: var(--r34ics--element--lightbox--background);
+	background-color: var(--r34ics--element--lightbox--background);
 	display: block;
 	z-index: 999999;
 }
@@ -771,7 +809,7 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 
 	.r34ics_lightbox .r34ics_lightbox_close {
 		background-color: var(--r34ics--element--lightbox-close--background);
-		border-radius: 100%;
+		border-radius: 1.5rem;
 		box-shadow: var(--r34ics--element--lightbox-close--box-shadow);
 		color: var(--r34ics--element--lightbox-close--color);
 		cursor: pointer;
@@ -785,10 +823,10 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	}
 
 	.r34ics_lightbox .r34ics_lightbox_content {
-		background: var(--r34ics--element--lightbox-content--background);
+		background-color: var(--r34ics--element--lightbox-content--background);
 		box-shadow: var(--r34ics--element--lightbox-content--box-shadow);
 		color: var(--r34ics--element--lightbox-content--color);
-		overflow-x: hidden;
+		overflow-x: clip;
 		overflow-y: auto;
 		padding: 1.5em;
 		position: absolute; top: 0; right: 0; bottom: 0; left: 0;
@@ -822,16 +860,15 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 @media screen and (min-width: 783px) {
 
 	.ics-calendar .event .hover_block {
-		background: var(--r34ics--element--hover-block--background);
+		background-color: var(--r34ics--element--hover-block--background);
 		border: var(--r34ics--element--hover-block--border);
 		box-shadow: var(--r34ics--element--hover-block--box-shadow);
 		display: none;
 		padding: 0.4em 0.6em;
 		position: absolute; top: 2em; left: 3em;
 	}
-	.ics-calendar.solidcolors:not(.darkmode) .event .hover_block,
-	.ics-calendar.whitetext:not(.darkmode) .event .hover_block {
-		background: var(--r34ics--element--hover-block--background--whitetext);
+	.ics-calendar.solidcolors .event .hover_block {
+			background-color: inherit;
 	}
 	/* [data-month-table-list-toggle=list] is a Pro feature */
 	.ics-calendar:not([data-month-table-list-toggle=list]) .event .hover_block {
@@ -915,10 +952,7 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid { margin-bottom: 1.5em; }
 
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid,
-	.ics-calendar:not(.nomobile) .ics-calendar-month-grid tbody,
-	.ics-calendar:not(.nomobile) .ics-calendar-month-grid tr,
-	.ics-calendar:not(.nomobile) .ics-calendar-month-grid th,
-	.ics-calendar:not(.nomobile) .ics-calendar-month-grid td
+	.ics-calendar:not(.nomobile) .ics-calendar-month-grid :is(tbody, tr, th, td)
 	{
 		border: none;
 		display: block;
@@ -926,13 +960,10 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 		width: 100%;
 	}
 	
-	.ics-calendar:not(.nomobile) .ics-calendar-month-grid tr.previous-week,
-	.ics-calendar:not(.nomobile) .ics-calendar-month-grid tr.next-week
+	.ics-calendar:not(.nomobile) .ics-calendar-month-grid :is(tr.previous-week, tr.next-week)
 	{ display: none; }
 	
-	.ics-calendar:not(.nomobile) .ics-calendar-month-grid thead,
-	.ics-calendar:not(.nomobile) .ics-calendar-month-grid th.week-number,
-	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .off,
+	.ics-calendar:not(.nomobile) .ics-calendar-month-grid :is(thead, th.week-number, .off),
 	.ics-calendar:not(.nomobile):not(.show-past-events) .ics-calendar-month-grid .past,
 	.ics-calendar.layout-month:not(.nomobile):not(.show-past-events) .past,
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .empty
@@ -941,7 +972,10 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	.ics-calendar:not(.show-past-events):not(.month_list_all) .ics-calendar-month-wrapper.past .past.has_events
 	{ display: block !important; }
 	
-	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .day { padding: 0.5em 0.8em; }
+	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .day {
+		padding: 0.5em 0.8em;
+		text-align: left;
+	}
 
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .day * { display: inline-block !important; }
 	
@@ -958,6 +992,8 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .events .title { font-size: 100% !important; } /* !important fixes a common theme conflict */
 
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .events .sublabel { font-size: 75%; }
+	
+	.ics-calendar:not(.nomobile) .descloc :is(.time_in_hover_block, .title_in_hover_block) { display: none; }
 
 	/* Remember min-height doesn't work on tables; height works equivalently */
 	.ics-calendar-month-grid td { height: 6em; }
@@ -965,28 +1001,22 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	/* Special formatting for monthnav="compact" */
 	.ics-calendar.monthnav-compact .ics-calendar-label { display: none; }
 	
+	/* @todo Removed as an experiment in 12.0.0.1; see if there's a negative response
 	.ics-calendar .hover_block .title_in_hover_block,
 	.ics-calendar .hover_block .time_in_hover_block
 	{ display: none; }
+	*/
 	
-	.ics-calendar.nomobile .ics-calendar-month-wrapper,
-	.ics-calendar.nomobile .ics-calendar-week-wrapper
+	.ics-calendar.nomobile :is(.ics-calendar-month-wrapper, .ics-calendar-week-wrapper)
 	{ overflow-x: scroll; }
 	
-	.ics-calendar.nomobile:not(.r34ics_compact_mobile):not(.r34ics_compact) .ics-calendar-month-wrapper .ics-calendar-month-grid,
-	.ics-calendar.nomobile:not(.r34ics_compact_mobile):not(.r34ics_compact) .ics-calendar-week-wrapper .ics-calendar-month-grid
+	.ics-calendar.nomobile:not(.r34ics_compact_mobile):not(.r34ics_compact) :is(.ics-calendar-month-wrapper, .ics-calendar-week-wrapper) .ics-calendar-month-grid
 	{ min-width: 700px; }
 	
-	.ics-calendar.nomobile.r34ics_compact_mobile .ics-calendar-month-wrapper .ics-calendar-month-grid,
-	.ics-calendar.nomobile.r34ics_compact .ics-calendar-month-wrapper .ics-calendar-month-grid,
-	.ics-calendar.nomobile.r34ics_compact_mobile .ics-calendar-week-wrapper .ics-calendar-month-grid,
-	.ics-calendar.nomobile.r34ics_compact .ics-calendar-week-wrapper .ics-calendar-month-grid
+	.ics-calendar.nomobile:is(.r34ics_compact_mobile, .r34ics_compact) :is(.ics-calendar-month-wrapper, .ics-calendar-week-wrapper) .ics-calendar-month-grid
 	{ font-size: 80% !important; min-width: 100%; }
 
-	.ics-calendar.nomobile.r34ics_compact_mobile .ics-calendar-month-wrapper .ics-calendar-month-grid td .events,
-	.ics-calendar.nomobile.r34ics_compact .ics-calendar-month-wrapper .ics-calendar-month-grid td .events,
-	.ics-calendar.nomobile.r34ics_compact_mobile .ics-calendar-week-wrapper .ics-calendar-month-grid td .events,
-	.ics-calendar.nomobile.r34ics_compact .ics-calendar-week-wrapper .ics-calendar-month-grid td .events
+	.ics-calendar.nomobile:is(.r34ics_compact_mobile, .r34ics_compact) :is(.ics-calendar-month-wrapper, .ics-calendar-week-wrapper) .ics-calendar-month-grid td .events
 	{ height: 6.5em !important; overflow: auto !important; }
 	
 	/* Don't show day-of-week in grid if .nomobile is on! */
@@ -998,31 +1028,105 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 
 
 /* Print */
+.r34ics-print-button-wrapper {
+	float: right;
+	margin-right: 0.5rem;
+	position: relative;
+	z-index: 2;
+}
+
+.r34ics-print-button-wrapper .button.print {
+	background-color: var(--r34ics--element--button--background);
+	background-size: 16px;
+	border: var(--r34ics--element--button--border);
+	border-radius: var(--r34ics--element--button--border-radius);
+	color: var(--r34ics--element--button--color);
+	display: inline-block;
+	height: 32px;
+	padding: 5px;
+	vertical-align: middle;
+	width: 32px;
+}
+
+.r34ics-print-button-wrapper .button.print svg {
+	height: 20px;
+	width: 20px;
+}
+
+/* Screen: body.r34ics-print-calendar for accurate preview; these settings are repeated in @media print without body.r34ics-print-calendar */
+body.r34ics-print-calendar { margin: 3rem; }
+body.r34ics-print-calendar .r34ics-print-button-wrapper { display: none !important; }
+
+body.r34ics-print-calendar .ics-calendar {
+	font-size: 16px !important;
+	margin: 0 !important;
+	width: 100% !important;
+}
+
+body.r34ics-print-calendar .ics-calendar-month-grid * {
+	font-size: 10px !important;
+}
+
+body.r34ics-print-calendar .ics-calendar h2 { font-size: 175% !important; }
+body.r34ics-print-calendar .ics-calendar h3 { font-size: 150% !important; }
+body.r34ics-print-calendar .ics-calendar h4 { font-size: 125% !important; }
+
+body.r34ics-print-calendar .ics-calendar :is(input, select, textarea, .r34ics-print-button-wrapper, .button.print, .button.subscribe, .phone_only),
+body.r34ics-print-calendar .ics-calendar:not(.print_desc) .descloc,
+body.r34ics-print-calendar .ics-calendar.print_desc .descloc :is(.time_in_hover_block, .title_in_hover_block),
+body.r34ics-print-calendar .ics-calendar:is(.layout-list, .layout-basic) .ics-calendar-paginate-wrapper
+{ display: none !important; }
+
+body.r34ics-print-calendar .ics-calendar.print_desc .descloc,
+body.r34ics-print-calendar .ics-calendar:is(.layout-list, .layout-basic) .ics-calendar-pagination {
+	display: block !important;
+}
+
+body.r34ics-print-calendar .ics-calendar.print_desc .event .hover_block {
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	margin: 1em 0 !important;
+	position: relative !important; top: 0 !important; left: 0 !important;
+	padding: 0 !important;
+}
+
 @media print {
 
-	.ics-calendar input, .ics-calendar select, .ics-calendar textarea,
-	.ics-calendar .button.subscribe, .ics-calendar .descloc
-	{
-		display: none !important;
+	.ics-calendar {
+		font-size: 16px !important;
+		margin: 0 !important;
+		width: 100% !important;
 	}
 	
-	.ics-calendar table th, .ics-calendar table td {
-		background: var(--r34ics--element--print--background) !important;
-		border: var(--r34ics--element--print--border) !important;
-	}
-
-	.ics-calendar table th *, .ics-calendar table td * {
-		background: var(--r34ics--element--print--background) !important;
-		border: none !important;
-		color: var(--r34ics--element--print--color) !important;
+	.ics-calendar-month-grid * {
+		font-size: 10px !important;
 	}
 	
-	.ics-calendar table .descloc {
+	.ics-calendar h2 { font-size: 175% !important; }
+	.ics-calendar h3 { font-size: 150% !important; }
+	.ics-calendar h4 { font-size: 125% !important; }
+	
+	.ics-calendar-month-grid th, .ics-calendar-month-grid td { overflow: clip !important; }
+	
+	.ics-calendar :is(input, select, textarea, .r34ics-print-button-wrapper, .button.print, .button.subscribe, .phone_only),
+	.ics-calendar:not(.print_desc) .descloc,
+	.ics-calendar.print_desc .descloc :is(.time_in_hover_block, .title_in_hover_block),
+	.ics-calendar:is(.layout-list, .layout-basic) .ics-calendar-paginate-wrapper
+	{ display: none !important; }
+	
+	.ics-calendar.print_desc .descloc,
+	.ics-calendar:is(.layout-list, .layout-basic) .ics-calendar-pagination {
 		display: block !important;
 	}
 	
-		.ics-calendar table .descloc .time_in_hover_block, .ics-calendar table .descloc .title_in_hover_block {
-			display: none !important;
-		}
+	.ics-calendar.print_desc .event .hover_block {
+		background-color: transparent !important;
+		border: none !important;
+		box-shadow: none !important;
+		margin: 1em 0 !important;
+		position: relative !important; top: 0 !important; left: 0 !important;
+		padding: 0 !important;
+	}
 
 }

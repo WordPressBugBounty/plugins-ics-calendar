@@ -59,6 +59,7 @@ function r34ics_boolean_check(val) {
 }
 
 
+// @todo Refactor to prevent non-calendar-specific logic from loading multiple times with multiple calendars on page
 function r34ics_init(elem) {
 
 	// Custom event for callbacks
@@ -76,9 +77,12 @@ function r34ics_init(elem) {
 	// Handle individual event ICS downloads
 	jQuery(document).on('click', '.r34ics_event_ics_download', function() {
 		if (jQuery(this).data('eventdl-uid') != '') {
-			var eventdl_uid = jQuery(this).data('eventdl-uid');
+			var eventdl_dtend = jQuery(this).data('eventdl-dtend');
+			var eventdl_dtstart = jQuery(this).data('eventdl-dtstart');
 			var eventdl_feed_key = jQuery(this).data('eventdl-feed-key');
 			var eventdl_form = jQuery(this).closest('form');
+			var eventdl_label = jQuery(this).data('eventdl-label');
+			var eventdl_uid = jQuery(this).data('eventdl-uid');
 			// If we're in a lightbox, we need to find the form elsewhere on the page
 			if (eventdl_form.length == 0) {
 				jQuery('form.r34ics_event_ics_download_form').each(function() {
@@ -88,7 +92,10 @@ function r34ics_init(elem) {
 				});
 			}
 			if (eventdl_form.length > 0) {
+				eventdl_form.find('input[name="r34ics-dtend"]').val(eventdl_dtend);
+				eventdl_form.find('input[name="r34ics-dtstart"]').val(eventdl_dtstart);
 				eventdl_form.find('input[name="r34ics-feed-key"]').val(eventdl_feed_key);
+				eventdl_form.find('input[name="r34ics-label"]').val(eventdl_label);
 				eventdl_form.find('input[name="r34ics-uid"]').val(eventdl_uid);
 				eventdl_form.submit();
 			}
@@ -121,15 +128,14 @@ function r34ics_init(elem) {
 		if (jQuery(this).has('.ics-calendar')) { r34ics_show_hide_headers(); }
 	});
 
-	// Handle "toggle" functionality for event descriptions
-	/*
-	Note: .toggle class was changed to .r34ics_toggle in templates
-	and CSS to work around a conflict with another plugin;
-	however, the original class is retained here for flexibility.
-	We are using jQuery(document) to account for dynamically-inserted elements.
-	(Logic for .title element was added for tab-accessibility.)
-	*/
-	jQuery(document).on('click', '.ics-calendar.r34ics_toggle .event, .ics-calendar.toggle .event, .ics-calendar.r34ics_toggle .event .title, .ics-calendar.toggle .event .title', function(e) {
+	/**
+	 * Handle "toggle" functionality for event descriptions
+	 *
+	 * Note: Deprecated .toggle class removed in 12.0.1; we only need .r34ics_toggle
+	 * We are using jQuery(document) to account for dynamically-inserted elements
+	 * Logic for .title element was added for tab-accessibility
+	 */
+	jQuery(document).on('click', '.ics-calendar.r34ics_toggle .event, .ics-calendar.r34ics_toggle .event .title', function(e) {
 		e.stopPropagation();
 		var elem = jQuery(this).hasClass('title') ? jQuery(this).parent() : jQuery(this);
 		// No description -- do nothing
@@ -143,12 +149,13 @@ function r34ics_init(elem) {
 		}
 		// Toggle in place
 		else {
+			// @todo Figure out why this fires twice if there are two calendars on the page, causing it not to work
 			if (elem.hasClass('open')) { elem.removeClass('open'); }
 			else { elem.addClass('open'); }
 		}
 	});
 	// Don't trigger toggle if we're clicking a link inside the event
-	jQuery(document).on('click', '.ics-calendar.r34ics_toggle .event a, .ics-calendar.toggle .event a, .r34ics_lightbox .r34ics_lightbox_content', function(e) {
+	jQuery(document).on('click', '.ics-calendar.r34ics_toggle .event a[href], .r34ics_lightbox .r34ics_lightbox_content', function(e) {
 		e.stopPropagation();
 	});
 	// Initialize lightbox
@@ -227,6 +234,14 @@ function r34ics_init(elem) {
 			});
 		}
 	});
+	
+	// Dynamically update print view link
+	if (jQuery('.r34ics-print-button-wrapper').length > 0) {
+		jQuery('.ics-calendar-select').on('change', function() {
+			var print_button = jQuery(this).closest('.ics-calendar').find('.r34ics-print-button-wrapper a');
+			print_button.attr('href', print_button.data('href') + '&r34ics-print-selected=' + jQuery(this).val());
+		});
+	}
 
 
 	// VIEW: WEEK
@@ -610,6 +625,16 @@ function r34ics_week_reset() {
 }
 
 
+// Plugin workarounds: Elementor (Please, stop using Elementor!)
+function r34ics_workarounds_elementor_init() {
+	if (jQuery('.elementor-element :is(.ics-calendar, .r34ics-ajax-container)').length > 0) {
+		// Elementor tabs need to re-initialize ICS Calendar on click
+		jQuery('button.e-n-tab-title').on('click', function() {
+			setTimeout(function() { r34ics_init(); }, 100); // @todo Find a better JS event instead of relying on delay
+		});
+	}
+}
+
 jQuery(window).on('load', function() {
 
 	// Initialize ICS Calendar functionality if the initial DOM contains a calendar
@@ -636,6 +661,9 @@ jQuery(window).on('load', function() {
 		r34ics_ajax_init();
 		r34ics_ajax_interval = setInterval(r34ics_ajax_init, r34ics_transients_expiration_ms);
 	}
+	
+	// Plugin conflict workarounds
+	if (jQuery('.elementor-element').length > 0) { r34ics_workarounds_elementor_init(); }
 
 });
 

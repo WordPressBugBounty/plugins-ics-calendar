@@ -559,7 +559,7 @@ class ICal
             $files = is_array($files) ? $files : array($files);
 
             foreach ($files as $file) {
-                if (!is_array($file) && $this->isFileOrUrl($file)) {
+                if (is_string($file) && $this->isFileOrUrl($file)) {
                     $lines = $this->fileOrUrl($file);
                 } else {
                     $lines = is_array($file) ? $file : array($file);
@@ -1383,7 +1383,7 @@ class ICal
             foreach (array_filter(explode(';', $anEvent['RRULE'])) as $s) {
                 list($k, $v) = explode('=', $s);
                 if (in_array($k, array('BYSETPOS', 'BYDAY', 'BYMONTHDAY', 'BYMONTH', 'BYYEARDAY', 'BYWEEKNO'))) {
-                    $rrules[$k] = explode(',', $v);
+                    $rrules[$k] = $v === '' ? array() : explode(',', $v);
                 } else {
                     $rrules[$k] = $v;
                 }
@@ -1426,7 +1426,7 @@ class ICal
             $interval = (empty($rrules['INTERVAL'])) ? 1 : (int) $rrules['INTERVAL'];
 
             // Throw an error if this isn't an integer.
-            if (!is_int($this->defaultSpan)) {
+            if (!is_int($this->defaultSpan)) { // @phpstan-ignore function.alreadyNarrowedType
                 trigger_error('ICal::defaultSpan: User defined value is not an integer', E_USER_NOTICE);
             }
 
@@ -1598,7 +1598,7 @@ class ICal
                             $clonedDateTime = clone $frequencyRecurringDateTime;
                             $candidateDateTimes[] = $clonedDateTime->setDate(
                                 (int) $frequencyRecurringDateTime->format('Y'),
-                                (int) $frequencyRecurringDateTime->format('m'),
+                                (int) $frequencyRecurringDateTime->format('n'),
                                 $day
                             );
                         }
@@ -1631,7 +1631,7 @@ class ICal
                                 foreach ($monthDays as $day) {
                                     $matchingDays[] = $bymonthRecurringDatetime->setDate(
                                         (int) $frequencyRecurringDateTime->format('Y'),
-                                        (int) $bymonthRecurringDatetime->format('m'),
+                                        (int) $bymonthRecurringDatetime->format('n'),
                                         $day
                                     )->format('z') + 1;
                                 }
@@ -1713,7 +1713,7 @@ class ICal
                 }
 
                 // Move forwards $interval $frequency.
-                $monthPreMove = $frequencyRecurringDateTime->format('m');
+                $monthPreMove = (int) $frequencyRecurringDateTime->format('n');
                 $frequencyRecurringDateTime->modify("{$interval} {$this->frequencyConversion[$frequency]}");
 
                 // As noted in Example #2 on https://www.php.net/manual/en/datetime.modify.php,
@@ -1721,7 +1721,7 @@ class ICal
                 // expect. For instance: January 31st + 1 month == March 3rd (March 2nd on a leap
                 // year.) The following code crudely rectifies this.
                 if ($frequency === 'MONTHLY') {
-                    $monthDiff = $frequencyRecurringDateTime->format('m') - $monthPreMove;
+                    $monthDiff = (int) $frequencyRecurringDateTime->format('n') - $monthPreMove;
 
                     if (($monthDiff > 0 && $monthDiff > $interval) || ($monthDiff < 0 && $monthDiff > $interval - 12)) {
                         $frequencyRecurringDateTime->modify('-1 month');
@@ -1731,7 +1731,7 @@ class ICal
                 // $monthDays is set in the DAILY frequency if the BYMONTHDAY stanza is present in
                 // the RRULE. The variable only needs to be updated when we change months, so we
                 // unset it here, prompting a recreation next iteration.
-                if (isset($monthDays) && $frequencyRecurringDateTime->format('m') !== $monthPreMove) {
+                if (isset($monthDays) && (int) $frequencyRecurringDateTime->format('n') !== $monthPreMove) {
                     unset($monthDays);
                 }
             }
@@ -2081,7 +2081,7 @@ class ICal
             foreach ($monthDays as $day) {
                 $matchingDays[] = $monthDateTime->setDate(
                     (int) $initialDateTime->format('Y'),
-                    (int) $monthDateTime->format('m'),
+                    (int) $monthDateTime->format('n'),
                     $day
                 )->format('z') + 1;
             }
@@ -2421,7 +2421,9 @@ class ICal
 
         foreach ($tza as $zone) {
             foreach ($zone as $item) {
-                $valid[$item['timezone_id']] = true;
+                if ($item['timezone_id'] !== null) {
+                    $valid[$item['timezone_id']] = true;
+                }
             }
         }
 
@@ -2505,19 +2507,19 @@ class ICal
     {
         if (function_exists('mb_chr')) {
             return mb_chr($code);
-        } else {
-            if (($code %= 0x200000) < 0x80) {
-                $s = chr($code);
-            } elseif ($code < 0x800) {
-                $s = chr(0xc0 | $code >> 6) . chr(0x80 | $code & 0x3f);
-            } elseif ($code < 0x10000) {
-                $s = chr(0xe0 | $code >> 12) . chr(0x80 | $code >> 6 & 0x3f) . chr(0x80 | $code & 0x3f);
-            } else {
-                $s = chr(0xf0 | $code >> 18) . chr(0x80 | $code >> 12 & 0x3f) . chr(0x80 | $code >> 6 & 0x3f) . chr(0x80 | $code & 0x3f);
-            }
-
-            return $s;
         }
+
+        if (($code %= 0x200000) < 0x80) {
+            $s = chr($code);
+        } elseif ($code < 0x800) {
+            $s = chr(0xc0 | $code >> 6) . chr(0x80 | $code & 0x3f);
+        } elseif ($code < 0x10000) {
+            $s = chr(0xe0 | $code >> 12) . chr(0x80 | $code >> 6 & 0x3f) . chr(0x80 | $code & 0x3f);
+        } else {
+            $s = chr(0xf0 | $code >> 18) . chr(0x80 | $code >> 12 & 0x3f) . chr(0x80 | $code >> 6 & 0x3f) . chr(0x80 | $code & 0x3f);
+        }
+
+        return $s;
     }
 
     /**
@@ -2581,9 +2583,9 @@ class ICal
     {
         if (empty($event['EXDATE_array'])) {
             return array();
-        } else {
-            $exdates = $event['EXDATE_array'];
         }
+
+        $exdates = $event['EXDATE_array'];
 
         $output          = array();
         $currentTimeZone = new \DateTimeZone($this->getDefaultTimeZone());
@@ -2620,7 +2622,6 @@ class ICal
      *
      * @param  string $value
      * @return boolean
-     * @throws \Exception
      */
     public function isValidDate($value)
     {

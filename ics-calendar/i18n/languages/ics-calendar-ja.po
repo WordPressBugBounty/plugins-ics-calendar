@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-18 15:14-0500\n"
-"PO-Revision-Date: 2025-09-18 15:14-0500\n"
+"POT-Creation-Date: 2026-01-07 15:21-0600\n"
+"PO-Revision-Date: 2026-01-07 15:21-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
-"Language: ja_JP\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -20,20 +20,29 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:296
+#: class-r34ics.php:307
+#, php-format
+msgid ""
+"%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
+"pages. You can resume serving calendars under the %4$sUtilities%5$s tab "
+"%6$shere%7$s."
+msgstr ""
+"%1$sは現在%2$s一時停止中%3$sであり、フロントエンドページでカレンダーを提供し"
+"ていません。%4$sユーティリティ%5$sタブの%6$sこちら%7$sからカレンダー提供を再"
+"開できます。"
+
+#: class-r34ics.php:316
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
 "%2$s Because ICS Calendar is intended to run on a web server, some features "
 "may be unavailable or may not function properly."
 msgstr ""
-"%1$sWordPress Playgroundの実装でICS Calendarを実行しています。%2$s ICS "
-"Calendarはウェブサーバー上で実行することを目的としているため、一部の機能が利"
-"用できなかったり、正しく機能しない場合があります。"
+"%1$sWordPress Playground環境でICS Calendarを実行しています。%2$s ICS Calendar"
+"はウェブサーバーでの実行を想定しているため、一部の機能が利用できない、または"
+"正常に動作しない場合があります。"
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:306
+#: class-r34ics.php:325
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -43,265 +52,111 @@ msgid ""
 "display. See our %6$sdocumentation%7$s for additional information on this "
 "issue."
 msgstr ""
-"%1$sYour site is currently using a UTC offset-based timezone setting.%2$s.こ"
-"のため、夏時間を適用している地域では、%3$sプラグインで時刻の表示エラーが発生"
-"することがあります。%4$sタイムゾーン設定を%5$s同じタイムゾーンの最も近い都市"
-"に変更し、正しく時間を表示してください。この問題の詳細については、%6$sドキュ"
-"メント%7$s を参照してください。"
+"%1$s現在、サイトではUTCオフセットに基づくタイムゾーン設定が使用されています。"
+"%2$sこれにより、夏時間を採用している地域では%3$sプラグインで時刻表示エラーが"
+"発生する可能性があります。正確な時刻表示のためには、%4$sタイムゾーン設定%5$s"
+"を、お住まいの地域に最も近い、同じタイムゾーン内の都市に変更してください。こ"
+"の問題に関する詳細情報は、当社の%6$sドキュメント%7$sをご参照ください。"
 
-#: class-r34ics.php:349 templates/admin/admin.php:68
-#: templates/admin/utilities.php:3
-msgid "Utilities"
-msgstr "ユーティリティー"
-
-#: class-r34ics.php:350 class-r34ics.php:2155 templates/admin/admin.php:64
-#: templates/admin/admin.php:80
-msgid "Settings"
-msgstr "設定"
-
-#: class-r34ics.php:351 templates/admin/sidebar.php:9
-msgid "User Guide"
-msgstr "ユーザーガイド"
-
-#: class-r34ics.php:352 templates/admin/admin.php:70
-#: templates/admin/sidebar.php:14
-msgid "Support"
-msgstr "サポート"
-
-#: class-r34ics.php:354
-msgid "Upgrade to PRO!"
-msgstr "プロ版へアップグレード!"
-
-#: class-r34ics.php:383
-msgid "Show/hide all"
-msgstr "すべて表示/非表示"
-
-#: class-r34ics.php:656
-msgid ""
-"ICS file could not be retrieved or was empty. Please verify URL is correct, "
-"and check your php.ini configuration to verify either cURL or "
-"allow_url_fopen is available. If you are using spaces to delimit multiple "
-"URLs, you may also wish to try using the pipe character instead. Affected "
-"URL:"
-msgstr ""
-"ICS ファイルを取得できなかったか、空でした。URL が正しいことを確認し、"
-"php.ini の設定を確認して、cURL またはallow_url_fopenが使用可能であることを確"
-"認してください。複数の URL を区切るためにスペースを使用している場合は、代わり"
-"にパイプ文字を使用することもできます。影響を受ける URL:"
-
-#: class-r34ics.php:1097
-msgid "Hide past events"
-msgstr "過去のイベントを非表示にする"
-
-#: class-r34ics.php:1098 templates/calendar-month.php:83
-#: templates/calendar-week.php:76
-msgid "Show past events"
-msgstr "過去のイベントを表示"
-
-#: class-r34ics.php:1179
-msgid "Contact:"
-msgstr "連絡先:"
-
-#: class-r34ics.php:1185
-msgid "Resources:"
-msgstr "リソースです："
-
-#: class-r34ics.php:1195
-msgid "Click for more..."
-msgstr "詳細については、ここをクリックしてください。"
-
-#: class-r34ics.php:1229
-msgid "Save to your calendar"
-msgstr "カレンダーへの保存"
-
-#: class-r34ics.php:1332
-msgid "Cancelled"
-msgstr "キャンセル"
-
-#: class-r34ics.php:1445
-msgid ""
-"The legacy parser option is deprecated and will be removed in a future "
-"update."
-msgstr ""
-"レガシー・パーサー・オプションは非推奨であり、将来のアップデートで削除される"
-"予定です。"
-
-#: class-r34ics.php:1741
-msgid ""
-"The \"currentweek\" shortcode attribute is deprecated. Please use "
-"view=\"week\" in your shortcode instead."
-msgstr ""
-"「現在の週」のショートコード属性は推奨されていません。代わりに、ショートコー"
-"ドでview=\"week\"を使用してください。"
-
-#: class-r34ics.php:1745
-msgid ""
-"The \"legendinline\" shortcode attribute is deprecated. Please use "
-"legendstyle=\"inline\" in your shortcode instead."
-msgstr ""
-"ショートコード属性の \"legendinline \"は非推奨です。代わりにショートコードで "
-"legendstyle=\"inline\" を使用してください。"
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2069
-#, php-format
-msgid "Cleared %1$s %2$s transient(s)."
-msgstr "%1$s %2$sトランジェントをクリアしました。"
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2077
-#, php-format
-msgid "No %1$s transients were found."
-msgstr "%1$s トランジェントは見つかりませんでした。"
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2085
-#, php-format
-msgid "All %1$s settings have been reset to defaults."
-msgstr "すべての%1$s設定がデフォルトにリセットされました。"
-
-#. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2155
+#: class-r34ics.php:337
 #, php-format
 msgid ""
-"Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
-"turning off the %1$s option under the %2$s tab above."
+"Important! Your %1$s configuration appears to be exceeding source calendar "
+"provider rate limits."
 msgstr ""
-"フィードのURLにHTTPベーシック認証の認証情報が含まれているようです。上記の%2$s"
-"タブの%1$sオプションをオフにしてみてください。"
+"重要！あなたの%1$s設定は、ソースカレンダープロバイダーのレート制限を超えてい"
+"るようです。"
 
-#: class-r34ics.php:2155 templates/admin/settings.php:70
-msgid "Use legacy feed request method"
-msgstr "レガシーフィードリクエストメソッドを使用する"
-
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2162
+#: class-r34ics.php:339
 #, php-format
 msgid ""
-"%1$sThis URL points to a file in your Media Library.%2$s While you should be "
-"able to use this URL in an %3$s shortcode, it will be a static snapshot of "
-"the calendar at the time the file was created, and will not reflect any "
-"future updates to the source calendar. Please see our %4$sUser Guide%5$s for "
-"instructions on obtaining your correct dynamic feed URL."
+"If your calendars are not loading properly, please review your %1$s settings "
+"and usage:"
 msgstr ""
-"%1$sこの URL は、メディアライブラリ内のファイルを指しています。%2$s この URL "
-"を %3$s ショートコードで使用することはできますが、ファイルが作成された時点の"
-"カレンダーの静的スナップショットとなり、ソースカレンダーへの将来の更新は反映"
-"されません。正しいダイナミックフィードURLの取得方法については、%4$sユーザーガ"
-"イド%5$sをご覧ください。"
+"カレンダーが正しく読み込まれない場合は、%1$sの設定と使用状況をご確認くださ"
+"い："
 
-#. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2169
-#, php-format
-msgid "Error: Could not resolve IP address for %1$s."
-msgstr "エラー：%1$sのIPアドレスを解決できませんでした。"
-
-#. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2173
-#, php-format
-msgid "Resolved IP address for %1$s:"
-msgstr "%1$sの解決済みIPアドレス："
-
-#: class-r34ics.php:2220
-msgid ""
-"The text entered in the \"Default shortcode\" field is not a valid "
-"shortcode, and was not saved."
-msgstr ""
-"デフォルトのショートコード」フィールドに入力されたテキストは有効なショート"
-"コードではなく、保存されませんでした。"
-
-#. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2261
+#: class-r34ics.php:341
 #, php-format
 msgid ""
-"%1$sSettings updated.%2$s You may need to refresh the page to see some "
-"changes."
+"Do not use %1$s in your shortcodes. This feature is intended for "
+"troubleshooting only, and should not be left on permanently."
 msgstr ""
-"%1$s設定を更新しました。%2$sいくつかの変更を確認するには、ページを更新する必"
-"要があるかもしれません。"
+"ショートコード内で%1$sを使用しないでください。この機能はトラブルシューティン"
+"グ専用であり、常時有効にしておくべきではありません。"
 
-#: class-r34ics.php:2527
-msgid "calendar event"
-msgstr "カレンダーイベント"
-
-#: class-r34ics.php:2864
-msgid ""
-"The legacy feed request method is deprecated, and will be removed in an "
-"update in the near future. Please test your feeds with the legacy feed "
-"request method turned off."
-msgstr ""
-"レガシーフィードリクエストメソッドは非推奨であり、近い将来のアップデートで削"
-"除される予定です。フィードのテストは、レガシーフィードリクエストメソッドをオ"
-"フにして行ってください。"
-
-#: functions.php:990 functions.php:998 functions.php:1007
-msgid "Map"
-msgstr "マップ"
-
-#: functions.php:1257
-msgid "Recurring event"
-msgstr "繰り返しイベントの新規作成"
-
-#. translators: 1. Dynamic value
-#: functions.php:1263
-#, php-format
-msgid "Recurs every %1$s years"
-msgstr "%1$s年ごとに再発"
-
-#: functions.php:1263
-msgid "Recurs yearly"
-msgstr "毎年繰り返し"
-
-#. translators: 1. Dynamic value
-#: functions.php:1267
-#, php-format
-msgid "Recurs every %1$s months"
-msgstr "%1$sヵ月ごとに再発"
-
-#: functions.php:1267
-msgid "Recurs monthly"
-msgstr "毎月繰り返し"
-
-#. translators: 1. Dynamic value
-#: functions.php:1271
-#, php-format
-msgid "Recurs every %1$s weeks"
-msgstr "%1$s週間ごとに再発"
-
-#: functions.php:1271
-msgid "Recurs weekly"
-msgstr "毎週繰り返し"
-
-#. translators: 1. Dynamic value
-#: functions.php:1275
-#, php-format
-msgid "Recurs every %1$s days"
-msgstr "%1$s日ごとに再発"
-
-#: functions.php:1275
-msgid "Recurs daily"
-msgstr "毎日繰り返し"
-
-#. translators: 1: Plugin name (do not translate)
-#: functions.php:1422
+#: class-r34ics.php:343
 #, php-format
 msgid ""
-"The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
-"most likely your URL has been turned into a clickable link. Your calendar "
-"may not display properly as a result. Please remove the clickable link in "
-"the shortcode."
+"Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
+"%4$s43200%5$s (12 hours) or greater, to reduce the frequency of requests to "
+"the provider. (See note below.)"
 msgstr ""
-"%1$s ショートコードの \"url \"プロパティにHTMLタグが含まれているように見えま"
-"すが、これはURLがクリック可能なリンクに変換された可能性があります。その結果、"
-"カレンダーが正しく表示されない可能性があります。ショートコード内のクリッカブ"
-"ルリンクを削除してください。"
+"%1$s %2$sトランジェント（キャッシュ）の有効期限%3$s設定を%4$s43200%5$s（12時"
+"間）以上に増やすことで、プロバイダーへのリクエスト頻度を減らします。（下記の"
+"注を参照）"
 
-#: functions.php:1770
-msgid "The r34ics_url_get_contents() function is no longer supported."
-msgstr "r34ics_url_get_contents()関数はサポートされなくなりました。"
+#: class-r34ics.php:345
+#, php-format
+msgid ""
+"Avoid including a large number of feeds (10 or more) from the same provider "
+"in a single %1$s shortcode."
+msgstr ""
+"同一プロバイダーからのフィードを大量（10以上）に単一の%1$sショートコードに含"
+"めることは避けてください。"
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag 8. Additional translation string and HTML tags 9. HTML tag and plugin name (do not translate) 10. HTML tag
-#: ics-calendar.php:208
+#: class-r34ics.php:347
+#, php-format
+msgid ""
+"Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
+"Calendars%2$s utility. (24-48 hours is recommended.)"
+msgstr ""
+"フロントエンドページでICSカレンダーを一時停止するには、%1$sカレンダーの一時停"
+"止%2$sユーティリティを使用してください。（24～48時間の停止が推奨されます。）"
+
+#: class-r34ics.php:349
+#, php-format
+msgid ""
+"%1$s includes built-in caching, specifically to improve performance and "
+"avoid exceeding provider rate limits. Circumventing this caching with a very "
+"low %2$sreload%3$s setting may trigger a temporary block on your web server "
+"IP address, or possibly on your entire hosting network, by the calendar "
+"provider."
+msgstr ""
+"%1$sには組み込みのキャッシュ機能が搭載されており、特にパフォーマンスの向上と"
+"プロバイダーのレート制限超過回避を目的としています。このキャッシュ機能を回避"
+"するために%2$sreload%3$s設定を極端に低く設定すると、カレンダープロバイダーに"
+"より、お客様のウェブサーバーIPアドレス、あるいはホスティングネットワーク全体"
+"が一時的にブロックされる可能性があります。"
+
+#: class-r34ics.php:351
+#, php-format
+msgid ""
+"After making the recommended changes, please allow up to 24 hours for your "
+"calendar provider to remove any temporary blocks on your IP address. If you "
+"find that the problem persists, please use our %1$ssupport request form%2$s "
+"to contact us, and be sure to include your %3$ssystem report%4$s."
+msgstr ""
+"推奨される変更を加えた後、カレンダープロバイダーがお客様のIPアドレスに対する"
+"一時的なブロックを解除するまで、最大24時間お待ちください。問題が解決しない場"
+"合は、%1$sサポートリクエストフォーム%2$sからお問い合わせいただき、必ず%3$sシ"
+"ステムレポート%4$sを添付してください。"
+
+#: class-r34ics.php:353
+#, php-format
+msgid ""
+"Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
+"considering how frequently event information in your calendar is typically "
+"updated. %3$s Remember that you can use the %4$sClear Cached Calendar "
+"Data%5$s utility to manually clear the cache at any time, if needed."
+msgstr ""
+"注：カレンダーのイベント情報が通常どのくらいの頻度で更新されるかを考慮し、"
+"%1$s一時データ（キャッシュ）の有効期限%2$sを可能な限り長く設定してください。"
+"%3$s必要に応じて、いつでも%4$sキャッシュされたカレンダーデータのクリア%5$s"
+"ユーティリティを使用して手動でキャッシュをクリアできることを覚えておいてくだ"
+"さい。"
+
+#: class-r34ics.php:374
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -311,19 +166,18 @@ msgid ""
 "post%7$s, or to switch to the new defaults, turn on the %8$s option on the "
 "%9$s settings%10$s page."
 msgstr ""
-"%1$s注意:%2$s %3$s バージョン 10.6 では、いくつかのショートコード設定のデフォ"
-"ルト オプションが変更されています。 一貫性を維持するために、これらの新しいデ"
-"フォルトは、以前のバージョンからのアップグレード時に %4$snot%5$s 有効になって"
-"います。 変更の詳細については、%6$sブログ投稿%7$sをお読みください。新しいデ"
-"フォルトに切り替えるには、%9$s 設定%10$sで%8$sオプションをオンにしてくださ"
-"い。 ページ。"
+"%1$sご注意：%2$s %3$s バージョン10.6では、いくつかのショートコード設定のデ"
+"フォルトオプションが変更されました。一貫性を保つため、これらの新しいデフォル"
+"トは、以前のバージョンからのアップグレード時には%4$s有効化されません%5$s。 変"
+"更内容の詳細については%6$sブログ記事%7$sをご参照ください。新しいデフォルト設"
+"定に切り替える場合は、%9$s設定%10$sページで%8$sオプションを有効にしてくださ"
+"い。"
 
-#: ics-calendar.php:208 templates/admin/settings.php:123
+#: class-r34ics.php:374 templates/admin/settings.php:183
 msgid "Use new parameter defaults (v.10.6)"
-msgstr "新しいパラメータのデフォルトを使用 (v.10.6)"
+msgstr "新しいパラメータのデフォルト値を使用する (v.10.6)"
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: ics-calendar.php:221
+#: class-r34ics.php:386
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -332,14 +186,13 @@ msgid ""
 "any new issues after upgrading to version 11 or later, please visit the "
 "%4$sWordPress Support Forums%5$s for assistance."
 msgstr ""
-"%1$sご注意：%2$s %3$s バージョン11.0では、ICSフィードURLの取得方法を合理化し"
-"ました。この変更は WordPress の標準的な組み込み機能を使用しているため、既存の"
-"すべてのインストールと完全に互換性があります。バージョン 11 以降にアップグ"
-"レードした後に新たな問題が発生した場合は、%4$sWordPress サポートフォーラ"
-"ム%5$s をご覧ください。"
+"%1$sご注意：%2$s %3$s バージョン11.0では、ICSフィードURLの取得方法を効率化し"
+"ました。この変更は標準のWordPress組み込み関数を使用するため、既存のすべてのイ"
+"ンストール環境と完全な互換性があるはずです。バージョン11以降へのアップグレー"
+"ド後に新たな問題が発生した場合は、%4$sWordPressサポートフォーラム%5$sでサポー"
+"トを受けてください。"
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate)
-#: ics-calendar.php:234
+#: class-r34ics.php:398
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -347,309 +200,579 @@ msgid ""
 "any caching plugins you are using, to ensure that your calendars are loading "
 "properly with the new method."
 msgstr ""
-"%1$sご注意:%2$s %3$s バージョン11.5.14.2では、AJAX経由でカレンダーを読み込む"
-"際に、より安全な新しいカレンダーパラメータの処理方法が導入されています。新し"
-"い方法でカレンダーが正しく読み込まれるように、使用しているキャッシュプラグイ"
-"ンをすべてクリアしてください。"
+"%1$sご注意：%2$s %3$s バージョン 11.5.14.2 では、AJAX 経由で読み込む際のカレ"
+"ンダーパラメータ処理に、より安全な新方式を導入しました。新しい方式でカレン"
+"ダーが正しく読み込まれるよう、ご利用中のキャッシュプラグインをすべてクリアし"
+"てください。"
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/add-calendar-button.php:3
-#: templates/admin/add-calendar-button.php:6 templates/admin/add-calendar.php:8
+#: class-r34ics.php:411
+#, php-format
+msgid ""
+"%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
+"troubleshooting tools, plus a number of performance improvements and "
+"interface refinements throughout. Please see the %4$schangelog%5$s for more "
+"details on this update."
+msgstr ""
+"%1$s%2$sバージョン12へようこそ！%3$s バージョン12.0では、トラブルシューティン"
+"グツールの追加に加え、パフォーマンスの向上やインターフェースの改善が多数施さ"
+"れています。このアップデートの詳細については、%4$s変更履歴%5$sをご覧くださ"
+"い。"
+
+#: class-r34ics.php:460 templates/admin/admin.php:24
+#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
+msgid "Getting Started"
+msgstr "はじめに"
+
+#: class-r34ics.php:461 class-r34ics.php:2365 templates/admin/admin.php:28
+#: templates/admin/settings.php:11
+msgid "Settings"
+msgstr "設定"
+
+#: class-r34ics.php:462 templates/admin/admin.php:29
+#: templates/admin/appearance.php:10
+msgid "Appearance"
+msgstr "外観"
+
+#: class-r34ics.php:463 templates/admin/admin.php:33
+#: templates/admin/utilities.php:10
+msgid "Utilities"
+msgstr "ユーティリティー"
+
+#: class-r34ics.php:464 templates/admin/admin.php:37
+#: templates/admin/utilities.php:209 templates/admin/utilities.php:218
+msgid "System Report"
+msgstr "システムレポート"
+
+#: class-r34ics.php:465 templates/admin/admin.php:41
+#: templates/admin/sidebar.php:18
+msgid "Support"
+msgstr "サポート"
+
+#: class-r34ics.php:468
+#, php-format
+msgid "Upgrade to %1$s!"
+msgstr "%1$sにアップグレード！"
+
+#: class-r34ics.php:498
+msgid "Show/hide all"
+msgstr "すべて表示/非表示"
+
+#: class-r34ics.php:770
+msgid ""
+"ICS file could not be retrieved or was empty. Please verify URL is correct, "
+"and check your php.ini configuration to verify either cURL or "
+"allow_url_fopen is available. If you are using spaces to delimit multiple "
+"URLs, you may also wish to try using the pipe character instead. Affected "
+"URL:"
+msgstr ""
+"ICSファイルを取得できませんでした、または空でした。URLが正しいことを確認し、"
+"php.iniの設定でcURLまたはallow_url_fopenが有効になっているか確認してくださ"
+"い。複数のURLを区切る際にスペースを使用している場合は、代わりにパイプ文字"
+"（|）を使用してみてください。影響を受けるURL:"
+
+#: class-r34ics.php:1214
+msgid "Hide past events"
+msgstr "過去のイベントを隠す"
+
+#: class-r34ics.php:1215 templates/calendar-month.php:96
+#: templates/calendar-week.php:87
+msgid "Show past events"
+msgstr "過去のイベントを表示"
+
+#: class-r34ics.php:1296
+msgid "Contact:"
+msgstr "連絡先:"
+
+#: class-r34ics.php:1302
+msgid "Resources:"
+msgstr "リソース:"
+
+#: class-r34ics.php:1312
+msgid "Click for more..."
+msgstr "続きを読む..."
+
+#: class-r34ics.php:1346
+msgid "Save to your calendar"
+msgstr "カレンダーに保存"
+
+#: class-r34ics.php:1449
+msgid "Cancelled"
+msgstr "キャンセル"
+
+#: class-r34ics.php:1562
+msgid ""
+"The legacy parser option is deprecated and will be removed in a future "
+"update."
+msgstr ""
+"レガシーパーサーオプションは非推奨となり、今後のアップデートで削除されます。"
+
+#: class-r34ics.php:1641
+msgid "Print"
+msgstr "印刷"
+
+#: class-r34ics.php:1898
+msgid ""
+"The \"currentweek\" shortcode attribute is deprecated. Please use "
+"view=\"week\" in your shortcode instead."
+msgstr ""
+"「currentweek」ショートコード属性は非推奨となりました。代わりにショートコード"
+"内で view=\"week\" を使用してください。"
+
+#: class-r34ics.php:1902
+msgid ""
+"The \"legendinline\" shortcode attribute is deprecated. Please use "
+"legendstyle=\"inline\" in your shortcode instead."
+msgstr ""
+"「legendinline」ショートコード属性は非推奨となりました。代わりに、ショート"
+"コード内で legendstyle=\"inline\" を使用してください。"
+
+#: class-r34ics.php:2239
+#, php-format
+msgid ""
+"%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
+"uses a caching plugin, you may need to clear the cache."
+msgstr ""
+"%1$sは%2$sフロントエンドページでのカレンダー提供を%3$s再開しました。サイトに"
+"キャッシュプラグインを使用している場合は、キャッシュをクリアする必要があるか"
+"もしれません。"
+
+#: class-r34ics.php:2247
+#, php-format
+msgid ""
+"%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
+"uses a caching plugin, you may need to clear the cache."
+msgstr ""
+"%1$sは%2$sフロントエンドページでのカレンダー提供を%3$s一時停止しました。サイ"
+"トにキャッシュプラグインを使用している場合は、キャッシュをクリアする必要があ"
+"るかもしれません。"
+
+#: class-r34ics.php:2259
+#, php-format
+msgid "Cleared %1$s %2$s transient(s)."
+msgstr "クリア済み %1$s %2$s 一時的データ。"
+
+#: class-r34ics.php:2266
+#, php-format
+msgid "No %1$s transients were found."
+msgstr "トランジェントは%1$s個見つかりませんでした。"
+
+#: class-r34ics.php:2275
+msgid "All saved ICS feed URLs have been cleared."
+msgstr "保存されたすべてのICSフィードURLが削除されました。"
+
+#: class-r34ics.php:2282
+#, php-format
+msgid ""
+"All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
+"been cleared."
+msgstr ""
+"すべての%1$s設定がデフォルトにリセットされ、保存されたICSフィードURLがクリア"
+"されました。"
+
+#: class-r34ics.php:2365
+#, php-format
+msgid ""
+"Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
+"turning off the %1$s option under the %2$s tab above."
+msgstr ""
+"フィードURLにHTTP基本認証の認証情報が含まれているようです。上記%2$sタブ内"
+"の%1$sオプションをオフにしてみてください。"
+
+#: class-r34ics.php:2365 templates/admin/settings.php:59
+msgid "Use legacy feed request method"
+msgstr "レガシーフィードリクエストメソッドを使用する"
+
+#: class-r34ics.php:2371
+#, php-format
+msgid ""
+"%1$sThis URL points to a file in your Media Library.%2$s While you should be "
+"able to use this URL in an %3$s shortcode, it will be a static snapshot of "
+"the calendar at the time the file was created, and will not reflect any "
+"future updates to the source calendar. Please see our %4$sUser Guide%5$s for "
+"instructions on obtaining your correct dynamic feed URL."
+msgstr ""
+"%1$sこのURLはメディアライブラリ内のファイルを指しています。%2$sこのURLを%3$s"
+"ショートコードで使用することは可能ですが、ファイル作成時点でのカレンダーの静"
+"的なスナップショットとなり、ソースカレンダーの今後の更新は反映されません。正"
+"しい動的フィードURLの取得方法については、%4$sユーザーガイド%5$sをご参照くださ"
+"い。"
+
+#: class-r34ics.php:2377
+#, php-format
+msgid "Error: Could not resolve IP address for %1$s."
+msgstr "エラー: %1$s の IP アドレスを解決できませんでした。"
+
+#: class-r34ics.php:2380
+#, php-format
+msgid "Resolved IP address for %1$s:"
+msgstr "%1$s の解決済み IP アドレス:"
+
+#: class-r34ics.php:2405
+#, php-format
+msgid ""
+"%1$sAppearance updated.%2$s You may need to refresh the page to see some "
+"changes."
+msgstr ""
+"%1$s外観を更新しました。%2$s変更内容を確認するには、ページを更新する必要があ"
+"る場合があります。"
+
+#: class-r34ics.php:2465
+msgid ""
+"The text entered in the \"Default shortcode\" field is not a valid "
+"shortcode, and was not saved."
+msgstr ""
+"「デフォルトのショートコード」フィールドに入力されたテキストは有効なショート"
+"コードではありませんでした。保存されませんでした。"
+
+#: class-r34ics.php:2508
+#, php-format
+msgid ""
+"%1$sSettings updated.%2$s You may need to refresh the page to see some "
+"changes."
+msgstr ""
+"%1$s設定を更新しました。%2$s 一部の変更を確認するには、ページを更新する必要が"
+"ある場合があります。"
+
+#: class-r34ics.php:2804
+msgid "calendar event"
+msgstr "カレンダーイベント"
+
+#: class-r34ics.php:3245
+msgid ""
+"The legacy feed request method is deprecated, and will be removed in an "
+"update in the near future. Please test your feeds with the legacy feed "
+"request method turned off."
+msgstr ""
+"レガシーフィードリクエストメソッドは非推奨となり、近い将来のアップデートで削"
+"除されます。レガシーフィードリクエストメソッドを無効にした状態でフィードをテ"
+"ストしてください。"
+
+#: compatibility.php:38
+#, php-format
+msgid ""
+"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+"your site to a newer version of WordPress as soon as possible."
+msgstr ""
+"%1$sの今後の更新には、WordPress 5.3以降が必要です。お早めにWordPressを最新版"
+"に更新してください。"
+
+#: functions.php:1116 functions.php:1124 functions.php:1133
+msgid "Map"
+msgstr "マップ"
+
+#: functions.php:1434
+msgid "Recurring event"
+msgstr "繰り返しイベントの新規作成"
+
+#: functions.php:1439
+#, php-format
+msgid "Recurs every %1$s years"
+msgstr "%1$s年ごとに繰り返す"
+
+#: functions.php:1439
+msgid "Recurs yearly"
+msgstr "毎年繰り返される"
+
+#: functions.php:1442
+#, php-format
+msgid "Recurs every %1$s months"
+msgstr "%1$sヶ月ごとに再発する"
+
+#: functions.php:1442
+msgid "Recurs monthly"
+msgstr "毎月繰り返される"
+
+#: functions.php:1445
+#, php-format
+msgid "Recurs every %1$s weeks"
+msgstr "%1$s週間ごとに再発する"
+
+#: functions.php:1445
+msgid "Recurs weekly"
+msgstr "毎週繰り返される"
+
+#: functions.php:1448
+#, php-format
+msgid "Recurs every %1$s days"
+msgstr "%1$s日ごとに再帰します"
+
+#: functions.php:1448
+msgid "Recurs daily"
+msgstr "毎日繰り返される"
+
+#: functions.php:1621
+#, php-format
+msgid ""
+"The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
+"most likely your URL has been turned into a clickable link. Your calendar "
+"may not display properly as a result. Please remove the clickable link in "
+"the shortcode."
+msgstr ""
+"%1$sショートコード内の「url」プロパティにHTMLタグが含まれているようです。おそ"
+"らくURLがクリック可能なリンクに変換されているため、カレンダーが正しく表示され"
+"ない可能性があります。ショートコード内のクリック可能なリンクを削除してくださ"
+"い。"
+
+#: functions.php:1950
+msgid "The r34ics_url_get_contents() function is no longer supported."
+msgstr "r34ics_url_get_contents() 関数はサポートされなくなりました。"
+
+#: templates/admin/add-calendar-button.php:7
+#: templates/admin/add-calendar-button.php:10
+#: templates/admin/add-calendar.php:12
 #, php-format
 msgid "Add %1$s"
 msgstr "%1$sを追加"
 
-#: templates/admin/add-calendar.php:10
+#: templates/admin/add-calendar.php:14
 msgid "Close"
 msgstr "閉じる"
 
-#: templates/admin/add-calendar.php:19
-msgid "ICS Feed URL:"
-msgstr "ICSフィードのURLです。"
-
-#. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag 6. Do not translate
 #: templates/admin/add-calendar.php:23
+msgid "ICS Feed URL:"
+msgstr "ICSフィードURL:"
+
+#: templates/admin/add-calendar.php:27
 #, php-format
 msgid ""
 "Be sure you are using a %1$ssubscribe%2$s URL, not a %3$sweb view%4$s URL."
 "%5$s (Entering the URL directly in your web browser should download an %6$s "
 "file.)"
 msgstr ""
-"%3$sweb view%4$s URLではなく、%1$ssubscribe%2$s URLであることを確認してくださ"
-"い%5$s （Webブラウザに直接URLを入力すると、%6$sファイルをダウンロードすること"
-"になります）。"
+"必ず%1$ssubscribe%2$s URLを使用し、%3$sweb view%4$s URLではないことを確認して"
+"ください。%5$s（URLをウェブブラウザに直接入力すると、%6$sファイルがダウンロー"
+"ドされるはずです。）"
 
-#: templates/admin/add-calendar.php:28
-msgid "Calendar Title:"
-msgstr "カレンダーのタイトル"
-
-#. translators: 1. Do not translate
 #: templates/admin/add-calendar.php:32
+msgid "Calendar Title:"
+msgstr "カレンダータイトル："
+
+#: templates/admin/add-calendar.php:36
 #, php-format
 msgid ""
 "Leave empty to use calendar&rsquo;s default title. Enter %1$s to omit title "
 "altogether."
 msgstr ""
-"カレンダーのデフォルトタイトルを使用する場合は、空欄にしてください。タイトル"
-"を省略する場合は、%1$sを入力してください。"
+"空欄のままにすると、カレンダーのデフォルトのタイトルが使用されます。タイトル"
+"を完全に省略するには%1$sを入力してください。"
 
-#: templates/admin/add-calendar.php:37
-msgid "Calendar Description:"
-msgstr "カレンダーの説明"
-
-#. translators: 1. Do not translate
 #: templates/admin/add-calendar.php:41
+msgid "Calendar Description:"
+msgstr "カレンダーの説明："
+
+#: templates/admin/add-calendar.php:45
 #, php-format
 msgid ""
 "Leave empty to use calendar&rsquo;s default description. Enter %1$s to omit "
 "description altogether."
 msgstr ""
-"カレンダーのデフォルトの説明を使用する場合は、空のままにしてください。%1$s を"
-"入力すると、説明文が省略されます。"
+"空欄のままにすると、カレンダーのデフォルトの説明が使用されます。説明を完全に"
+"省略するには%1$sを入力してください。"
 
-#: templates/admin/add-calendar.php:46
+#: templates/admin/add-calendar.php:50
 msgid "View:"
 msgstr "眺望:"
 
-#: templates/admin/add-calendar.php:48
+#: templates/admin/add-calendar.php:52
 msgid "month"
 msgstr "月"
 
-#: templates/admin/add-calendar.php:49
+#: templates/admin/add-calendar.php:53
 msgid "list"
 msgstr "リスト"
 
-#: templates/admin/add-calendar.php:50
+#: templates/admin/add-calendar.php:54
 msgid "week"
 msgstr "週"
 
-#: templates/admin/add-calendar.php:55 templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:59 templates/admin/add-calendar.php:66
 msgid "Count:"
 msgstr "カウント数"
 
-#: templates/admin/add-calendar.php:58 templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:62 templates/admin/add-calendar.php:66
 msgid "Format:"
 msgstr "フォーマット:"
 
-#. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags 3. HTML tag 4. HTML tag
-#: templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:66
 #, php-format
 msgid ""
 "Leave %1$s blank to include all upcoming events. %2$s must be a standard "
 "%3$sPHP date format string%4$s."
 msgstr ""
-"%1$s は空白のままにしておくと、今後開催されるすべてのイベントが含まれます。"
-"%2$sは標準的な%3$sPHPの日付フォーマット文字列%4$sである必要があります。"
+"%1$sを空白のままにすると、今後のすべてのイベントを含めます。%2$sは標準"
+"の%3$sPHP日付フォーマット文字列%4$sである必要があります。"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:70
+#: templates/admin/add-calendar.php:74
 #, php-format
 msgid ""
 "Show event descriptions %1$s(change to a number in inserted shortcode to set "
 "word limit)%2$s"
 msgstr ""
-"イベントの説明文を表示する %1$s(挿入したショートコードで数値に変更し、字数制"
-"限を設定)%2$s。"
+"イベントの説明を表示 %1$s(挿入されたショートコード内の数字を変更して文字数制"
+"限を設定)%2$s"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:78
+#: templates/admin/add-calendar.php:82
 #, php-format
 msgid "Show event locations %1$s(if available)%2$s"
-msgstr "イベントの場所を表示する %1$s(利用可能な場合)%2$s。"
+msgstr "イベントの場所を表示する %1$s(利用可能な場合)%2$s"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:86
+#: templates/admin/add-calendar.php:90
 #, php-format
 msgid "Show event organizers %1$s(if available)%2$s"
-msgstr "イベント主催者を表示する %1$s(存在する場合)%2$s。"
+msgstr "イベント主催者を表示する %1$s(利用可能な場合)%2$s"
 
-#. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4. HTML tag
-#: templates/admin/add-calendar.php:93
+#: templates/admin/add-calendar.php:97
 #, php-format
 msgid ""
 "%1$sNote:%2$s Additional %3$sdisplay options%4$s are available by manually "
 "editing the shortcode after insertion."
 msgstr ""
-"%1$s注意：%2$s 追加の%3$s表示オプション%4$sは、挿入後にショートコードを手動で"
+"%1$s注記：%2$s追加の%3$s表示オプション%4$sは、挿入後にショートコードを手動で"
 "編集することで利用可能です。"
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/add-calendar.php:100
+#: templates/admin/add-calendar.php:104
 #, php-format
 msgid "Insert %1$s"
-msgstr "インサート %1$s"
+msgstr "挿入 %1$s"
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/admin.php:12
+#: templates/admin/admin.php:63
 #, php-format
-msgid "Do even more with %1$s!"
-msgstr "エラー：%1$sのIPアドレスを解決できませんでした。"
+msgid "Do even more with %1$s version 6!"
+msgstr "%1$sバージョン6でさらに多くのことを実現しよう！"
 
-#: templates/admin/admin.php:18
-msgid "Calendar Builder"
-msgstr "カレンダービルダー"
+#: templates/admin/admin.php:69
+msgid "Calendar Builder + Block Editor"
+msgstr "カレンダービルダー＋ブロックエディター"
 
-#: templates/admin/admin.php:19
+#: templates/admin/admin.php:72
+#, php-format
 msgid ""
-"Configure all calendar settings with an easy visual interface... no need to "
-"manually type shortcodes."
+"Configure all calendar settings with an easy visual interface, and use the "
+"new %1$s block to select your saved calendars from a dropdown in the Block "
+"Editor, no shortcode needed! %2$sLearn more...%3$s"
 msgstr ""
-"簡単なビジュアルインターフェイスですべてのカレンダー設定を行うことができま"
-"す。"
+"すべてのカレンダー設定を直感的なビジュアルインターフェースで設定し、新し"
+"い%1$sブロックを使用してブロックエディタのドロップダウンから保存済みカレン"
+"ダーを選択できます。ショートコードは不要です！%2$s詳細はこちら...%3$s"
 
-#: templates/admin/admin.php:20
+#: templates/admin/admin.php:74
 msgid "Additional Views and Enhanced Features"
-msgstr "追加ビューと拡張機能"
+msgstr "追加ビューと強化された機能"
 
-#: templates/admin/admin.php:21
+#: templates/admin/admin.php:77
+#, php-format
 msgid ""
-"New ways to display your calendar including Full, Up Next, Masonry, Month "
-"with Sidebar, Widget, and more. Additional capabilities are added to the "
-"core Month, Basic, List and Week views."
+"%1$s offers many new ways to display your calendar, including integrations "
+"with the popular %2$s and %3$s open source libraries. Month and year views "
+"with a sidebar for the selected day. \"Up Next\" works great for radio or TV "
+"station schedules. Widget and year availability are perfect for holiday "
+"bookings. Plus, additional capabilities are added to the core Month, Basic, "
+"List and Week views. %4$sView sample calendars...%5$s"
 msgstr ""
-"フル、アップネクスト、メイソンリー、サイドバー付き月、ウィジェットなど、カレ"
-"ンダーの新しい表示方法。コアとなる月、基本、リスト、週ビューに追加機能が追加"
-"されました。"
+"%1$sはカレンダー表示の新たな方法を多数提供し、人気の%2$sや%3$sといったオープ"
+"ンソースライブラリとの連携も可能です。選択した日付のサイドバー付き月間・年間"
+"ビュー。「Up Next」機能はラジオやテレビ局の番組表に最適です。ウィジェットと年"
+"間空き状況表示は休暇の予約にぴったり。さらに、コアとなる月間・基本・リスト・"
+"週間ビューにも追加機能が搭載されました。%4$sサンプルカレンダーを見る...%5$s"
 
-#: templates/admin/admin.php:22
-msgid "Customizer"
-msgstr "カスタマイザー"
+#: templates/admin/admin.php:79
+msgid "Customization"
+msgstr "カスタマイズ"
 
-#: templates/admin/admin.php:23
-msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
+#: templates/admin/admin.php:80
+#, php-format
+msgid ""
+"Easy-to-use tools to completely customize your calendar colors, typography "
+"and more. Select one of our preset color palettes or create your own, with "
+"options to individually customize the color of each element in the calendar "
+"layout. Choose between your theme fonts, system fonts, or more than 20 "
+"included open source fonts. %1$sLearn more...%2$s"
 msgstr ""
-"カレンダーのカラーパレットやフォントなどを、サイト全体で簡単に変更できます。"
+"カレンダーの色やタイポグラフィなどを完全にカスタマイズできる使いやすいツー"
+"ル。プリセットのカラーパレットから選択するか、独自に作成できます。カレンダー"
+"レイアウトの各要素の色を個別にカスタマイズするオプションも用意されています。"
+"テーマフォント、システムフォント、または20種類以上の付属オープンソースフォン"
+"トから選択可能です。%1$s詳細を見る...%2$s"
 
-#: templates/admin/admin.php:25
+#: templates/admin/admin.php:81
 msgid "ICS Events"
 msgstr "ICSイベント"
 
-#. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/admin.php:28
+#: templates/admin/admin.php:84
 #, php-format
 msgid ""
-"%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
-"events directly in WordPress and even integrate them seamlessly with your "
-"existing feeds."
+"Turns %1$s into a full calendar management system. Create and edit new "
+"events directly in WordPress, and even integrate them seamlessly with your "
+"existing external ICS feeds. %2$sLearn more...%3$s"
 msgstr ""
-"%1$sNew！%2$s %3$sを完全なカレンダーシステムに変えます。WordPressで直接イベン"
-"トを作成・管理し、既存のフィードとシームレスに統合することもできます。"
+"%1$sを完全なカレンダー管理システムに変えます。WordPress内で直接新しいイベント"
+"を作成・編集でき、既存の外部ICSフィードともシームレスに連携可能です。%2$s詳細"
+"はこちら...%3$s"
 
-#. translators: 1. Link (do not translate)
-#: templates/admin/admin.php:32
+#: templates/admin/admin.php:86
+msgid "Localized Admin Interface"
+msgstr "ローカライズされた管理インターフェース"
+
+#: templates/admin/admin.php:89
+#, php-format
+msgid ""
+"All %1$s admin pages are translated into dozens of languages, including "
+"English, Czech, Danish, German, Greek, Spanish, Estonian, Finnish, French, "
+"Hungarian, Italian, Japanese, Korean, Lithuanian, Latvian, Norwegian, Dutch, "
+"Polish, Portuguese, Romanian, Russian, Slovak, Serbian, Swedish, Turkish, "
+"Ukrainian, and Chinese."
+msgstr ""
+"すべての%1$s管理ページは、英語、チェコ語、デンマーク語、ドイツ語、ギリシャ"
+"語、スペイン語、エストニア語、フィンランド語、フランス語、ハンガリー語、イタ"
+"リア語、日本語、韓国語、リトアニア語、ラトビア語、ノルウェー語、オランダ語、"
+"ポーランド語、ポルトガル語、ルーマニア語、ロシア語、スロバキア語、セルビア"
+"語、スウェーデン語、トルコ語、ウクライナ語、中国語を含む数十の言語に翻訳され"
+"ています。"
+
+#: templates/admin/admin.php:93
 #, php-format
 msgid "Visit %1$s to learn more."
-msgstr "詳しくは%1$sをご覧いただきたい。"
+msgstr "詳細については、%1$sをご覧ください。"
 
-#: templates/admin/admin.php:40
-msgid "Go PRO!"
-msgstr "プロに行く!"
+#: templates/admin/admin.php:97
+msgid "Calendar Builder screenshot"
+msgstr "カレンダービルダーのスクリーンショット"
 
-#: templates/admin/admin.php:60 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:31
-msgid "Getting Started"
-msgstr "はじめに"
+#: templates/admin/admin.php:98
+msgid "Appearance screenshot"
+msgstr "外観スクリーンショット"
 
-#: templates/admin/admin.php:69 templates/admin/utilities.php:130
-msgid "System Report"
-msgstr "システムレポート"
+#: templates/admin/admin.php:102
+msgid "Available now!"
+msgstr "今すぐご利用いただけます！"
 
-#: templates/admin/admin.php:90
-msgid "Save Changes"
-msgstr "変更を保存"
+#: templates/admin/admin.php:107
+#, php-format
+msgid "Get %1$s!"
+msgstr "%1$sを入手しよう！"
 
-#. translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag
-#: templates/admin/getting-started.php:10
+#: templates/admin/appearance.php:23
 #, php-format
 msgid ""
-"Thank you for installing %1$s. Before creating your first calendar "
-"shortcode, please visit your %2$sGeneral Settings%3$s page and verify that "
-"your site language, timezone and date/time format settings are correct. See "
-"our %4$sUser Guide%5$s for more information."
+"Extensive color palette and typography options are available with %1$s. "
+"%2$sLearn More%3$s"
 msgstr ""
-"%1$s をインストールしていただき、ありがとうございます。最初のカレンダーショー"
-"トコードを作成する前に、%2$s一般設定%3$sページで、サイトの言語、タイムゾー"
-"ン、日付/時間形式の設定が正しいかどうかを確認してください。詳細については、"
-"%4$sユーザーガイド%5$sを参照してください。"
+"豊富なカラーパレットとタイポグラフィオプションが利用可能です%1$s。%2$s詳細を"
+"見る%3$s"
 
-#: templates/admin/getting-started.php:17
-msgid "Quick Start Guide"
-msgstr "登録情報の更新"
+#: templates/admin/appearance.php:32
+msgid "Color Palette"
+msgstr "カスタムカラーパレット"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/getting-started.php:23
-#, php-format
-msgid ""
-"An extensive %1$sUser Guide%2$s is available on our website. Below are some "
-"quick links to key resources in the documentation."
-msgstr ""
-"広範な%1$sユーザーガイド%2$sは、私たちのウェブサイト上で利用可能です。以下"
-"は、ドキュメント内の主要リソースへのクイックリンクです。"
-
-#: templates/admin/getting-started.php:29
-msgid "General:"
-msgstr "全般:"
-
-#: templates/admin/getting-started.php:32
-msgid "General WordPress Settings"
-msgstr "WordPressの一般設定"
-
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/getting-started.php:35
-#, php-format
-msgid "%1$s Settings"
-msgstr "%1$s の設定"
-
-#: templates/admin/getting-started.php:40
-msgid "Working with Shortcodes:"
-msgstr "ショートコードを使う"
-
-#: templates/admin/getting-started.php:42
-msgid "Shortcode Overview"
-msgstr "ショートコードの概要"
-
-#: templates/admin/getting-started.php:43
-msgid "Shortcode Builder"
-msgstr "ショートコードビルダー"
-
-#: templates/admin/getting-started.php:44
-msgid "Shortcode Parameters Reference"
-msgstr "ショートコード・パラメータ・リファレンス"
-
-#: templates/admin/getting-started.php:48
-msgid "Advanced Topics:"
-msgstr "高度なトピック"
-
-#: templates/admin/getting-started.php:50
-msgid "FAQs and Tips"
-msgstr "よくある質問とヒント"
-
-#: templates/admin/getting-started.php:51
-msgid "CSS Guide"
-msgstr "CSSガイド"
-
-#: templates/admin/getting-started.php:52
-msgid "Developer Resources"
-msgstr "開発者向けリソース"
-
-#: templates/admin/getting-started.php:53
-msgid "GDPR"
-msgstr "GDPR"
-
-#: templates/admin/settings.php:3
-msgid "Appearance"
-msgstr "外観"
-
-#: templates/admin/settings.php:6
+#: templates/admin/appearance.php:37
 msgid "Match calendar color palette to current Block Theme colors"
-msgstr "カレンダーのカラーパレットを現在のブロックテーマの色に合わせる"
+msgstr "マッチカレンダーのカラーパレットを現在のブロックテーマの色に合わせる"
 
-#: templates/admin/settings.php:6 templates/admin/settings.php:21
+#: templates/admin/appearance.php:38
 msgid "beta"
 msgstr "ベータ  "
 
-#. translators: 1: Plugin name (do not translate) 2: HTML tag and filename 3: HTML tag and filename
-#: templates/admin/settings.php:10
+#: templates/admin/appearance.php:42
 #, php-format
 msgid ""
 "Replaces the %1$s default neutral color palette with nearest matches from "
@@ -658,68 +781,142 @@ msgid ""
 "accessibility contrast tests. This setting has no effect if you are using a "
 "\"classic\" theme that does not include a %3$s file."
 msgstr ""
-"%1$sデフォルトのニュートラルカラーパレットを、現在のサイトエディタスタイルカ"
-"ラーパレットまたはテーマの%2$sファイルから最も近い色に置き換えます。色の選択"
-"はアルゴリズムによるもので、組み合わせによってはアクセシビリティ・コントラス"
-"ト・テストに合格しない場合があります。この設定は、%3$sファイルを含まない「ク"
-"ラシック」テーマを使用している場合は効果がありません。"
+"%1$sデフォルトの中立カラーパレットを、現在のサイトエディタースタイルのカラー"
+"パレットまたはテーマ内の%2$sファイルから最も近い色で置き換えます。色の選択は"
+"アルゴリズムによるものであり、一部の組み合わせはアクセシビリティのコントラス"
+"トテストに合格しない場合があります。この設定は、%3$sファイルを含まない「クラ"
+"シック」テーマを使用している場合には効果がありません。"
 
-#. translators: 1: HTML tag 2: HTML tag
-#: templates/admin/settings.php:15 templates/admin/settings.php:29
+#: templates/admin/appearance.php:47
 #, php-format
 msgid ""
 "%1$sThis is currently a beta feature.%2$s It may require making some "
-"adjustments to your calendar settings or CSS for optimal display, especially "
-"if you have color-coded your feeds. Functionality is subject to change."
+"adjustments to your calendar appearance or CSS for optimal display, "
+"especially if you have color-coded your feeds. Functionality is subject to "
+"change."
 msgstr ""
-"%1$sこの機能は現在ベータ版です。%2$s 特にフィードを色分けしている場合は、最適"
-"な表示のためにカレンダーの設定やCSSを調整する必要があるかもしれません。機能は"
-"変更される可能性があります。"
+"%1$sこれは現在ベータ機能です。%2$s 最適な表示のため、特にフィードに色分けをし"
+"ている場合は、カレンダーの表示設定やCSSの調整が必要になる場合があります。機能"
+"は変更される可能性があります。"
 
-#: templates/admin/settings.php:21
+#: templates/admin/appearance.php:56
 msgid "Dark mode"
 msgstr "ダークモード"
 
-#. translators: 1: HTML tags 2: HTML tag 3: HTML tag and code 4: HTML tag and code
-#: templates/admin/settings.php:24
+#: templates/admin/appearance.php:58
+msgid "Inverts color palette (light colors on a dark background)."
+msgstr "カラーパレットを反転（暗い背景に明るい色）。"
+
+#: templates/admin/appearance.php:70 templates/admin/settings.php:200
+msgid "Save Changes"
+msgstr "変更を保存"
+
+#: templates/admin/getting-started.php:14
 #, php-format
 msgid ""
-"Inverts color palette (light colors on a dark background). %1$sNote:%2$s "
-"Dark mode also automatically applies style changes similar to the %3$s and "
-"%4$s shortcode parameters, so you do not need to include them in your "
-"shortcode."
+"Thank you for installing %1$s. Before creating your first calendar "
+"shortcode, please visit your %2$sGeneral Settings%3$s page and verify that "
+"your site language, timezone and date/time format settings are correct. See "
+"our %4$sUser Guide%5$s for more information."
 msgstr ""
-"カラーパレット（暗い背景に明るい色）を反転します。%1$s注:%2$s ダークモード"
-"は、%3$sと%4$sのショートコード・パラメータと同様のスタイル変更も自動的に適用"
-"するので、ショートコードに含める必要はありません。"
+"%1$sのインストールありがとうございます。最初のカレンダーショートコードを作成"
+"する前に、%2$s一般設定%3$sページにアクセスし、サイトの言語、タイムゾーン、日"
+"付/時刻形式の設定が正しいことを確認してください。詳細は%4$sユーザーガイド%5$s"
+"をご覧ください。"
 
-#: templates/admin/settings.php:40
+#: templates/admin/getting-started.php:23
+#, php-format
+msgid ""
+"Get started with %1$s in four easy steps... and you've already completed "
+"step one! Check out our %2$sQuick Start Guide%3$s for the rest."
+msgstr ""
+"%1$sを4つの簡単なステップで始めましょう…そして、もうステップ1は完了済みです！"
+"残りの手順については、%2$sクイックスタートガイド%3$sをご覧ください。"
+
+#: templates/admin/getting-started.php:26
+msgid "Quick Start Guide"
+msgstr "登録情報の更新"
+
+#: templates/admin/getting-started.php:32
+#, php-format
+msgid ""
+"An extensive %1$sUser Guide%2$s is available on our website. Below are some "
+"quick links to key resources in the documentation."
+msgstr ""
+"当社のウェブサイトでは、詳細な%1$sユーザーガイド%2$sをご覧いただけます。以下"
+"に、ドキュメント内の主要リソースへのクイックリンクをいくつか掲載します。"
+
+#: templates/admin/getting-started.php:38
+msgid "General:"
+msgstr "全般:"
+
+#: templates/admin/getting-started.php:41
+msgid "General WordPress Settings"
+msgstr "WordPress の基本設定"
+
+#: templates/admin/getting-started.php:44
+#, php-format
+msgid "%1$s Settings"
+msgstr "%1$s の設定"
+
+#: templates/admin/getting-started.php:49
+msgid "Working with Shortcodes:"
+msgstr "ショートコードの操作:"
+
+#: templates/admin/getting-started.php:51
+msgid "Shortcode Overview"
+msgstr "ショートコードの概要"
+
+#: templates/admin/getting-started.php:52
+msgid "Shortcode Builder"
+msgstr "ショートコードビルダー"
+
+#: templates/admin/getting-started.php:53
+msgid "Shortcode Parameters Reference"
+msgstr "ショートコードパラメータリファレンス"
+
+#: templates/admin/getting-started.php:57
+msgid "Advanced Topics:"
+msgstr "高度なトピック"
+
+#: templates/admin/getting-started.php:59
+msgid "FAQs and Tips"
+msgstr "よくある質問とヒント"
+
+#: templates/admin/getting-started.php:60
+msgid "CSS Guide"
+msgstr "CSSガイド"
+
+#: templates/admin/getting-started.php:61
+msgid "Developer Resources"
+msgstr "開発者向けリソース"
+
+#: templates/admin/getting-started.php:62
+msgid "GDPR"
+msgstr "GDPR"
+
+#: templates/admin/settings.php:20
 msgid "Loading"
 msgstr "読み込み中"
 
-#: templates/admin/settings.php:43
-msgid "Always use AJAX to render calendars (recommended)"
-msgstr "カレンダーのレンダリングには常にAJAXを使用すること（推奨）"
+#: templates/admin/settings.php:24
+msgid "Always use AJAX to render calendars"
+msgstr "カレンダーのレンダリングには常にAJAXを使用してください"
 
-#: templates/admin/settings.php:44
+#: templates/admin/settings.php:28
+#, php-format
 msgid ""
-"When checked, all calendars will render via AJAX (asynchronously after the "
-"page loads). This is especially useful in conjunction with other caching "
-"plugins, or if your calendars contain a large number of events. Normally, "
-"calendar data is sent directly in the HTML of the initial page load unless "
-"AJAX has been specified in the shortcode."
+"AJAX loading is now automatic. You can override AJAX, if necessary, by "
+"adding %1$s to your shortcode."
 msgstr ""
-"チェックした場合、すべてのカレンダーはAJAX経由でレンダリングされます。これは"
-"他のキャッシュプラグインと併用する場合や、カレンダーに多数のイベントが含まれ"
-"る場合に特に便利です。通常、カレンダーデータは、ショートコードでAJAXが指定さ"
-"れていない限り、最初のページロードのHTMLで直接送信されます。"
+"AJAXの読み込みは自動化されました。必要に応じて、ショートコードに%1$sを追加す"
+"ることでAJAXを上書きできます。"
 
-#: templates/admin/settings.php:48
+#: templates/admin/settings.php:36
 msgid "Increase memory limit when rendering calendars"
-msgstr "カレンダーのレンダリング時のメモリ制限を増やす"
+msgstr "カレンダーのレンダリング時にメモリ制限を増やす"
 
-#. translators: 1: HTML tag
-#: templates/admin/settings.php:65
+#: templates/admin/settings.php:50
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -728,32 +925,32 @@ msgid ""
 "server default setting. 2) It is not possible to set this option lower than "
 "the current default memory limit on your server."
 msgstr ""
-"カレンダーが \"メモリ不足 \"の致命的なエラーで読み込めない場合は、メモリ制限"
-"を増やしてみてください。最低512MBを推奨します。%1$s 注意事項1) ホスティングプ"
-"ロバイダによっては、アプリケーションがサーバーのデフォルト設定を上書きするこ"
-"とを許可しない場合があります。2) このオプションをサーバーの現在のデフォルトの"
-"メモリ制限より低く設定することはできません。"
+"カレンダーが「メモリ不足」の致命的なエラーで読み込まれない場合、メモリ制限の"
+"引き上げを試みてください。最低512MBを推奨します。%1$s注記：1) 一部のホスティ"
+"ングプロバイダーでは、アプリケーションがサーバーのデフォルト設定を上書きでき"
+"ない場合があります。2) サーバーの現在のデフォルトメモリ制限値より低い値に設定"
+"することはできません。"
 
-#: templates/admin/settings.php:70
+#: templates/admin/settings.php:60
 msgid "deprecated"
 msgstr "非推奨"
 
-#: templates/admin/settings.php:71
+#: templates/admin/settings.php:62
 msgid ""
-"If your site has stopped retrieving feeds after the version 11 update, turn "
-"on this option to use the legacy request method. This feature is deprecated "
-"and will be removed in an update in the near future."
+"Some servers may not support the default feed request method. If your feeds "
+"are not loading, turn on this option to use the legacy request method. This "
+"feature is deprecated and will be removed in a future update."
 msgstr ""
-"バージョン11のアップデート後にフィードの取得を停止した場合は、このオプション"
-"をオンにして、レガシーリクエストメソッドを使用してください。この機能は非推奨"
-"であり、近い将来のアップデートで削除される予定です。"
+"一部のサーバーでは、デフォルトのフィードリクエスト方式がサポートされていない"
+"場合があります。フィードが読み込まれない場合は、このオプションを有効にして従"
+"来のリクエスト方式を使用してください。この機能は非推奨となり、今後のアップ"
+"デートで削除される予定です。"
 
-#: templates/admin/settings.php:75
+#: templates/admin/settings.php:69
 msgid "Default shortcode"
 msgstr "デフォルトのショートコード"
 
-#. translators: 1: HTML tag and sample code
-#: templates/admin/settings.php:79
+#: templates/admin/settings.php:73
 #, php-format
 msgid ""
 "If your site will include a large number of similarly configured calendar "
@@ -763,18 +960,18 @@ msgid ""
 "to that calendar, as such: %1$s Any parameters included in the individual "
 "shortcode will override what is set here."
 msgstr ""
-"もし、あなたのサイトに似たような設定のカレンダーショートコードが多数ある場"
-"合、すべてのカレンダーで同じパラメータを持つデフォルトの \"ベース \"ショート"
-"コードをここに入力することができます。そして、サイト上の個々のショートコード"
-"には、そのカレンダーに固有のパラメータのみを含めることができます：%1$s 個々の"
-"ショートコードに含まれるパラメータは、ここで設定されたものを上書きします。"
+"サイトに同様の設定を持つ多数のカレンダーショートコードが含まれる場合、すべて"
+"のカレンダーで共通となるパラメータを指定したデフォルトの「ベース」ショート"
+"コードをここに設定できます。サイト上の個々のショートコードでは、そのカレン"
+"ダー固有のパラメータのみを指定すればよいことになります。具体的には以下のよう"
+"になります：%1$s 個々のショートコードに指定されたパラメータは、ここで設定され"
+"た値を上書きします。"
 
-#: templates/admin/settings.php:84
+#: templates/admin/settings.php:82
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
-msgstr "予約IPアドレスに解決するこれらのホスト名へのアクセスを許可する。"
+msgstr "予約済みIPアドレスに解決されるこれらのホスト名へのアクセスを許可する"
 
-#. translators: 1: HTML tag 2: HTML tag 3: HTML tag 4: Plugin name (do not translate) 5: HTML tag
-#: templates/admin/settings.php:88
+#: templates/admin/settings.php:86
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -783,63 +980,112 @@ msgid ""
 "calendar servers, enter one hostname per line. See %3$sthe %4$s "
 "documentation%5$s for more information."
 msgstr ""
-"カレンダーサーバーがウェブサイトと同じ物理サーバーでホストされている場合、同"
-"じローカルネットワークの一部である場合、または%1$s予約済みIPアドレス%2$sを使"
-"用している場合は、ここにホスト名を入力してアクセスを許可します。複数のカレン"
-"ダーサーバーの場合は、1行に1つのホスト名を入力してください。詳細については、"
-"%3$sドキュメント%4$s%5$sを参照してください。"
+"カレンダーサーバーがウェブサイトと同じ物理サーバー上でホストされている場合、"
+"同じローカルネットワークの一部である場合、または%1$s予約済みIPアドレス%2$sを"
+"使用している場合は、アクセスを許可するためにそのホスト名をここに入力してくだ"
+"さい。複数のカレンダーサーバーがある場合は、1行につき1つのホスト名を入力して"
+"ください。詳細については、%3$s%4$sドキュメント%5$sを参照してください。"
 
-#. translators: 1: HTML tag 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:92
+#: templates/admin/settings.php:93
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
 "URL. %1$s For example, you would enter %2$s, not %3$s."
 msgstr ""
-"1行に1つのホスト名を入力します。ホスト名は完全なURLではなく、ベースとなるドメ"
-"イン名です。%1$s 例えば、%3$sではなく%2$sと入力します。"
+"1行につき1つのホスト名を入力してください。ホスト名は完全なURLではなく、基本ド"
+"メイン名です。%1$s 例えば、%2$sと入力し、%3$sとは入力しません。"
+
+#: templates/admin/settings.php:99
+msgid "Allow access to these ports"
+msgstr "これらのポートへのアクセスを許可する"
 
 #: templates/admin/settings.php:102
+msgid ""
+"WordPress automatically allows access to ports 80, 443, and 8080. If you "
+"need to be able to access source calendars that use non-standard ports, "
+"enter the port numbers here, separated by commas."
+msgstr ""
+"WordPressは自動的にポート80、443、および8080へのアクセスを許可します。非標準"
+"ポートを使用するソースカレンダーにアクセスする必要がある場合は、ここにポート"
+"番号をコンマで区切って入力してください。"
+
+#: templates/admin/settings.php:113
 msgid "Caching"
 msgstr "キャッシュ"
 
-#: templates/admin/settings.php:105
+#: templates/admin/settings.php:117
 msgid "Transient (cache) expiration"
-msgstr "一時的な（キャッシュの）有効期限"
+msgstr "一時的（キャッシュ）期限切れ"
 
-#: templates/admin/settings.php:105
+#: templates/admin/settings.php:118
 msgid "seconds"
 msgstr "秒"
 
-#: templates/admin/settings.php:106
+#: templates/admin/settings.php:120
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
-"transients) before reloading. Default is 3600 (1 hour)."
+"transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
+"value is 120 (2 minutes)."
 msgstr ""
-"カレンダーフィードのデータを再読み込みする前に、サーバにキャッシュする時間"
-"（WordPressの過渡期）を設定します。デフォルトは3600（1時間）です。"
+"カレンダーフィードデータをサーバー（WordPressトランジェント）にキャッシュする"
+"期間を設定します。再読み込みまでのデフォルト値は3600（1時間）です。最小許容値"
+"は120（2分）です。"
 
-#: templates/admin/settings.php:115
-msgid "Miscellaneous"
-msgstr "その他"
+#: templates/admin/settings.php:131
+msgid "Admin"
+msgstr "管理者"
 
-#: templates/admin/settings.php:118
+#: templates/admin/settings.php:135
+msgid "Minimum access role"
+msgstr "最小アクセスロール"
+
+#: templates/admin/settings.php:155
+#, php-format
+msgid ""
+"Identifies the minimum user role that is allowed to access %1$s admin pages. "
+"Certain areas such as Settings are further restricted to %2$s users only "
+"(%3$s users on Multisite configurations)."
+msgstr ""
+"%1$s 管理ページへのアクセスが許可される最小限のユーザーロールを識別します。設"
+"定などの特定の領域はさらに%2$s ユーザーのみに制限されます（マルチサイト構成で"
+"は%3$s ユーザー）。"
+
+#: templates/admin/settings.php:163
+msgid "Register Customizer"
+msgstr "レジスタ カスタマイザー"
+
+#: templates/admin/settings.php:165
+msgid ""
+"WordPress no longer includes a link to the Customizer in the Appearance menu "
+"when a Block Theme is active. Check this box if you wish to use the "
+"Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
+"may already register the Customizer, in which case, this setting will have "
+"no effect. (The checkbox only enables the Customizer when checked; it does "
+"not disable the Customizer when unchecked."
+msgstr ""
+"ブロックテーマが有効な場合、WordPress の「外観」メニューにカスタマイザーへの"
+"リンクは表示されません。追加の CSS 入力など、カスタマイザーを使用したい場合は"
+"このチェックボックスをオンにしてください。注：一部のテーマやプラグインは既に"
+"カスタマイザーを登録している場合があります。その場合、この設定は効果を持ちま"
+"せん。（このチェックボックスはオン時にのみカスタマイザーを有効化します。オフ"
+"にしてもカスタマイザーは無効化されません。）"
+
+#: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
-msgstr "クラシックエディターの「ICSカレンダーを追加」ボタンを削除"
+msgstr "クラシックエディタから「ICSカレンダーを追加」ボタンを削除する"
 
-#: templates/admin/settings.php:119
+#: templates/admin/settings.php:175
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
 "the button. Has no effect on sites using the Block Editor (Gutenberg)."
 msgstr ""
-"デフォルトでは、ICS CalendarはClassic Editorを使用している場合、WYSIWYG "
-"Editorの上のツールバーに「Add ICS Calendar」ボタンを追加します。このボタンを"
-"削除するには、このボックスをチェックしてください。ブロックエディター"
-"（Gutenberg）を使用しているサイトには影響しません。"
+"デフォルトでは、クラシックエディター使用時にICSカレンダーはWYSIWYGエディター"
+"上部のツールバーに「ICSカレンダーを追加」ボタンを追加します。このチェックボッ"
+"クスをオンにするとボタンが非表示になります。ブロックエディター（グーテンベル"
+"ク）を使用しているサイトには影響しません。"
 
-#. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:126
+#: templates/admin/settings.php:187
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -847,62 +1093,120 @@ msgid ""
 "upgraded installations will continue to use the old default values, unless "
 "this box is checked. Read more about these changes on %2$sour blog%3$s."
 msgstr ""
-"%1$s バージョン 10.6 では、いくつかのショートコード パラメータに新しいデフォ"
-"ルト値が導入されました。 新しいインストールでは自動的に新しいデフォルト値が使"
-"用されますが、アップグレードされたインストールでは、このボックスがチェックさ"
-"れていない限り、引き続き古いデフォルト値が使用されます。 これらの変更について"
-"詳しくは、%2$sour ブログ%3$s をご覧ください。"
+"%1$s バージョン 10.6 では、いくつかのショートコードパラメータのデフォルト値が"
+"変更されました。新規インストールでは新しいデフォルト値が自動的に適用されます"
+"が、アップグレードされたインストールでは、このチェックボックスをオンにしない"
+"限り、以前のデフォルト値が引き続き使用されます。これらの変更の詳細について"
+"は、%2$s弊社のブログ%3$sをご覧ください。"
 
-#: templates/admin/sidebar.php:11
+#: templates/admin/sidebar.php:13
+msgid "User Guide"
+msgstr "ユーザーガイド"
+
+#: templates/admin/sidebar.php:15
 msgid ""
 "Our complete user guide is available with full translation into dozens of "
 "languages on our website:"
 msgstr ""
-"ユーザーガイドの全文を、数十ヶ国語に翻訳してホームページで公開しています。"
+"当社の完全なユーザーガイドは、数十の言語への完全な翻訳付きで当社ウェブサイト"
+"でご覧いただけます："
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/sidebar.php:18
+#: templates/admin/sidebar.php:22
 #, php-format
 msgid "For assistance, please use our %1$ssupport request form%2$s."
 msgstr ""
-"サポートについては、%1$sサポートリクエストフォーム%2$sをご利用ください。"
+"サポートが必要な場合は、%1$sサポートリクエストフォーム%2$sをご利用ください。"
 
-#. translators: 1. HTML tags 2. HTML tags
 #: templates/admin/sidebar.php:31
 #, php-format
 msgid ""
-"When contacting support, please include the %1$sSystem Report%2$s from this "
+"When contacting support, please include the %1$ssystem report%2$s from this "
 "page."
 msgstr ""
-"サポートにご連絡の際は、本ページの%1$sシステムレポート%2$sを明記してくださ"
-"い。"
+"サポートに連絡する際は、こちらのページから%1$sシステムレポート%2$sを添付して"
+"ください。"
 
 #: templates/admin/sidebar.php:37
 msgid "Spread the word!"
 msgstr "評判を広める"
 
-#. translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag
 #: templates/admin/sidebar.php:41
 #, php-format
 msgid ""
 "If you find %1$s useful, you can help support our continued growth and "
 "development with a %2$sfive-star review%3$s. Thank you!"
 msgstr ""
-"もし%1$sが役に立つと思われましたら、%2$s5つ星レビュー%3$sで私たちの継続的な成"
-"長と発展をサポートしてください。ありがとうございました！"
+"%1$sが役に立った場合は、%2$s五つ星の評価%3$sを付けることで、私たちの継続的な"
+"成長と発展をサポートしていただけます。ありがとうございます！"
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/utilities.php:9
+#: templates/admin/utilities.php:19
+#, php-format
+msgid "Calendar Status: %1$sPaused%2$s"
+msgstr "カレンダー状態：%1$s一時停止中%2$s"
+
+#: templates/admin/utilities.php:23
+#, php-format
+msgid "Calendar Status: %1$sActive%2$s"
+msgstr "カレンダー状態：%1$s有効%2$s"
+
+#: templates/admin/utilities.php:29
+#, php-format
+msgid ""
+"Use the pause button if you need to temporarily turn off %1$s on your front "
+"end pages."
+msgstr ""
+"フロントエンドページで%1$sを一時的に無効にする必要がある場合は、一時停止ボタ"
+"ンを使用してください。"
+
+#: templates/admin/utilities.php:41
+msgid "Resume Calendars"
+msgstr "履歴書カレンダー"
+
+#: templates/admin/utilities.php:52
+msgid "Pause Calendars"
+msgstr "一時停止カレンダー"
+
+#: templates/admin/utilities.php:64
+#, php-format
+msgid ""
+"No content will be altered, but your calendars will be hidden and no %1$s "
+"asset files (JavaScript, CSS) will be loaded on front-end pages. If you are "
+"using caching via a plugin or through your hosting provider, you may need to "
+"clear the cache after changing this setting."
+msgstr ""
+"コンテンツは変更されませんが、カレンダーは非表示となり、フロントエンドページ"
+"では%1$sアセットファイル（JavaScript、CSS）が読み込まれません。プラグインまた"
+"はホスティングプロバイダー経由でキャッシュを使用している場合、この設定変更後"
+"にキャッシュをクリアする必要があるかもしれません。"
+
+#: templates/admin/utilities.php:73
 #, php-format
 msgid "%1$s Data Cache"
 msgstr "%1$s データキャッシュ"
 
-#: templates/admin/utilities.php:16
-msgid "Clear Cached Calendar Data"
-msgstr "キャッシュされたカレンダーデータを消去する"
+#: templates/admin/utilities.php:79
+msgid ""
+"This will immediately clear all existing cached calendar data (purge "
+"transients), forcing WordPress to reload all calendars the next time they "
+"are viewed. Caching will then resume as before."
+msgstr ""
+"これにより既存のキャッシュされたカレンダーデータが即時クリアされ（一時データ"
+"を削除）、次回カレンダーが表示される際にWordPressが全カレンダーを再読み込みす"
+"るよう強制されます。その後、キャッシュは以前と同様に再開されます。"
 
-#. translators: 1: Plugin name (do not modify)
-#: templates/admin/utilities.php:20
+#: templates/admin/utilities.php:81
+msgid "Clear Cached Calendar Data"
+msgstr "キャッシュされたカレンダーデータをクリアする"
+
+#: templates/admin/utilities.php:89
+msgid ""
+"If you are using a third-party caching plugin, you may need to clear your "
+"site-wide cache after running this utility."
+msgstr ""
+"サードパーティのキャッシュプラグインを使用している場合、このユーティリティを"
+"実行した後はサイト全体のキャッシュをクリアする必要があるかもしれません。"
+
+#: templates/admin/utilities.php:91
 #, php-format
 msgid ""
 "Are you sure? This will reset all %1$s settings to their defaults. Your "
@@ -911,146 +1215,154 @@ msgid ""
 "third-party caching plugin, you may need to clear your site-wide cache after "
 "running this utility."
 msgstr ""
-"よろしいですか？これはすべての%1$s設定をデフォルトにリセットします。保存した"
-"カレンダーの設定とショートコードは保持されますが、デフォルトをリセットすると"
-"カレンダーの外観が変わる可能性があります。サードパーティのキャッシュプラグイ"
-"ンを使用している場合、このユーティリティを実行した後、サイト全体のキャッシュ"
-"をクリアする必要があるかもしれません。"
+"本当によろしいですか？これにより、すべての%1$sの設定がデフォルト値にリセット"
+"されます。保存済みのカレンダー設定とショートコードは保持されますが、デフォル"
+"ト設定に戻すとカレンダーの外観が変わる可能性があります。サードパーティ製の"
+"キャッシュプラグインを使用している場合は、このユーティリティを実行した後、サ"
+"イト全体のキャッシュをクリアする必要があるかもしれません。"
 
-#. translators: 1: Plugin name (do not modify)
-#: templates/admin/utilities.php:26
+#: templates/admin/utilities.php:95
+msgid "Only clear transients (default)"
+msgstr "クリアなトランジェントのみ（デフォルト）"
+
+#: templates/admin/utilities.php:99
+msgid "Also clear all saved ICS feed URLs"
+msgstr "また、保存されたすべてのICSフィードURLを削除してください"
+
+#: templates/admin/utilities.php:105
 #, php-format
-msgid "Also reset all %1$s settings"
-msgstr "また、すべての %1$s 設定をリセットする"
+msgid "Reset %1$sall%2$s %3$s settings (including transients and feed URLs)"
+msgstr "%1$sすべての%2$s %3$s設定をリセット（一時設定とフィードURLを含む）"
 
-#: templates/admin/utilities.php:30
-msgid ""
-"This will immediately clear all existing cached calendar data (purge "
-"transients), forcing WordPress to reload all calendars the next time they "
-"are viewed. Caching will then resume as before."
-msgstr ""
-"これにより、キャッシュされた既存のカレンダーデータがすべてすぐに消去され(一時"
-"的な削除)、次回表示される時に WordPress はすべてのカレンダーを再ロードする必"
-"要があります。キャッシュは以前と同じ状態で再開されます。"
-
-#: templates/admin/utilities.php:34
+#: templates/admin/utilities.php:115
 msgid "Last cleared:"
-msgstr "最後にクリアしたのは"
+msgstr "最終クリア："
 
-#: templates/admin/utilities.php:39
+#: templates/admin/utilities.php:121
 msgid "never"
 msgstr "いつも"
 
-#: templates/admin/utilities.php:49
+#: templates/admin/utilities.php:133
 msgid "ICS Feed URL Tester"
-msgstr "ICS フィード URL テスター"
+msgstr "ICSフィードURLテスター"
 
-#: templates/admin/utilities.php:51
+#: templates/admin/utilities.php:135
 msgid ""
 "If you are concerned that the plugin is not properly retrieving your feed, "
 "you can test the URL here."
 msgstr ""
-"プラグインがフィードを正しく取得していないと心配な場合は、ここでURLをテストす"
-"ることができます。"
+"プラグインがフィードを正しく取得していない可能性がある場合は、こちらのURLでテ"
+"ストできます。"
 
-#: templates/admin/utilities.php:58
+#: templates/admin/utilities.php:141 templates/admin/utilities.php:142
 msgid "Enter feed URL..."
-msgstr "フィード URL を入力します。"
+msgstr "フィードURLを入力してください..."
 
-#: templates/admin/utilities.php:58
+#: templates/admin/utilities.php:143
 msgid "Test URL"
-msgstr "URL のテスト"
+msgstr "テストURL"
 
-#: templates/admin/utilities.php:66
+#: templates/admin/utilities.php:151
 msgid "Results:"
 msgstr "結果 :"
 
-#. translators: 1: Dynamic value
-#: templates/admin/utilities.php:73
+#: templates/admin/utilities.php:155
 #, php-format
 msgid "%1$s received."
-msgstr "%1$sを受け取った。"
+msgstr "%1$s 受信しました。"
 
-#: templates/admin/utilities.php:82
+#: templates/admin/utilities.php:163
 msgid "This appears to be a valid ICS feed URL."
 msgstr "これは有効なICSフィードURLのようです。"
 
-#: templates/admin/utilities.php:87
+#: templates/admin/utilities.php:163 templates/admin/utilities.php:168
+msgid "unknown"
+msgstr "不明"
+
+#: templates/admin/utilities.php:168
 msgid "This does not appear to be a valid ICS feed URL."
-msgstr "これは有効なICSフィードのURLではないようです。"
+msgstr "これは有効なICSフィードURLではないようです。"
 
-#: templates/admin/utilities.php:92
+#: templates/admin/utilities.php:173
 msgid "Could not retrieve data from the requested URL."
-msgstr "要求された URL からデータを取得できませんでした。"
+msgstr "要求されたURLからデータを取得できませんでした。"
 
-#: templates/admin/utilities.php:97
+#: templates/admin/utilities.php:178
 msgid ""
 "An unknown error occurred while attempting to retrieve the requested URL."
-msgstr "要求された URL を取得中に不明なエラーが発生しました。"
+msgstr "要求されたURLを取得しようとした際に、不明なエラーが発生しました。"
 
-#: templates/admin/utilities.php:132
+#: templates/admin/utilities.php:211
 msgid ""
 "Please copy the following text and include it in your message when emailing "
 "support."
 msgstr ""
-"サポートにメールを送信する際は、次のテキストをコピーしてメッセージに含めてく"
-"ださい。"
+"以下のテキストをコピーし、サポート宛てのメールに本文として含めて送信してくだ"
+"さい。"
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/utilities.php:135
+#: templates/admin/utilities.php:214
 #, php-format
 msgid ""
 "Also please include the %1$s shortcode exactly as you have it entered on the "
 "affected page."
 msgstr ""
-"また、対象ページに入力されている%1$sショートコードも正確に記載してください。"
+"また、影響を受けたページに入力したままの状態で、%1$sショートコードを正確に含"
+"めてください。"
 
-#: templates/admin/utilities.php:136
-msgid ""
-"For your site security please do NOT post the System Report in the support "
-"forums."
-msgstr ""
-"サイトのセキュリティのため、システムレポートをサポートフォーラムに投稿しない"
-"でください。"
-
-#: templates/calendar-basic.php:55 templates/calendar-list.php:57
+#: templates/calendar-basic.php:60 templates/calendar-list.php:62
 msgid "No events found."
 msgstr "イベントが見つかりませんでした。"
 
-#: templates/calendar-basic.php:76 templates/calendar-list.php:78
+#: templates/calendar-basic.php:86 templates/calendar-list.php:88
 msgid "Previous Page"
 msgstr "前のページ"
 
-#: templates/calendar-basic.php:77 templates/calendar-list.php:79
+#: templates/calendar-basic.php:87 templates/calendar-list.php:89
 msgid "Next Page"
 msgstr "次のページ"
 
-#: templates/calendar-list.php:287 templates/calendar-month.php:202
-#: templates/calendar-week.php:211
+#: templates/calendar-list.php:297 templates/calendar-month.php:215
+#: templates/calendar-week.php:222
 msgid "All Day"
 msgstr "終日"
 
-#: templates/calendar-month.php:58
+#: templates/calendar-month.php:61
+msgid "Previous Month"
+msgstr "先月"
+
+#: templates/calendar-month.php:62
+msgid "Next Month"
+msgstr "来月"
+
+#: templates/calendar-month.php:63
 msgid "Today"
 msgstr "今日"
 
-#: templates/calendar-month.php:286 templates/calendar-week.php:298
+#: templates/calendar-month.php:69 templates/calendar-month.php:70
+msgid "Month selection"
+msgstr "月選択"
+
+#: templates/calendar-month.php:299 templates/calendar-week.php:309
 msgid "No events."
 msgstr "イベントはありません。"
 
-#: templates/calendar-month.php:298
+#: templates/calendar-month.php:311
 msgid "No additional events this month."
 msgstr "今月は追加のイベントはありません。"
 
-#: templates/calendar-week.php:66
-msgid "Last week"
-msgstr "前週"
+#: templates/calendar-week.php:70 templates/calendar-week.php:71
+msgid "Week selection"
+msgstr "週間選択"
 
-#: templates/calendar-week.php:67
+#: templates/calendar-week.php:72
+msgid "Last week"
+msgstr "先週"
+
+#: templates/calendar-week.php:73
 msgid "This week"
 msgstr "今週"
 
-#: templates/calendar-week.php:68
+#: templates/calendar-week.php:74
 msgid "Next week"
 msgstr "来週"
 
@@ -1069,12 +1381,81 @@ msgid ""
 "into a seamlessly integrated, auto-updating, zero-maintenance WordPress "
 "experience."
 msgstr ""
-"Googleカレンダー、Microsoft Office 365、Apple iCloudカレンダーをシームレスに"
-"統合し、自動更新、ゼロメンテナンスのWordPress体験に変えることができます。"
+"Googleカレンダー、Microsoft Office 365、またはApple iCloudカレンダーを、シー"
+"ムレスに統合され、自動更新され、メンテナンス不要なWordPress体験に変えましょ"
+"う。"
 
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
-msgstr "Room 34 Creative Services, LLC"
+msgstr "ルーム34 クリエイティブ・サービスズ合同会社"
+
+#~ msgid ""
+#~ "Configure all calendar settings with an easy visual interface... no need "
+#~ "to manually type shortcodes."
+#~ msgstr ""
+#~ "すべてのカレンダー設定を直感的なビジュアルインターフェースで設定...ショー"
+#~ "トコードを手動で入力する必要はありません。"
+
+#~ msgid ""
+#~ "New ways to display your calendar including Full, Up Next, Masonry, Month "
+#~ "with Sidebar, Widget, and more. Additional capabilities are added to the "
+#~ "core Month, Basic, List and Week views."
+#~ msgstr ""
+#~ "カレンダーの表示方法に新たな選択肢を追加：フル表示、次表示、マソンリー表"
+#~ "示、サイドバー付き月表示、ウィジェット表示など。基本となる月表示、基本表"
+#~ "示、リスト表示、週表示に追加機能が実装されました。"
+
+#~ msgid ""
+#~ "Easy-to-use tools to completely customize your calendar colors, "
+#~ "typography and more."
+#~ msgstr ""
+#~ "カレンダーの色や書体などを完全にカスタマイズできる使いやすいツール。"
+
+#~ msgid "Go PRO!"
+#~ msgstr "プロになろう！"
+
+#, php-format
+#~ msgid "Also reset all %1$s settings"
+#~ msgstr "また、すべての%1$s設定をリセットします"
+
+#~ msgid ""
+#~ "Easily modify your calendar color palettes, fonts, and more, site-wide."
+#~ msgstr ""
+#~ "カレンダーのカラーパレットやフォントなどを、サイト全体で簡単に変更できま"
+#~ "す。"
+
+#, php-format
+#~ msgid ""
+#~ "Inverts color palette (light colors on a dark background). %1$sNote:%2$s "
+#~ "Dark mode also automatically applies style changes similar to the %3$s "
+#~ "and %4$s shortcode parameters, so you do not need to include them in your "
+#~ "shortcode."
+#~ msgstr ""
+#~ "カラーパレット（暗い背景に明るい色）を反転します。%1$s注:%2$s ダークモード"
+#~ "は、%3$sと%4$sのショートコード・パラメータと同様のスタイル変更も自動的に適"
+#~ "用するので、ショートコードに含める必要はありません。"
+
+#~ msgid ""
+#~ "When checked, all calendars will render via AJAX (asynchronously after "
+#~ "the page loads). This is especially useful in conjunction with other "
+#~ "caching plugins, or if your calendars contain a large number of events. "
+#~ "Normally, calendar data is sent directly in the HTML of the initial page "
+#~ "load unless AJAX has been specified in the shortcode."
+#~ msgstr ""
+#~ "チェックした場合、すべてのカレンダーはAJAX経由でレンダリングされます。これ"
+#~ "は他のキャッシュプラグインと併用する場合や、カレンダーに多数のイベントが含"
+#~ "まれる場合に特に便利です。通常、カレンダーデータは、ショートコードでAJAXが"
+#~ "指定されていない限り、最初のページロードのHTMLで直接送信されます。"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "その他"
+
+#~ msgid ""
+#~ "For your site security please do NOT post the System Report in the "
+#~ "support forums."
+#~ msgstr ""
+#~ "サイトのセキュリティのため、システムレポートをサポートフォーラムに投稿しな"
+#~ "いでください。"
 
 #~ msgid "Permanent feed URL mask IDs"
 #~ msgstr "永久フィードURLマスクID"

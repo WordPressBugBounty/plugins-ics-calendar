@@ -1,0 +1,1607 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ICS Calendar\n"
+"POT-Creation-Date: 2026-01-07 15:18-0600\n"
+"PO-Revision-Date: 2026-01-07 15:18-0600\n"
+"Last-Translator: Scott Anderson <scott@room34.com>\n"
+"Language-Team: \n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && "
+"n%100<=4 ? 2 : 3);\n"
+"X-Generator: Poedit 3.8\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: ics-calendar.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: class-r34ics.php:307
+#, php-format
+msgid ""
+"%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
+"pages. You can resume serving calendars under the %4$sUtilities%5$s tab "
+"%6$shere%7$s."
+msgstr ""
+"%1$s je trenutno %2$szačasno ustavljen%3$s in ne prikazuje koledarjev na "
+"začetnih straneh. Prikazovanje koledarjev lahko ponovno vzpostavite v "
+"zavihku %4$sUtilities%5$s %6$stukaj%7$s."
+
+#: class-r34ics.php:316
+#, php-format
+msgid ""
+"%1$sYou are running ICS Calendar in a WordPress Playground implementation."
+"%2$s Because ICS Calendar is intended to run on a web server, some features "
+"may be unavailable or may not function properly."
+msgstr ""
+"%1$sICS Calendar uporabljate v izvedbi WordPress Playground.%2$s Ker je ICS "
+"Calendar namenjen za delovanje na spletnem strežniku, nekatere funkcije "
+"morda niso na voljo ali ne delujejo pravilno."
+
+#: class-r34ics.php:325
+#, php-format
+msgid ""
+"%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
+"This can produce time display errors in the %3$s plugin in locations that "
+"observe Daylight Saving Time. Please %4$schange your timezone setting%5$s to "
+"the city nearest your location, in the same timezone, for proper time "
+"display. See our %6$sdocumentation%7$s for additional information on this "
+"issue."
+msgstr ""
+"%1$sVaša spletna stran trenutno uporablja nastavitev časovnega pasu, ki "
+"temelji na odmiku UTC.%2$s To lahko povzroči napake pri prikazovanju časa v "
+"%3$svtičniku na lokacijah, kjer velja poletni čas. Za pravilno prikazovanje "
+"časa %4$sspremenite nastavitev časovnega pasu%5$s na mesto, ki je najbližje "
+"vaši lokaciji in je v istem časovnem pasu. Dodatne informacije o tej temi "
+"najdete v naši %6$sdokumentaciji%7$s."
+
+#: class-r34ics.php:337
+#, php-format
+msgid ""
+"Important! Your %1$s configuration appears to be exceeding source calendar "
+"provider rate limits."
+msgstr ""
+"Pomembno! Vaša konfiguracija %1$s očitno presega omejitve hitrosti ponudnika "
+"koledarja."
+
+#: class-r34ics.php:339
+#, php-format
+msgid ""
+"If your calendars are not loading properly, please review your %1$s settings "
+"and usage:"
+msgstr ""
+"Če se vaši koledarji ne nalagajo pravilno, preglejte nastavitve in uporabo "
+"%1$s:"
+
+#: class-r34ics.php:341
+#, php-format
+msgid ""
+"Do not use %1$s in your shortcodes. This feature is intended for "
+"troubleshooting only, and should not be left on permanently."
+msgstr ""
+"V kratkih kodah ne uporabljajte %1$s. Ta funkcija je namenjena izključno za "
+"odpravljanje težav in je ne smete pustiti trajno vklopljeno."
+
+#: class-r34ics.php:343
+#, php-format
+msgid ""
+"Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
+"%4$s43200%5$s (12 hours) or greater, to reduce the frequency of requests to "
+"the provider. (See note below.)"
+msgstr ""
+"Povečajte nastavitev %1$s %2$sPrehodni (cache) iztek veljavnosti%3$s na "
+"%4$s43200%5$s (12 ur) ali več, da zmanjšate pogostost zahtevkov ponudniku. "
+"(Glej opombo spodaj.)"
+
+#: class-r34ics.php:345
+#, php-format
+msgid ""
+"Avoid including a large number of feeds (10 or more) from the same provider "
+"in a single %1$s shortcode."
+msgstr ""
+"Izogibajte se vključevanju velikega števila virov (10 ali več) istega "
+"ponudnika v eno samo kratko kodo %1$s."
+
+#: class-r34ics.php:347
+#, php-format
+msgid ""
+"Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
+"Calendars%2$s utility. (24-48 hours is recommended.)"
+msgstr ""
+"Začasno ustavite koledar ICS na svojih spletnih straneh s pomočjo orodja "
+"%1$sPause Calendars%2$s (priporočljivo je 24–48 ur)."
+
+#: class-r34ics.php:349
+#, php-format
+msgid ""
+"%1$s includes built-in caching, specifically to improve performance and "
+"avoid exceeding provider rate limits. Circumventing this caching with a very "
+"low %2$sreload%3$s setting may trigger a temporary block on your web server "
+"IP address, or possibly on your entire hosting network, by the calendar "
+"provider."
+msgstr ""
+"%1$s vključuje vgrajeno shranjevanje v predpomnilniku, ki je namenjeno "
+"izboljšanju zmogljivosti in preprečevanju preseganja omejitev ponudnika. "
+"Izogibanje temu shranjevanju v predpomnilniku z zelo nizko nastavitvijo "
+"%2$sponovnega nalaganja%3$s lahko sproži začasno blokado IP naslova vašega "
+"spletnega strežnika ali celotnega gostiteljskega omrežja s strani ponudnika "
+"koledarja."
+
+#: class-r34ics.php:351
+#, php-format
+msgid ""
+"After making the recommended changes, please allow up to 24 hours for your "
+"calendar provider to remove any temporary blocks on your IP address. If you "
+"find that the problem persists, please use our %1$ssupport request form%2$s "
+"to contact us, and be sure to include your %3$ssystem report%4$s."
+msgstr ""
+"Po izvedbi priporočenih sprememb počakajte do 24 ur, da ponudnik koledarja "
+"odstrani začasne blokade vašega IP naslova. Če ugotovite, da problem še "
+"vedno obstaja, nas kontaktirajte prek %1$sobrazca za podporo%2$s in ne "
+"pozabite priložiti %3$ssistemskega poročila%4$s."
+
+#: class-r34ics.php:353
+#, php-format
+msgid ""
+"Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
+"considering how frequently event information in your calendar is typically "
+"updated. %3$s Remember that you can use the %4$sClear Cached Calendar "
+"Data%5$s utility to manually clear the cache at any time, if needed."
+msgstr ""
+"Opomba: Nastavite %1$sTransient (cache) expiration%2$s na čim večjo "
+"vrednost, upoštevajoč, kako pogosto se običajno posodabljajo podatki o "
+"dogodkih v vašem koledarju. %3$s Ne pozabite, da lahko kadar koli ročno "
+"počistite predpomnilnik s pomočjo orodja %4$sClear Cached Calendar Data%5$s, "
+"če je to potrebno."
+
+#: class-r34ics.php:374
+#, php-format
+msgid ""
+"%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
+"several shortcode settings. In order to maintain consistency, these new "
+"defaults are %4$snot%5$s enabled when upgrading from an earlier version. If "
+"you would like to learn more about the changes please read our %6$sblog "
+"post%7$s, or to switch to the new defaults, turn on the %8$s option on the "
+"%9$s settings%10$s page."
+msgstr ""
+"%1$sUpoštevajte:%2$s %3$s različica 10.6 spreminja privzete možnosti za več "
+"nastavitev kratkih kod. Da bi ohranili doslednost, te nove privzete "
+"nastavitve %4$sniso%5$s omogočene pri nadgradnji iz prejšnje različice. Če "
+"želite izvedeti več o spremembah, preberite naš %6$sblog%7$s ali pa za "
+"prehod na nove privzete nastavitve vklopite %8$s možnost na strani %9$s "
+"nastavitve%10$s."
+
+#: class-r34ics.php:374 templates/admin/settings.php:183
+msgid "Use new parameter defaults (v.10.6)"
+msgstr "Uporabi nove privzete parametre (v.10.6)"
+
+#: class-r34ics.php:386
+#, php-format
+msgid ""
+"%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
+"retrieved. This change uses a standard built-in WordPress function, so it "
+"should be fully compatible with all existing installations. If you encounter "
+"any new issues after upgrading to version 11 or later, please visit the "
+"%4$sWordPress Support Forums%5$s for assistance."
+msgstr ""
+"%1$sOpomba:%2$s %3$s različica 11.0 poenostavlja način pridobivanja URL-jev "
+"ICS-viri. Ta sprememba uporablja standardno vgrajeno funkcijo WordPress, "
+"zato naj bi bila popolnoma združljiva z vsemi obstoječimi namestitvami. Če "
+"po nadgradnji na različico 11 ali novejšo naletite na kakršne koli nove "
+"težave, obiščite %4$sWordPress Support Forums%5$s za pomoč."
+
+#: class-r34ics.php:398
+#, php-format
+msgid ""
+"%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
+"method for handling calendar parameters when loading via AJAX. Please clear "
+"any caching plugins you are using, to ensure that your calendars are loading "
+"properly with the new method."
+msgstr ""
+"%1$sOpomba:%2$s %3$s različica 11.5.14.2 uvaja novo, varnejšo metodo za "
+"obdelavo parametrov koledarja pri nalaganju prek AJAX. Izbrišite vse "
+"vtičnike za shranjevanje v predpomnilniku, ki jih uporabljate, da se "
+"zagotovi pravilno nalaganje koledarjev z novo metodo."
+
+#: class-r34ics.php:411
+#, php-format
+msgid ""
+"%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
+"troubleshooting tools, plus a number of performance improvements and "
+"interface refinements throughout. Please see the %4$schangelog%5$s for more "
+"details on this update."
+msgstr ""
+"%1$sDobrodošli v %2$s različici 12!%3$s Različica 12.0 prinaša dodatna "
+"orodja za odpravljanje težav, številne izboljšave zmogljivosti in "
+"izpopolnitve vmesnika. Za več podrobnosti o tej posodobitvi si oglejte "
+"%4$sseznam sprememb%5$s."
+
+#: class-r34ics.php:460 templates/admin/admin.php:24
+#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
+msgid "Getting Started"
+msgstr "Začetek"
+
+#: class-r34ics.php:461 class-r34ics.php:2365 templates/admin/admin.php:28
+#: templates/admin/settings.php:11
+msgid "Settings"
+msgstr "Nastavitve"
+
+#: class-r34ics.php:462 templates/admin/admin.php:29
+#: templates/admin/appearance.php:10
+msgid "Appearance"
+msgstr "Izgled"
+
+#: class-r34ics.php:463 templates/admin/admin.php:33
+#: templates/admin/utilities.php:10
+msgid "Utilities"
+msgstr "Pripomočki"
+
+#: class-r34ics.php:464 templates/admin/admin.php:37
+#: templates/admin/utilities.php:209 templates/admin/utilities.php:218
+msgid "System Report"
+msgstr "Sistemsko poročilo"
+
+#: class-r34ics.php:465 templates/admin/admin.php:41
+#: templates/admin/sidebar.php:18
+msgid "Support"
+msgstr "Podpora"
+
+#: class-r34ics.php:468
+#, php-format
+msgid "Upgrade to %1$s!"
+msgstr "Nadgradite na %1$s!"
+
+#: class-r34ics.php:498
+msgid "Show/hide all"
+msgstr "Pokaži/skrij vse"
+
+#: class-r34ics.php:770
+msgid ""
+"ICS file could not be retrieved or was empty. Please verify URL is correct, "
+"and check your php.ini configuration to verify either cURL or "
+"allow_url_fopen is available. If you are using spaces to delimit multiple "
+"URLs, you may also wish to try using the pipe character instead. Affected "
+"URL:"
+msgstr ""
+"Datoteke ICS ni bilo mogoče pridobiti ali je bila prazna. Preverite, ali je "
+"URL pravilna, in preverite konfiguracijo php.ini, da se prepričate, ali je "
+"na voljo cURL ali allow_url_fopen. Če za ločevanje več URL-jev uporabljate "
+"presledke, lahko namesto tega poskusite uporabiti znak pipe. Prizadeta URL:"
+
+#: class-r34ics.php:1214
+msgid "Hide past events"
+msgstr "Skrij pretekle dogodke"
+
+#: class-r34ics.php:1215 templates/calendar-month.php:96
+#: templates/calendar-week.php:87
+msgid "Show past events"
+msgstr "Prikaži pretekle dogodke"
+
+#: class-r34ics.php:1296
+msgid "Contact:"
+msgstr "Kontaktna oseba:"
+
+#: class-r34ics.php:1302
+msgid "Resources:"
+msgstr "Viri:"
+
+#: class-r34ics.php:1312
+msgid "Click for more..."
+msgstr "Kliknite za več..."
+
+#: class-r34ics.php:1346
+msgid "Save to your calendar"
+msgstr "Shrani v koledar"
+
+#: class-r34ics.php:1449
+msgid "Cancelled"
+msgstr "Preklicano"
+
+#: class-r34ics.php:1562
+msgid ""
+"The legacy parser option is deprecated and will be removed in a future "
+"update."
+msgstr ""
+"Možnost stare različice razčlenjevalnika je zastarela in bo v prihodnji "
+"posodobitvi odstranjena."
+
+#: class-r34ics.php:1641
+msgid "Print"
+msgstr "Natisni"
+
+#: class-r34ics.php:1898
+msgid ""
+"The \"currentweek\" shortcode attribute is deprecated. Please use "
+"view=\"week\" in your shortcode instead."
+msgstr ""
+"Atribut kratkega kodeksa „currentweek“ je zastarel. Namesto tega v kratkem "
+"kodeksu uporabite view=\"week\"."
+
+#: class-r34ics.php:1902
+msgid ""
+"The \"legendinline\" shortcode attribute is deprecated. Please use "
+"legendstyle=\"inline\" in your shortcode instead."
+msgstr ""
+"Atribut kratkega kodeksa „legendinline“ je zastarel. Namesto tega v kratkem "
+"kodeksu uporabite legendstyle=\"inline\"."
+
+#: class-r34ics.php:2239
+#, php-format
+msgid ""
+"%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
+"uses a caching plugin, you may need to clear the cache."
+msgstr ""
+"%1$s je %2$sponovno začel%3$s prikazovati koledarje na začetnih straneh. Če "
+"vaša spletna stran uporablja vtičnik za shranjevanje v predpomnilniku, boste "
+"morda morali izbrisati predpomnilnik."
+
+#: class-r34ics.php:2247
+#, php-format
+msgid ""
+"%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
+"uses a caching plugin, you may need to clear the cache."
+msgstr ""
+"%1$s je %2$szačasno ustavil%3$s prikazovanje koledarjev na začetnih straneh. "
+"Če vaša spletna stran uporablja vtičnik za shranjevanje v predpomnilniku, "
+"boste morda morali izbrisati predpomnilnik."
+
+#: class-r34ics.php:2259
+#, php-format
+msgid "Cleared %1$s %2$s transient(s)."
+msgstr "Izbrisano %1$s %2$s prehodno stanje."
+
+#: class-r34ics.php:2266
+#, php-format
+msgid "No %1$s transients were found."
+msgstr "Ni bilo najdenih %1$s prehodnih pojavov."
+
+#: class-r34ics.php:2275
+msgid "All saved ICS feed URLs have been cleared."
+msgstr "Vsi shranjeni URL-ji ICS-viri so bili izbrisani."
+
+#: class-r34ics.php:2282
+#, php-format
+msgid ""
+"All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
+"been cleared."
+msgstr ""
+"Vse %1$s nastavitve so bile ponastavljene na privzete vrednosti, shranjeni "
+"URL-ji ICS-viri pa so bili izbrisani."
+
+#: class-r34ics.php:2365
+#, php-format
+msgid ""
+"Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
+"turning off the %1$s option under the %2$s tab above."
+msgstr ""
+"Vaš URL vir vsebuje podatke za osnovno HTTP-avtentifikacijo. Poskusite "
+"izklopiti možnost %1$s v zavihku %2$s zgoraj."
+
+#: class-r34ics.php:2365 templates/admin/settings.php:59
+msgid "Use legacy feed request method"
+msgstr "Uporabi metodo zahtevka za starejše vire"
+
+#: class-r34ics.php:2371
+#, php-format
+msgid ""
+"%1$sThis URL points to a file in your Media Library.%2$s While you should be "
+"able to use this URL in an %3$s shortcode, it will be a static snapshot of "
+"the calendar at the time the file was created, and will not reflect any "
+"future updates to the source calendar. Please see our %4$sUser Guide%5$s for "
+"instructions on obtaining your correct dynamic feed URL."
+msgstr ""
+"%1$sTa URL kaže na datoteko v vaši medijski knjižnici.%2$s Čeprav bi morali "
+"biti sposobni uporabiti ta URL v %3$s kratki kodi, bo to statičen posnetek "
+"koledarja v trenutku, ko je bila datoteka ustvarjena, in ne bo odražal "
+"nobenih prihodnjih posodobitev izvornega koledarja. Za navodila o "
+"pridobivanju pravilnega dinamičnega URL-ja si oglejte naš %4$suporabniški "
+"priročnik%5$s."
+
+#: class-r34ics.php:2377
+#, php-format
+msgid "Error: Could not resolve IP address for %1$s."
+msgstr "Napaka: IP naslova za %1$s ni bilo mogoče razrešiti."
+
+#: class-r34ics.php:2380
+#, php-format
+msgid "Resolved IP address for %1$s:"
+msgstr "Določena IP-naslov za %1$s:"
+
+#: class-r34ics.php:2405
+#, php-format
+msgid ""
+"%1$sAppearance updated.%2$s You may need to refresh the page to see some "
+"changes."
+msgstr ""
+"%1$sVidez je bil posodobljen.%2$s Morda boste morali osvežiti stran, da "
+"boste videli nekatere spremembe."
+
+#: class-r34ics.php:2465
+msgid ""
+"The text entered in the \"Default shortcode\" field is not a valid "
+"shortcode, and was not saved."
+msgstr ""
+"Besedilo, vneseno v polje »Privzeti kratki kod«, ni veljaven kratki kod in "
+"ni bilo shranjeno."
+
+#: class-r34ics.php:2508
+#, php-format
+msgid ""
+"%1$sSettings updated.%2$s You may need to refresh the page to see some "
+"changes."
+msgstr ""
+"%1$sNastavitve so posodobljene.%2$s Morda boste morali osvežiti stran, da "
+"boste videli nekatere spremembe."
+
+#: class-r34ics.php:2804
+msgid "calendar event"
+msgstr "koledarski dogodek"
+
+#: class-r34ics.php:3245
+msgid ""
+"The legacy feed request method is deprecated, and will be removed in an "
+"update in the near future. Please test your feeds with the legacy feed "
+"request method turned off."
+msgstr ""
+"Stara metoda zahtevka za vir je zastarela in bo v bližnji prihodnosti "
+"odstranjena v okviru posodobitve. Preizkusite svoje vire z izklopljeno staro "
+"metodo zahtevka za vir."
+
+#: compatibility.php:38
+#, php-format
+msgid ""
+"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+"your site to a newer version of WordPress as soon as possible."
+msgstr ""
+"Prihodnje posodobitve %1$s bodo zahtevale WordPress 5.3 ali novejšo "
+"različico. Prosimo, čim prej posodobite svojo spletno stran na novejšo "
+"različico WordPressa."
+
+#: functions.php:1116 functions.php:1124 functions.php:1133
+msgid "Map"
+msgstr "Zemljevid"
+
+#: functions.php:1434
+msgid "Recurring event"
+msgstr "Ponavljajoči se dogodek"
+
+#: functions.php:1439
+#, php-format
+msgid "Recurs every %1$s years"
+msgstr "Ponovi se vsakih %1$s let"
+
+#: functions.php:1439
+msgid "Recurs yearly"
+msgstr "Ponavlja se vsako leto"
+
+#: functions.php:1442
+#, php-format
+msgid "Recurs every %1$s months"
+msgstr "Ponovi se vsakih %1$s mesecev"
+
+#: functions.php:1442
+msgid "Recurs monthly"
+msgstr "Ponavlja se mesečno"
+
+#: functions.php:1445
+#, php-format
+msgid "Recurs every %1$s weeks"
+msgstr "Ponovi se vsakih %1$s tednov"
+
+#: functions.php:1445
+msgid "Recurs weekly"
+msgstr "Ponavlja se tedensko"
+
+#: functions.php:1448
+#, php-format
+msgid "Recurs every %1$s days"
+msgstr "Ponovi se vsakih %1$s dni"
+
+#: functions.php:1448
+msgid "Recurs daily"
+msgstr "Ponavlja se vsak dan"
+
+#: functions.php:1621
+#, php-format
+msgid ""
+"The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
+"most likely your URL has been turned into a clickable link. Your calendar "
+"may not display properly as a result. Please remove the clickable link in "
+"the shortcode."
+msgstr ""
+"Lastnost „url“ v vašem kratkem kodu %1$s vsebuje oznake HTML; najverjetneje "
+"je vaš URL spremenjen v klikljivo povezavo. Zaradi tega se vaš koledar morda "
+"ne prikaže pravilno. Prosimo, odstranite klikljivo povezavo iz kratkega koda."
+
+#: functions.php:1950
+msgid "The r34ics_url_get_contents() function is no longer supported."
+msgstr "Funkcija r34ics_url_get_contents() ni več podprta."
+
+#: templates/admin/add-calendar-button.php:7
+#: templates/admin/add-calendar-button.php:10
+#: templates/admin/add-calendar.php:12
+#, php-format
+msgid "Add %1$s"
+msgstr "Dodaj %1$s"
+
+#: templates/admin/add-calendar.php:14
+msgid "Close"
+msgstr "Zapri"
+
+#: templates/admin/add-calendar.php:23
+msgid "ICS Feed URL:"
+msgstr "URL vir ICS:"
+
+#: templates/admin/add-calendar.php:27
+#, php-format
+msgid ""
+"Be sure you are using a %1$ssubscribe%2$s URL, not a %3$sweb view%4$s URL."
+"%5$s (Entering the URL directly in your web browser should download an %6$s "
+"file.)"
+msgstr ""
+"Prepričajte se, da uporabljate URL za %1$snaročanje%2$s, ne pa URL za "
+"%3$sspletni ogled%4$s.%5$s (Če URL vnesete neposredno v spletni brskalnik, "
+"se mora prenesti %6$s datoteka.)"
+
+#: templates/admin/add-calendar.php:32
+msgid "Calendar Title:"
+msgstr "Naslov koledarja:"
+
+#: templates/admin/add-calendar.php:36
+#, php-format
+msgid ""
+"Leave empty to use calendar&rsquo;s default title. Enter %1$s to omit title "
+"altogether."
+msgstr ""
+"Pustite prazno, če želite uporabiti privzeti naslov koledarja. Vnesite %1$s, "
+"če želite naslov v celoti izpustiti."
+
+#: templates/admin/add-calendar.php:41
+msgid "Calendar Description:"
+msgstr "Opis koledarja:"
+
+#: templates/admin/add-calendar.php:45
+#, php-format
+msgid ""
+"Leave empty to use calendar&rsquo;s default description. Enter %1$s to omit "
+"description altogether."
+msgstr ""
+"Pustite prazno, če želite uporabiti privzeti opis koledarja. Vnesite %1$s, "
+"če želite opis v celoti izpustiti."
+
+#: templates/admin/add-calendar.php:50
+msgid "View:"
+msgstr "Pogled:"
+
+#: templates/admin/add-calendar.php:52
+msgid "month"
+msgstr "mesec"
+
+#: templates/admin/add-calendar.php:53
+msgid "list"
+msgstr "seznam"
+
+#: templates/admin/add-calendar.php:54
+msgid "week"
+msgstr "teden"
+
+#: templates/admin/add-calendar.php:59 templates/admin/add-calendar.php:66
+msgid "Count:"
+msgstr "Število:"
+
+#: templates/admin/add-calendar.php:62 templates/admin/add-calendar.php:66
+msgid "Format:"
+msgstr "Format:"
+
+#: templates/admin/add-calendar.php:66
+#, php-format
+msgid ""
+"Leave %1$s blank to include all upcoming events. %2$s must be a standard "
+"%3$sPHP date format string%4$s."
+msgstr ""
+"Pustite %1$s prazno, če želite vključiti vse prihajajoče dogodke. %2$s mora "
+"biti standardni %3$sniz datuma v formatu PHP%4$s."
+
+#: templates/admin/add-calendar.php:74
+#, php-format
+msgid ""
+"Show event descriptions %1$s(change to a number in inserted shortcode to set "
+"word limit)%2$s"
+msgstr ""
+"Prikaži opise dogodkov %1$s(spremeni v številko v vstavljenem kratkem kodu, "
+"da nastaviš omejitev števila besed)%2$s"
+
+#: templates/admin/add-calendar.php:82
+#, php-format
+msgid "Show event locations %1$s(if available)%2$s"
+msgstr "Pokaži lokacije dogodkov %1$s(če so na voljo)%2$s"
+
+#: templates/admin/add-calendar.php:90
+#, php-format
+msgid "Show event organizers %1$s(if available)%2$s"
+msgstr "Pokaži organizatorje dogodka %1$s(če je na voljo)%2$s"
+
+#: templates/admin/add-calendar.php:97
+#, php-format
+msgid ""
+"%1$sNote:%2$s Additional %3$sdisplay options%4$s are available by manually "
+"editing the shortcode after insertion."
+msgstr ""
+"%1$sOpomba:%2$s Dodatne %3$smožnosti prikaza%4$s so na voljo z ročnim "
+"urejanjem kratkega kodeksa po vstavitvi."
+
+#: templates/admin/add-calendar.php:104
+#, php-format
+msgid "Insert %1$s"
+msgstr "Vstavi %1$s"
+
+#: templates/admin/admin.php:63
+#, php-format
+msgid "Do even more with %1$s version 6!"
+msgstr "Naredite še več z različico %1$s 6!"
+
+#: templates/admin/admin.php:69
+msgid "Calendar Builder + Block Editor"
+msgstr "Oblikovalnik koledarja + urejevalnik blokov"
+
+#: templates/admin/admin.php:72
+#, php-format
+msgid ""
+"Configure all calendar settings with an easy visual interface, and use the "
+"new %1$s block to select your saved calendars from a dropdown in the Block "
+"Editor, no shortcode needed! %2$sLearn more...%3$s"
+msgstr ""
+"Vse nastavitve koledarja lahko konfigurirate z enostavnim vizualnim "
+"vmesnikom, novi blok %1$s pa vam omogoča izbiro shranjenih koledarjev iz "
+"spustnega menija v urejevalniku blokov, brez potrebe po kratkih kodah! "
+"%2$sVeč informacij...%3$s"
+
+#: templates/admin/admin.php:74
+msgid "Additional Views and Enhanced Features"
+msgstr "Dodatni pogledi in izboljšane funkcije"
+
+#: templates/admin/admin.php:77
+#, php-format
+msgid ""
+"%1$s offers many new ways to display your calendar, including integrations "
+"with the popular %2$s and %3$s open source libraries. Month and year views "
+"with a sidebar for the selected day. \"Up Next\" works great for radio or TV "
+"station schedules. Widget and year availability are perfect for holiday "
+"bookings. Plus, additional capabilities are added to the core Month, Basic, "
+"List and Week views. %4$sView sample calendars...%5$s"
+msgstr ""
+"%1$s ponuja številne nove načine prikazovanja koledarja, vključno z "
+"integracijami s priljubljenimi odprtokodnimi knjižnicami %2$s in %3$s. "
+"Pogledi po mesecih in letih z stranskim menijem za izbrani dan. Funkcija »Up "
+"Next« je odlična za urnike radijskih in televizijskih postaj. Widget in "
+"razpoložljivost po letih sta idealna za rezervacije počitnic. Poleg tega so "
+"k osnovnim pogledom po mesecih, osnovnemu, seznamu in tednu dodane dodatne "
+"funkcije. %4$sOglejte si vzorčne koledarje...%5$s"
+
+#: templates/admin/admin.php:79
+msgid "Customization"
+msgstr "Prilagajanje"
+
+#: templates/admin/admin.php:80
+#, php-format
+msgid ""
+"Easy-to-use tools to completely customize your calendar colors, typography "
+"and more. Select one of our preset color palettes or create your own, with "
+"options to individually customize the color of each element in the calendar "
+"layout. Choose between your theme fonts, system fonts, or more than 20 "
+"included open source fonts. %1$sLearn more...%2$s"
+msgstr ""
+"Enostavna orodja za popolno prilagajanje barv koledarja, tipografije in "
+"drugih elementov. Izberite eno od naših vnaprej nastavljenih barvnih palet "
+"ali ustvarite svojo, s možnostjo individualnega prilagajanja barve vsakega "
+"elementa v postavitvi koledarja. Izbirate lahko med pisavami teme, "
+"sistemskimi pisavami ali več kot 20 vključenimi pisavami odprte kode. "
+"%1$sVeč informacij...%2$s"
+
+#: templates/admin/admin.php:81
+msgid "ICS Events"
+msgstr "ICS dogodki"
+
+#: templates/admin/admin.php:84
+#, php-format
+msgid ""
+"Turns %1$s into a full calendar management system. Create and edit new "
+"events directly in WordPress, and even integrate them seamlessly with your "
+"existing external ICS feeds. %2$sLearn more...%3$s"
+msgstr ""
+"%1$s spremeni v popoln sistem za upravljanje koledarja. Ustvarjajte in "
+"urejajte nove dogodke neposredno v WordPressu in jih celo brez težav "
+"integrirajte v svoje obstoječe zunanje ICS-vire. %2$sVeč informacij...%3$s"
+
+#: templates/admin/admin.php:86
+msgid "Localized Admin Interface"
+msgstr "Lokaliziran administrativni vmesnik"
+
+#: templates/admin/admin.php:89
+#, php-format
+msgid ""
+"All %1$s admin pages are translated into dozens of languages, including "
+"English, Czech, Danish, German, Greek, Spanish, Estonian, Finnish, French, "
+"Hungarian, Italian, Japanese, Korean, Lithuanian, Latvian, Norwegian, Dutch, "
+"Polish, Portuguese, Romanian, Russian, Slovak, Serbian, Swedish, Turkish, "
+"Ukrainian, and Chinese."
+msgstr ""
+"Vse %1$s administratorske strani so prevedene v več deset jezikov, vključno "
+"z angleščino, češčino, danščino, nemščino, grščino, španščino, estonščino, "
+"finščino, francoščino, madžarščino, italijanščino, japonščino, korejščino, "
+"litovščino, latvijščino, norveščino, nizozemščino, poljščino, portugalščino, "
+"romunščino, ruščino, slovaščino, srbščino, švedščino, turščino, ukrajinščino "
+"in kitajščino."
+
+#: templates/admin/admin.php:93
+#, php-format
+msgid "Visit %1$s to learn more."
+msgstr "Za več informacij obiščite %1$s."
+
+#: templates/admin/admin.php:97
+msgid "Calendar Builder screenshot"
+msgstr "Zaslonska slika programa Calendar Builder"
+
+#: templates/admin/admin.php:98
+msgid "Appearance screenshot"
+msgstr "Zaslon z videzom"
+
+#: templates/admin/admin.php:102
+msgid "Available now!"
+msgstr "Na voljo zdaj!"
+
+#: templates/admin/admin.php:107
+#, php-format
+msgid "Get %1$s!"
+msgstr "Pridobi %1$s!"
+
+#: templates/admin/appearance.php:23
+#, php-format
+msgid ""
+"Extensive color palette and typography options are available with %1$s. "
+"%2$sLearn More%3$s"
+msgstr ""
+"Na voljo je obsežna paleta barv in tipografskih možnosti z %1$s. %2$sVeč "
+"informacij%3$s"
+
+#: templates/admin/appearance.php:32
+msgid "Color Palette"
+msgstr "Barvna paleta"
+
+#: templates/admin/appearance.php:37
+msgid "Match calendar color palette to current Block Theme colors"
+msgstr "Barvno paleto koledarja prilagodite trenutnim barvam teme bloka."
+
+#: templates/admin/appearance.php:38
+msgid "beta"
+msgstr "beta"
+
+#: templates/admin/appearance.php:42
+#, php-format
+msgid ""
+"Replaces the %1$s default neutral color palette with nearest matches from "
+"the current Site Editor Styles color palette or the %2$s file in your theme. "
+"Color selections are algorithmic, and some combinations may not pass "
+"accessibility contrast tests. This setting has no effect if you are using a "
+"\"classic\" theme that does not include a %3$s file."
+msgstr ""
+"Nadomesti privzeto nevtralno barvno paleto %1$s z najbližjimi ujemanji iz "
+"trenutne barvne palete urejevalnika spletnega mesta ali datoteke %2$s v vaši "
+"temi. Izbor barv je algoritmičen, zato nekatere kombinacije morda ne bodo "
+"uspešno prestale testov kontrasta za dostopnost. Ta nastavitev nima nobenega "
+"učinka, če uporabljate „klasično“ temo, ki ne vključuje datoteke %3$s."
+
+#: templates/admin/appearance.php:47
+#, php-format
+msgid ""
+"%1$sThis is currently a beta feature.%2$s It may require making some "
+"adjustments to your calendar appearance or CSS for optimal display, "
+"especially if you have color-coded your feeds. Functionality is subject to "
+"change."
+msgstr ""
+"%1$sTo je trenutno beta funkcija.%2$s Za optimalno prikazovanje bo morda "
+"potrebno nekaj prilagoditev videza koledarja ali CSS, še posebej, če ste "
+"svoje vire označili z barvami. Funkcionalnost se lahko spremeni."
+
+#: templates/admin/appearance.php:56
+msgid "Dark mode"
+msgstr "Temna tema"
+
+#: templates/admin/appearance.php:58
+msgid "Inverts color palette (light colors on a dark background)."
+msgstr "Obrati barvno paleto (svetle barve na temnem ozadju)."
+
+#: templates/admin/appearance.php:70 templates/admin/settings.php:200
+msgid "Save Changes"
+msgstr "Shrani spremembe"
+
+#: templates/admin/getting-started.php:14
+#, php-format
+msgid ""
+"Thank you for installing %1$s. Before creating your first calendar "
+"shortcode, please visit your %2$sGeneral Settings%3$s page and verify that "
+"your site language, timezone and date/time format settings are correct. See "
+"our %4$sUser Guide%5$s for more information."
+msgstr ""
+"Hvala za namestitev %1$s. Preden ustvarite svoj prvi kratki kodek za "
+"koledar, obiščite stran %2$sSplošne nastavitve%3$s in preverite, ali so "
+"nastavitve jezika spletnega mesta, časovnega pasu in formata datuma/časa "
+"pravilne. Za več informacij glejte naš %4$suporabniški priročnik%5$s."
+
+#: templates/admin/getting-started.php:23
+#, php-format
+msgid ""
+"Get started with %1$s in four easy steps... and you've already completed "
+"step one! Check out our %2$sQuick Start Guide%3$s for the rest."
+msgstr ""
+"Začnite z %1$s v štirih preprostih korakih... in prvi korak ste že opravili! "
+"Preberite naš %2$sVodnik za hiter začetek%3$s za ostalo."
+
+#: templates/admin/getting-started.php:26
+msgid "Quick Start Guide"
+msgstr "Kratki vodnik za začetek"
+
+#: templates/admin/getting-started.php:32
+#, php-format
+msgid ""
+"An extensive %1$sUser Guide%2$s is available on our website. Below are some "
+"quick links to key resources in the documentation."
+msgstr ""
+"Na naši spletni strani je na voljo obsežen %1$suporabniški priročnik%2$s. "
+"Spodaj je nekaj hitrih povezav do ključnih virov v dokumentaciji."
+
+#: templates/admin/getting-started.php:38
+msgid "General:"
+msgstr "Splošno:"
+
+#: templates/admin/getting-started.php:41
+msgid "General WordPress Settings"
+msgstr "Splošne nastavitve WordPressa"
+
+#: templates/admin/getting-started.php:44
+#, php-format
+msgid "%1$s Settings"
+msgstr "%1$s nastavitve"
+
+#: templates/admin/getting-started.php:49
+msgid "Working with Shortcodes:"
+msgstr "Delo s kratkimi kodami:"
+
+#: templates/admin/getting-started.php:51
+msgid "Shortcode Overview"
+msgstr "Pregled kratkih kod"
+
+#: templates/admin/getting-started.php:52
+msgid "Shortcode Builder"
+msgstr "Oblikovalnik kratkih kod"
+
+#: templates/admin/getting-started.php:53
+msgid "Shortcode Parameters Reference"
+msgstr "Referenca parametrov kratkih kod"
+
+#: templates/admin/getting-started.php:57
+msgid "Advanced Topics:"
+msgstr "Napredne teme:"
+
+#: templates/admin/getting-started.php:59
+msgid "FAQs and Tips"
+msgstr "Pogosta vprašanja in nasveti"
+
+#: templates/admin/getting-started.php:60
+msgid "CSS Guide"
+msgstr "Vodnik po CSS"
+
+#: templates/admin/getting-started.php:61
+msgid "Developer Resources"
+msgstr "Viri za razvijalce"
+
+#: templates/admin/getting-started.php:62
+msgid "GDPR"
+msgstr "GDPR"
+
+#: templates/admin/settings.php:20
+msgid "Loading"
+msgstr "Nalaganje"
+
+#: templates/admin/settings.php:24
+msgid "Always use AJAX to render calendars"
+msgstr "Vedno uporabljajte AJAX za prikaz koledarjev."
+
+#: templates/admin/settings.php:28
+#, php-format
+msgid ""
+"AJAX loading is now automatic. You can override AJAX, if necessary, by "
+"adding %1$s to your shortcode."
+msgstr ""
+"AJAX se zdaj nalaga samodejno. Po potrebi lahko AJAX prekrijete tako, da k "
+"svojemu kratkemu kodu dodate %1$s."
+
+#: templates/admin/settings.php:36
+msgid "Increase memory limit when rendering calendars"
+msgstr "Povečajte omejitev pomnilnika pri upodabljanju koledarjev"
+
+#: templates/admin/settings.php:50
+#, php-format
+msgid ""
+"If your calendar is failing to load with an \"out of memory\" fatal error, "
+"try increasing the memory limit. A minimum of 512 MB is recommended. %1$s "
+"Notes: 1) Some hosting providers may not allow applications to override the "
+"server default setting. 2) It is not possible to set this option lower than "
+"the current default memory limit on your server."
+msgstr ""
+"Če se vaš koledar ne nalaga in se pojavi napaka »out of memory«, poskusite "
+"povečati omejitev pomnilnika. Priporočljivo je najmanj 512 MB. %1$s Opombe: "
+"1) Nekateri ponudniki gostovanja morda ne dovoljujejo, da aplikacije "
+"prevladajo nad privzetimi nastavitvami strežnika. 2) Te možnosti ni mogoče "
+"nastaviti na vrednost, ki je nižja od trenutne privzete omejitve pomnilnika "
+"na vašem strežniku."
+
+#: templates/admin/settings.php:60
+msgid "deprecated"
+msgstr "zastarelo"
+
+#: templates/admin/settings.php:62
+msgid ""
+"Some servers may not support the default feed request method. If your feeds "
+"are not loading, turn on this option to use the legacy request method. This "
+"feature is deprecated and will be removed in a future update."
+msgstr ""
+"Nekateri strežniki morda ne podpirajo privzete metode zahtevka za vire. Če "
+"se vaši viri ne nalagajo, vklopite to možnost, da uporabite starejšo metodo "
+"zahtevka. Ta funkcija je zastarela in bo v prihodnji posodobitvi odstranjena."
+
+#: templates/admin/settings.php:69
+msgid "Default shortcode"
+msgstr "Privzeti kratki kod"
+
+#: templates/admin/settings.php:73
+#, php-format
+msgid ""
+"If your site will include a large number of similarly configured calendar "
+"shortcodes, you can enter a default \"base\" shortcode here with the "
+"parameters that should be the same for all of the calendars. Individual "
+"shortcodes on the site can then include only the parameters that are unique "
+"to that calendar, as such: %1$s Any parameters included in the individual "
+"shortcode will override what is set here."
+msgstr ""
+"Če bo vaša spletna stran vsebovala veliko število podobno konfiguriranih "
+"kratkih kod koledarja, lahko tukaj vnesete privzeto „osnovno“ kratko kodo s "
+"parametri, ki morajo biti enaki za vse koledarje. Posamezne kratke kode na "
+"spletni strani lahko nato vključujejo le parametre, ki so edinstveni za ta "
+"koledar, in sicer: %1$s Vsi parametri, vključeni v posamezno kratko kodo, "
+"bodo prevladali nad tistimi, ki so nastavljeni tukaj."
+
+#: templates/admin/settings.php:82
+msgid "Allow access to these hostnames that resolve to reserved IP addresses"
+msgstr ""
+"Dovoli dostop do teh imen gostiteljev, ki se razrešijo v rezervirane IP-"
+"naslove."
+
+#: templates/admin/settings.php:86
+#, php-format
+msgid ""
+"If your calendar server is hosted on the same physical server as your "
+"website, is part of the same local network, or otherwise uses a %1$sreserved "
+"IP address%2$s, enter its hostname here to allow access. For multiple "
+"calendar servers, enter one hostname per line. See %3$sthe %4$s "
+"documentation%5$s for more information."
+msgstr ""
+"Če je vaš koledarski strežnik gostovan na istem fizičnem strežniku kot vaša "
+"spletna stran, je del istega lokalnega omrežja ali kako drugače uporablja "
+"%1$srezervirani IP naslov%2$s, vnesite tukaj njegovo ime gostitelja, da "
+"omogočite dostop. Za več koledarskih strežnikov vnesite eno ime gostitelja "
+"na vrstico. Za več informacij glejte %3$sdokumentacijo%4$s%5$s."
+
+#: templates/admin/settings.php:93
+#, php-format
+msgid ""
+"Enter one hostname per line. Hostnames are the base domain name, not a full "
+"URL. %1$s For example, you would enter %2$s, not %3$s."
+msgstr ""
+"Vnesite eno ime gostitelja na vrstico. Imena gostiteljev so osnovna domenska "
+"imena, ne pa celotni URL. %1$s Na primer, vnesete %2$s, ne pa %3$s."
+
+#: templates/admin/settings.php:99
+msgid "Allow access to these ports"
+msgstr "Dovoli dostop do teh vrat"
+
+#: templates/admin/settings.php:102
+msgid ""
+"WordPress automatically allows access to ports 80, 443, and 8080. If you "
+"need to be able to access source calendars that use non-standard ports, "
+"enter the port numbers here, separated by commas."
+msgstr ""
+"WordPress samodejno omogoča dostop do vrat 80, 443 in 8080. Če potrebujete "
+"dostop do izvornih koledarjev, ki uporabljajo nestandardna vrata, tukaj "
+"vnesite številke vrat, ločene z vejicami."
+
+#: templates/admin/settings.php:113
+msgid "Caching"
+msgstr "Predpolnjenje"
+
+#: templates/admin/settings.php:117
+msgid "Transient (cache) expiration"
+msgstr "Prehodno (cache) potek veljavnosti"
+
+#: templates/admin/settings.php:118
+msgid "seconds"
+msgstr "sekunde"
+
+#: templates/admin/settings.php:120
+msgid ""
+"Sets how long calendar feed data should be cached on the server (WordPress "
+"transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
+"value is 120 (2 minutes)."
+msgstr ""
+"Določa, kako dolgo naj se podatki koledarskega vira shranjujejo v "
+"predpomnilniku strežnika (WordPress transients) pred ponovnim nalaganjem. "
+"Privzeta vrednost je 3600 (1 ura). Najmanjša dovoljena vrednost je 120 (2 "
+"minuti)."
+
+#: templates/admin/settings.php:131
+msgid "Admin"
+msgstr "Administrator"
+
+#: templates/admin/settings.php:135
+msgid "Minimum access role"
+msgstr "Vloga minimalnega dostopa"
+
+#: templates/admin/settings.php:155
+#, php-format
+msgid ""
+"Identifies the minimum user role that is allowed to access %1$s admin pages. "
+"Certain areas such as Settings are further restricted to %2$s users only "
+"(%3$s users on Multisite configurations)."
+msgstr ""
+"Določa minimalno vlogo uporabnika, ki ima dostop do %1$s administrativnih "
+"strani. Nekatera področja, kot so Nastavitve, so dodatno omejena samo na "
+"%2$s uporabnike (%3$s uporabnike v konfiguracijah Multisite)."
+
+#: templates/admin/settings.php:163
+msgid "Register Customizer"
+msgstr "Registrirajte prilagoditelj"
+
+#: templates/admin/settings.php:165
+msgid ""
+"WordPress no longer includes a link to the Customizer in the Appearance menu "
+"when a Block Theme is active. Check this box if you wish to use the "
+"Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
+"may already register the Customizer, in which case, this setting will have "
+"no effect. (The checkbox only enables the Customizer when checked; it does "
+"not disable the Customizer when unchecked."
+msgstr ""
+"WordPress ne vključuje več povezave do Customizerja v meniju Appearance, ko "
+"je aktivna Block Theme. Potrdite to polje, če želite uporabljati Customizer, "
+"npr. za dodatno vnos CSS. Opomba: Nekatere teme ali vtičniki lahko že "
+"registrirajo Customizer, v tem primeru ta nastavitev ne bo imela nobenega "
+"učinka. (Potrditveno polje omogoča Customizer le, ko je potrjeno; ne "
+"onemogoča Customizerja, ko ni potrjeno."
+
+#: templates/admin/settings.php:173
+msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
+msgstr "Odstrani gumb »Dodaj koledar ICS« v klasičnem urejevalniku"
+
+#: templates/admin/settings.php:175
+msgid ""
+"By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
+"above the WYSIWYG editor when using Classic Editor. Check this box to remove "
+"the button. Has no effect on sites using the Block Editor (Gutenberg)."
+msgstr ""
+"Privzeto ICS Calendar doda gumb »Dodaj ICS Calendar« na orodno vrstico nad "
+"urejevalnikom WYSIWYG, ko uporabljate Classic Editor. Potrdite to polje, da "
+"odstranite gumb. Nima vpliva na spletna mesta, ki uporabljajo Block Editor "
+"(Gutenberg)."
+
+#: templates/admin/settings.php:187
+#, php-format
+msgid ""
+"%1$s version 10.6 introduced new default values for several shortcode "
+"parameters. New installations automatically use the new default values, but "
+"upgraded installations will continue to use the old default values, unless "
+"this box is checked. Read more about these changes on %2$sour blog%3$s."
+msgstr ""
+"%1$s različica 10.6 je uvedla nove privzete vrednosti za več parametrov "
+"kratkih kod. Nove namestitve samodejno uporabljajo nove privzete vrednosti, "
+"vendar bodo nadgrajene namestitve še naprej uporabljale stare privzete "
+"vrednosti, razen če je to polje označeno. Več o teh spremembah si preberite "
+"na %2$snašem blogu%3$s."
+
+#: templates/admin/sidebar.php:13
+msgid "User Guide"
+msgstr "Priroènik za uporabo"
+
+#: templates/admin/sidebar.php:15
+msgid ""
+"Our complete user guide is available with full translation into dozens of "
+"languages on our website:"
+msgstr ""
+"Naša popolna uporabniška priročnik je na voljo v več jezikih na naši spletni "
+"strani:"
+
+#: templates/admin/sidebar.php:22
+#, php-format
+msgid "For assistance, please use our %1$ssupport request form%2$s."
+msgstr "Za pomoč uporabite naš %1$sobrazec za zahtevo podpore%2$s."
+
+#: templates/admin/sidebar.php:31
+#, php-format
+msgid ""
+"When contacting support, please include the %1$ssystem report%2$s from this "
+"page."
+msgstr ""
+"Ko se obrnete na podporo, priložite %1$ssistemsko poročilo%2$s s te strani."
+
+#: templates/admin/sidebar.php:37
+msgid "Spread the word!"
+msgstr "Razširi besedo!"
+
+#: templates/admin/sidebar.php:41
+#, php-format
+msgid ""
+"If you find %1$s useful, you can help support our continued growth and "
+"development with a %2$sfive-star review%3$s. Thank you!"
+msgstr ""
+"Če vam je %1$s koristno, lahko s %2$spetzvezdično oceno%3$spomagate podpreti "
+"naš nadaljnji rast in razvoj. Hvala!"
+
+#: templates/admin/utilities.php:19
+#, php-format
+msgid "Calendar Status: %1$sPaused%2$s"
+msgstr "Stanje koledarja: %1$sPrekinjeno%2$s"
+
+#: templates/admin/utilities.php:23
+#, php-format
+msgid "Calendar Status: %1$sActive%2$s"
+msgstr "Stanje koledarja: %1$sAktivno%2$s"
+
+#: templates/admin/utilities.php:29
+#, php-format
+msgid ""
+"Use the pause button if you need to temporarily turn off %1$s on your front "
+"end pages."
+msgstr ""
+"Uporabite gumb za pavzo, če želite začasno izklopiti %1$s na svojih začetnih "
+"straneh."
+
+#: templates/admin/utilities.php:41
+msgid "Resume Calendars"
+msgstr "Koledarji življenjepisov"
+
+#: templates/admin/utilities.php:52
+msgid "Pause Calendars"
+msgstr "Koledarji za premor"
+
+#: templates/admin/utilities.php:64
+#, php-format
+msgid ""
+"No content will be altered, but your calendars will be hidden and no %1$s "
+"asset files (JavaScript, CSS) will be loaded on front-end pages. If you are "
+"using caching via a plugin or through your hosting provider, you may need to "
+"clear the cache after changing this setting."
+msgstr ""
+"Vsebina ne bo spremenjena, vendar bodo vaši koledarji skriti in na straneh "
+"front-enda ne bodo naložene nobene %1$s datoteke (JavaScript, CSS). Če "
+"uporabljate predpomnjenje prek vtičnika ali prek ponudnika gostovanja, boste "
+"morda morali po spremembi te nastavitve počistiti predpomnjenje."
+
+#: templates/admin/utilities.php:73
+#, php-format
+msgid "%1$s Data Cache"
+msgstr "%1$s Pomnilnik podatkov"
+
+#: templates/admin/utilities.php:79
+msgid ""
+"This will immediately clear all existing cached calendar data (purge "
+"transients), forcing WordPress to reload all calendars the next time they "
+"are viewed. Caching will then resume as before."
+msgstr ""
+"To bo takoj izbrisalo vse obstoječe podatke v predpomnilniku koledarja "
+"(izbris prehodnih podatkov) in prisililo WordPress, da naslednjič, ko bodo "
+"koledarji prikazani, ponovno naloži vse koledarje. Predpomnjenje se bo nato "
+"nadaljevalo kot prej."
+
+#: templates/admin/utilities.php:81
+msgid "Clear Cached Calendar Data"
+msgstr "Izbriši podatke iz predpomnilnika koledarja"
+
+#: templates/admin/utilities.php:89
+msgid ""
+"If you are using a third-party caching plugin, you may need to clear your "
+"site-wide cache after running this utility."
+msgstr ""
+"Če uporabljate vtičnik za predpomnjenje tretje osebe, boste morda morali po "
+"zagonu tega programa počistiti predpomnjenje za celotno spletno mesto."
+
+#: templates/admin/utilities.php:91
+#, php-format
+msgid ""
+"Are you sure? This will reset all %1$s settings to their defaults. Your "
+"saved calendar configurations and shortcodes will be retained, but resetting "
+"the defaults may change the appearance of your calendars. If you are using a "
+"third-party caching plugin, you may need to clear your site-wide cache after "
+"running this utility."
+msgstr ""
+"Ste prepričani? To bo ponastavilo vse %1$s nastavitve na privzete vrednosti. "
+"Vaše shranjene konfiguracije koledarja in kratke kode bodo ohranjene, vendar "
+"lahko ponastavitev privzetih vrednosti spremeni videz vaših koledarjev. Če "
+"uporabljate vtičnik za predpomnjenje tretje osebe, boste morda morali po "
+"zagonu tega programa počistiti predpomnjenje za celotno spletno mesto."
+
+#: templates/admin/utilities.php:95
+msgid "Only clear transients (default)"
+msgstr "Samo jasni prehodi (privzeto)"
+
+#: templates/admin/utilities.php:99
+msgid "Also clear all saved ICS feed URLs"
+msgstr "Prav tako izbrišite vse shranjene URL-je ICS-vir"
+
+#: templates/admin/utilities.php:105
+#, php-format
+msgid "Reset %1$sall%2$s %3$s settings (including transients and feed URLs)"
+msgstr ""
+"Ponastavi %1$svse%2$s %3$s nastavitve (vključno s prehodnimi stanji in URL-"
+"ji virov)"
+
+#: templates/admin/utilities.php:115
+msgid "Last cleared:"
+msgstr "Zadnje izbrisano:"
+
+#: templates/admin/utilities.php:121
+msgid "never"
+msgstr "nikoli"
+
+#: templates/admin/utilities.php:133
+msgid "ICS Feed URL Tester"
+msgstr "ICS Feed URL Tester"
+
+#: templates/admin/utilities.php:135
+msgid ""
+"If you are concerned that the plugin is not properly retrieving your feed, "
+"you can test the URL here."
+msgstr ""
+"Če vas skrbi, da vtičnik ne pridobiva vašega vira pravilno, lahko tukaj "
+"preizkusite URL."
+
+#: templates/admin/utilities.php:141 templates/admin/utilities.php:142
+msgid "Enter feed URL..."
+msgstr "Vnesite URL naslova vira..."
+
+#: templates/admin/utilities.php:143
+msgid "Test URL"
+msgstr "URL za testiranje"
+
+#: templates/admin/utilities.php:151
+msgid "Results:"
+msgstr "Rezultati:"
+
+#: templates/admin/utilities.php:155
+#, php-format
+msgid "%1$s received."
+msgstr "%1$s prejeto."
+
+#: templates/admin/utilities.php:163
+msgid "This appears to be a valid ICS feed URL."
+msgstr "To se zdi veljaven URL-naslov za vir ICS."
+
+#: templates/admin/utilities.php:163 templates/admin/utilities.php:168
+msgid "unknown"
+msgstr "neznano"
+
+#: templates/admin/utilities.php:168
+msgid "This does not appear to be a valid ICS feed URL."
+msgstr "To ne izgleda kot veljaven URL za ICS-vir."
+
+#: templates/admin/utilities.php:173
+msgid "Could not retrieve data from the requested URL."
+msgstr "Podatkov iz zahtevanega URL-ja ni bilo mogoče pridobiti."
+
+#: templates/admin/utilities.php:178
+msgid ""
+"An unknown error occurred while attempting to retrieve the requested URL."
+msgstr ""
+"Pri poskusu pridobivanja zahtevanega URL-ja je prišlo do neznane napake."
+
+#: templates/admin/utilities.php:211
+msgid ""
+"Please copy the following text and include it in your message when emailing "
+"support."
+msgstr ""
+"Prosimo, kopirajte naslednji tekst in ga vključite v svoje sporočilo, ko "
+"pošiljate e-pošto podpori."
+
+#: templates/admin/utilities.php:214
+#, php-format
+msgid ""
+"Also please include the %1$s shortcode exactly as you have it entered on the "
+"affected page."
+msgstr ""
+"Vključite tudi kratko kodo %1$s, točno tako, kot ste jo vnesli na zadevni "
+"strani."
+
+#: templates/calendar-basic.php:60 templates/calendar-list.php:62
+msgid "No events found."
+msgstr "Ni bilo najdenih dogodkov."
+
+#: templates/calendar-basic.php:86 templates/calendar-list.php:88
+msgid "Previous Page"
+msgstr "Prejšnja stran"
+
+#: templates/calendar-basic.php:87 templates/calendar-list.php:89
+msgid "Next Page"
+msgstr "Naslednja stran"
+
+#: templates/calendar-list.php:297 templates/calendar-month.php:215
+#: templates/calendar-week.php:222
+msgid "All Day"
+msgstr "Cel dan"
+
+#: templates/calendar-month.php:61
+msgid "Previous Month"
+msgstr "Nazaj"
+
+#: templates/calendar-month.php:62
+msgid "Next Month"
+msgstr "Naslednji mesec"
+
+#: templates/calendar-month.php:63
+msgid "Today"
+msgstr "Danes"
+
+#: templates/calendar-month.php:69 templates/calendar-month.php:70
+msgid "Month selection"
+msgstr "Izbira meseca"
+
+#: templates/calendar-month.php:299 templates/calendar-week.php:309
+msgid "No events."
+msgstr "Ni dogodkov."
+
+#: templates/calendar-month.php:311
+msgid "No additional events this month."
+msgstr "Ta mesec ni dodatnih dogodkov."
+
+#: templates/calendar-week.php:70 templates/calendar-week.php:71
+msgid "Week selection"
+msgstr "Izbor tedna"
+
+#: templates/calendar-week.php:72
+msgid "Last week"
+msgstr "Prejšnji teden"
+
+#: templates/calendar-week.php:73
+msgid "This week"
+msgstr "Ta teden"
+
+#: templates/calendar-week.php:74
+msgid "Next week"
+msgstr "Naslednji teden"
+
+#. Plugin Name of the plugin/theme
+msgid "ICS Calendar"
+msgstr "ICS Calendar"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://icscalendar.com"
+msgstr "https://icscalendar.com"
+
+#. Description of the plugin/theme
+msgid ""
+"Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar "
+"into a seamlessly integrated, auto-updating, zero-maintenance WordPress "
+"experience."
+msgstr ""
+"Svoj Google Koledar, Microsoft Office 365 ali Apple iCloud Koledar "
+"spremenite v brezhibno integrirano, samodejno posodobljivo in brez "
+"vzdrževanja WordPress izkušnjo."
+
+#. Author of the plugin/theme
+msgid "Room 34 Creative Services, LLC"
+msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid ""
+#~ "Configure all calendar settings with an easy visual interface... no need "
+#~ "to manually type shortcodes."
+#~ msgstr ""
+#~ "Vse nastavitve koledarja lahko konfigurirate z enostavnim vizualnim "
+#~ "vmesnikom... ni potrebe po ročnem vnašanju kratkih kod."
+
+#~ msgid ""
+#~ "New ways to display your calendar including Full, Up Next, Masonry, Month "
+#~ "with Sidebar, Widget, and more. Additional capabilities are added to the "
+#~ "core Month, Basic, List and Week views."
+#~ msgstr ""
+#~ "Nove možnosti prikazovanja koledarja, vključno s polnim, naslednjim, "
+#~ "zidanim, mesečnim s stranskim stolpcem, widgetom in drugimi. Dodatne "
+#~ "funkcije so dodane osnovnim pogledom meseca, osnovnemu, seznamu in tednu."
+
+#~ msgid ""
+#~ "Easy-to-use tools to completely customize your calendar colors, "
+#~ "typography and more."
+#~ msgstr ""
+#~ "Enostavna orodja za popolno prilagajanje barv koledarja, tipografije in "
+#~ "drugih elementov."
+
+#~ msgid "Go PRO!"
+#~ msgstr "Postani PRO!"
+
+#, php-format
+#~ msgid "Also reset all %1$s settings"
+#~ msgstr "Prav tako ponastavite vse nastavitve %1$s."
+
+#~ msgid ""
+#~ "Easily modify your calendar color palettes, fonts, and more, site-wide."
+#~ msgstr ""
+#~ "Enostavno spreminjajte barvne palete koledarja, pisave in še več na "
+#~ "celotnem spletnem mestu."
+
+#, php-format
+#~ msgid ""
+#~ "Inverts color palette (light colors on a dark background). %1$sNote:%2$s "
+#~ "Dark mode also automatically applies style changes similar to the %3$s "
+#~ "and %4$s shortcode parameters, so you do not need to include them in your "
+#~ "shortcode."
+#~ msgstr ""
+#~ "Invertira barvno paleto (svetle barve na temnem ozadju). %1$sOpomba:%2$s "
+#~ "Temni način samodejno uporabi tudi spremembe slogov, podobne parametrom "
+#~ "%3$s in %4$s kratke kode, zato vam jih ni treba vključiti v svojo kratko "
+#~ "kodo."
+
+#~ msgid ""
+#~ "When checked, all calendars will render via AJAX (asynchronously after "
+#~ "the page loads). This is especially useful in conjunction with other "
+#~ "caching plugins, or if your calendars contain a large number of events. "
+#~ "Normally, calendar data is sent directly in the HTML of the initial page "
+#~ "load unless AJAX has been specified in the shortcode."
+#~ msgstr ""
+#~ "Če je ta možnost označena, se vsi koledarji prikažejo prek AJAX-a "
+#~ "(asinhrono po nalaganju strani). To je še posebej uporabno v povezavi z "
+#~ "drugimi vtičniki za predpomnjenje ali če koledarji vsebujejo veliko "
+#~ "število dogodkov. Običajno se koledarski podatki pošljejo neposredno v "
+#~ "HTML ob začetnem nalaganju strani, razen če je v kratki kodi določen AJAX."
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Razno"
+
+#~ msgid ""
+#~ "For your site security please do NOT post the System Report in the "
+#~ "support forums."
+#~ msgstr ""
+#~ "Zaradi varnosti vašega spletnega mesta NE objavljajte sistemskega "
+#~ "poročila na forumih za podporo."
+
+#~ msgid "Permanent feed URL mask IDs"
+#~ msgstr "ID-ji maske URL stalnega vira"
+
+#~ msgid ""
+#~ "The AJAX loading method generates masked feed URL IDs, to avoid sending "
+#~ "source feed URLs directly in the page HTML. These are normally recycled "
+#~ "whenever saving settings or running the \"Clear Cached Calendar Data\" "
+#~ "utility. This can cause problems with certain external caching systems "
+#~ "(e.g. Cloudflare), which may continue to request expired IDs. Check this "
+#~ "box to permanently retain the masked feed URL IDs."
+#~ msgstr ""
+#~ "Metoda nalaganja AJAX ustvarja zamaskirane ID-je URL-jev virov, da se "
+#~ "izognete pošiljanju URL-jev virov neposredno v HTML strani. Ti se "
+#~ "običajno reciklirajo ob shranjevanju nastavitev ali zagonu pripomočka "
+#~ "\"Clear Cached Calendar Data\" (Izbriši podatke koledarja v "
+#~ "predpomnilniku). To lahko povzroči težave z nekaterimi zunanjimi sistemi "
+#~ "predpomnilnika (npr. Cloudflare), ki lahko še naprej zahtevajo pretečene "
+#~ "ID-je. Označite to polje, če želite trajno ohraniti zakrite ID-je URL-jev "
+#~ "virov."
+
+#, php-format
+#~ msgid ""
+#~ "If your feed URL works with our online %1$sPreview%2$s tool, try turning "
+#~ "on the %3$s option under the %4$s tab above."
+#~ msgstr ""
+#~ "Če URL vašega vira deluje z našim spletnim orodjem %1$sPredogled%2$s, "
+#~ "poskusite vklopiti možnost %3$s v zgornjem zavihku %4$s."
+
+#~ msgid "Download"
+#~ msgstr "Prenesi"
+
+#~ msgid "Additional Views"
+#~ msgstr "Dodatni pogledi"
+
+#~ msgid "Full, Up Next, Masonry, Month with Sidebar, Widget, and more."
+#~ msgstr ""
+#~ "Polni, Naslednji, Masonry, Mesec s stransko vrstico, Widget in še več."
+
+#, php-format
+#~ msgid ""
+#~ "%1$s AJAX request bypassed nonce verification, due to configuration "
+#~ "setting."
+#~ msgstr ""
+#~ "%1$s Zahteva AJAX je zaradi konfiguracijske nastavitve zaobšla "
+#~ "preverjanje nonce."
+
+#~ msgid "Bypass nonce on AJAX requests (recommended with caching plugins)"
+#~ msgstr ""
+#~ "Obid nonce pri zahtevah AJAX (priporočljivo z vtičniki za predpomnjenje)"
+
+#, php-format
+#~ msgid ""
+#~ "By default, %1$s uses a nonce on AJAX requests, although this is not "
+#~ "strictly needed, as the AJAX requests do not directly write anything to "
+#~ "the database, and additional sanitization/validation code is in place. "
+#~ "The nonce occasionally causes conflicts with certain caching plugins, "
+#~ "especially %2$s. If you are using a caching plugin and find your AJAX "
+#~ "calendars occasionally do not load, turn on this option to bypass the "
+#~ "nonce."
+#~ msgstr ""
+#~ "Privzeto %1$s pri zahtevah AJAX uporablja kodo nonce, čeprav to ni nujno "
+#~ "potrebno, saj zahteve AJAX ne zapisujejo ničesar neposredno v podatkovno "
+#~ "zbirko, poleg tega pa je na voljo dodatna koda za čiščenje/potrjevanje. "
+#~ "Nonce občasno povzroča konflikte z nekaterimi vtičniki za predpomnjenje, "
+#~ "zlasti z %2$s. Če uporabljate vtičnik za predpomnjenje in ugotovite, da "
+#~ "se vaši koledarji AJAX občasno ne naložijo, vklopite to možnost, da se "
+#~ "izognete nonce."
+
+#~ msgid "Enter one hostname per line."
+#~ msgstr "V vsako vrstico vnesite eno gostiteljsko ime."
+
+#, php-format
+#~ msgid ""
+#~ "For support please email %1$s or use the %2$sWordPress Support Forums%3$s."
+#~ msgstr ""
+#~ "Za podporo pišite %1$s ali uporabite %2$sWordPress Support Forums%3$s."
+
+#~ msgid "Settings updated."
+#~ msgstr "Nastavitve so posodobljene."
+
+#, php-format
+#~ msgid ""
+#~ "Use the following shortcode format in your page content where you would "
+#~ "like your calendar to appear, inserting your ICS feed URL between the "
+#~ "quotation marks. If you do not know your ICS feed URL, %1$shere&rsquo;s "
+#~ "how to find it%2$s."
+#~ msgstr ""
+#~ "V vsebini strani, kjer želite, da se prikaže vaš koledar, uporabite "
+#~ "naslednjo obliko kratke kode in med narekovaje vstavite naslov URL vira "
+#~ "ICS. Če ne poznate naslova URL svojega kanala ICS, %1$stukaj preberite, "
+#~ "kako ga najdete%2$s."
+
+#, php-format
+#~ msgid ""
+#~ "Many additional customization options are available. Use our online "
+#~ "%1$sShortcode Builder%2$s to easily create a customized shortcode, or "
+#~ "consult the %3$sUser Guide%4$s for more information."
+#~ msgstr ""
+#~ "Na voljo so številne dodatne možnosti prilagajanja. Za enostavno "
+#~ "ustvarjanje prilagojene kratke kode uporabite naš spletni %1$sShortcode "
+#~ "Builder%2$s, za več informacij pa si oglejte %3$sUporabniški "
+#~ "priročnik%4$s."
+
+#~ msgid "Administrative Options"
+#~ msgstr "Skrbniške pravice upravljanja"
+
+#, php-format
+#~ msgid ""
+#~ "Features include additional views (Full, Masonry, Month with Sidebar, "
+#~ "Widget, Year-at-a-Glance, and others), a Calendar Builder with save "
+#~ "feature for full management of calendar settings without manually editing "
+#~ "the shortcode, Customizer options to easily modify the calendar&rsquo;s "
+#~ "appearance, advanced features like regular expressions, and more! Visit "
+#~ "%s to learn more."
+#~ msgstr ""
+#~ "Funkcije vključujejo dodatne poglede (polni pogled, pogled Masonry, mesec "
+#~ "s stransko vrstico, Gradniki, letni pogled in drugi pogledi), graditelj "
+#~ "koledarja s funkcijo shranjevanja za popolno upravljanje nastavitev "
+#~ "koledarja brez ročnega urejanja bližnjice, možnosti prilagoditve za "
+#~ "enostavno spreminjanje videza koledarja, napredne funkcije, kot so "
+#~ "regularni izrazi, in še več! Če želite izvedeti več, obiščite %s."
+
+#, php-format
+#~ msgid ""
+#~ "The %1$s plugin requires either the PHP cURL extensions, or the %2$s PHP "
+#~ "setting to be turned on. Please update the settings in your %3$s file or "
+#~ "contact your hosting provider for assistance."
+#~ msgstr ""
+#~ "Vtičnik %1$s zahteva vklop razširitev PHP cURL ali nastavitev %2$s PHP. "
+#~ "Posodobite nastavitve v datoteki %3$s ali se za pomoč obrnite na "
+#~ "ponudnika gostovanja."

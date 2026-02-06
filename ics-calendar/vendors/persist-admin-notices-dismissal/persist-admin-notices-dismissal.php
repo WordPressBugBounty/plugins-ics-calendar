@@ -50,6 +50,7 @@ if ( ! class_exists( 'PAnD' ) ) {
 			 *
 			 * @param bool
 			 */
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 			if ( apply_filters( 'pand_theme_loader', false ) ) {
 				add_filter(
 					'pand_dismiss_notice_js_url',
@@ -82,6 +83,7 @@ if ( ! class_exists( 'PAnD' ) ) {
 			 * @param string $js_url URL to the Javascript file.
 			 * @param string $composer_path Relative path of Javascript file from composer install.
 			 */
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 			$js_url = apply_filters( 'pand_dismiss_notice_js_url', $js_url, $composer_path );
 			wp_enqueue_script(
 				'dismissible-notices',

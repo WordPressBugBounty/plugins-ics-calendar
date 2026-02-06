@@ -1,4 +1,9 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+
+// Don't load directly
+if (!defined('ABSPATH')) { exit; }
+
 // Require object
 if (empty($ics_data)) { return false; }
 
@@ -67,6 +72,11 @@ else {
 			echo wp_kses(($R34ICS->color_key_html($args, $ics_data) ?: ''), r34ics_color_key_allowed());
 		}
 	
+		// Print
+		if (!empty($args['print'])) {
+			echo wp_kses_post($R34ICS->print_button_html($args));
+		}
+
 		// Pagination HTML
 		$pagination_html = '';
 		if (!empty($pagination)) {
@@ -205,7 +215,7 @@ else {
 											if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
 											if (isset($p_i)) { echo ' data-p-i="' . intval($p_i) . '"'; }
 										?>>
-											<<?php echo esc_attr($args['htmltagdate']); ?> class="date<?php if (!empty($event['multiday'])) { echo ' multiday'; } ?>"><?php echo wp_kses_post($day_label ?: ''); ?></<?php echo esc_attr($args['htmltagdate']); ?>>
+											<<?php echo esc_attr($args['htmltagdate']); ?> class="ics-calendar-date<?php if (!empty($event['multiday'])) { echo ' multiday'; } ?>"><?php echo wp_kses_post($day_label ?: ''); ?></<?php echo esc_attr($args['htmltagdate']); ?>>
 
 											<div class="event-info">
 												<?php

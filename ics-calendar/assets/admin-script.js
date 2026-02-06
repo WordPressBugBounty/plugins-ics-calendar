@@ -7,10 +7,11 @@ jQuery(function() {
 	jQuery('.r34ics-menu a, .wrap.r34ics a[href^="#"]').on('click', function() {
 		var href = jQuery(this).attr('href');
 		jQuery(href).attr('data-current', 'current').siblings().removeAttr('data-current');
-		jQuery('.r34ics-menu a[href="' + href + '"]').attr('data-current', 'current').parent().siblings().find('a').removeAttr('data-current');
+		jQuery('.r34ics-menu a[href*="' + href + '"], nav a[href*="' + href + '"]').attr('data-current', 'current').parent().siblings().find('a').removeAttr('data-current');
 		if (history.pushState) {
 			window.history.pushState({}, document.title, href);
 		}
+		window.scrollTo(0,0);
 		return false;
 	});
 	
@@ -60,8 +61,6 @@ jQuery(function() {
 			r34ics_shortcode += ' organizer="true"';
 		}
 
-		// @todo Add a way to insert WP hook here
-					
 		r34ics_shortcode += ']';
 	
 		// Insert shortcode and close window
@@ -81,8 +80,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		setTimeout(function() {
 			var initial_tab = (location.hash && jQuery('.r34ics-menu a[href="' + location.hash + '"]').length > 0) ? location.hash : jQuery('.r34ics-menu a:first-of-type').attr('href');
 			jQuery('.r34ics-menu a[href="' + initial_tab + '"]').trigger('click');
-			window.scrollTo(-100, -100);
-		}, 1);
+			window.scrollTo(0,0);
+		}, 10);
 	}
 
 });

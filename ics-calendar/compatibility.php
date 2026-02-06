@@ -1,5 +1,8 @@
 <?php
 
+// Don't load directly
+if (!defined('ABSPATH')) { exit; }
+
 /*
 BACKWARDS COMPATIBILITY
 
@@ -19,7 +22,26 @@ The functions below have been copied in directly from WordPress core
 v. 5.6.1 with no modifications.
 */
 
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+// phpcs:disable WordPress.WP.I18n.MissingTranslatorsComment
+
 if (!function_exists('wp_date')) {
+
+	// Pre-WP 5.3 compatibility is deprecated as of ICS Calendar v. 12.0; admin notice
+	global $r34ics_deferred_admin_notices;
+	if (empty($r34ics_deferred_admin_notices)) {
+		$r34ics_deferred_admin_notices = get_option('r34ics_pre_wp53_deprecated', array());
+	}
+	$r34ics_deferred_admin_notices['r34ics_pre_wp53_deprecated'] = array(
+		'content' => '<p>' . sprintf(esc_html__('Future updates of %1$s will require WordPress 5.3 or newer. Please update your site to a newer version of WordPress as soon as possible.', 'ics-calendar'), 'ICS Calendar') . '</p>',
+		'status' => 'warning',
+		'dismissible' => 7,
+	);
+	update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices, false);
+
+
 	/**
 	 * Retrieves the date, in localized format.
 	 *

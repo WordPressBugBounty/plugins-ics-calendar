@@ -1,4 +1,9 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+
+// Don't load directly
+if (!defined('ABSPATH')) { exit; }
+
 // Require object
 if (empty($ics_data)) { return false; }
 
@@ -67,6 +72,11 @@ else {
 		// Color code key
 		if (empty($args['legendposition']) || $args['legendposition'] == 'above') {
 			echo wp_kses(($R34ICS->color_key_html($args, $ics_data) ?: ''), r34ics_color_key_allowed());
+		}
+
+		// Print
+		if (!empty($args['print'])) {
+			echo wp_kses_post($R34ICS->print_button_html($args));
 		}
 	
 		// Pagination HTML
@@ -148,7 +158,7 @@ else {
 								}
 							}
 
-							// Pull out multi-day events and display them separately first
+							// Pull out multiday events and display them separately first
 							foreach ((array)$day_events as $time => $events) {
 
 								foreach ((array)$events as $event_key => $event) {
@@ -223,7 +233,7 @@ else {
 										if (!empty($pagination)) { $p_i++; }
 									}
 
-									// Remove event from array (to skip day if it only has multi-day events)
+									// Remove event from array (to skip day if it only has multiday events)
 									unset($day_events[$time][$event_key]);
 								}
 
@@ -235,7 +245,7 @@ else {
 								//if (!empty($pagination) && $p_i >= $pagination) { echo '</div>'; $p_i = 0; $pagination_open = false; }
 							}
 					
-							// Skip day if all of its events were multi-day
+							// Skip day if all of its events were multiday
 							if (empty($day_events)) { continue; }
 					
 							// Loop through day events

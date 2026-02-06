@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-18 15:11-0500\n"
+"POT-Creation-Date: 2026-01-07 15:17-0600\n"
 "PO-Revision-Date: 2020-10-21 13:18-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -20,8 +20,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:296
+#: class-r34ics.php:307
+#, php-format
+msgid ""
+"%1$s is currently %2$spaused%3$s, and is not serving calendars on front "
+"end pages. You can resume serving calendars under the %4$sUtilities%5$s "
+"tab %6$shere%7$s."
+msgstr ""
+
+#: class-r34ics.php:316
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -29,8 +36,7 @@ msgid ""
 "features may be unavailable or may not function properly."
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:306
+#: class-r34ics.php:325
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -41,231 +47,78 @@ msgid ""
 "issue."
 msgstr ""
 
-#: class-r34ics.php:349 templates/admin/admin.php:68
-#: templates/admin/utilities.php:3
-msgid "Utilities"
-msgstr ""
-
-#: class-r34ics.php:350 class-r34ics.php:2155 templates/admin/admin.php:64
-#: templates/admin/admin.php:80
-msgid "Settings"
-msgstr ""
-
-#: class-r34ics.php:351 templates/admin/sidebar.php:9
-msgid "User Guide"
-msgstr ""
-
-#: class-r34ics.php:352 templates/admin/admin.php:70
-#: templates/admin/sidebar.php:14
-msgid "Support"
-msgstr ""
-
-#: class-r34ics.php:354
-msgid "Upgrade to PRO!"
-msgstr ""
-
-#: class-r34ics.php:383
-msgid "Show/hide all"
-msgstr ""
-
-#: class-r34ics.php:656
-msgid ""
-"ICS file could not be retrieved or was empty. Please verify URL is "
-"correct, and check your php.ini configuration to verify either cURL or "
-"allow_url_fopen is available. If you are using spaces to delimit multiple "
-"URLs, you may also wish to try using the pipe character instead. Affected "
-"URL:"
-msgstr ""
-
-#: class-r34ics.php:1097
-msgid "Hide past events"
-msgstr ""
-
-#: class-r34ics.php:1098 templates/calendar-month.php:83
-#: templates/calendar-week.php:76
-msgid "Show past events"
-msgstr ""
-
-#: class-r34ics.php:1179
-msgid "Contact:"
-msgstr ""
-
-#: class-r34ics.php:1185
-msgid "Resources:"
-msgstr ""
-
-#: class-r34ics.php:1195
-msgid "Click for more..."
-msgstr ""
-
-#: class-r34ics.php:1229
-msgid "Save to your calendar"
-msgstr ""
-
-#: class-r34ics.php:1332
-msgid "Cancelled"
-msgstr ""
-
-#: class-r34ics.php:1445
-msgid ""
-"The legacy parser option is deprecated and will be removed in a future "
-"update."
-msgstr ""
-
-#: class-r34ics.php:1741
-msgid ""
-"The \"currentweek\" shortcode attribute is deprecated. Please use "
-"view=\"week\" in your shortcode instead."
-msgstr ""
-
-#: class-r34ics.php:1745
-msgid ""
-"The \"legendinline\" shortcode attribute is deprecated. Please use "
-"legendstyle=\"inline\" in your shortcode instead."
-msgstr ""
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2069
-#, php-format
-msgid "Cleared %1$s %2$s transient(s)."
-msgstr ""
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2077
-#, php-format
-msgid "No %1$s transients were found."
-msgstr ""
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2085
-#, php-format
-msgid "All %1$s settings have been reset to defaults."
-msgstr ""
-
-#. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2155
+#: class-r34ics.php:337
 #, php-format
 msgid ""
-"Your feed URL appears to contain HTTP Basic Authentication credentials. "
-"Try turning off the %1$s option under the %2$s tab above."
+"Important! Your %1$s configuration appears to be exceeding source calendar "
+"provider rate limits."
 msgstr ""
 
-#: class-r34ics.php:2155 templates/admin/settings.php:70
-msgid "Use legacy feed request method"
-msgstr ""
-
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2162
+#: class-r34ics.php:339
 #, php-format
 msgid ""
-"%1$sThis URL points to a file in your Media Library.%2$s While you should "
-"be able to use this URL in an %3$s shortcode, it will be a static snapshot "
-"of the calendar at the time the file was created, and will not reflect any "
-"future updates to the source calendar. Please see our %4$sUser Guide%5$s "
-"for instructions on obtaining your correct dynamic feed URL."
+"If your calendars are not loading properly, please review your %1$s "
+"settings and usage:"
 msgstr ""
 
-#. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2169
-#, php-format
-msgid "Error: Could not resolve IP address for %1$s."
-msgstr ""
-
-#. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2173
-#, php-format
-msgid "Resolved IP address for %1$s:"
-msgstr ""
-
-#: class-r34ics.php:2220
-msgid ""
-"The text entered in the \"Default shortcode\" field is not a valid "
-"shortcode, and was not saved."
-msgstr ""
-
-#. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2261
+#: class-r34ics.php:341
 #, php-format
 msgid ""
-"%1$sSettings updated.%2$s You may need to refresh the page to see some "
-"changes."
+"Do not use %1$s in your shortcodes. This feature is intended for "
+"troubleshooting only, and should not be left on permanently."
 msgstr ""
 
-#: class-r34ics.php:2527
-msgid "calendar event"
-msgstr ""
-
-#: class-r34ics.php:2864
-msgid ""
-"The legacy feed request method is deprecated, and will be removed in an "
-"update in the near future. Please test your feeds with the legacy feed "
-"request method turned off."
-msgstr ""
-
-#: functions.php:990 functions.php:998 functions.php:1007
-msgid "Map"
-msgstr ""
-
-#: functions.php:1257
-msgid "Recurring event"
-msgstr ""
-
-#. translators: 1. Dynamic value
-#: functions.php:1263
-#, php-format
-msgid "Recurs every %1$s years"
-msgstr ""
-
-#: functions.php:1263
-msgid "Recurs yearly"
-msgstr ""
-
-#. translators: 1. Dynamic value
-#: functions.php:1267
-#, php-format
-msgid "Recurs every %1$s months"
-msgstr ""
-
-#: functions.php:1267
-msgid "Recurs monthly"
-msgstr ""
-
-#. translators: 1. Dynamic value
-#: functions.php:1271
-#, php-format
-msgid "Recurs every %1$s weeks"
-msgstr ""
-
-#: functions.php:1271
-msgid "Recurs weekly"
-msgstr ""
-
-#. translators: 1. Dynamic value
-#: functions.php:1275
-#, php-format
-msgid "Recurs every %1$s days"
-msgstr ""
-
-#: functions.php:1275
-msgid "Recurs daily"
-msgstr ""
-
-#. translators: 1: Plugin name (do not translate)
-#: functions.php:1422
+#: class-r34ics.php:343
 #, php-format
 msgid ""
-"The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
-"most likely your URL has been turned into a clickable link. Your calendar "
-"may not display properly as a result. Please remove the clickable link in "
-"the shortcode."
+"Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
+"%4$s43200%5$s (12 hours) or greater, to reduce the frequency of requests "
+"to the provider. (See note below.)"
 msgstr ""
 
-#: functions.php:1770
-msgid "The r34ics_url_get_contents() function is no longer supported."
+#: class-r34ics.php:345
+#, php-format
+msgid ""
+"Avoid including a large number of feeds (10 or more) from the same "
+"provider in a single %1$s shortcode."
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag 8. Additional translation string and HTML tags 9. HTML tag and plugin name (do not translate) 10. HTML tag
-#: ics-calendar.php:208
+#: class-r34ics.php:347
+#, php-format
+msgid ""
+"Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
+"Calendars%2$s utility. (24-48 hours is recommended.)"
+msgstr ""
+
+#: class-r34ics.php:349
+#, php-format
+msgid ""
+"%1$s includes built-in caching, specifically to improve performance and "
+"avoid exceeding provider rate limits. Circumventing this caching with a "
+"very low %2$sreload%3$s setting may trigger a temporary block on your web "
+"server IP address, or possibly on your entire hosting network, by the "
+"calendar provider."
+msgstr ""
+
+#: class-r34ics.php:351
+#, php-format
+msgid ""
+"After making the recommended changes, please allow up to 24 hours for your "
+"calendar provider to remove any temporary blocks on your IP address. If "
+"you find that the problem persists, please use our %1$ssupport request "
+"form%2$s to contact us, and be sure to include your %3$ssystem report%4$s."
+msgstr ""
+
+#: class-r34ics.php:353
+#, php-format
+msgid ""
+"Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
+"considering how frequently event information in your calendar is typically "
+"updated. %3$s Remember that you can use the %4$sClear Cached Calendar "
+"Data%5$s utility to manually clear the cache at any time, if needed."
+msgstr ""
+
+#: class-r34ics.php:374
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -276,12 +129,11 @@ msgid ""
 "%9$s settings%10$s page."
 msgstr ""
 
-#: ics-calendar.php:208 templates/admin/settings.php:123
+#: class-r34ics.php:374 templates/admin/settings.php:183
 msgid "Use new parameter defaults (v.10.6)"
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: ics-calendar.php:221
+#: class-r34ics.php:386
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs "
@@ -291,8 +143,7 @@ msgid ""
 "visit the %4$sWordPress Support Forums%5$s for assistance."
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate)
-#: ics-calendar.php:234
+#: class-r34ics.php:398
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -301,24 +152,292 @@ msgid ""
 "loading properly with the new method."
 msgstr ""
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/add-calendar-button.php:3
-#: templates/admin/add-calendar-button.php:6
-#: templates/admin/add-calendar.php:8
+#: class-r34ics.php:411
+#, php-format
+msgid ""
+"%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
+"troubleshooting tools, plus a number of performance improvements and "
+"interface refinements throughout. Please see the %4$schangelog%5$s for "
+"more details on this update."
+msgstr ""
+
+#: class-r34ics.php:460 templates/admin/admin.php:24
+#: templates/admin/getting-started.php:7
+#: templates/admin/getting-started.php:40
+msgid "Getting Started"
+msgstr ""
+
+#: class-r34ics.php:461 class-r34ics.php:2365 templates/admin/admin.php:28
+#: templates/admin/settings.php:11
+msgid "Settings"
+msgstr ""
+
+#: class-r34ics.php:462 templates/admin/admin.php:29
+#: templates/admin/appearance.php:10
+msgid "Appearance"
+msgstr ""
+
+#: class-r34ics.php:463 templates/admin/admin.php:33
+#: templates/admin/utilities.php:10
+msgid "Utilities"
+msgstr ""
+
+#: class-r34ics.php:464 templates/admin/admin.php:37
+#: templates/admin/utilities.php:209 templates/admin/utilities.php:218
+msgid "System Report"
+msgstr ""
+
+#: class-r34ics.php:465 templates/admin/admin.php:41
+#: templates/admin/sidebar.php:18
+msgid "Support"
+msgstr ""
+
+#: class-r34ics.php:468
+#, php-format
+msgid "Upgrade to %1$s!"
+msgstr ""
+
+#: class-r34ics.php:498
+msgid "Show/hide all"
+msgstr ""
+
+#: class-r34ics.php:770
+msgid ""
+"ICS file could not be retrieved or was empty. Please verify URL is "
+"correct, and check your php.ini configuration to verify either cURL or "
+"allow_url_fopen is available. If you are using spaces to delimit multiple "
+"URLs, you may also wish to try using the pipe character instead. Affected "
+"URL:"
+msgstr ""
+
+#: class-r34ics.php:1214
+msgid "Hide past events"
+msgstr ""
+
+#: class-r34ics.php:1215 templates/calendar-month.php:96
+#: templates/calendar-week.php:87
+msgid "Show past events"
+msgstr ""
+
+#: class-r34ics.php:1296
+msgid "Contact:"
+msgstr ""
+
+#: class-r34ics.php:1302
+msgid "Resources:"
+msgstr ""
+
+#: class-r34ics.php:1312
+msgid "Click for more..."
+msgstr ""
+
+#: class-r34ics.php:1346
+msgid "Save to your calendar"
+msgstr ""
+
+#: class-r34ics.php:1449
+msgid "Cancelled"
+msgstr ""
+
+#: class-r34ics.php:1562
+msgid ""
+"The legacy parser option is deprecated and will be removed in a future "
+"update."
+msgstr ""
+
+#: class-r34ics.php:1641
+msgid "Print"
+msgstr ""
+
+#: class-r34ics.php:1898
+msgid ""
+"The \"currentweek\" shortcode attribute is deprecated. Please use "
+"view=\"week\" in your shortcode instead."
+msgstr ""
+
+#: class-r34ics.php:1902
+msgid ""
+"The \"legendinline\" shortcode attribute is deprecated. Please use "
+"legendstyle=\"inline\" in your shortcode instead."
+msgstr ""
+
+#: class-r34ics.php:2239
+#, php-format
+msgid ""
+"%1$s has %2$sresumed%3$s serving calendars on front end pages. If your "
+"site uses a caching plugin, you may need to clear the cache."
+msgstr ""
+
+#: class-r34ics.php:2247
+#, php-format
+msgid ""
+"%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
+"uses a caching plugin, you may need to clear the cache."
+msgstr ""
+
+#: class-r34ics.php:2259
+#, php-format
+msgid "Cleared %1$s %2$s transient(s)."
+msgstr ""
+
+#: class-r34ics.php:2266
+#, php-format
+msgid "No %1$s transients were found."
+msgstr ""
+
+#: class-r34ics.php:2275
+msgid "All saved ICS feed URLs have been cleared."
+msgstr ""
+
+#: class-r34ics.php:2282
+#, php-format
+msgid ""
+"All %1$s settings have been reset to defaults, and saved ICS feed URLs "
+"have been cleared."
+msgstr ""
+
+#: class-r34ics.php:2365
+#, php-format
+msgid ""
+"Your feed URL appears to contain HTTP Basic Authentication credentials. "
+"Try turning off the %1$s option under the %2$s tab above."
+msgstr ""
+
+#: class-r34ics.php:2365 templates/admin/settings.php:59
+msgid "Use legacy feed request method"
+msgstr ""
+
+#: class-r34ics.php:2371
+#, php-format
+msgid ""
+"%1$sThis URL points to a file in your Media Library.%2$s While you should "
+"be able to use this URL in an %3$s shortcode, it will be a static snapshot "
+"of the calendar at the time the file was created, and will not reflect any "
+"future updates to the source calendar. Please see our %4$sUser Guide%5$s "
+"for instructions on obtaining your correct dynamic feed URL."
+msgstr ""
+
+#: class-r34ics.php:2377
+#, php-format
+msgid "Error: Could not resolve IP address for %1$s."
+msgstr ""
+
+#: class-r34ics.php:2380
+#, php-format
+msgid "Resolved IP address for %1$s:"
+msgstr ""
+
+#: class-r34ics.php:2405
+#, php-format
+msgid ""
+"%1$sAppearance updated.%2$s You may need to refresh the page to see some "
+"changes."
+msgstr ""
+
+#: class-r34ics.php:2465
+msgid ""
+"The text entered in the \"Default shortcode\" field is not a valid "
+"shortcode, and was not saved."
+msgstr ""
+
+#: class-r34ics.php:2508
+#, php-format
+msgid ""
+"%1$sSettings updated.%2$s You may need to refresh the page to see some "
+"changes."
+msgstr ""
+
+#: class-r34ics.php:2804
+msgid "calendar event"
+msgstr ""
+
+#: class-r34ics.php:3245
+msgid ""
+"The legacy feed request method is deprecated, and will be removed in an "
+"update in the near future. Please test your feeds with the legacy feed "
+"request method turned off."
+msgstr ""
+
+#: compatibility.php:38
+#, php-format
+msgid ""
+"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+"your site to a newer version of WordPress as soon as possible."
+msgstr ""
+
+#: functions.php:1116 functions.php:1124 functions.php:1133
+msgid "Map"
+msgstr ""
+
+#: functions.php:1434
+msgid "Recurring event"
+msgstr ""
+
+#: functions.php:1439
+#, php-format
+msgid "Recurs every %1$s years"
+msgstr ""
+
+#: functions.php:1439
+msgid "Recurs yearly"
+msgstr ""
+
+#: functions.php:1442
+#, php-format
+msgid "Recurs every %1$s months"
+msgstr ""
+
+#: functions.php:1442
+msgid "Recurs monthly"
+msgstr ""
+
+#: functions.php:1445
+#, php-format
+msgid "Recurs every %1$s weeks"
+msgstr ""
+
+#: functions.php:1445
+msgid "Recurs weekly"
+msgstr ""
+
+#: functions.php:1448
+#, php-format
+msgid "Recurs every %1$s days"
+msgstr ""
+
+#: functions.php:1448
+msgid "Recurs daily"
+msgstr ""
+
+#: functions.php:1621
+#, php-format
+msgid ""
+"The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
+"most likely your URL has been turned into a clickable link. Your calendar "
+"may not display properly as a result. Please remove the clickable link in "
+"the shortcode."
+msgstr ""
+
+#: functions.php:1950
+msgid "The r34ics_url_get_contents() function is no longer supported."
+msgstr ""
+
+#: templates/admin/add-calendar-button.php:7
+#: templates/admin/add-calendar-button.php:10
+#: templates/admin/add-calendar.php:12
 #, php-format
 msgid "Add %1$s"
 msgstr ""
 
-#: templates/admin/add-calendar.php:10
+#: templates/admin/add-calendar.php:14
 msgid "Close"
 msgstr ""
 
-#: templates/admin/add-calendar.php:19
+#: templates/admin/add-calendar.php:23
 msgid "ICS Feed URL:"
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag 6. Do not translate
-#: templates/admin/add-calendar.php:23
+#: templates/admin/add-calendar.php:27
 #, php-format
 msgid ""
 "Be sure you are using a %1$ssubscribe%2$s URL, not a %3$sweb view%4$s URL."
@@ -326,254 +445,202 @@ msgid ""
 "%6$s file.)"
 msgstr ""
 
-#: templates/admin/add-calendar.php:28
+#: templates/admin/add-calendar.php:32
 msgid "Calendar Title:"
 msgstr ""
 
-#. translators: 1. Do not translate
-#: templates/admin/add-calendar.php:32
+#: templates/admin/add-calendar.php:36
 #, php-format
 msgid ""
 "Leave empty to use calendar&rsquo;s default title. Enter %1$s to omit "
 "title altogether."
 msgstr ""
 
-#: templates/admin/add-calendar.php:37
+#: templates/admin/add-calendar.php:41
 msgid "Calendar Description:"
 msgstr ""
 
-#. translators: 1. Do not translate
-#: templates/admin/add-calendar.php:41
+#: templates/admin/add-calendar.php:45
 #, php-format
 msgid ""
 "Leave empty to use calendar&rsquo;s default description. Enter %1$s to "
 "omit description altogether."
 msgstr ""
 
-#: templates/admin/add-calendar.php:46
+#: templates/admin/add-calendar.php:50
 msgid "View:"
 msgstr ""
 
-#: templates/admin/add-calendar.php:48
+#: templates/admin/add-calendar.php:52
 msgid "month"
 msgstr ""
 
-#: templates/admin/add-calendar.php:49
+#: templates/admin/add-calendar.php:53
 msgid "list"
 msgstr ""
 
-#: templates/admin/add-calendar.php:50
+#: templates/admin/add-calendar.php:54
 msgid "week"
 msgstr ""
 
-#: templates/admin/add-calendar.php:55 templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:59 templates/admin/add-calendar.php:66
 msgid "Count:"
 msgstr ""
 
-#: templates/admin/add-calendar.php:58 templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:62 templates/admin/add-calendar.php:66
 msgid "Format:"
 msgstr ""
 
-#. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags 3. HTML tag 4. HTML tag
-#: templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:66
 #, php-format
 msgid ""
 "Leave %1$s blank to include all upcoming events. %2$s must be a standard "
 "%3$sPHP date format string%4$s."
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:70
+#: templates/admin/add-calendar.php:74
 #, php-format
 msgid ""
 "Show event descriptions %1$s(change to a number in inserted shortcode to "
 "set word limit)%2$s"
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:78
+#: templates/admin/add-calendar.php:82
 #, php-format
 msgid "Show event locations %1$s(if available)%2$s"
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:86
+#: templates/admin/add-calendar.php:90
 #, php-format
 msgid "Show event organizers %1$s(if available)%2$s"
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4. HTML tag
-#: templates/admin/add-calendar.php:93
+#: templates/admin/add-calendar.php:97
 #, php-format
 msgid ""
 "%1$sNote:%2$s Additional %3$sdisplay options%4$s are available by manually "
 "editing the shortcode after insertion."
 msgstr ""
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/add-calendar.php:100
+#: templates/admin/add-calendar.php:104
 #, php-format
 msgid "Insert %1$s"
 msgstr ""
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/admin.php:12
+#: templates/admin/admin.php:63
 #, php-format
-msgid "Do even more with %1$s!"
+msgid "Do even more with %1$s version 6!"
 msgstr ""
 
-#: templates/admin/admin.php:18
-msgid "Calendar Builder"
+#: templates/admin/admin.php:69
+msgid "Calendar Builder + Block Editor"
 msgstr ""
 
-#: templates/admin/admin.php:19
+#: templates/admin/admin.php:72
+#, php-format
 msgid ""
-"Configure all calendar settings with an easy visual interface... no need "
-"to manually type shortcodes."
+"Configure all calendar settings with an easy visual interface, and use the "
+"new %1$s block to select your saved calendars from a dropdown in the Block "
+"Editor, no shortcode needed! %2$sLearn more...%3$s"
 msgstr ""
 
-#: templates/admin/admin.php:20
+#: templates/admin/admin.php:74
 msgid "Additional Views and Enhanced Features"
 msgstr ""
 
-#: templates/admin/admin.php:21
+#: templates/admin/admin.php:77
+#, php-format
 msgid ""
-"New ways to display your calendar including Full, Up Next, Masonry, Month "
-"with Sidebar, Widget, and more. Additional capabilities are added to the "
-"core Month, Basic, List and Week views."
+"%1$s offers many new ways to display your calendar, including integrations "
+"with the popular %2$s and %3$s open source libraries. Month and year views "
+"with a sidebar for the selected day. \"Up Next\" works great for radio or "
+"TV station schedules. Widget and year availability are perfect for holiday "
+"bookings. Plus, additional capabilities are added to the core Month, "
+"Basic, List and Week views. %4$sView sample calendars...%5$s"
 msgstr ""
 
-#: templates/admin/admin.php:22
-msgid "Customizer"
+#: templates/admin/admin.php:79
+msgid "Customization"
 msgstr ""
 
-#: templates/admin/admin.php:23
+#: templates/admin/admin.php:80
+#, php-format
 msgid ""
-"Easily modify your calendar color palettes, fonts, and more, site-wide."
+"Easy-to-use tools to completely customize your calendar colors, typography "
+"and more. Select one of our preset color palettes or create your own, with "
+"options to individually customize the color of each element in the "
+"calendar layout. Choose between your theme fonts, system fonts, or more "
+"than 20 included open source fonts. %1$sLearn more...%2$s"
 msgstr ""
 
-#: templates/admin/admin.php:25
+#: templates/admin/admin.php:81
 msgid "ICS Events"
 msgstr ""
 
-#. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/admin.php:28
+#: templates/admin/admin.php:84
 #, php-format
 msgid ""
-"%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
-"events directly in WordPress and even integrate them seamlessly with your "
-"existing feeds."
+"Turns %1$s into a full calendar management system. Create and edit new "
+"events directly in WordPress, and even integrate them seamlessly with your "
+"existing external ICS feeds. %2$sLearn more...%3$s"
 msgstr ""
 
-#. translators: 1. Link (do not translate)
-#: templates/admin/admin.php:32
+#: templates/admin/admin.php:86
+msgid "Localized Admin Interface"
+msgstr ""
+
+#: templates/admin/admin.php:89
+#, php-format
+msgid ""
+"All %1$s admin pages are translated into dozens of languages, including "
+"English, Czech, Danish, German, Greek, Spanish, Estonian, Finnish, French, "
+"Hungarian, Italian, Japanese, Korean, Lithuanian, Latvian, Norwegian, "
+"Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Serbian, Swedish, "
+"Turkish, Ukrainian, and Chinese."
+msgstr ""
+
+#: templates/admin/admin.php:93
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr ""
 
-#: templates/admin/admin.php:40
-msgid "Go PRO!"
+#: templates/admin/admin.php:97
+msgid "Calendar Builder screenshot"
 msgstr ""
 
-#: templates/admin/admin.php:60 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:31
-msgid "Getting Started"
+#: templates/admin/admin.php:98
+msgid "Appearance screenshot"
 msgstr ""
 
-#: templates/admin/admin.php:69 templates/admin/utilities.php:130
-msgid "System Report"
+#: templates/admin/admin.php:102
+msgid "Available now!"
 msgstr ""
 
-#: templates/admin/admin.php:90
-msgid "Save Changes"
+#: templates/admin/admin.php:107
+#, php-format
+msgid "Get %1$s!"
 msgstr ""
 
-#. translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag
-#: templates/admin/getting-started.php:10
+#: templates/admin/appearance.php:23
 #, php-format
 msgid ""
-"Thank you for installing %1$s. Before creating your first calendar "
-"shortcode, please visit your %2$sGeneral Settings%3$s page and verify that "
-"your site language, timezone and date/time format settings are correct. "
-"See our %4$sUser Guide%5$s for more information."
+"Extensive color palette and typography options are available with %1$s. "
+"%2$sLearn More%3$s"
 msgstr ""
 
-#: templates/admin/getting-started.php:17
-msgid "Quick Start Guide"
+#: templates/admin/appearance.php:32
+msgid "Color Palette"
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/getting-started.php:23
-#, php-format
-msgid ""
-"An extensive %1$sUser Guide%2$s is available on our website. Below are "
-"some quick links to key resources in the documentation."
-msgstr ""
-
-#: templates/admin/getting-started.php:29
-msgid "General:"
-msgstr ""
-
-#: templates/admin/getting-started.php:32
-msgid "General WordPress Settings"
-msgstr ""
-
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/getting-started.php:35
-#, php-format
-msgid "%1$s Settings"
-msgstr ""
-
-#: templates/admin/getting-started.php:40
-msgid "Working with Shortcodes:"
-msgstr ""
-
-#: templates/admin/getting-started.php:42
-msgid "Shortcode Overview"
-msgstr ""
-
-#: templates/admin/getting-started.php:43
-msgid "Shortcode Builder"
-msgstr ""
-
-#: templates/admin/getting-started.php:44
-msgid "Shortcode Parameters Reference"
-msgstr ""
-
-#: templates/admin/getting-started.php:48
-msgid "Advanced Topics:"
-msgstr ""
-
-#: templates/admin/getting-started.php:50
-msgid "FAQs and Tips"
-msgstr ""
-
-#: templates/admin/getting-started.php:51
-msgid "CSS Guide"
-msgstr ""
-
-#: templates/admin/getting-started.php:52
-msgid "Developer Resources"
-msgstr ""
-
-#: templates/admin/getting-started.php:53
-msgid "GDPR"
-msgstr ""
-
-#: templates/admin/settings.php:3
-msgid "Appearance"
-msgstr ""
-
-#: templates/admin/settings.php:6
+#: templates/admin/appearance.php:37
 msgid "Match calendar color palette to current Block Theme colors"
 msgstr ""
 
-#: templates/admin/settings.php:6 templates/admin/settings.php:21
+#: templates/admin/appearance.php:38
 msgid "beta"
 msgstr ""
 
-#. translators: 1: Plugin name (do not translate) 2: HTML tag and filename 3: HTML tag and filename
-#: templates/admin/settings.php:10
+#: templates/admin/appearance.php:42
 #, php-format
 msgid ""
 "Replaces the %1$s default neutral color palette with nearest matches from "
@@ -583,53 +650,123 @@ msgid ""
 "using a \"classic\" theme that does not include a %3$s file."
 msgstr ""
 
-#. translators: 1: HTML tag 2: HTML tag
-#: templates/admin/settings.php:15 templates/admin/settings.php:29
+#: templates/admin/appearance.php:47
 #, php-format
 msgid ""
 "%1$sThis is currently a beta feature.%2$s It may require making some "
-"adjustments to your calendar settings or CSS for optimal display, "
+"adjustments to your calendar appearance or CSS for optimal display, "
 "especially if you have color-coded your feeds. Functionality is subject to "
 "change."
 msgstr ""
 
-#: templates/admin/settings.php:21
+#: templates/admin/appearance.php:56
 msgid "Dark mode"
 msgstr ""
 
-#. translators: 1: HTML tags 2: HTML tag 3: HTML tag and code 4: HTML tag and code
-#: templates/admin/settings.php:24
-#, php-format
-msgid ""
-"Inverts color palette (light colors on a dark background). %1$sNote:%2$s "
-"Dark mode also automatically applies style changes similar to the %3$s and "
-"%4$s shortcode parameters, so you do not need to include them in your "
-"shortcode."
+#: templates/admin/appearance.php:58
+msgid "Inverts color palette (light colors on a dark background)."
 msgstr ""
 
-#: templates/admin/settings.php:40
+#: templates/admin/appearance.php:70 templates/admin/settings.php:200
+msgid "Save Changes"
+msgstr ""
+
+#: templates/admin/getting-started.php:14
+#, php-format
+msgid ""
+"Thank you for installing %1$s. Before creating your first calendar "
+"shortcode, please visit your %2$sGeneral Settings%3$s page and verify that "
+"your site language, timezone and date/time format settings are correct. "
+"See our %4$sUser Guide%5$s for more information."
+msgstr ""
+
+#: templates/admin/getting-started.php:23
+#, php-format
+msgid ""
+"Get started with %1$s in four easy steps... and you've already completed "
+"step one! Check out our %2$sQuick Start Guide%3$s for the rest."
+msgstr ""
+
+#: templates/admin/getting-started.php:26
+msgid "Quick Start Guide"
+msgstr ""
+
+#: templates/admin/getting-started.php:32
+#, php-format
+msgid ""
+"An extensive %1$sUser Guide%2$s is available on our website. Below are "
+"some quick links to key resources in the documentation."
+msgstr ""
+
+#: templates/admin/getting-started.php:38
+msgid "General:"
+msgstr ""
+
+#: templates/admin/getting-started.php:41
+msgid "General WordPress Settings"
+msgstr ""
+
+#: templates/admin/getting-started.php:44
+#, php-format
+msgid "%1$s Settings"
+msgstr ""
+
+#: templates/admin/getting-started.php:49
+msgid "Working with Shortcodes:"
+msgstr ""
+
+#: templates/admin/getting-started.php:51
+msgid "Shortcode Overview"
+msgstr ""
+
+#: templates/admin/getting-started.php:52
+msgid "Shortcode Builder"
+msgstr ""
+
+#: templates/admin/getting-started.php:53
+msgid "Shortcode Parameters Reference"
+msgstr ""
+
+#: templates/admin/getting-started.php:57
+msgid "Advanced Topics:"
+msgstr ""
+
+#: templates/admin/getting-started.php:59
+msgid "FAQs and Tips"
+msgstr ""
+
+#: templates/admin/getting-started.php:60
+msgid "CSS Guide"
+msgstr ""
+
+#: templates/admin/getting-started.php:61
+msgid "Developer Resources"
+msgstr ""
+
+#: templates/admin/getting-started.php:62
+msgid "GDPR"
+msgstr ""
+
+#: templates/admin/settings.php:20
 msgid "Loading"
 msgstr ""
 
-#: templates/admin/settings.php:43
-msgid "Always use AJAX to render calendars (recommended)"
+#: templates/admin/settings.php:24
+msgid "Always use AJAX to render calendars"
 msgstr ""
 
-#: templates/admin/settings.php:44
+#: templates/admin/settings.php:28
+#, php-format
 msgid ""
-"When checked, all calendars will render via AJAX (asynchronously after the "
-"page loads). This is especially useful in conjunction with other caching "
-"plugins, or if your calendars contain a large number of events. Normally, "
-"calendar data is sent directly in the HTML of the initial page load unless "
-"AJAX has been specified in the shortcode."
+"AJAX loading is now automatic. You can override AJAX, if necessary, by "
+"adding %1$s to your shortcode."
 msgstr ""
 
-#: templates/admin/settings.php:48
+#: templates/admin/settings.php:36
 msgid "Increase memory limit when rendering calendars"
 msgstr ""
 
-#. translators: 1: HTML tag
-#: templates/admin/settings.php:65
+#: templates/admin/settings.php:50
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -639,23 +776,22 @@ msgid ""
 "than the current default memory limit on your server."
 msgstr ""
 
-#: templates/admin/settings.php:70
+#: templates/admin/settings.php:60
 msgid "deprecated"
 msgstr ""
 
-#: templates/admin/settings.php:71
+#: templates/admin/settings.php:62
 msgid ""
-"If your site has stopped retrieving feeds after the version 11 update, "
-"turn on this option to use the legacy request method. This feature is "
-"deprecated and will be removed in an update in the near future."
+"Some servers may not support the default feed request method. If your "
+"feeds are not loading, turn on this option to use the legacy request "
+"method. This feature is deprecated and will be removed in a future update."
 msgstr ""
 
-#: templates/admin/settings.php:75
+#: templates/admin/settings.php:69
 msgid "Default shortcode"
 msgstr ""
 
-#. translators: 1: HTML tag and sample code
-#: templates/admin/settings.php:79
+#: templates/admin/settings.php:73
 #, php-format
 msgid ""
 "If your site will include a large number of similarly configured calendar "
@@ -666,12 +802,11 @@ msgid ""
 "individual shortcode will override what is set here."
 msgstr ""
 
-#: templates/admin/settings.php:84
+#: templates/admin/settings.php:82
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 
-#. translators: 1: HTML tag 2: HTML tag 3: HTML tag 4: Plugin name (do not translate) 5: HTML tag
-#: templates/admin/settings.php:88
+#: templates/admin/settings.php:86
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -681,41 +816,78 @@ msgid ""
 "documentation%5$s for more information."
 msgstr ""
 
-#. translators: 1: HTML tag 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:92
+#: templates/admin/settings.php:93
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a "
 "full URL. %1$s For example, you would enter %2$s, not %3$s."
 msgstr ""
 
+#: templates/admin/settings.php:99
+msgid "Allow access to these ports"
+msgstr ""
+
 #: templates/admin/settings.php:102
+msgid ""
+"WordPress automatically allows access to ports 80, 443, and 8080. If you "
+"need to be able to access source calendars that use non-standard ports, "
+"enter the port numbers here, separated by commas."
+msgstr ""
+
+#: templates/admin/settings.php:113
 msgid "Caching"
 msgstr ""
 
-#: templates/admin/settings.php:105
+#: templates/admin/settings.php:117
 msgid "Transient (cache) expiration"
 msgstr ""
 
-#: templates/admin/settings.php:105
+#: templates/admin/settings.php:118
 msgid "seconds"
 msgstr ""
 
-#: templates/admin/settings.php:106
+#: templates/admin/settings.php:120
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
-"transients) before reloading. Default is 3600 (1 hour)."
+"transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
+"value is 120 (2 minutes)."
 msgstr ""
 
-#: templates/admin/settings.php:115
-msgid "Miscellaneous"
+#: templates/admin/settings.php:131
+msgid "Admin"
 msgstr ""
 
-#: templates/admin/settings.php:118
+#: templates/admin/settings.php:135
+msgid "Minimum access role"
+msgstr ""
+
+#: templates/admin/settings.php:155
+#, php-format
+msgid ""
+"Identifies the minimum user role that is allowed to access %1$s admin "
+"pages. Certain areas such as Settings are further restricted to %2$s users "
+"only (%3$s users on Multisite configurations)."
+msgstr ""
+
+#: templates/admin/settings.php:163
+msgid "Register Customizer"
+msgstr ""
+
+#: templates/admin/settings.php:165
+msgid ""
+"WordPress no longer includes a link to the Customizer in the Appearance "
+"menu when a Block Theme is active. Check this box if you wish to use the "
+"Customizer, e.g. for the Additional CSS input. Note: Some themes or "
+"plugins may already register the Customizer, in which case, this setting "
+"will have no effect. (The checkbox only enables the Customizer when "
+"checked; it does not disable the Customizer when unchecked."
+msgstr ""
+
+#: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr ""
 
-#: templates/admin/settings.php:119
+#: templates/admin/settings.php:175
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the "
 "toolbar above the WYSIWYG editor when using Classic Editor. Check this box "
@@ -723,8 +895,7 @@ msgid ""
 "(Gutenberg)."
 msgstr ""
 
-#. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:126
+#: templates/admin/settings.php:187
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -734,23 +905,25 @@ msgid ""
 "blog%3$s."
 msgstr ""
 
-#: templates/admin/sidebar.php:11
+#: templates/admin/sidebar.php:13
+msgid "User Guide"
+msgstr ""
+
+#: templates/admin/sidebar.php:15
 msgid ""
 "Our complete user guide is available with full translation into dozens of "
 "languages on our website:"
 msgstr ""
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/sidebar.php:18
+#: templates/admin/sidebar.php:22
 #, php-format
 msgid "For assistance, please use our %1$ssupport request form%2$s."
 msgstr ""
 
-#. translators: 1. HTML tags 2. HTML tags
 #: templates/admin/sidebar.php:31
 #, php-format
 msgid ""
-"When contacting support, please include the %1$sSystem Report%2$s from "
+"When contacting support, please include the %1$ssystem report%2$s from "
 "this page."
 msgstr ""
 
@@ -758,7 +931,6 @@ msgstr ""
 msgid "Spread the word!"
 msgstr ""
 
-#. translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag
 #: templates/admin/sidebar.php:41
 #, php-format
 msgid ""
@@ -766,18 +938,63 @@ msgid ""
 "development with a %2$sfive-star review%3$s. Thank you!"
 msgstr ""
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/utilities.php:9
+#: templates/admin/utilities.php:19
+#, php-format
+msgid "Calendar Status: %1$sPaused%2$s"
+msgstr ""
+
+#: templates/admin/utilities.php:23
+#, php-format
+msgid "Calendar Status: %1$sActive%2$s"
+msgstr ""
+
+#: templates/admin/utilities.php:29
+#, php-format
+msgid ""
+"Use the pause button if you need to temporarily turn off %1$s on your "
+"front end pages."
+msgstr ""
+
+#: templates/admin/utilities.php:41
+msgid "Resume Calendars"
+msgstr ""
+
+#: templates/admin/utilities.php:52
+msgid "Pause Calendars"
+msgstr ""
+
+#: templates/admin/utilities.php:64
+#, php-format
+msgid ""
+"No content will be altered, but your calendars will be hidden and no %1$s "
+"asset files (JavaScript, CSS) will be loaded on front-end pages. If you "
+"are using caching via a plugin or through your hosting provider, you may "
+"need to clear the cache after changing this setting."
+msgstr ""
+
+#: templates/admin/utilities.php:73
 #, php-format
 msgid "%1$s Data Cache"
 msgstr ""
 
-#: templates/admin/utilities.php:16
+#: templates/admin/utilities.php:79
+msgid ""
+"This will immediately clear all existing cached calendar data (purge "
+"transients), forcing WordPress to reload all calendars the next time they "
+"are viewed. Caching will then resume as before."
+msgstr ""
+
+#: templates/admin/utilities.php:81
 msgid "Clear Cached Calendar Data"
 msgstr ""
 
-#. translators: 1: Plugin name (do not modify)
-#: templates/admin/utilities.php:20
+#: templates/admin/utilities.php:89
+msgid ""
+"If you are using a third-party caching plugin, you may need to clear your "
+"site-wide cache after running this utility."
+msgstr ""
+
+#: templates/admin/utilities.php:91
 #, php-format
 msgid ""
 "Are you sure? This will reset all %1$s settings to their defaults. Your "
@@ -787,130 +1004,142 @@ msgid ""
 "wide cache after running this utility."
 msgstr ""
 
-#. translators: 1: Plugin name (do not modify)
-#: templates/admin/utilities.php:26
+#: templates/admin/utilities.php:95
+msgid "Only clear transients (default)"
+msgstr ""
+
+#: templates/admin/utilities.php:99
+msgid "Also clear all saved ICS feed URLs"
+msgstr ""
+
+#: templates/admin/utilities.php:105
 #, php-format
-msgid "Also reset all %1$s settings"
+msgid "Reset %1$sall%2$s %3$s settings (including transients and feed URLs)"
 msgstr ""
 
-#: templates/admin/utilities.php:30
-msgid ""
-"This will immediately clear all existing cached calendar data (purge "
-"transients), forcing WordPress to reload all calendars the next time they "
-"are viewed. Caching will then resume as before."
-msgstr ""
-
-#: templates/admin/utilities.php:34
+#: templates/admin/utilities.php:115
 msgid "Last cleared:"
 msgstr ""
 
-#: templates/admin/utilities.php:39
+#: templates/admin/utilities.php:121
 msgid "never"
 msgstr ""
 
-#: templates/admin/utilities.php:49
+#: templates/admin/utilities.php:133
 msgid "ICS Feed URL Tester"
 msgstr ""
 
-#: templates/admin/utilities.php:51
+#: templates/admin/utilities.php:135
 msgid ""
 "If you are concerned that the plugin is not properly retrieving your feed, "
 "you can test the URL here."
 msgstr ""
 
-#: templates/admin/utilities.php:58
+#: templates/admin/utilities.php:141 templates/admin/utilities.php:142
 msgid "Enter feed URL..."
 msgstr ""
 
-#: templates/admin/utilities.php:58
+#: templates/admin/utilities.php:143
 msgid "Test URL"
 msgstr ""
 
-#: templates/admin/utilities.php:66
+#: templates/admin/utilities.php:151
 msgid "Results:"
 msgstr ""
 
-#. translators: 1: Dynamic value
-#: templates/admin/utilities.php:73
+#: templates/admin/utilities.php:155
 #, php-format
 msgid "%1$s received."
 msgstr ""
 
-#: templates/admin/utilities.php:82
+#: templates/admin/utilities.php:163
 msgid "This appears to be a valid ICS feed URL."
 msgstr ""
 
-#: templates/admin/utilities.php:87
+#: templates/admin/utilities.php:163 templates/admin/utilities.php:168
+msgid "unknown"
+msgstr ""
+
+#: templates/admin/utilities.php:168
 msgid "This does not appear to be a valid ICS feed URL."
 msgstr ""
 
-#: templates/admin/utilities.php:92
+#: templates/admin/utilities.php:173
 msgid "Could not retrieve data from the requested URL."
 msgstr ""
 
-#: templates/admin/utilities.php:97
+#: templates/admin/utilities.php:178
 msgid ""
 "An unknown error occurred while attempting to retrieve the requested URL."
 msgstr ""
 
-#: templates/admin/utilities.php:132
+#: templates/admin/utilities.php:211
 msgid ""
 "Please copy the following text and include it in your message when "
 "emailing support."
 msgstr ""
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/utilities.php:135
+#: templates/admin/utilities.php:214
 #, php-format
 msgid ""
 "Also please include the %1$s shortcode exactly as you have it entered on "
 "the affected page."
 msgstr ""
 
-#: templates/admin/utilities.php:136
-msgid ""
-"For your site security please do NOT post the System Report in the support "
-"forums."
-msgstr ""
-
-#: templates/calendar-basic.php:55 templates/calendar-list.php:57
+#: templates/calendar-basic.php:60 templates/calendar-list.php:62
 msgid "No events found."
 msgstr ""
 
-#: templates/calendar-basic.php:76 templates/calendar-list.php:78
+#: templates/calendar-basic.php:86 templates/calendar-list.php:88
 msgid "Previous Page"
 msgstr ""
 
-#: templates/calendar-basic.php:77 templates/calendar-list.php:79
+#: templates/calendar-basic.php:87 templates/calendar-list.php:89
 msgid "Next Page"
 msgstr ""
 
-#: templates/calendar-list.php:287 templates/calendar-month.php:202
-#: templates/calendar-week.php:211
+#: templates/calendar-list.php:297 templates/calendar-month.php:215
+#: templates/calendar-week.php:222
 msgid "All Day"
 msgstr ""
 
-#: templates/calendar-month.php:58
+#: templates/calendar-month.php:61
+msgid "Previous Month"
+msgstr ""
+
+#: templates/calendar-month.php:62
+msgid "Next Month"
+msgstr ""
+
+#: templates/calendar-month.php:63
 msgid "Today"
 msgstr ""
 
-#: templates/calendar-month.php:286 templates/calendar-week.php:298
+#: templates/calendar-month.php:69 templates/calendar-month.php:70
+msgid "Month selection"
+msgstr ""
+
+#: templates/calendar-month.php:299 templates/calendar-week.php:309
 msgid "No events."
 msgstr ""
 
-#: templates/calendar-month.php:298
+#: templates/calendar-month.php:311
 msgid "No additional events this month."
 msgstr ""
 
-#: templates/calendar-week.php:66
+#: templates/calendar-week.php:70 templates/calendar-week.php:71
+msgid "Week selection"
+msgstr ""
+
+#: templates/calendar-week.php:72
 msgid "Last week"
 msgstr ""
 
-#: templates/calendar-week.php:67
+#: templates/calendar-week.php:73
 msgid "This week"
 msgstr ""
 
-#: templates/calendar-week.php:68
+#: templates/calendar-week.php:74
 msgid "Next week"
 msgstr ""
 

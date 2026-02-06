@@ -9,9 +9,10 @@ colors are true neutral grays with values close to those defined. These variable
 will be retained permanently, so they can be used to create custom color palettes.
 "Sunset red" and "midnight purple" are new custom ICS brand colors for 2023.
 */
-.r34ics {
-	--r34ics--color--ics-red: crimson;
-	--r34ics--color--ics-purple: #312a85;
+:root {
+	--r34ics--color--ics-red: #ee0055; /* rgb(238,0,85); previously #dc143c */
+	--r34ics--color--ics-purple: #3300bb; /* rgb(51,0,187); previously #312a85 */
+	--r34ics--color--ics-blue: #0099ff; /* rgb(0,153,255); previously dodgerblue #1e90ff */
 	--r34ics--color--white: #ffffff;
 	--r34ics--color--whitesmoke: #f0f3f6;
 	--r34ics--color--gainsboro: #d9dcdf;
@@ -19,13 +20,13 @@ will be retained permanently, so they can be used to create custom color palette
 	--r34ics--color--gray: #70787f;
 	--r34ics--color--dimgray: #60686f;
 	--r34ics--color--black: #10181f;
-	--r34ics--color--darkorange: darkorange;
-	--r34ics--color--dodgerblue: dodgerblue;
-	--r34ics--color--forestgreen: forestgreen;
-	--r34ics--color--gold: gold;
-	--r34ics--color--lemonchiffon: lemonchiffon;
-	--r34ics--color--limegreen: limegreen;
-	--r34ics--color--orangered: orangered;
+	--r34ics--color--darkorange: darkorange; /* #ff8c00 */
+	--r34ics--color--dodgerblue: dodgerblue; /* #1e90ff */
+	--r34ics--color--forestgreen: forestgreen; /* #228b22 */
+	--r34ics--color--gold: gold; /* #ffd700 */
+	--r34ics--color--lemonchiffon: lemonchiffon; /* #fffacd */
+	--r34ics--color--limegreen: limegreen; /* #32cd32 */
+	--r34ics--color--orangered: orangered; /* #ff4500 */
 	--r34ics--color--trans03: rgba(105,105,105,0.03);
 	--r34ics--color--trans05: rgba(105,105,105,0.05);
 	--r34ics--color--trans10: rgba(105,105,105,0.1);
@@ -39,8 +40,11 @@ will be retained permanently, so they can be used to create custom color palette
 	--r34ics--color--trans90: rgba(105,105,105,0.9);
 }
 
+/* Why isn't this already the default? */
+.r34ics * { box-sizing: border-box; }
+
 .beta-indicator, .deprecated-indicator {
-	border-radius: 3px;
+	border-radius: 4px;
 	display: inline-block;
 	font-size: 10px;
 	font-variant: small-caps;
@@ -51,18 +55,39 @@ will be retained permanently, so they can be used to create custom color palette
 }
 
 .beta-indicator {
-	background: rgba(30,144,255,0.15);
+	background-color: rgba(30,144,255,0.15);
 	color: dodgerblue;
 }
 
+.button.button-pause, .button.button-pause:focus, .button.button-pause:hover {
+	background: var(--r34ics--color--ics-red) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M176 96C149.5 96 128 117.5 128 144L128 496C128 522.5 149.5 544 176 544L240 544C266.5 544 288 522.5 288 496L288 144C288 117.5 266.5 96 240 96L176 96zM400 96C373.5 96 352 117.5 352 144L352 496C352 522.5 373.5 544 400 544L464 544C490.5 544 512 522.5 512 496L512 144C512 117.5 490.5 96 464 96L400 96z" fill="white"/></svg>') left 6px center no-repeat;
+	background-size: 1rem;
+	border-color: var(--r34ics--color--ics-red);
+	color: white;
+	padding-left: 30px;
+}
+
+.button.button-play, .button.button-play:focus, .button.button-play:hover {
+	background: var(--r34ics--color--forestgreen) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M187.2 100.9C174.8 94.1 159.8 94.4 147.6 101.6C135.4 108.8 128 121.9 128 136L128 504C128 518.1 135.5 531.2 147.6 538.4C159.7 545.6 174.8 545.9 187.2 539.1L523.2 355.1C536 348.1 544 334.6 544 320C544 305.4 536 291.9 523.2 284.9L187.2 100.9z" fill="white"/></svg>') left 6px center no-repeat;
+	background-size: 1rem;
+	border-color: var(--r34ics--color--forestgreen);
+	color: white;
+	padding-left: 30px;
+}
+
+.button.button-pause:focus, .button.button-pause:hover,
+.button.button-play:focus, .button.button-play:hover {
+	opacity: 0.85;
+}
+
 .deprecated-indicator {
-	background: rgba(255,215,0,0.3);
+	background-color: rgba(255,215,0,0.3);
 	color: darkgoldenrod;
 }
 
 .notice.r34ics-admin-notice {
 	align-items: center;
-	background: white url('ics-calendar-icon-2023.svg') left 16px top 12px no-repeat;
+	background: white url('ics-calendar-icon-2026.svg') left 16px top 12px no-repeat;
 	background-size: 40px;
 	display: flex;
 	min-height: 64px;
@@ -71,8 +96,11 @@ will be retained permanently, so they can be used to create custom color palette
 
 .r34ics h4 code { font-weight: normal; }
 
+/* Allow text wrapping in buttons with long strings (helpful with some translations) */
+.r34ics .button { white-space: normal; }
+
 .r34ics .code-sample {
-	background: #f7f7f7;
+	background-color: #f7f7f7;
 	border: 1px solid #dddddd;
 	color: #009933;
 	font-family: monospace;
@@ -80,24 +108,26 @@ will be retained permanently, so they can be used to create custom color palette
 	margin: 1em 0;
 	overflow: auto;
 	padding: 0.25em 0.5em;
-    white-space: pre;
-    width: 95%;
+	white-space: pre;
+	width: 95%;
 }
 
 .r34ics .columns-2 {
 	align-items: flex-start;
 	display: flex;
 	flex-direction: row;
-	gap: 3rem;
+	flex-wrap: wrap;
+	gap: 20px;
 	width: 100%;
 }
 
 	.r34ics .columns-2 .column-1 {
-		flex: 0 0 calc(100% - 280px - 3rem);
+		flex: 0 0 calc(100% - 280px - 20px);
 	}
 
 	.r34ics .columns-2 .column-2 {
 		flex: 0 0 280px;
+		position: sticky; top: 105px;
 	}
 
 	.r34ics_media_icon {
@@ -127,13 +157,13 @@ will be retained permanently, so they can be used to create custom color palette
 	}
 	#insert_r34ics.open { display: block; }
 	#insert_r34ics_overlay {
-		background: #000000;
+		background-color: #000000;
 		display: block;
 		position: fixed; top: 0; right: 0; bottom: 0; left: 0;
 		opacity: 0.7;
 	}
 	#insert_r34ics_window {
-		background: #ffffff;
+		background-color: #ffffff;
 		box-shadow: 1px 1px 5px #000000;
 		min-height: 10rem;
 		min-width: 240px;
@@ -169,7 +199,7 @@ will be retained permanently, so they can be used to create custom color palette
 	}
 
 .r34ics .diagnostics-window {
-	background: #f7f7f7;
+	background-color: #f7f7f7;
 	border: 1px solid #c3c4c7;
 	border-radius: 0;
 	color: #191919;
@@ -248,8 +278,10 @@ will be retained permanently, so they can be used to create custom color palette
 	content: '\f12a';
 }
 
+.r34ics .notice { overflow: auto; }
+
 .r34ics-admin-sticky-footer {
-	background: #fff;
+	background-color: #fff;
 	border-top: 1px solid rgba(0,0,0,0.1);
 	box-shadow: 0 0 4px rgba(0,0,0,0.05);
 	margin: 0 -12px -20px -12px;
@@ -258,8 +290,41 @@ will be retained permanently, so they can be used to create custom color palette
 	z-index: 10;
 }
 
+code.r34ics-color-swatch {
+	border: 1px solid rgba(0,0,0,0.1);
+	display: inline-block;
+	font-size: 11px;
+	width: 180px;
+}
+
+.r34ics-flex-tiles {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+
+.r34ics-flex-tiles > .r34ics-inner-box {
+	flex-basis: calc(50% - 0.375rem);
+	margin: 0;
+}
+
+.r34ics-flex-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1.5rem;
+	row-gap: 0.25rem;
+}
+
+.r34ics-flex-wrapper .r34ics-flex-wide {
+	flex-basis: calc(60% - 1.5rem);
+}
+
+.r34ics-flex-wrapper .r34ics-flex-narrow {
+	flex-basis: 40%;
+}
+
 .r34ics-inner-box {
-	background: var(--r34ics--color--trans03);
+	background-color: var(--r34ics--color--trans03);
 	border: 1px solid var(--r34ics--color--trans20);
 	border-radius: 4px;
 	box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
@@ -275,9 +340,34 @@ will be retained permanently, so they can be used to create custom color palette
 		margin-bottom: 0;
 	}
 	
-	.r34ics-inner-box h3 {
-		margin: 0;
+.r34ics-input { }
+
+	/* .full-width is a bit of a hack */
+	.r34ics-input:not(.full-width) > label:not(:has(input, select, textarea)) {
+		display: inline-block;
+		padding-right: 0.5em;
+		width: 240px;
 	}
+
+input[type=color].r34ics-input-color {
+	background-color: transparent;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 0;
+	display: inline-block;
+	height: 32px;
+	vertical-align: middle;
+	width: 32px;
+	padding: 0;
+}
+input[type=color].r34ics-input-color::-webkit-color-swatch-wrapper,
+input[type=color].r34ics-input-color::-moz-color-swatch-wrapper {
+	padding: 0 !important;
+}
+input[type=color]::-webkit-color-swatch,
+input[type=color]::-moz-color-swatch {
+	border: none !important;
+}
+
 
 .r34ics-menu {
 	border-bottom: 1px solid var(--r34ics--color--gainsboro);
@@ -285,12 +375,14 @@ will be retained permanently, so they can be used to create custom color palette
 
 	.r34ics-menu ul {
 		display: flex;
+		flex-wrap: wrap;
 		font-size: 120%;
 		font-weight: 600;
-		gap: 1rem;
+		column-gap: 1rem;
 		list-style: none;
 		margin: 0;
 		padding: 0 12px;
+		row-gap: 0;
 	}
 
 		.r34ics-menu li {
@@ -307,11 +399,11 @@ will be retained permanently, so they can be used to create custom color palette
 		}
 
 		.r34ics-menu a:focus, .r34ics-menu a:hover {
-			border-bottom-color: var(--r34ics--color--dodgerblue);
+			border-bottom-color: var(--r34ics--color--ics-blue);
 		}
 		
 		.r34ics-menu a[data-current="current"] {
-			border-bottom-color: var(--r34ics--color--ics-red);
+			border-bottom-color: var(--r34ics--color--ics-purple);
 		}
 
 		.r34ics-menu a:has(.dashicons) {
@@ -323,7 +415,32 @@ will be retained permanently, so they can be used to create custom color palette
 			position: absolute; top: 50%; left: 0;
 			transform: translateY(-7px);
 		}
-		
+
+.r34ics-sample-window {
+	background-color: #ffffff;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 0;
+	color: #444444;
+	display: inline-block;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0 0.5rem;
+	padding: 0 0.75em;
+	vertical-align: top;
+	white-space: nowrap;
+	width: auto;
+}
+
+.r34ics-sample-window--swatch {
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 4px;
+	display: inline-block;
+	height: 28px;
+	margin: 0 0 0 3px !important;
+	vertical-align: top;
+	width: 28px;
+}
 		
 .r34ics .column-1 .r34ics-menu ~ div.inside:not([data-current="current"]) {
 	display: none;
@@ -342,40 +459,57 @@ will be retained permanently, so they can be used to create custom color palette
 	.wrap.r34ics .description .r34ics-help {
 		cursor: help;
 		display: block;
-		height: 1.5em;
-		position: absolute; top: 0.25em; left: 0.5em;
-		width: 1.5em;
+		height: 18px;
+		position: absolute; top: 0; left: 0.5em;
+		width: 18px;
 	}
-
+	
 	.wrap.r34ics .description .r34ics-help:before {
-		background: #0985f2;
-		border-radius: 2em;
+		background-color: #0985f2;
+		border-radius: 1.5rem;
 		color: #ffffff;
 		content: '?';
 		display: inline-block;
 		font-style: normal;
 		font-weight: bold;
-		height: 1.5em;
-		line-height: 1.5em;
+		height: 18px;
+		line-height: 18px;
 		position: absolute; top: 0; left: 0;
 		text-align: center;
-		width: 1.5em;
+		width: 18px;
+	}
+
+	.wrap.r34ics .r34ics-input :is(label:has(> input:not([type='checkbox'], [type='radio']), > select, > textarea) .description, label ~ .description, label ~ * .description) .r34ics-help:before {
+		top: 6px;
 	}
 	
 		.wrap.r34ics .description .r34ics-help .help_content {
-			background: #ffffff;
+			background-color: #ffffff;
 			border: 1px solid #ccd0d4;
 			color: #444444;
 			display: none;
 			font-style: normal;
+			font-weight: normal;
 			padding: 0.75em;
-			position: absolute; top: 0.75em; left: 0;
+			position: absolute; top: 12px; left: 6px;
 			text-align: left;
 			width: 20em;
 			z-index: 2;
 		}
+		
+		.wrap.r34ics .r34ics-input :is(label:has(> input:not([type='checkbox'], [type='radio']), > select, > textarea) .description, label ~ .description, label ~ * .description).r34ics-help .help_content {
+			top: 18px;
+		}
 
-		.wrap.r34ics .description .r34ics-help:hover .help_content { display: block; }
+		.wrap.r34ics .description:hover .r34ics-help,
+		.wrap.r34ics .description:focus .r34ics-help,
+		.wrap.r34ics .description:focus-within .r34ics-help
+		{ z-index: 11; }
+
+		.wrap.r34ics .description:hover .r34ics-help .help_content,
+		.wrap.r34ics .description:focus .r34ics-help .help_content,
+		.wrap.r34ics .description:focus-within .r34ics-help .help_content
+		{ display: block; }
 
 			.wrap.r34ics .description .r34ics-help:hover .help_content code {
 				display: inline-block !important;
@@ -384,7 +518,7 @@ will be retained permanently, so they can be used to create custom color palette
 			}
 
 .r34ics-gradient-bg {
-	background-image: url('red-purple-gradient-background.png');
+	background-image: url('red-purple-gradient-background-2026.png');
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -406,6 +540,11 @@ will be retained permanently, so they can be used to create custom color palette
 	width: auto;
 }
 
+.r34ics-pro-mo h4 {
+	font-size: 1.25rem !important;
+	margin-bottom: 0;
+}
+
 .r34ics-pro-mo .aligncenter { text-align: center; }
 .r34ics-pro-mo .large { font-size: larger; }
 
@@ -416,7 +555,6 @@ will be retained permanently, so they can be used to create custom color palette
 	margin-right: 1.5rem;
 }
 
-.r34ics-pro-mo .r34ics-pro-features h4 { margin-bottom: 0; }
 .r34ics-pro-mo .r34ics-pro-features p { margin-top: 0; }
 
 
@@ -431,10 +569,24 @@ will be retained permanently, so they can be used to create custom color palette
 		text-align: center;
 	}
 
+	.r34ics-flex-wrapper, .r34ics-flex-tiles {
+		display: block;
+	}
+	
+	.r34ics-flex-wrapper .r34ics-flex-wide,
+	.r34ics-flex-wrapper .r34ics-flex-narrow,
+	.r34ics-flex-tiles > .r34ics-inner-box {
+		width: 100%;
+	}
+	
+	.r34ics-flex-tiles > .r34ics-inner-box {
+		margin: 0.75rem 0;
+	}
+
 }
 
 
-@media screen and (max-width: 782px) {
+@media screen and (max-width: 1024px) {
 
 	.r34ics .columns-2 {
 		display: block;

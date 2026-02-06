@@ -1,4 +1,5 @@
 <?php
+// phpcs:disable WordPress.WP.I18n.MissingTranslatorsComment
 
 // Don't load directly
 if (!defined('ABSPATH')) { exit; }
@@ -39,7 +40,7 @@ if (!class_exists('R34ICS')) {
 	
 		// Note: This is required to be base64 encoded; unencoded (data:image/svg+xml;utf8) doesn't work.
 		// See: https://developer.wordpress.org/reference/functions/add_menu_page/
-		public $icon_logo = 'data:image/svg+xml;base64,PHN2ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiIHZpZXdCb3g9IjAgMCAyMzMgMjU3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xNTEuODA1IDIzLjI3M2gtNzIuODMydi05LjMwOWMwLTcuNzA3LTYuMjU3LTEzLjk2NC0xMy45NjQtMTMuOTY0cy0xMy45NjMgNi4yNTctMTMuOTYzIDEzLjk2NHY5Ljc0M2MtMjguNzQ5IDMuNTIxLTUxLjA0NiAyOC4wNTEtNTEuMDQ2IDU3Ljc0OHYxMTYuMzYzYzAgMzIuMTEyIDI2LjA3MSA1OC4xODIgNTguMTgyIDU4LjE4MmgxMTYuMzY0YzMyLjExMSAwIDU4LjE4Mi0yNi4wNyA1OC4xODItNTguMTgydi0xMTYuMzYzYzAtMzAuMzY1LTIzLjMxMS01NS4zMjgtNTIuOTk2LTU3Ljk1NHYtOS41MzdjMC03LjcwNy02LjI1Ny0xMy45NjQtMTMuOTYzLTEzLjk2NC03LjcwNyAwLTEzLjk2NCA2LjI1Ny0xMy45NjQgMTMuOTY0em0tMTI5LjUwNyAxNzIuNjEzYzAgMjAuMzMzIDE2LjUwOCAzNi44NDIgMzYuODQxIDM2Ljg0MmgxMTIuNDk5YzIwLjMzNCAwIDM2Ljg0Mi0xNi41MDkgMzYuODQyLTM2Ljg0MnYtMTAyLjc5M2gtMTg2LjE4MnptMTQxLjM4OCAxNi4yNDZjMTUuMDY5IDAgMjkuMTg4LTcuNDY3IDI5LjE4OC0yMy4yMTUgMC0yNS42NTgtMzcuMDYyLTE5LjI3OC0zNy4wNjItMjcuOTY2IDAtMi40NDQgMi44NTEtNC43NTIgNy43MzgtNC43NTIgNC40OCAwIDcuODc0IDIuMDM3IDcuODc0IDUuNDMxdjEuMzU3aDIwLjA5MnYtMS4zNTdjMC0xMy4xNjktMTEuMjY3LTIyLjgwOC0yNy44My0yMi44MDgtMTYuNDI3IDAtMjcuOTY2IDkuNTAzLTI3Ljk2NiAyMy40ODcgMCAyNS4xMTUgMzYuOTI2IDE4LjE5MSAzNi45MjYgMjcuODMgMCAyLjg1MS0zLjM5NCA0LjYxNi04LjE0NSA0LjYxNi01LjE1OSAwLTkuNTAzLTIuMTcyLTkuNTAzLTYuMTA5di0xLjYzaC0yMC4yMjh2MS42M2MwIDEzLjU3NSAxMS41MzkgMjMuNDg2IDI4LjkxNiAyMy40ODZ6bS02My45NDIgMGMxOC4xOTEgMCAzMC4xMzgtMTEuNDA0IDMwLjEzOC0yOC43ODF2LTIuMDM2aC0yMC41djIuNTc5YzAgNi4yNDUtMy45MzYgOS45MS05LjYzOCA5LjkxLTcuMTk1IDAtMTAuNzI1LTQuMDcyLTEwLjcyNS0xMS44MTF2LTEzLjAzMmMwLTcuNzM5IDMuNjY1LTExLjgxMSAxMC43MjUtMTEuODExIDUuNzAyIDAgOS42MzggMy42NjUgOS42MzggOS45MXYyLjU3OWgyMC41di0yLjAzNmMwLTE3LjM3Ny0xMS45NDctMjguNzgxLTMwLjI3NC0yOC43ODEtMTkuMjc4IDAtMzAuOTUzIDExLjY3Ni0zMC45NTMgMzAuMDAzdjEzLjMwNGMwIDE4LjMyOCAxMS42NzUgMzAuMDAzIDMxLjA4OSAzMC4wMDN6bS02MC40MTMtMi4wMzdoMjAuMzY0di02OS4yMzZoLTIwLjM2NHptMC03Ni41NjdoMjAuMzY0di0xOS44MjFoLTIwLjM2NHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=';
+		public $icon_logo = 'data:image/svg+xml;base64,PHN2ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTUxLjgwNSAyMy4yNzNoLTcyLjgzMnYtOS4zMDljMC03LjcwNy02LjI1Ny0xMy45NjQtMTMuOTY0LTEzLjk2NHMtMTMuOTYzIDYuMjU3LTEzLjk2MyAxMy45NjR2OS43NDNjLTI4Ljc0OSAzLjUyMS01MS4wNDYgMjguMDUxLTUxLjA0NiA1Ny43NDh2MTE2LjM2M2MwIDMyLjExMiAyNi4wNzEgNTguMTgyIDU4LjE4MiA1OC4xODJoMTE2LjM2NGMzMi4xMTEgMCA1OC4xODItMjYuMDcgNTguMTgyLTU4LjE4MnYtMTE2LjM2M2MwLTMwLjM2NS0yMy4zMTEtNTUuMzI4LTUyLjk5Ni01Ny45NTR2LTkuNTM3YzAtNy43MDctNi4yNTctMTMuOTY0LTEzLjk2My0xMy45NjQtNy43MDcgMC0xMy45NjQgNi4yNTctMTMuOTY0IDEzLjk2NHptLTEyOS41MDcgMTcyLjYxM2MwIDIwLjMzMyAxNi41MDggMzYuODQyIDM2Ljg0MSAzNi44NDJoMTEyLjQ5OWMyMC4zMzQgMCAzNi44NDItMTYuNTA5IDM2Ljg0Mi0zNi44NDJ2LTEwMi43OTNoLTE4Ni4xODJ6bTE0MS4zODggMTYuMjQ2YzE1LjA2OSAwIDI5LjE4OC03LjQ2NyAyOS4xODgtMjMuMjE1IDAtMjUuNjU4LTM3LjA2Mi0xOS4yNzgtMzcuMDYyLTI3Ljk2NiAwLTIuNDQ0IDIuODUxLTQuNzUyIDcuNzM4LTQuNzUyIDQuNDggMCA3Ljg3NCAyLjAzNyA3Ljg3NCA1LjQzMXYxLjM1N2gyMC4wOTJ2LTEuMzU3YzAtMTMuMTY5LTExLjI2Ny0yMi44MDgtMjcuODMtMjIuODA4LTE2LjQyNyAwLTI3Ljk2NiA5LjUwMy0yNy45NjYgMjMuNDg3IDAgMjUuMTE1IDM2LjkyNiAxOC4xOTEgMzYuOTI2IDI3LjgzIDAgMi44NTEtMy4zOTQgNC42MTYtOC4xNDUgNC42MTYtNS4xNTkgMC05LjUwMy0yLjE3Mi05LjUwMy02LjEwOXYtMS42M2gtMjAuMjI4djEuNjNjMCAxMy41NzUgMTEuNTM5IDIzLjQ4NiAyOC45MTYgMjMuNDg2em0tNjMuOTQyIDBjMTguMTkxIDAgMzAuMTM4LTExLjQwNCAzMC4xMzgtMjguNzgxdi0yLjAzNmgtMjAuNXYyLjU3OWMwIDYuMjQ1LTMuOTM2IDkuOTEtOS42MzggOS45MS03LjE5NSAwLTEwLjcyNS00LjA3Mi0xMC43MjUtMTEuODExdi0xMy4wMzJjMC03LjczOSAzLjY2NS0xMS44MTEgMTAuNzI1LTExLjgxMSA1LjcwMiAwIDkuNjM4IDMuNjY1IDkuNjM4IDkuOTF2Mi41NzloMjAuNXYtMi4wMzZjMC0xNy4zNzctMTEuOTQ3LTI4Ljc4MS0zMC4yNzQtMjguNzgxLTE5LjI3OCAwLTMwLjk1MyAxMS42NzYtMzAuOTUzIDMwLjAwM3YxMy4zMDRjMCAxOC4zMjggMTEuNjc1IDMwLjAwMyAzMS4wODkgMzAuMDAzem0tNjAuNDEzLTIuMDM3aDIwLjM2NHYtNjkuMjM2aC0yMC4zNjR6bTAtNzYuNTY3aDIwLjM2NHYtMTkuODIxaC0yMC4zNjR6IiB0cmFuc2Zvcm09Im1hdHJpeCguMDk0NDIwNiAwIDAgLjA5MzM4NTIgMSAwKSIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+';
 		
 		public $limit_days = 365;
 		public $tz = null;
@@ -57,7 +58,7 @@ if (!class_exists('R34ICS')) {
 		protected $scripts_registered = false;
 		
 		protected $shortcode_defaults = array(
-			'ajax' => false,
+			'ajax' => true, // Default changed in version 12.0
 			'ajax_key' => '',
 			'arrayonly' => false,
 			'attach' => '',
@@ -65,12 +66,13 @@ if (!class_exists('R34ICS')) {
 			'category' => '',
 			'color' => '',
 			'columnlabels' => '',
-			'combinemultiday' => false,
+			'combinemultiday' => true,
 			'compact' => false,
 			'count' => 0,
 			'curlopts' => false, // Deprecated
 			'currentweek' => false, // Deprecated
 			'customoptions' => '',
+			'darkmode' => null,
 			'debug' => false,
 			'description' => '',
 			'eventdesc' => false,
@@ -96,6 +98,7 @@ if (!class_exists('R34ICS')) {
 			'htmltagmonth' => '',
 			'htmltagtime' => '',
 			'htmltagtitle' => '',
+			'jsonld' => false,
 			'legacyparser' => false, // Deprecated
 			'legendinline' => false, // Deprecated
 			'legendposition' => '',
@@ -117,6 +120,7 @@ if (!class_exists('R34ICS')) {
 			'pagination' => false,
 			'paginationposition' => '',
 			'pastdays' => 0,
+			'print' => false,
 			'reload' => false,
 			'resources' => false,
 			'reverse' => false,
@@ -137,7 +141,7 @@ if (!class_exists('R34ICS')) {
 			'url' => '',
 			'view' => 'month',
 			'weeknumbers' => false,
-			'whitetext' => false,
+			'whitetext' => null, // Deprecated; use darkmode instead
 		);
 		
 		protected $shortcode_defaults_new_10_6 = array(
@@ -174,7 +178,8 @@ if (!class_exists('R34ICS')) {
 			$this->version = $this->_get_version();
 	
 			// Set base timezone for wp_date() functions in templates
-			$this->tz = new DateTimeZone(get_option('timezone_string') ? get_option('timezone_string') : 'UTC');
+			// try/catch is because this can cause a fatal error on a brand new installation in wp-env
+			try { $this->tz = new DateTimeZone(get_option('timezone_string', 'UTC')); } catch (Exception $e) { }
 	
 			// Set property values
 			$this->r34ics_path = rtrim(plugin_dir_path(__FILE__), '/');
@@ -184,28 +189,12 @@ if (!class_exists('R34ICS')) {
 			$this->event_legacy_path = $this->r34ics_path . $this->event_legacy_path;
 			$this->pand_path = plugin_dir_path(__FILE__) . $this->pand_path;
 	
-			// Define allowed views (must load later so filters can be applied by other plugins)
-			add_action('init', function() {
-				$this->views = apply_filters('r34ics_views', $this->views);
-				$this->list_style_views = apply_filters('r34ics_list_style_views', $this->list_style_views);
-			}, 11);
-			
-			// WP settings
-			add_action('init', array(&$this, 'wp_settings'));
-	
-			// Set up admin menu
-			add_action('admin_menu', array(&$this, 'admin_menu'));
-			
 			// Enqueue admin scripts
 			add_action('admin_enqueue_scripts', array(&$this, 'admin_enqueue_scripts'));
 			
-			// Register scripts
-			add_action('wp_enqueue_scripts', array(&$this, 'register_scripts'));
+			// Set up admin menu
+			add_action('admin_menu', array(&$this, 'admin_menu'));
 			
-			// Enqueue scripts
-			// @todo Resolve issues with late/conditional enqueuing, so this can be removed
-			add_action('wp_enqueue_scripts', array(&$this, 'enqueue_scripts'), 20);
-	
 			// Add ICS shortcode
 			add_shortcode('ics_calendar', array(&$this, 'shortcode'));
 	
@@ -215,14 +204,43 @@ if (!class_exists('R34ICS')) {
 			// Add admin notices
 			add_action('admin_init', array(&$this, 'admin_notices_persist_dismissals'));
 			add_action('admin_notices', array(&$this, 'admin_notices'));
+
+			// Customizer			
+			add_action('init', array(&$this, 'maybe_register_customizer'));
+
+			// Update locale
+			add_action('admin_init', array(&$this, 'maybe_update_locale'));
+
+			// WP settings
+			add_action('init', array(&$this, 'wp_settings'));
+	
+			// Initializations that apply filters (must load later so filters can be applied by other plugins/theme)
+			add_action('init', function() {
+				// Define allowed views
+				$this->views = apply_filters('r34ics_views', $this->views);
+				$this->list_style_views = apply_filters('r34ics_list_style_views', $this->list_style_views);
+				// Filter defaults
+				$this->shortcode_defaults_new_10_6 = apply_filters('r34ics_shortcode_defaults_new_10_6', $this->shortcode_defaults_new_10_6);
+			}, 11);
+			
+			// Add plugin action links
+			add_filter('plugin_action_links_ics-calendar/ics-calendar.php', array($this, 'admin_plugin_action_links'));
 			
 			// Add query variables
 			add_filter('query_vars', array(&$this, 'query_vars'));
 			
-			// Core WP actions
-			add_action('post_updated', array(&$this, 'post_updated'), 10, 3);
+			// Register scripts
+			add_action('wp_enqueue_scripts', array(&$this, 'register_scripts'));
 			
-			// Core WP filters
+			// Enqueue scripts
+			// @todo Resolve issues with late/conditional enqueuing, so this can be removed
+			add_action('wp_enqueue_scripts', array(&$this, 'enqueue_scripts'), 20);
+	
+			// Miscellaneous core WP actions
+			add_action('post_updated', array(&$this, 'post_updated'), 10, 3);
+			add_action('template_redirect', array(&$this, 'template_redirect'), 10, 0);
+			
+			// Miscellaneous core WP filters
 			add_filter('http_request_host_is_external', array(&$this, 'http_request_host_is_external'), 10, 3);
 		
 			// R34ICS actions
@@ -237,15 +255,6 @@ if (!class_exists('R34ICS')) {
 			add_filter('r34ics_display_add_calendar_button', array(&$this, 'r34ics_display_add_calendar_button'), 10, 1);
 			add_filter('r34ics_display_calendar_exclude_event', array(&$this, 'r34ics_display_calendar_exclude_event'), 10, 3);
 			
-			// Handle form submissions
-			add_action('template_redirect', array(&$this, 'template_redirect'), 10, 0);
-			
-			// Add plugin action links
-			add_filter('plugin_action_links_ics-calendar/ics-calendar.php', array($this, 'admin_plugin_action_links'));
-			
-			// Filter defaults
-			$this->shortcode_defaults_new_10_6 = apply_filters('r34ics_shortcode_defaults_new_10_6', $this->shortcode_defaults_new_10_6);
-	
 		}
 		
 		
@@ -256,11 +265,12 @@ if (!class_exists('R34ICS')) {
 	
 	
 		public function admin_menu() {
+			
 			if (!class_exists('R34ICSPro')) {
 				add_menu_page(
 					'ICS Calendar',
 					'ICS Calendar',
-					'edit_posts',
+					get_option('r34ics_admin_access', 'edit_others_posts'),
 					'ics-calendar',
 					array(&$this, 'admin_page'),
 					$this->icon_logo,
@@ -273,47 +283,148 @@ if (!class_exists('R34ICS')) {
 		public function admin_notices() {
 			$current_screen = get_current_screen();
 
-			// Prepare deferred admin notices
-			global $r34ics_deferred_admin_notices;
-			if (empty($r34ics_deferred_admin_notices)) {
-				$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
-			}
-	
 			// Dashboard-only notices for administrator-level users
 			if (
-				current_user_can('manage_options') &&
-				in_array($current_screen->base, array(
-					'dashboard',
-					'options-general',
-					'toplevel_page_ics-calendar',
-				))
+				function_exists('r34ics_admin_full_access') && 
+				r34ics_admin_full_access() &&
+				(
+					in_array($current_screen->base, array(
+						'dashboard',
+						'options-general',
+						'toplevel_page_ics-calendar',
+						'r34icspro_calendar_page_ics-calendar-pro-settings', // Pro version only
+					)) ||
+					strpos($current_screen->post_type, 'r34ics') !== false // Pro version only
+				)
 			) {
 			
+				// Prepare deferred admin notices
+				global $r34ics_deferred_admin_notices;
+				if (empty($r34ics_deferred_admin_notices)) {
+					$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
+				}
+	
+				// Display a notice if ICS Calendar is paused
+				if (get_option('r34ics_paused')) {
+					$r34ics_deferred_admin_notices['r34ics_paused'] = array(
+						'content' => '<p>' . sprintf(esc_html__('%1$s is currently %2$spaused%3$s, and is not serving calendars on front end pages. You can resume serving calendars under the %4$sUtilities%5$s tab %6$shere%7$s.', 'ics-calendar'), 'ICS Calendar', '<strong style="color: var(--r34ics--color--ics-red);">', '</strong>', '<strong>', '</strong>', '<a href="' . esc_url(admin_url(class_exists('R34ICSPro') ? 'edit.php?post_type=r34icspro_calendar&page=ics-calendar-pro-settings#utilities' : 'admin.php?page=ics-calendar#utilities')) . '">', '</a>') . '</p>',
+						'status' => 'warning',
+						'dismissible' => false,
+					);
+				}
+	
 				// This is a WordPress Playground implementation
 				if (r34ics_is_playground()) {
 					$r34ics_deferred_admin_notices['r34ics_is_playground'] = array(
-						/* translators: 1. HTML tag 2. HTML tag */
 						'content' => '<p>' . sprintf(esc_html__('%1$sYou are running ICS Calendar in a WordPress Playground implementation.%2$s Because ICS Calendar is intended to run on a web server, some features may be unavailable or may not function properly.', 'ics-calendar'), '<strong>', '</strong>') . '</p>',
 						'status' => 'warning',
-						'dismissible' => 'forever',
+						'dismissible' => 7,
 					);
 				}
 	
 				// Warning about UTC-based timezones
 				if (empty(get_option('timezone_string')) || strpos(get_option('timezone_string'), 'UTC') === 0) {
 					$r34ics_deferred_admin_notices['r34ics_timezone_utc'] = array(
-						/* translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag */
 						'content' => '<p>' . sprintf(esc_html__('%1$sYour site is currently using a UTC offset-based timezone setting.%2$s This can produce time display errors in the %3$s plugin in locations that observe Daylight Saving Time. Please %4$schange your timezone setting%5$s to the city nearest your location, in the same timezone, for proper time display. See our %6$sdocumentation%7$s for additional information on this issue.', 'ics-calendar'), '<strong>', '</strong>', '<strong>ICS Calendar</strong>', '<a href="' . admin_url('options-general.php#timezone_string') . '">', '</a>', '<a href="https://icscalendar.com/general-wordpress-settings/#timezone" target="_blank">', '</a>') . '</p>',
 						'status' => 'error',
 						'dismissible' => 1,
 					);
 				}
+				
+				// Warning about detected rate limit issues
+				if (r34ics_rate_limit_check()) {
+					$r34ics_deferred_admin_notices['r34ics_rate_limit_check'] = array(
+						// Note: This message is split into multiple strings because it's too hard to manage 20+ placeholders in one huge block of text
+						'content' => '<p>' .
+							'<strong style="color: var(--r34ics--color--ics-red); text-transform: uppercase;">' .
+							sprintf(esc_html__('Important! Your %1$s configuration appears to be exceeding source calendar provider rate limits.', 'ics-calendar'), 'ICS Calendar') .
+							'</strong><br /><br /><strong>' .
+							sprintf(esc_html__('If your calendars are not loading properly, please review your %1$s settings and usage:', 'ics-calendar'), 'ICS Calendar') .
+							'</strong><ol><li>' .
+							sprintf(esc_html__('Do not use %1$s in your shortcodes. This feature is intended for troubleshooting only, and should not be left on permanently.', 'ics-calendar'), '<code>reload="1"</code>') .
+							'</li><li>' .
+							sprintf(esc_html__('Increase the %1$s %2$sTransient (cache) expiration%3$s setting to %4$s43200%5$s (12 hours) or greater, to reduce the frequency of requests to the provider. (See note below.)', 'ics-calendar'), 'ICS Calendar', '<a href="' . esc_url(admin_url(class_exists('R34ICSPro') ? 'edit.php?post_type=r34icspro_calendar&page=ics-calendar-pro-settings#settings' : 'admin.php?page=ics-calendar#settings')) . '">', '</a>', '<code>', '</code>') .
+							'</li><li>' .
+							sprintf(esc_html__('Avoid including a large number of feeds (10 or more) from the same provider in a single %1$s shortcode.', 'ics-calendar'), 'ICS Calendar') .
+							'</li><li>' .
+							sprintf(esc_html__('Temporarily pause ICS Calendar on your front-end pages using the %1$sPause Calendars%2$s utility. (24-48 hours is recommended.)', 'ics-calendar'), '<a href="' . esc_url(admin_url(class_exists('R34ICSPro') ? 'edit.php?post_type=r34icspro_calendar&page=ics-calendar-pro-settings#utilities' : 'admin.php?page=ics-calendar#utilities')) . '">', '</a>') .
+							'</li></ol>' .
+							sprintf(esc_html__('%1$s includes built-in caching, specifically to improve performance and avoid exceeding provider rate limits. Circumventing this caching with a very low %2$sreload%3$s setting may trigger a temporary block on your web server IP address, or possibly on your entire hosting network, by the calendar provider.', 'ics-calendar'), 'ICS Calendar', '<code>', '</code>') .
+							'<br /><br /><strong>' .
+							sprintf(esc_html__('After making the recommended changes, please allow up to 24 hours for your calendar provider to remove any temporary blocks on your IP address. If you find that the problem persists, please use our %1$ssupport request form%2$s to contact us, and be sure to include your %3$ssystem report%4$s.', 'ics-calendar'), '<a href="https://icscalendar.com/support/" target="_blank">', '</a>', '<a href="' . esc_url(admin_url(class_exists('R34ICSPro') ? 'edit.php?post_type=r34icspro_calendar&page=ics-calendar-pro-settings#system-report' : 'admin.php?page=ics-calendar#system-report')) . '">', '</a>') .
+							'</strong><br /><br /><small>' .
+							sprintf(esc_html__('Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, considering how frequently event information in your calendar is typically updated. %3$s Remember that you can use the %4$sClear Cached Calendar Data%5$s utility to manually clear the cache at any time, if needed.', 'ics-calendar'), '<strong>', '</strong>', '<br />', '<a href="' . esc_url(admin_url(class_exists('R34ICSPro') ? 'edit.php?post_type=r34icspro_calendar&page=ics-calendar-pro-settings#utilities' : 'admin.php?page=ics-calendar#utilities')) . '">', '</a>') .
+							'</small>' .
+						'</p>',
+						'status' => 'error',
+						'dismissible' => 2,
+					);
+				}
+				
+				/**
+				 * VERSION-SPECIFIC NOTICES
+				 * These were moved here in v.12.0 because their previous placement within the
+				 * r34ics_install() and r34ics_update() functions caused them to fail to display
+				 * due to activation redirects to the Getting Started page.
+				 * (They also wouldn't display if the plugin was auto-updated.)
+				 */
+				$version = get_option('r34ics_version');
+				$previous_version = get_option('r34ics_previous_version');
+				 
+				// Admin notice about new default options
+				if (version_compare($previous_version, '10.6.0', '<')) {
+					$r34ics_deferred_admin_notices['r34ics_new_parameter_defaults_10_6'] = array(
+						'content' => '<p>' . sprintf(esc_html__('%1$sPlease note:%2$s %3$s version 10.6 changes the default options for several shortcode settings. In order to maintain consistency, these new defaults are %4$snot%5$s enabled when upgrading from an earlier version. If you would like to learn more about the changes please read our %6$sblog post%7$s, or to switch to the new defaults, turn on the %8$s option on the %9$s settings%10$s page.', 'ics-calendar'), '<strong>', '</strong>', 'ICS Calendar', '<em>', '</em>', '<a href="https://icscalendar.com/updated-parameter-defaults-in-ics-calendar-10-6/" target="_blank">', '</a>', '<strong>' . esc_html__('Use new parameter defaults (v.10.6)', 'ics-calendar') . '</strong>', '<a href="' . esc_url(r34ics_get_admin_url('settings')) . '">ICS Calendar', '</a>') . '</p>',
+						'status' => 'info',
+						'dismissible' => 'forever',
+					);
+				}
+				else {
+					unset($r34ics_deferred_admin_notices['r34ics_new_parameter_defaults_10_6']);
+				}
+			
+				// Admin notice about refactored R34ICS::_url_get_contents() method
+				if (version_compare($previous_version, '11.0.0', '<')) {
+					$r34ics_deferred_admin_notices['r34ics_refactoring_in_v_11'] = array(
+						'content' => '<p>' . sprintf(esc_html__('%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are retrieved. This change uses a standard built-in WordPress function, so it should be fully compatible with all existing installations. If you encounter any new issues after upgrading to version 11 or later, please visit the %4$sWordPress Support Forums%5$s for assistance.', 'ics-calendar'), '<strong>', '</strong>', 'ICS Calendar', '<a href="https://wordpress.org/support/plugin/ics-calendar/" target="_blank">', '</a>') . '</p>',
+						'status' => 'info',
+						'dismissible' => 'forever',
+					);
+				}
+				else {
+					unset($r34ics_deferred_admin_notices['r34ics_refactoring_in_v_11']);
+				}
+				
+				// Admin notice about new AJAX key method
+				if (version_compare($previous_version, '11.5.14.2', '<')) {
+					$r34ics_deferred_admin_notices['r34ics_ajax_keys_11_5_14_2'] = array(
+						'content' => '<p>' . sprintf(esc_html__('%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure method for handling calendar parameters when loading via AJAX. Please clear any caching plugins you are using, to ensure that your calendars are loading properly with the new method.', 'ics-calendar'), '<strong>', '</strong>', 'ICS Calendar') . '</p>',
+						'status' => 'info',
+						'dismissible' => 'forever',
+					);
+				}
+				else {
+					unset($r34ics_deferred_admin_notices['r34ics_ajax_keys_11_5_14_2']);
+				}
 	
+				// Special admin notice for version 12.0
+				if (empty($previous_version) || version_compare($previous_version, '12.1', '<')) {
+					$r34ics_deferred_admin_notices['r34ics_version_12_0_announcement'] = array(
+						'content' => '<p>' .
+						sprintf(__('%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional troubleshooting tools, plus a number of performance improvements and interface refinements throughout. Please see the %4$schangelog%5$s for more details on this update.', 'ics-calendar'), '<strong style="font-size: 150%; color: var(--r34ics--color--ics-red);">', '<span style="text-transform: uppercase;">ICS Calendar</span>', '</strong><br /><br />', '<a href="https://icscalendar.com/changelog/" target="_blank">', '</a>') .
+						'</p>',
+						'status' => 'info',
+						'dismissible' => 'forever',
+					);
+				}
+				else {
+					unset($r34ics_deferred_admin_notices['r34ics_version_12_0_announcement']);
+				}
+		
+				// Save deferred admin notices
+				update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices, false);
+
 			}
-	
-			// Save deferred admin notices
-			update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices);
-	
 		}
 		
 		
@@ -336,6 +447,9 @@ if (!class_exists('R34ICS')) {
 			// Save admin settings
 			$this->_admin_page_callback_save_settings();
 	
+			// Save admin appearance
+			$this->_admin_page_callback_save_appearance();
+	
 			// Render template
 			include(plugin_dir_path(__FILE__) . 'templates/admin/admin.php');
 	
@@ -346,12 +460,16 @@ if (!class_exists('R34ICS')) {
 			if (!class_exists('R34ICSPro')) {
 				array_unshift(
 					$links,
-					'<a href="' . admin_url('admin.php?page=ics-calendar#utilities') . '">' . esc_html__('Utilities', 'ics-calendar') . '</a>',
-					'<a href="' . admin_url('admin.php?page=ics-calendar#settings') . '">' . esc_html__('Settings', 'ics-calendar') . '</a>',
-					'<a href="https://icscalendar.com/user-guide/" target="_blank">' . esc_html__('User Guide', 'ics-calendar') . '</a>',
-					'<a href="https://wordpress.org/support/plugin/ics-calendar/" target="_blank">' . esc_html__('Support', 'ics-calendar') . '</a>'
+					'<a href="' . admin_url('admin.php?page=ics-calendar#getting-started') . '" style="white-space: nowrap;">' . __('Getting Started', 'ics-calendar') . '</a>',
+					'<a href="' . admin_url('admin.php?page=ics-calendar#settings') . '">' . __('Settings', 'ics-calendar') . '</a>',
+					'<a href="' . admin_url('admin.php?page=ics-calendar#appearance') . '">' . __('Appearance', 'ics-calendar') . '</a>',
+					'<a href="' . admin_url('admin.php?page=ics-calendar#utilities') . '">' . __('Utilities', 'ics-calendar') . '</a>',
+					'<a href="' . admin_url('admin.php?page=ics-calendar#system-report') . '" style="white-space: nowrap;">' . __('System Report', 'ics-calendar') . '</a>',
+					'<a href="https://icscalendar.com/support/" target="_blank">' . __('Support', 'ics-calendar') . '</a>',
 				);
-				$links[] = '<a href="https://icscalendar.com/pro/" target="_blank" style="font-weight: bold; color: dodgerblue;">' . esc_html__('Upgrade to PRO!', 'ics-calendar') . '</a>';
+				$links[] = '<a href="https://icscalendar.com/pro/" target="_blank" style="font-weight: bold; color: var(--r34ics--color--ics-purple); white-space: nowrap;">' .
+				sprintf(esc_html__('Upgrade to %1$s!', 'ics-calendar'), 'ICS Calendar Pro') .
+				'</a>';
 			}
 			return $links;
 		}
@@ -475,21 +593,20 @@ if (!class_exists('R34ICS')) {
 		}
 	
 	
-		public function display_calendar($args) {
+		public function display_calendar($args, $force_reload=false) {
 	
 			// Don't do anything in Block Editor
-			if (function_exists('get_current_screen') && $current_screen = get_current_screen()) {
-				if (method_exists($current_screen, 'is_block_editor') && $current_screen->is_block_editor()) {
-					return;
-				}
-			}
+			if (r34ics_is_block_editor()) { return; }
+			
+			// Bail out here if ICS Calendar is paused and we're on the front end
+			if (!is_admin() && get_option('r34ics_paused')) { return; }
 			
 			// Merge args with defaults
 			$args = array_merge($this->shortcode_defaults, $args);
 			extract($args);
 			
 			// Reset debug messages for this call (Administrator role only)
-			$this->debug = current_user_can('manage_options') ? $debug : false;
+			$this->debug = (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) ? $debug : false;
 			if ($this->debug) { $this->debug_messages = array('args' => $args); }
 
 			// Check for required args
@@ -511,12 +628,12 @@ if (!class_exists('R34ICS')) {
 					do_action('r34ics_display_calendar_render_template', $view, $args, null);
 					return;
 			}
-					
+			
 			// Adjust memory limit if appropriate
 			if ($display_calendar_memory_limit = get_option('r34ics_display_calendar_memory_limit')) {
 				// Check against current memory limit
 				if (r34ics_memory_limit_mb() < intval($display_calendar_memory_limit)) {
-					// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged -- No alternative!
+					// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
 					ini_set('memory_limit', $display_calendar_memory_limit);
 				}
 			}
@@ -528,7 +645,8 @@ if (!class_exists('R34ICS')) {
 			$transient_name = __METHOD__ . '_' . $this->display_calendar_transient_hash($args);
 			$loaded_from_transient = null;
 			$ics_data = null;
-			if (intval($reload) !== 1 && intval($this->debug) < 3) {
+			$force_reload = apply_filters('r34ics_display_calendar_force_reload', $force_reload);
+			if (empty($force_reload) && intval($reload) !== 1 && intval($this->debug) < 3) {
 				$loaded_from_transient = true;
 				$ics_data = get_transient($transient_name);
 				if (!empty($ics_data) && $this->debug) {
@@ -652,7 +770,7 @@ if (!class_exists('R34ICS')) {
 					if (!is_object($ICal)) {
 						// Display error if debugging is turned on, otherwise just continue
 						if ($this->debug) {
-							// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
+							// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
 							trigger_error(esc_html__('ICS file could not be retrieved or was empty. Please verify URL is correct, and check your php.ini configuration to verify either cURL or allow_url_fopen is available. If you are using spaces to delimit multiple URLs, you may also wish to try using the pipe character instead. Affected URL:', 'ics-calendar') . ' ' . esc_url($url), E_USER_NOTICE);
 						}
 						continue;
@@ -782,8 +900,8 @@ if (!class_exists('R34ICS')) {
 								'sequence' => ($event->sequence ?: ''),
 								'status' => ($event->status ?: ''),
 								'transp' => ($event->transp ?: ''),
-								'tz_start' => (@$args['eventlocaltime'] ? (@$event->dtstart_array[0]['TZID'] ?: $url_tz) : $url_tz),
-								'tz_end' => (@$args['eventlocaltime'] ? (@$event->dtend_array[0]['TZID'] ?: $url_tz) : $url_tz),
+								'tz_start' => (!empty($args['eventlocaltime']) ? ($event->dtstart_array[0]['TZID'] ?? $url_tz) : $url_tz),
+								'tz_end' => (!empty($args['eventlocaltime']) ? ($event->dtend_array[0]['TZID'] ?? $url_tz) : $url_tz),
 								'uid' => ($event->uid ?: ''),
 								'url' => empty($args['nolink']) ? ($event->url ?? ($event->uri ?: '')) : '',
 							);
@@ -793,7 +911,7 @@ if (!class_exists('R34ICS')) {
 								$event_item['url'] = r34ics_scrape_url_from_string($event->description, false, true);
 							}
 							
-							// Multi-day events
+							// Multiday events
 							if	(
 									$dtend_date != $dtstart_date &&
 									// Watch out for events that are NOT multiday, but just extend into the next day, unless extendmultiday is set
@@ -812,7 +930,7 @@ if (!class_exists('R34ICS')) {
 									if ($all_day && $loop_date == $dtend_date && !in_array($args['extendmultiday'], array('both', 'allday'))) {
 										break;
 									}
-									// Multi-day events may be given with end date/time as midnight of the NEXT day (unless extendmultiday is set)
+									// Multiday events may be given with end date/time as midnight of the NEXT day (unless extendmultiday is set)
 									$effective_end_date =	(!empty($all_day) && empty($dtend_time) && !in_array($args['extendmultiday'], array('both', 'allday')))
 															? r34ics_date('Ymd', $dtend_date, $event_end_tz, '-1 day')
 															: $dtend_date;
@@ -820,7 +938,7 @@ if (!class_exists('R34ICS')) {
 										$ics_data['events'][$dtstart_date]['all-day'][] = apply_filters('r34ics_display_calendar_event_item', $event_item, $event, $args);
 										break;
 									}
-									// Get full date/time range of multi-day event (to be used in displaying multi-day events as single items in list views)
+									// Get full date/time range of multiday event (to be used in displaying multiday events as single items in list views)
 									$event_item['multiday'] = array(
 										'start_date' => $dtstart_date,
 										'start_time' => $dtstart_time,
@@ -945,7 +1063,7 @@ if (!class_exists('R34ICS')) {
 				if ($this->debug >= 2) {
 					$this->debug_messages['Plugin Data'] = $ics_data;
 				}
-				_r34ics_debug($this->debug_messages);
+				r34ics__debug($this->debug_messages);
 			}
 			
 			// Remove events with redundant UIDs on the same date
@@ -970,7 +1088,7 @@ if (!class_exists('R34ICS')) {
 				case 'list':
 				case 'month':
 				case 'week':
-					include(plugin_dir_path(__FILE__) . 'templates/calendar-' . $view . '.php');
+					include(locate_template('ics-calendar/calendar-' . $view . '.php') ?: plugin_dir_path(__FILE__) . 'templates/calendar-' . $view . '.php');
 					break;
 				default:
 					// Handle other views externally
@@ -999,7 +1117,7 @@ if (!class_exists('R34ICS')) {
 			$ics_data['description'] = (isset($args['description']) && r34ics_boolean_check($args['description'])) ? $args['description'] : '';
 	
 			// Set colors and feed titles for color key
-			$ics_data['colors'] = apply_filters('r34ics_display_calendar_color_set', (!empty($args['color']) ? r34ics_color_set(r34ics_space_pipe_explode($args['color']), 1, (empty($args['whitetext']) && empty($args['solidcolors']))) : ''), $args);
+			$ics_data['colors'] = apply_filters('r34ics_display_calendar_color_set', (!empty($args['color']) ? r34ics_color_set(r34ics_space_pipe_explode($args['color']), 1, empty($args['solidcolors'])) : ''), $args);
 			$ics_data['tablebg'] = $args['tablebg'] ?? '';
 			// @todo Add category support
 			$ics_data['feed_titles'] = !empty($args['feedlabel']) ? explode('|', $args['feedlabel']) : array();
@@ -1023,12 +1141,12 @@ if (!class_exists('R34ICS')) {
 			}
 			else {
 				if (!empty($args['pastdays'])) {
-					$range['start'] = r34ics_date('Y/m/d', null, null, '-' . intval($args['pastdays'] + $range_unit) . ' days');
+					$range['start'] = r34ics_date('Y/m/d', null, null, '-' . intval(($args['pastdays'] ?? 0) + $range_unit) . ' days');
 				}
 				else {
-					$range['start'] = r34ics_date('Y/m/d', null, null, '-' . intval(wp_date('j') + $range_unit) . ' days');
+					$range['start'] = r34ics_date('Y/m/d', null, null, '-' . intval(r34ics_date('j') + $range_unit) . ' days');
 				}
-				$range['end'] = r34ics_date('Y/m/d', null, null, '+' . intval($args['limitdays'] + $range_unit) . ' days');
+				$range['end'] = r34ics_date('Y/m/d', null, null, '+' . intval(($args['limitdays'] ?? 0) + $range_unit) . ' days');
 			}
 			// Additional filtering of range dates
 			$range['start'] = apply_filters('r34ics_display_calendar_range_start', $range['start'], $args);
@@ -1084,7 +1202,10 @@ if (!class_exists('R34ICS')) {
 	
 		public function enqueue_scripts() {
 			if ($this->scripts_enqueued || empty($this->scripts_registered)) { return; }
-		
+
+			// Bail out here if ICS Calendar is paused and we're on the front end
+			if (!is_admin() && get_option('r34ics_paused')) { return; }
+					
 			// ICS Calendar JS
 			wp_enqueue_script('ics-calendar');
 			
@@ -1105,10 +1226,10 @@ if (!class_exists('R34ICS')) {
 	
 			// ICS Calendar CSS
 			wp_enqueue_style('ics-calendar');
-			if (get_option('r34ics_colors_darkmode') || get_option('r34ics_colors_match_theme_json')) {
+			if (get_option('r34ics_colors_match_theme_json')) {
 				wp_add_inline_style('ics-calendar', r34ics_colors_match_theme_json(get_option('r34ics_colors_darkmode'), empty(get_option('r34ics_colors_match_theme_json'))));
 			}
-			if (current_user_can('manage_options')) {
+			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
 				wp_enqueue_style('ics-calendar-debug');
 			}
 	
@@ -1226,7 +1347,7 @@ if (!class_exists('R34ICS')) {
 			}
 			// Add individual event .ics download link
 			if (!empty($args['eventdl'])) {
-				echo '<div><button class="r34ics_event_ics_download' . ($args['eventdl'] == 'minimal' ? ' minimal' : '') . '" data-eventdl-feed-key="' . intval($event['feed_key']) . '" data-eventdl-uid="' . esc_attr($event['uid']) . '">' . esc_attr__('Save to your calendar', 'ics-calendar') . '</button></div>';
+				echo '<div><button class="r34ics_event_ics_download' . ($args['eventdl'] == 'minimal' ? ' minimal' : '') . '" data-eventdl-feed-key="' . intval($event['feed_key']) . '" data-eventdl-uid="' . esc_attr($event['uid']) . '" data-eventdl-dtstart="' . esc_attr($event['dtstart']) . '" data-eventdl-dtend="' . esc_attr($event['dtend']) . '" data-eventdl-label="' . esc_attr($event['label']) . '">' . esc_attr__('Save to your calendar', 'ics-calendar') . '</button></div>';
 			}
 			
 			// Action for additional content
@@ -1251,7 +1372,7 @@ if (!class_exists('R34ICS')) {
 						echo '<div class="descloc_feed_label">' . esc_html($args['feedlabel_array'][$event['feed_key']]) . '</div>';
 				}
 	
-				// Date(s) -- lightbox only, unless multi-day
+				// Date(s) -- lightbox only, unless multiday
 				if ($args['toggle'] === 'lightbox' || (!empty($event['multiday']) && !in_array($args['view'], (array)$this->get_list_style_views()))) {
 					$date_format = r34ics_date_format($args['format'], true);
 					echo '<div class="date_in_hover_block">';
@@ -1441,7 +1562,7 @@ if (!class_exists('R34ICS')) {
 			if (!$this->parser_loaded) {
 				$this->_load_parser(!empty($args['legacyparser']));
 				if ($this->debug && !empty($args['legacyparser'])) {
-					// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
+					// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
 					trigger_error(esc_html__('The legacy parser option is deprecated and will be removed in a future update.', 'ics-calendar'), E_USER_DEPRECATED);
 				}
 			}
@@ -1458,7 +1579,26 @@ if (!class_exists('R34ICS')) {
 			// Return prepared $ICal object
 			return $ICal;
 		}
-	
+		
+		
+		public function maybe_register_customizer() {
+			if (get_option('r34ics_register_customizer')) {
+				add_action('customize_register', '__return_true');
+			}
+		}
+
+
+		// Needed for Loco Translate conflict, when locale is changed after plugin is already active
+		public function maybe_update_locale() {
+			$locale = determine_locale();
+			if (get_option('r34ics_locale') != $locale) {
+				if (is_plugin_active('loco-translate/loco.php')) {
+					r34ics_i18n_symlinks();
+				}
+				update_option('r34ics_locale', $locale);
+			}
+		}
+		
 	
 		public function parse_attach_array($attach, $sametab=null) {
 			if (empty($attach) || !is_array($attach) || count($attach) % 2 !== 0) { return ''; }
@@ -1485,7 +1625,7 @@ if (!class_exists('R34ICS')) {
 				
 				// Handle images as an image tag (MIME type MUST be passed or this may not actually be a direct image link (e.g. a Google Drive preview link)
 				elseif (!empty($mime) && strpos($mime, 'image/') === 0) {
-					// phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Images are from calendar feeds, not Media Library.
+					// phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
 					$output .= '<div><img src="' . esc_url($url) . '" alt="" style="position: relative; height: auto; width: 100%;" /></div>';
 				}
 			
@@ -1512,10 +1652,21 @@ if (!class_exists('R34ICS')) {
 		}
 		
 		
+		public function print_button_html($args) {
+			$atts = $this->_ajax_container_attributes($args);
+			echo '<div class="r34ics-print-button-wrapper"><a href="' . esc_url(home_url('/?r34ics-print=' . rawurlencode(json_encode($atts)))) . '" data-href="' . esc_url(home_url('/?r34ics-print=' . rawurlencode(json_encode($atts)))) . '" class="button print" target="_blank" title="' . esc_attr__('Print', 'ics-calendar') . '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M128 128C128 92.7 156.7 64 192 64L405.5 64C422.5 64 438.8 70.7 450.8 82.7L493.3 125.2C505.3 137.2 512 153.5 512 170.5L512 208L128 208L128 128zM64 320C64 284.7 92.7 256 128 256L512 256C547.3 256 576 284.7 576 320L576 416C576 433.7 561.7 448 544 448L512 448L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 448L96 448C78.3 448 64 433.7 64 416L64 320zM192 480L192 512L448 512L448 416L192 416L192 480zM520 336C520 322.7 509.3 312 496 312C482.7 312 472 322.7 472 336C472 349.3 482.7 360 496 360C509.3 360 520 349.3 520 336z" fill="currentColor"/></svg></a></div>';
+		}
+		
+		
 		public function query_vars($qvars) {
+			$qvars[] = 'r34ics-dtend';
+			$qvars[] = 'r34ics-dtstart';
 			$qvars[] = 'r34ics-feed-key';
-			$qvars[] = 'r34ics-urlids';
+			$qvars[] = 'r34ics-label';
+			$qvars[] = 'r34ics-print';
+			$qvars[] = 'r34ics-print-selected';
 			$qvars[] = 'r34ics-uid';
+			$qvars[] = 'r34ics-urlids';
 			return $qvars;
 		}
 		
@@ -1539,9 +1690,11 @@ if (!class_exists('R34ICS')) {
 					default: $ics_calendar_classes[] = 'r34ics_compact'; break;
 				}
 			}
+			if (!empty($args['darkmode'])) { $ics_calendar_classes[] = 'darkmode'; }
 			if (!empty($args['hidetimes'])) { $ics_calendar_classes[] = 'hide_times'; }
 			if (!empty($args['monthnav'])) { $ics_calendar_classes[] = 'monthnav-' . esc_attr($args['monthnav']); }
 			if (!empty($args['nomobile'])) { $ics_calendar_classes[] = 'nomobile'; }
+			if (!empty($args['print']) && $args['print'] == 'descriptions') { $ics_calendar_classes[] = 'print_desc'; }
 			if (!empty($args['reverse'])) { $ics_calendar_classes[] = 'reverse'; }
 			if ($args['sametab'] == 'all') { $ics_calendar_classes[] = 'sametab'; }
 			elseif ($args['sametab'] == 'none') { $ics_calendar_classes[] = 'newtab'; }
@@ -1551,13 +1704,9 @@ if (!class_exists('R34ICS')) {
 				$ics_calendar_classes[] = ($args['toggle'] === 'lightbox') ? 'r34ics_toggle r34ics_toggle_lightbox' : 'r34ics_toggle';
 			}
 			if (!empty($args['url']) && (strpos($args['url'], ' ') !== false || strpos($args['url'], '|') !== false)) { $ics_calendar_classes[] = 'multi-feed'; }
-			if (!empty($args['whitetext'])) { $ics_calendar_classes[] = 'whitetext'; }
 			
 			// View-specific classes
 			if (!empty($args['view']) && $args['view'] == 'week') { $ics_calendar_classes[] = 'current_week_only'; }
-			
-			// Site option-specific classes
-			if (get_option('r34ics_colors_darkmode')) { $ics_calendar_classes[] = 'darkmode'; }
 			
 			// Return the CSS classes as a string or an array
 			if (!empty($implode)) {
@@ -1577,6 +1726,34 @@ if (!class_exists('R34ICS')) {
 		
 	
 		public function r34ics_display_calendar_after_render_template($view, $args, $ics_data) {
+			
+			// Append JSON-LD structured data
+			if (!empty($args['jsonld']) && !empty($ics_data['events'])) {
+				?>
+				<script type="application/ld+json">
+				[
+				<?php
+				// @todo Find a less... "deep"... way to do this
+				ob_start();
+				foreach ((array)$ics_data['events'] as $year => $months) {
+					foreach ((array)$months as $month => $days) {
+						foreach ((array)$days as $day => $day_events) {
+							foreach ((array)$day_events as $time => $events) {
+								foreach ((array)$events as $event_key => $event) {
+									// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+									echo r34ics_event2jsonld($event) . ',';
+								}
+							}
+						}
+					}
+				}
+				echo wp_kses(rtrim(ob_get_clean(), ','), 'data');
+				?>
+				]
+				</script>
+				<?php
+			}
+
 			return;
 		}
 		
@@ -1600,7 +1777,10 @@ if (!class_exists('R34ICS')) {
 			if (!empty($args['eventdl'])) {
 				?>
 				<form method="get" class="r34ics_event_ics_download_form">
+				<input type="hidden" name="r34ics-dtend" value="" />
+				<input type="hidden" name="r34ics-dtstart" value="" />
 				<input type="hidden" name="r34ics-feed-key" value="" />
+				<input type="hidden" name="r34ics-label" value="" />
 				<input type="hidden" name="r34ics-uid" value="" />
 				<?php
 				foreach ((array)$ics_data['urls'] as $feed_key => $feed_url) {
@@ -1683,7 +1863,7 @@ if (!class_exists('R34ICS')) {
 	
 			// ICS Calendar CSS
 			wp_register_style('ics-calendar', plugin_dir_url(__FILE__) . 'assets/style.min.css', false, get_option('r34ics_version'));
-			if (current_user_can('manage_options')) {
+			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
 				wp_register_style('ics-calendar-debug', plugin_dir_url(__FILE__) . 'assets/debug.css', false, get_option('r34ics_version'));
 			}
 	
@@ -1709,11 +1889,7 @@ if (!class_exists('R34ICS')) {
 		public function shortcode($atts) {
 				
 			// Don't do anything in Block Editor
-			if (function_exists('get_current_screen') && $current_screen = get_current_screen()) {
-				if (method_exists($current_screen, 'is_block_editor') && $current_screen->is_block_editor()) {
-					return;
-				}
-			}
+			if (r34ics_is_block_editor()) { return; }
 			
 			// Enqueue ICS Calendar's scripts and styles, if needed (method includes check to prevent duplicate enqueuing)
 			$this->enqueue_scripts();
@@ -1737,17 +1913,17 @@ if (!class_exists('R34ICS')) {
 			
 			// Report deprecated attributes
 			if (!empty($currentweek) && $this->debug) {
-				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
+				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
 				trigger_error(esc_html__('The "currentweek" shortcode attribute is deprecated. Please use view="week" in your shortcode instead.', 'ics-calendar'), E_USER_DEPRECATED);
 			}
 			if (!empty($legendinline) && $this->debug) {
-				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
+				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
 				trigger_error(esc_html__('The "legendinline" shortcode attribute is deprecated. Please use legendstyle="inline" in your shortcode instead.', 'ics-calendar'), E_USER_DEPRECATED);
 			}
 			
 			// Assemble display arguments array
 			$args = array(
-				'ajax' => (get_option('r34ics_ajax_by_default') ?: r34ics_boolean_check($ajax)),
+				'ajax' => r34ics_boolean_check($ajax),
 				'ajax_key' => ctype_xdigit($ajax_key) ? $ajax_key : '',
 				'arrayonly' => r34ics_boolean_check($arrayonly),
 				'attach' => (
@@ -1772,6 +1948,7 @@ if (!class_exists('R34ICS')) {
 				'count' => abs(intval($count)),
 				'curlopts' => false, // Deprecated
 				'customoptions' => explode('|', $customoptions),
+				'darkmode' => r34ics_boolean_check($darkmode),
 				'debug' => (
 					intval($debug)
 						? intval($debug)
@@ -1823,6 +2000,7 @@ if (!class_exists('R34ICS')) {
 				'hidetentativeevents' => r34ics_boolean_check($hidetentativeevents),
 				'hiderecurrence' => r34ics_hiderecurrence_parse($hiderecurrence),
 				'hidetimes' => r34ics_boolean_check($hidetimes),
+				'jsonld' => r34ics_boolean_check($jsonld),
 				'legacyparser' => r34ics_boolean_check($legacyparser), // Deprecated
 				'legendinline' => false, // Deprecated
 				'legendposition' => (
@@ -1876,11 +2054,12 @@ if (!class_exists('R34ICS')) {
 						: (r34ics_boolean_check($pagination) ? 'above' : null)
 					),
 				'pastdays' => intval($pastdays),
-				'reload' => (
-					intval($reload) > 1
-						? intval($reload)
-						: intval(r34ics_boolean_check($reload))
+				'print' => (
+					in_array(strtolower($print), array('titles','descriptions'))
+						? strtolower($print)
+						: (r34ics_boolean_check($print) ? 'titles' : false)
 					),
+				'reload' => r34ics_reload_check($reload, $debug),
 				'resources' => r34ics_boolean_check($resources),
 				'reverse' => (in_array(strtolower($view), (array)$this->get_list_style_views()) && r34ics_boolean_check($reverse)),
 				'sametab' => (
@@ -1922,7 +2101,7 @@ if (!class_exists('R34ICS')) {
 				'url' => $url,
 				'view' => (in_array(strtolower($view), (array)$this->views) ? strtolower($view) : 'month'),
 				'weeknumbers' => r34ics_boolean_check($weeknumbers),
-				'whitetext' => r34ics_boolean_check($whitetext),
+				'whitetext' => r34ics_boolean_check($whitetext), // Deprecated; use darkmode instead
 			);
 			
 			// Workaround: Adjust limitdays to compensate for pastdays when startdate is current date
@@ -1951,23 +2130,30 @@ if (!class_exists('R34ICS')) {
 			if (!empty($args['eventlocaltime']) && strpos('T', $args['timeformat']) === false) {
 				$args['timeformat'] .= ' T';
 			}
-			
+
+			/**
+			 * Wrangle interconnectedness of darkmode, solidcolors and whitetext
+			 * Although whitetext is deprecated, it is now an alias for darkmode,
+			 * and darkmode automatically activates solidcolors *if* color is set.
+			 * Needs to occur *after* r34ics_display_calendar_args filter!
+			 */
+			$args['darkmode'] = ($args['darkmode'] !== null || $args['whitetext'] !== null)
+				? (r34ics_boolean_check($args['darkmode'] || $args['whitetext']))
+				: get_option('r34ics_colors_darkmode');
+			$args['solidcolors'] = r34ics_boolean_check($args['solidcolors'] || ($args['darkmode'] && trim($args['color'], '|')));
+						
 			// Allow custom actions prior to generating the calendar output
 			do_action('r34ics_shortcode_before_display_calendar', $args);
 			
 			// AJAX mode
-			if (!empty($args['ajax'])) {
-				$args['url'] = r34ics_url_uniqid_array_convert($args['url'] ?: '');
-				$is_list_style = intval(in_array(($args['view'] ?: ''), $this->list_style_views));
-				$is_list_long = intval($is_list_style && (!empty($args['eventdesc']) || !empty($args['location']) || !empty($args['organizer']) || (!empty($args['count']) && $args['count'] > 5)));
-				// Store args and pass the associated key (for security purposes)
-				$args_ajax_key = $this->_ajax_args_update($args, ($args['ajax_key'] ?: ''));
-				// Some args must be passed directly, to be accessible to JavaScript
-				$js_args = apply_filters('r34ics_ajax_js_args', array(
-					'debug' => $args['debug'],
-				), $args);
-				// Output AJAX container HTML
-				echo '<div class="r34ics-ajax-container loading" id="' . esc_attr($args['guid'] ?: '') . '" data-view="' . esc_attr($args['view'] ?: '') . '" data-view-is-list-style="' . esc_attr($is_list_style) . '" data-view-is-list-long="' . esc_attr($is_list_long) . '" data-args="' . esc_attr($args_ajax_key) . '" data-js-args="' . esc_attr(wp_json_encode($js_args)) . '">&nbsp;</div>';
+			if (!isset($args['ajax']) || $args['ajax'] !== false) { // It needs to explicitly check for false!
+				$atts = $this->_ajax_container_attributes($args);
+				echo '<div';
+				foreach ((array)$atts as $key => $value) {
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo ' ' . sanitize_title($key) . '="' . esc_attr($value) . '"';
+				}
+				echo '>&nbsp;</div>';
 			}
 	
 			// Standard mode
@@ -2010,8 +2196,7 @@ if (!class_exists('R34ICS')) {
 			
 			// Filter the current calendar view
 			// Note: Fallback value needs to be empty, not 'month'!
-			// Also note: Using the pithier (@$atts['view'] ?: '') was still triggering warnings on AJAX requests
-			$view = apply_filters('r34ics_calendar_view', (!empty($atts['view']) ? $atts['view'] : ''), $atts);
+			$view = apply_filters('r34ics_calendar_view', ($atts['view'] ?? ''), $atts);
 			
 			// Collapse array defaults by view
 			foreach ((array)$defaults as $key => $value) {
@@ -2039,6 +2224,11 @@ if (!class_exists('R34ICS')) {
 			if (get_query_var('r34ics-urlids') && get_query_var('r34ics-uid')) {
 				$this->_event_ics_download();
 			}
+			
+			// Print view
+			if (get_query_var('r34ics-print')) {
+				$this->_print_calendar();
+			}
 	
 		}
 		
@@ -2047,8 +2237,8 @@ if (!class_exists('R34ICS')) {
 			// Transient timeout
 			// v. 6.11.1 Renamed option from 'r34ics_transient_expiration' to 'r34ics_transient_expiration' so it's not a transient itself
 			if (!get_option('r34ics_transients_expiration')) {
-				$transients_expiration = get_option('r34ics_transient_expiration') ? get_option('r34ics_transient_expiration') : 3600;
-				update_option('r34ics_transients_expiration', $transients_expiration);
+				$transients_expiration = get_option('r34ics_transient_expiration', 3600);
+				update_option('r34ics_transients_expiration', $transients_expiration, true);
 				delete_option('r34ics_transient_expiration');
 			}
 		}
@@ -2061,11 +2251,30 @@ if (!class_exists('R34ICS')) {
 				$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
 			}
 
+			if (isset($_POST['r34ics-paused-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-paused-nonce'])), 'r34ics')) {
+				if (intval($_POST['r34ics_paused'] ?? 0) == 0) {
+					update_option('r34ics_paused', false, true);
+					$r34ics_deferred_admin_notices['r34ics_paused'] = array(
+						'content' => '<p>' . sprintf(esc_html__('%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site uses a caching plugin, you may need to clear the cache.', 'ics-calendar'), 'ICS Calendar', '<strong style="color: var(--r34ics--color--forestgreen);">', '</strong>') . '</p>',
+						'status' => 'success',
+						'dismissible' => false,
+					);
+				}
+				else {
+					update_option('r34ics_paused', true, true);
+					$r34ics_deferred_admin_notices['r34ics_paused'] = array(
+						'content' => '<p>' . sprintf(esc_html__('%1$s has %2$spaused%3$s serving calendars on front end pages. If your site uses a caching plugin, you may need to clear the cache.', 'ics-calendar'), 'ICS Calendar', '<strong style="color: var(--r34ics--color--ics-red);">', '</strong>') . '</p>',
+						'status' => 'warning',
+						'dismissible' => false,
+					);
+				}
+			}
+
 			if (isset($_POST['r34ics-purge-calendar-transients-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-purge-calendar-transients-nonce'])), 'r34ics')) {
-				$cleared = r34ics_purge_calendar_transients(!empty($_POST['reset_all']));
+				$reset_options = sanitize_text_field(wp_unslash($_POST['reset_options'] ?? ''));
+				$cleared = r34ics_purge_calendar_transients($reset_options);
 				if ($cleared > 0) {
 					$r34ics_deferred_admin_notices['r34ics_purge_transients'] = array(
-						/* translators: 1: Plugin name (do not translate) */
 						'content' => '<p>' . sprintf(esc_html__('Cleared %1$s %2$s transient(s).', 'ics-calendar'), intval($cleared), 'ICS Calendar') . '</p>',
 						'status' => 'success',
 						'dismissible' => false,
@@ -2073,24 +2282,34 @@ if (!class_exists('R34ICS')) {
 				}
 				else {
 					$r34ics_deferred_admin_notices['r34ics_purge_transients'] = array(
-						/* translators: 1: Plugin name (do not translate) */
 						'content' => '<p>' . sprintf(esc_html__('No %1$s transients were found.', 'ics-calendar'), 'ICS Calendar') . '</p>',
 						'status' => 'info',
 						'dismissible' => false,
 					);
 				}
-				if (!empty($_POST['reset_all'])) {
-					$r34ics_deferred_admin_notices['r34ics_settings_reset_all'] = array(
-						/* translators: 1: Plugin name (do not translate) */
-						'content' => '<p>' . sprintf(esc_html__('All %1$s settings have been reset to defaults.', 'ics-calendar'), 'ICS Calendar') . '</p>',
-						'status' => 'success',
-						'dismissible' => false,
-					);
+				if (!empty($_POST['reset_options'])) {
+					switch ($_POST['reset_options']) {
+						case 'urls':
+							$r34ics_deferred_admin_notices['r34ics_settings_reset_options'] = array(
+								'content' => '<p>' . sprintf(esc_html__('All saved ICS feed URLs have been cleared.', 'ics-calendar'), 'ICS Calendar') . '</p>',
+								'status' => 'success',
+								'dismissible' => false,
+							);
+							break;
+						case 'all':
+							$r34ics_deferred_admin_notices['r34ics_settings_reset_options'] = array(
+								'content' => '<p>' . sprintf(esc_html__('All %1$s settings have been reset to defaults, and saved ICS feed URLs have been cleared.', 'ics-calendar'), 'ICS Calendar') . '</p>',
+								'status' => 'success',
+								'dismissible' => false,
+							);
+							break;
+						default: break;
+					}
 				}
 			}
 
 			// Save deferred admin notices
-			update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices);
+			update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices, false);
 		}
 		
 		
@@ -2112,10 +2331,10 @@ if (!class_exists('R34ICS')) {
 						// Get the response status
 						$results['response'] = $response['response_code'] . ' ' . $response['response_message'];
 						// Get size (content-length header may be empty)
-						$results['size'] = intval(@$response['headers']['content-length']) ?: strlen(@$response['body'] ?: ''); unset($response['body']);
+						$results['size'] = intval($response['headers']['content-length'] ?? '') ?: strlen($response['body'] ?? '');
 						if ($results['size'] > (1024 * 1024)) {
 							$results['size_display'] = round($results['size'] / (1024 * 1024), 2) . ' MB';
-					}
+						}
 						elseif ($results['size'] > 1024) {
 							$results['size_display'] = round($results['size'] / 1024, 2) . ' KB';
 						}
@@ -2123,25 +2342,36 @@ if (!class_exists('R34ICS')) {
 							$results['size_display'] = $results['size'] . ' B';
 						}
 						// Get content type
-						$results['content-type'] = @$response['headers']['content-type'] ?: '';
+						$results['content-type'] = $response['headers']['content-type'] ?? '';
 						if (strpos($results['content-type'], ';') !== false) {
 							$results['content-type'] = explode(';', $results['content-type'])[0];
 						}
-						// Does this look like a valid ICS feed?
-						if ($results['content-type'] == 'text/calendar' && $results['size'] > 0) {
-							$results['status'] = 'valid';
+						// Did we get any data?
+						if ($results['size'] > 0) {
+							// MIME type matches calendar or is text and body appears to match iCalendar format
+							if (
+								$results['content-type'] == 'text/calendar' ||
+								strpos($results['content-type'], 'text/') === 0 && strpos(trim($response['body']), 'BEGIN:VCALENDAR') === 0
+							) {
+								$results['status'] = 'valid';
+							}
+							// Content mismatch
+							else {
+								$results['status'] = 'invalid';
+							}
 						}
-						// No, it doesn't
+						// No, we didn't
 						else {
-							$results['status'] = 'invalid';
+							$results['status'] = 'failed';
 						}
 					}
 					// Request failed
 					else {
 						$results['status'] = 'failed';
 					}
-					// Allow additional external debugging
-					do_action('r34ics_url_tester_result_debug', (@$response ?: ''), $url_to_test);
+					// Allow additional external debugging (after stripping out response body, for security purposes)
+					unset($response['body']);
+					do_action('r34ics_url_tester_result_debug', ($response ?? array()), $url_to_test);
 				}
 				// URL not found
 				else {
@@ -2151,25 +2381,21 @@ if (!class_exists('R34ICS')) {
 				if (in_array($results['status'], array('failed', 'unknown'))) {
 					// URL contains '@' (could be basic auth credentials) and site uses legacy feed request method
 					if (strpos($url_to_test, '@') !== false && get_option('r34ics_url_get_contents_legacy_method')) {
-						/* translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags */
 						$results['special'][] = sprintf(esc_html__('Your feed URL appears to contain HTTP Basic Authentication credentials. Try turning off the %1$s option under the %2$s tab above.', 'ics-calendar'), '<strong style="white-space: nowrap;">' . esc_html__('Use legacy feed request method', 'ics-calendar') . '</strong>', '<a href="#settings">' . esc_html__('Settings', 'ics-calendar') . '</a>');
 					}
 				}
 				// The feed URL appears to be a media library file
 				$wp_upload_dir = wp_upload_dir();
 				if ($results['status'] == 'valid' && !empty($wp_upload_dir['baseurl']) && strpos($url_to_test, $wp_upload_dir['baseurl']) !== false) {
-					/* translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag */
-					$results['special'][] = sprintf(esc_html__('%1$sThis URL points to a file in your Media Library.%2$s While you should be able to use this URL in an %3$s shortcode, it will be a static snapshot of the calendar at the time the file was created, and will not reflect any future updates to the source calendar. Please see our %4$sUser Guide%5$s for instructions on obtaining your correct dynamic feed URL.', 'ics-calendar'), '<strong style="color: crimson;">', '</strong>', 'ICS Calendar', '<a href="https://icscalendar.com/getting-started/#finding-your-ics-feed-url" target="_blank">', '</a>');
+					$results['special'][] = sprintf(esc_html__('%1$sThis URL points to a file in your Media Library.%2$s While you should be able to use this URL in an %3$s shortcode, it will be a static snapshot of the calendar at the time the file was created, and will not reflect any future updates to the source calendar. Please see our %4$sUser Guide%5$s for instructions on obtaining your correct dynamic feed URL.', 'ics-calendar'), '<strong style="color: var(--r34ics--color--ics-red);">', '</strong>', 'ICS Calendar', '<a href="https://icscalendar.com/getting-started/#finding-your-ics-feed-url" target="_blank">', '</a>');
 				}
 				// Append the resolved IP address for the feed's domain
 				if (!empty($results['url']) && $url_host = wp_parse_url($results['url'], PHP_URL_HOST)) {
 					$url_resolved_ip = gethostbyname($url_host);
 					if ($url_resolved_ip == $url_host) {
-						/* translators: 1. Dynamic value and HTML tags */
 						$results['special'][] = sprintf(esc_html__('Error: Could not resolve IP address for %1$s.', 'ics-calendar'), '<strong>' . esc_html($url_host) . '</strong>');
 					}
 					else {
-						/* translators: 1. Dynamic value and HTML tags */
 						$results['special'][] = sprintf(esc_html__('Resolved IP address for %1$s:', 'ics-calendar'), '<strong>' . esc_html($url_host) . '</strong>') . ' ' . esc_html($url_resolved_ip);
 					}
 				}
@@ -2178,8 +2404,9 @@ if (!class_exists('R34ICS')) {
 		}
 		
 		
-		protected function _admin_page_callback_save_settings() {
-			if (current_user_can('manage_options') && isset($_POST['r34ics-settings-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-settings-nonce'])), 'r34ics')) {
+		protected function _admin_page_callback_save_appearance() {
+			// Yes, this is redundant... intentionally
+			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access() && isset($_POST['r34ics-appearance-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-appearance-nonce'])), 'r34ics')) {
 				
 				// Prepare deferred admin notices
 				global $r34ics_deferred_admin_notices;
@@ -2187,8 +2414,42 @@ if (!class_exists('R34ICS')) {
 					$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
 				}
 			
-				// ajax_by_default
-				update_option('r34ics_ajax_by_default', !empty($_POST['ajax_by_default']));
+				// colors_darkmode
+				update_option('r34ics_colors_darkmode', !empty($_POST['colors_darkmode']));
+				
+				// colors_match_theme_json
+				update_option('r34ics_colors_match_theme_json', !empty($_POST['colors_match_theme_json']), true);
+				
+				$r34ics_deferred_admin_notices['r34ics_appearance_updated'] = array(
+					'content' => '<p>' . sprintf(esc_html__('%1$sAppearance updated.%2$s You may need to refresh the page to see some changes.', 'ics-calendar'), '<strong>', '</strong>') . '</p>',
+					'status' => 'success',
+					'dismissible' => false,
+				);
+				
+				// Purge ICS Calendar transients
+				r34ics_purge_calendar_transients();
+
+				// Save deferred admin notices
+				update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices, false);
+			}
+		}
+
+
+		protected function _admin_page_callback_save_settings() {
+			// Yes, this is redundant... intentionally
+			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access() && isset($_POST['r34ics-settings-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-settings-nonce'])), 'r34ics')) {
+				
+				// Prepare deferred admin notices
+				global $r34ics_deferred_admin_notices;
+				if (empty($r34ics_deferred_admin_notices)) {
+					$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
+				}
+				
+				// admin_access
+				update_option('r34ics_admin_access', sanitize_text_field(wp_unslash($_POST['admin_access'] ?? 'edit_others_posts')), true);
+			
+				// ajax_by_default (removed in 12.0.0)
+				delete_option('r34ics_ajax_by_default');
 				
 				// allowed_hosts
 				// Need to allow $_POST['allowed_hosts'] to be empty for erasing existing entries
@@ -2197,14 +2458,17 @@ if (!class_exists('R34ICS')) {
 						isset($_POST['allowed_hosts'])
 							? r34ics_sanitize_hosts(sanitize_textarea_field(wp_unslash($_POST['allowed_hosts'])))
 							: ''
-					));
+					), false);
 				}
 				
-				// colors_darkmode
-				update_option('r34ics_colors_darkmode', !empty($_POST['colors_darkmode']));
-				
-				// colors_match_theme_json
-				update_option('r34ics_colors_match_theme_json', !empty($_POST['colors_match_theme_json']));
+				// allowed_ports
+				if (!empty($_POST['allowed_ports']) && $allowed_ports = trim(sanitize_text_field(wp_unslash($_POST['allowed_ports'])))) {
+					$allowed_ports = array_filter(array_map(function($v) { return intval(trim($v)); }, explode(',', $allowed_ports)));
+					update_option('r34ics_allowed_ports', $allowed_ports, false);
+				}
+				else {
+					update_option('r34ics_allowed_ports', '', false);
+				}
 				
 				// default_shortcode
 				if (!empty($_POST['default_shortcode'])) {
@@ -2212,10 +2476,10 @@ if (!class_exists('R34ICS')) {
 					$default_shortcode = trim(wp_strip_all_tags(wp_unslash($_POST['default_shortcode'])));
 					// Make sure the string ONLY contains the shortcode
 					if (strpos($default_shortcode, '[') === 0 && strrpos($default_shortcode, ']') === strlen($default_shortcode) - 1 && has_shortcode($default_shortcode, 'ics_calendar')) {
-						update_option('r34ics_default_shortcode', $default_shortcode);
+						update_option('r34ics_default_shortcode', $default_shortcode, false);
 					}
 					else {
-						delete_option('r34ics_default_shortcode', $default_shortcode);
+						delete_option('r34ics_default_shortcode');
 						$r34ics_deferred_admin_notices['r34ics_settings_default_shortcode'] = array(
 							'content' => '<p>' . esc_html__('The text entered in the "Default shortcode" field is not a valid shortcode, and was not saved.', 'ics-calendar') . '</p>',
 							'status' => 'error',
@@ -2224,31 +2488,34 @@ if (!class_exists('R34ICS')) {
 					}
 				}
 				else {
-					delete_option('r34ics_default_shortcode', $default_shortcode);
+					delete_option('r34ics_default_shortcode');
 				}
 
 				// display_add_calendar_button_false
-				update_option('r34ics_display_add_calendar_button_false', !empty($_POST['display_add_calendar_button_false']));
+				update_option('r34ics_display_add_calendar_button_false', !empty($_POST['display_add_calendar_button_false']), false);
 			
 				// display_calendar_memory_limit
 				update_option('r34ics_display_calendar_memory_limit', (
 					isset($_POST['display_calendar_memory_limit'])
 						? intval(sanitize_text_field(wp_unslash($_POST['display_calendar_memory_limit']))) . 'M'
 						: ini_get('memory_limit')
-				));
+				), false);
 				
+				// register_customizer
+				update_option('r34ics_register_customizer', !empty($_POST['register_customizer']), true);
+			
 				// transients_expiration
 				update_option('r34ics_transients_expiration', (
 					isset($_POST['transients_expiration'])
 						? intval(sanitize_text_field(wp_unslash($_POST['transients_expiration'])))
 						: 3600
-				));
+				), true);
 				
 				// url_get_contents_legacy_method
-				update_option('r34ics_url_get_contents_legacy_method', !empty($_POST['url_get_contents_legacy_method']));
+				update_option('r34ics_url_get_contents_legacy_method', !empty($_POST['url_get_contents_legacy_method']), false);
 			
 				// use_new_defaults_10_6
-				update_option('r34ics_use_new_defaults_10_6', !empty($_POST['use_new_defaults_10_6']));
+				update_option('r34ics_use_new_defaults_10_6', !empty($_POST['use_new_defaults_10_6']), false);
 			
 				// load_css_js_on_wp_enqueue_scripts (removed in 10.7.1)
 				delete_option('r34ics_load_css_js_on_wp_enqueue_scripts');
@@ -2257,7 +2524,6 @@ if (!class_exists('R34ICS')) {
 				delete_option('r34ics_feed_urls_permanent');
 				
 				$r34ics_deferred_admin_notices['r34ics_settings_updated'] = array(
-					/* translators: 1. HTML tag 2. HTML tag */
 					'content' => '<p>' . sprintf(esc_html__('%1$sSettings updated.%2$s You may need to refresh the page to see some changes.', 'ics-calendar'), '<strong>', '</strong>') . '</p>',
 					'status' => 'success',
 					'dismissible' => false,
@@ -2267,7 +2533,7 @@ if (!class_exists('R34ICS')) {
 				r34ics_purge_calendar_transients();
 
 				// Save deferred admin notices
-				update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices);
+				update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices, false);
 			}
 		}
 
@@ -2292,8 +2558,32 @@ if (!class_exists('R34ICS')) {
 				$key = $this->_ajax_args_generate_key($args);
 			}
 			$args['ajax_key'] = $key;
-			update_option($prefix . $key, $args);
+			update_option($prefix . $key, $args, false);
 			return $key;
+		}
+		
+		
+		// Generate an array of HTML attributes for the ajax container
+		protected function _ajax_container_attributes($args) {
+			$args['url'] = r34ics_url_uniqid_array_convert($args['url'] ?: '');
+			$is_list_style = intval(in_array(($args['view'] ?: ''), $this->list_style_views));
+			$is_list_long = intval($is_list_style && (!empty($args['eventdesc']) || !empty($args['location']) || !empty($args['organizer']) || (!empty($args['count']) && $args['count'] > 5)));
+			// Store args and pass the associated key (for security purposes)
+			$args['ajax_key'] = $this->_ajax_args_update($args, ($args['ajax_key'] ?: ''));
+			// Some args must be passed directly, to be accessible to JavaScript
+			$js_args = apply_filters('r34ics_ajax_js_args', array(
+				'debug' => $args['debug'],
+			), $args);
+			// Assemble array of attributes
+			return array(
+				'class' => 'r34ics-ajax-container loading',
+				'id' => $args['guid'] ?: '',
+				'data-view' => $args['view'] ?: '',
+				'data-view-is-list-style' => $is_list_style,
+				'data-view-is-list-long' => $is_list_long,
+				'data-args' => $args['ajax_key'],
+				'data-js-args' => wp_json_encode($js_args),
+			);
 		}
 
 		
@@ -2349,14 +2639,14 @@ if (!class_exists('R34ICS')) {
 			// Sort each time slot's events alphabetically by the event label (title)
 			foreach (array_keys((array)$events) as $time) {
 				uasort($events[$time], function($a, $b) use ($view) {
-					// If one event is multi-day and the other isn't, always put multi-day first
+					// If one event is multiday and the other isn't, always put multiday first
 					if (!empty($a['multiday']) && empty($b['multiday'])) {
 						return -1;
 					}
 					elseif (empty($a['multiday']) && !empty($b['multiday'])) {
 						return 1;
 					}
-					// If both are multi-day...
+					// If both are multiday...
 					elseif (!empty($a['multiday']) && !empty($b['multiday'])) {
 						// Do they both start on the same day?
 						if ($a['multiday']['start_date'] == $b['multiday']['start_date']) {
@@ -2374,7 +2664,7 @@ if (!class_exists('R34ICS')) {
 							return strcmp(($a['multiday']['start_date'] ?? ''), ($b['multiday']['start_date'] ?? ''));
 						}
 					}
-					// If neither is multi-day, sort alphabetically by label
+					// If neither is multiday, sort alphabetically by label
 					return strcmp(($a['label'] ?? ''), ($b['label'] ?? ''));
 				});
 			}
@@ -2454,8 +2744,11 @@ if (!class_exists('R34ICS')) {
 	
 		protected function _event_ics_download() {
 		
+			$dtend = get_query_var('r34ics-dtend');
+			$dtstart = get_query_var('r34ics-dtstart');
 			$feed_key = get_query_var('r34ics-feed-key'); // Will often/usually be 0
 			$feed_urlids = get_query_var('r34ics-urlids');
+			$label = get_query_var('r34ics-label');
 			$uid = get_query_var('r34ics-uid');
 						
 			// Get the correct feed URL
@@ -2477,11 +2770,27 @@ if (!class_exists('R34ICS')) {
 				// Find the event
 				if ($ICal->hasEvents() && $ics_events = $ICal->events()) {
 			
+					$event_found = false;
+					
+					// Try matching by UID (best option)
 					foreach ((array)$ics_events as $event_item) {
-						if ($event_item->uid == $uid) { break; }
+						if ($event_item->uid == $uid) {
+							$event_found = true;
+							break;
+						}
+					}
+					
+					// Microsoft sometimes changes the UID (why?) so we fall back on matching the start and end dates and event title
+					if (empty($event_found)) {
+						foreach ((array)$ics_events as $event_item) {
+							if ($event_item->dtstart == $dtstart && $event_item->dtend == $dtend && $event_item->label == $label) {
+								$event_found = true;
+								break;
+							}
+						}
 					}
 								
-					if (is_object($event_item)) {
+					if (!empty($event_found) && is_object($event_item)) {
 						$content = array();
 						$content[] = 'BEGIN:VCALENDAR';
 						$content[] = 'PRODID:-//Room 34 Creative Services LLC//ICS Calendar ' . get_option('r34ics_version') . '//' . strtoupper(substr(get_locale(),0,2));
@@ -2491,10 +2800,12 @@ if (!class_exists('R34ICS')) {
 						if ($event_item->categories) { $content[] = 'CATEGORIES:' . r34ics_maybe_enfold($event_item->categories, 11); }
 						if ($event_item->contact) { $content[] = 'CONTACT:' . $event_item->contact; }
 						if ($event_item->created) { $content[] = 'CREATED:' . $event_item->created; }
-						if ($event_item->description) { $content[] = 'DESCRIPTION:' . r34ics_maybe_enfold($event_item->description, 12); }
-						if ($event_item->dtend) { $content[] = 'DTEND:' . $event_item->dtend; }
+						if ($event_item->description) { $content[] = 'DESCRIPTION:' . r34ics_maybe_enfold(wp_strip_all_tags($event_item->description), 12); }
+						// As of v.12.0 we download a single instance of recurring events; $dtend is passed in
+						if ($event_item->dtend) { $content[] = 'DTEND:' . ($dtend ?? $event_item->dtend); }
 						if ($event_item->dtstamp) { $content[] = 'DTSTAMP:' . $event_item->dtstamp; }
-						if ($event_item->dtstart) { $content[] = 'DTSTART:' . $event_item->dtstart; }
+						// As of v.12.0 we download a single instance of recurring events; $dtstart is passed in
+						if ($event_item->dtstart) { $content[] = 'DTSTART:' . ($dtstart ?? $event_item->dtstart); }
 						if ($event_item->duration) { $content[] = 'DURATION:' . $event_item->duration; }
 						if (!empty($event_item->exdate_array)) {
 							$item_key = key($event_item->exdate_array[0]);
@@ -2509,9 +2820,11 @@ if (!class_exists('R34ICS')) {
 							$item_key = key($event_item->rdate_array[0]);
 							$content[] = 'RDATE;' . $item_key . '=' . $event_item->rdate_array[0][$item_key] . ':' . implode(',', $event_item->rdate_array[1]);
 						}
-						if ($event_item->recurrence_id) { $content[] = 'RECURRENCE-ID:' . $event_item->recurrence_id; }
+						// As of v.12.0 we download a single instance of recurring events
+						//if ($event_item->recurrence_id) { $content[] = 'RECURRENCE-ID:' . $event_item->recurrence_id; }
 						if ($event_item->resources) { $content[] = 'RESOURCES:' . $event_item->resources; }
-						if ($event_item->rrule) { $content[] = 'RRULE:' . $event_item->rrule; }
+						// As of v.12.0 we download a single instance of recurring events
+						//if ($event_item->rrule) { $content[] = 'RRULE:' . $event_item->rrule; }
 						if ($event_item->sequence) { $content[] = 'SEQUENCE:' . $event_item->sequence; }
 						if ($event_item->status) { $content[] = 'STATUS:' . $event_item->status; }
 						if ($event_item->summary) { $content[] = 'SUMMARY:' . r34ics_maybe_enfold($event_item->summary, 8); }
@@ -2528,6 +2841,9 @@ if (!class_exists('R34ICS')) {
 						header('Content-Length: ' . strlen($content ?? ''));
 						echo wp_kses_post($content ?: '');
 						exit;
+					}
+					else {
+						echo '<script>alert("' . esc_attr__('Event download failed.', 'ics-calendar') . '");</script>';
 					}
 				}
 			}
@@ -2559,6 +2875,80 @@ if (!class_exists('R34ICS')) {
 		protected function _load_pand() {
 			if (!class_exists('PAnD')) { include_once($this->pand_path); }
 		}
+		
+		
+		protected function _print_calendar() {
+			$r34ics_print = json_decode(sanitize_text_field(wp_unslash(get_query_var('r34ics-print'))), true);
+			$r34ics_print_selected = sanitize_text_field(wp_unslash(get_query_var('r34ics-print-selected')));
+			include_once(plugin_dir_path(__FILE__) . 'templates/print.php');
+			exit;
+		}
+
+
+		// Get and update cookies for a URL
+		protected function _url_cookies($url, $new_cookies=array()) {
+			if (false === ($url = filter_var(($url ?? ''), FILTER_SANITIZE_URL))) { return false; }
+			
+			$default_cookie = new WP_Http_Cookie(array(
+				'name' => 'r34ics',
+				'value' => '1',
+				'expires' => intval(time() + (MONTH_IN_SECONDS * 6)),
+			), $url);
+			
+			$url_parsed = wp_parse_url($url);
+			$transient_name = __METHOD__ . '_' . $url_parsed['host'];
+			
+			// Get the saved cookies
+			$cookies = get_transient($transient_name) ?: array();
+						
+			// Remove any expired cookies
+			if (!empty($cookies)) {
+				foreach ((array)$cookies as $key => $cookie) {
+					// Make sure this is a cookie object
+					if (!is_a($cookie, 'WP_Http_Cookie')) { continue; }
+					$exp = $cookie->expires;
+					if (!intval($exp)) { $exp = r34ics_date('U', $exp); }
+					if ($exp < time()) { unset($cookies[$key]); }
+				}
+			}
+			
+			// Add new cookies
+			if (!empty($new_cookies)) {
+				if (!is_array($new_cookies)) { $new_cookies = (array)$new_cookies; }
+				foreach ((array)$new_cookies as $new_key => $new_cookie) {
+					// Make sure this is a cookie object
+					if (!is_a($new_cookie, 'WP_Http_Cookie')) { continue; }
+					// Make sure the domain is set, and matches (exact OR subdomain)
+					elseif (empty($new_cookie->domain) || strpos($url_parsed['host'], $new_cookie->domain) === false) { continue; }
+					// Don't save our default cookie
+					elseif ($new_cookie->name == 'r34ics') { continue; }
+					// Good cookie (om nom nom)
+					else {
+						// Remove existing cookie (will get replaced with new cookie below)
+						unset($cookies[$new_cookie->path . '|' . $new_cookie->name]);
+						// Add new cookie
+						$cookies[$new_cookie->path . '|' . $new_cookie->name] = $new_cookie;
+					}
+				}
+			}
+			
+			// Update transient
+			set_transient($transient_name, (is_array($cookies) ? $cookies : ''), YEAR_IN_SECONDS);
+			
+			// For return value, include only the cookies that match the URL path
+			// Note: This must come *after* updating the transient!
+			if (!empty($url_parsed['path'])) {
+				foreach ((array)$cookies as $key => $cookie) {
+					if (!empty($cookie->path) && strpos($url_parsed['path'], $cookie->path) !== 0) {
+						unset($cookies[$key]);
+					}
+				}
+			}
+			
+			// Return all cookies (stripping out the associative keys we've been using above)
+			// We only return our default cookie if there aren't already any set
+			return array_values((array)$cookies ?: array($default_cookie));
+		}
 
 
 		/**
@@ -2575,6 +2965,18 @@ if (!class_exists('R34ICS')) {
 			
 			// Are we at debug level 3 or greater? If so, don't use transients
 			if (!empty($this->debug) && $this->debug >= 3) { $use_transients = false; }
+			
+			// Set custom safe ports
+			if (get_option('r34ics_allowed_ports')) {
+				add_filter('http_allowed_safe_ports', function($allowed_ports) {
+					if ($r34ics_allowed_ports = get_option('r34ics_allowed_ports')) {
+						foreach ((array)$r34ics_allowed_ports as $port) {
+							$allowed_ports[] = intval($port);
+						}
+					}
+					return $allowed_ports;
+				}, 10, 1);
+			}
 	
 			/**
 			 * Cast $recursion as an integer if it's a boolean to avoid later PHP 8.x warning;
@@ -2651,12 +3053,6 @@ if (!class_exists('R34ICS')) {
 				return false;
 			}
 			
-			/**
-			 * Add URL to our list of valid feed URLs
-			 * Gives each URL a unique key, so it can be referenced in forms on the front end without exposing URL
-			 */
-			r34ics_url_uniqid_update($url);
-	
 			// Read URL contents from transient if applicable (skip on recursion for obvious reasons)
 			$transient_name = __METHOD__ . '_' . sha1($url);
 			if (!empty($use_transients) && empty($recursion)) {
@@ -2702,8 +3098,8 @@ if (!class_exists('R34ICS')) {
 			
 			// Set user agent string
 			$user_agent = 'WordPress/' . get_bloginfo('version') . ' ICS Calendar/' . $this->_get_version() . ' (' . get_bloginfo('url') . ')';
-			// Set a "real" user agent string (Windows 10 / Microsoft Edge)
-			$user_agent_real = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0';
+			// Set a "real" user agent string (Windows 10/11 / Microsoft Edge)
+			$user_agent_real = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0';
 
 			// Allow user agent override
 			if (!empty($ua)) {
@@ -2717,34 +3113,48 @@ if (!class_exists('R34ICS')) {
 			 * As of August 2025, Microsoft 365 does a browser sniff on ICS feed requests;
 			 * appending the "real" user agent string to ours passes the test, while still
 			 * sending our actual user agent details.
+			 *
+			 * As of November 2025, Google may also be doing this check.
 			 */
 			elseif (
 				stripos($url, 'live.com') !== false ||
 				stripos($url, 'microsoft.com') !== false ||
 				stripos($url, 'office365.com') !== false ||
-				stripos($url, 'outlook.com') !== false
+				stripos($url, 'outlook.com') !== false ||
+				stripos($url, 'calendar.google.com') !== false
 			) {
 				$user_agent .= ' ' . $user_agent_real;
 			}
 			
+			// Get saved cookies for this URL
+			// Some providers may reject requests if the cookie is missing
+			$cookies = $this->_url_cookies($url);
+			
 			// Build array of request argments
 			$request_args = array(
-				'cookies' => array('r34ics' => 1),
+				'cookies' => $cookies,
 				'decompress' => true,
 				'headers' => $http_headers,
 				'httpversion' => '1.1',
 				'method' => 'GET',
-				'redirection' => 0,
+				'redirection' => 5,
 				'sslcertificates' => ABSPATH . WPINC . '/certificates/ca-bundle.crt',
 				'sslverify' => false,
 				'timeout' => 30,
 				'user-agent' => $user_agent,
 			);
+			$request_args = apply_filters('r34ics_url_get_contents_request_args', $request_args);
 	
 			// Make the remote request
 			$response = wp_remote_get($url, $request_args);
 			$url_contents = wp_remote_retrieve_body($response);
 			$response_code = wp_remote_retrieve_response_code($response);
+			$response_cookies = wp_remote_retrieve_cookies($response);
+			
+			// Save the response cookies
+			$this->_url_cookies($url, $response_cookies);
+			
+			// Debugging
 			if ($this->debug) {
 				$this->debug_messages[$url]['Load status'][] = array(
 					'Method' => 'URL loaded via wp_remote_get()',
@@ -2813,6 +3223,16 @@ if (!class_exists('R34ICS')) {
 				$url_contents = trim($url_contents);
 			}
 			
+			// Add URL to our list of valid feed URLs... only if this returned valid feed data
+			// Gives each URL a unique key, so it can be referenced in forms on the front end without exposing URL
+			if (strpos(trim($url_contents), 'BEGIN:VCALENDAR') === 0) {
+				r34ics_url_uniqid_update($url);
+			}
+			// ...otherwise, remove the URL from the list
+			else {
+				r34ics_url_uniqid_delete($url);
+			}
+				
 			// Write URL contents to transient
 			if (!empty($use_transients) && !empty($url_contents)) {
 				$transient_expiration = get_option('r34ics_transients_expiration');
@@ -2839,8 +3259,8 @@ if (!class_exists('R34ICS')) {
 		
 			return $url_contents;
 		}
-	
-	
+		
+		
 		/**
 		 * Retrieve file from remote server with fallback methods
 		 * Based on: https://stackoverflow.com/a/21177510
@@ -2861,7 +3281,7 @@ if (!class_exists('R34ICS')) {
 			// Reminder: This refers to the class method; it has nothing to do with the $method variable!
 			if ($this->debug) {
 				$this->debug_messages[$url]['Method'][] = __METHOD__;
-				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- Only displays in debug mode.
+				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
 				trigger_error(esc_html__('The legacy feed request method is deprecated, and will be removed in an update in the near future. Please test your feeds with the legacy feed request method turned off.', 'ics-calendar'), E_USER_NOTICE);
 			}
 			
@@ -2921,12 +3341,6 @@ if (!class_exists('R34ICS')) {
 				return false;
 			}
 			
-			/**
-			 * Add URL to our list of valid feed URLs
-			 * Gives each URL a unique key, so it can be referenced in forms on the front end without exposing URL
-			 */
-			r34ics_url_uniqid_update($url);
-	
 			// Read URL contents from transient if applicable (skip on recursion for obvious reasons)
 			$transient_name = __METHOD__ . '_' . sha1($url);
 			if (!empty($use_transients) && empty($recursion)) {
@@ -2955,8 +3369,26 @@ if (!class_exists('R34ICS')) {
 			$curl_response_code = null;
 			$curl_redirect_url = null;
 			$user_agent_ics = 'WordPress/' . get_bloginfo('version') . ' ICS Calendar/' . $this->_get_version() . ' (' . get_bloginfo('url') . ')';
-			$user_agent_real = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0';
+			// Set a "real" user agent string (Windows 10/11 / Microsoft Edge)
+			$user_agent_real = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0';
 			$user_agent = (is_array($curlopts) && in_array('useragent', $curlopts)) ? $user_agent_real : $user_agent_ics;
+
+			/**
+			 * As of August 2025, Microsoft 365 does a browser sniff on ICS feed requests;
+			 * appending the "real" user agent string to ours passes the test, while still
+			 * sending our actual user agent details.
+			 *
+			 * As of November 2025, Google may also be doing this check.
+			 */
+			if (
+				stripos($url, 'live.com') !== false ||
+				stripos($url, 'microsoft.com') !== false ||
+				stripos($url, 'office365.com') !== false ||
+				stripos($url, 'outlook.com') !== false ||
+				stripos($url, 'calendar.google.com') !== false
+			) {
+				$user_agent .= ' ' . $user_agent_real;
+			}
 		
 			// Attempt to use cURL functions
 			// phpcs:disable WordPress.WP.AlternativeFunctions.curl_curl_init
@@ -3005,13 +3437,6 @@ if (!class_exists('R34ICS')) {
 				// Set user agent
 				curl_setopt($conn, CURLOPT_USERAGENT, $user_agent);
 			
-				// Set a cookie; *may* help with connections to some services, like CloudFlare
-				if (is_array($curlopts) && in_array('cookie', $curlopts)) {
-					$cookie_path = r34ics_curl_cookie_path();
-					curl_setopt($conn, CURLOPT_COOKIEJAR, $cookie_path);
-					curl_setopt($conn, CURLOPT_COOKIEFILE, $cookie_path);	
-				}
-	
 				// Allow external customization of cURL options
 				$conn = apply_filters('r34ics_url_get_contents_customize_curl_options', $conn);
 				
@@ -3027,7 +3452,11 @@ if (!class_exists('R34ICS')) {
 				}
 				elseif ($this->debug) { $this->debug_messages[$url]['Load status'][] = 'HTTP response: ' . $curl_response_code; }
 				curl_close($conn);
-				// phpcs:enable
+				// phpcs:enable WordPress.WP.AlternativeFunctions.curl_curl_init
+				// phpcs:enable WordPress.WP.AlternativeFunctions.curl_curl_setopt
+				// phpcs:enable WordPress.WP.AlternativeFunctions.curl_curl_getinfo
+				// phpcs:enable WordPress.WP.AlternativeFunctions.curl_curl_exec
+				// phpcs:enable WordPress.WP.AlternativeFunctions.curl_curl_close
 			}
 	
 			// Attempt to use fopen functions if cURL failed
@@ -3093,6 +3522,16 @@ if (!class_exists('R34ICS')) {
 			// Try to decode/inflate URL contents if applicable
 			if (false !== ($gzdecoded = @gzdecode($url_contents))) {
 				$url_contents = $gzdecoded;
+			}
+
+			// Add URL to our list of valid feed URLs... only if this returned valid feed data
+			// Gives each URL a unique key, so it can be referenced in forms on the front end without exposing URL
+			if (strpos(trim($url_contents), 'BEGIN:VCALENDAR') === 0) {
+				r34ics_url_uniqid_update($url);
+			}
+			// ...otherwise, remove the URL from the list
+			else {
+				r34ics_url_uniqid_delete($url);
 			}
 	
 			// Write URL contents to transient

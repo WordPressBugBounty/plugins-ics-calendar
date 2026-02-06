@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-09-18 15:15-0500\n"
-"PO-Revision-Date: 2025-09-18 15:15-0500\n"
+"POT-Creation-Date: 2026-01-07 15:22-0600\n"
+"PO-Revision-Date: 2026-01-07 15:22-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
-"Language: fi_FI\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -20,8 +20,18 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:296
+#: class-r34ics.php:307
+#, php-format
+msgid ""
+"%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
+"pages. You can resume serving calendars under the %4$sUtilities%5$s tab "
+"%6$shere%7$s."
+msgstr ""
+"%1$s on tällä hetkellä %2$skeskeytetty%3$s, eikä se tarjoa kalentereita "
+"etusivulla. Voit jatkaa kalentereiden tarjoamista %4$sUtilities%5$s-"
+"välilehdessä %6$stäällä%7$s."
+
+#: class-r34ics.php:316
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -29,11 +39,11 @@ msgid ""
 "may be unavailable or may not function properly."
 msgstr ""
 "%1$sKäytät ICS-kalenteria WordPress Playground -toteutuksessa.%2$s Koska ICS-"
-"kalenteri on tarkoitettu toimimaan verkkopalvelimella, jotkin ominaisuudet "
-"eivät ehkä ole käytettävissä tai ne eivät ehkä toimi oikein."
+"kalenteri on tarkoitettu käytettäväksi verkkopalvelimella, jotkin "
+"ominaisuudet eivät välttämättä ole käytettävissä tai ne eivät välttämättä "
+"toimi oikein."
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:306
+#: class-r34ics.php:325
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -43,269 +53,111 @@ msgid ""
 "display. See our %6$sdocumentation%7$s for additional information on this "
 "issue."
 msgstr ""
-"%1$sSivustollasi on tällä hetkellä käytössä UTC offset-pohjainen "
-"aikavyöhykeasetus.%2$s Tämä voi aiheuttaa aikanäytön virheitä %3$s-"
-"lisäosassa paikoissa, joissa noudatetaan kesäaikaa. Vaihda %4$s "
-"aikavyöhykeasetuksesi %5$s sijaintisi lähimpänä olevaan kaupunkiin, joka on "
-"samassa aikavyöhykkeessä, jotta aika näytetään oikein. Katso lisätietoja "
-"tästä asiasta %6$sdokumentaatiostamme%7$s."
+"%1$sSivustosi käyttää tällä hetkellä UTC-aikavyöhykkeen mukaista aika-"
+"asetusta.%2$s Tämä voi aiheuttaa ajan näyttövirheitä %3$slaajennuksessa "
+"paikoissa, joissa noudatetaan kesäaikaa. Muuta %4$saika-asetuksesi%5$s "
+"sijaintisi lähimpään kaupunkiin, joka on samassa aikavyöhykkeessä, jotta "
+"aika näkyy oikein. Katso lisätietoja tästä asiasta %6$sohjeistuksestamme%7$s."
 
-#: class-r34ics.php:349 templates/admin/admin.php:68
-#: templates/admin/utilities.php:3
-msgid "Utilities"
-msgstr "Lisäpalvelut"
-
-#: class-r34ics.php:350 class-r34ics.php:2155 templates/admin/admin.php:64
-#: templates/admin/admin.php:80
-msgid "Settings"
-msgstr "Asetukset"
-
-#: class-r34ics.php:351 templates/admin/sidebar.php:9
-msgid "User Guide"
-msgstr "Käyttöopas"
-
-#: class-r34ics.php:352 templates/admin/admin.php:70
-#: templates/admin/sidebar.php:14
-msgid "Support"
-msgstr "Tuki"
-
-#: class-r34ics.php:354
-msgid "Upgrade to PRO!"
-msgstr "Päivitä PRO:ksi!"
-
-#: class-r34ics.php:383
-msgid "Show/hide all"
-msgstr "Näytä tai piilota kaikki"
-
-#: class-r34ics.php:656
-msgid ""
-"ICS file could not be retrieved or was empty. Please verify URL is correct, "
-"and check your php.ini configuration to verify either cURL or "
-"allow_url_fopen is available. If you are using spaces to delimit multiple "
-"URLs, you may also wish to try using the pipe character instead. Affected "
-"URL:"
-msgstr ""
-"ICS-tiedostoa ei voitu hakea tai se oli tyhjä. Tarkista, että URL-osoite on "
-"oikea, ja tarkista php.ini-konfiguraatiosta, että joko cURL tai "
-"allow_url_fopen on käytettävissä. Jos käytät välilyöntejä useiden URL-"
-"osoitteiden rajaamiseen, voit myös kokeilla käyttää putkimerkkiä sen sijaan. "
-"Vaikuttava URL-osoite:"
-
-#: class-r34ics.php:1097
-msgid "Hide past events"
-msgstr "Piilota menneet tapahtumat"
-
-#: class-r34ics.php:1098 templates/calendar-month.php:83
-#: templates/calendar-week.php:76
-msgid "Show past events"
-msgstr "Näytä aiemmat tapahtumat"
-
-#: class-r34ics.php:1179
-msgid "Contact:"
-msgstr "Yhteystieto:"
-
-#: class-r34ics.php:1185
-msgid "Resources:"
-msgstr "Resurssit:"
-
-#: class-r34ics.php:1195
-msgid "Click for more..."
-msgstr "Saat lisätietoja napsauttamalla..."
-
-#: class-r34ics.php:1229
-msgid "Save to your calendar"
-msgstr "Tallenna kalenteriin"
-
-#: class-r34ics.php:1332
-msgid "Cancelled"
-msgstr "Peruutettu"
-
-#: class-r34ics.php:1445
-msgid ""
-"The legacy parser option is deprecated and will be removed in a future "
-"update."
-msgstr ""
-"Legacy parser -vaihtoehto on vanhentunut, ja se poistetaan tulevassa "
-"päivityksessä."
-
-#: class-r34ics.php:1741
-msgid ""
-"The \"currentweek\" shortcode attribute is deprecated. Please use "
-"view=\"week\" in your shortcode instead."
-msgstr ""
-"Shortcode-määrite on vanhentunut. Käytä sen sijaan lyhytkoodissa "
-"view=\"week\"."
-
-#: class-r34ics.php:1745
-msgid ""
-"The \"legendinline\" shortcode attribute is deprecated. Please use "
-"legendstyle=\"inline\" in your shortcode instead."
-msgstr ""
-"Lyhytkoodiattribuutti \"legendinline\" on vanhentunut. Käytä sen sijaan "
-"legendstyle=\"inline\" -ominaisuutta lyhytkoodissasi."
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2069
-#, php-format
-msgid "Cleared %1$s %2$s transient(s)."
-msgstr "Tyhjennetty %1$s %2$s transientti(t)."
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2077
-#, php-format
-msgid "No %1$s transients were found."
-msgstr "Mitään %1$s-siirtymiä ei löytynyt."
-
-#. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:2085
-#, php-format
-msgid "All %1$s settings have been reset to defaults."
-msgstr "Kaikki %1$s-asetukset on palautettu oletusasetuksiin."
-
-#. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2155
+#: class-r34ics.php:337
 #, php-format
 msgid ""
-"Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
-"turning off the %1$s option under the %2$s tab above."
+"Important! Your %1$s configuration appears to be exceeding source calendar "
+"provider rate limits."
 msgstr ""
-"Syötteen URL-osoite näyttää sisältävän HTTP Basic Authentication "
-"-tunnistautumistiedot. Yritä ottaa %1$s-vaihtoehto pois päältä yllä olevan "
-"%2$s-välilehden alta."
+"Tärkeää! %1$s -määrityksesi näyttää ylittävän lähdekalenterin tarjoajan "
+"nopeusrajoitukset."
 
-#: class-r34ics.php:2155 templates/admin/settings.php:70
-msgid "Use legacy feed request method"
-msgstr "Käytä vanhaa syöttöpyyntömenetelmää"
-
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2162
+#: class-r34ics.php:339
 #, php-format
 msgid ""
-"%1$sThis URL points to a file in your Media Library.%2$s While you should be "
-"able to use this URL in an %3$s shortcode, it will be a static snapshot of "
-"the calendar at the time the file was created, and will not reflect any "
-"future updates to the source calendar. Please see our %4$sUser Guide%5$s for "
-"instructions on obtaining your correct dynamic feed URL."
+"If your calendars are not loading properly, please review your %1$s settings "
+"and usage:"
 msgstr ""
-"%1$sTämä URL-osoite osoittaa tiedostoon mediakirjastossasi.%2$s Vaikka sinun "
-"pitäisi pystyä käyttämään tätä URL-osoitetta %3$s-lyhytkoodissa, se on "
-"staattinen tilannekuva kalenterista sillä hetkellä, kun tiedosto luotiin, "
-"eikä se heijasta mitään tulevia päivityksiä lähdekalenteriin. Katso "
-"%4$sKäyttöoppaasta%5$s ohjeet oikean dynaamisen syötteen URL-osoitteen "
-"saamiseksi."
+"Jos kalenterisi eivät lataudu oikein, tarkista %1$s asetukset ja käyttö:"
 
-#. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2169
-#, php-format
-msgid "Error: Could not resolve IP address for %1$s."
-msgstr "Virhe: %1$s IP-osoitetta ei pystytty ratkaisemaan."
-
-#. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2173
-#, php-format
-msgid "Resolved IP address for %1$s:"
-msgstr "Ratkaistu IP-osoite %1$s:"
-
-#: class-r34ics.php:2220
-msgid ""
-"The text entered in the \"Default shortcode\" field is not a valid "
-"shortcode, and was not saved."
-msgstr ""
-"\"Oletuslyhytkoodi\"-kenttään syötetty teksti ei ole kelvollinen lyhytkoodi, "
-"eikä sitä ole tallennettu."
-
-#. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2261
+#: class-r34ics.php:341
 #, php-format
 msgid ""
-"%1$sSettings updated.%2$s You may need to refresh the page to see some "
-"changes."
+"Do not use %1$s in your shortcodes. This feature is intended for "
+"troubleshooting only, and should not be left on permanently."
 msgstr ""
-"%1$sAsetukset päivitetty.%2$s Saatat joutua päivittämään sivun nähdäksesi "
-"muutokset."
+"Älä käytä %1$s lyhytkoodeissasi. Tämä ominaisuus on tarkoitettu vain "
+"vianmääritykseen, eikä sitä tule jättää pysyvästi käyttöön."
 
-#: class-r34ics.php:2527
-msgid "calendar event"
-msgstr "kalenteritapahtuma"
-
-#: class-r34ics.php:2864
-msgid ""
-"The legacy feed request method is deprecated, and will be removed in an "
-"update in the near future. Please test your feeds with the legacy feed "
-"request method turned off."
-msgstr ""
-"Legacy-syöttöpyyntömenetelmä on vanhentunut, ja se poistetaan "
-"lähitulevaisuuden päivityksessä. Testaa syötteesi, kun vanhan syötteen "
-"pyyntömenetelmä on pois päältä."
-
-#: functions.php:990 functions.php:998 functions.php:1007
-msgid "Map"
-msgstr "Kartta"
-
-#: functions.php:1257
-msgid "Recurring event"
-msgstr "Toistuva tapahtuma"
-
-#. translators: 1. Dynamic value
-#: functions.php:1263
-#, php-format
-msgid "Recurs every %1$s years"
-msgstr "Toistuu %1$s vuoden välein"
-
-#: functions.php:1263
-msgid "Recurs yearly"
-msgstr "Toistuu vuosittain"
-
-#. translators: 1. Dynamic value
-#: functions.php:1267
-#, php-format
-msgid "Recurs every %1$s months"
-msgstr "Toistuu %1$s kuukauden välein"
-
-#: functions.php:1267
-msgid "Recurs monthly"
-msgstr "Toistuu kuukausittain"
-
-#. translators: 1. Dynamic value
-#: functions.php:1271
-#, php-format
-msgid "Recurs every %1$s weeks"
-msgstr "Toistuu %1$s viikon välein"
-
-#: functions.php:1271
-msgid "Recurs weekly"
-msgstr "Toistuu viikoittain"
-
-#. translators: 1. Dynamic value
-#: functions.php:1275
-#, php-format
-msgid "Recurs every %1$s days"
-msgstr "Toistuu %1$s päivän välein"
-
-#: functions.php:1275
-msgid "Recurs daily"
-msgstr "Toistuu päivittäin"
-
-#. translators: 1: Plugin name (do not translate)
-#: functions.php:1422
+#: class-r34ics.php:343
 #, php-format
 msgid ""
-"The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
-"most likely your URL has been turned into a clickable link. Your calendar "
-"may not display properly as a result. Please remove the clickable link in "
-"the shortcode."
+"Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
+"%4$s43200%5$s (12 hours) or greater, to reduce the frequency of requests to "
+"the provider. (See note below.)"
 msgstr ""
-"%1$s-lyhytkoodisi \"url\"-ominaisuus näyttää sisältävän HTML-tageja; "
-"todennäköisesti URL-osoite on muutettu klikattavaksi linkiksi. Tämän "
-"seurauksena kalenterisi ei ehkä näy oikein. Poista klikattava linkki "
-"lyhytkoodista."
+"Lisää %1$s %2$sTransient (cache) expiration%3$s -asetusta arvoon "
+"%4$s43200%5$s (12 tuntia) tai suurempaan arvoon, jotta palveluntarjoajalle "
+"lähetettävien pyyntöjen tiheys vähenee. (Katso alla oleva huomautus.)"
 
-#: functions.php:1770
-msgid "The r34ics_url_get_contents() function is no longer supported."
-msgstr "Funktiota r34ics_url_get_contents() ei enää tueta."
+#: class-r34ics.php:345
+#, php-format
+msgid ""
+"Avoid including a large number of feeds (10 or more) from the same provider "
+"in a single %1$s shortcode."
+msgstr ""
+"Vältä sisällyttämästä samaan %1$s lyhytkoodiin suurta määrää (10 tai "
+"enemmän) syötteitä samalta palveluntarjoajalta."
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag 8. Additional translation string and HTML tags 9. HTML tag and plugin name (do not translate) 10. HTML tag
-#: ics-calendar.php:208
+#: class-r34ics.php:347
+#, php-format
+msgid ""
+"Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
+"Calendars%2$s utility. (24-48 hours is recommended.)"
+msgstr ""
+"Keskeytä ICS-kalenteri väliaikaisesti etusivulla %1$sPause Calendars%2$s-"
+"apuohjelman avulla. (Suositeltava kesto on 24–48 tuntia.)"
+
+#: class-r34ics.php:349
+#, php-format
+msgid ""
+"%1$s includes built-in caching, specifically to improve performance and "
+"avoid exceeding provider rate limits. Circumventing this caching with a very "
+"low %2$sreload%3$s setting may trigger a temporary block on your web server "
+"IP address, or possibly on your entire hosting network, by the calendar "
+"provider."
+msgstr ""
+"%1$s sisältää sisäänrakennetun välimuistin, joka on tarkoitettu erityisesti "
+"suorituskyvyn parantamiseen ja palveluntarjoajan nopeusrajoitusten "
+"ylittymisen estämiseen. Tämän välimuistin kiertäminen erittäin alhaisella "
+"%2$suudelleenkäynnistysasetuksella%3$s voi aiheuttaa "
+"kalenteripalveluntarjoajan väliaikaisen eston web-palvelimesi IP-osoitteelle "
+"tai mahdollisesti koko hosting-verkostollesi."
+
+#: class-r34ics.php:351
+#, php-format
+msgid ""
+"After making the recommended changes, please allow up to 24 hours for your "
+"calendar provider to remove any temporary blocks on your IP address. If you "
+"find that the problem persists, please use our %1$ssupport request form%2$s "
+"to contact us, and be sure to include your %3$ssystem report%4$s."
+msgstr ""
+"Kun olet tehnyt suositellut muutokset, odota enintään 24 tuntia, jotta "
+"kalenteripalveluntarjoaja voi poistaa IP-osoitteesi väliaikaiset estot. Jos "
+"ongelma jatkuu, ota meihin yhteyttä %1$stukipyyntölomakkeella%2$s ja liitä "
+"mukaan %3$sjärjestelmäraportti%4$s."
+
+#: class-r34ics.php:353
+#, php-format
+msgid ""
+"Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
+"considering how frequently event information in your calendar is typically "
+"updated. %3$s Remember that you can use the %4$sClear Cached Calendar "
+"Data%5$s utility to manually clear the cache at any time, if needed."
+msgstr ""
+"Huomaa: Aseta %1$sTransient (cache) expiration%2$s mahdollisimman suureksi "
+"ottaen huomioon, kuinka usein kalenterisi tapahtumatiedot yleensä "
+"päivitetään. %3$s Muista, että voit tarvittaessa tyhjentää välimuistin "
+"manuaalisesti milloin tahansa %4$sClear Cached Calendar Data%5$s-apuohjelman "
+"avulla."
+
+#: class-r34ics.php:374
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -315,19 +167,18 @@ msgid ""
 "post%7$s, or to switch to the new defaults, turn on the %8$s option on the "
 "%9$s settings%10$s page."
 msgstr ""
-"%1$sHuomaa: %2$s %3$s versio 10.6 muuttaa useiden lyhytkoodien asetusten "
-"oletusasetuksia. Johdonmukaisuuden säilyttämiseksi nämä uudet "
-"oletusasetukset %4$seivät%5$s ole käytössä, kun päivität aiemmasta "
+"%1$sHuomaa:%2$s %3$s versio 10.6 muuttaa useiden lyhytkoodiasetusten "
+"oletusasetuksia. Johdonmukaisuuden säilyttämiseksi näitä uusia "
+"oletusasetuksia %4$sei%5$s oteta käyttöön, kun päivitetään aiemmasta "
 "versiosta. Jos haluat lisätietoja muutoksista, lue "
-"%6$sblogikirjoituksemme%7$s, tai jos haluat siirtyä uusiin oletusasetuksiin, "
-"ota %8$s-vaihtoehto käyttöön %9$sasetukset%10$s-sivulla."
+"%6$sblogikirjoituksemme%7$s tai vaihda uudet oletusasetukset käyttöön "
+"ottamalla %8$svaihtoehto käyttöön %9$sasetukset%10$s-sivulla."
 
-#: ics-calendar.php:208 templates/admin/settings.php:123
+#: class-r34ics.php:374 templates/admin/settings.php:183
 msgid "Use new parameter defaults (v.10.6)"
-msgstr "Käytä uusia parametrien oletusasetuksia (v.10.6)"
+msgstr "Käytä uusia oletusparametreja (v.10.6)"
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: ics-calendar.php:221
+#: class-r34ics.php:386
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -336,14 +187,13 @@ msgid ""
 "any new issues after upgrading to version 11 or later, please visit the "
 "%4$sWordPress Support Forums%5$s for assistance."
 msgstr ""
-"%1$sHuomaa: %2$s %3$s versio 11.0 virtaviivaistaa tapaa, jolla ICS-syötteen "
-"URL-osoitteet haetaan. Tämä muutos käyttää WordPressin sisäänrakennettua "
-"vakiotoimintoa, joten sen pitäisi olla täysin yhteensopiva kaikkien "
-"nykyisten asennusten kanssa. Jos kohtaat uusia ongelmia päivitettyäsi "
-"versioon 11 tai uudempaan, pyydä apua %4$sWordPressin tukifoorumeilta%5$s."
+"%1$sHuomaa:%2$s %3$s versio 11.0 virtaviivaistaa ICS-syötteen URL-"
+"osoitteiden hakua. Tämä muutos käyttää WordPressin vakio-ominaisuutta, joten "
+"sen pitäisi olla täysin yhteensopiva kaikkien olemassa olevien asennusten "
+"kanssa. Jos kohtaat uusia ongelmia päivitettyäsi versioon 11 tai uudemmalle, "
+"käy %4$sWordPress-tukifoorumeilla%5$s saadaksesi apua."
 
-#. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate)
-#: ics-calendar.php:234
+#: class-r34ics.php:398
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -351,44 +201,356 @@ msgid ""
 "any caching plugins you are using, to ensure that your calendars are loading "
 "properly with the new method."
 msgstr ""
-"%1$sHuomaa: %2$s %3$s Versiossa 11.5.14.2 otetaan käyttöön uusi, "
-"turvallisempi menetelmä kalenteriparametrien käsittelyyn AJAX-latauksen "
-"yhteydessä. Tyhjennä kaikki käyttämäsi välimuistiliitännäiset "
-"varmistaaksesi, että kalenterit latautuvat oikein uudella menetelmällä."
+"%1$sHuomaa:%2$s %3$s versio 11.5.14.2 sisältää uuden, turvallisemman tavan "
+"käsitellä kalenteriparametreja, kun ne ladataan AJAXin kautta. Tyhjennä "
+"kaikki käyttämäsi välimuistilisäosat, jotta kalenterisi latautuvat oikein "
+"uudella tavalla."
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/add-calendar-button.php:3
-#: templates/admin/add-calendar-button.php:6 templates/admin/add-calendar.php:8
+#: class-r34ics.php:411
+#, php-format
+msgid ""
+"%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
+"troubleshooting tools, plus a number of performance improvements and "
+"interface refinements throughout. Please see the %4$schangelog%5$s for more "
+"details on this update."
+msgstr ""
+"%1$sTervetuloa %2$s versioon 12!%3$s Versio 12.0 sisältää uusia "
+"vianmääritystyökaluja sekä useita suorituskyvyn parannuksia ja "
+"käyttöliittymän hienosäätöjä. Katso %4$smuutoslista%5$s saadaksesi "
+"lisätietoja tästä päivityksestä."
+
+#: class-r34ics.php:460 templates/admin/admin.php:24
+#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
+msgid "Getting Started"
+msgstr "Käytön aloittaminen"
+
+#: class-r34ics.php:461 class-r34ics.php:2365 templates/admin/admin.php:28
+#: templates/admin/settings.php:11
+msgid "Settings"
+msgstr "Asetukset"
+
+#: class-r34ics.php:462 templates/admin/admin.php:29
+#: templates/admin/appearance.php:10
+msgid "Appearance"
+msgstr "Ulkoasu"
+
+#: class-r34ics.php:463 templates/admin/admin.php:33
+#: templates/admin/utilities.php:10
+msgid "Utilities"
+msgstr "Lisäpalvelut"
+
+#: class-r34ics.php:464 templates/admin/admin.php:37
+#: templates/admin/utilities.php:209 templates/admin/utilities.php:218
+msgid "System Report"
+msgstr "Järjestelmäraportti"
+
+#: class-r34ics.php:465 templates/admin/admin.php:41
+#: templates/admin/sidebar.php:18
+msgid "Support"
+msgstr "Tuki"
+
+#: class-r34ics.php:468
+#, php-format
+msgid "Upgrade to %1$s!"
+msgstr "Päivitä versioon %1$s!"
+
+#: class-r34ics.php:498
+msgid "Show/hide all"
+msgstr "Näytä/piilota kaikki"
+
+#: class-r34ics.php:770
+msgid ""
+"ICS file could not be retrieved or was empty. Please verify URL is correct, "
+"and check your php.ini configuration to verify either cURL or "
+"allow_url_fopen is available. If you are using spaces to delimit multiple "
+"URLs, you may also wish to try using the pipe character instead. Affected "
+"URL:"
+msgstr ""
+"ICS-tiedostoa ei voitu hakea tai se oli tyhjä. Tarkista, että URL-osoite on "
+"oikea, ja tarkista php.ini-asetukset varmistaaksesi, että cURL tai "
+"allow_url_fopen on käytettävissä. Jos käytät välilyöntejä useiden URL-"
+"osoitteiden erottamiseen, voit myös kokeilla käyttää putkimerkkiä. "
+"Vaikuttava URL-osoite:"
+
+#: class-r34ics.php:1214
+msgid "Hide past events"
+msgstr "Piilota menneet tapahtumat"
+
+#: class-r34ics.php:1215 templates/calendar-month.php:96
+#: templates/calendar-week.php:87
+msgid "Show past events"
+msgstr "Näytä menneet tapahtumat"
+
+#: class-r34ics.php:1296
+msgid "Contact:"
+msgstr "Yhteystieto:"
+
+#: class-r34ics.php:1302
+msgid "Resources:"
+msgstr "Resurssit:"
+
+#: class-r34ics.php:1312
+msgid "Click for more..."
+msgstr "Klikkaa lisää..."
+
+#: class-r34ics.php:1346
+msgid "Save to your calendar"
+msgstr "Tallenna kalenteriisi"
+
+#: class-r34ics.php:1449
+msgid "Cancelled"
+msgstr "Peruutettu"
+
+#: class-r34ics.php:1562
+msgid ""
+"The legacy parser option is deprecated and will be removed in a future "
+"update."
+msgstr ""
+"Vanha parser-vaihtoehto on vanhentunut ja se poistetaan tulevassa "
+"päivityksessä."
+
+#: class-r34ics.php:1641
+msgid "Print"
+msgstr "Tulosta"
+
+#: class-r34ics.php:1898
+msgid ""
+"The \"currentweek\" shortcode attribute is deprecated. Please use "
+"view=\"week\" in your shortcode instead."
+msgstr ""
+"\"currentweek\" -lyhytkoodin attribuutti on vanhentunut. Käytä sen sijaan "
+"lyhytkoodissasi view=\"week\"."
+
+#: class-r34ics.php:1902
+msgid ""
+"The \"legendinline\" shortcode attribute is deprecated. Please use "
+"legendstyle=\"inline\" in your shortcode instead."
+msgstr ""
+"\"legendinline\"-lyhytkoodin attribuutti on vanhentunut. Käytä sen sijaan "
+"lyhytkoodissasi legendstyle=\"inline\"."
+
+#: class-r34ics.php:2239
+#, php-format
+msgid ""
+"%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
+"uses a caching plugin, you may need to clear the cache."
+msgstr ""
+"%1$s on %2$saloittanut%3$s uudelleen kalenterien näyttämisen etusivulla. Jos "
+"sivustosi käyttää välimuistilisäosaa, sinun on ehkä tyhjennettävä välimuisti."
+
+#: class-r34ics.php:2247
+#, php-format
+msgid ""
+"%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
+"uses a caching plugin, you may need to clear the cache."
+msgstr ""
+"%1$s on %2$skeskeyttänyt%3$s kalenterien näyttämisen etusivulla. Jos "
+"sivustosi käyttää välimuistia, saatat joutua tyhjentämään välimuistin."
+
+#: class-r34ics.php:2259
+#, php-format
+msgid "Cleared %1$s %2$s transient(s)."
+msgstr "Tyhjennetty %1$s %2$s väliaikainen(t)."
+
+#: class-r34ics.php:2266
+#, php-format
+msgid "No %1$s transients were found."
+msgstr "Transientteja ei löytynyt %1$s."
+
+#: class-r34ics.php:2275
+msgid "All saved ICS feed URLs have been cleared."
+msgstr "Kaikki tallennetut ICS-syötteen URL-osoitteet on poistettu."
+
+#: class-r34ics.php:2282
+#, php-format
+msgid ""
+"All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
+"been cleared."
+msgstr ""
+"Kaikki %1$s asetukset on palautettu oletusasetuksiin ja tallennetut ICS-"
+"syötteen URL-osoitteet on poistettu."
+
+#: class-r34ics.php:2365
+#, php-format
+msgid ""
+"Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
+"turning off the %1$s option under the %2$s tab above."
+msgstr ""
+"Syötteen URL-osoitteesi näyttää sisältävän HTTP-perustodennuksen "
+"tunnistetiedot. Kokeile poistaa %1$s -vaihtoehto käytöstä yllä olevasta %2$s "
+"-välilehdestä."
+
+#: class-r34ics.php:2365 templates/admin/settings.php:59
+msgid "Use legacy feed request method"
+msgstr "Käytä vanhaa syötteen pyyntömenetelmää"
+
+#: class-r34ics.php:2371
+#, php-format
+msgid ""
+"%1$sThis URL points to a file in your Media Library.%2$s While you should be "
+"able to use this URL in an %3$s shortcode, it will be a static snapshot of "
+"the calendar at the time the file was created, and will not reflect any "
+"future updates to the source calendar. Please see our %4$sUser Guide%5$s for "
+"instructions on obtaining your correct dynamic feed URL."
+msgstr ""
+"%1$sTämä URL osoittaa tiedostoon mediakirjastossasi.%2$s Vaikka voit käyttää "
+"tätä URL-osoitetta %3$slyhytkoodissa, se on staattinen tilannekuva "
+"kalenterista tiedoston luomishetkellä eikä se heijasta lähdekalenterin "
+"tulevia päivityksiä. Katso %4$skäyttöoppaastamme%5$s ohjeet oikean "
+"dynaamisen syöte-URL-osoitteen saamiseksi."
+
+#: class-r34ics.php:2377
+#, php-format
+msgid "Error: Could not resolve IP address for %1$s."
+msgstr "Virhe: %1$s IP-osoitetta ei pystytty ratkaisemaan."
+
+#: class-r34ics.php:2380
+#, php-format
+msgid "Resolved IP address for %1$s:"
+msgstr "Ratkaistu IP-osoite %1$s:"
+
+#: class-r34ics.php:2405
+#, php-format
+msgid ""
+"%1$sAppearance updated.%2$s You may need to refresh the page to see some "
+"changes."
+msgstr ""
+"%1$sUlkonäkö päivitetty.%2$s Saatat joutua päivittämään sivun nähdäksesi "
+"muutokset."
+
+#: class-r34ics.php:2465
+msgid ""
+"The text entered in the \"Default shortcode\" field is not a valid "
+"shortcode, and was not saved."
+msgstr ""
+"Kenttään \"Oletuslyhytkoodi\" syötetty teksti ei ole kelvollinen lyhytkoodi, "
+"eikä sitä ole tallennettu."
+
+#: class-r34ics.php:2508
+#, php-format
+msgid ""
+"%1$sSettings updated.%2$s You may need to refresh the page to see some "
+"changes."
+msgstr ""
+"%1$sAsetukset päivitetty.%2$s Saatat joutua päivittämään sivun nähdäksesi "
+"muutokset."
+
+#: class-r34ics.php:2804
+msgid "calendar event"
+msgstr "kalenteritapahtuma"
+
+#: class-r34ics.php:3245
+msgid ""
+"The legacy feed request method is deprecated, and will be removed in an "
+"update in the near future. Please test your feeds with the legacy feed "
+"request method turned off."
+msgstr ""
+"Vanha syötteen pyyntömenetelmä on vanhentunut, ja se poistetaan "
+"lähitulevaisuudessa tehtävällä päivityksellä. Testaa syötteesi vanha "
+"syötteen pyyntömenetelmä pois päältä."
+
+#: compatibility.php:38
+#, php-format
+msgid ""
+"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+"your site to a newer version of WordPress as soon as possible."
+msgstr ""
+"%1$s:n tulevat päivitykset edellyttävät WordPress 5.3:a tai uudempaa "
+"versiota. Päivitä sivustosi uudemmalle WordPress-versiolle mahdollisimman "
+"pian."
+
+#: functions.php:1116 functions.php:1124 functions.php:1133
+msgid "Map"
+msgstr "Kartta"
+
+#: functions.php:1434
+msgid "Recurring event"
+msgstr "Toistuva tapahtuma"
+
+#: functions.php:1439
+#, php-format
+msgid "Recurs every %1$s years"
+msgstr "Toistuu joka %1$s vuosi"
+
+#: functions.php:1439
+msgid "Recurs yearly"
+msgstr "Toistuu vuosittain"
+
+#: functions.php:1442
+#, php-format
+msgid "Recurs every %1$s months"
+msgstr "Toistuu joka %1$s kuukausi"
+
+#: functions.php:1442
+msgid "Recurs monthly"
+msgstr "Toistuu kuukausittain"
+
+#: functions.php:1445
+#, php-format
+msgid "Recurs every %1$s weeks"
+msgstr "Toistuu joka %1$s viikko"
+
+#: functions.php:1445
+msgid "Recurs weekly"
+msgstr "Toistuu viikoittain"
+
+#: functions.php:1448
+#, php-format
+msgid "Recurs every %1$s days"
+msgstr "Toistuu joka %1$s päivää"
+
+#: functions.php:1448
+msgid "Recurs daily"
+msgstr "Toistuu päivittäin"
+
+#: functions.php:1621
+#, php-format
+msgid ""
+"The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
+"most likely your URL has been turned into a clickable link. Your calendar "
+"may not display properly as a result. Please remove the clickable link in "
+"the shortcode."
+msgstr ""
+"%1$s lyhytkoodin \"url\"-ominaisuus näyttää sisältävän HTML-tunnisteita; "
+"todennäköisesti URL-osoitteesi on muutettu klikattavaksi linkiksi. Tämän "
+"seurauksena kalenterisi ei välttämättä näy oikein. Poista klikattava linkki "
+"lyhytkoodista."
+
+#: functions.php:1950
+msgid "The r34ics_url_get_contents() function is no longer supported."
+msgstr "r34ics_url_get_contents()-funktiota ei enää tueta."
+
+#: templates/admin/add-calendar-button.php:7
+#: templates/admin/add-calendar-button.php:10
+#: templates/admin/add-calendar.php:12
 #, php-format
 msgid "Add %1$s"
 msgstr "Lisää %1$s"
 
-#: templates/admin/add-calendar.php:10
+#: templates/admin/add-calendar.php:14
 msgid "Close"
 msgstr "Sulje"
 
-#: templates/admin/add-calendar.php:19
+#: templates/admin/add-calendar.php:23
 msgid "ICS Feed URL:"
 msgstr "ICS-syötteen URL-osoite:"
 
-#. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag 6. Do not translate
-#: templates/admin/add-calendar.php:23
+#: templates/admin/add-calendar.php:27
 #, php-format
 msgid ""
 "Be sure you are using a %1$ssubscribe%2$s URL, not a %3$sweb view%4$s URL."
 "%5$s (Entering the URL directly in your web browser should download an %6$s "
 "file.)"
 msgstr ""
-"Varmista, että käytät %1$ssubscribe%2$s-URL-osoitetta, et %3$sweb view%4$s-"
-"URL-osoitetta.%5$s (URL-osoitteen syöttäminen suoraan selaimeen lataa %6$s-"
-"tiedoston.)"
+"Varmista, että käytät %1$stilaa%2$s-URL-osoitetta, etkä %3$sweb-näkymä%4$s-"
+"URL-osoitetta.%5$s (Kun syötät URL-osoitteen suoraan selaimeesi, %6$s-"
+"tiedosto pitäisi ladata.)"
 
-#: templates/admin/add-calendar.php:28
+#: templates/admin/add-calendar.php:32
 msgid "Calendar Title:"
 msgstr "Kalenterin nimi:"
 
-#. translators: 1. Do not translate
-#: templates/admin/add-calendar.php:32
+#: templates/admin/add-calendar.php:36
 #, php-format
 msgid ""
 "Leave empty to use calendar&rsquo;s default title. Enter %1$s to omit title "
@@ -397,12 +559,11 @@ msgstr ""
 "Jätä tyhjäksi, jos haluat käyttää kalenterin oletusotsikkoa. Kirjoita %1$s, "
 "jos haluat jättää otsikon kokonaan pois."
 
-#: templates/admin/add-calendar.php:37
+#: templates/admin/add-calendar.php:41
 msgid "Calendar Description:"
 msgstr "Kalenterin kuvaus:"
 
-#. translators: 1. Do not translate
-#: templates/admin/add-calendar.php:41
+#: templates/admin/add-calendar.php:45
 #, php-format
 msgid ""
 "Leave empty to use calendar&rsquo;s default description. Enter %1$s to omit "
@@ -411,251 +572,213 @@ msgstr ""
 "Jätä tyhjäksi, jos haluat käyttää kalenterin oletuskuvausta. Kirjoita %1$s, "
 "jos haluat jättää kuvauksen kokonaan pois."
 
-#: templates/admin/add-calendar.php:46
+#: templates/admin/add-calendar.php:50
 msgid "View:"
 msgstr "Näytä:"
 
-#: templates/admin/add-calendar.php:48
+#: templates/admin/add-calendar.php:52
 msgid "month"
 msgstr "kuukausi"
 
-#: templates/admin/add-calendar.php:49
+#: templates/admin/add-calendar.php:53
 msgid "list"
 msgstr "lista"
 
-#: templates/admin/add-calendar.php:50
+#: templates/admin/add-calendar.php:54
 msgid "week"
 msgstr "viikko"
 
-#: templates/admin/add-calendar.php:55 templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:59 templates/admin/add-calendar.php:66
 msgid "Count:"
 msgstr "Määrä:"
 
-#: templates/admin/add-calendar.php:58 templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:62 templates/admin/add-calendar.php:66
 msgid "Format:"
 msgstr "Formaatti:"
 
-#. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags 3. HTML tag 4. HTML tag
-#: templates/admin/add-calendar.php:62
+#: templates/admin/add-calendar.php:66
 #, php-format
 msgid ""
 "Leave %1$s blank to include all upcoming events. %2$s must be a standard "
 "%3$sPHP date format string%4$s."
 msgstr ""
 "Jätä %1$s tyhjäksi, jos haluat sisällyttää kaikki tulevat tapahtumat. %2$s "
-"on oltava vakiomuotoinen %3$sPHP-päivämäärämuotoinen merkkijono%4$s."
+"on oltava standardinmukainen %3$sPHP-päivämäärämuotoinen merkkijono%4$s."
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:70
+#: templates/admin/add-calendar.php:74
 #, php-format
 msgid ""
 "Show event descriptions %1$s(change to a number in inserted shortcode to set "
 "word limit)%2$s"
 msgstr ""
-"Näytä tapahtumien kuvaukset %1$s(vaihda numeroiksi lisättävässä "
-"lyhytkoodissa asettaaksesi sanarajan)%2$s"
+"Näytä tapahtumien kuvaukset %1$s(muuta numeroon lisätyssä lyhytkoodissa "
+"asettaaksesi sanarajan)%2$s"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:78
+#: templates/admin/add-calendar.php:82
 #, php-format
 msgid "Show event locations %1$s(if available)%2$s"
-msgstr "Näytä tapahtumapaikat %1$s(jos saatavilla)%2$s"
+msgstr "Näytä tapahtumien sijainnit %1$s(jos saatavilla)%2$s"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/add-calendar.php:86
+#: templates/admin/add-calendar.php:90
 #, php-format
 msgid "Show event organizers %1$s(if available)%2$s"
 msgstr "Näytä tapahtuman järjestäjät %1$s(jos saatavilla)%2$s"
 
-#. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4. HTML tag
-#: templates/admin/add-calendar.php:93
+#: templates/admin/add-calendar.php:97
 #, php-format
 msgid ""
 "%1$sNote:%2$s Additional %3$sdisplay options%4$s are available by manually "
 "editing the shortcode after insertion."
 msgstr ""
-"%1$sHuomautus:%2$s Lisää %3$snäyttövaihtoehtoja%4$s on saatavilla "
-"muokkaamalla lyhytkoodia manuaalisesti lisäämisen jälkeen."
+"%1$sHuomautus:%2$s Lisää %3$snäyttöasetuksia%4$s on saatavilla muokkaamalla "
+"lyhytkoodia manuaalisesti sen lisäämisen jälkeen."
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/add-calendar.php:100
+#: templates/admin/add-calendar.php:104
 #, php-format
 msgid "Insert %1$s"
 msgstr "Lisää %1$s"
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/admin.php:12
+#: templates/admin/admin.php:63
 #, php-format
-msgid "Do even more with %1$s!"
-msgstr "Tee vielä enemmän %1$s!"
+msgid "Do even more with %1$s version 6!"
+msgstr "Tee vielä enemmän %1$s version 6:lla!"
 
-#: templates/admin/admin.php:18
-msgid "Calendar Builder"
-msgstr "Kalenterin muodostin"
+#: templates/admin/admin.php:69
+msgid "Calendar Builder + Block Editor"
+msgstr "Kalenterin luoja + lohkoeditori"
 
-#: templates/admin/admin.php:19
+#: templates/admin/admin.php:72
+#, php-format
 msgid ""
-"Configure all calendar settings with an easy visual interface... no need to "
-"manually type shortcodes."
+"Configure all calendar settings with an easy visual interface, and use the "
+"new %1$s block to select your saved calendars from a dropdown in the Block "
+"Editor, no shortcode needed! %2$sLearn more...%3$s"
 msgstr ""
-"Määritä kaikki kalenteriasetukset helpolla visuaalisella "
-"käyttöliittymällä... ei tarvitse kirjoittaa manuaalisesti lyhytkoodeja."
+"Määritä kaikki kalenterin asetukset helppokäyttöisen visuaalisen "
+"käyttöliittymän avulla ja valitse tallennetut kalenterit Block Editorin "
+"pudotusvalikosta uuden %1$s-lohkon avulla ilman lyhytkoodia! "
+"%2$sLisätietoja...%3$s"
 
-#: templates/admin/admin.php:20
+#: templates/admin/admin.php:74
 msgid "Additional Views and Enhanced Features"
 msgstr "Lisänäkymät ja parannetut ominaisuudet"
 
-#: templates/admin/admin.php:21
+#: templates/admin/admin.php:77
+#, php-format
 msgid ""
-"New ways to display your calendar including Full, Up Next, Masonry, Month "
-"with Sidebar, Widget, and more. Additional capabilities are added to the "
-"core Month, Basic, List and Week views."
+"%1$s offers many new ways to display your calendar, including integrations "
+"with the popular %2$s and %3$s open source libraries. Month and year views "
+"with a sidebar for the selected day. \"Up Next\" works great for radio or TV "
+"station schedules. Widget and year availability are perfect for holiday "
+"bookings. Plus, additional capabilities are added to the core Month, Basic, "
+"List and Week views. %4$sView sample calendars...%5$s"
 msgstr ""
-"Uusia tapoja näyttää kalenteri, mukaan lukien Täysi, Seuraavaksi, Muurattu, "
-"Kuukausi sivupalkin kanssa, Widget ja paljon muuta. Lisäominaisuuksia on "
-"lisätty perusnäkymiin Kuukausi, Perus, Luettelo ja Viikko."
+"%1$s tarjoaa monia uusia tapoja näyttää kalenterisi, mukaan lukien "
+"integroinnit suosittujen %2$s ja %3$s avoimen lähdekoodin kirjastojen "
+"kanssa. Kuukausi- ja vuosinäkymät, joissa on sivupalkki valitulle päivälle. "
+"\"Seuraavaksi\" toimii erinomaisesti radio- tai TV-asemien ohjelmistojen "
+"kanssa. Widget ja vuoden saatavuus ovat täydellisiä lomavarauksille. Lisäksi "
+"ydintoimintoihin Kuukausi, Perus, Lista ja Viikko on lisätty uusia "
+"ominaisuuksia. %4$sKatso esimerkkikalentereita...%5$s"
 
-#: templates/admin/admin.php:22
-msgid "Customizer"
-msgstr "Mukauttaja"
+#: templates/admin/admin.php:79
+msgid "Customization"
+msgstr "Ulkoasu"
 
-#: templates/admin/admin.php:23
-msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
+#: templates/admin/admin.php:80
+#, php-format
+msgid ""
+"Easy-to-use tools to completely customize your calendar colors, typography "
+"and more. Select one of our preset color palettes or create your own, with "
+"options to individually customize the color of each element in the calendar "
+"layout. Choose between your theme fonts, system fonts, or more than 20 "
+"included open source fonts. %1$sLearn more...%2$s"
 msgstr ""
-"Muokkaa helposti kalenterin väripaletteja, fontteja ja muuta, koko sivuston "
-"laajuisesti."
+"Helppokäyttöiset työkalut kalenterin värien, typografian ja muiden "
+"ominaisuuksien täydelliseen mukauttamiseen. Valitse yksi valmiista "
+"väripaleteistamme tai luo oma paletti, jossa voit mukauttaa kalenterin "
+"jokaisen elementin värin erikseen. Valitse teemafontit, järjestelmäfontit "
+"tai yli 20 mukana toimitettua avoimen lähdekoodin fonttia. %1$sLisätietoja..."
+"%2$s"
 
-#: templates/admin/admin.php:25
+#: templates/admin/admin.php:81
 msgid "ICS Events"
 msgstr "ICS-tapahtumat"
 
-#. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/admin.php:28
+#: templates/admin/admin.php:84
 #, php-format
 msgid ""
-"%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
-"events directly in WordPress and even integrate them seamlessly with your "
-"existing feeds."
+"Turns %1$s into a full calendar management system. Create and edit new "
+"events directly in WordPress, and even integrate them seamlessly with your "
+"existing external ICS feeds. %2$sLearn more...%3$s"
 msgstr ""
-"%1$sUusi!%2$s Muuttaa %3$s täydelliseksi kalenterijärjestelmäksi. Luo ja "
-"hallinnoi tapahtumia suoraan WordPressissä ja jopa integroi ne saumattomasti "
-"olemassa oleviin syötteisiisi."
+"Muuttaa %1$s täydelliseksi kalenterinhallintajärjestelmäksi. Luo ja muokkaa "
+"uusia tapahtumia suoraan WordPressissä ja integroi ne saumattomasti olemassa "
+"oleviin ulkoisiin ICS-syötteisiin. %2$sLisätietoja...%3$s"
 
-#. translators: 1. Link (do not translate)
-#: templates/admin/admin.php:32
+#: templates/admin/admin.php:86
+msgid "Localized Admin Interface"
+msgstr "Lokalisoitu hallintaliittymä"
+
+#: templates/admin/admin.php:89
+#, php-format
+msgid ""
+"All %1$s admin pages are translated into dozens of languages, including "
+"English, Czech, Danish, German, Greek, Spanish, Estonian, Finnish, French, "
+"Hungarian, Italian, Japanese, Korean, Lithuanian, Latvian, Norwegian, Dutch, "
+"Polish, Portuguese, Romanian, Russian, Slovak, Serbian, Swedish, Turkish, "
+"Ukrainian, and Chinese."
+msgstr ""
+"Kaikki %1$s hallintasivut on käännetty kymmenille kielille, mukaan lukien "
+"englanti, tšekki, tanska, saksa, kreikka, espanja, viro, suomi, ranska, "
+"unkari, italia, japani, korea, liettua, latvia, norja, hollanti, puola, "
+"portugali, romania, venäjä, slovakki, serbia, ruotsi, turkki, ukraina ja "
+"kiina."
+
+#: templates/admin/admin.php:93
 #, php-format
 msgid "Visit %1$s to learn more."
-msgstr "Vieraile %1$s saadaksesi lisätietoja."
+msgstr "Lisätietoja on osoitteessa %1$s."
 
-#: templates/admin/admin.php:40
-msgid "Go PRO!"
-msgstr "Hyvä, PRO!"
+#: templates/admin/admin.php:97
+msgid "Calendar Builder screenshot"
+msgstr "Kalenterin luontityökalun kuvakaappaus"
 
-#: templates/admin/admin.php:60 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:31
-msgid "Getting Started"
-msgstr "Käytön aloittaminen"
+#: templates/admin/admin.php:98
+msgid "Appearance screenshot"
+msgstr "Ulkonäkö-kuvakaappaus"
 
-#: templates/admin/admin.php:69 templates/admin/utilities.php:130
-msgid "System Report"
-msgstr "Järjestelmäraportti"
+#: templates/admin/admin.php:102
+msgid "Available now!"
+msgstr "Saatavilla nyt!"
 
-#: templates/admin/admin.php:90
-msgid "Save Changes"
-msgstr "Tallenna muutokset"
+#: templates/admin/admin.php:107
+#, php-format
+msgid "Get %1$s!"
+msgstr "Hanki %1$s!"
 
-#. translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag
-#: templates/admin/getting-started.php:10
+#: templates/admin/appearance.php:23
 #, php-format
 msgid ""
-"Thank you for installing %1$s. Before creating your first calendar "
-"shortcode, please visit your %2$sGeneral Settings%3$s page and verify that "
-"your site language, timezone and date/time format settings are correct. See "
-"our %4$sUser Guide%5$s for more information."
+"Extensive color palette and typography options are available with %1$s. "
+"%2$sLearn More%3$s"
 msgstr ""
-"Kiitos asennuksesta %1$s. Ennen kuin luot ensimmäisen kalenterin "
-"lyhytkoodin, käy %2$sYleiset asetukset%3$s-sivulla ja tarkista, että "
-"sivustosi kieli, aikavyöhyke ja päivämäärän ja kellonajan asetukset ovat "
-"oikein. Katso lisätietoja %4$sKäyttöoppaasta%5$s."
+"Laaja värivalikoima ja typografia-asetukset ovat käytettävissä %1$s. "
+"%2$sLisätietoja%3$s"
 
-#: templates/admin/getting-started.php:17
-msgid "Quick Start Guide"
-msgstr "Pikaopas"
+#: templates/admin/appearance.php:32
+msgid "Color Palette"
+msgstr "Väripaletti"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/getting-started.php:23
-#, php-format
-msgid ""
-"An extensive %1$sUser Guide%2$s is available on our website. Below are some "
-"quick links to key resources in the documentation."
-msgstr ""
-"Sivustollamme on saatavilla laaja %1$skäyttöopas%2$s. Alla on joitakin "
-"pikalinkkejä dokumentaation tärkeimpiin resursseihin."
-
-#: templates/admin/getting-started.php:29
-msgid "General:"
-msgstr "Yleistä:"
-
-#: templates/admin/getting-started.php:32
-msgid "General WordPress Settings"
-msgstr "Yleiset WordPress-asetukset"
-
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/getting-started.php:35
-#, php-format
-msgid "%1$s Settings"
-msgstr "%1$s Asetukset"
-
-#: templates/admin/getting-started.php:40
-msgid "Working with Shortcodes:"
-msgstr "Työskentely lyhytkoodien kanssa:"
-
-#: templates/admin/getting-started.php:42
-msgid "Shortcode Overview"
-msgstr "Shortcode yleiskatsaus"
-
-#: templates/admin/getting-started.php:43
-msgid "Shortcode Builder"
-msgstr "Lyhytkoodityökalu"
-
-#: templates/admin/getting-started.php:44
-msgid "Shortcode Parameters Reference"
-msgstr "Lyhytkoodin parametrien viite"
-
-#: templates/admin/getting-started.php:48
-msgid "Advanced Topics:"
-msgstr "Edistyneet aiheet:"
-
-#: templates/admin/getting-started.php:50
-msgid "FAQs and Tips"
-msgstr "Usein kysytyt kysymykset ja vinkit"
-
-#: templates/admin/getting-started.php:51
-msgid "CSS Guide"
-msgstr "CSS-opas"
-
-#: templates/admin/getting-started.php:52
-msgid "Developer Resources"
-msgstr "Kehittäjän resurssit"
-
-#: templates/admin/getting-started.php:53
-msgid "GDPR"
-msgstr "GDPR"
-
-#: templates/admin/settings.php:3
-msgid "Appearance"
-msgstr "Ulkoasu"
-
-#: templates/admin/settings.php:6
+#: templates/admin/appearance.php:37
 msgid "Match calendar color palette to current Block Theme colors"
-msgstr "Sovita kalenterin väripaletti nykyisiin Block-teeman väreihin"
+msgstr "Sovita kalenterin väripaletti nykyisen Block Theme -teeman väreihin"
 
-#: templates/admin/settings.php:6 templates/admin/settings.php:21
+#: templates/admin/appearance.php:38
 msgid "beta"
 msgstr "beta"
 
-#. translators: 1: Plugin name (do not translate) 2: HTML tag and filename 3: HTML tag and filename
-#: templates/admin/settings.php:10
+#: templates/admin/appearance.php:42
 #, php-format
 msgid ""
 "Replaces the %1$s default neutral color palette with nearest matches from "
@@ -665,70 +788,142 @@ msgid ""
 "\"classic\" theme that does not include a %3$s file."
 msgstr ""
 "Korvaa %1$s oletusarvoisen neutraalin väripaletin lähimmillä vastaavilla "
-"nykyisestä Site Editor Styles -värivalikoimasta tai teemasi %2$s-"
-"tiedostosta. Värivalinnat ovat algoritmisia, ja jotkin yhdistelmät eivät "
-"ehkä läpäise saavutettavuuskontrastitestejä. Tällä asetuksella ei ole "
-"vaikutusta, jos käytät \"klassista\" teemaa, joka ei sisällä %3$s-tiedostoa."
+"väreillä nykyisestä Site Editor Styles -väripaletista tai teemasi %2$s "
+"tiedostosta. Värien valinta tapahtuu algoritmisesti, ja jotkin yhdistelmät "
+"eivät välttämättä läpäise esteettömyyden kontrastitestejä. Tämä asetus ei "
+"vaikuta, jos käytät \"klassista\" teemaa, joka ei sisällä %3$s tiedostoa."
 
-#. translators: 1: HTML tag 2: HTML tag
-#: templates/admin/settings.php:15 templates/admin/settings.php:29
+#: templates/admin/appearance.php:47
 #, php-format
 msgid ""
 "%1$sThis is currently a beta feature.%2$s It may require making some "
-"adjustments to your calendar settings or CSS for optimal display, especially "
-"if you have color-coded your feeds. Functionality is subject to change."
+"adjustments to your calendar appearance or CSS for optimal display, "
+"especially if you have color-coded your feeds. Functionality is subject to "
+"change."
 msgstr ""
-"%1$sTämä on tällä hetkellä beta-toiminto.%2$s Se saattaa vaatia joitakin "
-"muutoksia kalenteriasetuksiin tai CSS:ään optimaalista näyttöä varten, "
-"varsinkin jos olet värikoodannut syötteet. Toiminnallisuus voi muuttua."
+"%1$sTämä on tällä hetkellä beta-ominaisuus.%2$s Optimaalisen näytön "
+"saavuttamiseksi saatat joutua tekemään joitakin muutoksia kalenterisi "
+"ulkoasuun tai CSS-tiedostoon, etenkin jos olet merkinnyt syötteesi "
+"värikoodeilla. Toiminnallisuus voi muuttua."
 
-#: templates/admin/settings.php:21
+#: templates/admin/appearance.php:56
 msgid "Dark mode"
 msgstr "Tumma tila"
 
-#. translators: 1: HTML tags 2: HTML tag 3: HTML tag and code 4: HTML tag and code
-#: templates/admin/settings.php:24
+#: templates/admin/appearance.php:58
+msgid "Inverts color palette (light colors on a dark background)."
+msgstr "Kääntää väripaletin (vaaleat värit tummalla taustalla)."
+
+#: templates/admin/appearance.php:70 templates/admin/settings.php:200
+msgid "Save Changes"
+msgstr "Tallenna muutokset"
+
+#: templates/admin/getting-started.php:14
 #, php-format
 msgid ""
-"Inverts color palette (light colors on a dark background). %1$sNote:%2$s "
-"Dark mode also automatically applies style changes similar to the %3$s and "
-"%4$s shortcode parameters, so you do not need to include them in your "
-"shortcode."
+"Thank you for installing %1$s. Before creating your first calendar "
+"shortcode, please visit your %2$sGeneral Settings%3$s page and verify that "
+"your site language, timezone and date/time format settings are correct. See "
+"our %4$sUser Guide%5$s for more information."
 msgstr ""
-"Invertoi väripaletin (vaaleat värit tummalla pohjalla). %1$sHuomautus:%2$s "
-"Tumma tila soveltaa myös automaattisesti samanlaisia tyylimuutoksia kuin "
-"%3$s- ja %4$s-lyhytkoodiparametrit, joten sinun ei tarvitse sisällyttää "
-"niitä lyhytkoodiin."
+"Kiitos, että olet asentanut %1$s. Ennen kuin luot ensimmäisen kalenterin "
+"pikakoodin, käy %2$sYleiset asetukset%3$s-sivulla ja tarkista, että "
+"sivustosi kieli, aikavyöhyke ja päivämäärä-/aikaformaattiasetukset ovat "
+"oikein. Lisätietoja on %4$skäyttöoppaassamme%5$s."
 
-#: templates/admin/settings.php:40
+#: templates/admin/getting-started.php:23
+#, php-format
+msgid ""
+"Get started with %1$s in four easy steps... and you've already completed "
+"step one! Check out our %2$sQuick Start Guide%3$s for the rest."
+msgstr ""
+"Aloita %1$s neljällä helpolla askeleella... ja olet jo suorittanut "
+"ensimmäisen askeleen! Tutustu %2$spikaoppaaseen%3$s saadaksesi lisätietoja."
+
+#: templates/admin/getting-started.php:26
+msgid "Quick Start Guide"
+msgstr "Pikaopas"
+
+#: templates/admin/getting-started.php:32
+#, php-format
+msgid ""
+"An extensive %1$sUser Guide%2$s is available on our website. Below are some "
+"quick links to key resources in the documentation."
+msgstr ""
+"Kattava %1$skäyttöopas%2$s on saatavilla verkkosivustollamme. Alla on "
+"muutamia pikalinkkejä dokumentaation tärkeimpiin resursseihin."
+
+#: templates/admin/getting-started.php:38
+msgid "General:"
+msgstr "Yleistä:"
+
+#: templates/admin/getting-started.php:41
+msgid "General WordPress Settings"
+msgstr "WordPressin yleiset asetukset"
+
+#: templates/admin/getting-started.php:44
+#, php-format
+msgid "%1$s Settings"
+msgstr "%1$s Asetukset"
+
+#: templates/admin/getting-started.php:49
+msgid "Working with Shortcodes:"
+msgstr "Lyhytkoodien käyttö:"
+
+#: templates/admin/getting-started.php:51
+msgid "Shortcode Overview"
+msgstr "Lyhytkoodien yleiskatsaus"
+
+#: templates/admin/getting-started.php:52
+msgid "Shortcode Builder"
+msgstr "Lyhytkoodityökalu"
+
+#: templates/admin/getting-started.php:53
+msgid "Shortcode Parameters Reference"
+msgstr "Lyhytkoodiparametrien viite"
+
+#: templates/admin/getting-started.php:57
+msgid "Advanced Topics:"
+msgstr "Edistyneitä aiheita:"
+
+#: templates/admin/getting-started.php:59
+msgid "FAQs and Tips"
+msgstr "Usein kysyttyjä kysymyksiä ja vinkkejä"
+
+#: templates/admin/getting-started.php:60
+msgid "CSS Guide"
+msgstr "CSS-opas"
+
+#: templates/admin/getting-started.php:61
+msgid "Developer Resources"
+msgstr "Kehittäjän resurssit"
+
+#: templates/admin/getting-started.php:62
+msgid "GDPR"
+msgstr "GDPR"
+
+#: templates/admin/settings.php:20
 msgid "Loading"
 msgstr "Ladataan"
 
-#: templates/admin/settings.php:43
-msgid "Always use AJAX to render calendars (recommended)"
-msgstr "Käytä aina AJAXia kalentereiden esittämiseen (suositellaan)"
+#: templates/admin/settings.php:24
+msgid "Always use AJAX to render calendars"
+msgstr "Käytä aina AJAXia kalenterien renderointiin."
 
-#: templates/admin/settings.php:44
+#: templates/admin/settings.php:28
+#, php-format
 msgid ""
-"When checked, all calendars will render via AJAX (asynchronously after the "
-"page loads). This is especially useful in conjunction with other caching "
-"plugins, or if your calendars contain a large number of events. Normally, "
-"calendar data is sent directly in the HTML of the initial page load unless "
-"AJAX has been specified in the shortcode."
+"AJAX loading is now automatic. You can override AJAX, if necessary, by "
+"adding %1$s to your shortcode."
 msgstr ""
-"Kun tämä on valittuna, kaikki kalenterit renderöidään AJAXin kautta "
-"(asynkronisesti sivun lataamisen jälkeen). Tämä on erityisen hyödyllistä "
-"yhdessä muiden välimuistiliitännäisten kanssa tai jos kalentereissasi on "
-"paljon tapahtumia. Normaalisti kalenteritiedot lähetetään suoraan HTML:ssä "
-"sivun ensimmäisen latauksen yhteydessä, ellei AJAXia ole määritetty "
-"lyhytkoodissa."
+"AJAX-lataus tapahtuu nyt automaattisesti. Voit ohittaa AJAXin tarvittaessa "
+"lisäämällä %1$s lyhytkoodiisi."
 
-#: templates/admin/settings.php:48
+#: templates/admin/settings.php:36
 msgid "Increase memory limit when rendering calendars"
-msgstr "Lisää muistirajaa kalentereita renderöitäessä"
+msgstr "Lisää muistin rajaa kalentereiden renderoinnin yhteydessä"
 
-#. translators: 1: HTML tag
-#: templates/admin/settings.php:65
+#: templates/admin/settings.php:50
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -737,34 +932,32 @@ msgid ""
 "server default setting. 2) It is not possible to set this option lower than "
 "the current default memory limit on your server."
 msgstr ""
-"Jos kalenterisi lataaminen epäonnistuu \"muistin loppu\" "
-"-virheilmoituksella, yritä lisätä muistirajaa. Vähintään 512 Mt on "
-"suositeltavaa. %1$s Huomautuksia: 1) Jotkin hosting-palveluntarjoajat eivät "
-"ehkä salli sovellusten ohittaa palvelimen oletusasetusta. 2) Tätä asetusta "
-"ei ole mahdollista asettaa pienemmäksi kuin palvelimen nykyinen "
-"oletusmuistiraja."
+"Jos kalenterisi latautuminen epäonnistuu ja näyttöön tulee vakava virhe "
+"\"muisti loppu\", yritä lisätä muistin rajoitusta. Suositeltava "
+"vähimmäismäärä on 512 Mt. %1$s Huomautukset: 1) Jotkin palveluntarjoajat "
+"eivät salli sovellusten ohittaa palvelimen oletusasetuksia. 2) Tätä asetusta "
+"ei voi asettaa pienemmäksi kuin palvelimesi nykyinen oletusmuistin rajoitus."
 
-#: templates/admin/settings.php:70
+#: templates/admin/settings.php:60
 msgid "deprecated"
 msgstr "vanhentunut"
 
-#: templates/admin/settings.php:71
+#: templates/admin/settings.php:62
 msgid ""
-"If your site has stopped retrieving feeds after the version 11 update, turn "
-"on this option to use the legacy request method. This feature is deprecated "
-"and will be removed in an update in the near future."
+"Some servers may not support the default feed request method. If your feeds "
+"are not loading, turn on this option to use the legacy request method. This "
+"feature is deprecated and will be removed in a future update."
 msgstr ""
-"Jos sivustosi on lopettanut syötteiden hakemisen version 11 päivityksen "
-"jälkeen, ota tämä vaihtoehto käyttöön, jotta voit käyttää vanhaa "
-"pyyntömenetelmää. Tämä ominaisuus on vanhentunut ja se poistetaan "
-"lähitulevaisuuden päivityksessä."
+"Jotkin palvelimet eivät ehkä tue oletusarvoista syötteen pyyntötapaa. Jos "
+"syötteesi eivät lataudu, ota tämä vaihtoehto käyttöön, jotta voit käyttää "
+"vanhaa pyyntötapaa. Tämä ominaisuus on vanhentunut ja se poistetaan "
+"tulevassa päivityksessä."
 
-#: templates/admin/settings.php:75
+#: templates/admin/settings.php:69
 msgid "Default shortcode"
-msgstr "Oletus lyhytkoodi"
+msgstr "Oletuslyhytkoodi"
 
-#. translators: 1: HTML tag and sample code
-#: templates/admin/settings.php:79
+#: templates/admin/settings.php:73
 #, php-format
 msgid ""
 "If your site will include a large number of similarly configured calendar "
@@ -774,20 +967,20 @@ msgid ""
 "to that calendar, as such: %1$s Any parameters included in the individual "
 "shortcode will override what is set here."
 msgstr ""
-"Jos sivustollasi on suuri määrä samankaltaisesti konfiguroituja kalenterien "
-"lyhytkoodeja, voit syöttää tähän oletusarvoisen \"perus\"-lyhytkoodin, jonka "
-"parametrien pitäisi olla samat kaikille kalentereille. Sivuston yksittäiset "
-"lyhytkoodit voivat sitten sisältää vain ne parametrit, jotka ovat "
-"ainutlaatuisia kyseiselle kalenterille: %1$s Kaikki yksittäiseen "
-"lyhytkoodiin sisältyvät parametrit ohittavat tässä asetetut parametrit."
+"Jos sivustollasi on paljon samankaltaisia kalenterin lyhytkoodeja, voit "
+"syöttää tähän oletusarvoisen \"perus\"lyhytkoodin, jonka parametrit ovat "
+"samat kaikille kalentereille. Sivuston yksittäiset lyhytkoodit voivat sitten "
+"sisältää vain kyseiselle kalenterille ominaiset parametrit, kuten: %1$s "
+"Yksittäiseen lyhytkoodiin sisältyvät parametrit ohittavat tässä asetetut "
+"parametrit."
 
-#: templates/admin/settings.php:84
+#: templates/admin/settings.php:82
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
-"Salli pääsy näille isäntänimille, jotka vastaavat varattuja IP-osoitteita"
+"Salli pääsy näihin isäntänimiin, jotka ratkaistaan varattuihin IP-"
+"osoitteisiin"
 
-#. translators: 1: HTML tag 2: HTML tag 3: HTML tag 4: Plugin name (do not translate) 5: HTML tag
-#: templates/admin/settings.php:88
+#: templates/admin/settings.php:86
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -797,64 +990,112 @@ msgid ""
 "documentation%5$s for more information."
 msgstr ""
 "Jos kalenteripalvelimesi sijaitsee samalla fyysisellä palvelimella kuin "
-"verkkosivustosi, on osa samaa lähiverkkoa tai käyttää muuten %1$svarattua IP-"
-"osoitetta%2$s, kirjoita sen isäntänimi tähän salliaksesi pääsyn. Jos "
-"kalenteripalvelimia on useita, kirjoita yksi isäntänimi riviä kohti. Katso "
-"%3$slisätietoja %4$sdokumentaatiosta%5$s."
+"verkkosivustosi, on osa samaa paikallista verkkoa tai käyttää muuten "
+"%1$svarattua IP-osoitetta%2$s, kirjoita sen isäntänimi tähän, jotta pääsy "
+"sallitaan. Jos kalenteripalvelimia on useita, kirjoita yksi isäntänimi "
+"riville. Katso lisätietoja %3$s%4$sdokumentaatiosta%5$s."
 
-#. translators: 1: HTML tag 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:92
+#: templates/admin/settings.php:93
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
 "URL. %1$s For example, you would enter %2$s, not %3$s."
 msgstr ""
-"Kirjoita yksi isäntänimi per rivi. Isäntänimet ovat verkkotunnuksen "
-"perusnimi, ei täydellinen URL-osoite. %1$s Kirjoita esimerkiksi %2$s, älä "
-"%3$s."
+"Syötä yksi isäntänimi riville. Isäntänimet ovat perusverkkotunnuksia, eivät "
+"täydellisiä URL-osoitteita. %1$s Esimerkiksi syötät %2$s, et %3$s."
+
+#: templates/admin/settings.php:99
+msgid "Allow access to these ports"
+msgstr "Salli pääsy näihin portteihin"
 
 #: templates/admin/settings.php:102
+msgid ""
+"WordPress automatically allows access to ports 80, 443, and 8080. If you "
+"need to be able to access source calendars that use non-standard ports, "
+"enter the port numbers here, separated by commas."
+msgstr ""
+"WordPress sallii automaattisesti pääsyn portteihin 80, 443 ja 8080. Jos "
+"sinun on päästävä käsiksi lähdekalentereihin, jotka käyttävät muita kuin "
+"vakioportteja, kirjoita porttinumerot tähän pilkuilla erotettuina."
+
+#: templates/admin/settings.php:113
 msgid "Caching"
 msgstr "Välimuistitus"
 
-#: templates/admin/settings.php:105
+#: templates/admin/settings.php:117
 msgid "Transient (cache) expiration"
-msgstr "Väliaikainen (välimuistin) vanhentuminen"
+msgstr "Väliaikainen (välimuisti) vanhentuminen"
 
-#: templates/admin/settings.php:105
+#: templates/admin/settings.php:118
 msgid "seconds"
 msgstr "sekuntia"
 
-#: templates/admin/settings.php:106
+#: templates/admin/settings.php:120
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
-"transients) before reloading. Default is 3600 (1 hour)."
+"transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
+"value is 120 (2 minutes)."
 msgstr ""
-"Määrittää, kuinka kauan kalenterinsyötteen tiedot tulee tallentaa "
-"välimuistiin palvelimelle (WordPressin siirtymät) ennen uudelleenlatausta. "
-"Oletusarvo on 3600 (1 tunti)."
+"Määrittää, kuinka kauan kalenterisyötteen tiedot tallennetaan välimuistiin "
+"palvelimella (WordPress-väliaikaiset tiedot) ennen uudelleenlatausta. "
+"Oletusarvo on 3600 (1 tunti). Pienin sallittu arvo on 120 (2 minuuttia)."
 
-#: templates/admin/settings.php:115
-msgid "Miscellaneous"
-msgstr "Sekalaiset"
+#: templates/admin/settings.php:131
+msgid "Admin"
+msgstr "Ylläpitäjä"
 
-#: templates/admin/settings.php:118
+#: templates/admin/settings.php:135
+msgid "Minimum access role"
+msgstr "Vähimmäiskäyttöoikeus"
+
+#: templates/admin/settings.php:155
+#, php-format
+msgid ""
+"Identifies the minimum user role that is allowed to access %1$s admin pages. "
+"Certain areas such as Settings are further restricted to %2$s users only "
+"(%3$s users on Multisite configurations)."
+msgstr ""
+"Määrittää vähimmäiskäyttäjäroolin, jolla on oikeus käyttää %1$s "
+"hallintasivuja. Tietyt alueet, kuten Asetukset, ovat rajoitettuja vain %2$s "
+"käyttäjille (%3$s käyttäjille monisivustokokoonpanoissa)."
+
+#: templates/admin/settings.php:163
+msgid "Register Customizer"
+msgstr "Rekisteröinti-muokkaaja"
+
+#: templates/admin/settings.php:165
+msgid ""
+"WordPress no longer includes a link to the Customizer in the Appearance menu "
+"when a Block Theme is active. Check this box if you wish to use the "
+"Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
+"may already register the Customizer, in which case, this setting will have "
+"no effect. (The checkbox only enables the Customizer when checked; it does "
+"not disable the Customizer when unchecked."
+msgstr ""
+"WordPress ei enää sisällä linkkiä Customizer-työkaluun Ulkonäkö-valikossa, "
+"kun Block Theme on aktiivinen. Valitse tämä ruutu, jos haluat käyttää "
+"Customizer-työkalua, esimerkiksi lisä-CSS-syötteenä. Huomaa: Jotkin teemat "
+"tai laajennukset saattavat jo rekisteröidä Customizer-työkalun, jolloin "
+"tällä asetuksella ei ole vaikutusta. (Valintaruutu vain aktivoi Customizer-"
+"työkalun, kun se on valittuna; se ei poista Customizer-työkalua käytöstä, "
+"kun se on valittuna."
+
+#: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Poista \"Lisää ICS-kalenteri\" -painike Classic Editorista"
 
-#: templates/admin/settings.php:119
+#: templates/admin/settings.php:175
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
 "the button. Has no effect on sites using the Block Editor (Gutenberg)."
 msgstr ""
-"Oletusarvoisesti ICS-kalenteri lisää \"Lisää ICS-kalenteri\" -painikkeen "
-"työkalupalkkiin WYSIWYG-editorin yläpuolelle, kun käytät Classic Editoria. "
-"Poista painike valitsemalla tämä ruutu. Ei vaikuta sivustoihin, jotka "
-"käyttävät lohkoeditoria (Gutenberg)."
+"Oletuksena ICS-kalenteri lisää \"Lisää ICS-kalenteri\" -painikkeen WYSIWYG-"
+"editorin yläpuolella olevaan työkaluriviin, kun käytetään Classic Editor "
+"-editoria. Poista painike valitsemalla tämä valintaruutu. Ei vaikuta "
+"sivustoihin, jotka käyttävät Block Editor -editoria (Gutenberg)."
 
-#. translators: 1: Plugin name (do not translate) 2: HTML tag 3: HTML tag
-#: templates/admin/settings.php:126
+#: templates/admin/settings.php:187
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -862,62 +1103,121 @@ msgid ""
 "upgraded installations will continue to use the old default values, unless "
 "this box is checked. Read more about these changes on %2$sour blog%3$s."
 msgstr ""
-"%1$s versio 10.6 otti käyttöön uudet oletusarvot useille "
-"lyhytkoodiparametreille. Uudet asennukset käyttävät automaattisesti uusia "
-"oletusarvoja, mutta päivitetyt asennukset käyttävät edelleen vanhoja "
-"oletusarvoja, ellei tätä ruutua ole valittu. Lue lisää näistä muutoksista "
+"%1$s Versiossa 10.6 otettiin käyttöön uudet oletusarvot useille shortcode-"
+"parametreille. Uudet asennukset käyttävät automaattisesti uusia "
+"oletusarvoja, mutta päivitetyt asennukset jatkavat vanhojen oletusarvojen "
+"käyttöä, ellei tätä ruutua ole valittu. Lue lisää näistä muutoksista "
 "%2$sblogistamme%3$s."
 
-#: templates/admin/sidebar.php:11
+#: templates/admin/sidebar.php:13
+msgid "User Guide"
+msgstr "Käyttöohje"
+
+#: templates/admin/sidebar.php:15
 msgid ""
 "Our complete user guide is available with full translation into dozens of "
 "languages on our website:"
 msgstr ""
-"Täydellinen käyttöoppaamme on saatavilla verkkosivuillamme, ja se on "
-"käännetty kymmenille eri kielille:"
+"Kattava käyttöopas on saatavilla käännettynä kymmenille kielille "
+"verkkosivuillamme:"
 
-#. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/sidebar.php:18
+#: templates/admin/sidebar.php:22
 #, php-format
 msgid "For assistance, please use our %1$ssupport request form%2$s."
-msgstr "Jos tarvitset apua, käytä %1$stukipyyntölomaketta%2$s."
+msgstr "Apua saat %1$stukipyyntölomakkeella%2$s."
 
-#. translators: 1. HTML tags 2. HTML tags
 #: templates/admin/sidebar.php:31
 #, php-format
 msgid ""
-"When contacting support, please include the %1$sSystem Report%2$s from this "
+"When contacting support, please include the %1$ssystem report%2$s from this "
 "page."
 msgstr ""
-"Kun otat yhteyttä asiakaspalveluun, ilmoita %1$sJärjestelmäraportti%2$s "
-"tältä sivulta."
+"Kun otat yhteyttä tukeen, liitä mukaan tämän sivun "
+"%1$sjärjestelmäraportti%2$s."
 
 #: templates/admin/sidebar.php:37
 msgid "Spread the word!"
 msgstr "Levitä sanaa!"
 
-#. translators: 1: Plugin title (do not translate) 2: HTML tag 3: HTML tag
 #: templates/admin/sidebar.php:41
 #, php-format
 msgid ""
 "If you find %1$s useful, you can help support our continued growth and "
 "development with a %2$sfive-star review%3$s. Thank you!"
 msgstr ""
-"Jos %1$s on mielestäsi hyödyllinen, voit tukea jatkuvaa kasvuamme ja "
-"kehitystämme %2$sviiden tähden arvostelulla%3$s. Kiitos!"
+"Jos pidät %1$s hyödyllisenä, voit tukea jatkuvaa kasvuamme ja kehitystämme "
+"antamalla %2$sviiden tähden arvostelun%3$s. Kiitos!"
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/utilities.php:9
+#: templates/admin/utilities.php:19
+#, php-format
+msgid "Calendar Status: %1$sPaused%2$s"
+msgstr "Kalenterin tila: %1$sKeskeytetty%2$s"
+
+#: templates/admin/utilities.php:23
+#, php-format
+msgid "Calendar Status: %1$sActive%2$s"
+msgstr "Kalenterin tila: %1$sAktiivinen%2$s"
+
+#: templates/admin/utilities.php:29
+#, php-format
+msgid ""
+"Use the pause button if you need to temporarily turn off %1$s on your front "
+"end pages."
+msgstr ""
+"Käytä taukopainiketta, jos haluat väliaikaisesti poistaa %1$s käytöstä "
+"etusivultasi."
+
+#: templates/admin/utilities.php:41
+msgid "Resume Calendars"
+msgstr "Jatka kalentereita"
+
+#: templates/admin/utilities.php:52
+msgid "Pause Calendars"
+msgstr "Tauko Kalenterit"
+
+#: templates/admin/utilities.php:64
+#, php-format
+msgid ""
+"No content will be altered, but your calendars will be hidden and no %1$s "
+"asset files (JavaScript, CSS) will be loaded on front-end pages. If you are "
+"using caching via a plugin or through your hosting provider, you may need to "
+"clear the cache after changing this setting."
+msgstr ""
+"Sisältöä ei muuteta, mutta kalenterisi piilotetaan eikä %1$s "
+"resurssitiedostoja (JavaScript, CSS) ladata etusivulle. Jos käytät "
+"välimuistia laajennuksen tai hosting-palveluntarjoajan kautta, sinun on ehkä "
+"tyhjennettävä välimuisti tämän asetuksen muuttamisen jälkeen."
+
+#: templates/admin/utilities.php:73
 #, php-format
 msgid "%1$s Data Cache"
 msgstr "%1$s Tietovälimuisti"
 
-#: templates/admin/utilities.php:16
-msgid "Clear Cached Calendar Data"
-msgstr "Tyhjennä välimuistiin tallennetut kalenteritiedot"
+#: templates/admin/utilities.php:79
+msgid ""
+"This will immediately clear all existing cached calendar data (purge "
+"transients), forcing WordPress to reload all calendars the next time they "
+"are viewed. Caching will then resume as before."
+msgstr ""
+"Tämä tyhjentää välittömästi kaikki olemassa olevat välimuistissa olevat "
+"kalenteritiedot (puhdistaa väliaikaiset tiedot) ja pakottaa WordPressin "
+"lataamaan kaikki kalenterit uudelleen seuraavan kerran, kun niitä katsotaan. "
+"Välimuisti jatkaa sitten toimintaansa kuten aiemmin."
 
-#. translators: 1: Plugin name (do not modify)
-#: templates/admin/utilities.php:20
+#: templates/admin/utilities.php:81
+msgid "Clear Cached Calendar Data"
+msgstr "Tyhjennä välimuistissa olevat kalenteritiedot"
+
+#: templates/admin/utilities.php:89
+msgid ""
+"If you are using a third-party caching plugin, you may need to clear your "
+"site-wide cache after running this utility."
+msgstr ""
+"Jos käytät kolmannen osapuolen välimuistilisäosaa, saatat joutua "
+"tyhjentämään koko sivuston välimuistin tämän apuohjelman suorittamisen "
+"jälkeen."
+
+#: templates/admin/utilities.php:91
 #, php-format
 msgid ""
 "Are you sure? This will reset all %1$s settings to their defaults. Your "
@@ -926,155 +1226,162 @@ msgid ""
 "third-party caching plugin, you may need to clear your site-wide cache after "
 "running this utility."
 msgstr ""
-"Oletko varma? Tämä palauttaa kaikki %1$s-asetukset oletusasetuksiinsa. "
-"Tallennetut kalenterimääritykset ja lyhytkoodit säilyvät, mutta "
-"oletusasetusten palauttaminen saattaa muuttaa kalenterisi ulkoasua. Jos "
-"käytät kolmannen osapuolen välimuistilaajennusta, sinun on ehkä "
-"tyhjennettävä koko sivuston välimuisti tämän apuohjelman suorittamisen "
-"jälkeen."
+"Oletko varma? Tämä palauttaa kaikki %1$s asetukset oletusarvoihinsa. "
+"Tallennetut kalenterimääritykset ja pikakoodit säilyvät, mutta oletusarvojen "
+"palauttaminen voi muuttaa kalentereiden ulkoasua. Jos käytät kolmannen "
+"osapuolen välimuistilaajennusta, saatat joutua tyhjentämään koko sivuston "
+"välimuistin tämän apuohjelman suorittamisen jälkeen."
 
-#. translators: 1: Plugin name (do not modify)
-#: templates/admin/utilities.php:26
+#: templates/admin/utilities.php:95
+msgid "Only clear transients (default)"
+msgstr "Vain selkeät transientit (oletus)"
+
+#: templates/admin/utilities.php:99
+msgid "Also clear all saved ICS feed URLs"
+msgstr "Poista myös kaikki tallennetut ICS-syötteen URL-osoitteet."
+
+#: templates/admin/utilities.php:105
 #, php-format
-msgid "Also reset all %1$s settings"
-msgstr "Nollaa myös kaikki %1$s-asetukset"
-
-#: templates/admin/utilities.php:30
-msgid ""
-"This will immediately clear all existing cached calendar data (purge "
-"transients), forcing WordPress to reload all calendars the next time they "
-"are viewed. Caching will then resume as before."
+msgid "Reset %1$sall%2$s %3$s settings (including transients and feed URLs)"
 msgstr ""
-"Tämä tyhjentää välittömästi kaikki olemassa olevat välimuistiin tallennetut "
-"kalenteritiedot (poista ohimenevät), pakottaen WordPressin lataamaan kaikki "
-"kalenterit uudelleen seuraavan kerran, kun niitä katsellaan. Tämän jälkeen "
-"välimuisti jatkuu kuten ennenkin."
+"Nollaa %1$skaikki%2$s %3$s asetukset (mukaan lukien väliaikaiset ja syötteen "
+"URL-osoitteet)"
 
-#: templates/admin/utilities.php:34
+#: templates/admin/utilities.php:115
 msgid "Last cleared:"
 msgstr "Viimeksi tyhjennetty:"
 
-#: templates/admin/utilities.php:39
+#: templates/admin/utilities.php:121
 msgid "never"
 msgstr "ei koskaan"
 
-#: templates/admin/utilities.php:49
+#: templates/admin/utilities.php:133
 msgid "ICS Feed URL Tester"
 msgstr "ICS-syötteen URL-testaaja"
 
-#: templates/admin/utilities.php:51
+#: templates/admin/utilities.php:135
 msgid ""
 "If you are concerned that the plugin is not properly retrieving your feed, "
 "you can test the URL here."
 msgstr ""
-"Jos olet huolissasi siitä, että lisäosa ei hae syötettäsi oikein, voit "
+"Jos olet huolissasi siitä, että laajennus ei hae syötteitäsi oikein, voit "
 "testata URL-osoitteen täällä."
 
-#: templates/admin/utilities.php:58
+#: templates/admin/utilities.php:141 templates/admin/utilities.php:142
 msgid "Enter feed URL..."
-msgstr "Syötteen URL-osoite..."
+msgstr "Syötä syötteen URL-osoite..."
 
-#: templates/admin/utilities.php:58
+#: templates/admin/utilities.php:143
 msgid "Test URL"
-msgstr "Testaa URL-osoite"
+msgstr "Testi-URL"
 
-#: templates/admin/utilities.php:66
+#: templates/admin/utilities.php:151
 msgid "Results:"
 msgstr "Tulokset:"
 
-#. translators: 1: Dynamic value
-#: templates/admin/utilities.php:73
+#: templates/admin/utilities.php:155
 #, php-format
 msgid "%1$s received."
 msgstr "%1$s vastaanotettu."
 
-#: templates/admin/utilities.php:82
+#: templates/admin/utilities.php:163
 msgid "This appears to be a valid ICS feed URL."
 msgstr "Tämä näyttää olevan kelvollinen ICS-syötteen URL-osoite."
 
-#: templates/admin/utilities.php:87
+#: templates/admin/utilities.php:163 templates/admin/utilities.php:168
+msgid "unknown"
+msgstr "tuntematon"
+
+#: templates/admin/utilities.php:168
 msgid "This does not appear to be a valid ICS feed URL."
 msgstr "Tämä ei näytä olevan kelvollinen ICS-syötteen URL-osoite."
 
-#: templates/admin/utilities.php:92
+#: templates/admin/utilities.php:173
 msgid "Could not retrieve data from the requested URL."
-msgstr "Tietoja ei voitu noutaa pyydetystä URL-osoitteesta."
+msgstr "Pyydettyä URL-osoitetta koskevia tietoja ei voitu hakea."
 
-#: templates/admin/utilities.php:97
+#: templates/admin/utilities.php:178
 msgid ""
 "An unknown error occurred while attempting to retrieve the requested URL."
-msgstr "Tuntematon virhe yritettäessä noutaa pyydettyä URL-osoitetta."
+msgstr "Pyydetyn URL-osoitteen hakemisessa tapahtui tuntematon virhe."
 
-#: templates/admin/utilities.php:132
+#: templates/admin/utilities.php:211
 msgid ""
 "Please copy the following text and include it in your message when emailing "
 "support."
 msgstr ""
-"Kopioi seuraava teksti ja sisällytä se viestiisi, kun lähetät tukea "
-"sähköpostitse."
+"Kopioi seuraava teksti ja liitä se viestiisi, kun lähetät sähköpostia "
+"tukipalveluun."
 
-#. translators: 1: Plugin name (do not translate)
-#: templates/admin/utilities.php:135
+#: templates/admin/utilities.php:214
 #, php-format
 msgid ""
 "Also please include the %1$s shortcode exactly as you have it entered on the "
 "affected page."
 msgstr ""
-"Sisällytä myös %1$s-lyhytkoodi täsmälleen sellaisena kuin se on syötetty "
+"Lisää myös %1$s lyhytkoodi täsmälleen sellaisena kuin se on syötetty "
 "kyseiselle sivulle."
 
-#: templates/admin/utilities.php:136
-msgid ""
-"For your site security please do NOT post the System Report in the support "
-"forums."
-msgstr ""
-"Sivustosi turvallisuuden vuoksi ÄLÄ lähetä Järjestelmäraporttia "
-"tukifoorumeille."
-
-#: templates/calendar-basic.php:55 templates/calendar-list.php:57
+#: templates/calendar-basic.php:60 templates/calendar-list.php:62
 msgid "No events found."
 msgstr "Tapahtumia ei löytynyt."
 
-#: templates/calendar-basic.php:76 templates/calendar-list.php:78
+#: templates/calendar-basic.php:86 templates/calendar-list.php:88
 msgid "Previous Page"
 msgstr "Edellinen sivu"
 
-#: templates/calendar-basic.php:77 templates/calendar-list.php:79
+#: templates/calendar-basic.php:87 templates/calendar-list.php:89
 msgid "Next Page"
 msgstr "Seuraava sivu"
 
-#: templates/calendar-list.php:287 templates/calendar-month.php:202
-#: templates/calendar-week.php:211
+#: templates/calendar-list.php:297 templates/calendar-month.php:215
+#: templates/calendar-week.php:222
 msgid "All Day"
-msgstr "Koko päivän"
+msgstr "Koko päivä"
 
-#: templates/calendar-month.php:58
+#: templates/calendar-month.php:61
+msgid "Previous Month"
+msgstr "Edellinen kuukausi"
+
+#: templates/calendar-month.php:62
+msgid "Next Month"
+msgstr "Seuraava kuukausi"
+
+#: templates/calendar-month.php:63
 msgid "Today"
 msgstr "Tänään"
 
-#: templates/calendar-month.php:286 templates/calendar-week.php:298
+#: templates/calendar-month.php:69 templates/calendar-month.php:70
+msgid "Month selection"
+msgstr "Kuukauden valinta"
+
+#: templates/calendar-month.php:299 templates/calendar-week.php:309
 msgid "No events."
 msgstr "Ei tapahtumia."
 
-#: templates/calendar-month.php:298
+#: templates/calendar-month.php:311
 msgid "No additional events this month."
-msgstr "Ei muita tapahtumia tässä kuussa."
+msgstr "Tässä kuussa ei ole muita tapahtumia."
 
-#: templates/calendar-week.php:66
+#: templates/calendar-week.php:70 templates/calendar-week.php:71
+msgid "Week selection"
+msgstr "Viikon valinta"
+
+#: templates/calendar-week.php:72
 msgid "Last week"
 msgstr "Viime viikolla"
 
-#: templates/calendar-week.php:67
+#: templates/calendar-week.php:73
 msgid "This week"
-msgstr "Tällä viikolla"
+msgstr "Tämä viikko"
 
-#: templates/calendar-week.php:68
+#: templates/calendar-week.php:74
 msgid "Next week"
 msgstr "Seuraava viikko"
 
 #. Plugin Name of the plugin/theme
 msgid "ICS Calendar"
-msgstr "ICS Calendar"
+msgstr "ICS-kalenteri"
 
 #. Plugin URI of the plugin/theme
 #. Author URI of the plugin/theme
@@ -1087,13 +1394,86 @@ msgid ""
 "into a seamlessly integrated, auto-updating, zero-maintenance WordPress "
 "experience."
 msgstr ""
-"Tee Google-kalenteristasi, Microsoft Office 365:stä tai Applen iCloud-"
-"kalenterista saumattomasti integroitu, automaattisesti päivittyvä ja "
-"huoltovapaa WordPress-kokemus."
+"Muuta Google-kalenterisi, Microsoft Office 365 -kalenterisi tai Apple iCloud "
+"-kalenterisi saumattomasti integroiduksi, automaattisesti päivittyvaksi ja "
+"huoltovapaaksi WordPress-kokemukseksi."
 
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid ""
+#~ "Configure all calendar settings with an easy visual interface... no need "
+#~ "to manually type shortcodes."
+#~ msgstr ""
+#~ "Määritä kaikki kalenterin asetukset helppokäyttöisen visuaalisen "
+#~ "käyttöliittymän avulla... sinun ei tarvitse kirjoittaa lyhytkoodeja "
+#~ "manuaalisesti."
+
+#~ msgid ""
+#~ "New ways to display your calendar including Full, Up Next, Masonry, Month "
+#~ "with Sidebar, Widget, and more. Additional capabilities are added to the "
+#~ "core Month, Basic, List and Week views."
+#~ msgstr ""
+#~ "Uusia tapoja näyttää kalenterisi, kuten Täysi, Seuraavaksi, Masonry, "
+#~ "Kuukausi sivupalkilla, Widget ja paljon muuta. Lisäominaisuuksia on "
+#~ "lisätty ydintoimintoihin Kuukausi, Perus, Lista ja Viikko."
+
+#~ msgid ""
+#~ "Easy-to-use tools to completely customize your calendar colors, "
+#~ "typography and more."
+#~ msgstr ""
+#~ "Helppokäyttöiset työkalut kalenterin värien, typografian ja muiden "
+#~ "ominaisuuksien täydelliseen mukauttamiseen."
+
+#~ msgid "Go PRO!"
+#~ msgstr "Siirry PRO-versioon!"
+
+#, php-format
+#~ msgid "Also reset all %1$s settings"
+#~ msgstr "Nollaa myös kaikki %1$s asetukset"
+
+#~ msgid ""
+#~ "Easily modify your calendar color palettes, fonts, and more, site-wide."
+#~ msgstr ""
+#~ "Muokkaa helposti kalenterin väripaletteja, fontteja ja muuta, koko "
+#~ "sivuston laajuisesti."
+
+#, php-format
+#~ msgid ""
+#~ "Inverts color palette (light colors on a dark background). %1$sNote:%2$s "
+#~ "Dark mode also automatically applies style changes similar to the %3$s "
+#~ "and %4$s shortcode parameters, so you do not need to include them in your "
+#~ "shortcode."
+#~ msgstr ""
+#~ "Invertoi väripaletin (vaaleat värit tummalla pohjalla). %1$sHuomautus:"
+#~ "%2$s Tumma tila soveltaa myös automaattisesti samanlaisia tyylimuutoksia "
+#~ "kuin %3$s- ja %4$s-lyhytkoodiparametrit, joten sinun ei tarvitse "
+#~ "sisällyttää niitä lyhytkoodiin."
+
+#~ msgid ""
+#~ "When checked, all calendars will render via AJAX (asynchronously after "
+#~ "the page loads). This is especially useful in conjunction with other "
+#~ "caching plugins, or if your calendars contain a large number of events. "
+#~ "Normally, calendar data is sent directly in the HTML of the initial page "
+#~ "load unless AJAX has been specified in the shortcode."
+#~ msgstr ""
+#~ "Kun tämä on valittuna, kaikki kalenterit renderöidään AJAXin kautta "
+#~ "(asynkronisesti sivun lataamisen jälkeen). Tämä on erityisen hyödyllistä "
+#~ "yhdessä muiden välimuistiliitännäisten kanssa tai jos kalentereissasi on "
+#~ "paljon tapahtumia. Normaalisti kalenteritiedot lähetetään suoraan "
+#~ "HTML:ssä sivun ensimmäisen latauksen yhteydessä, ellei AJAXia ole "
+#~ "määritetty lyhytkoodissa."
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Sekalaiset"
+
+#~ msgid ""
+#~ "For your site security please do NOT post the System Report in the "
+#~ "support forums."
+#~ msgstr ""
+#~ "Sivustosi turvallisuuden vuoksi ÄLÄ lähetä Järjestelmäraporttia "
+#~ "tukifoorumeille."
 
 #~ msgid "Permanent feed URL mask IDs"
 #~ msgstr "Pysyvän syötteen URL-osoitteen maskin tunnukset"

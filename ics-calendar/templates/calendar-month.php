@@ -1,4 +1,9 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+
+// Don't load directly
+if (!defined('ABSPATH')) { exit; }
+
 // Require object
 if (empty($ics_data)) { return false; }
 
@@ -53,15 +58,16 @@ if ($args['toggle'] === 'lightbox') {
 	if (!empty($args['monthnav']) && in_array($args['monthnav'], array('arrows','both','compact'))) {
 		?>
 		<nav class="ics-calendar-arrow-nav" style="display: none;">
-			<a href="#" class="prev" data-goto=""><span class="prev-icon">&larr;</span> <span class="prev-text"></span></a>
-			<a href="#" class="next" data-goto=""><span class="next-text"></span> <span class="next-icon">&rarr;</span></a>
-			<a href="#" class="today" data-goto="<?php echo esc_attr(r34ics_date('Ym')); ?>"><span class="today-text"><?php esc_html_e('Today', 'ics-calendar'); ?></span></a>
+			<a href="#" class="prev" data-goto="" title="<?php esc_attr_e('Previous Month', 'ics-calendar'); ?>"><span class="prev-icon">&larr;</span> <span class="prev-text"></span></a>
+			<a href="#" class="next" data-goto="" title="<?php esc_attr_e('Next Month', 'ics-calendar'); ?>"><span class="next-text"></span> <span class="next-icon">&rarr;</span></a>
+			<a href="#" class="today" data-goto="<?php echo esc_attr(r34ics_date('Ym')); ?>" title="<?php esc_attr_e('Today', 'ics-calendar'); ?>"><span class="today-text"><?php esc_html_e('Today', 'ics-calendar'); ?></span></a>
 		</nav>
 		<?php
 	}
 	?>
 
-	<select class="ics-calendar-select<?php if (!empty($args['monthnav']) &&  in_array($args['monthnav'], array('arrows','none'))) { echo ' hidden'; } ?>" style="display: none;" autocomplete="off" data-this-month="<?php echo esc_attr($this_ym); ?>">
+	<label class="screen-reader-text" for="<?php echo esc_attr($ics_data['guid']); ?>-select"><?php esc_html_e('Month selection', 'ics-calendar'); ?></label>
+	<select role="listbox" aria-label="<?php esc_attr_e('Month selection', 'ics-calendar'); ?>" id="<?php echo esc_attr($ics_data['guid']); ?>-select" class="ics-calendar-select<?php if (!empty($args['monthnav']) &&  in_array($args['monthnav'], array('arrows','none'))) { echo ' hidden'; } ?>" style="display: none;" autocomplete="off" data-this-month="<?php echo esc_attr($this_ym); ?>">
 		<?php
 		// Build list from earliest to latest month
 		foreach (array_keys((array)$ics_data['events']) as $year) {
@@ -78,6 +84,13 @@ if ($args['toggle'] === 'lightbox') {
 		}
 		?>
 	</select>
+	
+	<?php
+	// Print
+	if (!empty($args['print'])) {
+		echo wp_kses_post($R34ICS->print_button_html($args));
+	}
+	?>
 
 	<!-- Toggle show/hide past events on mobile -->
 	<p class="ics-calendar-past-events-toggle phone_only inline_block" aria-hidden="true"><a href="#" data-ics-calendar-action="show-past-events"><?php esc_html_e('Show past events', 'ics-calendar'); ?></a></p>
