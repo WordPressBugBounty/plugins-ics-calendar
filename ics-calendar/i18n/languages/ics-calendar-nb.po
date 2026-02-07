@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-01-07 15:20-0600\n"
-"PO-Revision-Date: 2026-01-07 15:20-0600\n"
+"POT-Creation-Date: 2026-02-04 13:07-0600\n"
+"PO-Revision-Date: 2026-02-04 13:07-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: nb\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:307
+#: class-r34ics.php:310
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -31,7 +31,7 @@ msgstr ""
 "sidene. Du kan gjenoppta visningen av kalendere under fanen %4$sVerktøy%5$s "
 "%6$sher%7$s."
 
-#: class-r34ics.php:316
+#: class-r34ics.php:319
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -42,7 +42,7 @@ msgstr ""
 "Fordi ICS Calendar er ment å kjøre på en webserver, kan det hende at enkelte "
 "funksjoner ikke er tilgjengelige eller ikke fungerer som de skal."
 
-#: class-r34ics.php:325
+#: class-r34ics.php:328
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -58,7 +58,7 @@ msgstr ""
 "til byen nærmest din plassering, i samme tidssone, for riktig tidsvisning. "
 "Se vår %6$sdokumentasjon%7$s for mer informasjon om dette problemet."
 
-#: class-r34ics.php:337
+#: class-r34ics.php:340
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
@@ -67,7 +67,7 @@ msgstr ""
 "Viktig! Din %1$s konfigurasjon ser ut til å overskride "
 "kildekalenderleverandørens hastighetsbegrensninger."
 
-#: class-r34ics.php:339
+#: class-r34ics.php:342
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
@@ -76,7 +76,7 @@ msgstr ""
 "Hvis kalenderne dine ikke lastes inn riktig, må du sjekke innstillingene og "
 "bruken av %1$s:"
 
-#: class-r34ics.php:341
+#: class-r34ics.php:344
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
@@ -85,7 +85,7 @@ msgstr ""
 "Ikke bruk %1$s i kortkodene dine. Denne funksjonen er kun ment for "
 "feilsøking og bør ikke være aktivert permanent."
 
-#: class-r34ics.php:343
+#: class-r34ics.php:346
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -96,7 +96,7 @@ msgstr ""
 "(12 timer) eller mer for å redusere hyppigheten av forespørsler til "
 "leverandøren. (Se merknad nedenfor.)"
 
-#: class-r34ics.php:345
+#: class-r34ics.php:348
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
@@ -105,7 +105,7 @@ msgstr ""
 "Unngå å inkludere et stort antall feeds (10 eller flere) fra samme "
 "leverandør i en enkelt %1$s kortkode."
 
-#: class-r34ics.php:347
+#: class-r34ics.php:350
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -114,7 +114,7 @@ msgstr ""
 "Sett ICS-kalenderen midlertidig på pause på frontend-sidene dine ved hjelp "
 "av verktøyet %1$sPause Calendars%2$s. (24–48 timer anbefales.)"
 
-#: class-r34ics.php:349
+#: class-r34ics.php:352
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -129,7 +129,7 @@ msgstr ""
 "blokkering av IP-adressen til webserveren din, eller muligens hele hosting-"
 "nettverket ditt, av kalenderleverandøren."
 
-#: class-r34ics.php:351
+#: class-r34ics.php:354
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -143,7 +143,7 @@ msgstr ""
 "%1$ssupportskjema%2$s for å kontakte oss, og husk å legge ved "
 "%3$ssystemrapporten%4$s."
 
-#: class-r34ics.php:353
+#: class-r34ics.php:356
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -156,7 +156,7 @@ msgstr ""
 "%3$s Husk at du kan bruke verktøyet %4$sClear Cached Calendar Data%5$s til å "
 "tømme hurtigbufferen manuelt når som helst, hvis nødvendig."
 
-#: class-r34ics.php:374
+#: class-r34ics.php:377
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -174,11 +174,11 @@ msgstr ""
 "standardinnstillingene, kan du aktivere %8$salternativet på "
 "%9$sinnstillingssiden%10$s."
 
-#: class-r34ics.php:374 templates/admin/settings.php:183
+#: class-r34ics.php:377 templates/admin/settings.php:183
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Bruk nye standardinnstillinger for parametere (v.10.6)"
 
-#: class-r34ics.php:386
+#: class-r34ics.php:389
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -193,7 +193,7 @@ msgstr ""
 "du støter på nye problemer etter oppgradering til versjon 11 eller senere, "
 "kan du besøke %4$sWordPress Support Forums%5$s for å få hjelp."
 
-#: class-r34ics.php:398
+#: class-r34ics.php:401
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -206,7 +206,7 @@ msgstr ""
 "Tøm eventuelle cache-plugins du bruker, for å sikre at kalenderne lastes "
 "riktig med den nye metoden."
 
-#: class-r34ics.php:411
+#: class-r34ics.php:414
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -219,46 +219,46 @@ msgstr ""
 "grensesnittet. Se %4$sendringsloggen%5$s for mer informasjon om denne "
 "oppdateringen."
 
-#: class-r34ics.php:460 templates/admin/admin.php:24
+#: class-r34ics.php:463 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
 msgid "Getting Started"
 msgstr "Kom i gang"
 
-#: class-r34ics.php:461 class-r34ics.php:2365 templates/admin/admin.php:28
+#: class-r34ics.php:464 class-r34ics.php:2384 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: class-r34ics.php:462 templates/admin/admin.php:29
+#: class-r34ics.php:465 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "Utseende"
 
-#: class-r34ics.php:463 templates/admin/admin.php:33
+#: class-r34ics.php:466 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "Verktøy"
 
-#: class-r34ics.php:464 templates/admin/admin.php:37
+#: class-r34ics.php:467 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "Hent systemrapport"
 
-#: class-r34ics.php:465 templates/admin/admin.php:41
+#: class-r34ics.php:468 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "Brukerstøtte"
 
-#: class-r34ics.php:468
+#: class-r34ics.php:471
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "Oppgrader til %1$s!"
 
-#: class-r34ics.php:498
+#: class-r34ics.php:501
 msgid "Show/hide all"
 msgstr "Vis/skjul alt"
 
-#: class-r34ics.php:770
+#: class-r34ics.php:774
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -272,36 +272,36 @@ msgstr ""
 "flere URL-adresser, kan du også prøve å bruke pipe-tegnet i stedet. Berørt "
 "URL:"
 
-#: class-r34ics.php:1214
+#: class-r34ics.php:1218
 msgid "Hide past events"
 msgstr "Skjul tidligere hendelser"
 
-#: class-r34ics.php:1215 templates/calendar-month.php:96
+#: class-r34ics.php:1219 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Vis tidligere hendelser"
 
-#: class-r34ics.php:1296
+#: class-r34ics.php:1300
 msgid "Contact:"
 msgstr "Kontakt:"
 
-#: class-r34ics.php:1302
+#: class-r34ics.php:1306
 msgid "Resources:"
 msgstr "Ressurser:"
 
-#: class-r34ics.php:1312
+#: class-r34ics.php:1316
 msgid "Click for more..."
 msgstr "Klikk for mer..."
 
-#: class-r34ics.php:1346
+#: class-r34ics.php:1350
 msgid "Save to your calendar"
 msgstr "Lagre i kalenderen din"
 
-#: class-r34ics.php:1449
+#: class-r34ics.php:1453
 msgid "Cancelled"
 msgstr "Kansellert"
 
-#: class-r34ics.php:1562
+#: class-r34ics.php:1566
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -309,11 +309,11 @@ msgstr ""
 "Den gamle parser-alternativet er utdatert og vil bli fjernet i en fremtidig "
 "oppdatering."
 
-#: class-r34ics.php:1641
+#: class-r34ics.php:1657
 msgid "Print"
 msgstr "Skriv ut"
 
-#: class-r34ics.php:1898
+#: class-r34ics.php:1917
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -321,7 +321,7 @@ msgstr ""
 "Kortkodeattributtet «currentweek» er utgått. Bruk i stedet view=\"week\" i "
 "kortkoden din."
 
-#: class-r34ics.php:1902
+#: class-r34ics.php:1921
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -329,7 +329,7 @@ msgstr ""
 "Kortkodeattributtet «legendinline» er utgått. Bruk i stedet "
 "legendstyle=\"inline\" i kortkoden din."
 
-#: class-r34ics.php:2239
+#: class-r34ics.php:2258
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -338,7 +338,7 @@ msgstr ""
 "%1$s har %2$sgjenopptatt%3$s visning av kalendere på frontend-sider. Hvis "
 "nettstedet ditt bruker et cache-plugin, må du kanskje tømme cachen."
 
-#: class-r34ics.php:2247
+#: class-r34ics.php:2266
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -347,21 +347,21 @@ msgstr ""
 "%1$s har %2$sstanset%3$s visningen av kalendere på frontend-sidene. Hvis "
 "nettstedet ditt bruker et cache-plugin, må du kanskje tømme cachen."
 
-#: class-r34ics.php:2259
+#: class-r34ics.php:2278
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Fjernet %1$s %2$s forbigående feil."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2285
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Ingen %1$s transienter ble funnet."
 
-#: class-r34ics.php:2275
+#: class-r34ics.php:2294
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Alle lagrede ICS-feed-URL-er er slettet."
 
-#: class-r34ics.php:2282
+#: class-r34ics.php:2301
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -370,7 +370,7 @@ msgstr ""
 "Alle %1$s innstillinger er tilbakestilt til standardinnstillingene, og "
 "lagrede ICS-feed-URL-er er slettet."
 
-#: class-r34ics.php:2365
+#: class-r34ics.php:2384
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -380,11 +380,11 @@ msgstr ""
 "påloggingsinformasjon. Prøv å slå av alternativet %1$s under fanen %2$s "
 "ovenfor."
 
-#: class-r34ics.php:2365 templates/admin/settings.php:59
+#: class-r34ics.php:2384 templates/admin/settings.php:59
 msgid "Use legacy feed request method"
 msgstr "Bruk eldre feed-forespørselsmetode"
 
-#: class-r34ics.php:2371
+#: class-r34ics.php:2390
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -400,17 +400,17 @@ msgstr ""
 "%4$sbrukerveiledning%5$s for instruksjoner om hvordan du får tak i den "
 "riktige dynamiske feed-URL-adressen."
 
-#: class-r34ics.php:2377
+#: class-r34ics.php:2396
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Feil: Kunne ikke løse IP-adressen for %1$s."
 
-#: class-r34ics.php:2380
+#: class-r34ics.php:2399
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Løst IP-adresse for %1$s:"
 
-#: class-r34ics.php:2405
+#: class-r34ics.php:2424
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -419,7 +419,7 @@ msgstr ""
 "%1$sUtseende oppdatert.%2$s Du må kanskje oppdatere siden for å se noen "
 "endringer."
 
-#: class-r34ics.php:2465
+#: class-r34ics.php:2484
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -427,7 +427,7 @@ msgstr ""
 "Teksten som er angitt i feltet «Standard kortkode» er ikke en gyldig "
 "kortkode og ble ikke lagret."
 
-#: class-r34ics.php:2508
+#: class-r34ics.php:2527
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -436,11 +436,15 @@ msgstr ""
 "%1$sInnstillingene er oppdatert.%2$s Du må kanskje oppdatere siden for å se "
 "endringene."
 
-#: class-r34ics.php:2804
+#: class-r34ics.php:2840
 msgid "calendar event"
 msgstr "kalenderhendelse"
 
-#: class-r34ics.php:3245
+#: class-r34ics.php:2846
+msgid "Event download failed."
+msgstr "Nedlastingen av arrangementet mislyktes."
+
+#: class-r34ics.php:3285
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -460,51 +464,67 @@ msgstr ""
 "Oppdater nettstedet ditt til en nyere versjon av WordPress så snart som "
 "mulig."
 
-#: functions.php:1116 functions.php:1124 functions.php:1133
+#: functions.php:1062
+#, php-format
+msgid ""
+"An error occurred with %1$s while attempting to copy language translation "
+"files. The required PHP filesystem function %2$s is unavailable. This is "
+"required to address a conflict with certain translation customization "
+"plugins such as %3$s. As a result, %1$s translations may not load properly "
+"while the conflicting translation plugin is active."
+msgstr ""
+"Det oppstod en feil med %1$s under forsøk på å kopiere "
+"språkoversettelsesfiler. Den nødvendige PHP-filsystemfunksjonen %2$s er ikke "
+"tilgjengelig. Dette er nødvendig for å løse en konflikt med visse "
+"oversettelsestilpasningsplugins, for eksempel %3$s. Som et resultat kan det "
+"hende at %1$s-oversettelser ikke lastes inn riktig mens den konfliktfylte "
+"oversettelsespluginen er aktiv."
+
+#: functions.php:1185 functions.php:1193 functions.php:1202
 msgid "Map"
 msgstr "Kart"
 
-#: functions.php:1434
+#: functions.php:1509
 msgid "Recurring event"
 msgstr "Gjentagende arrangement"
 
-#: functions.php:1439
+#: functions.php:1514
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Gjentas hvert %1$s år"
 
-#: functions.php:1439
+#: functions.php:1514
 msgid "Recurs yearly"
 msgstr "Gjentas årlig"
 
-#: functions.php:1442
+#: functions.php:1517
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Gjentas hver %1$s måned"
 
-#: functions.php:1442
+#: functions.php:1517
 msgid "Recurs monthly"
 msgstr "Gjentas månedlig"
 
-#: functions.php:1445
+#: functions.php:1520
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Gjentas hver %1$s uke"
 
-#: functions.php:1445
+#: functions.php:1520
 msgid "Recurs weekly"
 msgstr "Gjentas ukentlig"
 
-#: functions.php:1448
+#: functions.php:1523
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Gjentas hver %1$s dag"
 
-#: functions.php:1448
+#: functions.php:1523
 msgid "Recurs daily"
 msgstr "Gjentas daglig"
 
-#: functions.php:1621
+#: functions.php:1696
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -517,7 +537,7 @@ msgstr ""
 "Kalenderen din vises kanskje ikke riktig som følge av dette. Fjern den "
 "klikkbare lenken i kortkoden."
 
-#: functions.php:1950
+#: functions.php:2025
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funksjonen r34ics_url_get_contents() støttes ikke lenger."
 
@@ -686,7 +706,7 @@ msgstr ""
 msgid "Customization"
 msgstr "Tilpasning"
 
-#: templates/admin/admin.php:80
+#: templates/admin/admin.php:82
 #, php-format
 msgid ""
 "Easy-to-use tools to completely customize your calendar colors, typography "
@@ -701,11 +721,11 @@ msgstr ""
 "individuelt. Velg mellom temafonter, systemfonter eller mer enn 20 "
 "inkluderte åpne kildekodefonter. %1$sLær mer...%2$s"
 
-#: templates/admin/admin.php:81
+#: templates/admin/admin.php:84
 msgid "ICS Events"
 msgstr "ICS-arrangementer"
 
-#: templates/admin/admin.php:84
+#: templates/admin/admin.php:87
 #, php-format
 msgid ""
 "Turns %1$s into a full calendar management system. Create and edit new "
@@ -716,11 +736,11 @@ msgstr ""
 "nye hendelser direkte i WordPress, og integrer dem sømløst med eksisterende "
 "eksterne ICS-feeder. %2$sLær mer...%3$s"
 
-#: templates/admin/admin.php:86
+#: templates/admin/admin.php:89
 msgid "Localized Admin Interface"
 msgstr "Lokalisert administrasjonsgrensesnitt"
 
-#: templates/admin/admin.php:89
+#: templates/admin/admin.php:92
 #, php-format
 msgid ""
 "All %1$s admin pages are translated into dozens of languages, including "
@@ -735,24 +755,24 @@ msgstr ""
 "nederlandsk, polsk, portugisisk, rumensk, russisk, slovakisk, serbisk, "
 "svensk, tyrkisk, ukrainsk og kinesisk."
 
-#: templates/admin/admin.php:93
+#: templates/admin/admin.php:96
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "Besøk %1$s for å lære mer."
 
-#: templates/admin/admin.php:97
+#: templates/admin/admin.php:100
 msgid "Calendar Builder screenshot"
 msgstr "Skjermbilde av Kalenderbygger"
 
-#: templates/admin/admin.php:98
+#: templates/admin/admin.php:101
 msgid "Appearance screenshot"
 msgstr "Skjermbilde av utseende"
 
-#: templates/admin/admin.php:102
+#: templates/admin/admin.php:105
 msgid "Available now!"
 msgstr "Tilgjengelig nå!"
 
-#: templates/admin/admin.php:107
+#: templates/admin/admin.php:110
 #, php-format
 msgid "Get %1$s!"
 msgstr "Få %1$s!"

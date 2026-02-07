@@ -1036,16 +1036,37 @@ function r34ics_i18n_symlinks() {
 		$lang = substr($locale, 0, 2);
 		$path = plugin_dir_path(__FILE__) . 'i18n/languages/';
 		$files = list_files($path, 1);
+		$symlink_failed = false;
 
 		foreach ((array)$files as $file) {
 			if (strpos($file, 'ics-calendar-' . $lang) !== false && strpos($file, 'ics-calendar-' . $locale) === false) {
 				$new_filename = str_replace('ics-calendar-' . $lang, 'ics-calendar-' . $locale, pathinfo($file, PATHINFO_BASENAME));
 				$new_filepath = WP_LANG_DIR . '/plugins/' . $new_filename;
-				if (!file_exists($new_filepath)) {
-					symlink($file, $new_filepath);
+				try {
+					// The symlink() function may not be available on some servers!
+					if (function_exists('symlink') && !file_exists($new_filepath)) { symlink($file, $new_filepath); }
+					// If symlink() doesn't exist, we need to copy even if the file exists, to update
+					else { copy($file, $new_filepath); }
 				}
+				catch (Exception $e) { $symlink_failed = true; }
 			}
 		}
+
+		// Write admin notice if symlink failed
+		// Note: ironically, translation won't work for this notice!
+		if (!empty($symlink_failed)) {
+			global $r34ics_deferred_admin_notices;
+			if (empty($r34ics_deferred_admin_notices['r34ics_i18n_symlinks_failure'])) {
+				$r34ics_deferred_admin_notices['r34ics_i18n_symlinks_failure'] = array(
+					'content' => '<p>' .
+					sprintf(esc_html__('An error occurred with %1$s while attempting to copy language translation files. The required PHP filesystem function %2$s is unavailable. This is required to address a conflict with certain translation customization plugins such as %3$s. As a result, %1$s translations may not load properly while the conflicting translation plugin is active.', 'ics-calendar'), '<strong>ICS Calendar</strong>', '<code>symlink()</code>', '<strong>Loco Translate</strong>') .
+					'</p>',
+					'status' => 'error',
+					'dismissible' => 'forever',
+				);
+			}
+			update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices, false);
+		}		
 	}
 }
 

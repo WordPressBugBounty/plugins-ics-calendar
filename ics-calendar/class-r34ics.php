@@ -3137,7 +3137,7 @@ if (!class_exists('R34ICS')) {
 				'headers' => $http_headers,
 				'httpversion' => '1.1',
 				'method' => 'GET',
-				'redirection' => 5,
+				'redirection' => 0, // Use `r34ics_url_get_contents_request_args` filter to override
 				'sslcertificates' => ABSPATH . WPINC . '/certificates/ca-bundle.crt',
 				'sslverify' => false,
 				'timeout' => 30,
@@ -3163,7 +3163,7 @@ if (!class_exists('R34ICS')) {
 			}
 					
 			/**
-			 * Follow rewrites
+			 * Follow redirections
 			 * If possible, we check for a 301 or 302 response code, falling back on certain text strings contained in the response
 			 * Outlook rewrites may include the string '">Found</a>' in the output
 			 * Most other feeds (e.g. Google Calendar) will include 'Moved Permanently' in the output

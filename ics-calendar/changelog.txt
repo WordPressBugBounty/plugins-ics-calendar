@@ -1,5 +1,13 @@
 === ICS Calendar Changelog ===
 
+= 12.0.4.1 - 2026.02.07 =
+
+* Miscellaneous:
+  * Reverted the `redirection` change introduced in 12.0.4, as it seems to be breaking the custom redirection logic ICS Calendar already included. In the rare cases where a feed _does_ need `redirection` to be set to something other than 0, this can be done with custom PHP using the `r34ics_url_get_contents_request_args` filter.
+* i18n:
+  * Added workaround logic for edge case with Loco Translate conflict fix (introduced in 12.0.3), for servers where the PHP `symlink()` function is not available. The plugin now checks for `symlink()`, falls back to `copy()` if needed, and if both fail, it displays an admin notice addressing the conflict with Loco Translate.
+  * Updated translation strings.
+
 = 12.0.4 - 2026.02.02 =
 
 * Print Button:

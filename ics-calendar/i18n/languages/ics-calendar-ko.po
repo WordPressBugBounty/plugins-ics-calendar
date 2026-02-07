@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-01-07 15:20-0600\n"
-"PO-Revision-Date: 2026-01-07 15:21-0600\n"
+"POT-Creation-Date: 2026-02-04 13:07-0600\n"
+"PO-Revision-Date: 2026-02-04 13:07-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:307
+#: class-r34ics.php:310
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -31,7 +31,7 @@ msgstr ""
 "지 않습니다. %4$s유틸리티%5$s 탭에서 %6$s여기%7$s를 클릭하여 캘린더 제공을 재"
 "개할 수 있습니다."
 
-#: class-r34ics.php:316
+#: class-r34ics.php:319
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -42,7 +42,7 @@ msgstr ""
 "Calendar는 웹 서버에서 실행되도록 설계되었으므로 일부 기능이 사용 불가하거나 "
 "정상적으로 작동하지 않을 수 있습니다."
 
-#: class-r34ics.php:325
+#: class-r34ics.php:328
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -58,7 +58,7 @@ msgstr ""
 "와 동일한 시간대에 속한 가장 가까운 도시로 변경해 주십시오. 이 문제에 대한 추"
 "가 정보는 당사 %6$s문서%7$s를 참조하십시오."
 
-#: class-r34ics.php:337
+#: class-r34ics.php:340
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
@@ -67,7 +67,7 @@ msgstr ""
 "중요! 귀하의 %1$s 구성이 소스 캘린더 공급자의 속도 제한을 초과하는 것으로 보"
 "입니다."
 
-#: class-r34ics.php:339
+#: class-r34ics.php:342
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
@@ -75,7 +75,7 @@ msgid ""
 msgstr ""
 "캘린더가 제대로 로드되지 않는 경우, %1$s 설정 및 사용 방법을 확인해 주십시오:"
 
-#: class-r34ics.php:341
+#: class-r34ics.php:344
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
@@ -84,7 +84,7 @@ msgstr ""
 "숏코드에 %1$s을 사용하지 마십시오. 이 기능은 문제 해결 목적으로만 제공되며, "
 "영구적으로 활성화된 상태로 두어서는 안 됩니다."
 
-#: class-r34ics.php:343
+#: class-r34ics.php:346
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -94,7 +94,7 @@ msgstr ""
 "%1$s %2$s일시적(캐시) 만료%3$s 설정을 %4$s43200%5$s (12시간) 이상으로 증가시"
 "켜 공급자에 대한 요청 빈도를 줄이십시오. (아래 참고 사항 참조)"
 
-#: class-r34ics.php:345
+#: class-r34ics.php:348
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
@@ -102,7 +102,7 @@ msgid ""
 msgstr ""
 "동일한 공급자의 피드를 단일 %1$s 숏코드에 다수(10개 이상) 포함하지 마십시오."
 
-#: class-r34ics.php:347
+#: class-r34ics.php:350
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -111,7 +111,7 @@ msgstr ""
 "%1$s일정 일시 중지%2$s 유틸리티를 사용하여 프런트엔드 페이지에서 ICS 캘린더"
 "를 일시적으로 중지하십시오. (24~48시간 권장)"
 
-#: class-r34ics.php:349
+#: class-r34ics.php:352
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -125,7 +125,7 @@ msgstr ""
 "더 제공자에 의해 웹 서버 IP 주소 또는 전체 호스팅 네트워크에 대한 일시적 차단"
 "이 발생할 수 있습니다."
 
-#: class-r34ics.php:351
+#: class-r34ics.php:354
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -138,7 +138,7 @@ msgstr ""
 "원 요청 양식%2$s을 통해 문의하시고 반드시 %3$s시스템 보고서%4$s를 첨부해 주십"
 "시오."
 
-#: class-r34ics.php:353
+#: class-r34ics.php:356
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -151,7 +151,7 @@ msgstr ""
 "제든지 %4$s캐시된 캘린더 데이터 지우기%5$s 유틸리티를 사용하여 캐시를 수동으"
 "로 지울 수 있습니다."
 
-#: class-r34ics.php:374
+#: class-r34ics.php:377
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -167,11 +167,11 @@ msgstr ""
 "%6$s블로그 게시글%7$s을 참조하시거나, 새 기본값으로 전환하려면 %9$s설정%10$s "
 "페이지에서 %8$s옵션을 활성화하세요."
 
-#: class-r34ics.php:374 templates/admin/settings.php:183
+#: class-r34ics.php:377 templates/admin/settings.php:183
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "새 매개변수 기본값 사용 (v.10.6)"
 
-#: class-r34ics.php:386
+#: class-r34ics.php:389
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -186,7 +186,7 @@ msgstr ""
 "발생할 경우, %4$s워드프레스 지원 포럼%5$s을 방문하여 도움을 받으시기 바랍니"
 "다."
 
-#: class-r34ics.php:398
+#: class-r34ics.php:401
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -198,7 +198,7 @@ msgstr ""
 "를 처리하는 새롭고 더 안전한 방법이 도입되었습니다. 새 방법으로 캘린더가 제대"
 "로 로드되도록 사용 중인 캐싱 플러그인을 모두 지워 주십시오."
 
-#: class-r34ics.php:411
+#: class-r34ics.php:414
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -210,46 +210,46 @@ msgstr ""
 "결 도구와 더불어 전반적인 성능 향상 및 인터페이스 개선 사항이 도입되었습니"
 "다. 이번 업데이트에 대한 자세한 내용은 %4$s변경 로그%5$s를 참조하십시오."
 
-#: class-r34ics.php:460 templates/admin/admin.php:24
+#: class-r34ics.php:463 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
 msgid "Getting Started"
 msgstr "시작하기"
 
-#: class-r34ics.php:461 class-r34ics.php:2365 templates/admin/admin.php:28
+#: class-r34ics.php:464 class-r34ics.php:2384 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "설정"
 
-#: class-r34ics.php:462 templates/admin/admin.php:29
+#: class-r34ics.php:465 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "외모"
 
-#: class-r34ics.php:463 templates/admin/admin.php:33
+#: class-r34ics.php:466 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "도구"
 
-#: class-r34ics.php:464 templates/admin/admin.php:37
+#: class-r34ics.php:467 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "시스템 보고서"
 
-#: class-r34ics.php:465 templates/admin/admin.php:41
+#: class-r34ics.php:468 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "지원"
 
-#: class-r34ics.php:468
+#: class-r34ics.php:471
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "%1$s으로 업그레이드하세요!"
 
-#: class-r34ics.php:498
+#: class-r34ics.php:501
 msgid "Show/hide all"
 msgstr "모두 표시/숨기기"
 
-#: class-r34ics.php:770
+#: class-r34ics.php:774
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -262,36 +262,36 @@ msgstr ""
 "오. 여러 URL을 구분하기 위해 공백을 사용하는 경우, 대신 파이프 문자를 사용해 "
 "보십시오. 영향을 받는 URL:"
 
-#: class-r34ics.php:1214
+#: class-r34ics.php:1218
 msgid "Hide past events"
 msgstr "지난 일정 숨기기"
 
-#: class-r34ics.php:1215 templates/calendar-month.php:96
+#: class-r34ics.php:1219 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "과거 이벤트 보기"
 
-#: class-r34ics.php:1296
+#: class-r34ics.php:1300
 msgid "Contact:"
 msgstr "연락처:"
 
-#: class-r34ics.php:1302
+#: class-r34ics.php:1306
 msgid "Resources:"
 msgstr "자원:"
 
-#: class-r34ics.php:1312
+#: class-r34ics.php:1316
 msgid "Click for more..."
 msgstr "더 보기..."
 
-#: class-r34ics.php:1346
+#: class-r34ics.php:1350
 msgid "Save to your calendar"
 msgstr "달력에 저장하세요"
 
-#: class-r34ics.php:1449
+#: class-r34ics.php:1453
 msgid "Cancelled"
 msgstr "취소됨"
 
-#: class-r34ics.php:1562
+#: class-r34ics.php:1566
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -299,11 +299,11 @@ msgstr ""
 "레거시 파서 옵션은 더 이상 권장되지 않으며 향후 업데이트에서 제거될 예정입니"
 "다."
 
-#: class-r34ics.php:1641
+#: class-r34ics.php:1657
 msgid "Print"
 msgstr "인쇄"
 
-#: class-r34ics.php:1898
+#: class-r34ics.php:1917
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -311,7 +311,7 @@ msgstr ""
 "\"currentweek\" 숏코드 속성은 더 이상 사용되지 않습니다. 대신 숏코드에서 "
 "view=\"week\"를 사용해 주십시오."
 
-#: class-r34ics.php:1902
+#: class-r34ics.php:1921
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -319,7 +319,7 @@ msgstr ""
 "\"legendinline\" 숏코드 속성은 더 이상 사용되지 않습니다. 대신 숏코드에서 "
 "legendstyle=\"inline\"을 사용해 주십시오."
 
-#: class-r34ics.php:2239
+#: class-r34ics.php:2258
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -328,7 +328,7 @@ msgstr ""
 "%1$s이 %2$s프론트엔드 페이지에서 캘린더 제공을 %3$s재개했습니다. 사이트에서 "
 "캐싱 플러그인을 사용하는 경우 캐시를 지워야 할 수 있습니다."
 
-#: class-r34ics.php:2247
+#: class-r34ics.php:2266
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -337,21 +337,21 @@ msgstr ""
 "%1$s에서 프런트엔드 페이지에 캘린더를 표시하는 기능을 %2$s일시 중지%3$s했습니"
 "다. 사이트에서 캐싱 플러그인을 사용하는 경우 캐시를 지워야 할 수도 있습니다."
 
-#: class-r34ics.php:2259
+#: class-r34ics.php:2278
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$s 개의 일시적 객체를 정리했습니다."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2285
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s개의 과도 현상이 발견되지 않았습니다."
 
-#: class-r34ics.php:2275
+#: class-r34ics.php:2294
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "저장된 모든 ICS 피드 URL이 삭제되었습니다."
 
-#: class-r34ics.php:2282
+#: class-r34ics.php:2301
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -360,7 +360,7 @@ msgstr ""
 "모든 %1$s 설정이 기본값으로 재설정되었으며, 저장된 ICS 피드 URL이 삭제되었습"
 "니다."
 
-#: class-r34ics.php:2365
+#: class-r34ics.php:2384
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -369,11 +369,11 @@ msgstr ""
 "피드 URL에 HTTP 기본 인증 자격 증명이 포함된 것으로 보입니다. 상단의 %2$s 탭 "
 "아래 %1$s 옵션을 해제해 보십시오."
 
-#: class-r34ics.php:2365 templates/admin/settings.php:59
+#: class-r34ics.php:2384 templates/admin/settings.php:59
 msgid "Use legacy feed request method"
 msgstr "레거시 피드 요청 방법 사용"
 
-#: class-r34ics.php:2371
+#: class-r34ics.php:2390
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -387,17 +387,17 @@ msgstr ""
 "캘린더의 향후 업데이트를 반영하지 않습니다. 올바른 동적 피드 URL을 얻는 방법"
 "은 %4$s사용자 가이드%5$s를 참조하십시오."
 
-#: class-r34ics.php:2377
+#: class-r34ics.php:2396
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "오류: %1$s의 IP 주소를 확인할 수 없습니다."
 
-#: class-r34ics.php:2380
+#: class-r34ics.php:2399
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$s에 대한 확인된 IP 주소:"
 
-#: class-r34ics.php:2405
+#: class-r34ics.php:2424
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -406,7 +406,7 @@ msgstr ""
 "%1$s 외관이 업데이트되었습니다.%2$s 일부 변경 사항을 보려면 페이지를 새로 고"
 "쳐야 할 수 있습니다."
 
-#: class-r34ics.php:2465
+#: class-r34ics.php:2484
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -414,7 +414,7 @@ msgstr ""
 "\"기본 단축 코드\" 필드에 입력된 텍스트는 유효한 단축 코드가 아니며 저장되지 "
 "않았습니다."
 
-#: class-r34ics.php:2508
+#: class-r34ics.php:2527
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -423,11 +423,15 @@ msgstr ""
 "%1$s설정이 업데이트되었습니다.%2$s 일부 변경 사항을 보려면 페이지를 새로 고쳐"
 "야 할 수 있습니다."
 
-#: class-r34ics.php:2804
+#: class-r34ics.php:2840
 msgid "calendar event"
 msgstr "캘린더 이벤트"
 
-#: class-r34ics.php:3245
+#: class-r34ics.php:2846
+msgid "Event download failed."
+msgstr "이벤트 다운로드에 실패했습니다."
+
+#: class-r34ics.php:3285
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -446,51 +450,65 @@ msgstr ""
 "%1$s의 향후 업데이트에는 WordPress 5.3 이상 버전이 필요합니다. 가능한 한 빨"
 "리 사이트를 최신 버전의 WordPress로 업데이트해 주십시오."
 
-#: functions.php:1116 functions.php:1124 functions.php:1133
+#: functions.php:1062
+#, php-format
+msgid ""
+"An error occurred with %1$s while attempting to copy language translation "
+"files. The required PHP filesystem function %2$s is unavailable. This is "
+"required to address a conflict with certain translation customization "
+"plugins such as %3$s. As a result, %1$s translations may not load properly "
+"while the conflicting translation plugin is active."
+msgstr ""
+"언어 번역 파일 복사 시도 중 %1$s에서 오류가 발생했습니다. 필요한 PHP 파일 시"
+"스템 함수 %2$s을 사용할 수 없습니다. 이는 %3$s와 같은 특정 번역 사용자 정의 "
+"플러그인과의 충돌을 해결하기 위해 필요합니다. 결과적으로, 충돌하는 번역 플러"
+"그인이 활성화된 상태에서는 %1$s 번역이 제대로 로드되지 않을 수 있습니다."
+
+#: functions.php:1185 functions.php:1193 functions.php:1202
 msgid "Map"
 msgstr "지도"
 
-#: functions.php:1434
+#: functions.php:1509
 msgid "Recurring event"
 msgstr "반복 행사"
 
-#: functions.php:1439
+#: functions.php:1514
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "매 %1$s년마다 반복됩니다"
 
-#: functions.php:1439
+#: functions.php:1514
 msgid "Recurs yearly"
 msgstr "매년 반복된다"
 
-#: functions.php:1442
+#: functions.php:1517
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "매 %1$s개월마다 반복됩니다"
 
-#: functions.php:1442
+#: functions.php:1517
 msgid "Recurs monthly"
 msgstr "매월 반복됩니다"
 
-#: functions.php:1445
+#: functions.php:1520
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "매 %1$s주마다 반복됩니다"
 
-#: functions.php:1445
+#: functions.php:1520
 msgid "Recurs weekly"
 msgstr "매주 반복됨"
 
-#: functions.php:1448
+#: functions.php:1523
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "%1$s일마다 반복됩니다"
 
-#: functions.php:1448
+#: functions.php:1523
 msgid "Recurs daily"
 msgstr "매일 반복됨"
 
-#: functions.php:1621
+#: functions.php:1696
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -502,7 +520,7 @@ msgstr ""
 "가능한 링크로 변환된 것 같습니다. 이로 인해 캘린더가 제대로 표시되지 않을 수 "
 "있습니다. 숏코드에서 클릭 가능한 링크를 제거해 주세요."
 
-#: functions.php:1950
+#: functions.php:2025
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() 함수는 더 이상 지원되지 않습니다."
 
@@ -668,7 +686,7 @@ msgstr ""
 msgid "Customization"
 msgstr "사용자 정의"
 
-#: templates/admin/admin.php:80
+#: templates/admin/admin.php:82
 #, php-format
 msgid ""
 "Easy-to-use tools to completely customize your calendar colors, typography "
@@ -683,11 +701,11 @@ msgstr ""
 "템 폰트 또는 포함된 20개 이상의 오픈 소스 폰트 중에서 선택하세요. %1$s자세히 "
 "알아보기...%2$s"
 
-#: templates/admin/admin.php:81
+#: templates/admin/admin.php:84
 msgid "ICS Events"
 msgstr "ICS 이벤트"
 
-#: templates/admin/admin.php:84
+#: templates/admin/admin.php:87
 #, php-format
 msgid ""
 "Turns %1$s into a full calendar management system. Create and edit new "
@@ -698,11 +716,11 @@ msgstr ""
 "벤트를 생성 및 편집하고, 기존 외부 ICS 피드와도 원활하게 통합할 수 있습니다. "
 "%2$s자세히 알아보기...%3$s"
 
-#: templates/admin/admin.php:86
+#: templates/admin/admin.php:89
 msgid "Localized Admin Interface"
 msgstr "현지화된 관리자 인터페이스"
 
-#: templates/admin/admin.php:89
+#: templates/admin/admin.php:92
 #, php-format
 msgid ""
 "All %1$s admin pages are translated into dozens of languages, including "
@@ -717,24 +735,24 @@ msgstr ""
 "니아어, 러시아어, 슬로바키아어, 세르비아어, 스웨덴어, 터키어, 우크라이나어, "
 "중국어를 포함한 수십 개 언어로 번역되었습니다."
 
-#: templates/admin/admin.php:93
+#: templates/admin/admin.php:96
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "자세한 내용은 %1$s을 방문하세요."
 
-#: templates/admin/admin.php:97
+#: templates/admin/admin.php:100
 msgid "Calendar Builder screenshot"
 msgstr "캘린더 빌더 스크린샷"
 
-#: templates/admin/admin.php:98
+#: templates/admin/admin.php:101
 msgid "Appearance screenshot"
 msgstr "외관 스크린샷"
 
-#: templates/admin/admin.php:102
+#: templates/admin/admin.php:105
 msgid "Available now!"
 msgstr "지금 바로 이용 가능합니다!"
 
-#: templates/admin/admin.php:107
+#: templates/admin/admin.php:110
 #, php-format
 msgid "Get %1$s!"
 msgstr "%1$s을 얻으세요!"

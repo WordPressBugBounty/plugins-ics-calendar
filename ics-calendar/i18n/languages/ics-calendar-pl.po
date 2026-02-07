@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-01-07 15:19-0600\n"
-"PO-Revision-Date: 2026-01-07 15:20-0600\n"
+"POT-Creation-Date: 2026-02-04 13:07-0600\n"
+"PO-Revision-Date: 2026-02-04 13:07-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:307
+#: class-r34ics.php:310
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -32,7 +32,7 @@ msgstr ""
 "frontowych. Możesz wznowić obsługę kalendarzy w zakładce %4$sNarzędzia%5$s "
 "%6$stutaj%7$s."
 
-#: class-r34ics.php:316
+#: class-r34ics.php:319
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -44,7 +44,7 @@ msgstr ""
 "internetowym, niektóre funkcje mogą być niedostępne lub mogą nie działać "
 "prawidłowo."
 
-#: class-r34ics.php:325
+#: class-r34ics.php:328
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -62,7 +62,7 @@ msgstr ""
 "Dodatkowe informacje na ten temat można znaleźć w naszej "
 "%6$sdokumentacji%7$s."
 
-#: class-r34ics.php:337
+#: class-r34ics.php:340
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
@@ -71,7 +71,7 @@ msgstr ""
 "Ważne! Twoja konfiguracja %1$s wydaje się przekraczać limity dostawcy "
 "kalendarza źródłowego."
 
-#: class-r34ics.php:339
+#: class-r34ics.php:342
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
@@ -80,7 +80,7 @@ msgstr ""
 "Jeśli kalendarze nie ładują się prawidłowo, sprawdź ustawienia i sposób "
 "użytkowania %1$s:"
 
-#: class-r34ics.php:341
+#: class-r34ics.php:344
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
@@ -89,7 +89,7 @@ msgstr ""
 "Nie używaj %1$s w skrótach. Ta funkcja służy wyłącznie do rozwiązywania "
 "problemów i nie powinna być pozostawiona włączona na stałe."
 
-#: class-r34ics.php:343
+#: class-r34ics.php:346
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -100,7 +100,7 @@ msgstr ""
 "do %4$s43200%5$s (12 godzin) lub więcej, aby zmniejszyć częstotliwość żądań "
 "kierowanych do dostawcy. (Zobacz uwagę poniżej)."
 
-#: class-r34ics.php:345
+#: class-r34ics.php:348
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
@@ -109,7 +109,7 @@ msgstr ""
 "Unikaj umieszczania dużej liczby kanałów (10 lub więcej) od tego samego "
 "dostawcy w jednym skrócie %1$s."
 
-#: class-r34ics.php:347
+#: class-r34ics.php:350
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -119,7 +119,7 @@ msgstr ""
 "pomocą narzędzia %1$sWstrzymaj kalendarze%2$s. (Zalecany czas to 24–48 "
 "godzin)."
 
-#: class-r34ics.php:349
+#: class-r34ics.php:352
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -134,7 +134,7 @@ msgstr ""
 "%2$sreload%3$s może spowodować tymczasowe zablokowanie adresu IP serwera WWW "
 "lub nawet całej sieci hostingowej przez dostawcę kalendarza."
 
-#: class-r34ics.php:351
+#: class-r34ics.php:354
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -147,7 +147,7 @@ msgstr ""
 "występuje, skontaktuj się z nami za pomocą %1$sformularza zgłoszenia pomocy "
 "technicznej%2$s i dołącz %3$sraport systemowy%4$s."
 
-#: class-r34ics.php:353
+#: class-r34ics.php:356
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -161,7 +161,7 @@ msgstr ""
 "ręcznie wyczyścić pamięć podręczną za pomocą narzędzia %4$sClear Cached "
 "Calendar Data%5$s."
 
-#: class-r34ics.php:374
+#: class-r34ics.php:377
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -178,11 +178,11 @@ msgstr ""
 "aby przełączyć się na nowe ustawienia domyślne, włącz opcję %8$s na stronie "
 "%9$s ustawień%10$s."
 
-#: class-r34ics.php:374 templates/admin/settings.php:183
+#: class-r34ics.php:377 templates/admin/settings.php:183
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Użyj nowych domyślnych parametrów (wersja 10.6)"
 
-#: class-r34ics.php:386
+#: class-r34ics.php:389
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -198,7 +198,7 @@ msgstr ""
 "jakiekolwiek nowe problemy, odwiedź %4$sforum pomocy technicznej "
 "WordPressa%5$s, aby uzyskać pomoc."
 
-#: class-r34ics.php:398
+#: class-r34ics.php:401
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -211,7 +211,7 @@ msgstr ""
 "wyczyścić wszystkie używane wtyczki buforujące, aby zapewnić prawidłowe "
 "ładowanie kalendarzy przy użyciu nowej metody."
 
-#: class-r34ics.php:411
+#: class-r34ics.php:414
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -224,46 +224,46 @@ msgstr ""
 "interfejsu. Więcej szczegółów na temat tej aktualizacji można znaleźć w "
 "%4$sdzienniku zmian%5$s."
 
-#: class-r34ics.php:460 templates/admin/admin.php:24
+#: class-r34ics.php:463 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
 msgid "Getting Started"
 msgstr "Pierwsze kroki"
 
-#: class-r34ics.php:461 class-r34ics.php:2365 templates/admin/admin.php:28
+#: class-r34ics.php:464 class-r34ics.php:2384 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: class-r34ics.php:462 templates/admin/admin.php:29
+#: class-r34ics.php:465 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "Wygląd"
 
-#: class-r34ics.php:463 templates/admin/admin.php:33
+#: class-r34ics.php:466 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "Narzędzia"
 
-#: class-r34ics.php:464 templates/admin/admin.php:37
+#: class-r34ics.php:467 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "Raport systemu"
 
-#: class-r34ics.php:465 templates/admin/admin.php:41
+#: class-r34ics.php:468 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "Wsparcie"
 
-#: class-r34ics.php:468
+#: class-r34ics.php:471
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "Zaktualizuj do wersji %1$s!"
 
-#: class-r34ics.php:498
+#: class-r34ics.php:501
 msgid "Show/hide all"
 msgstr "Pokaż/ukryj wszystko"
 
-#: class-r34ics.php:770
+#: class-r34ics.php:774
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -277,36 +277,36 @@ msgstr ""
 "oddzielania wielu adresów URL, możesz również spróbować użyć znaku rury. "
 "Adres URL, którego dotyczy problem:"
 
-#: class-r34ics.php:1214
+#: class-r34ics.php:1218
 msgid "Hide past events"
 msgstr "Ukryj minione wydarzenia"
 
-#: class-r34ics.php:1215 templates/calendar-month.php:96
+#: class-r34ics.php:1219 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Pokaż wydarzenia które były już"
 
-#: class-r34ics.php:1296
+#: class-r34ics.php:1300
 msgid "Contact:"
 msgstr "Skontaktuj się z:"
 
-#: class-r34ics.php:1302
+#: class-r34ics.php:1306
 msgid "Resources:"
 msgstr "Zasoby:"
 
-#: class-r34ics.php:1312
+#: class-r34ics.php:1316
 msgid "Click for more..."
 msgstr "Kliknij, aby dowiedzieć się więcej..."
 
-#: class-r34ics.php:1346
+#: class-r34ics.php:1350
 msgid "Save to your calendar"
 msgstr "Zapisz w kalendarzu"
 
-#: class-r34ics.php:1449
+#: class-r34ics.php:1453
 msgid "Cancelled"
 msgstr "Anulowane"
 
-#: class-r34ics.php:1562
+#: class-r34ics.php:1566
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -314,11 +314,11 @@ msgstr ""
 "Opcja legacy parser jest przestarzała i zostanie usunięta w przyszłej "
 "aktualizacji."
 
-#: class-r34ics.php:1641
+#: class-r34ics.php:1657
 msgid "Print"
 msgstr "Drukuj"
 
-#: class-r34ics.php:1898
+#: class-r34ics.php:1917
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -326,7 +326,7 @@ msgstr ""
 "Atrybut skrótu „currentweek” jest przestarzały. Zamiast niego należy używać "
 "view=\"week\" w skrócie."
 
-#: class-r34ics.php:1902
+#: class-r34ics.php:1921
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -334,7 +334,7 @@ msgstr ""
 "Atrybut skrótu „legendinline” jest przestarzały. Zamiast niego należy używać "
 "legendstyle=\"inline\" w skrócie."
 
-#: class-r34ics.php:2239
+#: class-r34ics.php:2258
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -344,7 +344,7 @@ msgstr ""
 "Twoja witryna korzysta z wtyczki do buforowania, może być konieczne "
 "wyczyszczenie pamięci podręcznej."
 
-#: class-r34ics.php:2247
+#: class-r34ics.php:2266
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -354,21 +354,21 @@ msgstr ""
 "Twoja witryna korzysta z wtyczki do buforowania, może być konieczne "
 "wyczyszczenie pamięci podręcznej."
 
-#: class-r34ics.php:2259
+#: class-r34ics.php:2278
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Wyklarowano %1$s %2$s przejściowe."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2285
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nie znaleziono żadnych %1$s przejść."
 
-#: class-r34ics.php:2275
+#: class-r34ics.php:2294
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Wszystkie zapisane adresy URL kanałów ICS zostały usunięte."
 
-#: class-r34ics.php:2282
+#: class-r34ics.php:2301
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -377,7 +377,7 @@ msgstr ""
 "Wszystkie %1$s ustawienia zostały zresetowane do wartości domyślnych, a "
 "zapisane adresy URL kanałów ICS zostały usunięte."
 
-#: class-r34ics.php:2365
+#: class-r34ics.php:2384
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -386,11 +386,11 @@ msgstr ""
 "Twój adres URL kanału wydaje się zawierać dane uwierzytelniające HTTP Basic "
 "Authentication. Spróbuj wyłączyć opcję %1$s w zakładce %2$s powyżej."
 
-#: class-r34ics.php:2365 templates/admin/settings.php:59
+#: class-r34ics.php:2384 templates/admin/settings.php:59
 msgid "Use legacy feed request method"
 msgstr "Użyj starszej metody żądania kanału"
 
-#: class-r34ics.php:2371
+#: class-r34ics.php:2390
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -406,17 +406,17 @@ msgstr ""
 "prawidłowego dynamicznego adresu URL kanału można znaleźć w %4$sinstrukcji "
 "obsługi%5$s."
 
-#: class-r34ics.php:2377
+#: class-r34ics.php:2396
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Błąd: Nie można rozwiązać adresu IP dla %1$s."
 
-#: class-r34ics.php:2380
+#: class-r34ics.php:2399
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Rozwiązany adres IP dla %1$s:"
 
-#: class-r34ics.php:2405
+#: class-r34ics.php:2424
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -425,7 +425,7 @@ msgstr ""
 "%1$s Wygląd został zaktualizowany. %2$s Aby zobaczyć niektóre zmiany, może "
 "być konieczne odświeżenie strony."
 
-#: class-r34ics.php:2465
+#: class-r34ics.php:2484
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -433,7 +433,7 @@ msgstr ""
 "Tekst wprowadzony w polu „Domyślny skrót” nie jest prawidłowym skrótem i nie "
 "został zapisany."
 
-#: class-r34ics.php:2508
+#: class-r34ics.php:2527
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -442,11 +442,15 @@ msgstr ""
 "%1$sUstawienia zaktualizowane.%2$s Aby zobaczyć niektóre zmiany, może być "
 "konieczne odświeżenie strony."
 
-#: class-r34ics.php:2804
+#: class-r34ics.php:2840
 msgid "calendar event"
 msgstr "wydarzenie w kalendarzu"
 
-#: class-r34ics.php:3245
+#: class-r34ics.php:2846
+msgid "Event download failed."
+msgstr "Pobieranie wydarzenia nie powiodło się."
+
+#: class-r34ics.php:3285
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -465,51 +469,66 @@ msgstr ""
 "Przyszłe aktualizacje %1$s będą wymagały WordPress 5.3 lub nowszego. Proszę "
 "jak najszybciej zaktualizować swoją stronę do nowszej wersji WordPress."
 
-#: functions.php:1116 functions.php:1124 functions.php:1133
+#: functions.php:1062
+#, php-format
+msgid ""
+"An error occurred with %1$s while attempting to copy language translation "
+"files. The required PHP filesystem function %2$s is unavailable. This is "
+"required to address a conflict with certain translation customization "
+"plugins such as %3$s. As a result, %1$s translations may not load properly "
+"while the conflicting translation plugin is active."
+msgstr ""
+"Wystąpił błąd %1$s podczas próby skopiowania plików tłumaczeń językowych. "
+"Wymagana funkcja systemu plików PHP %2$s jest niedostępna. Jest to "
+"konieczne, aby rozwiązać konflikt z niektórymi wtyczkami dostosowującymi "
+"tłumaczenia, takimi jak %3$s. W rezultacie tłumaczenia %1$s mogą nie ładować "
+"się poprawnie, gdy aktywna jest powodująca konflikt wtyczka tłumaczeniowa."
+
+#: functions.php:1185 functions.php:1193 functions.php:1202
 msgid "Map"
 msgstr "Mapa"
 
-#: functions.php:1434
+#: functions.php:1509
 msgid "Recurring event"
 msgstr "Wydarzenie cykliczne"
 
-#: functions.php:1439
+#: functions.php:1514
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Powtarza się co %1$s lat"
 
-#: functions.php:1439
+#: functions.php:1514
 msgid "Recurs yearly"
 msgstr "Powtarza się co roku"
 
-#: functions.php:1442
+#: functions.php:1517
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Powtarza się co %1$s miesięcy"
 
-#: functions.php:1442
+#: functions.php:1517
 msgid "Recurs monthly"
 msgstr "Powtarza się co miesiąc"
 
-#: functions.php:1445
+#: functions.php:1520
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Powtarza się co %1$s tygodni"
 
-#: functions.php:1445
+#: functions.php:1520
 msgid "Recurs weekly"
 msgstr "Powtarza się co tydzień"
 
-#: functions.php:1448
+#: functions.php:1523
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Powtarza się co %1$s dni"
 
-#: functions.php:1448
+#: functions.php:1523
 msgid "Recurs daily"
 msgstr "Powtarza się codziennie"
 
-#: functions.php:1621
+#: functions.php:1696
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -522,7 +541,7 @@ msgstr ""
 "rezultacie kalendarz może nie wyświetlać się poprawnie. Usuń klikalny link "
 "ze skrótu."
 
-#: functions.php:1950
+#: functions.php:2025
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcja r34ics_url_get_contents() nie jest już obsługiwana."
 
@@ -691,7 +710,7 @@ msgstr ""
 msgid "Customization"
 msgstr "Dostosowanie"
 
-#: templates/admin/admin.php:80
+#: templates/admin/admin.php:82
 #, php-format
 msgid ""
 "Easy-to-use tools to completely customize your calendar colors, typography "
@@ -707,11 +726,11 @@ msgstr ""
 "czcionek systemowych lub ponad 20 dołączonych czcionek open source. "
 "%1$sDowiedz się więcej...%2$s"
 
-#: templates/admin/admin.php:81
+#: templates/admin/admin.php:84
 msgid "ICS Events"
 msgstr "Wydarzenia ICS"
 
-#: templates/admin/admin.php:84
+#: templates/admin/admin.php:87
 #, php-format
 msgid ""
 "Turns %1$s into a full calendar management system. Create and edit new "
@@ -722,11 +741,11 @@ msgstr ""
 "wydarzenia bezpośrednio w WordPressie, a nawet integruj je płynnie z "
 "istniejącymi zewnętrznymi kanałami ICS. %2$sDowiedz się więcej...%3$s"
 
-#: templates/admin/admin.php:86
+#: templates/admin/admin.php:89
 msgid "Localized Admin Interface"
 msgstr "Lokalny interfejs administracyjny"
 
-#: templates/admin/admin.php:89
+#: templates/admin/admin.php:92
 #, php-format
 msgid ""
 "All %1$s admin pages are translated into dozens of languages, including "
@@ -741,24 +760,24 @@ msgstr ""
 "litewski, łotewski, norweski, holenderski, polski, portugalski, rumuński, "
 "rosyjski, słowacki, serbski, szwedzki, turecki, ukraiński i chiński."
 
-#: templates/admin/admin.php:93
+#: templates/admin/admin.php:96
 #, php-format
 msgid "Visit %1$s to learn more."
 msgstr "Odwiedź stronę %1$s, aby dowiedzieć się więcej."
 
-#: templates/admin/admin.php:97
+#: templates/admin/admin.php:100
 msgid "Calendar Builder screenshot"
 msgstr "Zrzut ekranu z programu Calendar Builder"
 
-#: templates/admin/admin.php:98
+#: templates/admin/admin.php:101
 msgid "Appearance screenshot"
 msgstr "Zrzut ekranu wyglądu"
 
-#: templates/admin/admin.php:102
+#: templates/admin/admin.php:105
 msgid "Available now!"
 msgstr "Już dostępne!"
 
-#: templates/admin/admin.php:107
+#: templates/admin/admin.php:110
 #, php-format
 msgid "Get %1$s!"
 msgstr "Zdobądź %1$s!"
