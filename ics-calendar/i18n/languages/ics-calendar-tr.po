@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:06-0600\n"
-"PO-Revision-Date: 2026-02-04 13:06-0600\n"
+"POT-Creation-Date: 2026-02-27 15:06-0600\n"
+"PO-Revision-Date: 2026-02-27 15:06-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: tr\n"
@@ -446,7 +446,7 @@ msgstr "takvim etkinliği"
 msgid "Event download failed."
 msgstr "Etkinlik indirilemedi."
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -485,47 +485,47 @@ msgstr ""
 msgid "Map"
 msgstr "Konumu"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "Tekrarlayan etkinlik"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Her %1$s yılda bir tekrarlanır"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "Yıllık olarak tekrarlanır"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Her %1$s ayda bir tekrarlanır"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "Aylık olarak tekrarlanır"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Her %1$s haftada bir tekrarlar"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "Haftalık olarak tekrarlanır"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Her %1$s günde bir tekrarlar"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "Her gün tekrar eder"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -538,7 +538,7 @@ msgstr ""
 "dönüştürülmüştür. Sonuç olarak takviminiz düzgün görüntülenmeyebilir. Lütfen "
 "kısa koddaki tıklanabilir bağlantıyı kaldırın."
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() işlevi artık desteklenmemektedir."
 
@@ -1094,14 +1094,14 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
-"WordPress, Blok Teması etkin olduğunda Görünüm menüsünde Artıralıcıya "
-"bağlantı içermez. Artıralıcıyı kullanmak istiyorsanız, örneğin Ek CSS girişi "
-"için, bu kutuyu işaretleyin. Not: Bazı temalar veya eklentiler Artıralıcıyı "
-"zaten kaydetmiş olabilir, bu durumda bu ayar hiçbir etki yapmaz. (Onay "
-"kutusu yalnızca işaretlendiğinde Artıralıcıyı etkinleştirir; "
-"işaretlenmediğinde Artıralıcıyı devre dışı bırakmaz."
+"WordPress, Blok Teması etkin olduğunda Görünüm menüsünde Özelleştiriciye bir "
+"bağlantı içermez. Özelleştiriciyi kullanmak istiyorsanız, örneğin Ek CSS "
+"girişi için, bu kutuyu işaretleyin. Not: Bazı temalar veya eklentiler "
+"Özelleştiriciyi zaten kaydetmiş olabilir, bu durumda bu ayar hiçbir etkiye "
+"sahip olmayacaktır. (Onay kutusu yalnızca işaretlendiğinde Özelleştiriciyi "
+"etkinleştirir; işaretlenmediğinde Özelleştiriciyi devre dışı bırakmaz.)"
 
 #: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"

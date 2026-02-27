@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:07-0600\n"
-"PO-Revision-Date: 2026-02-04 13:07-0600\n"
+"POT-Creation-Date: 2026-02-27 15:08-0600\n"
+"PO-Revision-Date: 2026-02-27 15:08-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -431,7 +431,7 @@ msgstr "캘린더 이벤트"
 msgid "Event download failed."
 msgstr "이벤트 다운로드에 실패했습니다."
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -468,47 +468,47 @@ msgstr ""
 msgid "Map"
 msgstr "지도"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "반복 행사"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "매 %1$s년마다 반복됩니다"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "매년 반복된다"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "매 %1$s개월마다 반복됩니다"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "매월 반복됩니다"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "매 %1$s주마다 반복됩니다"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "매주 반복됨"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "%1$s일마다 반복됩니다"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "매일 반복됨"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -520,7 +520,7 @@ msgstr ""
 "가능한 링크로 변환된 것 같습니다. 이로 인해 캘린더가 제대로 표시되지 않을 수 "
 "있습니다. 숏코드에서 클릭 가능한 링크를 제거해 주세요."
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() 함수는 더 이상 지원되지 않습니다."
 
@@ -1061,7 +1061,7 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
 "블록 테마가 활성화된 경우, 워드프레스는 더 이상 '외관' 메뉴에 커스터마이저 링"
 "크를 포함하지 않습니다. 커스터마이저를 사용하려면(예: 추가 CSS 입력 등) 이 체"

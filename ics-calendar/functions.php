@@ -1043,8 +1043,10 @@ function r34ics_i18n_symlinks() {
 				$new_filename = str_replace('ics-calendar-' . $lang, 'ics-calendar-' . $locale, pathinfo($file, PATHINFO_BASENAME));
 				$new_filepath = WP_LANG_DIR . '/plugins/' . $new_filename;
 				try {
+					// Delete the old file
+					if (file_exists($new_filepath)) { wp_delete_file($new_filepath); }
 					// The symlink() function may not be available on some servers!
-					if (function_exists('symlink') && !file_exists($new_filepath)) { symlink($file, $new_filepath); }
+					if (function_exists('symlink')) { symlink($file, $new_filepath); }
 					// If symlink() doesn't exist, we need to copy even if the file exists, to update
 					else { copy($file, $new_filepath); }
 				}
@@ -1416,6 +1418,7 @@ function r34ics_purge_calendar_transients($reset_options='') {
 				if (isset($_POST['r34ics-purge-calendar-transients-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-purge-calendar-transients-nonce'])), 'r34ics')) {
 					// Options we should retain even when purging the rest
 					$exclusions = array(
+						'r34ics_last_update',
 						'r34ics_previous_version',
 						'r34ics_version',
 					);
@@ -1824,6 +1827,7 @@ function r34ics_system_report($echo=true) {
 			'r34ics_display_add_calendar_button_false',
 			'r34ics_display_calendar_memory_limit',
 			'r34ics_feed_urls',
+			'r34ics_last_update',
 			'r34ics_previous_version',
 			'r34ics_transients_expiration',
 			'r34ics_url_get_contents_legacy_method',
@@ -2150,6 +2154,7 @@ function r34ics__debug($arr) {
 		'r34ics_display_add_calendar_button_false',
 		'r34ics_display_calendar_memory_limit',
 		'r34ics_feed_urls',
+		'r34ics_last_update',
 		'r34ics_previous_version',
 		'r34ics_transients_expiration',
 		'r34ics_url_get_contents_legacy_method',

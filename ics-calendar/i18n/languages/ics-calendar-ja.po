@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:07-0600\n"
-"PO-Revision-Date: 2026-02-04 13:07-0600\n"
+"POT-Creation-Date: 2026-02-27 15:09-0600\n"
+"PO-Revision-Date: 2026-02-27 15:09-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -441,7 +441,7 @@ msgstr "カレンダーイベント"
 msgid "Event download failed."
 msgstr "イベントのダウンロードに失敗しました。"
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -478,47 +478,47 @@ msgstr ""
 msgid "Map"
 msgstr "マップ"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "繰り返しイベントの新規作成"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "%1$s年ごとに繰り返す"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "毎年繰り返される"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "%1$sヶ月ごとに再発する"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "毎月繰り返される"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "%1$s週間ごとに再発する"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "毎週繰り返される"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "%1$s日ごとに再帰します"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "毎日繰り返される"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -531,7 +531,7 @@ msgstr ""
 "ない可能性があります。ショートコード内のクリック可能なリンクを削除してくださ"
 "い。"
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() 関数はサポートされなくなりました。"
 
@@ -1079,7 +1079,7 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
 "ブロックテーマが有効な場合、WordPress の「外観」メニューにカスタマイザーへの"
 "リンクは表示されません。追加の CSS 入力など、カスタマイザーを使用したい場合は"

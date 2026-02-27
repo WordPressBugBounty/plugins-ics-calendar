@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:07-0600\n"
-"PO-Revision-Date: 2026-02-04 13:07-0600\n"
+"POT-Creation-Date: 2026-02-27 15:08-0600\n"
+"PO-Revision-Date: 2026-02-27 15:08-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: lt\n"
@@ -445,7 +445,7 @@ msgstr "kalendoriaus įvykis"
 msgid "Event download failed."
 msgstr "Renginio atsisiuntimas nepavyko."
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -483,47 +483,47 @@ msgstr ""
 msgid "Map"
 msgstr "Žemėlapis"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "Pasikartojantis įvykis"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Kartojasi kas %1$s metus"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "Kartojasi kasmet"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Kartojasi kas %1$s mėnesius"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "Kartojasi kas mėnesį"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Kartojasi kas %1$s savaites"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "Kartojasi kas savaitę"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Kartojasi kas %1$s dienų"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "Kartojasi kasdien"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -536,7 +536,7 @@ msgstr ""
 "būti rodomas netinkamai. Prašome pašalinti spustelėjamąjį saitą iš trumpojo "
 "kodo."
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() nebėra palaikoma."
 
@@ -1094,14 +1094,14 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
 "WordPress nebeįtraukia nuorodos į „Customizer“ („Išvaizda“ meniu), kai "
 "aktyvi „Block Theme“ („Blokų tema“). Pažymėkite šį langelį, jei norite "
 "naudoti „Customizer“, pvz., papildomam CSS įvesties laukui. Pastaba: kai "
 "kurios temos ar papildiniai gali jau būti užregistravę „Customizer“, tokiu "
-"atveju šis nustatymas neturės jokio poveikio. (Pažymėtas langelis įjungia "
-"„Customizer“, o nepažymėtas – išjungia."
+"atveju šis nustatymas neturės jokio poveikio. (Pažymėjus langelį, "
+"„Customizer“ įjungiamas; nepažymėjus langelio, „Customizer“ neišjungiamas.)"
 
 #: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"

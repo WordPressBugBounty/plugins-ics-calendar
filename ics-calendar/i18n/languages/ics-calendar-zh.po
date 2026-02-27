@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:06-0600\n"
-"PO-Revision-Date: 2026-02-04 13:06-0600\n"
+"POT-Creation-Date: 2026-02-27 15:06-0600\n"
+"PO-Revision-Date: 2026-02-27 15:06-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -399,7 +399,7 @@ msgstr "日历事件"
 msgid "Event download failed."
 msgstr "活动下载失败。"
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -434,47 +434,47 @@ msgstr ""
 msgid "Map"
 msgstr "地图"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "再次发行"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "每%1$s年重复一次"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "每年重复"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "每%1$s个月重复一次"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "每月重复"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "每%1$s周重复一次"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "每周重复"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "每%1$s天重复一次"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "每日重复"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -485,7 +485,7 @@ msgstr ""
 "您%1$s短代码中的\"url\"属性似乎包含HTML标签；很可能您的URL已被转换为可点击链"
 "接。这可能导致日历无法正常显示。请移除短代码中的可点击链接。"
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() 函数不再受支持。"
 
@@ -997,7 +997,7 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
 "当启用区块主题时，WordPress 不会在“外观”菜单中显示自定义工具的链接。若需使用"
 "自定义工具（例如输入附加 CSS），请勾选此复选框。注意：某些主题或插件可能已注"

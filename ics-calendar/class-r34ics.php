@@ -3171,9 +3171,11 @@ if (!class_exists('R34ICS')) {
 			if ($recursion < 5 && !empty($response) && (
 					$response_code == '301' ||
 					$response_code == '302' ||
-					stripos(($url_contents ?? ''), '">Found</a>') !== false ||
-					stripos(($url_contents ?? ''), 'Moved Permanently') !== false ||
-					strpos(($url_contents ?? ''), 'Object moved') !== false
+					($response_code != '200' &&
+						(stripos(($url_contents ?? ''), '">Found</a>') !== false ||
+						stripos(($url_contents ?? ''), 'Moved Permanently') !== false ||
+						stripos(($url_contents ?? ''), 'Object moved') !== false)
+					)
 			)) {
 				$recursion++;
 	

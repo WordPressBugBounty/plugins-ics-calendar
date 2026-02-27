@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:06-0600\n"
-"PO-Revision-Date: 2026-02-04 13:06-0600\n"
+"POT-Creation-Date: 2026-02-27 15:07-0600\n"
+"PO-Revision-Date: 2026-02-27 15:07-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: sl\n"
@@ -446,7 +446,7 @@ msgstr "koledarski dogodek"
 msgid "Event download failed."
 msgstr "Prenos dogodka ni uspel."
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -486,47 +486,47 @@ msgstr ""
 msgid "Map"
 msgstr "Zemljevid"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "Ponavljajoči se dogodek"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Ponovi se vsakih %1$s let"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "Ponavlja se vsako leto"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Ponovi se vsakih %1$s mesecev"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "Ponavlja se mesečno"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Ponovi se vsakih %1$s tednov"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "Ponavlja se tedensko"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Ponovi se vsakih %1$s dni"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "Ponavlja se vsak dan"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -538,7 +538,7 @@ msgstr ""
 "je vaš URL spremenjen v klikljivo povezavo. Zaradi tega se vaš koledar morda "
 "ne prikaže pravilno. Prosimo, odstranite klikljivo povezavo iz kratkega koda."
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() ni več podprta."
 
@@ -1093,14 +1093,14 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
 "WordPress ne vključuje več povezave do Customizerja v meniju Appearance, ko "
 "je aktivna Block Theme. Potrdite to polje, če želite uporabljati Customizer, "
 "npr. za dodatno vnos CSS. Opomba: Nekatere teme ali vtičniki lahko že "
 "registrirajo Customizer, v tem primeru ta nastavitev ne bo imela nobenega "
 "učinka. (Potrditveno polje omogoča Customizer le, ko je potrjeno; ne "
-"onemogoča Customizerja, ko ni potrjeno."
+"onemogoča Customizerja, ko ni potrjeno.)"
 
 #: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"

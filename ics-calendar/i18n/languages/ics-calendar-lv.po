@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:07-0600\n"
-"PO-Revision-Date: 2026-02-04 13:07-0600\n"
+"POT-Creation-Date: 2026-02-27 15:08-0600\n"
+"PO-Revision-Date: 2026-02-27 15:08-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: lv\n"
@@ -444,7 +444,7 @@ msgstr "kalendāra notikums"
 msgid "Event download failed."
 msgstr "Notikuma lejupielāde neizdevās."
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -483,47 +483,47 @@ msgstr ""
 msgid "Map"
 msgstr "Karte"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "Atkārtots notikums"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Atkārtojas ik pēc %1$s gadiem"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "Atkārtojas katru gadu"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Atkārtojas ik pēc %1$s mēnešiem"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "Atkārtojas katru mēnesi"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Atkārtojas ik pēc %1$s nedēļām"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "Atkārtojas katru nedēļu"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Atkārtojas ik pēc %1$s dienām"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "Atkārtojas katru dienu"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -535,7 +535,7 @@ msgstr ""
 "URL ir pārveidots par klikšķināmu saiti. Rezultātā jūsu kalendārs var netikt "
 "attēlots pareizi. Lūdzu, izdzēsiet klikšķināmo saiti īsajā kodā."
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() vairs netiek atbalstīta."
 
@@ -1090,14 +1090,14 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
 "WordPress vairs neiekļauj saiti uz pielāgotāju izskata izvēlnē, ja ir aktīva "
 "bloka tēma. Atzīmējiet šo lodziņu, ja vēlaties izmantot pielāgotāju, "
 "piemēram, papildu CSS ievadei. Piezīme: Dažas tēmas vai spraudņi var jau "
 "reģistrēt pielāgotāju, un šādā gadījumā šis iestatījums nedarbosies. "
 "(Lodziņš aktivizē pielāgotāju tikai tad, ja tas ir atzīmēts; tas neaktivizē "
-"pielāgotāju, ja tas nav atzīmēts."
+"pielāgotāju, ja tas nav atzīmēts.)"
 
 #: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"

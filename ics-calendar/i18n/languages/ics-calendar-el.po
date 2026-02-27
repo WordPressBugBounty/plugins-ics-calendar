@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:08-0600\n"
-"PO-Revision-Date: 2026-02-04 13:08-0600\n"
+"POT-Creation-Date: 2026-02-27 15:08-0600\n"
+"PO-Revision-Date: 2026-02-27 15:08-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: el\n"
@@ -454,7 +454,7 @@ msgstr "γεγονός ημερολογίου"
 msgid "Event download failed."
 msgstr "Η λήψη του συμβάντος απέτυχε."
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -494,47 +494,47 @@ msgstr ""
 msgid "Map"
 msgstr "Χάρτης"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "Επαναλαμβανόμενο γεγονός"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Επαναλαμβάνεται κάθε %1$s χρόνια"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "Επαναλαμβάνεται κάθε χρόνο"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Επαναλαμβάνεται κάθε %1$s μήνες"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "Επαναλαμβάνεται κάθε μήνα"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Επαναλαμβάνεται κάθε %1$s εβδομάδες"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "Επαναλαμβάνεται κάθε εβδομάδα"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Επαναλαμβάνεται κάθε %1$s ημέρες"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "Επαναλαμβάνεται καθημερινά"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -547,7 +547,7 @@ msgstr ""
 "αποτέλεσμα, το ημερολόγιό σας ενδέχεται να μην εμφανίζεται σωστά. "
 "Παρακαλούμε, αφαιρέστε τον ενεργό σύνδεσμο από τον σύντομο κωδικό."
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Η συνάρτηση r34ics_url_get_contents() δεν υποστηρίζεται πλέον."
 
@@ -1117,15 +1117,15 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
 "Το WordPress δεν περιλαμβάνει πλέον σύνδεσμο προς το Customizer στο μενού "
-"Appearance όταν είναι ενεργό ένα Block Theme. Επιλέξτε αυτό το πλαίσιο αν "
-"θέλετε να χρησιμοποιήσετε το Customizer, π.χ. για την εισαγωγή επιπλέον CSS. "
-"Σημείωση: Ορισμένα θέματα ή plugins ενδέχεται να έχουν ήδη καταχωρίσει το "
-"Customizer, οπότε αυτή η ρύθμιση δεν θα έχει κανένα αποτέλεσμα. (Το πλαίσιο "
-"ελέγχου ενεργοποιεί το Customizer μόνο όταν είναι επιλεγμένο. Δεν "
-"απενεργοποιεί το Customizer όταν δεν είναι επιλεγμένο."
+"Εμφάνιση όταν είναι ενεργό ένα Block Theme. Επιλέξτε αυτό το πλαίσιο αν "
+"θέλετε να χρησιμοποιήσετε το Customizer, π.χ. για την εισαγωγή πρόσθετου "
+"CSS. Σημείωση: Ορισμένα θέματα ή προσθήκες ενδέχεται να έχουν ήδη "
+"καταχωρίσει το Customizer, οπότε αυτή η ρύθμιση δεν θα έχει κανένα "
+"αποτέλεσμα. (Το πλαίσιο ελέγχου ενεργοποιεί το Customizer μόνο όταν είναι "
+"επιλεγμένο. Δεν απενεργοποιεί το Customizer όταν δεν είναι επιλεγμένο.)"
 
 #: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"

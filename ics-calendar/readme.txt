@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 12.0.4.1
+Stable tag: 12.0.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,14 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.0.4.2 - 2026.02.27 =
+
+* Miscellaneous:
+  * Modified recursion conditional in `R34ICS::_url_get_contents()` method to only check for specific text strings in the response when the response code is _not_ 200. This should resolve possible erroneous redirections that occur if the text strings being checked appear in the ICS feed response content itself.
+* i18n:
+  * Reworked `r34ics_i18n_symlinks()` to delete old translation files before copying or symlinking new file, to ensure changes are picked up.
+  * Updated translation strings.
 
 = 12.0.4.1 - 2026.02.07 =
 

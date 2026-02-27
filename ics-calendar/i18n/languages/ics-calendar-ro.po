@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:07-0600\n"
-"PO-Revision-Date: 2026-02-04 13:07-0600\n"
+"POT-Creation-Date: 2026-02-27 15:07-0600\n"
+"PO-Revision-Date: 2026-02-27 15:07-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
@@ -451,7 +451,7 @@ msgstr "eveniment calendaristic"
 msgid "Event download failed."
 msgstr "Descărcarea evenimentului a eșuat."
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -491,47 +491,47 @@ msgstr ""
 msgid "Map"
 msgstr "Hartă"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "Evenimentul se repetă"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Se repetă la fiecare %1$s ani"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "Se repetă anual"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Se repetă la fiecare %1$s luni"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "Se repetă lunar"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Se repetă la fiecare %1$s săptămâni"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "Se repetă săptămânal"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Se repetă la fiecare %1$s zile"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "Se repetă zilnic"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -544,7 +544,7 @@ msgstr ""
 "calendarul dvs. s-ar putea să nu se afișeze corect. Vă rugăm să eliminați "
 "linkul activ din codul scurt."
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funcția r34ics_url_get_contents() nu mai este acceptată."
 
@@ -1109,15 +1109,15 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
 "WordPress nu mai include un link către Customizer în meniul Appearance "
 "(Aspect) atunci când este activă o temă Block. Bifați această casetă dacă "
 "doriți să utilizați Customizer, de exemplu pentru introducerea de CSS "
-"suplimentar. Notă: unele teme sau pluginuri pot înregistra deja Customizer, "
-"caz în care această setare nu va avea niciun efect. (Caseta de selectare "
-"activează Customizer numai atunci când este bifată; nu dezactivează "
-"Customizer atunci când este debifată."
+"suplimentar. Notă: Este posibil ca unele teme sau pluginuri să înregistreze "
+"deja Customizer, caz în care această setare nu va avea niciun efect. (Caseta "
+"de selectare activează Customizer numai atunci când este bifată; nu "
+"dezactivează Customizer atunci când este debifată.)"
 
 #: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:06-0600\n"
-"PO-Revision-Date: 2026-02-04 13:06-0600\n"
+"POT-Creation-Date: 2026-02-27 15:07-0600\n"
+"PO-Revision-Date: 2026-02-27 15:07-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
@@ -444,7 +444,7 @@ msgstr "догађај у календару"
 msgid "Event download failed."
 msgstr "Преузимање догађаја није успело."
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -482,47 +482,47 @@ msgstr ""
 msgid "Map"
 msgstr "Mapa"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "Понављајући догађај"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Понавља се сваких %1$s година"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "Понавља се годишње"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Понавља се сваких %1$s месеци"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "Понавља се месечно"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Понавља се сваких %1$s недеља"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "Понавља се недељно"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Понавља се сваких %1$s дана"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "Понавља се свакодневно"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -535,7 +535,7 @@ msgstr ""
 "тога се ваш календар можда неће правилно приказивати. Уклоните везу на коју "
 "се може кликнути из кратког кода."
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Функција r34ics_url_get_contents() више није подржана."
 
@@ -1089,14 +1089,14 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
-"WordPress више не укључује везу до алатке за прилагођавање у менију Изглед "
-"када је активна блок тема. Означите ову кућицу ако желите да користите "
-"алатку за прилагођавање, нпр. за додатни CSS унос. Напомена: Неке теме или "
-"додаци могу већ регистровати алатку за прилагођавање, у ком случају ово "
-"подешавање неће имати ефекта. (Поље за потврду омогућава алатку за "
-"прилагођавање само када је означено; не онемогућава га када није означено.)"
+"WordPress више не укључује везу ка Прилагођавачу у менију Изглед када је "
+"активна тема са блоковима. Означите овај поље ако желите да користите "
+"Прилагођавач, нпр. за унос додатног CSS-а. Напомена: Неке теме или додаци "
+"можда већ региструју Прилагођавач, у ком случају ова поставка неће имати "
+"ефекта. (Ово поље омогућава Прилагођавач само када је означено; не "
+"онемогућава Прилагођавач када није означено.)"
 
 #: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:06-0600\n"
-"PO-Revision-Date: 2026-02-04 13:06-0600\n"
+"POT-Creation-Date: 2026-02-27 15:06-0600\n"
+"PO-Revision-Date: 2026-02-27 15:06-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -447,7 +447,7 @@ msgstr "календарна подія"
 msgid "Event download failed."
 msgstr "Завантаження події не вдалося."
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -485,47 +485,47 @@ msgstr ""
 msgid "Map"
 msgstr "Мапа"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "Повторювана подія"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Повторюється кожні %1$s років"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "Повторюється щорічно"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Повторюється кожні %1$s місяців"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "Повторюється щомісяця"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Повторюється кожні %1$s тижнів"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "Повторюється щотижня"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Повторюється кожні %1$s днів"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "Повторюється щодня"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -538,7 +538,7 @@ msgstr ""
 "результаті ваш календар може відображатися неправильно. Будь ласка, видаліть "
 "активне посилання з короткого коду."
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Функція r34ics_url_get_contents() більше не підтримується."
 
@@ -1096,7 +1096,7 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
 "WordPress більше не включає посилання на налаштувальник у меню «Зовнішній "
 "вигляд», коли активна тема блоків. Поставте галочку в цьому полі, якщо ви "
@@ -1104,7 +1104,7 @@ msgstr ""
 "CSS. Примітка: деякі теми або плагіни можуть вже зареєструвати "
 "налаштувальник, і в цьому випадку це налаштування не матиме ефекту. (Поле "
 "для позначки вмикає налаштувальник тільки тоді, коли воно позначене; воно не "
-"вимикає налаштувальник, коли воно не позначене."
+"вимикає налаштувальник, коли воно не позначене.)"
 
 #: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"

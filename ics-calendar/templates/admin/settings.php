@@ -162,7 +162,7 @@ if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
 						<input type="checkbox" name="register_customizer" id="r34ics_register_customizer"<?php if (get_option('r34ics_register_customizer')) { echo ' checked="checked"'; } ?> />
 						<strong><?php esc_html_e('Register Customizer', 'ics-calendar'); ?></strong>
 						<span class="description" tabindex="0"><small class="r34ics-help"><span class="help_content">
-							<?php esc_html_e('WordPress no longer includes a link to the Customizer in the Appearance menu when a Block Theme is active. Check this box if you wish to use the Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins may already register the Customizer, in which case, this setting will have no effect. (The checkbox only enables the Customizer when checked; it does not disable the Customizer when unchecked.', 'ics-calendar'); ?>
+							<?php esc_html_e('WordPress no longer includes a link to the Customizer in the Appearance menu when a Block Theme is active. Check this box if you wish to use the Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins may already register the Customizer, in which case, this setting will have no effect. (The checkbox only enables the Customizer when checked; it does not disable the Customizer when unchecked.)', 'ics-calendar'); ?>
 						</span></small></span>
 					</label>
 				</p>

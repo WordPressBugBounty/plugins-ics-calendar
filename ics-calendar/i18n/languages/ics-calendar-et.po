@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-04 13:07-0600\n"
-"PO-Revision-Date: 2026-02-04 13:08-0600\n"
+"POT-Creation-Date: 2026-02-27 15:08-0600\n"
+"PO-Revision-Date: 2026-02-27 15:08-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: et\n"
@@ -441,7 +441,7 @@ msgstr "kalendrisündmus"
 msgid "Event download failed."
 msgstr "Sündmuse allalaadimine ebaõnnestus."
 
-#: class-r34ics.php:3285
+#: class-r34ics.php:3287
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -479,47 +479,47 @@ msgstr ""
 msgid "Map"
 msgstr "Kaart"
 
-#: functions.php:1509
+#: functions.php:1510
 msgid "Recurring event"
 msgstr "Korduv sündmus"
 
-#: functions.php:1514
+#: functions.php:1515
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Kordub iga %1$s aasta järel"
 
-#: functions.php:1514
+#: functions.php:1515
 msgid "Recurs yearly"
 msgstr "Kordub igal aastal"
 
-#: functions.php:1517
+#: functions.php:1518
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Kordub iga %1$s kuu järel"
 
-#: functions.php:1517
+#: functions.php:1518
 msgid "Recurs monthly"
 msgstr "Kordub igakuuliselt"
 
-#: functions.php:1520
+#: functions.php:1521
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Kordub iga %1$s nädala järel"
 
-#: functions.php:1520
+#: functions.php:1521
 msgid "Recurs weekly"
 msgstr "Kordub iganädalaselt"
 
-#: functions.php:1523
+#: functions.php:1524
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Kordub iga %1$s päeva järel"
 
-#: functions.php:1523
+#: functions.php:1524
 msgid "Recurs daily"
 msgstr "Kordub iga päev"
 
-#: functions.php:1696
+#: functions.php:1697
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -532,7 +532,7 @@ msgstr ""
 "pruugi teie kalender õigesti kuvada. Palun eemaldage lühikoodist klõpsatav "
 "link."
 
-#: functions.php:2025
+#: functions.php:2027
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funktsiooni r34ics_url_get_contents() enam ei toetata."
 
@@ -1082,14 +1082,14 @@ msgid ""
 "Customizer, e.g. for the Additional CSS input. Note: Some themes or plugins "
 "may already register the Customizer, in which case, this setting will have "
 "no effect. (The checkbox only enables the Customizer when checked; it does "
-"not disable the Customizer when unchecked."
+"not disable the Customizer when unchecked.)"
 msgstr ""
 "WordPress ei sisalda enam lingi Customizerile menüüs Appearance, kui Block "
 "Theme on aktiivne. Märkige see kast, kui soovite kasutada Customizerit, "
 "näiteks täiendava CSS-i sisestamiseks. Märkus: Mõned teemad või pluginad "
-"võivad juba registreerida Customizeri, sel juhul ei ole sellel seadistusel "
-"mingit mõju. (Kastike aktiveerib Customizeri ainult siis, kui see on "
-"märgitud; see ei deaktiveeri Customizerit, kui see on märkimata."
+"võivad Customizerit juba registreerida, sel juhul ei ole sellel seadistusel "
+"mingit mõju. (Kastike aktiveerib Customizerit ainult siis, kui see on "
+"märgitud; see ei deaktiveeri Customizerit, kui see on märkimata.)"
 
 #: templates/admin/settings.php:173
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
