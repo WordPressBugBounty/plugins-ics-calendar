@@ -1258,11 +1258,8 @@ function r34ics_maybe_make_clickable($str='') {
 		$str = preg_replace('/\[(http[^\]]+?)\]/', '<a href="\1">\1</a>', $str);
 	}
 	
-	// Convert freestanding image URLs into <img> tags rather than links (only if there's no HTML!)
-	// TBH I'm kind of mystified as to why [^\"\']+ is working here but [^\"\'] doesn't! RegEx... ¯\_(ツ)_/¯
-	if (!$has_html) {
-		$str = preg_replace('/([^\"\']+)(http[^\"\'\s]+?\.(apng|avif|gif|jpg|jpeg|png|svg))/', '\1<img src="\2" alt="" />', $str);
-	}
+	// Convert freestanding image URLs into <img> tags rather than links
+		$str = preg_replace('/([^\"\'=]+)(http[^\"\'\s]+?\.(apng|avif|gif|jpg|jpeg|png|svg|webp))/', '\1<img src="\2" alt="" />', $str);
 	
 	// Add <br /> tags if appropriate (must come last to avoid interfering with above logic)
 	if (!$has_html) { $str = nl2br($str); }

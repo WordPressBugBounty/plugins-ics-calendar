@@ -16,12 +16,18 @@ if (!defined('ABSPATH')) { exit; }
 		<?php
 		update_option('r34ics_admin_first_run', false, false);
 	}
+	
+	// Only show the extra "get started" message if there aren't any saved feed URLs
+	// Note: This logic will cause it to reappear if the saved URLs are purged, but it's not a big deal
+	if (empty(get_option('r34ics_feed_urls'))) {
+		?>
+		<p><mark class="info"><?php
+		// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
+		printf(esc_html__('Get started with %1$s in four easy steps... and you\'ve already completed step one! Check out our %2$sQuick Start Guide%3$s for the rest.', 'ics-calendar'), '<strong>' . (class_exists('R34ICSPro') ? 'ICS Calendar Pro' : 'ICS Calendar') . '</strong>', '<a href="https://icscalendar.com/quick-start/" target="_blank">', '<span class="dashicons dashicons-external" style="font-size: inherit; text-decoration: none;"></span></a>');
+		?></mark></p>
+		<?php
+	}
 	?>
-
-	<p><mark class="info"><?php
-	// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
-	printf(esc_html__('Get started with %1$s in four easy steps... and you\'ve already completed step one! Check out our %2$sQuick Start Guide%3$s for the rest.', 'ics-calendar'), '<strong>' . (class_exists('R34ICSPro') ? 'ICS Calendar Pro' : 'ICS Calendar') . '</strong>', '<a href="https://icscalendar.com/quick-start/" target="_blank">', '<span class="dashicons dashicons-external" style="font-size: inherit; text-decoration: none;"></span></a>');
-	?></mark></p>
 	
 	<p style="margin: 1.5rem 0;"><a href="https://icscalendar.com/quick-start/" target="_blank" class="button button-primary" style="font-size: 1.25rem;"><?php esc_html_e('Quick Start Guide', 'ics-calendar'); ?> <span class="dashicons dashicons-external" style="vertical-align: middle; font-size: 1rem;"></span></a></p>
 	

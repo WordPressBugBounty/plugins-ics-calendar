@@ -1,5 +1,22 @@
 === ICS Calendar Changelog ===
 
+= 12.0.5 - 2026.03.09 =
+
+* Admin:
+  * Added check to only display the initial Quick Start Guide alert if there are no saved calendar feed URLs.
+* Functions:
+  * Modified `r34ics_maybe_make_clickable()` to fix regression in converting raw image URLs into `img` tags; added support for WebP image URLs.
+* i18n:
+  * Added Icelandic.
+
+= 12.0.4.2 - 2026.02.27 =
+
+* Miscellaneous:
+  * Modified recursion conditional in `R34ICS::_url_get_contents()` method to only check for specific text strings in the response when the response code is _not_ 200. This should resolve possible erroneous redirections that occur if the text strings being checked appear in the ICS feed response content itself.
+* i18n:
+  * Reworked `r34ics_i18n_symlinks()` to delete old translation files before copying or symlinking new file, to ensure changes are picked up.
+  * Updated translation strings.
+
 = 12.0.4.1 - 2026.02.07 =
 
 * Miscellaneous:
