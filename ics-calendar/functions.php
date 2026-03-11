@@ -694,9 +694,10 @@ function r34ics_feed_colors_css($ics_data, $padding=false, $hover=false) {
 						padding: 0;
 					}
 
-					.ics-calendar:not(.nostyle)#<?php echo esc_attr($ics_data['guid']); ?> *[data-feed-color="<?php echo esc_attr($color['base']); ?>"] .date {
+					.ics-calendar:not(.nostyle)#<?php echo esc_attr($ics_data['guid']); ?> *[data-feed-color="<?php echo esc_attr($color['base']); ?>"] .ics-calendar-date {
 						background-color: <?php echo esc_attr($color['highlight']); ?>;
 						border-color: <?php echo esc_attr($color['base']); ?>;
+						color: <?php echo esc_attr(r34ics_color_text4bg($color['highlight'])); ?>;
 					}
 					<?php
 				}
