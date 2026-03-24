@@ -59,20 +59,28 @@ function r34ics_boolean_check(val) {
 }
 
 
-// @todo Refactor to prevent non-calendar-specific logic from loading multiple times with multiple calendars on page
+/**
+ * @todo Continue refactoring to prevent non-calendar-specific logic from loading multiple
+ * times when there are multiple calendars on page.
+ */
+var r34ics_initialized = false;
 function r34ics_init(elem) {
 
 	// Custom event for callbacks
 	jQuery(document).trigger('r34ics_init_start', [elem]);
+	
+	
+	// One-time-per-page logic
+	if (!r34ics_initialized) {
+		r34ics_init_once(elem);
+		r34ics_initialized = true;
+	}
 
 
 	// VIEW: ALL
 	
 	// Show calendar (hidden on load to avoid FOUC, with conditional style loading as of v.10.6)
 	jQuery('.ics-calendar').animate({ opacity: 1}, 500);
-
-	// Add .r34ics_phone class to body if we're on a phone screen size
-	if (r34ics_is_phone()) { jQuery('body').addClass('r34ics_phone'); }
 
 	// Handle individual event ICS downloads
 	jQuery(document).on('click', '.r34ics_event_ics_download', function() {
@@ -307,32 +315,6 @@ function r34ics_init(elem) {
 	}
 	
 	if (jQuery('.ics-calendar.layout-list .ics-calendar-pagination, .ics-calendar.layout-basic .ics-calendar-pagination').length > 0) {
-		jQuery('.ics-calendar-paginate').on('click', function() {
-			var container = jQuery(this).closest('.ics-calendar');
-			var current = container.find('.ics-calendar-pagination:visible');
-			var dir = jQuery(this).hasClass('prev') ? 'prev' : 'next';
-			var next, next_next, offset;
-			container.find('.ics-calendar-paginate').show();
-			switch (dir) {
-				case 'prev':
-					next = current.prev();
-					next_next = next.prev();
-					break;
-				case 'next':
-				default:
-					next = current.next();
-					next_next = next.next();
-					break;
-			}
-			if (next.length != 0) {
-				current.hide(); next.show();
-			}
-			if (next_next.length == 0) {
-				container.find('.ics-calendar-paginate.' + dir).hide();
-			}
-			r34ics_show_hide_headers();
-			return false;
-		});
 		jQuery('.ics-calendar.layout-list, .ics-calendar.layout-basic').each(function() {
 			jQuery(this).find('.ics-calendar-pagination:not(:first-child)').hide();
 			jQuery(this).find('.ics-calendar-paginate.prev').hide();
@@ -470,6 +452,61 @@ function r34ics_init(elem) {
 
 	// Custom event for callbacks
 	jQuery(document).trigger('r34ics_init_end', [elem]);
+
+}
+
+
+/**
+ * @todo Continue refactoring to prevent non-calendar-specific logic from loading multiple
+ * times when there are multiple calendars on page.
+ *
+ * REMEMBER!
+ * 1. Don't use conditionals that check if a specific view exists. Think ahead!
+ * 2. Does it use .on()? If not, it probably shouldn't live here. But there are exceptions.
+ * 3. Use jQuery(document).on() unless you absolutely can't (e.g. HTML5 details tag).
+ * 4. Test every change as it is added!
+ */
+function r34ics_init_once(elem) {
+	if (r34ics_initialized) { return; }
+
+	// VIEW: ALL
+	
+	// Show calendar (hidden on load to avoid FOUC, with conditional style loading as of v.10.6)
+	jQuery('.ics-calendar').animate({ opacity: 1}, 500);
+
+	// Add .r34ics_phone class to body if we're on a phone screen size
+	if (r34ics_is_phone()) { jQuery('body').addClass('r34ics_phone'); }
+
+
+	// VIEW: LIST / BASIC
+	// Outer section wrapper has classes .ics-calendar.layout-list or .ics-calendar.layout-basic
+
+	jQuery(document).on('click', '.ics-calendar-paginate', function() {
+		var container = jQuery(this).closest('.ics-calendar');
+		var current = container.find('.ics-calendar-pagination:visible');
+		var dir = jQuery(this).hasClass('prev') ? 'prev' : 'next';
+		var next, next_next, offset;
+		container.find('.ics-calendar-paginate').show();
+		switch (dir) {
+			case 'prev':
+				next = current.prev();
+				next_next = next.prev();
+				break;
+			case 'next':
+			default:
+				next = current.next();
+				next_next = next.next();
+				break;
+		}
+		if (next.length != 0) {
+			current.hide(); next.show();
+		}
+		if (next_next.length == 0) {
+			container.find('.ics-calendar-paginate.' + dir).hide();
+		}
+		r34ics_show_hide_headers();
+		return false;
+	});
 
 }
 

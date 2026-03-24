@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 12.0.5.1
+Stable tag: 12.0.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,13 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.0.5.2 - 2026.03.23 =
+
+* AJAX:
+  * Fixed bug that would cause the next upcoming event to be omitted in List and Basic views, when running PHP 7.4 or earlier.
+* Miscellaneous:
+  * Began process of refactoring `r34ics_init()` JavaScript function to address issues when multiple calendars are displayed on the same page. Some logic in this function must run for _every_ calendar, and some of it should only run once per page. The logic that should only run once per page is being moved to a separate `r34ics_init_once()` function.
 
 = 12.0.5.1 - 2026.03.11 =
 

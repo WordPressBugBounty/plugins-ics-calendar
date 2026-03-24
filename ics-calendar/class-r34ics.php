@@ -2147,9 +2147,9 @@ if (!class_exists('R34ICS')) {
 			
 			// AJAX mode
 			if (!isset($args['ajax']) || $args['ajax'] !== false) { // It needs to explicitly check for false!
-				$atts = $this->_ajax_container_attributes($args);
+				$ajax_args = $this->_ajax_container_attributes($args);
 				echo '<div';
-				foreach ((array)$atts as $key => $value) {
+				foreach ((array)$ajax_args as $key => $value) {
 					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo ' ' . sanitize_title($key) . '="' . esc_attr($value) . '"';
 				}

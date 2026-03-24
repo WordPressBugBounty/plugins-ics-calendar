@@ -53,8 +53,14 @@ function r34ics_ajax() {
 					$args[$key] = is_string($value) ? wp_kses_post(stripslashes(trim($value ?: ''))) : intval($value);
 				}
 				// Sanitize boolean values
-				if ($value == 'true') { $args[$key] = 1; }
-				elseif ($value == 'false') { $args[$key] = 0; }
+				/**
+				 * Note! Using == works with PHP 8.x but === is required for PHP 7.x)
+				 * https://www.php.net/manual/en/migration80.incompatible.php
+				 * This doesn't seem to explain the situation here; PHP 7.4 evaluates
+				 * ($value == 'true') as TRUE when $value is the integer 0. Why??
+				 */
+				if ($value === 'true') { $args[$key] = 1; }
+				elseif ($value === 'false') { $args[$key] = 0; }
 			}
 		}
 		

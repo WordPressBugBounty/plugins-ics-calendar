@@ -1,5 +1,12 @@
 === ICS Calendar Changelog ===
 
+= 12.0.5.2 - 2026.03.23 =
+
+* AJAX:
+  * Fixed bug that would cause the next upcoming event to be omitted in List and Basic views, when running PHP 7.4 or earlier.
+* Miscellaneous:
+  * Began process of refactoring `r34ics_init()` JavaScript function to address issues when multiple calendars are displayed on the same page. Some logic in this function must run for _every_ calendar, and some of it should only run once per page. The logic that should only run once per page is being moved to a separate `r34ics_init_once()` function.
+
 = 12.0.5.1 - 2026.03.11 =
 
 * Basic view:
