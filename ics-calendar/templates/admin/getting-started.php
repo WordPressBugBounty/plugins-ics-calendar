@@ -29,7 +29,7 @@ if (!defined('ABSPATH')) { exit; }
 	}
 	?>
 	
-	<p style="margin: 1.5rem 0;"><a href="https://icscalendar.com/quick-start/" target="_blank" class="button button-primary" style="font-size: 1.25rem;"><?php esc_html_e('Quick Start Guide', 'ics-calendar'); ?> <span class="dashicons dashicons-external" style="vertical-align: middle; font-size: 1rem;"></span></a></p>
+	<p style="margin: 1.5rem 0;"><a href="https://icscalendar.com/quick-start/" target="_blank" class="button button-primary" style="font-size: 1.25rem;"><?php esc_html_e('Quick Start Guide', 'ics-calendar'); ?> <span class="dashicons dashicons-external" style="vertical-align: middle; font-size: 1rem; line-height: 1;"></span></a></p>
 	
 	<div class="r34ics-inner-box">
 	

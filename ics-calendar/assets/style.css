@@ -969,7 +969,7 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .empty
 	{ display: none; }
 
-	.ics-calendar:not(.show-past-events):not(.month_list_all) .ics-calendar-month-wrapper.past .past.has_events
+	.ics-calendar:not(.nomobile):not(.show-past-events):not(.month_list_all) .ics-calendar-month-wrapper.past .past.has_events
 	{ display: block !important; }
 	
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .day {

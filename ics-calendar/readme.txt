@@ -3,9 +3,9 @@ Contributors: room34
 Donate link: https://icscalendar.com
 Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
-Tested up to: 6.9
-Requires PHP: 7.2
-Stable tag: 12.0.5.2
+Tested up to: 7.0
+Requires PHP: 7.4
+Stable tag: 12.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,9 +37,9 @@ We've made it easier than ever to get started using ICS Calendar with our new on
 
 All date strings (days of the week, months, etc.) are automatically translated into your site's configured language (under **Settings > General > Language**) and date/time formats using core WordPress functionality. All text content for the calendar itself is displayed as-is from the feed.
 
-ICS Calendar includes built-in translation files for the following languages: Chinese, Czech, Danish, Dutch, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Latvian, Lithuanian, Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish, and Ukrainian.
+ICS Calendar includes built-in translation files for the following languages: Chinese, Czech, Danish, Dutch, Estonian, Finnish, French, German, Greek, Hungarian, Icelandic, Italian, Japanese, Korean, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Slovakian, Slovenian, Spanish, Swedish, Turkish, and Ukrainian.
 
-Please contact us if you would like us to add support for your language!
+Please [contact us](https://icscalendar.com/support/) if you would like us to add support for your language!
 
 _This plugin includes the PHP ICS Parser library by Jonathan Goode, John Grogg and Martin Thoma (MIT license)._
 
@@ -79,17 +79,17 @@ Yes! You can combine multiple calendars by including more than one feed URL in t
 
 = Why isn't my calendar loading? =
 
-This may be due to your server's configuration. This plugin requires either the PHP cURL extensions, or the `allow_url_fopen` PHP setting to be turned on. Check your PHP configuration or your server administrator if you think this may be the issue. You can also add `debug="true"` to your shortcode and view your page to see debugging output which may provide additional details about any connection issues.
+This may be due to your server's configuration. This plugin requires either the PHP cURL extensions, or the `allow_url_fopen` PHP setting to be turned on. Check your PHP configuration or your server administrator if you think this may be the issue. You can also use the **ICS Feed URL Tester** utility on the ICS Calendar admin page to check if your server is able to connect to the calendar source.
 
 = Why isn't my calendar updating? =
 
 For performance, this plugin uses WordPress transients to store retrieved calendar data for one hour between requests to the calendar source server. If you have updated events that are not showing up in your page, visit the **ICS Calendar** page in your site admin and click the **Clear Cached Calendar Data** button.
 
-Third-party caching plugins may interfere with ICS Calendar's feed syncing. If you are using a caching plugin and your calendar is not updating, try using the [AJAX](https://icscalendar.com/icsdocs/#ajax) option in your shortcode.
+Third-party caching plugins may interfere with ICS Calendar's feed syncing. ICS Calendar uses AJAX to work around most caching conflicts, but your caching plugin may require you to add the `wp-admin/admin-ajax.php` path to its list of exclusions in order for AJAX to function properly.
 
 = Why are event times an hour off after Daylight Saving Time begins? =
 
-PHP has two different ways of defining timezones: as a number of hours offset from GMT/UTC (e.g. "UTC-5"), or as a continent/city combination (e.g. "America/Chicago"). Timezones using UTC offsets do not handle Daylight Saving Time correctly (as noted in the [PHP documentation](https://www.php.net/manual/en/timezones.others.php)). Please check your WordPress timezone settings (__Settings > General > Timezone__). If it is set to a UTC offset, change it to the city closest to your location, in the same timezone. As of version 6.0 you can also set the timezone within the shortcode using the `tz` parameter. (Again, be sure to use a named region/city timezone, not a UTC offset.)
+PHP has two different ways of defining timezones: as a number of hours offset from GMT/UTC (e.g. "UTC-5"), or as a continent/city combination (e.g. "America/Chicago"). Timezones using UTC offsets do not handle Daylight Saving Time correctly (as noted in the [PHP documentation](https://www.php.net/manual/en/timezones.others.php)). Please check your WordPress timezone settings (__Settings > General > Timezone__). If it is set to a UTC offset, change it to the city closest to your location, in the same timezone. You can also set the timezone within the shortcode using the `tz` parameter. (Again, be sure to use a named region/city timezone, not a UTC offset.)
 
 = Additional documentation and support =
 
@@ -100,6 +100,21 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.0.6 - 2026.04.01 =
+
+* Admin:
+  * Minor CSS adjustments for WP 7.0 interface changes.
+* Month view:
+  * Fixed bug in mobile view that would cause the date grid for past months to display incorrectly when `nomobile` was set.
+* Week view:
+  * Fixed bug in mobile view that would cause the current week to reappear on scroll, after selecting a different week, in mobile Safari. This issue was specifically an error in the logic of a function that runs on resize, but was exacerbated by the fact that mobile Safari changes the window size on scroll, triggering a resize event.
+* Miscellaneous:
+  * Bumped PHP requirement to 7.4. (8.0 or later is strongly recommended.)
+  * Bumped 'tested up to' to 7.0.
+  * Updated `readme.txt` content.
+* Vendors:
+  * ics-parser: Merged [v. 3.5.1](https://github.com/u01jmg3/ics-parser/releases/tag/v3.5.1) changes into customized version of library.
 
 = 12.0.5.2 - 2026.03.23 =
 

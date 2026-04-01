@@ -656,8 +656,16 @@ function r34ics_show_hide_headers(elem) {
 
 function r34ics_week_reset() {
 	if (jQuery('.ics-calendar.layout-week').length > 0) {
-		jQuery('body.r34ics_phone .ics-calendar.layout-week:not(.nomobile) .ics-calendar-month-grid tbody tr.current-week').css('display','block');
-		jQuery('body.r34ics_phone .ics-calendar.layout-week.nomobile .ics-calendar-month-grid tbody tr.current-week, body:not(.r34ics_phone) .ics-calendar.layout-week .ics-calendar-month-grid tbody tr.current-week').css('display','table-row');
+		jQuery('.ics-calendar.layout-week').each(function() {
+			jQuery(this).find('.ics-calendar-month-grid tbody tr').css('display', 'none');
+			var current = jQuery(this).find('.ics-calendar-select').val();
+			if (r34ics_is_phone() && !jQuery(this).hasClass('nomobile')) {
+				jQuery(this).find('.ics-calendar-month-grid tbody tr.' + current).css('display', 'block');
+			}
+			else {
+				jQuery(this).find('.ics-calendar-month-grid tbody tr.' + current).css('display', 'table-row');
+			}
+		});
 	}
 }
 

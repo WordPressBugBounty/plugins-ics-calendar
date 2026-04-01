@@ -8,7 +8,7 @@
  *
  * @author  Jonathan Goode <https://github.com/u01jmg3>
  * @license https://opensource.org/licenses/mit-license.php MIT License
- * @version 3.4.1
+ * @version 3.5.1
  */
 
 namespace R34ICS_ICal; // r34ics - Renamed to avoid plugin conflicts
@@ -198,6 +198,13 @@ class ICal
      * @var string
      */
     protected $httpProtocolVersion;
+
+    /**
+     * Holds the settings to enable or disable Ssl peer verification
+     *
+     * @var boolean
+     */
+    protected $verifySsl;
 
     /**
      * Define which variables can be configured
@@ -501,9 +508,8 @@ class ICal
     /**
      * Creates the ICal object
      *
-     * @param  mixed $files
-     * @param  array $options
-     * @return void
+     * @param mixed $files
+     * @param array $options
      */
     public function __construct($files = false, array $options = array())
     {
@@ -613,15 +619,16 @@ class ICal
     /**
      * Initialises lines from a URL
      *
-     * @param  string $url
-     * @param  string $username
-     * @param  string $password
-     * @param  string $userAgent
-     * @param  string $acceptLanguage
-     * @param  string $httpProtocolVersion
+     * @param  string  $url
+     * @param  string  $username
+     * @param  string  $password
+     * @param  string  $userAgent
+     * @param  string  $acceptLanguage
+     * @param  string  $httpProtocolVersion
+     * @param  boolean $verifySsl
      * @return ICal
      */
-    public function initUrl($url, $username = null, $password = null, $userAgent = null, $acceptLanguage = null, $httpProtocolVersion = null)
+    public function initUrl($url, $username = null, $password = null, $userAgent = null, $acceptLanguage = null, $httpProtocolVersion = null, $verifySsl = true)
     {
         if (!is_null($username) && !is_null($password)) {
             $this->httpBasicAuth['username'] = $username;
@@ -639,6 +646,8 @@ class ICal
         if (!is_null($httpProtocolVersion)) {
             $this->httpProtocolVersion = $httpProtocolVersion;
         }
+
+        $this->verifySsl = $verifySsl;
 
         $this->initFile($url);
 
@@ -1358,7 +1367,7 @@ class ICal
         }
 
         $allEventRecurrences = array();
-        $eventKeysToRemove = array();
+        $eventKeysToRemove   = array();
 
         foreach ($events as $key => $anEvent) {
             if (!isset($anEvent['RRULE']) || $anEvent['RRULE'] === '') {
@@ -2690,6 +2699,12 @@ class ICal
             $options['http']['protocol_version'] = $this->httpProtocolVersion;
         } else {
             $options['http']['protocol_version'] = '1.1';
+        }
+
+        if ($this->verifySsl === false) {
+            $options['ssl']                     = array();
+            $options['ssl']['verify_peer']      = false;
+            $options['ssl']['verify_peer_name'] = false;
         }
 
         $options['http']['header'][] = 'Connection: close';

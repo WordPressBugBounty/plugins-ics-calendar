@@ -1,5 +1,20 @@
 === ICS Calendar Changelog ===
 
+= 12.0.6 - 2026.04.01 =
+
+* Admin:
+  * Minor CSS adjustments for WP 7.0 interface changes.
+* Month view:
+  * Fixed bug in mobile view that would cause the date grid for past months to display incorrectly when `nomobile` was set.
+* Week view:
+  * Fixed bug in mobile view that would cause the current week to reappear on scroll, after selecting a different week, in mobile Safari. This issue was specifically an error in the logic of a function that runs on resize, but was exacerbated by the fact that mobile Safari changes the window size on scroll, triggering a resize event.
+* Miscellaneous:
+  * Bumped PHP requirement to 7.4. (8.0 or later is strongly recommended.)
+  * Bumped 'tested up to' to 7.0.
+  * Updated `readme.txt` content.
+* Vendors:
+  * ics-parser: Merged [v. 3.5.1](https://github.com/u01jmg3/ics-parser/releases/tag/v3.5.1) changes into customized version of library.
+
 = 12.0.5.2 - 2026.03.23 =
 
 * AJAX:
