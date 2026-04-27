@@ -641,6 +641,15 @@ if (!class_exists('R34ICS')) {
 				$this->debug_messages['Memory limit (MB)'] = r34ics_memory_limit_mb();
 			}
 			
+			// Adjust time limit if appropriate
+			if ($display_calendar_time_limit = get_option('r34ics_display_calendar_time_limit', ini_get('max_execution_time'))) {
+				// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
+				set_time_limit(intval($display_calendar_time_limit));
+			}
+			if ($this->debug) {
+				$this->debug_messages['Time limit (seconds)'] = intval($display_calendar_time_limit);
+			}
+			
 			// Get ICS data, from transient if possible
 			$transient_name = __METHOD__ . '_' . $this->display_calendar_transient_hash($args);
 			$loaded_from_transient = null;
@@ -656,7 +665,7 @@ if (!class_exists('R34ICS')) {
 			}
 	
 			// No transient ICS data; retrieve ICS file from server
-			// Note: Also checking for value of '1' because AJAX requests sometimes return '1' for an as-yet undetermined reason
+			// Note: Also checking for value of '1' because AJAX requests sometimes return '1'
 			if (empty($ics_data) || $ics_data == '1') {
 				$loaded_from_transient = false;
 				
@@ -1036,7 +1045,7 @@ if (!class_exists('R34ICS')) {
 				foreach (array_keys((array)$ics_data['events']) as $key_year) { ksort($ics_data['events'][$key_year]); }
 				ksort($ics_data['events']);
 		
-				// Write ICS data to transient
+				// Write ICS data to transient (check allows $reload to be either 1 or true)
 				if ($reload != 1) {
 					// Allow $reload as an integer > 1 to represent the cache expiration in seconds; otherwise use the default
 					$transient_expiration = (intval($reload) > 1) ? intval($reload) : get_option('r34ics_transients_expiration');
@@ -2496,17 +2505,31 @@ if (!class_exists('R34ICS')) {
 			
 				// display_calendar_memory_limit
 				update_option('r34ics_display_calendar_memory_limit', (
-					isset($_POST['display_calendar_memory_limit'])
+					!empty($_POST['display_calendar_memory_limit'])
 						? intval(sanitize_text_field(wp_unslash($_POST['display_calendar_memory_limit']))) . 'M'
 						: ini_get('memory_limit')
+				), false);
+				
+				// display_calendar_time_limit
+				update_option('r34ics_display_calendar_time_limit', (
+					!empty($_POST['display_calendar_time_limit'])
+						? intval(sanitize_text_field(wp_unslash($_POST['display_calendar_time_limit'])))
+						: ini_get('max_execution_time')
 				), false);
 				
 				// register_customizer
 				update_option('r34ics_register_customizer', !empty($_POST['register_customizer']), true);
 			
+				// request_timeout
+				update_option('r34ics_request_timeout', (
+					!empty($_POST['request_timeout'])
+						? intval(sanitize_text_field(wp_unslash($_POST['request_timeout'])))
+						: 30
+				), false);
+				
 				// transients_expiration
 				update_option('r34ics_transients_expiration', (
-					isset($_POST['transients_expiration'])
+					!empty($_POST['transients_expiration'])
 						? intval(sanitize_text_field(wp_unslash($_POST['transients_expiration'])))
 						: 3600
 				), true);
@@ -2966,6 +2989,29 @@ if (!class_exists('R34ICS')) {
 			// Are we at debug level 3 or greater? If so, don't use transients
 			if (!empty($this->debug) && $this->debug >= 3) { $use_transients = false; }
 			
+			// Adjust memory limit if appropriate
+			// Note: if R34ICS::display_calendar() called this method, this was already set
+			if ($display_calendar_memory_limit = get_option('r34ics_display_calendar_memory_limit')) {
+				// Check against current memory limit
+				if (r34ics_memory_limit_mb() < intval($display_calendar_memory_limit)) {
+					// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
+					ini_set('memory_limit', $display_calendar_memory_limit);
+				}
+			}
+			if ($this->debug) {
+				$this->debug_messages['Memory limit (MB)'] = r34ics_memory_limit_mb();
+			}
+			
+			// Adjust time limit if appropriate
+			// Note: if R34ICS::display_calendar() called this method, this was already set
+			if ($display_calendar_time_limit = get_option('r34ics_display_calendar_time_limit', ini_get('max_execution_time'))) {
+				// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
+				set_time_limit(intval($display_calendar_time_limit));
+			}
+			if ($this->debug) {
+				$this->debug_messages['Time limit (seconds)'] = intval($display_calendar_time_limit);
+			}
+			
 			// Set custom safe ports
 			if (get_option('r34ics_allowed_ports')) {
 				add_filter('http_allowed_safe_ports', function($allowed_ports) {
@@ -3140,7 +3186,7 @@ if (!class_exists('R34ICS')) {
 				'redirection' => 0, // Use `r34ics_url_get_contents_request_args` filter to override
 				'sslcertificates' => ABSPATH . WPINC . '/certificates/ca-bundle.crt',
 				'sslverify' => false,
-				'timeout' => 30,
+				'timeout' => intval(get_option('r34ics_request_timeout', 30)),
 				'user-agent' => $user_agent,
 			);
 			$request_args = apply_filters('r34ics_url_get_contents_request_args', $request_args);
@@ -3229,14 +3275,16 @@ if (!class_exists('R34ICS')) {
 			// Gives each URL a unique key, so it can be referenced in forms on the front end without exposing URL
 			if (strpos(trim($url_contents), 'BEGIN:VCALENDAR') === 0) {
 				r34ics_url_uniqid_update($url);
+				$valid_feed = true;
 			}
 			// ...otherwise, remove the URL from the list
 			else {
 				r34ics_url_uniqid_delete($url);
+				$valid_feed = false;
 			}
 				
 			// Write URL contents to transient
-			if (!empty($use_transients) && !empty($url_contents)) {
+			if (!empty($use_transients) && !empty($valid_feed)) {
 				$transient_expiration = get_option('r34ics_transients_expiration');
 				set_transient($transient_name, $url_contents, $transient_expiration);
 			}
@@ -3290,6 +3338,29 @@ if (!class_exists('R34ICS')) {
 			// Are we at debug level 3 or greater? If so, don't use transients
 			if (!empty($this->debug) && $this->debug >= 3) { $use_transients = false; }
 	
+			// Adjust memory limit if appropriate
+			// Note: if R34ICS::display_calendar() called this method, this was already set
+			if ($display_calendar_memory_limit = get_option('r34ics_display_calendar_memory_limit')) {
+				// Check against current memory limit
+				if (r34ics_memory_limit_mb() < intval($display_calendar_memory_limit)) {
+					// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
+					ini_set('memory_limit', $display_calendar_memory_limit);
+				}
+			}
+			if ($this->debug) {
+				$this->debug_messages['Memory limit (MB)'] = r34ics_memory_limit_mb();
+			}
+			
+			// Adjust time limit if appropriate
+			// Note: if R34ICS::display_calendar() called this method, this was already set
+			if ($display_calendar_time_limit = get_option('r34ics_display_calendar_time_limit', ini_get('max_execution_time'))) {
+				// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
+				set_time_limit(intval($display_calendar_time_limit));
+			}
+			if ($this->debug) {
+				$this->debug_messages['Time limit (seconds)'] = intval($display_calendar_time_limit);
+			}
+			
 			// We'll keep track of any domains that didn't return contents
 			global $r34ics_url_get_contents_domain_errors;
 			if (!isset($r34ics_url_get_contents_domain_errors)) {
@@ -3530,14 +3601,16 @@ if (!class_exists('R34ICS')) {
 			// Gives each URL a unique key, so it can be referenced in forms on the front end without exposing URL
 			if (strpos(trim($url_contents), 'BEGIN:VCALENDAR') === 0) {
 				r34ics_url_uniqid_update($url);
+				$valid_feed = true;
 			}
 			// ...otherwise, remove the URL from the list
 			else {
 				r34ics_url_uniqid_delete($url);
+				$valid_feed = false;
 			}
 	
 			// Write URL contents to transient
-			if (!empty($use_transients) && !empty($url_contents)) {
+			if (!empty($use_transients) && !empty($valid_feed)) {
 				$transient_expiration = get_option('r34ics_transients_expiration');
 				set_transient($transient_name, $url_contents, $transient_expiration);
 			}

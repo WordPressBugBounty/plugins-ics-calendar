@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-27 15:08-0600\n"
-"PO-Revision-Date: 2026-02-27 15:08-0600\n"
+"POT-Creation-Date: 2026-04-27 10:36-0500\n"
+"PO-Revision-Date: 2026-04-27 10:36-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -182,7 +182,7 @@ msgstr ""
 "Pour passer aux nouveaux paramètres par défaut, activez l'option %8$s sur la "
 "page %9$sparamètres%10$s."
 
-#: class-r34ics.php:377 templates/admin/settings.php:183
+#: class-r34ics.php:377 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Utiliser les nouveaux paramètres par défaut (v.10.6)"
 
@@ -232,11 +232,11 @@ msgstr ""
 "jour."
 
 #: class-r34ics.php:463 templates/admin/admin.php:24
-#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
+#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Commencer"
 
-#: class-r34ics.php:464 class-r34ics.php:2384 templates/admin/admin.php:28
+#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Réglages"
@@ -270,7 +270,7 @@ msgstr "Passez à la version %1$s !"
 msgid "Show/hide all"
 msgstr "Afficher/masquer tout"
 
-#: class-r34ics.php:774
+#: class-r34ics.php:782
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -284,36 +284,36 @@ msgstr ""
 "pour délimiter plusieurs URL, vous pouvez également essayer d'utiliser le "
 "caractère pipe à la place. URL concernée :"
 
-#: class-r34ics.php:1218
+#: class-r34ics.php:1226
 msgid "Hide past events"
 msgstr "Masquer les événements passés"
 
-#: class-r34ics.php:1219 templates/calendar-month.php:96
+#: class-r34ics.php:1227 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Afficher les évènements passés"
 
-#: class-r34ics.php:1300
+#: class-r34ics.php:1308
 msgid "Contact:"
 msgstr "Contact :"
 
-#: class-r34ics.php:1306
+#: class-r34ics.php:1314
 msgid "Resources:"
 msgstr "Ressources :"
 
-#: class-r34ics.php:1316
+#: class-r34ics.php:1324
 msgid "Click for more..."
 msgstr "Cliquez pour en savoir plus..."
 
-#: class-r34ics.php:1350
+#: class-r34ics.php:1358
 msgid "Save to your calendar"
 msgstr "Enregistrer dans votre calendrier"
 
-#: class-r34ics.php:1453
+#: class-r34ics.php:1461
 msgid "Cancelled"
 msgstr "Annulée"
 
-#: class-r34ics.php:1566
+#: class-r34ics.php:1574
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -321,11 +321,11 @@ msgstr ""
 "L'option d'analyse syntaxique héritée est obsolète et sera supprimée dans "
 "une prochaine mise à jour."
 
-#: class-r34ics.php:1657
+#: class-r34ics.php:1665
 msgid "Print"
 msgstr "Imprimer"
 
-#: class-r34ics.php:1917
+#: class-r34ics.php:1925
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -333,7 +333,7 @@ msgstr ""
 "L'attribut « currentweek » du shortcode est obsolète. Veuillez utiliser à la "
 "place view=\"week\" dans votre shortcode."
 
-#: class-r34ics.php:1921
+#: class-r34ics.php:1929
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -341,7 +341,7 @@ msgstr ""
 "L'attribut « legendinline » du shortcode est obsolète. Veuillez utiliser "
 "legendstyle=\"inline\" dans votre shortcode à la place."
 
-#: class-r34ics.php:2258
+#: class-r34ics.php:2266
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -351,7 +351,7 @@ msgstr ""
 "Si votre site utilise un plugin de mise en cache, vous devrez peut-être "
 "vider le cache."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2274
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -361,21 +361,21 @@ msgstr ""
 "Si votre site utilise un plugin de mise en cache, vous devrez peut-être "
 "vider le cache."
 
-#: class-r34ics.php:2278
+#: class-r34ics.php:2286
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Effacement de %1$s %2$s transitoire(s)."
 
-#: class-r34ics.php:2285
+#: class-r34ics.php:2293
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Aucun transitoire %1$s n'a été détecté."
 
-#: class-r34ics.php:2294
+#: class-r34ics.php:2302
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Toutes les URL de flux ICS enregistrées ont été effacées."
 
-#: class-r34ics.php:2301
+#: class-r34ics.php:2309
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -384,7 +384,7 @@ msgstr ""
 "Tous les paramètres %1$s ont été réinitialisés aux valeurs par défaut et les "
 "URL ICS enregistrées ont été effacées."
 
-#: class-r34ics.php:2384
+#: class-r34ics.php:2392
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -394,11 +394,11 @@ msgstr ""
 "l'authentification HTTP de base. Essayez de désactiver l'option %1$s sous "
 "l'onglet %2$s ci-dessus."
 
-#: class-r34ics.php:2384 templates/admin/settings.php:59
+#: class-r34ics.php:2392 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Utiliser l'ancienne méthode de demande de flux"
 
-#: class-r34ics.php:2390
+#: class-r34ics.php:2398
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -414,17 +414,17 @@ msgstr ""
 "Veuillez consulter notre %4$sguide d'utilisation%5$s pour obtenir des "
 "instructions sur la manière d'obtenir votre URL de flux dynamique correcte."
 
-#: class-r34ics.php:2396
+#: class-r34ics.php:2404
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Erreur : Impossible de résoudre l'adresse IP pour %1$s."
 
-#: class-r34ics.php:2399
+#: class-r34ics.php:2407
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Adresse IP résolue pour %1$s :"
 
-#: class-r34ics.php:2424
+#: class-r34ics.php:2432
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -433,7 +433,7 @@ msgstr ""
 "%1$sApparence mise à jour.%2$s Vous devrez peut-être actualiser la page pour "
 "voir certaines modifications."
 
-#: class-r34ics.php:2484
+#: class-r34ics.php:2492
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -441,7 +441,7 @@ msgstr ""
 "Le texte saisi dans le champ « Code court par défaut » n'est pas un code "
 "court valide et n'a pas été enregistré."
 
-#: class-r34ics.php:2527
+#: class-r34ics.php:2549
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -450,15 +450,15 @@ msgstr ""
 "%1$sParamètres mis à jour.%2$s Vous devrez peut-être actualiser la page pour "
 "voir certaines modifications."
 
-#: class-r34ics.php:2840
+#: class-r34ics.php:2862
 msgid "calendar event"
 msgstr "événement du calendrier"
 
-#: class-r34ics.php:2846
+#: class-r34ics.php:2868
 msgid "Event download failed."
 msgstr "Échec du téléchargement de l'événement."
 
-#: class-r34ics.php:3287
+#: class-r34ics.php:3333
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -478,7 +478,7 @@ msgstr ""
 "plus récente. Veuillez mettre à jour votre site vers une version plus "
 "récente de WordPress dès que possible."
 
-#: functions.php:1062
+#: functions.php:1065
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -494,7 +494,7 @@ msgstr ""
 "traductions %1$s peuvent ne pas se charger correctement tant que le plugin "
 "de traduction en conflit est actif."
 
-#: functions.php:1185 functions.php:1193 functions.php:1202
+#: functions.php:1188 functions.php:1196 functions.php:1205
 msgid "Map"
 msgstr "Carte"
 
@@ -551,7 +551,7 @@ msgstr ""
 "cliquable. Votre calendrier peut donc ne pas s'afficher correctement. "
 "Veuillez supprimer le lien cliquable dans le shortcode."
 
-#: functions.php:2027
+#: functions.php:2029
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "La fonction r34ics_url_get_contents() n'est plus prise en charge."
 
@@ -856,7 +856,7 @@ msgstr "Mode sombre"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "Inverse la palette de couleurs (couleurs claires sur fond sombre)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:200
+#: templates/admin/appearance.php:70 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Sauvegarder les changements"
 
@@ -874,7 +874,7 @@ msgstr ""
 "date/heure de votre site sont corrects. Consultez notre %4$sGuide de "
 "l'utilisateur%5$s pour plus d'informations."
 
-#: templates/admin/getting-started.php:23
+#: templates/admin/getting-started.php:26
 #, php-format
 msgid ""
 "Get started with %1$s in four easy steps... and you've already completed "
@@ -884,11 +884,11 @@ msgstr ""
 "première étape ! Consultez notre %2$sGuide de démarrage rapide%3$s pour le "
 "reste."
 
-#: templates/admin/getting-started.php:26
+#: templates/admin/getting-started.php:32
 msgid "Quick Start Guide"
 msgstr "Guide de démarrage rapide"
 
-#: templates/admin/getting-started.php:32
+#: templates/admin/getting-started.php:38
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
@@ -898,52 +898,52 @@ msgstr ""
 "Vous trouverez ci-dessous quelques liens rapides vers les ressources clés de "
 "la documentation."
 
-#: templates/admin/getting-started.php:38
+#: templates/admin/getting-started.php:44
 msgid "General:"
 msgstr "Général :"
 
-#: templates/admin/getting-started.php:41
+#: templates/admin/getting-started.php:47
 msgid "General WordPress Settings"
 msgstr "Paramètres généraux WordPress"
 
-#: templates/admin/getting-started.php:44
+#: templates/admin/getting-started.php:50
 #, php-format
 msgid "%1$s Settings"
 msgstr "%1$s Réglages"
 
-#: templates/admin/getting-started.php:49
+#: templates/admin/getting-started.php:55
 msgid "Working with Shortcodes:"
 msgstr "Utilisation des codes courts :"
 
-#: templates/admin/getting-started.php:51
+#: templates/admin/getting-started.php:57
 msgid "Shortcode Overview"
 msgstr "Présentation des codes courts"
 
-#: templates/admin/getting-started.php:52
+#: templates/admin/getting-started.php:58
 msgid "Shortcode Builder"
 msgstr "Éditeur de raccourci"
 
-#: templates/admin/getting-started.php:53
+#: templates/admin/getting-started.php:59
 msgid "Shortcode Parameters Reference"
 msgstr "Référence des paramètres des codes courts"
 
-#: templates/admin/getting-started.php:57
+#: templates/admin/getting-started.php:63
 msgid "Advanced Topics:"
 msgstr "Sujets avancés :"
 
-#: templates/admin/getting-started.php:59
+#: templates/admin/getting-started.php:65
 msgid "FAQs and Tips"
 msgstr "FAQ et conseils"
 
-#: templates/admin/getting-started.php:60
+#: templates/admin/getting-started.php:66
 msgid "CSS Guide"
 msgstr "Guide CSS"
 
-#: templates/admin/getting-started.php:61
+#: templates/admin/getting-started.php:67
 msgid "Developer Resources"
 msgstr "Ressources des développeurs"
 
-#: templates/admin/getting-started.php:62
+#: templates/admin/getting-started.php:68
 msgid "GDPR"
 msgstr "RGPD"
 
@@ -985,11 +985,51 @@ msgstr ""
 "option à une valeur inférieure à la limite de mémoire par défaut actuelle de "
 "votre serveur."
 
-#: templates/admin/settings.php:60
+#: templates/admin/settings.php:58
+msgid "Increase time limit when rendering calendars"
+msgstr "Augmenter le délai lors du rendu des calendriers"
+
+#: templates/admin/settings.php:59 templates/admin/settings.php:72
+#: templates/admin/settings.php:144
+msgid "seconds"
+msgstr "secondes"
+
+#: templates/admin/settings.php:63
+msgid ""
+"If your calendar is failing to load with a \"maximum execution time "
+"exceeded\" error, use this setting to increase the number of seconds the "
+"calendar parsing process is allowed to run. A value of at least 60 is "
+"recommended. Allowed range is 30 to 300. If left blank, the server default "
+"will be used."
+msgstr ""
+"Si votre calendrier ne se charge pas et affiche une erreur « temps "
+"d'exécution maximal dépassé », utilisez ce paramètre pour augmenter le "
+"nombre de secondes pendant lesquelles le processus d'analyse du calendrier "
+"est autorisé à s'exécuter. Une valeur d'au moins 60 est recommandée. La "
+"plage autorisée va de 30 à 300. Si ce champ est laissé vide, la valeur par "
+"défaut du serveur sera utilisée."
+
+#: templates/admin/settings.php:71
+msgid "Increase request timeout when rendering calendars"
+msgstr ""
+"Augmenter le délai d'expiration des requêtes lors du rendu des calendriers"
+
+#: templates/admin/settings.php:76
+msgid ""
+"If your calendar source is not responding within the default timeout of 30 "
+"seconds, use this setting to increase the timeout limit. Allowed range is 30 "
+"to 300. If left blank, the default of 30 seconds will be used."
+msgstr ""
+"Si votre source de calendrier ne répond pas dans le délai d'attente par "
+"défaut de 30 secondes, utilisez ce paramètre pour augmenter ce délai. La "
+"plage autorisée va de 30 à 300. Si ce champ est laissé vide, la valeur par "
+"défaut de 30 secondes sera utilisée."
+
+#: templates/admin/settings.php:86
 msgid "deprecated"
 msgstr "obsolète"
 
-#: templates/admin/settings.php:62
+#: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
 "are not loading, turn on this option to use the legacy request method. This "
@@ -1000,11 +1040,11 @@ msgstr ""
 "utiliser l'ancienne méthode de demande. Cette fonctionnalité est obsolète et "
 "sera supprimée lors d'une prochaine mise à jour."
 
-#: templates/admin/settings.php:69
+#: templates/admin/settings.php:95
 msgid "Default shortcode"
 msgstr "Code court par défaut"
 
-#: templates/admin/settings.php:73
+#: templates/admin/settings.php:99
 #, php-format
 msgid ""
 "If your site will include a large number of similarly configured calendar "
@@ -1022,13 +1062,13 @@ msgstr ""
 "Tous les paramètres inclus dans le code court individuel remplaceront ceux "
 "définis ici."
 
-#: templates/admin/settings.php:82
+#: templates/admin/settings.php:108
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Autoriser l'accès à ces noms d'hôte qui résolvent vers des adresses IP "
 "réservées"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:112
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -1043,7 +1083,7 @@ msgstr ""
 "plusieurs serveurs de calendrier, saisissez un nom d'hôte par ligne. "
 "Consultez la documentation %3$s %4$s %5$s pour plus d'informations."
 
-#: templates/admin/settings.php:93
+#: templates/admin/settings.php:119
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -1053,11 +1093,11 @@ msgstr ""
 "domaine de base, et non à l'URL complète. %1$s Par exemple, vous devez "
 "entrer %2$s, et non %3$s."
 
-#: templates/admin/settings.php:99
+#: templates/admin/settings.php:125
 msgid "Allow access to these ports"
 msgstr "Autoriser l'accès à ces ports"
 
-#: templates/admin/settings.php:102
+#: templates/admin/settings.php:128
 msgid ""
 "WordPress automatically allows access to ports 80, 443, and 8080. If you "
 "need to be able to access source calendars that use non-standard ports, "
@@ -1067,19 +1107,15 @@ msgstr ""
 "vous devez pouvoir accéder à des calendriers sources qui utilisent des ports "
 "non standard, saisissez ici les numéros de port, séparés par des virgules."
 
-#: templates/admin/settings.php:113
+#: templates/admin/settings.php:139
 msgid "Caching"
 msgstr "Mise en Cache"
 
-#: templates/admin/settings.php:117
+#: templates/admin/settings.php:143
 msgid "Transient (cache) expiration"
 msgstr "Expiration temporaire (cache)"
 
-#: templates/admin/settings.php:118
-msgid "seconds"
-msgstr "secondes"
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:146
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
@@ -1090,15 +1126,15 @@ msgstr ""
 "rechargées. La valeur par défaut est 3600 (1 heure). La valeur minimale "
 "autorisée est 120 (2 minutes)."
 
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:157
 msgid "Admin"
 msgstr "Admin"
 
-#: templates/admin/settings.php:135
+#: templates/admin/settings.php:161
 msgid "Minimum access role"
 msgstr "Rôle d'accès minimal"
 
-#: templates/admin/settings.php:155
+#: templates/admin/settings.php:181
 #, php-format
 msgid ""
 "Identifies the minimum user role that is allowed to access %1$s admin pages. "
@@ -1110,11 +1146,11 @@ msgstr ""
 "davantage restreintes aux utilisateurs %2$s uniquement (utilisateurs %3$s "
 "sur les configurations multisites)."
 
-#: templates/admin/settings.php:163
+#: templates/admin/settings.php:189
 msgid "Register Customizer"
 msgstr "Personnalisation du registre"
 
-#: templates/admin/settings.php:165
+#: templates/admin/settings.php:191
 msgid ""
 "WordPress no longer includes a link to the Customizer in the Appearance menu "
 "when a Block Theme is active. Check this box if you wish to use the "
@@ -1132,12 +1168,12 @@ msgstr ""
 "cochée ; elle ne désactive pas le personnalisateur lorsqu'elle n'est pas "
 "cochée.)"
 
-#: templates/admin/settings.php:173
+#: templates/admin/settings.php:199
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr ""
 "Supprimer le bouton « Ajouter un calendrier ICS » dans l'éditeur classique"
 
-#: templates/admin/settings.php:175
+#: templates/admin/settings.php:201
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -1148,7 +1184,7 @@ msgstr ""
 "l'éditeur classique. Cochez cette case pour supprimer le bouton. N'a aucun "
 "effet sur les sites utilisant l'éditeur de blocs (Gutenberg)."
 
-#: templates/admin/settings.php:187
+#: templates/admin/settings.php:213
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-27 15:08-0600\n"
-"PO-Revision-Date: 2026-02-27 15:08-0600\n"
+"POT-Creation-Date: 2026-04-27 10:35-0500\n"
+"PO-Revision-Date: 2026-04-27 10:35-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: lv\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==0 || (n%100>=11 && n%100<=19) ? 0 : "
 "n%10==1 && n%100!=11 ? 1 : 2);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -176,7 +176,7 @@ msgstr ""
 "izlasiet mūsu %6$sblogu ierakstu%7$s, vai, lai pārietu uz jaunajām "
 "noklusējuma opcijām, ieslēdziet %8$s opciju %9$s iestatījumu%10$s lapā."
 
-#: class-r34ics.php:377 templates/admin/settings.php:183
+#: class-r34ics.php:377 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Izmantojiet jaunus parametru noklusējumus (v.10.6)"
 
@@ -224,11 +224,11 @@ msgstr ""
 "%4$sizmaiņu žurnālā%5$s."
 
 #: class-r34ics.php:463 templates/admin/admin.php:24
-#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
+#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Darba uzsākšana"
 
-#: class-r34ics.php:464 class-r34ics.php:2384 templates/admin/admin.php:28
+#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Iestatījumi"
@@ -262,7 +262,7 @@ msgstr "Atjauniniet uz %1$s!"
 msgid "Show/hide all"
 msgstr "Rādīt/slēpt visu"
 
-#: class-r34ics.php:774
+#: class-r34ics.php:782
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -275,47 +275,47 @@ msgstr ""
 "allow_url_fopen ir pieejams. Ja izmantojat atstarpes, lai atdalītu vairākus "
 "URL, varat mēģināt izmantot arī vertikālo līniju. Ietekmētais URL:"
 
-#: class-r34ics.php:1218
+#: class-r34ics.php:1226
 msgid "Hide past events"
 msgstr "Paslēpt pagātnes notikumus"
 
-#: class-r34ics.php:1219 templates/calendar-month.php:96
+#: class-r34ics.php:1227 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Rādīt iepriekšējos notikumus"
 
-#: class-r34ics.php:1300
+#: class-r34ics.php:1308
 msgid "Contact:"
 msgstr "Kontakts:"
 
-#: class-r34ics.php:1306
+#: class-r34ics.php:1314
 msgid "Resources:"
 msgstr "Resursi:"
 
-#: class-r34ics.php:1316
+#: class-r34ics.php:1324
 msgid "Click for more..."
 msgstr "Klikšķiniet, lai uzzinātu vairāk..."
 
-#: class-r34ics.php:1350
+#: class-r34ics.php:1358
 msgid "Save to your calendar"
 msgstr "Saglabāt kalendārā"
 
-#: class-r34ics.php:1453
+#: class-r34ics.php:1461
 msgid "Cancelled"
 msgstr "Atcelts"
 
-#: class-r34ics.php:1566
+#: class-r34ics.php:1574
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr ""
 "Legacy parser opcija ir novecojusi un tiks noņemta nākamajā atjauninājumā."
 
-#: class-r34ics.php:1657
+#: class-r34ics.php:1665
 msgid "Print"
 msgstr "Drukāt"
 
-#: class-r34ics.php:1917
+#: class-r34ics.php:1925
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -323,7 +323,7 @@ msgstr ""
 "Īss kods \"currentweek\" ir novecojis. Lūdzu, izmantojiet īsajā kodā "
 "view=\"week\"."
 
-#: class-r34ics.php:1921
+#: class-r34ics.php:1929
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -331,7 +331,7 @@ msgstr ""
 "Īss kods \"legendinline\" ir novecojis. Lūdzu, izmantojiet īsajā kodā "
 "legendstyle=\"inline\"."
 
-#: class-r34ics.php:2258
+#: class-r34ics.php:2266
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -340,7 +340,7 @@ msgstr ""
 "%1$s ir %2$satsācis%3$s kalendāru parādīšanu priekšējās lapas. Ja jūsu "
 "vietne izmanto kešēšanas spraudni, var būt nepieciešams iztīrīt kešatmiņu."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2274
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -349,21 +349,21 @@ msgstr ""
 "%1$s ir %2$spārtraukusi%3$s kalendāru parādīšanu priekšējās lapas. Ja jūsu "
 "vietne izmanto kešēšanas spraudni, var būt nepieciešams iztīrīt kešatmiņu."
 
-#: class-r34ics.php:2278
+#: class-r34ics.php:2286
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Dzēsts %1$s %2$s pārejošs(-i)."
 
-#: class-r34ics.php:2285
+#: class-r34ics.php:2293
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Netika atrasti nekādi %1$s pārejoši procesi."
 
-#: class-r34ics.php:2294
+#: class-r34ics.php:2302
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Visi saglabātie ICS plūsmas URL ir dzēsti."
 
-#: class-r34ics.php:2301
+#: class-r34ics.php:2309
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -372,7 +372,7 @@ msgstr ""
 "Visi %1$s iestatījumi ir atiestatīti uz noklusējuma vērtībām, un saglabātās "
 "ICS plūsmas URL adreses ir dzēstas."
 
-#: class-r34ics.php:2384
+#: class-r34ics.php:2392
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -381,11 +381,11 @@ msgstr ""
 "Jūsu plūsmas URL, šķiet, satur HTTP pamata autentifikācijas datus. Mēģiniet "
 "atslēgt opciju %1$s zem cilnes %2$s augšā."
 
-#: class-r34ics.php:2384 templates/admin/settings.php:59
+#: class-r34ics.php:2392 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Izmantojiet iepriekšējo barošanas pieprasījuma metodi"
 
-#: class-r34ics.php:2390
+#: class-r34ics.php:2398
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -400,17 +400,17 @@ msgstr ""
 "kalendārā. Lūdzu, skatiet mūsu %4$slietotāja rokasgrāmatu%5$s, lai uzzinātu, "
 "kā iegūt pareizo dinamiskā plūsmas URL."
 
-#: class-r34ics.php:2396
+#: class-r34ics.php:2404
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Kļūda: nevarēja atrisināt IP adresi %1$s."
 
-#: class-r34ics.php:2399
+#: class-r34ics.php:2407
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Atrisināta IP adrese %1$s:"
 
-#: class-r34ics.php:2424
+#: class-r34ics.php:2432
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -419,7 +419,7 @@ msgstr ""
 "%1$sIzskats atjaunināts.%2$s Lai redzētu izmaiņas, var būt nepieciešams "
 "atjaunināt lapu."
 
-#: class-r34ics.php:2484
+#: class-r34ics.php:2492
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -427,7 +427,7 @@ msgstr ""
 "Laukā \"Noklusējuma īss kods\" ievadītais teksts nav derīgs īss kods un "
 "netika saglabāts."
 
-#: class-r34ics.php:2527
+#: class-r34ics.php:2549
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -436,15 +436,15 @@ msgstr ""
 "%1$sIestatījumi atjaunināti.%2$s Lai redzētu izmaiņas, var būt nepieciešams "
 "atjaunināt lapu."
 
-#: class-r34ics.php:2840
+#: class-r34ics.php:2862
 msgid "calendar event"
 msgstr "kalendāra notikums"
 
-#: class-r34ics.php:2846
+#: class-r34ics.php:2868
 msgid "Event download failed."
 msgstr "Notikuma lejupielāde neizdevās."
 
-#: class-r34ics.php:3287
+#: class-r34ics.php:3333
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -464,7 +464,7 @@ msgstr ""
 "versija. Lūdzu, pēc iespējas ātrāk atjauniniet savu vietni uz jaunāku "
 "WordPress versiju."
 
-#: functions.php:1062
+#: functions.php:1065
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -479,7 +479,7 @@ msgstr ""
 "Rezultātā %1$s tulkojumi var netikt pareizi ielādēti, kamēr ir aktīvs "
 "konfliktējošais tulkojumu spraudnis."
 
-#: functions.php:1185 functions.php:1193 functions.php:1202
+#: functions.php:1188 functions.php:1196 functions.php:1205
 msgid "Map"
 msgstr "Karte"
 
@@ -535,7 +535,7 @@ msgstr ""
 "URL ir pārveidots par klikšķināmu saiti. Rezultātā jūsu kalendārs var netikt "
 "attēlots pareizi. Lūdzu, izdzēsiet klikšķināmo saiti īsajā kodā."
 
-#: functions.php:2027
+#: functions.php:2029
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() vairs netiek atbalstīta."
 
@@ -833,7 +833,7 @@ msgstr "Tumšais režīms"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "Apgriež krāsu paleti (gaišas krāsas uz tumša fona)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:200
+#: templates/admin/appearance.php:70 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Saglabāt izmaiņas"
 
@@ -850,7 +850,7 @@ msgstr ""
 "vai jūsu vietnes valoda, laika zona un datuma/laika formāta iestatījumi ir "
 "pareizi. Sīkāku informāciju skatiet mūsu %4$sLietotāja rokasgrāmatā%5$s."
 
-#: templates/admin/getting-started.php:23
+#: templates/admin/getting-started.php:26
 #, php-format
 msgid ""
 "Get started with %1$s in four easy steps... and you've already completed "
@@ -859,11 +859,11 @@ msgstr ""
 "Sāciet ar %1$s četros vienkāršos solīšos... un pirmais solis jau ir "
 "paveikts! Pārējos solīšus skatiet mūsu %2$sĀtrās uzsākšanas rokasgrāmatā%3$s."
 
-#: templates/admin/getting-started.php:26
+#: templates/admin/getting-started.php:32
 msgid "Quick Start Guide"
 msgstr "Ātrā uzsākšanas rokasgrāmata"
 
-#: templates/admin/getting-started.php:32
+#: templates/admin/getting-started.php:38
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
@@ -872,52 +872,52 @@ msgstr ""
 "Mūsu tīmekļa vietnē ir pieejama plaša %1$slietotāja rokasgrāmata%2$s. Zemāk "
 "ir sniegtas dažas ātrās saites uz galvenajiem resursiem dokumentācijā."
 
-#: templates/admin/getting-started.php:38
+#: templates/admin/getting-started.php:44
 msgid "General:"
 msgstr "Vispārīgi:"
 
-#: templates/admin/getting-started.php:41
+#: templates/admin/getting-started.php:47
 msgid "General WordPress Settings"
 msgstr "Vispārējie WordPress iestatījumi"
 
-#: templates/admin/getting-started.php:44
+#: templates/admin/getting-started.php:50
 #, php-format
 msgid "%1$s Settings"
 msgstr "%1$s Iestatījumi"
 
-#: templates/admin/getting-started.php:49
+#: templates/admin/getting-started.php:55
 msgid "Working with Shortcodes:"
 msgstr "Darbs ar īsajiem kodiem:"
 
-#: templates/admin/getting-started.php:51
+#: templates/admin/getting-started.php:57
 msgid "Shortcode Overview"
 msgstr "Īss koda pārskats"
 
-#: templates/admin/getting-started.php:52
+#: templates/admin/getting-started.php:58
 msgid "Shortcode Builder"
 msgstr "Īsā koda veidotājs"
 
-#: templates/admin/getting-started.php:53
+#: templates/admin/getting-started.php:59
 msgid "Shortcode Parameters Reference"
 msgstr "Īsā koda parametru atsauce"
 
-#: templates/admin/getting-started.php:57
+#: templates/admin/getting-started.php:63
 msgid "Advanced Topics:"
 msgstr "Papildu tēmas:"
 
-#: templates/admin/getting-started.php:59
+#: templates/admin/getting-started.php:65
 msgid "FAQs and Tips"
 msgstr "FAQ un padomi"
 
-#: templates/admin/getting-started.php:60
+#: templates/admin/getting-started.php:66
 msgid "CSS Guide"
 msgstr "CSS rokasgrāmata"
 
-#: templates/admin/getting-started.php:61
+#: templates/admin/getting-started.php:67
 msgid "Developer Resources"
 msgstr "Izstrādātāju resursi"
 
-#: templates/admin/getting-started.php:62
+#: templates/admin/getting-started.php:68
 msgid "GDPR"
 msgstr "GDPR"
 
@@ -958,11 +958,49 @@ msgstr ""
 "nav iespējams iestatīt zemāku par pašreizējo noklusējuma atmiņas limitu jūsu "
 "serverī."
 
-#: templates/admin/settings.php:60
+#: templates/admin/settings.php:58
+msgid "Increase time limit when rendering calendars"
+msgstr "Pagarināt laika limitu kalendāru attēlošanai"
+
+#: templates/admin/settings.php:59 templates/admin/settings.php:72
+#: templates/admin/settings.php:144
+msgid "seconds"
+msgstr "sekundes"
+
+#: templates/admin/settings.php:63
+msgid ""
+"If your calendar is failing to load with a \"maximum execution time "
+"exceeded\" error, use this setting to increase the number of seconds the "
+"calendar parsing process is allowed to run. A value of at least 60 is "
+"recommended. Allowed range is 30 to 300. If left blank, the server default "
+"will be used."
+msgstr ""
+"Ja kalendārs neizdodas ielādēties un parādās kļūda „pārsniegts maksimālais "
+"izpildes laiks“, izmantojiet šo iestatījumu, lai palielinātu laiku sekundēs, "
+"cik ilgi drīkst ilgt kalendāra apstrādes process. Ieteicamā vērtība ir "
+"vismaz 60. Pieļaujamais diapazons ir no 30 līdz 300. Ja laukums paliek "
+"tukšs, tiks izmantota servera noklusējuma vērtība."
+
+#: templates/admin/settings.php:71
+msgid "Increase request timeout when rendering calendars"
+msgstr "Pagarināt pieprasījuma gaidīšanas laiku, renderējot kalendārus"
+
+#: templates/admin/settings.php:76
+msgid ""
+"If your calendar source is not responding within the default timeout of 30 "
+"seconds, use this setting to increase the timeout limit. Allowed range is 30 "
+"to 300. If left blank, the default of 30 seconds will be used."
+msgstr ""
+"Ja kalendāra avots neatbild 30 sekunžu standarta gaidīšanas laikā, "
+"izmantojiet šo iestatījumu, lai pagarinātu gaidīšanas laiku. Pieļaujamais "
+"diapazons ir no 30 līdz 300. Ja laukums paliek tukšs, tiks izmantots "
+"standarta iestatījums — 30 sekundes."
+
+#: templates/admin/settings.php:86
 msgid "deprecated"
 msgstr "novecojis"
 
-#: templates/admin/settings.php:62
+#: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
 "are not loading, turn on this option to use the legacy request method. This "
@@ -973,11 +1011,11 @@ msgstr ""
 "iepriekšējo pieprasījuma metodi. Šī funkcija ir novecojusi un tiks noņemta "
 "nākamajā atjauninājumā."
 
-#: templates/admin/settings.php:69
+#: templates/admin/settings.php:95
 msgid "Default shortcode"
 msgstr "Noklusējuma īss kods"
 
-#: templates/admin/settings.php:73
+#: templates/admin/settings.php:99
 #, php-format
 msgid ""
 "If your site will include a large number of similarly configured calendar "
@@ -994,11 +1032,11 @@ msgstr ""
 "parametri, kas iekļauti atsevišķajā īsajā kodā, pārrakstīs šeit iestatītos "
 "parametrus."
 
-#: templates/admin/settings.php:82
+#: templates/admin/settings.php:108
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr "Atļaut piekļuvi šiem hostvārdiem, kas atbilst rezervētajām IP adresēm"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:112
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -1013,7 +1051,7 @@ msgstr ""
 "atļautu piekļuvi. Ja ir vairāki kalendāra serveri, ievadiet vienu uzņēmuma "
 "nosaukumu katrā rindā. Sīkāku informāciju skatiet %3$s%4$s dokumentācijā%5$s."
 
-#: templates/admin/settings.php:93
+#: templates/admin/settings.php:119
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -1023,11 +1061,11 @@ msgstr ""
 "domēna nosaukumi, nevis pilni URL. %1$s Piemēram, jums jāievada %2$s, nevis "
 "%3$s."
 
-#: templates/admin/settings.php:99
+#: templates/admin/settings.php:125
 msgid "Allow access to these ports"
 msgstr "Atļaut piekļuvi šiem portiem"
 
-#: templates/admin/settings.php:102
+#: templates/admin/settings.php:128
 msgid ""
 "WordPress automatically allows access to ports 80, 443, and 8080. If you "
 "need to be able to access source calendars that use non-standard ports, "
@@ -1037,19 +1075,15 @@ msgstr ""
 "nepieciešams piekļūt avota kalendāriem, kas izmanto nestandarta portus, "
 "ievadiet portu numurus šeit, atdalot tos ar komatiem."
 
-#: templates/admin/settings.php:113
+#: templates/admin/settings.php:139
 msgid "Caching"
 msgstr "Kešošana"
 
-#: templates/admin/settings.php:117
+#: templates/admin/settings.php:143
 msgid "Transient (cache) expiration"
 msgstr "Pagaidu (kešatmiņas) derīguma termiņš"
 
-#: templates/admin/settings.php:118
-msgid "seconds"
-msgstr "sekundes"
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:146
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
@@ -1059,15 +1093,15 @@ msgstr ""
 "transients) pirms atkārtotas ielādes. Noklusējuma vērtība ir 3600 (1 "
 "stunda). Minimālā pieļaujamā vērtība ir 120 (2 minūtes)."
 
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:157
 msgid "Admin"
 msgstr "Admins"
 
-#: templates/admin/settings.php:135
+#: templates/admin/settings.php:161
 msgid "Minimum access role"
 msgstr "Minimālā piekļuves loma"
 
-#: templates/admin/settings.php:155
+#: templates/admin/settings.php:181
 #, php-format
 msgid ""
 "Identifies the minimum user role that is allowed to access %1$s admin pages. "
@@ -1079,11 +1113,11 @@ msgstr ""
 "ierobežotas tikai %2$s lietotājiem (%3$s lietotājiem daudzvietu "
 "konfigurācijās)."
 
-#: templates/admin/settings.php:163
+#: templates/admin/settings.php:189
 msgid "Register Customizer"
 msgstr "Reģistrācijas pielāgotājs"
 
-#: templates/admin/settings.php:165
+#: templates/admin/settings.php:191
 msgid ""
 "WordPress no longer includes a link to the Customizer in the Appearance menu "
 "when a Block Theme is active. Check this box if you wish to use the "
@@ -1099,11 +1133,11 @@ msgstr ""
 "(Lodziņš aktivizē pielāgotāju tikai tad, ja tas ir atzīmēts; tas neaktivizē "
 "pielāgotāju, ja tas nav atzīmēts.)"
 
-#: templates/admin/settings.php:173
+#: templates/admin/settings.php:199
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Noņemt pogu \"Pievienot ICS kalendāru\" klasiskajā redaktorā"
 
-#: templates/admin/settings.php:175
+#: templates/admin/settings.php:201
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -1114,7 +1148,7 @@ msgstr ""
 "Atzīmējiet šo lodziņu, lai noņemtu pogu. Tas neietekmē vietnes, kas izmanto "
 "bloku redaktoru (Gutenberg)."
 
-#: templates/admin/settings.php:187
+#: templates/admin/settings.php:213
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

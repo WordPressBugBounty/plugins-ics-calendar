@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-27 15:06-0600\n"
-"PO-Revision-Date: 2026-02-27 15:06-0600\n"
+"POT-Creation-Date: 2026-04-27 10:33-0500\n"
+"PO-Revision-Date: 2026-04-27 10:33-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -153,7 +153,7 @@ msgstr ""
 "从旧版本升级时这些新默认值%4$s不会%5$s自动启用。 若需了解变更详情，请参阅我们"
 "的%6$s博客文章%7$s；如需启用新默认设置，请在%9$s设置%10$s页面开启%8$s选项。"
 
-#: class-r34ics.php:377 templates/admin/settings.php:183
+#: class-r34ics.php:377 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "使用新的参数默认值（v.10.6）"
 
@@ -194,11 +194,11 @@ msgstr ""
 "能并完善了界面设计。有关本次更新的详细信息，请参阅%4$s变更日志%5$s。"
 
 #: class-r34ics.php:463 templates/admin/admin.php:24
-#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
+#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "入门指南"
 
-#: class-r34ics.php:464 class-r34ics.php:2384 templates/admin/admin.php:28
+#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "设置"
@@ -232,7 +232,7 @@ msgstr "升级至%1$s！"
 msgid "Show/hide all"
 msgstr "显示/隐藏全部"
 
-#: class-r34ics.php:774
+#: class-r34ics.php:782
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -244,59 +244,59 @@ msgstr ""
 "cURL或allow_url_fopen功能。若使用空格分隔多个URL，建议改用竖线分隔符。受影响"
 "的URL："
 
-#: class-r34ics.php:1218
+#: class-r34ics.php:1226
 msgid "Hide past events"
 msgstr "隐藏过去的活动"
 
-#: class-r34ics.php:1219 templates/calendar-month.php:96
+#: class-r34ics.php:1227 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "显示过往事件"
 
-#: class-r34ics.php:1300
+#: class-r34ics.php:1308
 msgid "Contact:"
 msgstr "联系人:"
 
-#: class-r34ics.php:1306
+#: class-r34ics.php:1314
 msgid "Resources:"
 msgstr "相关资源"
 
-#: class-r34ics.php:1316
+#: class-r34ics.php:1324
 msgid "Click for more..."
 msgstr "点击查看更多..."
 
-#: class-r34ics.php:1350
+#: class-r34ics.php:1358
 msgid "Save to your calendar"
 msgstr "添加到日历"
 
-#: class-r34ics.php:1453
+#: class-r34ics.php:1461
 msgid "Cancelled"
 msgstr "已取消"
 
-#: class-r34ics.php:1566
+#: class-r34ics.php:1574
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr "旧版解析器选项已被弃用，将在未来的更新中移除。"
 
-#: class-r34ics.php:1657
+#: class-r34ics.php:1665
 msgid "Print"
 msgstr "打印"
 
-#: class-r34ics.php:1917
+#: class-r34ics.php:1925
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
 msgstr "\"currentweek\" 短代码属性已弃用。请改用 view=\"week\" 替代。"
 
-#: class-r34ics.php:1921
+#: class-r34ics.php:1929
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
 msgstr ""
 "\"legendinline\" 短代码属性已弃用。请改用 legendstyle=\"inline\" 替代。"
 
-#: class-r34ics.php:2258
+#: class-r34ics.php:2266
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -305,7 +305,7 @@ msgstr ""
 "%1$s已%2$s恢复%3$s在前端页面显示日历。若您的站点使用缓存插件，可能需要清除缓"
 "存。"
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2274
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -314,28 +314,28 @@ msgstr ""
 "%1$s已%2$s暂停%3$s在前端页面提供日历服务。若您的站点使用缓存插件，可能需要清"
 "除缓存。"
 
-#: class-r34ics.php:2278
+#: class-r34ics.php:2286
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "清除 %1$s %2$s 个瞬态。"
 
-#: class-r34ics.php:2285
+#: class-r34ics.php:2293
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s 未發現任何瞬態現象。"
 
-#: class-r34ics.php:2294
+#: class-r34ics.php:2302
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "所有已保存的ICS源URL均已清除。"
 
-#: class-r34ics.php:2301
+#: class-r34ics.php:2309
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
 "been cleared."
 msgstr "所有%1$s设置均已重置为默认值，已保存的ICS源URL已被清除。"
 
-#: class-r34ics.php:2384
+#: class-r34ics.php:2392
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -344,11 +344,11 @@ msgstr ""
 "您的订阅源网址似乎包含HTTP基本认证凭据。请尝试关闭上方%2$s选项卡下的%1$s选"
 "项。"
 
-#: class-r34ics.php:2384 templates/admin/settings.php:59
+#: class-r34ics.php:2392 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "使用传统数据源请求方法"
 
-#: class-r34ics.php:2390
+#: class-r34ics.php:2398
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -361,45 +361,45 @@ msgstr ""
 "为文件创建时日历的静态快照，不会反映源日历的后续更新。请参阅我们的%4$s用户指"
 "南%5$s，了解如何获取正确的动态源URL。"
 
-#: class-r34ics.php:2396
+#: class-r34ics.php:2404
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "错误：无法解析 %1$s 的 IP 地址。"
 
-#: class-r34ics.php:2399
+#: class-r34ics.php:2407
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$s 的解析 IP 地址："
 
-#: class-r34ics.php:2424
+#: class-r34ics.php:2432
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
 "changes."
 msgstr "%1$s外观已更新。%2$s您可能需要刷新页面才能看到部分更改。"
 
-#: class-r34ics.php:2484
+#: class-r34ics.php:2492
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
 msgstr "在“默认短代码”字段中输入的文本不是有效的短代码，因此未被保存。"
 
-#: class-r34ics.php:2527
+#: class-r34ics.php:2549
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
 "changes."
 msgstr "%1$s设置已更新。%2$s您可能需要刷新页面才能看到部分更改。"
 
-#: class-r34ics.php:2840
+#: class-r34ics.php:2862
 msgid "calendar event"
 msgstr "日历事件"
 
-#: class-r34ics.php:2846
+#: class-r34ics.php:2868
 msgid "Event download failed."
 msgstr "活动下载失败。"
 
-#: class-r34ics.php:3287
+#: class-r34ics.php:3333
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -417,7 +417,7 @@ msgstr ""
 "%1$s的未来更新将要求使用WordPress 5.3或更高版本。请尽快将您的网站更新至新版"
 "WordPress。"
 
-#: functions.php:1062
+#: functions.php:1065
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -430,7 +430,7 @@ msgstr ""
 "用。此操作旨在解决与某些翻译自定义插件（如 %3$s）的冲突。因此，当冲突的翻译插"
 "件处于活动状态时，%1$s 翻译可能无法正常加载。"
 
-#: functions.php:1185 functions.php:1193 functions.php:1202
+#: functions.php:1188 functions.php:1196 functions.php:1205
 msgid "Map"
 msgstr "地图"
 
@@ -485,7 +485,7 @@ msgstr ""
 "您%1$s短代码中的\"url\"属性似乎包含HTML标签；很可能您的URL已被转换为可点击链"
 "接。这可能导致日历无法正常显示。请移除短代码中的可点击链接。"
 
-#: functions.php:2027
+#: functions.php:2029
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() 函数不再受支持。"
 
@@ -757,7 +757,7 @@ msgstr "黑暗模式"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "反转配色方案（浅色系配深色背景）。"
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:200
+#: templates/admin/appearance.php:70 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "保存更改"
 
@@ -773,7 +773,7 @@ msgstr ""
 "网站语言、时区及日期/时间格式设置是否正确。更多信息请参阅我们的%4$s用户指"
 "南%5$s。"
 
-#: templates/admin/getting-started.php:23
+#: templates/admin/getting-started.php:26
 #, php-format
 msgid ""
 "Get started with %1$s in four easy steps... and you've already completed "
@@ -782,11 +782,11 @@ msgstr ""
 "只需四个简单步骤即可开始使用%1$s...而您已经完成了第一步！请查阅我们的%2$s快速"
 "入门指南%3$s了解后续步骤。"
 
-#: templates/admin/getting-started.php:26
+#: templates/admin/getting-started.php:32
 msgid "Quick Start Guide"
 msgstr "快速指导"
 
-#: templates/admin/getting-started.php:32
+#: templates/admin/getting-started.php:38
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
@@ -795,52 +795,52 @@ msgstr ""
 "我们的网站上提供了一份详尽的%1$s用户指南%2$s。以下是文档中关键资源的快速链"
 "接："
 
-#: templates/admin/getting-started.php:38
+#: templates/admin/getting-started.php:44
 msgid "General:"
 msgstr "常规："
 
-#: templates/admin/getting-started.php:41
+#: templates/admin/getting-started.php:47
 msgid "General WordPress Settings"
 msgstr "WordPress 常规设置"
 
-#: templates/admin/getting-started.php:44
+#: templates/admin/getting-started.php:50
 #, php-format
 msgid "%1$s Settings"
 msgstr "%1$s 设置"
 
-#: templates/admin/getting-started.php:49
+#: templates/admin/getting-started.php:55
 msgid "Working with Shortcodes:"
 msgstr "使用简码"
 
-#: templates/admin/getting-started.php:51
+#: templates/admin/getting-started.php:57
 msgid "Shortcode Overview"
 msgstr "短代码概述"
 
-#: templates/admin/getting-started.php:52
+#: templates/admin/getting-started.php:58
 msgid "Shortcode Builder"
 msgstr "短码生成器"
 
-#: templates/admin/getting-started.php:53
+#: templates/admin/getting-started.php:59
 msgid "Shortcode Parameters Reference"
 msgstr "短代码参数参考"
 
-#: templates/admin/getting-started.php:57
+#: templates/admin/getting-started.php:63
 msgid "Advanced Topics:"
 msgstr "进阶主题："
 
-#: templates/admin/getting-started.php:59
+#: templates/admin/getting-started.php:65
 msgid "FAQs and Tips"
 msgstr "常见问题与技巧"
 
-#: templates/admin/getting-started.php:60
+#: templates/admin/getting-started.php:66
 msgid "CSS Guide"
 msgstr "CSS指南"
 
-#: templates/admin/getting-started.php:61
+#: templates/admin/getting-started.php:67
 msgid "Developer Resources"
 msgstr "开发人员资源"
 
-#: templates/admin/getting-started.php:62
+#: templates/admin/getting-started.php:68
 msgid "GDPR"
 msgstr "GDPR"
 
@@ -877,11 +877,45 @@ msgstr ""
 "MB。%1$s注意事项：1) 部分主机服务商可能不允许应用程序覆盖服务器默认设置。2) "
 "此选项无法设置为低于服务器当前默认内存限制的值。"
 
-#: templates/admin/settings.php:60
+#: templates/admin/settings.php:58
+msgid "Increase time limit when rendering calendars"
+msgstr "延长日历渲染的时间限制"
+
+#: templates/admin/settings.php:59 templates/admin/settings.php:72
+#: templates/admin/settings.php:144
+msgid "seconds"
+msgstr "秒"
+
+#: templates/admin/settings.php:63
+msgid ""
+"If your calendar is failing to load with a \"maximum execution time "
+"exceeded\" error, use this setting to increase the number of seconds the "
+"calendar parsing process is allowed to run. A value of at least 60 is "
+"recommended. Allowed range is 30 to 300. If left blank, the server default "
+"will be used."
+msgstr ""
+"如果日历加载失败并显示“超过最大执行时间”错误，请使用此设置来增加日历解析过程"
+"允许运行的秒数。建议将值设置为至少 60。允许的范围为 30 到 300。如果留空，将使"
+"用服务器默认值。"
+
+#: templates/admin/settings.php:71
+msgid "Increase request timeout when rendering calendars"
+msgstr "在渲染日历时延长请求超时时间"
+
+#: templates/admin/settings.php:76
+msgid ""
+"If your calendar source is not responding within the default timeout of 30 "
+"seconds, use this setting to increase the timeout limit. Allowed range is 30 "
+"to 300. If left blank, the default of 30 seconds will be used."
+msgstr ""
+"如果日历源在默认的 30 秒超时时间内未响应，请使用此设置延长超时限制。允许的范"
+"围为 30 到 300。如果留空，将使用默认的 30 秒。"
+
+#: templates/admin/settings.php:86
 msgid "deprecated"
 msgstr "禁用"
 
-#: templates/admin/settings.php:62
+#: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
 "are not loading, turn on this option to use the legacy request method. This "
@@ -890,11 +924,11 @@ msgstr ""
 "某些服务器可能不支持默认的订阅源请求方式。若您的订阅源无法加载，请启用此选项"
 "以使用传统请求方式。该功能已被弃用，将在未来更新中移除。"
 
-#: templates/admin/settings.php:69
+#: templates/admin/settings.php:95
 msgid "Default shortcode"
 msgstr "默认短代码"
 
-#: templates/admin/settings.php:73
+#: templates/admin/settings.php:99
 #, php-format
 msgid ""
 "If your site will include a large number of similarly configured calendar "
@@ -908,11 +942,11 @@ msgstr ""
 "其中参数需适用于所有日历。网站上的独立短代码只需包含该日历特有的参数，例如："
 "%1$s 独立短代码中包含的任何参数都将覆盖此处设置的值。"
 
-#: templates/admin/settings.php:82
+#: templates/admin/settings.php:108
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr "允许访问这些解析为保留IP地址的主机名"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:112
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -925,7 +959,7 @@ msgstr ""
 "了%1$s保留IP地址%2$s，请在此处输入其主机名以允许访问。若存在多个日历服务器，"
 "请每行输入一个主机名。更多信息请参阅%3$s相关%4$s文档%5$s。"
 
-#: templates/admin/settings.php:93
+#: templates/admin/settings.php:119
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -934,11 +968,11 @@ msgstr ""
 "每行输入一个主机名。主机名应为基础域名，而非完整URL。%1$s 例如，应输入%2$s而"
 "非%3$s。"
 
-#: templates/admin/settings.php:99
+#: templates/admin/settings.php:125
 msgid "Allow access to these ports"
 msgstr "允许访问这些端口"
 
-#: templates/admin/settings.php:102
+#: templates/admin/settings.php:128
 msgid ""
 "WordPress automatically allows access to ports 80, 443, and 8080. If you "
 "need to be able to access source calendars that use non-standard ports, "
@@ -947,19 +981,15 @@ msgstr ""
 "WordPress 默认允许访问 80、443 和 8080 这三个端口。若需访问使用非标准端口的源"
 "日历，请在此处输入端口号，用逗号分隔。"
 
-#: templates/admin/settings.php:113
+#: templates/admin/settings.php:139
 msgid "Caching"
 msgstr "缓存"
 
-#: templates/admin/settings.php:117
+#: templates/admin/settings.php:143
 msgid "Transient (cache) expiration"
 msgstr "临时（缓存）过期"
 
-#: templates/admin/settings.php:118
-msgid "seconds"
-msgstr "秒"
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:146
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
@@ -968,15 +998,15 @@ msgstr ""
 "设置日历源数据在服务器（WordPress 暂存数据）中缓存的时间长度，之后将重新加"
 "载。默认值为 3600（1 小时）。允许的最小值为 120（2 分钟）。"
 
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:157
 msgid "Admin"
 msgstr "管理"
 
-#: templates/admin/settings.php:135
+#: templates/admin/settings.php:161
 msgid "Minimum access role"
 msgstr "最低访问角色"
 
-#: templates/admin/settings.php:155
+#: templates/admin/settings.php:181
 #, php-format
 msgid ""
 "Identifies the minimum user role that is allowed to access %1$s admin pages. "
@@ -986,11 +1016,11 @@ msgstr ""
 "确定允许访问%1$s管理页面的最低用户角色。某些区域（如设置）进一步限制为仅"
 "限%2$s用户访问（在多站点配置中为%3$s用户）。"
 
-#: templates/admin/settings.php:163
+#: templates/admin/settings.php:189
 msgid "Register Customizer"
 msgstr "注册自定义程序"
 
-#: templates/admin/settings.php:165
+#: templates/admin/settings.php:191
 msgid ""
 "WordPress no longer includes a link to the Customizer in the Appearance menu "
 "when a Block Theme is active. Check this box if you wish to use the "
@@ -1004,11 +1034,11 @@ msgstr ""
 "册自定义工具，此时此设置将无效。（该复选框仅在勾选时启用自定义工具，取消勾选"
 "不会禁用该功能。）"
 
-#: templates/admin/settings.php:173
+#: templates/admin/settings.php:199
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "在经典编辑器中移除“添加ICS日历”按钮"
 
-#: templates/admin/settings.php:175
+#: templates/admin/settings.php:201
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -1018,7 +1048,7 @@ msgstr ""
 "一个\"添加ICS日历\"按钮。勾选此框可移除该按钮。此设置对使用块编辑器（古腾堡）"
 "的网站无效。"
 
-#: templates/admin/settings.php:187
+#: templates/admin/settings.php:213
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

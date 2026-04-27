@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-27 15:07-0600\n"
-"PO-Revision-Date: 2026-02-27 15:07-0600\n"
+"POT-Creation-Date: 2026-04-27 10:34-0500\n"
+"PO-Revision-Date: 2026-04-27 10:35-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -177,7 +177,7 @@ msgstr ""
 "trece la noile setări implicite, activați opțiunea %8$s din pagina %9$s "
 "setări%10$s."
 
-#: class-r34ics.php:377 templates/admin/settings.php:183
+#: class-r34ics.php:377 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Utilizați noile valori implicite ale parametrilor (v.10.6)"
 
@@ -225,11 +225,11 @@ msgstr ""
 "despre această actualizare, consultați %4$sjurnalul de modificări%5$s."
 
 #: class-r34ics.php:463 templates/admin/admin.php:24
-#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
+#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Primii pași"
 
-#: class-r34ics.php:464 class-r34ics.php:2384 templates/admin/admin.php:28
+#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Setări"
@@ -263,7 +263,7 @@ msgstr "Actualizați la %1$s!"
 msgid "Show/hide all"
 msgstr "Afișează/ascunde tot"
 
-#: class-r34ics.php:774
+#: class-r34ics.php:782
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -277,36 +277,36 @@ msgstr ""
 "spații pentru a delimita mai multe adrese URL, puteți încerca să utilizați "
 "în schimb caracterul pipe. Adresă URL afectată:"
 
-#: class-r34ics.php:1218
+#: class-r34ics.php:1226
 msgid "Hide past events"
 msgstr "Ascunde evenimente trecute"
 
-#: class-r34ics.php:1219 templates/calendar-month.php:96
+#: class-r34ics.php:1227 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Afișați evenimentele anterioare"
 
-#: class-r34ics.php:1300
+#: class-r34ics.php:1308
 msgid "Contact:"
 msgstr "Contact:"
 
-#: class-r34ics.php:1306
+#: class-r34ics.php:1314
 msgid "Resources:"
 msgstr "Resurse:"
 
-#: class-r34ics.php:1316
+#: class-r34ics.php:1324
 msgid "Click for more..."
 msgstr "Faceți clic pentru mai multe informații..."
 
-#: class-r34ics.php:1350
+#: class-r34ics.php:1358
 msgid "Save to your calendar"
 msgstr "Salvați în calendar"
 
-#: class-r34ics.php:1453
+#: class-r34ics.php:1461
 msgid "Cancelled"
 msgstr "Anulat"
 
-#: class-r34ics.php:1566
+#: class-r34ics.php:1574
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -314,11 +314,11 @@ msgstr ""
 "Opțiunea de analiză sintactică moștenită este învechită și va fi eliminată "
 "într-o actualizare viitoare."
 
-#: class-r34ics.php:1657
+#: class-r34ics.php:1665
 msgid "Print"
 msgstr "Printare"
 
-#: class-r34ics.php:1917
+#: class-r34ics.php:1925
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -326,7 +326,7 @@ msgstr ""
 "Atributul „currentweek” al codului scurt este învechit. Vă rugăm să "
 "utilizați în schimb view=\"week\" în codul scurt."
 
-#: class-r34ics.php:1921
+#: class-r34ics.php:1929
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -334,7 +334,7 @@ msgstr ""
 "Atributul „legendinline” al codului scurt este învechit. Vă rugăm să "
 "utilizați în schimb legendstyle=\"inline\" în codul scurt."
 
-#: class-r34ics.php:2258
+#: class-r34ics.php:2266
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -344,7 +344,7 @@ msgstr ""
 "ul dvs. utilizează un plugin de cache, poate fi necesar să goliți memoria "
 "cache."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2274
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -354,21 +354,21 @@ msgstr ""
 "site-ul dvs. utilizează un plugin de cache, poate fi necesar să goliți "
 "memoria cache."
 
-#: class-r34ics.php:2278
+#: class-r34ics.php:2286
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Șterse %1$s %2$s tranzitorii."
 
-#: class-r34ics.php:2285
+#: class-r34ics.php:2293
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nu s-au găsit %1$s tranzitorii."
 
-#: class-r34ics.php:2294
+#: class-r34ics.php:2302
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Toate adresele URL ale fluxurilor ICS salvate au fost șterse."
 
-#: class-r34ics.php:2301
+#: class-r34ics.php:2309
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -377,7 +377,7 @@ msgstr ""
 "Toate setările %1$s au fost resetate la valorile implicite, iar adresele URL "
 "ale fluxurilor ICS salvate au fost șterse."
 
-#: class-r34ics.php:2384
+#: class-r34ics.php:2392
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -387,11 +387,11 @@ msgstr ""
 "Authentication. Încercați să dezactivați opțiunea %1$s din fila %2$s de mai "
 "sus."
 
-#: class-r34ics.php:2384 templates/admin/settings.php:59
+#: class-r34ics.php:2392 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Utilizați metoda de solicitare a fluxului vechi"
 
-#: class-r34ics.php:2390
+#: class-r34ics.php:2398
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -407,17 +407,17 @@ msgstr ""
 "%4$sGhidul utilizatorului%5$s pentru instrucțiuni privind obținerea adresei "
 "URL corecte a fluxului dinamic."
 
-#: class-r34ics.php:2396
+#: class-r34ics.php:2404
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Eroare: Nu s-a putut rezolva adresa IP pentru %1$s."
 
-#: class-r34ics.php:2399
+#: class-r34ics.php:2407
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Adresă IP rezolvată pentru %1$s:"
 
-#: class-r34ics.php:2424
+#: class-r34ics.php:2432
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -426,7 +426,7 @@ msgstr ""
 "%1$sAspect actualizat.%2$s Este posibil să fie necesar să reîmprospătați "
 "pagina pentru a vedea unele modificări."
 
-#: class-r34ics.php:2484
+#: class-r34ics.php:2492
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -434,7 +434,7 @@ msgstr ""
 "Textul introdus în câmpul „Cod scurt implicit” nu este un cod scurt valid și "
 "nu a fost salvat."
 
-#: class-r34ics.php:2527
+#: class-r34ics.php:2549
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -443,15 +443,15 @@ msgstr ""
 "%1$sSetările au fost actualizate.%2$s Este posibil să fie necesar să "
 "reîmprospătați pagina pentru a vedea unele modificări."
 
-#: class-r34ics.php:2840
+#: class-r34ics.php:2862
 msgid "calendar event"
 msgstr "eveniment calendaristic"
 
-#: class-r34ics.php:2846
+#: class-r34ics.php:2868
 msgid "Event download failed."
 msgstr "Descărcarea evenimentului a eșuat."
 
-#: class-r34ics.php:3287
+#: class-r34ics.php:3333
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -471,7 +471,7 @@ msgstr ""
 "mai recentă. Vă rugăm să actualizați site-ul dvs. la o versiune mai recentă "
 "de WordPress cât mai curând posibil."
 
-#: functions.php:1062
+#: functions.php:1065
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -487,7 +487,7 @@ msgstr ""
 "traducerile %1$s s-ar putea să nu se încarce corect cât timp pluginul de "
 "traducere conflictual este activ."
 
-#: functions.php:1185 functions.php:1193 functions.php:1202
+#: functions.php:1188 functions.php:1196 functions.php:1205
 msgid "Map"
 msgstr "Hartă"
 
@@ -544,7 +544,7 @@ msgstr ""
 "calendarul dvs. s-ar putea să nu se afișeze corect. Vă rugăm să eliminați "
 "linkul activ din codul scurt."
 
-#: functions.php:2027
+#: functions.php:2029
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funcția r34ics_url_get_contents() nu mai este acceptată."
 
@@ -845,7 +845,7 @@ msgstr "Mod întunecat"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "Inversează paleta de culori (culori deschise pe fundal întunecat)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:200
+#: templates/admin/appearance.php:70 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Salvare Modificari"
 
@@ -863,7 +863,7 @@ msgstr ""
 "datei/orei sunt corecte. Pentru mai multe informații, consultați %4$sGhidul "
 "utilizatorului%5$s."
 
-#: templates/admin/getting-started.php:23
+#: templates/admin/getting-started.php:26
 #, php-format
 msgid ""
 "Get started with %1$s in four easy steps... and you've already completed "
@@ -872,11 +872,11 @@ msgstr ""
 "Începeți cu %1$s în patru pași simpli... și deja ați finalizat primul pas! "
 "Consultați %2$sGhidul de pornire rapidă%3$s pentru restul pașilor."
 
-#: templates/admin/getting-started.php:26
+#: templates/admin/getting-started.php:32
 msgid "Quick Start Guide"
 msgstr "Ghid de inițiere rapidă"
 
-#: templates/admin/getting-started.php:32
+#: templates/admin/getting-started.php:38
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
@@ -885,54 +885,54 @@ msgstr ""
 "Un %1$sghid de utilizare%2$s detaliat este disponibil pe site-ul nostru web. "
 "Mai jos găsiți câteva linkuri rapide către resursele cheie din documentație."
 
-#: templates/admin/getting-started.php:38
+#: templates/admin/getting-started.php:44
 msgid "General:"
 msgstr "General:"
 
-#: templates/admin/getting-started.php:41
+#: templates/admin/getting-started.php:47
 msgid "General WordPress Settings"
 msgstr "Setări generale WordPress"
 
-#: templates/admin/getting-started.php:44
+#: templates/admin/getting-started.php:50
 #, php-format
 msgid "%1$s Settings"
 msgstr ""
 "Pentru a încărca compilări în App Store Connect, trebuie să selectezi un ID "
 "de cont Apple. Selectează-l pe <a href=\"%1$s\">pagina Setări</a> iOS."
 
-#: templates/admin/getting-started.php:49
+#: templates/admin/getting-started.php:55
 msgid "Working with Shortcodes:"
 msgstr "Lucrul cu coduri scurte:"
 
-#: templates/admin/getting-started.php:51
+#: templates/admin/getting-started.php:57
 msgid "Shortcode Overview"
 msgstr "Prezentare generală a codurilor scurte"
 
-#: templates/admin/getting-started.php:52
+#: templates/admin/getting-started.php:58
 msgid "Shortcode Builder"
 msgstr "Deschis"
 
-#: templates/admin/getting-started.php:53
+#: templates/admin/getting-started.php:59
 msgid "Shortcode Parameters Reference"
 msgstr "Referință parametri cod scurt"
 
-#: templates/admin/getting-started.php:57
+#: templates/admin/getting-started.php:63
 msgid "Advanced Topics:"
 msgstr "Subiecte avansate:"
 
-#: templates/admin/getting-started.php:59
+#: templates/admin/getting-started.php:65
 msgid "FAQs and Tips"
 msgstr "Întrebări frecvente și sfaturi"
 
-#: templates/admin/getting-started.php:60
+#: templates/admin/getting-started.php:66
 msgid "CSS Guide"
 msgstr "Ghid CSS"
 
-#: templates/admin/getting-started.php:61
+#: templates/admin/getting-started.php:67
 msgid "Developer Resources"
 msgstr "Resurse pentru dezvoltatori"
 
-#: templates/admin/getting-started.php:62
+#: templates/admin/getting-started.php:68
 msgid "GDPR"
 msgstr "GDPR"
 
@@ -973,11 +973,49 @@ msgstr ""
 "este posibil să setați această opțiune la o valoare mai mică decât limita de "
 "memorie implicită curentă a serverului dvs."
 
-#: templates/admin/settings.php:60
+#: templates/admin/settings.php:58
+msgid "Increase time limit when rendering calendars"
+msgstr "Măriți limita de timp pentru generarea calendarelor"
+
+#: templates/admin/settings.php:59 templates/admin/settings.php:72
+#: templates/admin/settings.php:144
+msgid "seconds"
+msgstr "secunde"
+
+#: templates/admin/settings.php:63
+msgid ""
+"If your calendar is failing to load with a \"maximum execution time "
+"exceeded\" error, use this setting to increase the number of seconds the "
+"calendar parsing process is allowed to run. A value of at least 60 is "
+"recommended. Allowed range is 30 to 300. If left blank, the server default "
+"will be used."
+msgstr ""
+"Dacă calendarul nu se încarcă și apare eroarea „Timpul maxim de execuție a "
+"fost depășit”, folosiți această setare pentru a mări numărul de secunde "
+"alocat procesului de analiză a calendarului. Se recomandă o valoare de cel "
+"puțin 60. Intervalul permis este între 30 și 300. Dacă câmpul este lăsat "
+"necompletat, se va folosi valoarea implicită a serverului."
+
+#: templates/admin/settings.php:71
+msgid "Increase request timeout when rendering calendars"
+msgstr "Măriți timpul de așteptare al cererii la afișarea calendarelor"
+
+#: templates/admin/settings.php:76
+msgid ""
+"If your calendar source is not responding within the default timeout of 30 "
+"seconds, use this setting to increase the timeout limit. Allowed range is 30 "
+"to 300. If left blank, the default of 30 seconds will be used."
+msgstr ""
+"Dacă sursa calendarului nu răspunde în intervalul de timp prestabilit de 30 "
+"de secunde, utilizați această setare pentru a mări limita de timp. "
+"Intervalul permis este între 30 și 300. Dacă câmpul este lăsat necompletat, "
+"se va folosi valoarea implicită de 30 de secunde."
+
+#: templates/admin/settings.php:86
 msgid "deprecated"
 msgstr "depreciat"
 
-#: templates/admin/settings.php:62
+#: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
 "are not loading, turn on this option to use the legacy request method. This "
@@ -988,11 +1026,11 @@ msgstr ""
 "utiliza metoda de solicitare veche. Această funcție este învechită și va fi "
 "eliminată într-o actualizare viitoare."
 
-#: templates/admin/settings.php:69
+#: templates/admin/settings.php:95
 msgid "Default shortcode"
 msgstr "Cod scurt implicit"
 
-#: templates/admin/settings.php:73
+#: templates/admin/settings.php:99
 #, php-format
 msgid ""
 "If your site will include a large number of similarly configured calendar "
@@ -1010,13 +1048,13 @@ msgstr ""
 "parametri incluși în codul scurt individual vor suprascrie ceea ce este "
 "setat aici."
 
-#: templates/admin/settings.php:82
+#: templates/admin/settings.php:108
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Permiteți accesul la aceste nume de gazdă care se rezolvă la adrese IP "
 "rezervate."
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:112
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -1032,7 +1070,7 @@ msgstr ""
 "de gazdă pe fiecare linie. Consultați %3$sdocumentația %4$s%5$s pentru mai "
 "multe informații."
 
-#: templates/admin/settings.php:93
+#: templates/admin/settings.php:119
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -1042,11 +1080,11 @@ msgstr ""
 "numele de domeniu de bază, nu adresa URL completă. %1$s De exemplu, ați "
 "introduce %2$s, nu %3$s."
 
-#: templates/admin/settings.php:99
+#: templates/admin/settings.php:125
 msgid "Allow access to these ports"
 msgstr "Permiteți accesul la aceste porturi"
 
-#: templates/admin/settings.php:102
+#: templates/admin/settings.php:128
 msgid ""
 "WordPress automatically allows access to ports 80, 443, and 8080. If you "
 "need to be able to access source calendars that use non-standard ports, "
@@ -1056,19 +1094,15 @@ msgstr ""
 "să accesați calendare sursă care utilizează porturi non-standard, "
 "introduceți aici numerele porturilor, separate prin virgule."
 
-#: templates/admin/settings.php:113
+#: templates/admin/settings.php:139
 msgid "Caching"
 msgstr "Caching"
 
-#: templates/admin/settings.php:117
+#: templates/admin/settings.php:143
 msgid "Transient (cache) expiration"
 msgstr "Expirarea temporară (cache)"
 
-#: templates/admin/settings.php:118
-msgid "seconds"
-msgstr "secunde"
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:146
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
@@ -1078,15 +1112,15 @@ msgstr ""
 "server (transiente WordPress) înainte de reîncărcare. Valoarea implicită "
 "este 3600 (1 oră). Valoarea minimă permisă este 120 (2 minute)."
 
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:157
 msgid "Admin"
 msgstr "Administrator"
 
-#: templates/admin/settings.php:135
+#: templates/admin/settings.php:161
 msgid "Minimum access role"
 msgstr "Rol de acces minim"
 
-#: templates/admin/settings.php:155
+#: templates/admin/settings.php:181
 #, php-format
 msgid ""
 "Identifies the minimum user role that is allowed to access %1$s admin pages. "
@@ -1098,11 +1132,11 @@ msgstr ""
 "continuare numai la %2$s utilizatori (%3$s utilizatori în configurații "
 "multisite)."
 
-#: templates/admin/settings.php:163
+#: templates/admin/settings.php:189
 msgid "Register Customizer"
 msgstr "Personalizare registru"
 
-#: templates/admin/settings.php:165
+#: templates/admin/settings.php:191
 msgid ""
 "WordPress no longer includes a link to the Customizer in the Appearance menu "
 "when a Block Theme is active. Check this box if you wish to use the "
@@ -1119,11 +1153,11 @@ msgstr ""
 "de selectare activează Customizer numai atunci când este bifată; nu "
 "dezactivează Customizer atunci când este debifată.)"
 
-#: templates/admin/settings.php:173
+#: templates/admin/settings.php:199
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Eliminați butonul „Adăugați calendar ICS” din Editorul clasic"
 
-#: templates/admin/settings.php:175
+#: templates/admin/settings.php:201
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -1135,7 +1169,7 @@ msgstr ""
 "butonul. Nu are niciun efect asupra site-urilor care utilizează Block Editor "
 "(Gutenberg)."
 
-#: templates/admin/settings.php:187
+#: templates/admin/settings.php:213
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

@@ -54,6 +54,32 @@ if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
 				</p>
 				
 				<p class="r34ics-input">
+					<label for="r34ics_display_calendar_time_limit">
+						<strong><?php esc_html_e('Increase time limit when rendering calendars', 'ics-calendar'); ?>:</strong>
+						<input type="number" name="display_calendar_time_limit" id="r34ics_display_calendar_time_limit" value="<?php echo esc_attr(get_option('r34ics_display_calendar_time_limit', '')); ?>" min="30" max="300" style="width: 100px;" /> <?php esc_html_e('seconds', 'ics-calendar'); ?>
+						<span class="description" tabindex="0"><small class="r34ics-help"><span class="help_content">
+							<?php
+							// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
+							printf(esc_html__('If your calendar is failing to load with a "maximum execution time exceeded" error, use this setting to increase the number of seconds the calendar parsing process is allowed to run. A value of at least 60 is recommended. Allowed range is 30 to 300. If left blank, the server default will be used.', 'ics-calendar'), '<br /><br />');
+							?>
+						</span></small></span>
+					</label>
+				</p>
+				
+				<p class="r34ics-input">
+					<label for="r34ics_request_timeout">
+						<strong><?php esc_html_e('Increase request timeout when rendering calendars', 'ics-calendar'); ?>:</strong>
+						<input type="number" name="request_timeout" id="r34ics_request_timeout" value="<?php echo esc_attr(get_option('r34ics_request_timeout', '')); ?>" min="30" max="300" style="width: 100px;" /> <?php esc_html_e('seconds', 'ics-calendar'); ?>
+						<span class="description" tabindex="0"><small class="r34ics-help"><span class="help_content">
+							<?php
+							// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
+							printf(esc_html__('If your calendar source is not responding within the default timeout of 30 seconds, use this setting to increase the timeout limit. Allowed range is 30 to 300. If left blank, the default of 30 seconds will be used.', 'ics-calendar'), '<br /><br />');
+							?>
+						</span></small></span>
+					</label>
+				</p>
+				
+				<p class="r34ics-input">
 					<label for="r34ics_url_get_contents_legacy_method">
 						<input type="checkbox" name="url_get_contents_legacy_method" id="r34ics_url_get_contents_legacy_method"<?php if (get_option('r34ics_url_get_contents_legacy_method')) { echo ' checked="checked"'; } ?> />
 						<strong><?php esc_html_e('Use legacy feed request method', 'ics-calendar'); ?></strong>

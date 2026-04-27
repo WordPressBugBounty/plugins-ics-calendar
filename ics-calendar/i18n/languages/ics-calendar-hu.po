@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-27 15:08-0600\n"
-"PO-Revision-Date: 2026-02-27 15:08-0600\n"
+"POT-Creation-Date: 2026-04-27 10:36-0500\n"
+"PO-Revision-Date: 2026-04-27 10:36-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -176,7 +176,7 @@ msgstr ""
 "állni az új alapértelmezett beállításokra, kapcsolja be a %8$s opciót a %9$s "
 "beállítások%10$s oldalon."
 
-#: class-r34ics.php:377 templates/admin/settings.php:183
+#: class-r34ics.php:377 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Új paraméter alapértelmezések használata (v.10.6)"
 
@@ -222,11 +222,11 @@ msgstr ""
 "%4$sváltozásnaplóban%5$s olvashat."
 
 #: class-r34ics.php:463 templates/admin/admin.php:24
-#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
+#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Kezdjük el"
 
-#: class-r34ics.php:464 class-r34ics.php:2384 templates/admin/admin.php:28
+#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Beállítások"
@@ -260,7 +260,7 @@ msgstr "Frissítsen %1$s-ra!"
 msgid "Show/hide all"
 msgstr "Minden megjelenítése/elrejtése"
 
-#: class-r34ics.php:774
+#: class-r34ics.php:782
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -273,36 +273,36 @@ msgstr ""
 "allow_url_fopen elérhető-e. Ha több URL-t szóközökkel választ el, akkor "
 "érdemes kipróbálni a cső karakter használatát is. Érintett URL:"
 
-#: class-r34ics.php:1218
+#: class-r34ics.php:1226
 msgid "Hide past events"
 msgstr "Korábbi események elrejtése"
 
-#: class-r34ics.php:1219 templates/calendar-month.php:96
+#: class-r34ics.php:1227 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Elmúlt események megjelenítése"
 
-#: class-r34ics.php:1300
+#: class-r34ics.php:1308
 msgid "Contact:"
 msgstr "Kapcsolat:"
 
-#: class-r34ics.php:1306
+#: class-r34ics.php:1314
 msgid "Resources:"
 msgstr "Források:"
 
-#: class-r34ics.php:1316
+#: class-r34ics.php:1324
 msgid "Click for more..."
 msgstr "Kattintson ide további információkért..."
 
-#: class-r34ics.php:1350
+#: class-r34ics.php:1358
 msgid "Save to your calendar"
 msgstr "Mentse a naptárába"
 
-#: class-r34ics.php:1453
+#: class-r34ics.php:1461
 msgid "Cancelled"
 msgstr "Törölve"
 
-#: class-r34ics.php:1566
+#: class-r34ics.php:1574
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -310,11 +310,11 @@ msgstr ""
 "A régi parser opció elavult, és egy jövőbeli frissítésben eltávolításra "
 "kerül."
 
-#: class-r34ics.php:1657
+#: class-r34ics.php:1665
 msgid "Print"
 msgstr "Nyomtatás"
 
-#: class-r34ics.php:1917
+#: class-r34ics.php:1925
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -322,7 +322,7 @@ msgstr ""
 "A „currentweek” rövidkód attribútum elavult. Kérjük, helyette használja a "
 "view=\"week\" rövidkódot."
 
-#: class-r34ics.php:1921
+#: class-r34ics.php:1929
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -330,7 +330,7 @@ msgstr ""
 "A „legendinline” rövidkód attribútum elavult. Kérjük, helyette a "
 "legendstyle=\"inline\" attribútumot használja a rövidkódjában."
 
-#: class-r34ics.php:2258
+#: class-r34ics.php:2266
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -340,7 +340,7 @@ msgstr ""
 "Ha webhelyed cache-plugint használ, akkor lehet, hogy törölnöd kell a cache-"
 "t."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2274
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -349,21 +349,21 @@ msgstr ""
 "%1$s %2$sfelfüggesztette%3$s a naptárak megjelenítését a frontend oldalakon. "
 "Ha webhelye cache-plugint használ, akkor lehet, hogy törölnie kell a cache-t."
 
-#: class-r34ics.php:2278
+#: class-r34ics.php:2286
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$s átmeneti állapot törölve."
 
-#: class-r34ics.php:2285
+#: class-r34ics.php:2293
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nem találtunk %1$s átmeneti állapotot."
 
-#: class-r34ics.php:2294
+#: class-r34ics.php:2302
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Az összes mentett ICS-feed URL-cím törölve lett."
 
-#: class-r34ics.php:2301
+#: class-r34ics.php:2309
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -372,7 +372,7 @@ msgstr ""
 "Az összes %1$s beállítás alapértelmezett értékre lett visszaállítva, és a "
 "mentett ICS-feed URL-ek törölve lettek."
 
-#: class-r34ics.php:2384
+#: class-r34ics.php:2392
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -381,11 +381,11 @@ msgstr ""
 "Úgy tűnik, hogy a feed URL-je HTTP alapvető hitelesítési adatokat tartalmaz. "
 "Próbálja meg kikapcsolni a fenti %2$s fül alatt található %1$s opciót."
 
-#: class-r34ics.php:2384 templates/admin/settings.php:59
+#: class-r34ics.php:2392 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Használja a régi feed-lekérés módszert"
 
-#: class-r34ics.php:2390
+#: class-r34ics.php:2398
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -401,17 +401,17 @@ msgstr ""
 "megszerzésével kapcsolatos utasításokat a %4$sFelhasználói útmutatóban%5$s "
 "találja."
 
-#: class-r34ics.php:2396
+#: class-r34ics.php:2404
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Hiba: Nem sikerült feloldani a %1$s IP-címet."
 
-#: class-r34ics.php:2399
+#: class-r34ics.php:2407
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Megoldott IP-cím %1$s:"
 
-#: class-r34ics.php:2424
+#: class-r34ics.php:2432
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -420,7 +420,7 @@ msgstr ""
 "%1$sMegjelenés frissítve.%2$s Lehet, hogy frissítenie kell az oldalt, hogy "
 "lássa a változásokat."
 
-#: class-r34ics.php:2484
+#: class-r34ics.php:2492
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -428,7 +428,7 @@ msgstr ""
 "Az „Alapértelmezett rövidkód” mezőbe beírt szöveg nem érvényes rövidkód, "
 "ezért nem lett elmentve."
 
-#: class-r34ics.php:2527
+#: class-r34ics.php:2549
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -437,15 +437,15 @@ msgstr ""
 "%1$sBeállítások frissítve.%2$s Lehet, hogy frissítenie kell az oldalt, hogy "
 "lássa a változásokat."
 
-#: class-r34ics.php:2840
+#: class-r34ics.php:2862
 msgid "calendar event"
 msgstr "naptári esemény"
 
-#: class-r34ics.php:2846
+#: class-r34ics.php:2868
 msgid "Event download failed."
 msgstr "Az esemény letöltése sikertelen."
 
-#: class-r34ics.php:3287
+#: class-r34ics.php:3333
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -465,7 +465,7 @@ msgstr ""
 "Kérjük, frissítse webhelyét a WordPress újabb verziójára a lehető "
 "leghamarabb."
 
-#: functions.php:1062
+#: functions.php:1065
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -480,7 +480,7 @@ msgstr ""
 "Ennek eredményeként a %1$s fordítások nem töltődnek be megfelelően, amíg az "
 "ütköző fordítási bővítmény aktív."
 
-#: functions.php:1185 functions.php:1193 functions.php:1202
+#: functions.php:1188 functions.php:1196 functions.php:1205
 msgid "Map"
 msgstr "Térkép"
 
@@ -537,7 +537,7 @@ msgstr ""
 "naptár nem jelenik meg megfelelően. Kérjük, távolítsa el a kattintható "
 "linket a rövidkódból."
 
-#: functions.php:2027
+#: functions.php:2029
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Az r34ics_url_get_contents() függvény már nem támogatott."
 
@@ -836,7 +836,7 @@ msgstr "Sötét üzemmód"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "A színpaletta megfordítása (világos színek sötét háttérrel)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:200
+#: templates/admin/appearance.php:70 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Módosítások mentése"
 
@@ -854,7 +854,7 @@ msgstr ""
 "formátuma helyes-e. További információkért tekintse meg a %4$sFelhasználói "
 "útmutatót%5$s."
 
-#: templates/admin/getting-started.php:23
+#: templates/admin/getting-started.php:26
 #, php-format
 msgid ""
 "Get started with %1$s in four easy steps... and you've already completed "
@@ -863,11 +863,11 @@ msgstr ""
 "Kezdje el a %1$s négy egyszerű lépésben... és máris teljesítette az első "
 "lépést! A többi lépésről olvassa el a %2$sGyors útmutatót%3$s."
 
-#: templates/admin/getting-started.php:26
+#: templates/admin/getting-started.php:32
 msgid "Quick Start Guide"
 msgstr "Gyorsbeállítás varázsló"
 
-#: templates/admin/getting-started.php:32
+#: templates/admin/getting-started.php:38
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
@@ -877,52 +877,52 @@ msgstr ""
 "alábbiakban néhány gyors linket talál a dokumentáció legfontosabb "
 "forrásaihoz."
 
-#: templates/admin/getting-started.php:38
+#: templates/admin/getting-started.php:44
 msgid "General:"
 msgstr "Általános:"
 
-#: templates/admin/getting-started.php:41
+#: templates/admin/getting-started.php:47
 msgid "General WordPress Settings"
 msgstr "Általános WordPress beállítások"
 
-#: templates/admin/getting-started.php:44
+#: templates/admin/getting-started.php:50
 #, php-format
 msgid "%1$s Settings"
 msgstr "%1$s Beállítások"
 
-#: templates/admin/getting-started.php:49
+#: templates/admin/getting-started.php:55
 msgid "Working with Shortcodes:"
 msgstr "Rövidkódok használata:"
 
-#: templates/admin/getting-started.php:51
+#: templates/admin/getting-started.php:57
 msgid "Shortcode Overview"
 msgstr "Rövid kódok áttekintése"
 
-#: templates/admin/getting-started.php:52
+#: templates/admin/getting-started.php:58
 msgid "Shortcode Builder"
 msgstr "Rövidkód építő"
 
-#: templates/admin/getting-started.php:53
+#: templates/admin/getting-started.php:59
 msgid "Shortcode Parameters Reference"
 msgstr "Rövid kód paraméterek referencia"
 
-#: templates/admin/getting-started.php:57
+#: templates/admin/getting-started.php:63
 msgid "Advanced Topics:"
 msgstr "Haladó témák:"
 
-#: templates/admin/getting-started.php:59
+#: templates/admin/getting-started.php:65
 msgid "FAQs and Tips"
 msgstr "GYIK és tippek"
 
-#: templates/admin/getting-started.php:60
+#: templates/admin/getting-started.php:66
 msgid "CSS Guide"
 msgstr "CSS útmutató"
 
-#: templates/admin/getting-started.php:61
+#: templates/admin/getting-started.php:67
 msgid "Developer Resources"
 msgstr "Fejlesztői források"
 
-#: templates/admin/getting-started.php:62
+#: templates/admin/getting-started.php:68
 msgid "GDPR"
 msgstr "GDPR"
 
@@ -963,11 +963,49 @@ msgstr ""
 "opció nem állítható be alacsonyabbra, mint a szerver aktuális "
 "alapértelmezett memóriahatára."
 
-#: templates/admin/settings.php:60
+#: templates/admin/settings.php:58
+msgid "Increase time limit when rendering calendars"
+msgstr "A naptárak megjelenítésének időkorlátjának meghosszabbítása"
+
+#: templates/admin/settings.php:59 templates/admin/settings.php:72
+#: templates/admin/settings.php:144
+msgid "seconds"
+msgstr "másodperc"
+
+#: templates/admin/settings.php:63
+msgid ""
+"If your calendar is failing to load with a \"maximum execution time "
+"exceeded\" error, use this setting to increase the number of seconds the "
+"calendar parsing process is allowed to run. A value of at least 60 is "
+"recommended. Allowed range is 30 to 300. If left blank, the server default "
+"will be used."
+msgstr ""
+"Ha a naptár betöltése „maximum execution time exceeded” hibaüzenettel "
+"meghiúsul, akkor ezzel a beállítással növelheti a naptár feldolgozási "
+"folyamatának megengedett futási idejét másodpercekben kifejezve. Legalább 60-"
+"as érték használata ajánlott. A megengedett tartomány 30 és 300 között van. "
+"Ha üresen hagyja, akkor a szerver alapértelmezett értéke kerül alkalmazásra."
+
+#: templates/admin/settings.php:71
+msgid "Increase request timeout when rendering calendars"
+msgstr "A naptárak megjelenítésekor növelje a kérés időkorlátját"
+
+#: templates/admin/settings.php:76
+msgid ""
+"If your calendar source is not responding within the default timeout of 30 "
+"seconds, use this setting to increase the timeout limit. Allowed range is 30 "
+"to 300. If left blank, the default of 30 seconds will be used."
+msgstr ""
+"Ha a naptárforrás nem válaszol az alapértelmezett 30 másodperces várakozási "
+"időn belül, ezzel a beállítással növelheti a várakozási időt. A megengedett "
+"értékek 30 és 300 között vannak. Ha üresen hagyja, az alapértelmezett 30 "
+"másodperces érték lesz érvényes."
+
+#: templates/admin/settings.php:86
 msgid "deprecated"
 msgstr "elavult"
 
-#: templates/admin/settings.php:62
+#: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
 "are not loading, turn on this option to use the legacy request method. This "
@@ -978,11 +1016,11 @@ msgstr ""
 "módszer használatához. Ez a funkció elavult, és egy jövőbeli frissítésben "
 "eltávolításra kerül."
 
-#: templates/admin/settings.php:69
+#: templates/admin/settings.php:95
 msgid "Default shortcode"
 msgstr "Alapértelmezett rövid kód"
 
-#: templates/admin/settings.php:73
+#: templates/admin/settings.php:99
 #, php-format
 msgid ""
 "If your site will include a large number of similarly configured calendar "
@@ -999,13 +1037,13 @@ msgstr ""
 "paramétereket tartalmazhatják, például: %1$s Az egyedi rövidkódban szereplő "
 "paraméterek felülírják az itt megadottakat."
 
-#: templates/admin/settings.php:82
+#: templates/admin/settings.php:108
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Engedélyezze a hozzáférést azokhoz a gazdanevekhez, amelyek fenntartott IP-"
 "címekre mutatnak."
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:112
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -1020,7 +1058,7 @@ msgstr ""
 "Több naptárszerver esetén adjon meg egy gazdagép nevet soronként. További "
 "információkért lásd %3$sa %4$s dokumentációt%5$s."
 
-#: templates/admin/settings.php:93
+#: templates/admin/settings.php:119
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -1029,11 +1067,11 @@ msgstr ""
 "Írjon be egy hostnevet soronként. A hostnevek az alapdomainnév, nem a teljes "
 "URL. %1$s Például %2$s-et kell beírnia, nem %3$s-t."
 
-#: templates/admin/settings.php:99
+#: templates/admin/settings.php:125
 msgid "Allow access to these ports"
 msgstr "Engedélyezze a hozzáférést ezekhez a portokhoz"
 
-#: templates/admin/settings.php:102
+#: templates/admin/settings.php:128
 msgid ""
 "WordPress automatically allows access to ports 80, 443, and 8080. If you "
 "need to be able to access source calendars that use non-standard ports, "
@@ -1043,19 +1081,15 @@ msgstr ""
 "hozzáférést. Ha nem szabványos portokat használó forrásnaptárakhoz kell "
 "hozzáférnie, írja be ide a portszámokat, vesszővel elválasztva."
 
-#: templates/admin/settings.php:113
+#: templates/admin/settings.php:139
 msgid "Caching"
 msgstr "Gyorsítótárazás"
 
-#: templates/admin/settings.php:117
+#: templates/admin/settings.php:143
 msgid "Transient (cache) expiration"
 msgstr "Ideiglenes (cache) lejárat"
 
-#: templates/admin/settings.php:118
-msgid "seconds"
-msgstr "másodperc"
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:146
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
@@ -1065,15 +1099,15 @@ msgstr ""
 "(WordPress transients) tárolni, mielőtt újra betöltenék. Az alapértelmezett "
 "érték 3600 (1 óra). A legkisebb megengedett érték 120 (2 perc)."
 
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:157
 msgid "Admin"
 msgstr "Admin"
 
-#: templates/admin/settings.php:135
+#: templates/admin/settings.php:161
 msgid "Minimum access role"
 msgstr "Minimális hozzáférési szerepkör"
 
-#: templates/admin/settings.php:155
+#: templates/admin/settings.php:181
 #, php-format
 msgid ""
 "Identifies the minimum user role that is allowed to access %1$s admin pages. "
@@ -1085,11 +1119,11 @@ msgstr ""
 "Beállítások, tovább korlátozottak, csak %2$s felhasználók számára elérhetők "
 "(%3$s felhasználók többoldalas konfigurációk esetén)."
 
-#: templates/admin/settings.php:163
+#: templates/admin/settings.php:189
 msgid "Register Customizer"
 msgstr "Regisztráció testreszabó"
 
-#: templates/admin/settings.php:165
+#: templates/admin/settings.php:191
 msgid ""
 "WordPress no longer includes a link to the Customizer in the Appearance menu "
 "when a Block Theme is active. Check this box if you wish to use the "
@@ -1106,12 +1140,12 @@ msgstr ""
 "Testreszabót, ha be van jelölve; ha nincs bejelölve, akkor nem tiltja le a "
 "Testreszabót.)"
 
-#: templates/admin/settings.php:173
+#: templates/admin/settings.php:199
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr ""
 "Az „ICS naptár hozzáadása” gomb eltávolítása a klasszikus szerkesztőből"
 
-#: templates/admin/settings.php:175
+#: templates/admin/settings.php:201
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -1122,7 +1156,7 @@ msgstr ""
 "használja. Jelölje be ezt a négyzetet a gomb eltávolításához. Nincs hatása a "
 "Blokkszerkesztőt (Gutenberg) használó webhelyekre."
 
-#: templates/admin/settings.php:187
+#: templates/admin/settings.php:213
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

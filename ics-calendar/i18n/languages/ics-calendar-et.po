@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-02-27 15:08-0600\n"
-"PO-Revision-Date: 2026-02-27 15:08-0600\n"
+"POT-Creation-Date: 2026-04-27 10:36-0500\n"
+"PO-Revision-Date: 2026-04-27 10:36-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -173,7 +173,7 @@ msgstr ""
 "%6$sblogipostitust%7$s või lülitage uued vaikimisi seaded sisse, "
 "aktiveerides %8$s valiku %9$s seadeid%10$s lehel."
 
-#: class-r34ics.php:377 templates/admin/settings.php:183
+#: class-r34ics.php:377 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Kasuta uusi parameetrite vaikimisi väärtusi (v.10.6)"
 
@@ -220,11 +220,11 @@ msgstr ""
 "%4$smuudatuste loendist%5$s."
 
 #: class-r34ics.php:463 templates/admin/admin.php:24
-#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:40
+#: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Alustamine"
 
-#: class-r34ics.php:464 class-r34ics.php:2384 templates/admin/admin.php:28
+#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Seaded"
@@ -258,7 +258,7 @@ msgstr "Uuenda versioonile %1$s!"
 msgid "Show/hide all"
 msgstr "Kuva/peida kõik"
 
-#: class-r34ics.php:774
+#: class-r34ics.php:782
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -271,46 +271,46 @@ msgstr ""
 "allow_url_fopen on saadaval. Kui kasutate mitme URL-i eraldamiseks tühikuid, "
 "võite proovida kasutada selle asemel toru märki. Mõjutatud URL:"
 
-#: class-r34ics.php:1218
+#: class-r34ics.php:1226
 msgid "Hide past events"
 msgstr "Peida varasemad sündmused"
 
-#: class-r34ics.php:1219 templates/calendar-month.php:96
+#: class-r34ics.php:1227 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Näita eelmisi sündmuseid"
 
-#: class-r34ics.php:1300
+#: class-r34ics.php:1308
 msgid "Contact:"
 msgstr "Kontakt:"
 
-#: class-r34ics.php:1306
+#: class-r34ics.php:1314
 msgid "Resources:"
 msgstr "Ressursid:"
 
-#: class-r34ics.php:1316
+#: class-r34ics.php:1324
 msgid "Click for more..."
 msgstr "Kliki, et näha rohkem..."
 
-#: class-r34ics.php:1350
+#: class-r34ics.php:1358
 msgid "Save to your calendar"
 msgstr "Salvesta oma kalendrisse"
 
-#: class-r34ics.php:1453
+#: class-r34ics.php:1461
 msgid "Cancelled"
 msgstr "Tühistatud"
 
-#: class-r34ics.php:1566
+#: class-r34ics.php:1574
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr "Vana parser-valik on vananenud ja eemaldatakse tulevases värskenduses."
 
-#: class-r34ics.php:1657
+#: class-r34ics.php:1665
 msgid "Print"
 msgstr "Prindi"
 
-#: class-r34ics.php:1917
+#: class-r34ics.php:1925
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -318,7 +318,7 @@ msgstr ""
 "Lühikoodi atribuut \"currentweek\" on vananenud. Kasutage selle asemel "
 "lühikoodis view=\"week\"."
 
-#: class-r34ics.php:1921
+#: class-r34ics.php:1929
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -326,7 +326,7 @@ msgstr ""
 "Lühikoodi atribuut \"legendinline\" on vananenud. Kasutage lühikoodis selle "
 "asemel legendstyle=\"inline\"."
 
-#: class-r34ics.php:2258
+#: class-r34ics.php:2266
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -336,7 +336,7 @@ msgstr ""
 "veebisait kasutab vahemällu salvestavat pistikprogrammi, võib olla vaja "
 "vahemälu tühjendada."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2274
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -346,21 +346,21 @@ msgstr ""
 "veebisait kasutab vahemällu salvestamise pistikprogrammi, võib olla vaja "
 "vahemälu tühjendada."
 
-#: class-r34ics.php:2278
+#: class-r34ics.php:2286
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Kustutatud %1$s %2$s ajutine(d)."
 
-#: class-r34ics.php:2285
+#: class-r34ics.php:2293
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Ühtegi %1$s üleminekut ei leitud."
 
-#: class-r34ics.php:2294
+#: class-r34ics.php:2302
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Kõik salvestatud ICS-voo URL-id on kustutatud."
 
-#: class-r34ics.php:2301
+#: class-r34ics.php:2309
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -369,7 +369,7 @@ msgstr ""
 "Kõik %1$s seaded on taastatud vaikimisi seadetele ja salvestatud ICS-voo URL-"
 "id on kustutatud."
 
-#: class-r34ics.php:2384
+#: class-r34ics.php:2392
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -379,11 +379,11 @@ msgstr ""
 "autentimisandmeid. Proovige lülitada välja %1$s valik eespool oleva %2$s "
 "vahekaardi all."
 
-#: class-r34ics.php:2384 templates/admin/settings.php:59
+#: class-r34ics.php:2392 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Kasuta vana feed-päringu meetodit"
 
-#: class-r34ics.php:2390
+#: class-r34ics.php:2398
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -397,17 +397,17 @@ msgstr ""
 "hetkeülevaade kalendrist ega kajasta allika kalendri tulevasi uuendusi. Õige "
 "dünaamilise feed-URL-i saamise juhised leiate meie %4$skasutusjuhendist%5$s."
 
-#: class-r34ics.php:2396
+#: class-r34ics.php:2404
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Viga: IP-aadressi %1$s ei õnnestunud lahendada."
 
-#: class-r34ics.php:2399
+#: class-r34ics.php:2407
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$s jaoks määratud IP-aadress:"
 
-#: class-r34ics.php:2424
+#: class-r34ics.php:2432
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -416,7 +416,7 @@ msgstr ""
 "%1$sVälimus uuendatud.%2$s Mõnede muudatuste nägemiseks võib olla vaja lehte "
 "uuendada."
 
-#: class-r34ics.php:2484
+#: class-r34ics.php:2492
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -424,7 +424,7 @@ msgstr ""
 "Väljale „Vaikimisi lühikood” sisestatud tekst ei ole kehtiv lühikood ja seda "
 "ei salvestatud."
 
-#: class-r34ics.php:2527
+#: class-r34ics.php:2549
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -433,15 +433,15 @@ msgstr ""
 "%1$sSeaded on uuendatud.%2$s Mõnede muudatuste nägemiseks võib olla vaja "
 "lehte uuendada."
 
-#: class-r34ics.php:2840
+#: class-r34ics.php:2862
 msgid "calendar event"
 msgstr "kalendrisündmus"
 
-#: class-r34ics.php:2846
+#: class-r34ics.php:2868
 msgid "Event download failed."
 msgstr "Sündmuse allalaadimine ebaõnnestus."
 
-#: class-r34ics.php:3287
+#: class-r34ics.php:3333
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -460,7 +460,7 @@ msgstr ""
 "%1$s tulevased uuendused nõuavad WordPressi versiooni 5.3 või uuemat. Palun "
 "uuendage oma veebisait võimalikult kiiresti uuemale WordPressi versioonile."
 
-#: functions.php:1062
+#: functions.php:1065
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -475,7 +475,7 @@ msgstr ""
 "tulemusena ei pruugi %1$s tõlked õigesti laadida, kui konfliktis olev tõlke "
 "pistikprogramm on aktiivne."
 
-#: functions.php:1185 functions.php:1193 functions.php:1202
+#: functions.php:1188 functions.php:1196 functions.php:1205
 msgid "Map"
 msgstr "Kaart"
 
@@ -532,7 +532,7 @@ msgstr ""
 "pruugi teie kalender õigesti kuvada. Palun eemaldage lühikoodist klõpsatav "
 "link."
 
-#: functions.php:2027
+#: functions.php:2029
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funktsiooni r34ics_url_get_contents() enam ei toetata."
 
@@ -826,7 +826,7 @@ msgstr "Tume režiim"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "Pöörab värvipaleti ümber (heledad värvid tumedal taustal)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:200
+#: templates/admin/appearance.php:70 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Salvesta muudatused"
 
@@ -843,7 +843,7 @@ msgstr ""
 "veebisaidi keel, ajavöönd ja kuupäeva/kellaaja formaadi seaded on õiged. "
 "Lisateavet leiate meie %4$skasutusjuhendist%5$s."
 
-#: templates/admin/getting-started.php:23
+#: templates/admin/getting-started.php:26
 #, php-format
 msgid ""
 "Get started with %1$s in four easy steps... and you've already completed "
@@ -852,11 +852,11 @@ msgstr ""
 "Alustage %1$s nelja lihtsa sammuga... ja esimene samm on juba tehtud! "
 "Ülejäänu leiate meie %2$skiirjuhendist%3$s."
 
-#: templates/admin/getting-started.php:26
+#: templates/admin/getting-started.php:32
 msgid "Quick Start Guide"
 msgstr "Kiirjuhend"
 
-#: templates/admin/getting-started.php:32
+#: templates/admin/getting-started.php:38
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
@@ -865,52 +865,52 @@ msgstr ""
 "Meie veebisaidil on saadaval põhjalik %1$skasutusjuhend%2$s. Allpool on "
 "mõned kiirlingid dokumentatsiooni olulisematele allikatele."
 
-#: templates/admin/getting-started.php:38
+#: templates/admin/getting-started.php:44
 msgid "General:"
 msgstr "Üldine:"
 
-#: templates/admin/getting-started.php:41
+#: templates/admin/getting-started.php:47
 msgid "General WordPress Settings"
 msgstr "WordPressi üldised seaded"
 
-#: templates/admin/getting-started.php:44
+#: templates/admin/getting-started.php:50
 #, php-format
 msgid "%1$s Settings"
 msgstr "%1$s Seaded"
 
-#: templates/admin/getting-started.php:49
+#: templates/admin/getting-started.php:55
 msgid "Working with Shortcodes:"
 msgstr "Lühikoodidega töötamine:"
 
-#: templates/admin/getting-started.php:51
+#: templates/admin/getting-started.php:57
 msgid "Shortcode Overview"
 msgstr "Lühikoodi ülevaade"
 
-#: templates/admin/getting-started.php:52
+#: templates/admin/getting-started.php:58
 msgid "Shortcode Builder"
 msgstr "Lühikoodide looja"
 
-#: templates/admin/getting-started.php:53
+#: templates/admin/getting-started.php:59
 msgid "Shortcode Parameters Reference"
 msgstr "Lühikoodi parameetrite viited"
 
-#: templates/admin/getting-started.php:57
+#: templates/admin/getting-started.php:63
 msgid "Advanced Topics:"
 msgstr "Täpsemad teemad:"
 
-#: templates/admin/getting-started.php:59
+#: templates/admin/getting-started.php:65
 msgid "FAQs and Tips"
 msgstr "Korduma kippuvad küsimused ja näpunäited"
 
-#: templates/admin/getting-started.php:60
+#: templates/admin/getting-started.php:66
 msgid "CSS Guide"
 msgstr "CSS-juhend"
 
-#: templates/admin/getting-started.php:61
+#: templates/admin/getting-started.php:67
 msgid "Developer Resources"
 msgstr "Arendaja ressursid"
 
-#: templates/admin/getting-started.php:62
+#: templates/admin/getting-started.php:68
 msgid "GDPR"
 msgstr "GDPR"
 
@@ -950,11 +950,48 @@ msgstr ""
 "ümber kirjutada. 2) Seda valikut ei ole võimalik seadistada madalamaks kui "
 "teie serveri praegune vaikimisi mälu piirmäär."
 
-#: templates/admin/settings.php:60
+#: templates/admin/settings.php:58
+msgid "Increase time limit when rendering calendars"
+msgstr "Pikenda kalendrite kuvamisel aega"
+
+#: templates/admin/settings.php:59 templates/admin/settings.php:72
+#: templates/admin/settings.php:144
+msgid "seconds"
+msgstr "sekundit"
+
+#: templates/admin/settings.php:63
+msgid ""
+"If your calendar is failing to load with a \"maximum execution time "
+"exceeded\" error, use this setting to increase the number of seconds the "
+"calendar parsing process is allowed to run. A value of at least 60 is "
+"recommended. Allowed range is 30 to 300. If left blank, the server default "
+"will be used."
+msgstr ""
+"Kui kalendri laadimine ebaõnnestub veateatega „maksimaalne täitmisaeg "
+"ületatud“, kasuta seda seadet, et suurendada kalendri analüüsimisprotsessi "
+"lubatud kestust sekundites. Soovitatav väärtus on vähemalt 60. Lubatud "
+"vahemik on 30–300. Kui väli jäetakse tühjaks, kasutatakse serveri vaikimisi "
+"väärtust."
+
+#: templates/admin/settings.php:71
+msgid "Increase request timeout when rendering calendars"
+msgstr "Pikenda kalendrite kuvamisel päringu ooteaega"
+
+#: templates/admin/settings.php:76
+msgid ""
+"If your calendar source is not responding within the default timeout of 30 "
+"seconds, use this setting to increase the timeout limit. Allowed range is 30 "
+"to 300. If left blank, the default of 30 seconds will be used."
+msgstr ""
+"Kui kalendri allikas ei vasta 30-sekundilise vaikimisi ooteaja jooksul, "
+"kasuta seda seadet ooteaja pikendamiseks. Lubatud väärtuste vahemik on 30–"
+"300. Kui väli jäetakse tühjaks, kasutatakse vaikimisi 30 sekundit."
+
+#: templates/admin/settings.php:86
 msgid "deprecated"
 msgstr "vananenud"
 
-#: templates/admin/settings.php:62
+#: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
 "are not loading, turn on this option to use the legacy request method. This "
@@ -964,11 +1001,11 @@ msgstr ""
 "feed'id ei lae, lülitage see valik sisse, et kasutada vana päringu meetodit. "
 "See funktsioon on vananenud ja eemaldatakse tulevases värskenduses."
 
-#: templates/admin/settings.php:69
+#: templates/admin/settings.php:95
 msgid "Default shortcode"
 msgstr "Vaikimisi lühikood"
 
-#: templates/admin/settings.php:73
+#: templates/admin/settings.php:99
 #, php-format
 msgid ""
 "If your site will include a large number of similarly configured calendar "
@@ -985,13 +1022,13 @@ msgstr ""
 "kalendri jaoks unikaalseid parameetreid, näiteks: %1$s Üksikutes "
 "lühikoodides sisalduvad parameetrid asendavad siin määratud parameetrid."
 
-#: templates/admin/settings.php:82
+#: templates/admin/settings.php:108
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Luba juurdepääs nendele hostinimedele, mis lahenduvad reserveeritud IP-"
 "aadressideks"
 
-#: templates/admin/settings.php:86
+#: templates/admin/settings.php:112
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -1006,7 +1043,7 @@ msgstr ""
 "kalendri serveri puhul sisestage üks hostinimi reale. Lisateavet leiate "
 "%3$sdokumentatsioonist%4$s%5$s."
 
-#: templates/admin/settings.php:93
+#: templates/admin/settings.php:119
 #, php-format
 msgid ""
 "Enter one hostname per line. Hostnames are the base domain name, not a full "
@@ -1015,11 +1052,11 @@ msgstr ""
 "Sisestage üks hostinimi rida kohta. Hostinimed on baasdomeeninimed, mitte "
 "täielikud URL-id. %1$s Näiteks sisestaksite %2$s, mitte %3$s."
 
-#: templates/admin/settings.php:99
+#: templates/admin/settings.php:125
 msgid "Allow access to these ports"
 msgstr "Luba juurdepääs nendele portidele"
 
-#: templates/admin/settings.php:102
+#: templates/admin/settings.php:128
 msgid ""
 "WordPress automatically allows access to ports 80, 443, and 8080. If you "
 "need to be able to access source calendars that use non-standard ports, "
@@ -1029,19 +1066,15 @@ msgstr ""
 "on vaja juurdepääsu allikakalendritele, mis kasutavad mittestandardseid "
 "porte, sisestage siia portide numbrid, eraldades need komadega."
 
-#: templates/admin/settings.php:113
+#: templates/admin/settings.php:139
 msgid "Caching"
 msgstr "Vahemälustamine"
 
-#: templates/admin/settings.php:117
+#: templates/admin/settings.php:143
 msgid "Transient (cache) expiration"
 msgstr "Ajutine (vahemälu) aegumine"
 
-#: templates/admin/settings.php:118
-msgid "seconds"
-msgstr "sekundit"
-
-#: templates/admin/settings.php:120
+#: templates/admin/settings.php:146
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour). Minimum allowed "
@@ -1051,15 +1084,15 @@ msgstr ""
 "(WordPressi transients) vahemällu salvestatud olema. Vaikimisi on see 3600 "
 "(1 tund). Minimaalne lubatud väärtus on 120 (2 minutit)."
 
-#: templates/admin/settings.php:131
+#: templates/admin/settings.php:157
 msgid "Admin"
 msgstr "Admin"
 
-#: templates/admin/settings.php:135
+#: templates/admin/settings.php:161
 msgid "Minimum access role"
 msgstr "Minimaalne juurdepääsuõigus"
 
-#: templates/admin/settings.php:155
+#: templates/admin/settings.php:181
 #, php-format
 msgid ""
 "Identifies the minimum user role that is allowed to access %1$s admin pages. "
@@ -1071,11 +1104,11 @@ msgstr ""
 "piiratud ainult %2$s kasutajatele (%3$s kasutajatele mitme saidi "
 "konfiguratsioonides)."
 
-#: templates/admin/settings.php:163
+#: templates/admin/settings.php:189
 msgid "Register Customizer"
 msgstr "Registreeri kohandaja"
 
-#: templates/admin/settings.php:165
+#: templates/admin/settings.php:191
 msgid ""
 "WordPress no longer includes a link to the Customizer in the Appearance menu "
 "when a Block Theme is active. Check this box if you wish to use the "
@@ -1091,11 +1124,11 @@ msgstr ""
 "mingit mõju. (Kastike aktiveerib Customizerit ainult siis, kui see on "
 "märgitud; see ei deaktiveeri Customizerit, kui see on märkimata.)"
 
-#: templates/admin/settings.php:173
+#: templates/admin/settings.php:199
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Eemalda klassikalises redaktoris nupp „Lisa ICS-kalender”"
 
-#: templates/admin/settings.php:175
+#: templates/admin/settings.php:201
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -1106,7 +1139,7 @@ msgstr ""
 "see ruut, et nupp eemaldada. Ei mõjuta veebisaite, mis kasutavad "
 "plokiredaktorit (Gutenberg)."
 
-#: templates/admin/settings.php:187
+#: templates/admin/settings.php:213
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "

@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 12.0.6
+Stable tag: 12.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,15 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.0.7 - 2026.04.27 =
+
+* Admin:
+  * Added two new settings (under **Loading** on the ICS Calendar Settings page): **Increase time limit when rendering calendars** and **Increase request timeout when rendering calendars**. If your calendars are intermittently failing to load due to time limits, adjusting these settings may resolve the issue. Note that long loading times may indicate connectivity problems between your web server and the source calendar server, or may be the result of excessively large amounts of calendar data. In some cases, you may need to purge old events from your source calendar.
+* Feed loading:
+  * Modified conditional for transient caching of feeds. Previously it would cache any non-empty response. Now it caches only if the response body begins with `BEGIN:VCALENDAR` (that is, it's a valid ICS feed).
+* i18n:
+  * Updated translation strings.
 
 = 12.0.6 - 2026.04.01 =
 
