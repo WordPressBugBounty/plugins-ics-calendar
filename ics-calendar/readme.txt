@@ -5,7 +5,7 @@ Tags: iCalendar, Google Calendar, Office 365, events, ICS feed
 Requires at least: 4.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 12.0.7
+Stable tag: 12.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,17 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.0.8 - 2026.05.05 =
+
+* Updated `ua` parameter to support a value of `append`. Set `ua="true"` to _replace_ ICS Calendar's custom User Agent string with a "real" web browser UA string. Set `ua="append"` to _append_ a real web browser UA string to the default ICS Calendar UA string. You can also enter custom text as the value for `ua` and that exact string will be sent as the UA string with requests. _Note: This parameter is intended for use only when source calendars reject requests with the default UA string._
+* Additional changes to `template_redirect` handling to resolve a conflict with the [Permalink Manager](https://wordpress.org/plugins/permalink-manager/) plugin. (Expands upon changes introduced in 12.0.7.1.)
+
+= 12.0.7.1 - 2026.04.29 =
+
+* Added `r34ics_get_vtimezone()` function for generating iCalendar `VTIMEZONE` data including Daylight Saving Time start/end rules. Intended to be used by functions and methods that output new .ics files.
+* Changed priority for call to `template_redirect` hook (used for individual event .ics downloads and printing calendars) to resolve a conflict with the [Permalink Manager](https://wordpress.org/plugins/permalink-manager/) plugin.
+* Updated individual event download .ics format to include `VTIMEZONE` and remove `FREEBUSY`, to resolve issues importing events into Google Calendar.
 
 = 12.0.7 - 2026.04.27 =
 

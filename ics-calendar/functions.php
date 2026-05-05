@@ -836,6 +836,92 @@ function r34ics_get_ics_data($args) {
 }
 
 
+// Get DST transition rules for a given timezone, converted into iCalendar VTIMEZONE format
+// @todo It would be great to use RRULE instead of iterating each individual transition
+function r34ics_get_vtimezone($tz=null, $range='10 years') {
+	// Sanitize
+	$range = trim(wp_strip_all_tags($range));
+	// Convert $tz to DateTimeZone object if applicable
+	if (!empty($tz) && is_string($tz)) {
+		try { $tz = new DateTimeZone($tz); }
+		// If $tz is not a valid timezone, set it null; default logic follows
+		catch (Exception $e) { $tz = null; }
+	}
+	// Set default timezone if null
+	if (empty($tz)) { global $R34ICS; $tz = $R34ICS->tz; }
+	// Get the transitions
+	$tz_transitions = $tz->getTransitions(r34ics_date('U', '-' . $range), r34ics_date('U', '+' . $range));
+	// Build iCalendar VTIMEZONE array
+	$vtimezone = [];
+	$vtimezone[] = 'BEGIN:VTIMEZONE';
+	$vtimezone[] = 'TZID:' . $tz->getName();
+	foreach ((array)$tz_transitions as $key => $item) {
+		// First one is scratch (it's just going to be exactly $range before now)
+		if ($key == 0) { $prev = $item; continue; }
+		$d_or_s = ($item['isdst'] == 1) ? 'DAYLIGHT' : 'STANDARD';
+		// Get offset to
+		$offset_to = intval($item['offset']);
+		$offset_to_h = floor($offset_to / (60 * 60));
+		$offset_to_m = floor(($offset_to - ($offset_to_h * (60 * 60))) / 60);
+		$offset_to_formatted = ($offset_to_h < 0 ? '-' : '+') . // +/- relative to UTC
+			($offset_to_h < 10 ? '0' : '') . abs($offset_to_h) . // hour offset
+			($offset_to_m < 10 ? '0' : '') . abs($offset_to_m); // minute offset
+		// Get offset from
+		$offset_from = intval($prev['offset']);
+		$offset_from_h = floor($offset_from / (60 * 60));
+		$offset_from_m = floor(($offset_from - ($offset_from_h * (60 * 60))) / 60);
+		$offset_from_formatted = ($offset_from_h < 0 ? '-' : '+') . // +/- relative to UTC
+			($offset_from_h < 10 ? '0' : '') . abs($offset_from_h) . // hour offset
+			($offset_from_m < 10 ? '0' : '') . abs($offset_from_m); // minute offset
+		// Get offset difference (for further calculations)
+		$offset_diff = $offset_from - $offset_to;
+		// Get the start date/time, accounting for date function being DST-aware
+		if (!$item['isdst']) {
+			$dtstart = r34ics_date('Ymd\THis', $item['time'], $tz->getName(), $offset_diff . ' seconds');
+		}
+		/**
+		 * OK, so here's the maddening bit. If we're entering DST, we can't just use the
+		 * above formula with '-1 hour', because the function automatically adjusts the time
+		 * for DST. In other words, the time at which DST goes into effect DOESN'T EXIST.
+		 * If DST starts at 2 AM, the formula without an offset returns 3 AM. If we then
+		 * subtract 1 hour, it returns 1 AM, not 2 AM, because it's accounting for DST.
+		 *
+		 * So, we need to manipulate the string after the fact. ¯\_(ツ)_/¯
+		 *
+		 * @todo This is pretty kludgy right now. Refactor this section once I'm over the
+		 * initial frustration of having to do it at all!
+		 */
+		else {
+			$dtstart = r34ics_date('Ymd\THis', $item['time'], $tz->getName());
+			// Change the time portion of $dtstart by the amount of the offset
+			$offset_h = floor($offset_diff / (60 * 60));
+			$offset_m = floor(($offset_diff - ($offset_h * (60 * 60))) / 60);
+			if (!empty($offset_h)) {
+				$dtstart_h = intval(substr($dtstart, 9, 2));
+				$dtstart_h_new = $dtstart_h + $offset_h;
+				if (strlen($dtstart_h_new) == 1) { $dtstart_h_new = '0' . $dtstart_h_new; }
+				$dtstart = substr($dtstart, 0, 9) . $dtstart_h_new . substr($dtstart, 11);
+			}
+			if (!empty($offset_m)) {
+				$dtstart_m = intval(substr($dtstart, 11, 2));
+				$dtstart_m_new = $dtstart_m + $offset_m;
+				if (strlen($dtstart_m_new) == 1) { $dtstart_m_new = '0' . $dtstart_m_new; }
+				$dtstart = substr($dtstart, 0, 11) . $dtstart_m_new . substr($dtstart, 13);
+			}
+		}
+		$vtimezone[] = 'BEGIN:' . $d_or_s; // DAYLIGHT or STANDARD
+		$vtimezone[] = 'DTSTART:' . $dtstart;
+		$vtimezone[] = 'TZOFFSETFROM:' . $offset_from_formatted;
+		$vtimezone[] = 'TZOFFSETTO:' . $offset_to_formatted;
+		$vtimezone[] = 'TZNAME:' . $item['abbr'];
+		$vtimezone[] = 'END:' . $d_or_s; // DAYLIGHT or STANDARD
+		$prev = $item;
+	}
+	$vtimezone[] = 'END:VTIMEZONE';
+	return $vtimezone;
+}
+
+
 // Determine whether or not event has details to be displayed (in .descloc)
 function r34ics_has_desc($args, $event) {
 	global $R34ICS;

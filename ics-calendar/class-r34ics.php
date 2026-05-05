@@ -238,7 +238,8 @@ if (!class_exists('R34ICS')) {
 	
 			// Miscellaneous core WP actions
 			add_action('post_updated', array(&$this, 'post_updated'), 10, 3);
-			add_action('template_redirect', array(&$this, 'template_redirect'), 10, 0);
+			// Priority is set low to resolve a conflict with Permalink Manager plugin
+			add_action('template_redirect', array(&$this, 'template_redirect'), -1, 0);
 			
 			// Miscellaneous core WP filters
 			add_filter('http_request_host_is_external', array(&$this, 'http_request_host_is_external'), 10, 3);
@@ -2103,6 +2104,11 @@ if (!class_exists('R34ICS')) {
 					),
 				'tz' => $tz,
 				'ua' => (
+					/**
+					 * Note: As of 12.0.8 "append" is an accepted value, handled in the
+					 * R34ICS::_url_get_contents() method. Retaining strlen() limit of 5 ensures
+					 * existing "true"/"false" logic for r34ics_boolean_check() is supported.
+					 */
 					(!empty($ua) && strlen($ua) > 5)
 						? trim(wp_strip_all_tags($ua))
 						: r34ics_boolean_check($ua)
@@ -2228,14 +2234,17 @@ if (!class_exists('R34ICS')) {
 	
 	
 		public function template_redirect() {
-		
+			global $wp_query;
+			
 			// Individual event ICS download
 			if (get_query_var('r34ics-urlids') && get_query_var('r34ics-uid')) {
+				$wp_query->query_vars['do_not_redirect'] = 1; // Workaround for Permalink Manager plugin
 				$this->_event_ics_download();
 			}
 			
 			// Print view
 			if (get_query_var('r34ics-print')) {
+				$wp_query->query_vars['do_not_redirect'] = 1; // Workaround for Permalink Manager plugin
 				$this->_print_calendar();
 			}
 	
@@ -2818,6 +2827,7 @@ if (!class_exists('R34ICS')) {
 						$content[] = 'BEGIN:VCALENDAR';
 						$content[] = 'PRODID:-//Room 34 Creative Services LLC//ICS Calendar ' . get_option('r34ics_version') . '//' . strtoupper(substr(get_locale(),0,2));
 						$content[] = 'VERSION:2.0';
+						$content = array_merge($content, r34ics_get_vtimezone($event_item->dtstart_array[0]['TZID']));
 						$content[] = 'BEGIN:VEVENT';
 						if ($event_item->attach) { $content[] = 'ATTACH:' . r34ics_maybe_enfold($event_item->attach, 7); }
 						if ($event_item->categories) { $content[] = 'CATEGORIES:' . r34ics_maybe_enfold($event_item->categories, 11); }
@@ -2825,16 +2835,18 @@ if (!class_exists('R34ICS')) {
 						if ($event_item->created) { $content[] = 'CREATED:' . $event_item->created; }
 						if ($event_item->description) { $content[] = 'DESCRIPTION:' . r34ics_maybe_enfold(wp_strip_all_tags($event_item->description), 12); }
 						// As of v.12.0 we download a single instance of recurring events; $dtend is passed in
-						if ($event_item->dtend) { $content[] = 'DTEND:' . ($dtend ?? $event_item->dtend); }
+						if ($event_item->dtend) { $content[] = 'DTEND:' . ($dtend ?? $event_item->dtend_array[3]); }
 						if ($event_item->dtstamp) { $content[] = 'DTSTAMP:' . $event_item->dtstamp; }
 						// As of v.12.0 we download a single instance of recurring events; $dtstart is passed in
-						if ($event_item->dtstart) { $content[] = 'DTSTART:' . ($dtstart ?? $event_item->dtstart); }
+						if ($event_item->dtstart) { $content[] = 'DTSTART:' . ($dtstart ?? $event_item->dtstart_array[3]); }
 						if ($event_item->duration) { $content[] = 'DURATION:' . $event_item->duration; }
 						if (!empty($event_item->exdate_array)) {
 							$item_key = key($event_item->exdate_array[0]);
 							$content[] = 'EXDATE;' . $item_key . '=' . $event_item->exdate_array[0][$item_key] . ':' . implode(',', (array)$event_item->exdate_array[1]);
 						}
+						/* @todo This seems to break Google Calendar imports... is it being used incorrectly?
 						if ($event_item->freebusy) { $content[] = 'FREEBUSY:' . $event_item->freebusy; }
+						*/
 						if ($event_item->geo) { $content[] = 'GEO:' . $event_item->geo; }
 						if ($event_item->last_modified) { $content[] = 'LAST-MODIFIED:' . $event_item->last_modified; }
 						if ($event_item->location) { $content[] = 'LOCATION:' . r34ics_maybe_enfold($event_item->location, 9); }
@@ -3149,10 +3161,14 @@ if (!class_exists('R34ICS')) {
 
 			// Allow user agent override
 			if (!empty($ua)) {
-				switch (gettype($ua)) {
-					case 'string': $user_agent = trim(wp_strip_all_tags($ua)); break; // Custom UA string provided
-					case 'boolean': case 'integer': $user_agent = $user_agent_real; break; // Use our "real" UA string
-					default: break;
+				if ($ua == 'append') {
+					$user_agent .= ' ' . $user_agent_real;
+				}
+				elseif (gettype($ua) == 'string' && strlen($ua) > 1) {
+					$user_agent = trim(wp_strip_all_tags($ua));
+				}
+				else {
+					$user_agent = $user_agent_real;
 				}
 			}
 			/**
@@ -3441,11 +3457,23 @@ if (!class_exists('R34ICS')) {
 			$url_contents = null;
 			$curl_response_code = null;
 			$curl_redirect_url = null;
-			$user_agent_ics = 'WordPress/' . get_bloginfo('version') . ' ICS Calendar/' . $this->_get_version() . ' (' . get_bloginfo('url') . ')';
+			// Set user agent string
+			$user_agent = 'WordPress/' . get_bloginfo('version') . ' ICS Calendar/' . $this->_get_version() . ' (' . get_bloginfo('url') . ')';
 			// Set a "real" user agent string (Windows 10/11 / Microsoft Edge)
 			$user_agent_real = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0';
-			$user_agent = (is_array($curlopts) && in_array('useragent', $curlopts)) ? $user_agent_real : $user_agent_ics;
 
+			// Allow user agent override
+			if (!empty($ua)) {
+				if ($ua == 'append') {
+					$user_agent .= ' ' . $user_agent_real;
+				}
+				elseif (gettype($ua) == 'string' && strlen($ua) > 1) {
+					$user_agent = trim(wp_strip_all_tags($ua));
+				}
+				else {
+					$user_agent = $user_agent_real;
+				}
+			}
 			/**
 			 * As of August 2025, Microsoft 365 does a browser sniff on ICS feed requests;
 			 * appending the "real" user agent string to ours passes the test, while still
