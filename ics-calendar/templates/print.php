@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) { exit; }
 </head>
 <body <?php body_class('r34ics-print-calendar'); ?>>
 
-<div>
+<div class="r34ics-print-wrapper">
 	<div<?php
 	foreach ((array)$r34ics_print as $key => $value) {
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

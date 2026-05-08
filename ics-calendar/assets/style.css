@@ -1053,8 +1053,10 @@ button:not(.components-button):not([role=presentation]).r34ics_event_ics_downloa
 	width: 20px;
 }
 
-/* Screen: body.r34ics-print-calendar for accurate preview; these settings are repeated in @media print without body.r34ics-print-calendar */
-body.r34ics-print-calendar { margin: 3rem; }
+/* Screen: body.r34ics-print-calendar for accurate preview; most settings are repeated in @media print without body.r34ics-print-calendar */
+
+/* Note: max-width seems to adapt reliably for print, whereas width does not */
+body.r34ics-print-calendar { margin: 1cm; max-width: calc(100vw - 2cm); }
 body.r34ics-print-calendar .r34ics-print-button-wrapper { display: none !important; }
 
 body.r34ics-print-calendar .ics-calendar {

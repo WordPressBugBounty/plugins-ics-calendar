@@ -124,6 +124,7 @@ if (!class_exists('R34ICS')) {
 			'reload' => false,
 			'resources' => false,
 			'reverse' => false,
+			'r34icsym' => null, // Ym formatted date integer; never set in shortcode; mostly used in JavaScript
 			'sametab' => 'local',
 			'showendtimes' => false,
 			'skip' => 0,
@@ -1664,7 +1665,7 @@ if (!class_exists('R34ICS')) {
 		
 		public function print_button_html($args) {
 			$atts = $this->_ajax_container_attributes($args);
-			echo '<div class="r34ics-print-button-wrapper"><a href="' . esc_url(home_url('/?r34ics-print=' . rawurlencode(json_encode($atts)))) . '" data-href="' . esc_url(home_url('/?r34ics-print=' . rawurlencode(json_encode($atts)))) . '" class="button print" target="_blank" title="' . esc_attr__('Print', 'ics-calendar') . '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M128 128C128 92.7 156.7 64 192 64L405.5 64C422.5 64 438.8 70.7 450.8 82.7L493.3 125.2C505.3 137.2 512 153.5 512 170.5L512 208L128 208L128 128zM64 320C64 284.7 92.7 256 128 256L512 256C547.3 256 576 284.7 576 320L576 416C576 433.7 561.7 448 544 448L512 448L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 448L96 448C78.3 448 64 433.7 64 416L64 320zM192 480L192 512L448 512L448 416L192 416L192 480zM520 336C520 322.7 509.3 312 496 312C482.7 312 472 322.7 472 336C472 349.3 482.7 360 496 360C509.3 360 520 349.3 520 336z" fill="currentColor"/></svg></a></div>';
+			return '<div class="r34ics-print-button-wrapper"><a href="' . esc_url(home_url('/?r34ics-print=' . rawurlencode(json_encode($atts)))) . '" data-href="' . esc_url(home_url('/?r34ics-print=' . rawurlencode(json_encode($atts)))) . '" class="button print" target="_blank" title="' . esc_attr__('Print', 'ics-calendar') . '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M128 128C128 92.7 156.7 64 192 64L405.5 64C422.5 64 438.8 70.7 450.8 82.7L493.3 125.2C505.3 137.2 512 153.5 512 170.5L512 208L128 208L128 128zM64 320C64 284.7 92.7 256 128 256L512 256C547.3 256 576 284.7 576 320L576 416C576 433.7 561.7 448 544 448L512 448L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 448L96 448C78.3 448 64 433.7 64 416L64 320zM192 480L192 512L448 512L448 416L192 416L192 480zM520 336C520 322.7 509.3 312 496 312C482.7 312 472 322.7 472 336C472 349.3 482.7 360 496 360C509.3 360 520 349.3 520 336z" fill="currentColor"/></svg></a></div>';
 		}
 		
 		
@@ -1677,6 +1678,7 @@ if (!class_exists('R34ICS')) {
 			$qvars[] = 'r34ics-print-selected';
 			$qvars[] = 'r34ics-uid';
 			$qvars[] = 'r34ics-urlids';
+			$qvars[] = 'r34icsym';
 			return $qvars;
 		}
 		
@@ -2072,6 +2074,7 @@ if (!class_exists('R34ICS')) {
 				'reload' => r34ics_reload_check($reload, $debug),
 				'resources' => r34ics_boolean_check($resources),
 				'reverse' => (in_array(strtolower($view), (array)$this->get_list_style_views()) && r34ics_boolean_check($reverse)),
+				'r34icsym' => !empty($r34icsym) ? intval($r34icsym) : null,
 				'sametab' => (
 					in_array(strtolower($sametab), array('local','all','none'))
 						? strtolower($sametab)
@@ -2914,6 +2917,9 @@ if (!class_exists('R34ICS')) {
 		
 		protected function _print_calendar() {
 			$r34ics_print = json_decode(sanitize_text_field(wp_unslash(get_query_var('r34ics-print'))), true);
+			if (!empty(get_query_var('r34icsym'))) {
+				$r34ics_print['data-r34icsym'] = sanitize_text_field(wp_unslash(get_query_var('r34icsym')));
+			}
 			$r34ics_print_selected = sanitize_text_field(wp_unslash(get_query_var('r34ics-print-selected')));
 			include_once(plugin_dir_path(__FILE__) . 'templates/print.php');
 			exit;

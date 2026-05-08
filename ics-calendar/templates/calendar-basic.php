@@ -74,7 +74,7 @@ else {
 	
 		// Print
 		if (!empty($args['print'])) {
-			echo wp_kses_post($R34ICS->print_button_html($args));
+			echo wp_kses($R34ICS->print_button_html($args), r34ics_color_key_allowed());
 		}
 
 		// Pagination HTML

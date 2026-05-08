@@ -1,5 +1,11 @@
 === ICS Calendar Changelog ===
 
+= 12.0.8.1 - 2026.05.08 =
+
+* Print Button:
+	* Changed CSS `margin` and `max-width` to allow for 1 cm margin on paper.
+  * Fixed "PHP Deprecated: preg_replace(): Passing null to parameter #3" notice relating to use of `wp_kses_post()` function.
+
 = 12.0.8 - 2026.05.05 =
 
 * Updated `ua` parameter to support a value of `append`. Set `ua="true"` to _replace_ ICS Calendar's custom User Agent string with a "real" web browser UA string. Set `ua="append"` to _append_ a real web browser UA string to the default ICS Calendar UA string. You can also enter custom text as the value for `ua` and that exact string will be sent as the UA string with requests. _Note: This parameter is intended for use only when source calendars reject requests with the default UA string._
