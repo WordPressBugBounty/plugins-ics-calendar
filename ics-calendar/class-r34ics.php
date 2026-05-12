@@ -193,6 +193,9 @@ if (!class_exists('R34ICS')) {
 			// Enqueue admin scripts
 			add_action('admin_enqueue_scripts', array(&$this, 'admin_enqueue_scripts'));
 			
+			// Update locale
+			add_action('admin_init', array(&$this, 'maybe_update_locale'));
+
 			// Set up admin menu
 			add_action('admin_menu', array(&$this, 'admin_menu'));
 			
@@ -208,9 +211,9 @@ if (!class_exists('R34ICS')) {
 
 			// Customizer			
 			add_action('init', array(&$this, 'maybe_register_customizer'));
-
-			// Update locale
-			add_action('admin_init', array(&$this, 'maybe_update_locale'));
+			
+			// Resolve plugin conflicts
+			add_action('init', array(&$this, 'resolve_conflicts'));
 
 			// WP settings
 			add_action('init', array(&$this, 'wp_settings'));
@@ -239,7 +242,7 @@ if (!class_exists('R34ICS')) {
 	
 			// Miscellaneous core WP actions
 			add_action('post_updated', array(&$this, 'post_updated'), 10, 3);
-			// Priority is set low to resolve a conflict with Permalink Manager plugin
+			// Priority is set low to resolve potential plugin conflicts
 			add_action('template_redirect', array(&$this, 'template_redirect'), -1, 0);
 			
 			// Miscellaneous core WP filters
@@ -1888,6 +1891,20 @@ if (!class_exists('R34ICS')) {
 			// Set enqueued indicator
 			$this->scripts_registered = true;
 		}
+		
+		
+		public function resolve_conflicts() {
+			// Note: Don't bother checking for an active plugin if it's a custom hook!
+			// Plugin: Permalink Manager -- https://wordpress.org/plugins/permalink-manager/
+			add_filter('permalink_manager_filter_query', array(@$this, 'resolve_conflicts_callback_permalink_manager_filter_query'), 3, 2);
+			// Make this extensible
+			do_action('r34ics_resolve_conflicts');
+		}
+		// Callbacks for resolve_conflicts() method
+		// Plugin: Permalink Manager -- https://wordpress.org/plugins/permalink-manager/
+		public function resolve_conflicts_callback_permalink_manager_filter_query($query=false, $old_query=false) {
+			return (get_query_var('r34ics-uid') || get_query_var('r34ics-print')) ? $old_query : $query;
+		}
 	
 		
 		// See: https://wordpress.org/support/topic/problem-with-wp_kses/#post-15293378
@@ -2074,7 +2091,7 @@ if (!class_exists('R34ICS')) {
 				'reload' => r34ics_reload_check($reload, $debug),
 				'resources' => r34ics_boolean_check($resources),
 				'reverse' => (in_array(strtolower($view), (array)$this->get_list_style_views()) && r34ics_boolean_check($reverse)),
-				'r34icsym' => !empty($r34icsym) ? intval($r34icsym) : null,
+				'r34icsym' => !empty($r34icsym) ? intval($r34icsym) : r34ics_date('Ym'),
 				'sametab' => (
 					in_array(strtolower($sametab), array('local','all','none'))
 						? strtolower($sametab)
@@ -2237,17 +2254,14 @@ if (!class_exists('R34ICS')) {
 	
 	
 		public function template_redirect() {
-			global $wp_query;
 			
 			// Individual event ICS download
 			if (get_query_var('r34ics-urlids') && get_query_var('r34ics-uid')) {
-				$wp_query->query_vars['do_not_redirect'] = 1; // Workaround for Permalink Manager plugin
 				$this->_event_ics_download();
 			}
 			
 			// Print view
 			if (get_query_var('r34ics-print')) {
-				$wp_query->query_vars['do_not_redirect'] = 1; // Workaround for Permalink Manager plugin
 				$this->_print_calendar();
 			}
 	
@@ -2612,12 +2626,14 @@ if (!class_exists('R34ICS')) {
 			// Assemble array of attributes
 			return array(
 				'class' => 'r34ics-ajax-container loading',
-				'id' => $args['guid'] ?: '',
-				'data-view' => $args['view'] ?: '',
-				'data-view-is-list-style' => $is_list_style,
-				'data-view-is-list-long' => $is_list_long,
 				'data-args' => $args['ajax_key'],
 				'data-js-args' => wp_json_encode($js_args),
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				'data-r34icsym' => intval($_GET['r34icsym'] ?? r34ics_date('Ym')),
+				'data-view-is-list-long' => $is_list_long,
+				'data-view-is-list-style' => $is_list_style,
+				'data-view' => $args['view'] ?: '',
+				'id' => $args['guid'] ?: '',
 			);
 		}
 

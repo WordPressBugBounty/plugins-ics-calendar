@@ -1,5 +1,15 @@
 === ICS Calendar Changelog ===
 
+= 12.0.8.2 - 2026.05.11 =
+
+* Plugin conflicts:
+  * Added `r34ics_resolve_conflicts` action to allow for extensible conflict resolution.
+  * Replaced experimental workarounds for conflict with [Permalink Manager](https://wordpress.org/plugins/permalink-manager/) and with code supplied by the developer of that plugin.
+* Shortcode parameters:
+  * Continued development of enhanced capabilities for `r34icsym` shortcode parameter. This is mainly used by Full view in ICS Calendar Pro at present, but it will be used to refactor how this query string variable is used to dynamically request a specific date range in all views in a future update.
+* Miscellaneous:
+  * Minor code refactoring.
+
 = 12.0.8.1 - 2026.05.08 =
 
 * Print Button:
