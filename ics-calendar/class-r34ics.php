@@ -125,6 +125,7 @@ if (!class_exists('R34ICS')) {
 			'resources' => false,
 			'reverse' => false,
 			'r34icsym' => null, // Ym formatted date integer; never set in shortcode; mostly used in JavaScript
+			'r34icsymd' => null, // Ymd formatted date integer; never set in shortcode; mostly used in JavaScript
 			'sametab' => 'local',
 			'showendtimes' => false,
 			'skip' => 0,
@@ -1682,6 +1683,7 @@ if (!class_exists('R34ICS')) {
 			$qvars[] = 'r34ics-uid';
 			$qvars[] = 'r34ics-urlids';
 			$qvars[] = 'r34icsym';
+			$qvars[] = 'r34icsymd';
 			return $qvars;
 		}
 		
@@ -2092,6 +2094,7 @@ if (!class_exists('R34ICS')) {
 				'resources' => r34ics_boolean_check($resources),
 				'reverse' => (in_array(strtolower($view), (array)$this->get_list_style_views()) && r34ics_boolean_check($reverse)),
 				'r34icsym' => !empty($r34icsym) ? intval($r34icsym) : r34ics_date('Ym'),
+				'r34icsymd' => !empty($r34icsymd) ? intval($r34icsymd) : r34ics_date('Ymd'),
 				'sametab' => (
 					in_array(strtolower($sametab), array('local','all','none'))
 						? strtolower($sametab)
@@ -2630,6 +2633,7 @@ if (!class_exists('R34ICS')) {
 				'data-js-args' => wp_json_encode($js_args),
 				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 				'data-r34icsym' => intval($_GET['r34icsym'] ?? r34ics_date('Ym')),
+				'data-r34icsymd' => intval($_GET['r34icsymd'] ?? r34ics_date('Ymd')),
 				'data-view-is-list-long' => $is_list_long,
 				'data-view-is-list-style' => $is_list_style,
 				'data-view' => $args['view'] ?: '',
@@ -2935,6 +2939,9 @@ if (!class_exists('R34ICS')) {
 			$r34ics_print = json_decode(sanitize_text_field(wp_unslash(get_query_var('r34ics-print'))), true);
 			if (!empty(get_query_var('r34icsym'))) {
 				$r34ics_print['data-r34icsym'] = sanitize_text_field(wp_unslash(get_query_var('r34icsym')));
+			}
+			if (!empty(get_query_var('r34icsymd'))) {
+				$r34ics_print['data-r34icsymd'] = sanitize_text_field(wp_unslash(get_query_var('r34icsymd')));
 			}
 			$r34ics_print_selected = sanitize_text_field(wp_unslash(get_query_var('r34ics-print-selected')));
 			include_once(plugin_dir_path(__FILE__) . 'templates/print.php');

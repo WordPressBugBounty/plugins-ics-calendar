@@ -1,5 +1,10 @@
 === ICS Calendar Changelog ===
 
+= 12.0.8.3 - 2026.05.15 =
+
+* Introduced `r34icsymd` parameter to function similarly to `r34icsym` but including the date along with the year and month. This is part of an ongoing process of updating how `r34icsym` functions for loading calendar pages with an arbitrary date displayed. Presently this is used exclusively by ICS Calendar Pro Full view.
+* Updated tags for Plugin Directory.
+
 = 12.0.8.2 - 2026.05.11 =
 
 * Plugin conflicts:
