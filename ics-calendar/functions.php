@@ -757,7 +757,21 @@ function r34ics_feed_colors_css($ics_data, $padding=false, $hover=false) {
  */
 function r34ics_filter_the_content($str='') {
 	$str = (string)$str; // Avoid PHP 8.1 "Passing null to parameter" deprecation notice
-	return trim(wpautop(convert_chars(wptexturize($str))));
+	$output = trim(wpautop(convert_chars(wptexturize($str))));
+	// Strip tags if the result is not valid HTML
+	/**
+	 * Note: This is rudimentary at this point, just making sure we have the same number
+	 * of < and > characters. This specifically resolves an issue where HTML code in event
+	 * descriptions may get truncated mid-tag.
+	 */
+	if (strpos($output, '<') !== false || strpos($output, '>') !== false) {
+		$char_count = count_chars($output, 1);
+		// < is ASCII char 60; > is 62
+		if ($char_count[60] != $char_count[62]) {
+			$output = wp_strip_all_tags($output);
+		}
+	}
+	return $output;
 }
 
 
@@ -849,6 +863,9 @@ function r34ics_get_vtimezone($tz=null, $range='10 years') {
 	}
 	// Set default timezone if null
 	if (empty($tz)) { global $R34ICS; $tz = $R34ICS->tz; }
+	// Bail out to prevent a fatal error if $tz isn't a valid DateTimeZone object
+	// @todo Seems to be related to the site not having a timezone set, or set to UTC offset; investigate further
+	if (!is_object($tz) || !method_exists($tz, 'getTransitions')) { return []; }
 	// Get the transitions
 	$tz_transitions = $tz->getTransitions(r34ics_date('U', '-' . $range), r34ics_date('U', '+' . $range));
 	// Build iCalendar VTIMEZONE array

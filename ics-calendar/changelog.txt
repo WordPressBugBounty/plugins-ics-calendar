@@ -1,5 +1,10 @@
 === ICS Calendar Changelog ===
 
+= 12.0.8.4 - 2026.05.19 =
+
+* Added a safeguard in `r34ics_get_vtimezone()` to prevent a fatal error if the site does not have a valid region/city name timezone set.
+* Modified `r34ics_filter_the_content()` (used by the `R34ICS::event_description_html()` method to prepare event description HTML output) to address a situation where the ICS feed includes an event description containing HTML that has been truncated in the middle of a tag. Previously, this would cause an HTML syntax error that would prevent the rest of the page from rendering properly, starting at the point of the error. Added a simple check for a matching number of greater-than and less-than symbols in the content. (This is not full HTML validation, but it addresses the most egregious scenario that breaks rendering.) If the function detects a mismatch, all HTML is stripped from the output.
+
 = 12.0.8.3 - 2026.05.15 =
 
 * Introduced `r34icsymd` parameter to function similarly to `r34icsym` but including the date along with the year and month. This is part of an ongoing process of updating how `r34icsym` functions for loading calendar pages with an arbitrary date displayed. Presently this is used exclusively by ICS Calendar Pro Full view.

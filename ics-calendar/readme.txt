@@ -1,11 +1,11 @@
 === ICS Calendar ===
 Contributors: room34
 Donate link: https://icscalendar.com
-Tags: calendar, Google Calendar, Microsoft Outlook, events, ICS
+Tags: calendar, Google, Microsoft, events, ICS
 Requires at least: 4.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 12.0.8.3
+Stable tag: 12.0.8.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,11 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.0.8.4 - 2026.05.19 =
+
+* Added a safeguard in `r34ics_get_vtimezone()` to prevent a fatal error if the site does not have a valid region/city name timezone set.
+* Modified `r34ics_filter_the_content()` (used by the `R34ICS::event_description_html()` method to prepare event description HTML output) to address a situation where the ICS feed includes an event description containing HTML that has been truncated in the middle of a tag. Previously, this would cause an HTML syntax error that would prevent the rest of the page from rendering properly, starting at the point of the error. Added a simple check for a matching number of greater-than and less-than symbols in the content. (This is not full HTML validation, but it addresses the most egregious scenario that breaks rendering.) If the function detects a mismatch, all HTML is stripped from the output.
 
 = 12.0.8.3 - 2026.05.15 =
 
