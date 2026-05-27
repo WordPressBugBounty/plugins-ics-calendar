@@ -1,5 +1,11 @@
 === ICS Calendar Changelog ===
 
+= 12.0.8.5 - 2026.05.27 =
+
+* Added support for custom ICS Calendar properties in the feed, using the `X-R34ICS-` prefix.
+* Changed default value for `SEQUENCE` from an empty string to 0 when parsing events from the feed.
+* Updated admin notice handling, including making UTC timezone notice non-dismissible.
+
 = 12.0.8.4 - 2026.05.19 =
 
 * Added a safeguard in `r34ics_get_vtimezone()` to prevent a fatal error if the site does not have a valid region/city name timezone set.

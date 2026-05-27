@@ -299,6 +299,7 @@ if (!class_exists('R34ICS')) {
 						'options-general',
 						'toplevel_page_ics-calendar',
 						'r34icspro_calendar_page_ics-calendar-pro-settings', // Pro version only
+						'r34icspro_event_page_ics-events-calendar-view', // Pro version only
 					)) ||
 					strpos($current_screen->post_type, 'r34ics') !== false // Pro version only
 				)
@@ -333,7 +334,7 @@ if (!class_exists('R34ICS')) {
 					$r34ics_deferred_admin_notices['r34ics_timezone_utc'] = array(
 						'content' => '<p>' . sprintf(esc_html__('%1$sYour site is currently using a UTC offset-based timezone setting.%2$s This can produce time display errors in the %3$s plugin in locations that observe Daylight Saving Time. Please %4$schange your timezone setting%5$s to the city nearest your location, in the same timezone, for proper time display. See our %6$sdocumentation%7$s for additional information on this issue.', 'ics-calendar'), '<strong>', '</strong>', '<strong>ICS Calendar</strong>', '<a href="' . admin_url('options-general.php#timezone_string') . '">', '</a>', '<a href="https://icscalendar.com/general-wordpress-settings/#timezone" target="_blank">', '</a>') . '</p>',
 						'status' => 'error',
-						'dismissible' => 1,
+						'dismissible' => false,
 					);
 				}
 				
@@ -912,7 +913,7 @@ if (!class_exists('R34ICS')) {
 								'resources' => ($event->resources ?: ''),
 								'rrule' => ($event->rrule ?: ''),
 								'rdate' => ($event->rdate ?: ''),
-								'sequence' => ($event->sequence ?: ''),
+								'sequence' => (intval($event->sequence) ?: 0),
 								'status' => ($event->status ?: ''),
 								'transp' => ($event->transp ?: ''),
 								'tz_start' => (!empty($args['eventlocaltime']) ? ($event->dtstart_array[0]['TZID'] ?? $url_tz) : $url_tz),
@@ -920,6 +921,13 @@ if (!class_exists('R34ICS')) {
 								'uid' => ($event->uid ?: ''),
 								'url' => empty($args['nolink']) ? ($event->url ?? ($event->uri ?: '')) : '',
 							);
+							
+							// Custom ICS Calendar fields
+							foreach ((object)$event->additionalProperties as $key => $value) {
+								if (strpos($key, 'x_r34ics') === 0 && strpos($key, '_array') === false) {
+									$event_item[$key] = $event->{$key};
+								}
+							}
 							
 							// Scrape a URL from the description
 							if (empty($args['nolink']) && empty($event_item['url']) && !empty($event->description)) {
@@ -2631,9 +2639,10 @@ if (!class_exists('R34ICS')) {
 				'class' => 'r34ics-ajax-container loading',
 				'data-args' => $args['ajax_key'],
 				'data-js-args' => wp_json_encode($js_args),
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				// phpcs:disable WordPress.Security.NonceVerification.Recommended
 				'data-r34icsym' => intval($_GET['r34icsym'] ?? r34ics_date('Ym')),
 				'data-r34icsymd' => intval($_GET['r34icsymd'] ?? r34ics_date('Ymd')),
+				// phpcs:enable WordPress.Security.NonceVerification.Recommended
 				'data-view-is-list-long' => $is_list_long,
 				'data-view-is-list-style' => $is_list_style,
 				'data-view' => $args['view'] ?: '',
