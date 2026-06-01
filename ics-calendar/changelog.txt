@@ -1,5 +1,11 @@
 === ICS Calendar Changelog ===
 
+= 12.0.8.6 - 2026.05.29
+
+* Fixed bug that caused "Welcome to version 12.0" message to reappear with each update.
+* Fixed potential fatal error with debug mode on AJAX loading.
+* Modified logic to prevent auto-redirect to ICS Calendar admin page on update/activation, so it will only run on the first activation after installation.
+
 = 12.0.8.5 - 2026.05.27 =
 
 * Added support for custom ICS Calendar properties in the feed, using the `X-R34ICS-` prefix.

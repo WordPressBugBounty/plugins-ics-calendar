@@ -5,7 +5,7 @@ Tags: calendar, Google, Microsoft, events, ICS
 Requires at least: 4.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 12.0.8.5
+Stable tag: 12.0.8.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,12 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.0.8.6 - 2026.05.29
+
+* Fixed bug that caused "Welcome to version 12.0" message to reappear with each update.
+* Fixed potential fatal error with debug mode on AJAX loading.
+* Modified logic to prevent auto-redirect to ICS Calendar admin page on update/activation, so it will only run on the first activation after installation.
 
 = 12.0.8.5 - 2026.05.27 =
 

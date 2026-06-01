@@ -415,7 +415,7 @@ if (!class_exists('R34ICS')) {
 				}
 	
 				// Special admin notice for version 12.0
-				if (empty($previous_version) || version_compare($previous_version, '12.1', '<')) {
+				if (empty($previous_version) || version_compare($previous_version, '12.0.0', '<')) {
 					$r34ics_deferred_admin_notices['r34ics_version_12_0_announcement'] = array(
 						'content' => '<p>' .
 						sprintf(__('%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional troubleshooting tools, plus a number of performance improvements and interface refinements throughout. Please see the %4$schangelog%5$s for more details on this update.', 'ics-calendar'), '<strong style="font-size: 150%; color: var(--r34ics--color--ics-red);">', '<span style="text-transform: uppercase;">ICS Calendar</span>', '</strong><br /><br />', '<a href="https://icscalendar.com/changelog/" target="_blank">', '</a>') .

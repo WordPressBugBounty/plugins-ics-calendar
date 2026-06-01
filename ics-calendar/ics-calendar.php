@@ -3,7 +3,7 @@
 Plugin Name: ICS Calendar
 Plugin URI: https://icscalendar.com
 Description: Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar into a seamlessly integrated, auto-updating, zero-maintenance WordPress experience.
-Version: 12.0.8.5
+Version: 12.0.8.6
 Requires at least: 4.9
 Requires PHP: 7.4
 Author: Room 34 Creative Services, LLC
@@ -117,14 +117,20 @@ if (!class_exists('R34ICS')) {
 		
 		// Set options for first run redirect (runs on admin_init hook, below)
 		//update_option('r34ics_admin_first_run', true, false); // Reserved for future use
-		update_option('r34ics_activation_redirect', true, false);
+		if (empty($previous_version)) {
+			update_option('r34ics_activation_redirect', true, false);
+		}
+		else {
+			update_option('r34ics_activation_redirect', false, false);
+		}
 	}
 	register_activation_hook(__FILE__, 'r34ics_install');
 	
 	// Redirect to Getting Started page with first run message
 	add_action('admin_init', function() {
 		if (get_option('r34ics_activation_redirect')) {
-			update_option('r34ics_activation_redirect', false, false); // DO NOT REMOVE THIS LINE! You'll have to manually delete the plugin to stop the redirect loops
+			// DO NOT REMOVE THIS LINE! You'll have to manually delete the plugin to stop the redirect loops
+			update_option('r34ics_activation_redirect', false, false);
 			wp_safe_redirect(admin_url('admin.php?page=ics-calendar'));
 			exit;
 		}
@@ -145,7 +151,7 @@ if (!class_exists('R34ICS')) {
 		}
 		
 		// Version-specific updates
-		// v. 6.11.1 renamed option from 'r34ics_transient_expiration' to 'r34ics_transient_expiration' so it's not a transient itself
+		// v. 6.11.1 renamed option from 'r34ics_transient_expiration' to 'r34ics_transients_expiration' so it's not a transient itself
 		if (version_compare($previous_version, '6.11.1', '<')) {
 			$transients_expiration = get_option('r34ics_transient_expiration', 3600);
 			update_option('r34ics_transients_expiration', $transients_expiration, true);

@@ -80,7 +80,7 @@ function r34ics_ajax() {
 		}
 
 		// Render debugging output
-		if (!empty($args['debug'])) {
+		if (!empty($args['debug']) && function_exists('r34ics__wp_footer_debug_output')) {
 			r34ics__wp_footer_debug_output();
 		}
 
