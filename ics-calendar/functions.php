@@ -348,7 +348,8 @@ function r34ics_colors_match_theme_json($darkmode=false, $use_default_palette=fa
 				);
 			}
 		}
-		else {
+		// Note: Plugin Check flags this even with function_exists() ... what else can be done?
+		elseif (function_exists('wp_get_global_settings')) { // Function added in WP 5.9
 			$palette = wp_get_global_settings(array('color', 'palette', 'theme')) ?: wp_get_global_settings(array('color', 'palette', 'default'));
 		}
 		if (!empty($palette)) {

@@ -47,7 +47,7 @@ if ($args['toggle'] === 'lightbox') {
 	// Title and description
 	if (!empty($ics_data['title'])) {
 		?>
-		<<?php echo esc_attr($args['htmltagtitle']); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title'] ?: ''); ?></<?php echo esc_attr($args['htmltagtitle']); ?>>
+		<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagtitle'])); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title'] ?: ''); ?></<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagtitle'])); ?>>
 		<?php
 	}
 	if (!empty($ics_data['description'])) {

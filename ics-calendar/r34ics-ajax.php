@@ -42,6 +42,10 @@ function r34ics_ajax() {
 				if ($key == 'url') {
 					$args['url'] = r34ics_url_uniqid_array_convert($args['url']);
 				}
+				// Validate customizable HTML tags
+				elseif (strpos($key, 'htmltag') === 0) {
+					$args[$key] = r34ics_allowed_heading_tags_check($value);
+				}
 				// Sanitize array values
 				elseif (is_array($value)) {
 					$args[$key] = array_map(function($v) {

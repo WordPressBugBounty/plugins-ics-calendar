@@ -45,7 +45,7 @@ else {
 	// Title and description
 	if (!empty($ics_data['title'])) {
 		?>
-		<<?php echo esc_attr($args['htmltagtitle']); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title'] ?: ''); ?></<?php echo esc_attr($args['htmltagtitle']); ?>>
+		<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagtitle'])); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title'] ?: ''); ?></<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagtitle'])); ?>>
 		<?php
 	}
 	if (!empty($ics_data['description'])) {
@@ -215,14 +215,14 @@ else {
 											if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
 											if (isset($p_i)) { echo ' data-p-i="' . intval($p_i) . '"'; }
 										?>>
-											<<?php echo esc_attr($args['htmltagdate']); ?> class="ics-calendar-date<?php if (!empty($event['multiday'])) { echo ' multiday'; } ?>"><?php echo wp_kses_post($day_label ?: ''); ?></<?php echo esc_attr($args['htmltagdate']); ?>>
+											<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagdate'])); ?> class="ics-calendar-date<?php if (!empty($event['multiday'])) { echo ' multiday'; } ?>"><?php echo wp_kses_post($day_label ?: ''); ?></<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagdate'])); ?>>
 
 											<div class="event-info">
 												<?php
 												// Event start/end times (multiday events already include time in $day_label)
 												if (empty($event['multiday']) && empty($args['hidetimes']) && !empty($event['start'])) {
 													?>
-													<<?php echo esc_attr($args['htmltagtime']); ?> class="time">
+													<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagtime'])); ?> class="time">
 														<span class="start_time"><?php echo wp_kses_post($event['start'] ?: ''); ?></span>
 														<?php
 														if (!empty($args['showendtimes']) && !empty($event['end']) && $event['end'] != $event['start']) {
@@ -231,7 +231,7 @@ else {
 															<?php
 														}
 														?>
-													</<?php echo esc_attr($args['htmltagtime']); ?>>
+													</<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagtime'])); ?>>
 													<?php
 												}
 

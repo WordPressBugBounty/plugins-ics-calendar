@@ -47,7 +47,7 @@ else {
 	// Title and description
 	if (!empty($ics_data['title'])) {
 		?>
-		<<?php echo esc_attr($args['htmltagtitle']); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title'] ?: ''); ?></<?php echo esc_attr($args['htmltagtitle']); ?>>
+		<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagtitle'])); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title'] ?: ''); ?></<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagtitle'])); ?>>
 		<?php
 	}
 	if (!empty($ics_data['description'])) {
@@ -187,13 +187,13 @@ else {
 										// Display month label if needed
 										if (empty($args['nomonthheaders']) && isset($month_label_shown) && empty($month_label_shown)) {
 											?>
-											<<?php echo esc_attr($args['htmltagmonth']); ?> class="ics-calendar-label" id="<?php echo esc_attr($month_uid); ?>"><?php echo wp_kses_post($month_label ?: ''); ?></<?php echo esc_attr($args['htmltagmonth']); ?>>
+											<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagmonth'])); ?> class="ics-calendar-label" id="<?php echo esc_attr($month_uid); ?>"><?php echo wp_kses_post($month_label ?: ''); ?></<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagmonth'])); ?>>
 											<?php
 											$month_label_shown = true;
 										}
 										?>
 										<div class="ics-calendar-date-wrapper" data-date="<?php echo esc_attr(wp_strip_all_tags($day_label)); ?>" data-dow="<?php echo esc_attr($dow); ?>" data-wknum="<?php echo esc_attr($wknum); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-events-count="1" data-feed-keys="<?php echo intval($event['feed_key']); ?>">
-											<<?php echo esc_attr($args['htmltagdate']); ?> class="ics-calendar-date" id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post($day_label ?: ''); ?></<?php echo esc_attr($args['htmltagdate']); ?>>
+											<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagdate'])); ?> class="ics-calendar-date" id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post($day_label ?: ''); ?></<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagdate'])); ?>>
 											<dl class="events" aria-labelledby="<?php echo esc_attr($day_uid); ?>">
 
 												<?php
@@ -268,7 +268,7 @@ else {
 									// Display month label if needed
 									if (empty($args['nomonthheaders']) && empty($month_label_shown)) {
 										?>
-										<<?php echo esc_attr($args['htmltagmonth']); ?> class="ics-calendar-label" id="<?php echo esc_attr($month_uid); ?>"><?php echo wp_kses_post($month_label ?: ''); ?></<?php echo esc_attr($args['htmltagmonth']); ?>>
+										<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagmonth'])); ?> class="ics-calendar-label" id="<?php echo esc_attr($month_uid); ?>"><?php echo wp_kses_post($month_label ?: ''); ?></<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagmonth'])); ?>>
 										<?php
 										$month_label_shown = true;
 									}
@@ -279,7 +279,7 @@ else {
 										$day_uid = $ics_data['guid'] . '-' . $year . $month . $day;
 										?>
 										<div class="ics-calendar-date-wrapper" data-date="<?php echo esc_attr(wp_strip_all_tags($day_label)); ?>" data-dow="<?php echo esc_attr($dow); ?>" data-wknum="<?php echo esc_attr($wknum); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-events-count="<?php echo intval($day_events_count); ?>" data-feed-keys="<?php echo esc_attr($day_feed_keys); ?>">
-											<<?php echo esc_attr($args['htmltagdate']); ?> class="ics-calendar-date" id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post($day_label ?: ''); ?></<?php echo esc_attr($args['htmltagdate']); ?>>
+											<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagdate'])); ?> class="ics-calendar-date" id="<?php echo esc_attr($day_uid); ?>"><?php echo wp_kses_post($day_label ?: ''); ?></<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagdate'])); ?>>
 											<dl class="events" aria-labelledby="<?php echo esc_attr($day_uid); ?>">
 										<?php
 										$day_label_shown = true;

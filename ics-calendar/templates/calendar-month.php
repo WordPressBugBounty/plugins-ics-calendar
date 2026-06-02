@@ -37,7 +37,7 @@ if ($args['toggle'] === 'lightbox') {
 	// Title and description
 	if (!empty($ics_data['title'])) {
 		?>
-		<<?php echo esc_attr($args['htmltagtitle']); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title'] ?: ''); ?></<?php echo esc_attr($args['htmltagtitle']); ?>>
+		<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagtitle'])); ?> class="ics-calendar-title"><?php echo wp_kses_post($ics_data['title'] ?: ''); ?></<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagtitle'])); ?>>
 		<?php
 	}
 	if (!empty($ics_data['description'])) {
@@ -113,7 +113,7 @@ if ($args['toggle'] === 'lightbox') {
 				<?php
 				if (empty($args['nomonthheaders'])) {
 					?>
-					<<?php echo esc_attr($args['htmltagmonth']); ?> class="ics-calendar-label" id="<?php echo esc_attr($month_uid); ?>"><?php echo wp_kses_post($month_label ?: ''); ?></<?php echo esc_attr($args['htmltagmonth']); ?>>
+					<<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagmonth'])); ?> class="ics-calendar-label" id="<?php echo esc_attr($month_uid); ?>"><?php echo wp_kses_post($month_label ?: ''); ?></<?php echo esc_attr(r34ics_allowed_heading_tags_check($args['htmltagmonth'])); ?>>
 					<?php
 				}
 				?>

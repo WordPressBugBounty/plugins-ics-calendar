@@ -1383,7 +1383,7 @@ if (!class_exists('R34ICS')) {
 			if (!empty($has_desc) || !empty($descloc_content)) {
 				ob_start();
 				$descloc_class = array_merge(array('descloc'), (array)$classes);
-				echo '<' . esc_attr($args['htmltageventdesc']) . ' class="' . esc_attr(implode(' ', $descloc_class)) . '">';
+				echo '<' . esc_attr(r34ics_allowed_heading_tags_check($args['htmltageventdesc'])) . ' class="' . esc_attr(implode(' ', $descloc_class)) . '">';
 				
 				// Include feed label?
 				if (
@@ -1440,7 +1440,7 @@ if (!class_exists('R34ICS')) {
 				}
 	
 				// Concatenate output and close div
-				$descloc_content = ob_get_clean() . $descloc_content . '</' . esc_attr($args['htmltageventdesc']) . '>';
+				$descloc_content = ob_get_clean() . $descloc_content . '</' . esc_attr(r34ics_allowed_heading_tags_check($args['htmltageventdesc'])) . '>';
 			}
 					
 			// Filter content
@@ -1460,7 +1460,7 @@ if (!class_exists('R34ICS')) {
 			$title_class = array_merge(array('title'), (array)$classes);
 	
 			// Build event label HTML
-			echo '<' . esc_attr($args['htmltageventtitle']) . ' tabindex="0" aria-haspopup="true" class="' . esc_attr(implode(' ', $title_class)) . '">';
+			echo '<' . esc_attr(r34ics_allowed_heading_tags_check($args['htmltageventtitle'])) . ' tabindex="0" aria-haspopup="true" class="' . esc_attr(implode(' ', $title_class)) . '">';
 			if (!empty($args['linktitles']) && empty($args['nolink']) && !empty($event['url'])) {
 				echo '<a href="' . esc_url($event['url']) . '" ' . wp_kses_post(r34ics_sametab_target($args['sametab'], $event['url']) ?: '') . '>';
 			}
@@ -1469,7 +1469,7 @@ if (!class_exists('R34ICS')) {
 				echo '</a>';
 			}
 			do_action('r34ics_event_label_html', $args, $event, $classes);
-			echo '</' . esc_attr($args['htmltageventtitle']) . '>';
+			echo '</' . esc_attr(r34ics_allowed_heading_tags_check($args['htmltageventtitle'])) . '>';
 	
 			// Append cancelled status
 			if (!empty($event['status']) && $event['status'] == 'CANCELLED') {

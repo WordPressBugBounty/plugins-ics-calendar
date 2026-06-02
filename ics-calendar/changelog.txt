@@ -1,5 +1,12 @@
 === ICS Calendar Changelog ===
 
+= 12.0.9 - 2026.06.02 =
+
+* Security:
+  * Added extra validation for `htmltag*` shortcode parameters.
+* Compatibility:
+  * Removed backwards compatibility for WordPress 4.9 (including removal of `compatibility.php` file, which replicated newer core WordPress functions required by ICS Calendar). **Minimum required WordPress version is now 5.3.**
+
 = 12.0.8.6 - 2026.05.29
 
 * Fixed bug that caused "Welcome to version 12.0" message to reappear with each update.
