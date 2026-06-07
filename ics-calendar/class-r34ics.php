@@ -2646,7 +2646,7 @@ if (!class_exists('R34ICS')) {
 				'data-view-is-list-long' => $is_list_long,
 				'data-view-is-list-style' => $is_list_style,
 				'data-view' => $args['view'] ?: '',
-				'id' => $args['guid'] ?: '',
+				'id' => ($args['guid'] ?: r34ics_uid()) . '-ajax',
 			);
 		}
 
