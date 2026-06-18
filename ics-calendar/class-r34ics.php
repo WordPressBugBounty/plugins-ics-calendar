@@ -76,6 +76,7 @@ if (!class_exists('R34ICS')) {
 			'debug' => false,
 			'description' => '',
 			'eventdesc' => false,
+			'eventdesclinkfix' => false,
 			'eventdl' => false,
 			'eventlocaltime' => false,
 			'extendmultiday' => false,
@@ -1337,13 +1338,13 @@ if (!class_exists('R34ICS')) {
 						$eventdesc_content .=
 							'<div class="descloc_toggle">' .
 								'<div class="descloc_toggle_excerpt" aria-hidden="true" title="' . esc_attr__('Click for more...', 'ics-calendar') . '">' .
-									r34ics_maybe_make_clickable(wp_trim_words($event['eventdesc'], intval($args['eventdesc']))) .
+									r34ics_maybe_make_clickable(wp_trim_words($event['eventdesc'], intval($args['eventdesc'])), $args['eventdesclinkfix']) .
 								'</div>' .
-								'<div class="descloc_toggle_full">' . r34ics_filter_the_content(r34ics_maybe_make_clickable($event['eventdesc'])) . '</div>' .
+								'<div class="descloc_toggle_full">' . r34ics_filter_the_content(r34ics_maybe_make_clickable($event['eventdesc'], $args['eventdesclinkfix'])) . '</div>' .
 							'</div>';
 					}
 					else {
-						$eventdesc_content .=	r34ics_filter_the_content(r34ics_maybe_make_clickable($event['eventdesc']));
+						$eventdesc_content .=	r34ics_filter_the_content(r34ics_maybe_make_clickable($event['eventdesc'], $args['eventdesclinkfix']));
 					}
 				}
 				// Add link if linktitles is false, nolink is false, there *is* a URL, and it's not already in the description itself

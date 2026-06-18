@@ -1342,11 +1342,14 @@ function r34ics_maybe_enfold($str='', $len=0) {
 
 
 // Apply make_clickable() function to text string, and also deal with common quirks of iCalendar description data
-function r34ics_maybe_make_clickable($str='') {
+function r34ics_maybe_make_clickable($str='', $exit_if_html=false) {
 	$str = (string)$str; // Avoid PHP 8.1 "Passing null to parameter" deprecation notice
 
 	// Check if the string has any HTML (to decide whether or not to run nl2br() on the end result)
 	$has_html = r34ics_is_html($str);
+
+	// If the string contains any HTML, return it as-is (new in 12.0.10)
+	if ($has_html && $exit_if_html) { return $str; }
 
 	// Convert HTML entities
 	$str = html_entity_decode($str);

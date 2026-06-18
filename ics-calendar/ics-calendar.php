@@ -3,7 +3,7 @@
 Plugin Name: ICS Calendar
 Plugin URI: https://icscalendar.com
 Description: Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar into a seamlessly integrated, auto-updating, zero-maintenance WordPress experience.
-Version: 12.0.9.2
+Version: 12.0.10
 Requires at least: 5.3
 Requires PHP: 7.4
 Author: Room 34 Creative Services, LLC
