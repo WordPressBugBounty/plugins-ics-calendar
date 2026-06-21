@@ -1,5 +1,16 @@
 === ICS Calendar Changelog ===
 
+= 12.1.0.1 - 2026.06.21 =
+
+_This update has no changes from version 12.1.0; it is being introduced because the WordPress repository is failing to pick up the 12.1.0 update._
+
+= 12.1.0 - 2026.06.20 =
+
+* Script loading:
+  * Re-introduced conditional enqueuing of static assets (JavaScript and CSS files), which had been removed in an earlier update due to inconsistent behavior. This new method has been tested against the 40 most popular themes in the repository and appears to work reliably in all cases.
+  * Added `r34ics_enqueue_conditional_scripts` action to `R34ICS::enqueue_scripts()` method, to provide a way for view-specific scripts to still be enqueued when the remainder of the method is being bypassed because the general scripts have already been enqueued.
+  * Modified script loading in `print.php` template to account for the above changes.
+
 = 12.0.10 - 2026.06.18 =
 
 * Event descriptions: Added `eventdesclinkfix` shortcode parameter. Changed `r34ics_maybe_make_clickable()` function so that, when `eventdesclinkfix` is used, it will return the text string as-is if it contains _any_ HTML. _The assumption here is that descriptions that contain HTML will already have any URLs wrapped in the requisite `a` tags._

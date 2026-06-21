@@ -236,12 +236,10 @@ if (!class_exists('R34ICS')) {
 			add_filter('query_vars', array(&$this, 'query_vars'));
 			
 			// Register scripts
-			add_action('wp_enqueue_scripts', array(&$this, 'register_scripts'));
+			// Note 1: Needs to run earlier than wp_enqueue_scripts hook in some themes!
+			// Note 2: As of v.12.1.0 we only enqueue scripts on-demand, in R34ICS::shortcode()
+			add_action('init', array(&$this, 'register_scripts'));
 			
-			// Enqueue scripts
-			// @todo Resolve issues with late/conditional enqueuing, so this can be removed
-			add_action('wp_enqueue_scripts', array(&$this, 'enqueue_scripts'), 20);
-	
 			// Miscellaneous core WP actions
 			add_action('post_updated', array(&$this, 'post_updated'), 10, 3);
 			// Priority is set low to resolve potential plugin conflicts
@@ -1225,8 +1223,12 @@ if (!class_exists('R34ICS')) {
 	
 	
 		public function enqueue_scripts() {
+			// Add conditional scripts (needs to happen before we bail out)
+			do_action('r34ics_enqueue_conditional_scripts');
+	
+			// Bail out now if we've already done this
 			if ($this->scripts_enqueued || empty($this->scripts_registered)) { return; }
-
+			
 			// Bail out here if ICS Calendar is paused and we're on the front end
 			if (!is_admin() && get_option('r34ics_paused')) { return; }
 					
@@ -1930,10 +1932,7 @@ if (!class_exists('R34ICS')) {
 				
 			// Don't do anything in Block Editor
 			if (r34ics_is_block_editor()) { return; }
-			
-			// Enqueue ICS Calendar's scripts and styles, if needed (method includes check to prevent duplicate enqueuing)
-			$this->enqueue_scripts();
-			
+
 			// Merge new defaults
 			$defaults = $this->shortcode_defaults_merge($atts);
 			
@@ -2166,6 +2165,14 @@ if (!class_exists('R34ICS')) {
 			// IMPORTANT: Any conditionals after this point need to use $args rather than the extracted variables!
 			$args = apply_filters('r34ics_display_calendar_args', $args, $atts);
 			
+			// Add view to list of views on page (for conditional loading of scripts and styles)
+			global $r34ics_views_on_page;
+			if (empty($r34ics_views_on_page)) { $r34ics_views_on_page = []; }
+			if (!empty($args['view'])) {
+				// Will be set to true if that view's conditional scripts have been loaded
+				$r34ics_views_on_page[$args['view']] = false;
+			}
+			
 			// Explode feed array parameters
 			foreach ((array)$this->shortcode_feed_array_params as $param) {
 				if (!empty($args[$param]) && strpos($args[$param], '|') !== false) {
@@ -2192,8 +2199,13 @@ if (!class_exists('R34ICS')) {
 			// Allow custom actions prior to generating the calendar output
 			do_action('r34ics_shortcode_before_display_calendar', $args);
 			
+			// Enqueue ICS Calendar's scripts and styles, if needed
+			// Method includes checks to prevent duplicate enqueuing
+			$this->enqueue_scripts();
+			
 			// AJAX mode
-			if (!isset($args['ajax']) || $args['ajax'] !== false) { // It needs to explicitly check for false!
+			// Need to explicitly check for false!
+			if (!isset($args['ajax']) || $args['ajax'] !== false) {
 				$ajax_args = $this->_ajax_container_attributes($args);
 				echo '<div';
 				foreach ((array)$ajax_args as $key => $value) {

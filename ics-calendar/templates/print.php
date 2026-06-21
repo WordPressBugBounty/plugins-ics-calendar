@@ -4,6 +4,11 @@
 // Don't load directly
 if (!defined('ABSPATH')) { exit; }
 
+add_action('wp_footer', function() {
+	global $R34ICS;
+	$R34ICS->enqueue_scripts();
+});
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -25,26 +30,29 @@ if (!defined('ABSPATH')) { exit; }
 </div>
 
 <script>
-jQuery(function() {
-	jQuery(document).on('r34ics_init_end', function() {
-	
-		// Select the desired range
-		<?php
-		if (!empty($r34ics_print_selected)) {
-			?>
-			if (jQuery('.ics-calendar-select').length > 0) {
-				jQuery('.ics-calendar-select').val('<?php echo esc_attr($r34ics_print_selected); ?>').trigger('change');
-			}
-			else if (jQuery('.ics-calendar button.<?php echo esc_attr($r34ics_print_selected); ?>').length > 0) {
-				jQuery('.ics-calendar button.<?php echo esc_attr($r34ics_print_selected); ?>').trigger('click');
-			}
+// Need to defer until document has loaded
+window.addEventListener('DOMContentLoaded', function() {
+	jQuery(function() {
+		jQuery(document).on('r34ics_init_end', function() {
+		
+			// Select the desired range
 			<?php
-		}
-		?>
-	
-		setTimeout(function() {
-			window.print();
-		}, 1000);
+			if (!empty($r34ics_print_selected)) {
+				?>
+				if (jQuery('.ics-calendar-select').length > 0) {
+					jQuery('.ics-calendar-select').val('<?php echo esc_attr($r34ics_print_selected); ?>').trigger('change');
+				}
+				else if (jQuery('.ics-calendar button.<?php echo esc_attr($r34ics_print_selected); ?>').length > 0) {
+					jQuery('.ics-calendar button.<?php echo esc_attr($r34ics_print_selected); ?>').trigger('click');
+				}
+				<?php
+			}
+			?>
+		
+			setTimeout(function() {
+				window.print();
+			}, 1000);
+		});
 	});
 });
 </script>

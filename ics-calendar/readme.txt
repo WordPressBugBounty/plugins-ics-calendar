@@ -5,7 +5,7 @@ Tags: calendar, Google, Microsoft, events, ICS
 Requires at least: 5.3
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 12.0.10
+Stable tag: 12.1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,11 +45,7 @@ _This plugin includes the PHP ICS Parser library by Jonathan Goode, John Grogg a
 
 == Installation ==
 
-Once the plugin is installed and activated, use the shortcode below (adding your own ICS feed URL between the quotation marks) to insert a calendar into your pages. Use our online [Shortcode Builder](https://icscalendar.com/shortcode-builder/) to easily create a customized shortcode, or consult the [User Guide](https://icscalendar.com/user-guide) for more information.
-
-`[ics_calendar url=""]`
-
-Be sure you are using the _iCalendar subscription (ICS)_ URL (i.e. for importing into a calendar program), not the URL for viewing a calendar in a web browser. To test if you have the correct URL, paste it directly into your browser address bar. It should download an `.ics` file, not display the calendar in the browser.
+Please see our [Quick Start Guide](https://icscalendar.com/quick-start/). The plugin's admin page also includes a Getting Started tab with links to additional documentation.
 
 == Frequently Asked Questions ==
 
@@ -100,6 +96,17 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.1.0.1 - 2026.06.21 =
+
+_This update has no changes from version 12.1.0; it is being introduced because the WordPress repository is failing to pick up the 12.1.0 update._
+
+= 12.1.0 - 2026.06.20 =
+
+* Script loading:
+  * Re-introduced conditional enqueuing of static assets (JavaScript and CSS files), which had been removed in an earlier update due to inconsistent behavior. This new method has been tested against the 40 most popular themes in the repository and appears to work reliably in all cases.
+  * Added `r34ics_enqueue_conditional_scripts` action to `R34ICS::enqueue_scripts()` method, to provide a way for view-specific scripts to still be enqueued when the remainder of the method is being bypassed because the general scripts have already been enqueued.
+  * Modified script loading in `print.php` template to account for the above changes.
 
 = 12.0.10 - 2026.06.18 =
 
