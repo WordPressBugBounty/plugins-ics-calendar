@@ -4,7 +4,7 @@
 // Don't load directly
 if (!defined('ABSPATH')) { exit; }
 
-if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
+if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) {
 	?>
 	<div class="inside" id="settings">
 

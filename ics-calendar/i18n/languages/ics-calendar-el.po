@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-04-27 10:37-0500\n"
-"PO-Revision-Date: 2026-04-27 10:37-0500\n"
+"POT-Creation-Date: 2026-06-24 12:33-0500\n"
+"PO-Revision-Date: 2026-06-24 12:33-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: el\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:310
+#: class-r34ics.php:317
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -31,7 +31,7 @@ msgstr ""
 "στις σελίδες του front end. Μπορείτε να συνεχίσετε την εμφάνιση ημερολογίων "
 "στην καρτέλα %4$sΒοηθητικά προγράμματα%5$s %6$sεδώ%7$s."
 
-#: class-r34ics.php:319
+#: class-r34ics.php:326
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -43,7 +43,7 @@ msgstr ""
 "ιστού, ορισμένες λειτουργίες ενδέχεται να μην είναι διαθέσιμες ή να μην "
 "λειτουργούν σωστά."
 
-#: class-r34ics.php:328
+#: class-r34ics.php:335
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -60,7 +60,7 @@ msgstr ""
 "σας, στην ίδια ζώνη ώρας, για σωστή εμφάνιση της ώρας. Ανατρέξτε στην "
 "%6$sτεκμηριώση%7$s για περισσότερες πληροφορίες σχετικά με αυτό το ζήτημα."
 
-#: class-r34ics.php:340
+#: class-r34ics.php:347
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
@@ -69,7 +69,7 @@ msgstr ""
 "Σημαντικό! Η διαμόρφωση %1$s φαίνεται να υπερβαίνει τα όρια ταχύτητας του "
 "παρόχου του ημερολογίου προέλευσης."
 
-#: class-r34ics.php:342
+#: class-r34ics.php:349
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
@@ -78,7 +78,7 @@ msgstr ""
 "Εάν τα ημερολόγιά σας δεν φορτώνονται σωστά, ελέγξτε τις ρυθμίσεις και τη "
 "χρήση του %1$s:"
 
-#: class-r34ics.php:344
+#: class-r34ics.php:351
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
@@ -88,7 +88,7 @@ msgstr ""
 "προορίζεται μόνο για την αντιμετώπιση προβλημάτων και δεν πρέπει να "
 "παραμένει ενεργοποιημένη μόνιμα."
 
-#: class-r34ics.php:346
+#: class-r34ics.php:353
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -99,7 +99,7 @@ msgstr ""
 "%4$s 43200 %5$s (12 ώρες) ή μεγαλύτερη, για να μειώσετε τη συχνότητα των "
 "αιτήσεων προς τον πάροχο. (Δείτε τη σημείωση παρακάτω.)"
 
-#: class-r34ics.php:348
+#: class-r34ics.php:355
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
@@ -108,7 +108,7 @@ msgstr ""
 "Αποφύγετε να συμπεριλάβετε μεγάλο αριθμό τροφοδοσιών (10 ή περισσότερες) από "
 "τον ίδιο πάροχο σε ένα μόνο σύντομο κωδικό %1$s."
 
-#: class-r34ics.php:350
+#: class-r34ics.php:357
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -117,7 +117,7 @@ msgstr ""
 "Παύστε προσωρινά το ICS Calendar στις σελίδες του front-end χρησιμοποιώντας "
 "το βοηθητικό πρόγραμμα %1$sPause Calendars%2$s. (Συνιστάται για 24-48 ώρες.)"
 
-#: class-r34ics.php:352
+#: class-r34ics.php:359
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -133,7 +133,7 @@ msgstr ""
 "του διακομιστή ιστού σας ή, ενδεχομένως, ολόκληρου του δικτύου φιλοξενίας "
 "σας από τον πάροχο ημερολογίου."
 
-#: class-r34ics.php:354
+#: class-r34ics.php:361
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -147,7 +147,7 @@ msgstr ""
 "%1$sφόρμα αίτησης υποστήριξης%2$s για να επικοινωνήσετε μαζί μας και "
 "φροντίστε να συμπεριλάβετε την %3$sαναφορά συστήματος%4$s."
 
-#: class-r34ics.php:356
+#: class-r34ics.php:363
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -162,7 +162,7 @@ msgstr ""
 "αποθηκευμένων δεδομένων ημερολογίου%5$s για να εκκαθαρίσετε χειροκίνητα την "
 "προσωρινή μνήμη ανά πάσα στιγμή, αν χρειαστεί."
 
-#: class-r34ics.php:377
+#: class-r34ics.php:384
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -179,11 +179,11 @@ msgstr ""
 "%6$sανάρτηση στο blog%7$s μας ή, για να μεταβείτε στις νέες προεπιλογές, "
 "ενεργοποιήστε την %8$s επιλογή στη σελίδα %9$s ρυθμίσεων%10$s."
 
-#: class-r34ics.php:377 templates/admin/settings.php:209
+#: class-r34ics.php:384 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Χρήση νέων προεπιλεγμένων παραμέτρων (v.10.6)"
 
-#: class-r34ics.php:389
+#: class-r34ics.php:396
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -199,7 +199,7 @@ msgstr ""
 "αναβάθμιση στην έκδοση 11 ή μεταγενέστερη, επισκεφθείτε τα %4$sΦόρουμ "
 "υποστήριξης WordPress%5$s για βοήθεια."
 
-#: class-r34ics.php:401
+#: class-r34ics.php:408
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -212,7 +212,7 @@ msgstr ""
 "Διαγράψτε τυχόν πρόσθετα cache που χρησιμοποιείτε, για να βεβαιωθείτε ότι τα "
 "ημερολόγιά σας φορτώνονται σωστά με τη νέα μέθοδο."
 
-#: class-r34ics.php:414
+#: class-r34ics.php:421
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -225,46 +225,46 @@ msgstr ""
 "απόδοση και στη διεπαφή. Για περισσότερες λεπτομέρειες σχετικά με αυτήν την "
 "ενημέρωση, ανατρέξτε στο %4$sαρχείο αλλαγών%5$s."
 
-#: class-r34ics.php:463 templates/admin/admin.php:24
+#: class-r34ics.php:470 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Ξεκινώντας"
 
-#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-#: class-r34ics.php:465 templates/admin/admin.php:29
+#: class-r34ics.php:472 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "Εμφάνιση"
 
-#: class-r34ics.php:466 templates/admin/admin.php:33
+#: class-r34ics.php:473 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "Παροχές"
 
-#: class-r34ics.php:467 templates/admin/admin.php:37
+#: class-r34ics.php:474 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "Αναφορά Συστήματος"
 
-#: class-r34ics.php:468 templates/admin/admin.php:41
+#: class-r34ics.php:475 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "Υποστήριξη"
 
-#: class-r34ics.php:471
+#: class-r34ics.php:478
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "Αναβάθμιση σε %1$s!"
 
-#: class-r34ics.php:501
+#: class-r34ics.php:508
 msgid "Show/hide all"
 msgstr "Εμφάνιση/απόκρυψη όλων"
 
-#: class-r34ics.php:782
+#: class-r34ics.php:796
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -279,36 +279,36 @@ msgstr ""
 "επίσης να δοκιμάσετε να χρησιμοποιήσετε τον χαρακτήρα pipe. Διεύθυνση URL "
 "που επηρεάζεται:"
 
-#: class-r34ics.php:1226
+#: class-r34ics.php:1251
 msgid "Hide past events"
 msgstr "Απόκρυψη προηγούμενων εκδηλώσεων"
 
-#: class-r34ics.php:1227 templates/calendar-month.php:96
+#: class-r34ics.php:1252 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Εμφάνιση παρελθοντικών εκδηλώσεων"
 
-#: class-r34ics.php:1308
+#: class-r34ics.php:1333
 msgid "Contact:"
 msgstr "Επαφή:"
 
-#: class-r34ics.php:1314
+#: class-r34ics.php:1339
 msgid "Resources:"
 msgstr "Πόροι:"
 
-#: class-r34ics.php:1324
+#: class-r34ics.php:1349
 msgid "Click for more..."
 msgstr "Κάντε κλικ για περισσότερα..."
 
-#: class-r34ics.php:1358
+#: class-r34ics.php:1383
 msgid "Save to your calendar"
 msgstr "Αποθήκευση στο ημερολόγιό σας"
 
-#: class-r34ics.php:1461
+#: class-r34ics.php:1486
 msgid "Cancelled"
 msgstr "Ακυρώθηκε"
 
-#: class-r34ics.php:1574
+#: class-r34ics.php:1599
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -316,11 +316,16 @@ msgstr ""
 "Η επιλογή του παλαιού αναλυτή είναι παρωχημένη και θα καταργηθεί σε "
 "μελλοντική ενημέρωση."
 
-#: class-r34ics.php:1665
+#: class-r34ics.php:1690
 msgid "Print"
 msgstr "Εκτύπωση"
 
-#: class-r34ics.php:1925
+#: class-r34ics.php:1794
+#, php-format
+msgid "Powered by %1$s"
+msgstr "Με την υποστήριξη του %1$s"
+
+#: class-r34ics.php:1968
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -328,7 +333,7 @@ msgstr ""
 "Η ιδιότητα \"currentweek\" από το shortcode έτσι καταργηθεί. Χρησιμοποιήστε "
 "το view =\"week\" στο shortcode σας."
 
-#: class-r34ics.php:1929
+#: class-r34ics.php:1972
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -336,7 +341,7 @@ msgstr ""
 "Το χαρακτηριστικό \"legendinline\" του shortcode έχει καταργηθεί. "
 "Χρησιμοποιήστε αντ' αυτού το legendstyle=\"inline\" στο shortcode σας."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2330
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -346,7 +351,7 @@ msgstr ""
 "σελίδες. Εάν ο ιστότοπός σας χρησιμοποιεί plugin προσωρινής αποθήκευσης, "
 "ίσως χρειαστεί να καθαρίσετε την προσωρινή μνήμη."
 
-#: class-r34ics.php:2274
+#: class-r34ics.php:2338
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -356,21 +361,21 @@ msgstr ""
 "Εάν ο ιστότοπός σας χρησιμοποιεί ένα πρόσθετο προσωρινής αποθήκευσης, ίσως "
 "χρειαστεί να καθαρίσετε την προσωρινή μνήμη."
 
-#: class-r34ics.php:2286
+#: class-r34ics.php:2350
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Εκκαθάριση %1$s %2$s παροδικών στοιχείων."
 
-#: class-r34ics.php:2293
+#: class-r34ics.php:2357
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Δεν βρέθηκαν %1$s μεταβατικά φαινόμενα."
 
-#: class-r34ics.php:2302
+#: class-r34ics.php:2366
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Όλες οι αποθηκευμένες διευθύνσεις URL τροφοδοσίας ICS έχουν διαγραφεί."
 
-#: class-r34ics.php:2309
+#: class-r34ics.php:2373
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -379,7 +384,7 @@ msgstr ""
 "Όλες οι %1$s ρυθμίσεις έχουν επαναφερθεί στις προεπιλεγμένες τιμές και οι "
 "αποθηκευμένες διευθύνσεις URL τροφοδοσίας ICS έχουν διαγραφεί."
 
-#: class-r34ics.php:2392
+#: class-r34ics.php:2456
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -389,11 +394,11 @@ msgstr ""
 "πιστοποίησης HTTP. Δοκιμάστε να απενεργοποιήσετε την επιλογή %1$s στην "
 "καρτέλα %2$s παραπάνω."
 
-#: class-r34ics.php:2392 templates/admin/settings.php:85
+#: class-r34ics.php:2456 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Χρησιμοποιήστε την παλιά μέθοδο αιτήματος τροφοδοσίας"
 
-#: class-r34ics.php:2398
+#: class-r34ics.php:2462
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -410,17 +415,17 @@ msgstr ""
 "%4$sΟδηγό χρήστη%5$s για οδηγίες σχετικά με την απόκτηση της σωστής "
 "δυναμικής διεύθυνσης URL τροφοδοσίας."
 
-#: class-r34ics.php:2404
+#: class-r34ics.php:2468
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Σφάλμα: Δεν ήταν δυνατή η ανάλυση της διεύθυνσης IP για το %1$s."
 
-#: class-r34ics.php:2407
+#: class-r34ics.php:2471
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Επίλυση διεύθυνσης IP για %1$s:"
 
-#: class-r34ics.php:2432
+#: class-r34ics.php:2499
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -429,7 +434,7 @@ msgstr ""
 "%1$sΕμφάνιση ενημερωμένη.%2$s Ίσως χρειαστεί να ανανεώσετε τη σελίδα για να "
 "δείτε ορισμένες αλλαγές."
 
-#: class-r34ics.php:2492
+#: class-r34ics.php:2559
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -437,7 +442,7 @@ msgstr ""
 "Το κείμενο που εισήχθη στο πεδίο \"Προεπιλεγμένος σύντομος κωδικός\" δεν "
 "είναι έγκυρος σύντομος κωδικός και δεν αποθηκεύτηκε."
 
-#: class-r34ics.php:2549
+#: class-r34ics.php:2616
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -446,15 +451,15 @@ msgstr ""
 "%1$sΟι ρυθμίσεις ενημερώθηκαν.%2$s Ίσως χρειαστεί να ανανεώσετε τη σελίδα "
 "για να δείτε ορισμένες αλλαγές."
 
-#: class-r34ics.php:2862
+#: class-r34ics.php:2936
 msgid "calendar event"
 msgstr "γεγονός ημερολογίου"
 
-#: class-r34ics.php:2868
+#: class-r34ics.php:2942
 msgid "Event download failed."
 msgstr "Η λήψη του συμβάντος απέτυχε."
 
-#: class-r34ics.php:3333
+#: class-r34ics.php:3418
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -464,17 +469,7 @@ msgstr ""
 "μια επικείμενη ενημέρωση. Δοκιμάστε τις τροφοδοσίες σας με την παλιά μέθοδο "
 "αιτήματος τροφοδοσίας απενεργοποιημένη."
 
-#: compatibility.php:38
-#, php-format
-msgid ""
-"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
-"your site to a newer version of WordPress as soon as possible."
-msgstr ""
-"Οι μελλοντικές ενημερώσεις του %1$s θα απαιτούν WordPress 5.3 ή νεότερη "
-"έκδοση. Ενημερώστε τον ιστότοπό σας σε νεότερη έκδοση του WordPress το "
-"συντομότερο δυνατό."
-
-#: functions.php:1065
+#: functions.php:1169
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -490,51 +485,51 @@ msgstr ""
 "μεταφράσεις %1$s ενδέχεται να μην φορτώνονται σωστά ενώ το πρόσθετο "
 "μετάφρασης που προκαλεί τη σύγκρουση είναι ενεργό."
 
-#: functions.php:1188 functions.php:1196 functions.php:1205
+#: functions.php:1292 functions.php:1300 functions.php:1309
 msgid "Map"
 msgstr "Χάρτης"
 
-#: functions.php:1510
+#: functions.php:1617
 msgid "Recurring event"
 msgstr "Επαναλαμβανόμενο γεγονός"
 
-#: functions.php:1515
+#: functions.php:1622
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Επαναλαμβάνεται κάθε %1$s χρόνια"
 
-#: functions.php:1515
+#: functions.php:1622
 msgid "Recurs yearly"
 msgstr "Επαναλαμβάνεται κάθε χρόνο"
 
-#: functions.php:1518
+#: functions.php:1625
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Επαναλαμβάνεται κάθε %1$s μήνες"
 
-#: functions.php:1518
+#: functions.php:1625
 msgid "Recurs monthly"
 msgstr "Επαναλαμβάνεται κάθε μήνα"
 
-#: functions.php:1521
+#: functions.php:1628
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Επαναλαμβάνεται κάθε %1$s εβδομάδες"
 
-#: functions.php:1521
+#: functions.php:1628
 msgid "Recurs weekly"
 msgstr "Επαναλαμβάνεται κάθε εβδομάδα"
 
-#: functions.php:1524
+#: functions.php:1631
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Επαναλαμβάνεται κάθε %1$s ημέρες"
 
-#: functions.php:1524
+#: functions.php:1631
 msgid "Recurs daily"
 msgstr "Επαναλαμβάνεται καθημερινά"
 
-#: functions.php:1697
+#: functions.php:1804
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -547,7 +542,7 @@ msgstr ""
 "αποτέλεσμα, το ημερολόγιό σας ενδέχεται να μην εμφανίζεται σωστά. "
 "Παρακαλούμε, αφαιρέστε τον ενεργό σύνδεσμο από τον σύντομο κωδικό."
 
-#: functions.php:2029
+#: functions.php:2137
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Η συνάρτηση r34ics_url_get_contents() δεν υποστηρίζεται πλέον."
 
@@ -853,7 +848,25 @@ msgstr "Σκοτεινό θέμα"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "Αντιστρέφει την παλέτα χρωμάτων (ανοιχτά χρώματα σε σκούρο φόντο)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:226
+#: templates/admin/appearance.php:71
+msgid "Miscellaneous"
+msgstr "Διάφορα"
+
+#: templates/admin/appearance.php:78
+#, php-format
+msgid "Give %1$s credit"
+msgstr "Αναγνώριση %1$s"
+
+#: templates/admin/appearance.php:83
+#, php-format
+msgid ""
+"Help spread the word about %1$s with a small attribution link below your "
+"calendars. Thank you for your support!"
+msgstr ""
+"Βοηθήστε μας να διαδώσουμε το %1$s τοποθετώντας έναν μικρό σύνδεσμο αναφοράς "
+"κάτω από τα ημερολόγιά σας. Σας ευχαριστούμε για την υποστήριξή σας!"
+
+#: templates/admin/appearance.php:94 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Αποθήκευση αλλαγών"
 
@@ -1495,6 +1508,15 @@ msgstr ""
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
 
+#, php-format
+#~ msgid ""
+#~ "Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+#~ "your site to a newer version of WordPress as soon as possible."
+#~ msgstr ""
+#~ "Οι μελλοντικές ενημερώσεις του %1$s θα απαιτούν WordPress 5.3 ή νεότερη "
+#~ "έκδοση. Ενημερώστε τον ιστότοπό σας σε νεότερη έκδοση του WordPress το "
+#~ "συντομότερο δυνατό."
+
 #~ msgid ""
 #~ "Configure all calendar settings with an easy visual interface... no need "
 #~ "to manually type shortcodes."
@@ -1557,9 +1579,6 @@ msgstr "Room 34 Creative Services, LLC"
 #~ "περιέχουν μεγάλο αριθμό εκδηλώσεων. Κανονικά, τα δεδομένα του ημερολογίου "
 #~ "αποστέλλονται απευθείας στην HTML της αρχικής φόρτωσης της σελίδας, εκτός "
 #~ "εάν έχει καθοριστεί AJAX στον σύντομο κώδικα."
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Διάφορα"
 
 #~ msgid ""
 #~ "For your site security please do NOT post the System Report in the "

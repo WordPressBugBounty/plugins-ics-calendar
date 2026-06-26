@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-04-27 10:34-0500\n"
-"PO-Revision-Date: 2026-04-27 10:34-0500\n"
+"POT-Creation-Date: 2026-06-24 12:31-0500\n"
+"PO-Revision-Date: 2026-06-24 12:31-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:310
+#: class-r34ics.php:317
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -31,7 +31,7 @@ msgstr ""
 "інтерфейсу. Ви можете відновити відображення календарів у вкладці "
 "%4$sУтиліти%5$s %6$sтут%7$s."
 
-#: class-r34ics.php:319
+#: class-r34ics.php:326
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -42,7 +42,7 @@ msgstr ""
 "Оскільки ICS Calendar призначений для роботи на веб-сервері, деякі функції "
 "можуть бути недоступними або працювати некоректно."
 
-#: class-r34ics.php:328
+#: class-r34ics.php:335
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -60,7 +60,7 @@ msgstr ""
 "часу. Додаткову інформацію з цього питання дивіться в нашій "
 "%6$sдокументації%7$s."
 
-#: class-r34ics.php:340
+#: class-r34ics.php:347
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
@@ -69,7 +69,7 @@ msgstr ""
 "Важливо! Ваша конфігурація %1$s перевищує обмеження швидкості постачальника "
 "календаря джерела."
 
-#: class-r34ics.php:342
+#: class-r34ics.php:349
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
@@ -78,7 +78,7 @@ msgstr ""
 "Якщо ваші календарі не завантажуються належним чином, перегляньте "
 "налаштування та використання %1$s:"
 
-#: class-r34ics.php:344
+#: class-r34ics.php:351
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
@@ -88,7 +88,7 @@ msgstr ""
 "виключно для усунення несправностей і не повинна залишатися увімкненою "
 "постійно."
 
-#: class-r34ics.php:346
+#: class-r34ics.php:353
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -99,7 +99,7 @@ msgstr ""
 "до %4$s43200%5$s (12 годин) або більше, щоб зменшити частоту запитів до "
 "постачальника. (Див. примітку нижче.)"
 
-#: class-r34ics.php:348
+#: class-r34ics.php:355
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
@@ -108,7 +108,7 @@ msgstr ""
 "Уникайте включення великої кількості каналів (10 або більше) від одного "
 "постачальника в один короткий код %1$s."
 
-#: class-r34ics.php:350
+#: class-r34ics.php:357
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -118,7 +118,7 @@ msgstr ""
 "допомогою утиліти %1$sПризупинити календарі%2$s. (Рекомендується на 24-48 "
 "годин.)"
 
-#: class-r34ics.php:352
+#: class-r34ics.php:359
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -133,7 +133,7 @@ msgstr ""
 "тимчасове блокування IP-адреси вашого веб-сервера або, можливо, всієї вашої "
 "мережі хостингу з боку провайдера календаря."
 
-#: class-r34ics.php:354
+#: class-r34ics.php:361
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -147,7 +147,7 @@ msgstr ""
 "підтримку%2$s, щоб зв'язатися з нами, і не забудьте додати ваш %3$sзвіт про "
 "систему%4$s."
 
-#: class-r34ics.php:356
+#: class-r34ics.php:363
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -161,7 +161,7 @@ msgstr ""
 "%4$sОчистити кеш календаря%5$s, щоб вручну очистити кеш у будь-який час, "
 "якщо це необхідно."
 
-#: class-r34ics.php:377
+#: class-r34ics.php:384
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -178,11 +178,11 @@ msgstr ""
 "%6$sпублікацію в блозі%7$s, або щоб перейти на нові стандартні налаштування, "
 "увімкніть %8$s опцію на сторінці %9$s налаштувань%10$s."
 
-#: class-r34ics.php:377 templates/admin/settings.php:209
+#: class-r34ics.php:384 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Використовувати нові значення параметрів за замовчуванням (v.10.6)"
 
-#: class-r34ics.php:389
+#: class-r34ics.php:396
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -198,7 +198,7 @@ msgstr ""
 "новими проблемами, зверніться за допомогою до %4$sфорумів підтримки "
 "WordPress%5$s."
 
-#: class-r34ics.php:401
+#: class-r34ics.php:408
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -211,7 +211,7 @@ msgstr ""
 "AJAX. Очистіть усі плагіни кешування, які ви використовуєте, щоб календарі "
 "завантажувалися належним чином за допомогою нового методу."
 
-#: class-r34ics.php:414
+#: class-r34ics.php:421
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -224,46 +224,46 @@ msgstr ""
 "продуктивності та вдосконалень інтерфейсу. Детальнішу інформацію про це "
 "оновлення див. у %4$sжурналі змін%5$s."
 
-#: class-r34ics.php:463 templates/admin/admin.php:24
+#: class-r34ics.php:470 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Починаємо"
 
-#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Налаштування"
 
-#: class-r34ics.php:465 templates/admin/admin.php:29
+#: class-r34ics.php:472 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "Зовнішній вигляд"
 
-#: class-r34ics.php:466 templates/admin/admin.php:33
+#: class-r34ics.php:473 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "Комунальні послуги"
 
-#: class-r34ics.php:467 templates/admin/admin.php:37
+#: class-r34ics.php:474 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "Системний звіт"
 
-#: class-r34ics.php:468 templates/admin/admin.php:41
+#: class-r34ics.php:475 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "Підтримка"
 
-#: class-r34ics.php:471
+#: class-r34ics.php:478
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "Оновіть до %1$s!"
 
-#: class-r34ics.php:501
+#: class-r34ics.php:508
 msgid "Show/hide all"
 msgstr "Показати/приховати все"
 
-#: class-r34ics.php:782
+#: class-r34ics.php:796
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -277,47 +277,52 @@ msgstr ""
 "декількох URL-адрес, спробуйте замість цього використовувати символ "
 "вертикальної риски. URL-адреса, на яку це впливає:"
 
-#: class-r34ics.php:1226
+#: class-r34ics.php:1251
 msgid "Hide past events"
 msgstr "Приховати минулі події"
 
-#: class-r34ics.php:1227 templates/calendar-month.php:96
+#: class-r34ics.php:1252 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Показати минулі події"
 
-#: class-r34ics.php:1308
+#: class-r34ics.php:1333
 msgid "Contact:"
 msgstr "Контактна інформація:"
 
-#: class-r34ics.php:1314
+#: class-r34ics.php:1339
 msgid "Resources:"
 msgstr "Ресурси:"
 
-#: class-r34ics.php:1324
+#: class-r34ics.php:1349
 msgid "Click for more..."
 msgstr "Натисніть, щоб дізнатися більше..."
 
-#: class-r34ics.php:1358
+#: class-r34ics.php:1383
 msgid "Save to your calendar"
 msgstr "Зберегти в календарі"
 
-#: class-r34ics.php:1461
+#: class-r34ics.php:1486
 msgid "Cancelled"
 msgstr "Скасовано"
 
-#: class-r34ics.php:1574
+#: class-r34ics.php:1599
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr ""
 "Опція legacy parser є застарілою і буде видалена в майбутньому оновленні."
 
-#: class-r34ics.php:1665
+#: class-r34ics.php:1690
 msgid "Print"
 msgstr "Друк"
 
-#: class-r34ics.php:1925
+#: class-r34ics.php:1794
+#, php-format
+msgid "Powered by %1$s"
+msgstr "На базі %1$s"
+
+#: class-r34ics.php:1968
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -325,7 +330,7 @@ msgstr ""
 "Атрибут шорткоду «currentweek» є застарілим. Замість нього використовуйте "
 "view=\"week\" у своєму шорткоді."
 
-#: class-r34ics.php:1929
+#: class-r34ics.php:1972
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -333,7 +338,7 @@ msgstr ""
 "Атрибут шорткоду «legendinline» є застарілим. Замість нього використовуйте "
 "legendstyle=\"inline\" у своєму шорткоді."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2330
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -342,7 +347,7 @@ msgstr ""
 "%1$s відновив %2$sвідображення%3$s календарів на головних сторінках. Якщо "
 "ваш сайт використовує плагін кешування, можливо, вам доведеться очистити кеш."
 
-#: class-r34ics.php:2274
+#: class-r34ics.php:2338
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -352,21 +357,21 @@ msgstr ""
 "Якщо ваш сайт використовує плагін кешування, можливо, вам доведеться "
 "очистити кеш."
 
-#: class-r34ics.php:2286
+#: class-r34ics.php:2350
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Очищено %1$s %2$s тимчасових файлів."
 
-#: class-r34ics.php:2293
+#: class-r34ics.php:2357
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Не виявлено жодних %1$s перехідних процесів."
 
-#: class-r34ics.php:2302
+#: class-r34ics.php:2366
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Всі збережені URL-адреси ICS-каналів були видалені."
 
-#: class-r34ics.php:2309
+#: class-r34ics.php:2373
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -375,7 +380,7 @@ msgstr ""
 "Всі %1$s налаштування були скинуті до заводських, а збережені URL-адреси ICS-"
 "каналів були видалені."
 
-#: class-r34ics.php:2392
+#: class-r34ics.php:2456
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -384,11 +389,11 @@ msgstr ""
 "Ваша URL-адреса каналу, схоже, містить облікові дані для базової "
 "аутентифікації HTTP. Спробуйте вимкнути опцію %1$s у вкладці %2$s вище."
 
-#: class-r34ics.php:2392 templates/admin/settings.php:85
+#: class-r34ics.php:2456 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Використовуйте старий метод запиту на подачу"
 
-#: class-r34ics.php:2398
+#: class-r34ics.php:2462
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -403,17 +408,17 @@ msgstr ""
 "оновлень вихідного календаря. Інструкції щодо отримання правильного "
 "динамічного URL-адреси каналу див. у нашому %4$sПосібнику користувача%5$s."
 
-#: class-r34ics.php:2404
+#: class-r34ics.php:2468
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Помилка: Не вдалося визначити IP-адресу для %1$s."
 
-#: class-r34ics.php:2407
+#: class-r34ics.php:2471
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Визначена IP-адреса для %1$s:"
 
-#: class-r34ics.php:2432
+#: class-r34ics.php:2499
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -422,7 +427,7 @@ msgstr ""
 "%1$sЗовнішній вигляд оновлено.%2$s Можливо, вам доведеться оновити сторінку, "
 "щоб побачити деякі зміни."
 
-#: class-r34ics.php:2492
+#: class-r34ics.php:2559
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -430,7 +435,7 @@ msgstr ""
 "Текст, введений у поле «Шорткод за замовчуванням», не є дійсним шорткодом і "
 "не був збережений."
 
-#: class-r34ics.php:2549
+#: class-r34ics.php:2616
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -439,15 +444,15 @@ msgstr ""
 "%1$sНалаштування оновлено.%2$s Можливо, вам доведеться оновити сторінку, щоб "
 "побачити деякі зміни."
 
-#: class-r34ics.php:2862
+#: class-r34ics.php:2936
 msgid "calendar event"
 msgstr "календарна подія"
 
-#: class-r34ics.php:2868
+#: class-r34ics.php:2942
 msgid "Event download failed."
 msgstr "Завантаження події не вдалося."
 
-#: class-r34ics.php:3333
+#: class-r34ics.php:3418
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -457,16 +462,7 @@ msgstr ""
 "оновленні. Будь ласка, протестуйте свої канали з вимкненим старим методом "
 "запиту на канали."
 
-#: compatibility.php:38
-#, php-format
-msgid ""
-"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
-"your site to a newer version of WordPress as soon as possible."
-msgstr ""
-"Майбутні оновлення %1$s вимагатимуть WordPress 5.3 або новішої версії. Будь "
-"ласка, якнайшвидше оновіть свій сайт до нової версії WordPress."
-
-#: functions.php:1065
+#: functions.php:1169
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -481,51 +477,51 @@ msgstr ""
 "%3$s. Як результат, переклади %1$s можуть не завантажуватися належним чином, "
 "поки конфліктуючий плагін перекладу активний."
 
-#: functions.php:1188 functions.php:1196 functions.php:1205
+#: functions.php:1292 functions.php:1300 functions.php:1309
 msgid "Map"
 msgstr "Мапа"
 
-#: functions.php:1510
+#: functions.php:1617
 msgid "Recurring event"
 msgstr "Повторювана подія"
 
-#: functions.php:1515
+#: functions.php:1622
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Повторюється кожні %1$s років"
 
-#: functions.php:1515
+#: functions.php:1622
 msgid "Recurs yearly"
 msgstr "Повторюється щорічно"
 
-#: functions.php:1518
+#: functions.php:1625
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Повторюється кожні %1$s місяців"
 
-#: functions.php:1518
+#: functions.php:1625
 msgid "Recurs monthly"
 msgstr "Повторюється щомісяця"
 
-#: functions.php:1521
+#: functions.php:1628
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Повторюється кожні %1$s тижнів"
 
-#: functions.php:1521
+#: functions.php:1628
 msgid "Recurs weekly"
 msgstr "Повторюється щотижня"
 
-#: functions.php:1524
+#: functions.php:1631
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Повторюється кожні %1$s днів"
 
-#: functions.php:1524
+#: functions.php:1631
 msgid "Recurs daily"
 msgstr "Повторюється щодня"
 
-#: functions.php:1697
+#: functions.php:1804
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -538,7 +534,7 @@ msgstr ""
 "результаті ваш календар може відображатися неправильно. Будь ласка, видаліть "
 "активне посилання з короткого коду."
 
-#: functions.php:2029
+#: functions.php:2137
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Функція r34ics_url_get_contents() більше не підтримується."
 
@@ -837,7 +833,25 @@ msgstr "Темний режим"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "Інвертує палітру кольорів (світлі кольори на темному тлі)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:226
+#: templates/admin/appearance.php:71
+msgid "Miscellaneous"
+msgstr "Різне"
+
+#: templates/admin/appearance.php:78
+#, php-format
+msgid "Give %1$s credit"
+msgstr "Віддайте %1$s належне"
+
+#: templates/admin/appearance.php:83
+#, php-format
+msgid ""
+"Help spread the word about %1$s with a small attribution link below your "
+"calendars. Thank you for your support!"
+msgstr ""
+"Допоможіть поширити інформацію про %1$s, розмістивши невелике посилання на "
+"джерело під своїми календарями. Дякуємо за підтримку!"
+
+#: templates/admin/appearance.php:94 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
@@ -1463,6 +1477,14 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Кімната 34 Creative Services, ТОВ"
+
+#, php-format
+#~ msgid ""
+#~ "Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+#~ "your site to a newer version of WordPress as soon as possible."
+#~ msgstr ""
+#~ "Майбутні оновлення %1$s вимагатимуть WordPress 5.3 або новішої версії. "
+#~ "Будь ласка, якнайшвидше оновіть свій сайт до нової версії WordPress."
 
 #~ msgid ""
 #~ "Configure all calendar settings with an easy visual interface... no need "

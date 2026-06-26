@@ -76,6 +76,7 @@ if (!class_exists('R34ICS')) {
 			'debug' => false,
 			'description' => '',
 			'eventdesc' => false,
+			'eventdescdateformat' => '',
 			'eventdesclinkfix' => false,
 			'eventdl' => false,
 			'eventlocaltime' => false,
@@ -291,7 +292,7 @@ if (!class_exists('R34ICS')) {
 			// Dashboard-only notices for administrator-level users
 			if (
 				function_exists('r34ics_admin_full_access') && 
-				r34ics_admin_full_access() &&
+				r34ics_admin_full_access(false) &&
 				(
 					in_array($current_screen->base, array(
 						'dashboard',
@@ -378,7 +379,7 @@ if (!class_exists('R34ICS')) {
 				$previous_version = get_option('r34ics_previous_version');
 				 
 				// Admin notice about new default options
-				if (version_compare($previous_version, '10.6.0', '<')) {
+				if (!empty($previous_version) && version_compare($previous_version, '10.6.0', '<')) {
 					$r34ics_deferred_admin_notices['r34ics_new_parameter_defaults_10_6'] = array(
 						'content' => '<p>' . sprintf(esc_html__('%1$sPlease note:%2$s %3$s version 10.6 changes the default options for several shortcode settings. In order to maintain consistency, these new defaults are %4$snot%5$s enabled when upgrading from an earlier version. If you would like to learn more about the changes please read our %6$sblog post%7$s, or to switch to the new defaults, turn on the %8$s option on the %9$s settings%10$s page.', 'ics-calendar'), '<strong>', '</strong>', 'ICS Calendar', '<em>', '</em>', '<a href="https://icscalendar.com/updated-parameter-defaults-in-ics-calendar-10-6/" target="_blank">', '</a>', '<strong>' . esc_html__('Use new parameter defaults (v.10.6)', 'ics-calendar') . '</strong>', '<a href="' . esc_url(r34ics_get_admin_url('settings')) . '">ICS Calendar', '</a>') . '</p>',
 						'status' => 'info',
@@ -390,7 +391,7 @@ if (!class_exists('R34ICS')) {
 				}
 			
 				// Admin notice about refactored R34ICS::_url_get_contents() method
-				if (version_compare($previous_version, '11.0.0', '<')) {
+				if (!empty($previous_version) && version_compare($previous_version, '11.0.0', '<')) {
 					$r34ics_deferred_admin_notices['r34ics_refactoring_in_v_11'] = array(
 						'content' => '<p>' . sprintf(esc_html__('%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are retrieved. This change uses a standard built-in WordPress function, so it should be fully compatible with all existing installations. If you encounter any new issues after upgrading to version 11 or later, please visit the %4$sWordPress Support Forums%5$s for assistance.', 'ics-calendar'), '<strong>', '</strong>', 'ICS Calendar', '<a href="https://wordpress.org/support/plugin/ics-calendar/" target="_blank">', '</a>') . '</p>',
 						'status' => 'info',
@@ -402,7 +403,7 @@ if (!class_exists('R34ICS')) {
 				}
 				
 				// Admin notice about new AJAX key method
-				if (version_compare($previous_version, '11.5.14.2', '<')) {
+				if (!empty($previous_version) && version_compare($previous_version, '11.5.14.2', '<')) {
 					$r34ics_deferred_admin_notices['r34ics_ajax_keys_11_5_14_2'] = array(
 						'content' => '<p>' . sprintf(esc_html__('%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure method for handling calendar parameters when loading via AJAX. Please clear any caching plugins you are using, to ensure that your calendars are loading properly with the new method.', 'ics-calendar'), '<strong>', '</strong>', 'ICS Calendar') . '</p>',
 						'status' => 'info',
@@ -414,7 +415,7 @@ if (!class_exists('R34ICS')) {
 				}
 	
 				// Special admin notice for version 12.0
-				if (empty($previous_version) || version_compare($previous_version, '12.0.0', '<')) {
+				if (!empty($previous_version) && version_compare($previous_version, '12.0.0', '<')) {
 					$r34ics_deferred_admin_notices['r34ics_version_12_0_announcement'] = array(
 						'content' => '<p>' .
 						sprintf(__('%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional troubleshooting tools, plus a number of performance improvements and interface refinements throughout. Please see the %4$schangelog%5$s for more details on this update.', 'ics-calendar'), '<strong style="font-size: 150%; color: var(--r34ics--color--ics-red);">', '<span style="text-transform: uppercase;">ICS Calendar</span>', '</strong><br /><br />', '<a href="https://icscalendar.com/changelog/" target="_blank">', '</a>') .
@@ -612,7 +613,7 @@ if (!class_exists('R34ICS')) {
 			extract($args);
 			
 			// Reset debug messages for this call (Administrator role only)
-			$this->debug = (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) ? $debug : false;
+			$this->debug = (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) ? $debug : false;
 			if ($this->debug) { $this->debug_messages = array('args' => $args); }
 
 			// Check for required args
@@ -630,8 +631,14 @@ if (!class_exists('R34ICS')) {
 			// Early render -- bypass regular parsing process if an external view requires it
 			$early_render = apply_filters('r34ics_display_calendar_early_render', false, $view);
 			if (!empty($early_render)) {
+					// Actions before rendering template (can include additional template output)
+					do_action('r34ics_display_calendar_before_render_template', $view, $args, $ics_data);
+
 					// Handle other views externally
 					do_action('r34ics_display_calendar_render_template', $view, $args, null);
+
+					// Actions after rendering template (can include additional template output)
+					do_action('r34ics_display_calendar_after_render_template', $view, $args, $ics_data);
 					return;
 			}
 			
@@ -1255,7 +1262,7 @@ if (!class_exists('R34ICS')) {
 			if (get_option('r34ics_colors_match_theme_json')) {
 				wp_add_inline_style('ics-calendar', r34ics_colors_match_theme_json(get_option('r34ics_colors_darkmode'), empty(get_option('r34ics_colors_match_theme_json'))));
 			}
-			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
+			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) {
 				wp_enqueue_style('ics-calendar-debug');
 			}
 	
@@ -1400,7 +1407,7 @@ if (!class_exists('R34ICS')) {
 	
 				// Date(s) -- lightbox only, unless multiday
 				if ($args['toggle'] === 'lightbox' || (!empty($event['multiday']) && !in_array($args['view'], (array)$this->get_list_style_views()))) {
-					$date_format = r34ics_date_format($args['format'], true);
+					$date_format = r34ics_date_format($args['eventdescdateformat'], true);
 					echo '<div class="date_in_hover_block">';
 					if (!empty($event['multiday'])) {
 						$day_label = r34ics_multiday_date_label($date_format, $event, $args);
@@ -1781,6 +1788,11 @@ if (!class_exists('R34ICS')) {
 				</script>
 				<?php
 			}
+			
+			// Give ICS Calendar credit
+			if (get_option('r34ics_give_credit')) {
+				echo wp_kses_post('<p class="r34ics-give-credit">' . sprintf(esc_html__('Powered by %1$s', 'ics-calendar'), '<a href="https://icscalendar.com/" target="_blank">ICS Calendar</a>') . '</p>');
+			}
 
 			return;
 		}
@@ -1891,7 +1903,7 @@ if (!class_exists('R34ICS')) {
 	
 			// ICS Calendar CSS
 			wp_register_style('ics-calendar', plugin_dir_url(__FILE__) . 'assets/style.min.css', false, get_option('r34ics_version'));
-			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
+			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) {
 				wp_register_style('ics-calendar-debug', plugin_dir_url(__FILE__) . 'assets/debug.css', false, get_option('r34ics_version'));
 			}
 	
@@ -1999,6 +2011,7 @@ if (!class_exists('R34ICS')) {
 						? intval($eventdesc)
 						: r34ics_boolean_check($eventdesc)
 					),
+				'eventdescdateformat' => ($eventdescdateformat ?: $format),
 				// eventdl doesn't support feeds using basic auth
 				'eventdl' => r34ics_boolean_check($basicauth) ? false : (
 					in_array(strtolower($eventdl), array('minimal'))
@@ -2465,7 +2478,7 @@ if (!class_exists('R34ICS')) {
 		
 		protected function _admin_page_callback_save_appearance() {
 			// Yes, this is redundant... intentionally
-			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access() && isset($_POST['r34ics-appearance-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-appearance-nonce'])), 'r34ics')) {
+			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false) && isset($_POST['r34ics-appearance-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-appearance-nonce'])), 'r34ics')) {
 				
 				// Prepare deferred admin notices
 				global $r34ics_deferred_admin_notices;
@@ -2473,11 +2486,14 @@ if (!class_exists('R34ICS')) {
 					$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
 				}
 			
+				// colors_match_theme_json
+				update_option('r34ics_colors_match_theme_json', !empty($_POST['colors_match_theme_json']), true);
+				
 				// colors_darkmode
 				update_option('r34ics_colors_darkmode', !empty($_POST['colors_darkmode']));
 				
-				// colors_match_theme_json
-				update_option('r34ics_colors_match_theme_json', !empty($_POST['colors_match_theme_json']), true);
+				// give_credit
+				update_option('r34ics_give_credit', !empty($_POST['give_credit']));
 				
 				$r34ics_deferred_admin_notices['r34ics_appearance_updated'] = array(
 					'content' => '<p>' . sprintf(esc_html__('%1$sAppearance updated.%2$s You may need to refresh the page to see some changes.', 'ics-calendar'), '<strong>', '</strong>') . '</p>',
@@ -2496,7 +2512,7 @@ if (!class_exists('R34ICS')) {
 
 		protected function _admin_page_callback_save_settings() {
 			// Yes, this is redundant... intentionally
-			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access() && isset($_POST['r34ics-settings-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-settings-nonce'])), 'r34ics')) {
+			if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false) && isset($_POST['r34ics-settings-nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['r34ics-settings-nonce'])), 'r34ics')) {
 				
 				// Prepare deferred admin notices
 				global $r34ics_deferred_admin_notices;

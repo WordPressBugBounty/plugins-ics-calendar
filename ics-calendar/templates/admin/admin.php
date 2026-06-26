@@ -23,7 +23,7 @@ global $R34ICS;
 				<nav class="r34ics-menu"><ul>
 					<li><a href="#getting-started"><span class="dashicons dashicons-sos"></span><?php esc_html_e('Getting Started', 'ics-calendar'); ?></a></li>
 					<?php
-					if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
+					if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) {
 						?>
 						<li><a href="#settings"><span class="dashicons dashicons-admin-settings"></span><?php esc_html_e('Settings', 'ics-calendar'); ?></a></li>
 						<li><a href="#appearance"><span class="dashicons dashicons-admin-appearance"></span><?php esc_html_e('Appearance', 'ics-calendar'); ?></a></li>
@@ -32,7 +32,7 @@ global $R34ICS;
 					?>
 					<li><a href="#utilities"><span class="dashicons dashicons-admin-tools"></span><?php esc_html_e('Utilities', 'ics-calendar'); ?></a></li>
 					<?php
-					if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
+					if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) {
 						?>
 						<li><a href="#system-report"><span class="dashicons dashicons-clipboard"></span><?php esc_html_e('System Report', 'ics-calendar'); ?></a></li>
 						<?php

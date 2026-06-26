@@ -81,7 +81,7 @@ if (!defined('ABSPATH')) { exit; }
 				<p><input type="submit" class="button button-primary" value="<?php esc_attr_e('Clear Cached Calendar Data', 'ics-calendar'); ?>" /></p>
 	
 				<?php
-				if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
+				if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) {
 					?>
 					<p>
 						<?php
@@ -202,7 +202,7 @@ if (!defined('ABSPATH')) { exit; }
 
 <?php
 // Restrict System Report to admins / super admins
-if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
+if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) {
 	?>	
 	<div class="inside" id="system-report">
 

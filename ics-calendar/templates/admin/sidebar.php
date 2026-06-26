@@ -24,7 +24,7 @@ if (!defined('ABSPATH')) { exit; }
 	
 	<?php
 	// Restrict System Report to admins / super admins
-	if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
+	if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) {
 		?>
 		<p><?php
 		// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment

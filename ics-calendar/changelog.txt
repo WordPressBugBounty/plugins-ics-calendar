@@ -1,8 +1,18 @@
 === ICS Calendar Changelog ===
 
-= 12.1.0.1 - 2026.06.21 =
+= 12.1.1 - 2026.06.26 =
 
-_This update has no changes from version 12.1.0; it is being introduced because the WordPress repository is failing to pick up the 12.1.0 update._
+* Admin:
+  * Fixed issue of a large number of irrelevant, version-related admin notices appearing on initial installation.
+  * Modified `r34ics_admin_full_access()` function, adding the `$multisite_check` parameter. This allows for conditionally checking for Multisite Super Admin access. Prior to this change, in a Multisite configuration, only network Super Admins could access ICS Calendar settings. All settings are site-specific, so site-specific Administrators should be allowed to access them. The conditional retains the ability to check for Super Admin access if needed. (Presently this is only needed for the License tab in the Pro version.)
+* Appearance settings:
+  * Added "Give ICS Calendar credit" option. (This is turned OFF by default.) Adds a small "Powered by ICS Calendar" credit link below each calendar. Thank you for your support!
+* Shortcode parameters:
+  * Added `eventdescdateformat` parameter to allow different formatting for dates in the event description hover box/lightbox than in the main calendar view. If omitted, will fall back to `format` value or default for the view.
+* Miscellaneous:
+  * Added `r34ics_display_calendar_before_render_template` and `r34ics_display_calendar_hooks_render_template` on early render.
+* i18n:
+  * Updated translation strings.
 
 = 12.1.0 - 2026.06.20 =
 

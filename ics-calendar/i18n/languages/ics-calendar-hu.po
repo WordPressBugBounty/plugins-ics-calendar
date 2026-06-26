@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-04-27 10:36-0500\n"
-"PO-Revision-Date: 2026-04-27 10:36-0500\n"
+"POT-Creation-Date: 2026-06-24 12:33-0500\n"
+"PO-Revision-Date: 2026-06-24 12:33-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:310
+#: class-r34ics.php:317
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -31,7 +31,7 @@ msgstr ""
 "oldalakon. A naptárak megjelenítését a %4$sSegédprogramok%5$s fülön "
 "%6$sitt%7$s folytathatja."
 
-#: class-r34ics.php:319
+#: class-r34ics.php:326
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -42,7 +42,7 @@ msgstr ""
 "futtatja.%2$s Mivel az ICS Calendar programot webkiszolgálón való futtatásra "
 "tervezték, egyes funkciók nem érhetők el vagy nem működnek megfelelően."
 
-#: class-r34ics.php:328
+#: class-r34ics.php:335
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -59,7 +59,7 @@ msgstr ""
 "időzónában, a megfelelő időmegjelenítés érdekében. További információk erről "
 "a kérdésről %6$sdokumentációnkban%7$s találhatók."
 
-#: class-r34ics.php:340
+#: class-r34ics.php:347
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
@@ -68,7 +68,7 @@ msgstr ""
 "Fontos! Úgy tűnik, hogy a %1$s konfigurációja túllépi a forrás "
 "naptárszolgáltató sebességkorlátait."
 
-#: class-r34ics.php:342
+#: class-r34ics.php:349
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
@@ -77,7 +77,7 @@ msgstr ""
 "Ha a naptárak nem töltődnek be megfelelően, kérjük, ellenőrizze a %1$s "
 "beállításokat és használatot:"
 
-#: class-r34ics.php:344
+#: class-r34ics.php:351
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
@@ -86,7 +86,7 @@ msgstr ""
 "Ne használja a %1$s kódot a rövid kódokban. Ez a funkció kizárólag "
 "hibaelhárításra szolgál, és nem szabad állandóan bekapcsolva hagyni."
 
-#: class-r34ics.php:346
+#: class-r34ics.php:353
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -97,7 +97,7 @@ msgstr ""
 "(12 óra) vagy annál nagyobb értékre, hogy csökkentse a szolgáltatóhoz érkező "
 "kérések gyakoriságát. (Lásd az alábbi megjegyzést.)"
 
-#: class-r34ics.php:348
+#: class-r34ics.php:355
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
@@ -106,7 +106,7 @@ msgstr ""
 "Kerülje el, hogy ugyanazon szolgáltatótól származó nagy számú (10 vagy több) "
 "feedet egyetlen %1$s rövid kódba foglaljon."
 
-#: class-r34ics.php:350
+#: class-r34ics.php:357
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -115,7 +115,7 @@ msgstr ""
 "Ideiglenesen szüneteltesse az ICS naptárat a front-end oldalakon a "
 "%1$sNaptárak szüneteltetése%2$s segédprogrammal. (24-48 óra ajánlott.)"
 
-#: class-r34ics.php:352
+#: class-r34ics.php:359
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -130,7 +130,7 @@ msgstr ""
 "az a naptárszolgáltató által a webkiszolgáló IP-címének, vagy akár az egész "
 "tárhelyhálózatának ideiglenes blokkolását eredményezheti."
 
-#: class-r34ics.php:354
+#: class-r34ics.php:361
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -144,7 +144,7 @@ msgstr ""
 "kapcsolatot a %1$stámogatási kérelem űrlapon%2$s, és feltétlenül csatolja a "
 "%3$srendszerjelentést%4$s."
 
-#: class-r34ics.php:356
+#: class-r34ics.php:363
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -158,7 +158,7 @@ msgstr ""
 "%4$sNaptár cache-adatainak törlése%5$s segédprogrammal bármikor manuálisan "
 "törölheti a cache-t, ha szükséges."
 
-#: class-r34ics.php:377
+#: class-r34ics.php:384
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -176,11 +176,11 @@ msgstr ""
 "állni az új alapértelmezett beállításokra, kapcsolja be a %8$s opciót a %9$s "
 "beállítások%10$s oldalon."
 
-#: class-r34ics.php:377 templates/admin/settings.php:209
+#: class-r34ics.php:384 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Új paraméter alapértelmezések használata (v.10.6)"
 
-#: class-r34ics.php:389
+#: class-r34ics.php:396
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -195,7 +195,7 @@ msgstr ""
 "vagy újabb verzióra való frissítés után új problémák merülnek fel, kérjük, "
 "látogasson el a %4$sWordPress támogatási fórumokra%5$s segítségért."
 
-#: class-r34ics.php:401
+#: class-r34ics.php:408
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -208,7 +208,7 @@ msgstr ""
 "betöltéskor. Kérjük, törölje az összes cache-plugint, hogy a naptárak az új "
 "módszerrel megfelelően töltsenek be."
 
-#: class-r34ics.php:414
+#: class-r34ics.php:421
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -221,46 +221,46 @@ msgstr ""
 "felületfinomítást tartalmaz. A frissítés részleteiről a "
 "%4$sváltozásnaplóban%5$s olvashat."
 
-#: class-r34ics.php:463 templates/admin/admin.php:24
+#: class-r34ics.php:470 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Kezdjük el"
 
-#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Beállítások"
 
-#: class-r34ics.php:465 templates/admin/admin.php:29
+#: class-r34ics.php:472 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "Megjelenés"
 
-#: class-r34ics.php:466 templates/admin/admin.php:33
+#: class-r34ics.php:473 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "Segédprogramok"
 
-#: class-r34ics.php:467 templates/admin/admin.php:37
+#: class-r34ics.php:474 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "Rendszerjelentés"
 
-#: class-r34ics.php:468 templates/admin/admin.php:41
+#: class-r34ics.php:475 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "Támogatás"
 
-#: class-r34ics.php:471
+#: class-r34ics.php:478
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "Frissítsen %1$s-ra!"
 
-#: class-r34ics.php:501
+#: class-r34ics.php:508
 msgid "Show/hide all"
 msgstr "Minden megjelenítése/elrejtése"
 
-#: class-r34ics.php:782
+#: class-r34ics.php:796
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -273,36 +273,36 @@ msgstr ""
 "allow_url_fopen elérhető-e. Ha több URL-t szóközökkel választ el, akkor "
 "érdemes kipróbálni a cső karakter használatát is. Érintett URL:"
 
-#: class-r34ics.php:1226
+#: class-r34ics.php:1251
 msgid "Hide past events"
 msgstr "Korábbi események elrejtése"
 
-#: class-r34ics.php:1227 templates/calendar-month.php:96
+#: class-r34ics.php:1252 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Elmúlt események megjelenítése"
 
-#: class-r34ics.php:1308
+#: class-r34ics.php:1333
 msgid "Contact:"
 msgstr "Kapcsolat:"
 
-#: class-r34ics.php:1314
+#: class-r34ics.php:1339
 msgid "Resources:"
 msgstr "Források:"
 
-#: class-r34ics.php:1324
+#: class-r34ics.php:1349
 msgid "Click for more..."
 msgstr "Kattintson ide további információkért..."
 
-#: class-r34ics.php:1358
+#: class-r34ics.php:1383
 msgid "Save to your calendar"
 msgstr "Mentse a naptárába"
 
-#: class-r34ics.php:1461
+#: class-r34ics.php:1486
 msgid "Cancelled"
 msgstr "Törölve"
 
-#: class-r34ics.php:1574
+#: class-r34ics.php:1599
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -310,11 +310,16 @@ msgstr ""
 "A régi parser opció elavult, és egy jövőbeli frissítésben eltávolításra "
 "kerül."
 
-#: class-r34ics.php:1665
+#: class-r34ics.php:1690
 msgid "Print"
 msgstr "Nyomtatás"
 
-#: class-r34ics.php:1925
+#: class-r34ics.php:1794
+#, php-format
+msgid "Powered by %1$s"
+msgstr "Köszönjük %1$s"
+
+#: class-r34ics.php:1968
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -322,7 +327,7 @@ msgstr ""
 "A „currentweek” rövidkód attribútum elavult. Kérjük, helyette használja a "
 "view=\"week\" rövidkódot."
 
-#: class-r34ics.php:1929
+#: class-r34ics.php:1972
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -330,7 +335,7 @@ msgstr ""
 "A „legendinline” rövidkód attribútum elavult. Kérjük, helyette a "
 "legendstyle=\"inline\" attribútumot használja a rövidkódjában."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2330
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -340,7 +345,7 @@ msgstr ""
 "Ha webhelyed cache-plugint használ, akkor lehet, hogy törölnöd kell a cache-"
 "t."
 
-#: class-r34ics.php:2274
+#: class-r34ics.php:2338
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -349,21 +354,21 @@ msgstr ""
 "%1$s %2$sfelfüggesztette%3$s a naptárak megjelenítését a frontend oldalakon. "
 "Ha webhelye cache-plugint használ, akkor lehet, hogy törölnie kell a cache-t."
 
-#: class-r34ics.php:2286
+#: class-r34ics.php:2350
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$s átmeneti állapot törölve."
 
-#: class-r34ics.php:2293
+#: class-r34ics.php:2357
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nem találtunk %1$s átmeneti állapotot."
 
-#: class-r34ics.php:2302
+#: class-r34ics.php:2366
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Az összes mentett ICS-feed URL-cím törölve lett."
 
-#: class-r34ics.php:2309
+#: class-r34ics.php:2373
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -372,7 +377,7 @@ msgstr ""
 "Az összes %1$s beállítás alapértelmezett értékre lett visszaállítva, és a "
 "mentett ICS-feed URL-ek törölve lettek."
 
-#: class-r34ics.php:2392
+#: class-r34ics.php:2456
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -381,11 +386,11 @@ msgstr ""
 "Úgy tűnik, hogy a feed URL-je HTTP alapvető hitelesítési adatokat tartalmaz. "
 "Próbálja meg kikapcsolni a fenti %2$s fül alatt található %1$s opciót."
 
-#: class-r34ics.php:2392 templates/admin/settings.php:85
+#: class-r34ics.php:2456 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Használja a régi feed-lekérés módszert"
 
-#: class-r34ics.php:2398
+#: class-r34ics.php:2462
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -401,17 +406,17 @@ msgstr ""
 "megszerzésével kapcsolatos utasításokat a %4$sFelhasználói útmutatóban%5$s "
 "találja."
 
-#: class-r34ics.php:2404
+#: class-r34ics.php:2468
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Hiba: Nem sikerült feloldani a %1$s IP-címet."
 
-#: class-r34ics.php:2407
+#: class-r34ics.php:2471
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Megoldott IP-cím %1$s:"
 
-#: class-r34ics.php:2432
+#: class-r34ics.php:2499
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -420,7 +425,7 @@ msgstr ""
 "%1$sMegjelenés frissítve.%2$s Lehet, hogy frissítenie kell az oldalt, hogy "
 "lássa a változásokat."
 
-#: class-r34ics.php:2492
+#: class-r34ics.php:2559
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -428,7 +433,7 @@ msgstr ""
 "Az „Alapértelmezett rövidkód” mezőbe beírt szöveg nem érvényes rövidkód, "
 "ezért nem lett elmentve."
 
-#: class-r34ics.php:2549
+#: class-r34ics.php:2616
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -437,15 +442,15 @@ msgstr ""
 "%1$sBeállítások frissítve.%2$s Lehet, hogy frissítenie kell az oldalt, hogy "
 "lássa a változásokat."
 
-#: class-r34ics.php:2862
+#: class-r34ics.php:2936
 msgid "calendar event"
 msgstr "naptári esemény"
 
-#: class-r34ics.php:2868
+#: class-r34ics.php:2942
 msgid "Event download failed."
 msgstr "Az esemény letöltése sikertelen."
 
-#: class-r34ics.php:3333
+#: class-r34ics.php:3418
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -455,17 +460,7 @@ msgstr ""
 "eltávolításra kerül. Kérjük, tesztelje feedjeit a régi feed-lekérdezési "
 "módszer kikapcsolt állapotában."
 
-#: compatibility.php:38
-#, php-format
-msgid ""
-"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
-"your site to a newer version of WordPress as soon as possible."
-msgstr ""
-"A %1$s jövőbeli frissítéseihez WordPress 5.3 vagy újabb verzió szükséges. "
-"Kérjük, frissítse webhelyét a WordPress újabb verziójára a lehető "
-"leghamarabb."
-
-#: functions.php:1065
+#: functions.php:1169
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -480,51 +475,51 @@ msgstr ""
 "Ennek eredményeként a %1$s fordítások nem töltődnek be megfelelően, amíg az "
 "ütköző fordítási bővítmény aktív."
 
-#: functions.php:1188 functions.php:1196 functions.php:1205
+#: functions.php:1292 functions.php:1300 functions.php:1309
 msgid "Map"
 msgstr "Térkép"
 
-#: functions.php:1510
+#: functions.php:1617
 msgid "Recurring event"
 msgstr "Ismétlődő esemény"
 
-#: functions.php:1515
+#: functions.php:1622
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Minden %1$s évben ismétlődik"
 
-#: functions.php:1515
+#: functions.php:1622
 msgid "Recurs yearly"
 msgstr "Évente ismétlődik"
 
-#: functions.php:1518
+#: functions.php:1625
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Minden %1$s hónapban ismétlődik"
 
-#: functions.php:1518
+#: functions.php:1625
 msgid "Recurs monthly"
 msgstr "Havonta ismétlődik"
 
-#: functions.php:1521
+#: functions.php:1628
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Minden %1$s héten ismétlődik"
 
-#: functions.php:1521
+#: functions.php:1628
 msgid "Recurs weekly"
 msgstr "Hetente ismétlődik"
 
-#: functions.php:1524
+#: functions.php:1631
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Minden %1$s nap ismétlődik"
 
-#: functions.php:1524
+#: functions.php:1631
 msgid "Recurs daily"
 msgstr "Naponta ismétlődik"
 
-#: functions.php:1697
+#: functions.php:1804
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -537,7 +532,7 @@ msgstr ""
 "naptár nem jelenik meg megfelelően. Kérjük, távolítsa el a kattintható "
 "linket a rövidkódból."
 
-#: functions.php:2029
+#: functions.php:2137
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Az r34ics_url_get_contents() függvény már nem támogatott."
 
@@ -836,7 +831,25 @@ msgstr "Sötét üzemmód"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "A színpaletta megfordítása (világos színek sötét háttérrel)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:226
+#: templates/admin/appearance.php:71
+msgid "Miscellaneous"
+msgstr "Vegyes"
+
+#: templates/admin/appearance.php:78
+#, php-format
+msgid "Give %1$s credit"
+msgstr "Adj %1$s pontot"
+
+#: templates/admin/appearance.php:83
+#, php-format
+msgid ""
+"Help spread the word about %1$s with a small attribution link below your "
+"calendars. Thank you for your support!"
+msgstr ""
+"Kérjük, segítsen népszerűsíteni a %1$s-t azzal, hogy a naptárai alá "
+"beilleszt egy kis hivatkozást. Köszönjük a támogatását!"
+
+#: templates/admin/appearance.php:94 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Módosítások mentése"
 
@@ -1465,6 +1478,15 @@ msgstr ""
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
 
+#, php-format
+#~ msgid ""
+#~ "Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+#~ "your site to a newer version of WordPress as soon as possible."
+#~ msgstr ""
+#~ "A %1$s jövőbeli frissítéseihez WordPress 5.3 vagy újabb verzió szükséges. "
+#~ "Kérjük, frissítse webhelyét a WordPress újabb verziójára a lehető "
+#~ "leghamarabb."
+
 #~ msgid ""
 #~ "Configure all calendar settings with an easy visual interface... no need "
 #~ "to manually type shortcodes."
@@ -1526,9 +1548,6 @@ msgstr "Room 34 Creative Services, LLC"
 #~ "eseményt tartalmaznak. Normális esetben a naptáradatok közvetlenül az "
 #~ "oldal kezdeti betöltésének HTML-ében kerülnek elküldésre, kivéve, ha a "
 #~ "rövidkódban AJAX van megadva."
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Vegyes"
 
 #~ msgid ""
 #~ "For your site security please do NOT post the System Report in the "

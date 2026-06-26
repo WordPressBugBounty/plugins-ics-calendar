@@ -14,7 +14,9 @@ function r34ics_admin_access() {
 
 // Check if users should have full access to _all_ administrative features
 // Administrator (Super Admin for Multisite), _not_ configurable
-function r34ics_admin_full_access() {
+// For things that only need Administrator even on Multisite, pass false for the parameter
+function r34ics_admin_full_access($multisite_check=true) {
+	if (empty($multisite_check)) { return current_user_can('manage_options'); }
 	return ((is_multisite() && current_user_can('manage_network')) || (!is_multisite() && current_user_can('manage_options')));
 }
 
@@ -1181,7 +1183,7 @@ function r34ics_i18n_symlinks() {
 // Debugging tool: output a given string as a JavaScript alert
 function r34ics_js_alert($str='') {
 	$str = (string)$str; // Avoid PHP 8.1 "Passing null to parameter" deprecation notice
-	if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
+	if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) {
 		echo '<script>alert("' . esc_attr(str_replace('"', '&quot;', $str)) . '");</script>';
 	}
 }
@@ -1949,6 +1951,7 @@ function r34ics_system_report($echo=true) {
 		$appearance_fields = array(
 			'r34ics_colors_darkmode',
 			'r34ics_colors_match_theme_json',
+			'r34ics_give_credit',
 		);
 		foreach ((array)$appearance_fields as $field) {
 			$report['Plugin Appearance'][$field] = get_option($field);
@@ -2250,7 +2253,7 @@ function r34ics__array_filter_recursive($array, $callback=null) {
 
 // Print an array with preformatted HTML -- for debugging only
 function r34ics__debug($arr) {
-	if (function_exists('r34ics_admin_full_access') && !r34ics_admin_full_access()) { return false; }
+	if (function_exists('r34ics_admin_full_access') && !r34ics_admin_full_access(false)) { return false; }
 	global $r34ics_debug_output;
 
 	// Add ICS Calendar settings
@@ -2295,7 +2298,7 @@ function r34ics__debug($arr) {
 
 // Prepare and output final debugging results
 function r34ics__wp_footer_debug_output() {
-	if (function_exists('r34ics_admin_full_access') && !r34ics_admin_full_access()) { return false; }
+	if (function_exists('r34ics_admin_full_access') && !r34ics_admin_full_access(false)) { return false; }
 	global $r34ics_debug_output;
 	if (empty($r34ics_debug_output)) { return false; }
 	echo '<div class="r34ics_debug_wrapper minimized"><div class="r34ics_debug_toggle">&#9662;</div><div class="r34ics_debug_header"><h4>ICS Calendar Debugger</h4></div><div class="r34ics_debug_content">';

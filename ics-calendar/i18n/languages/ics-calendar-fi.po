@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-04-27 10:36-0500\n"
-"PO-Revision-Date: 2026-04-27 10:36-0500\n"
+"POT-Creation-Date: 2026-06-24 12:33-0500\n"
+"PO-Revision-Date: 2026-06-24 12:33-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:310
+#: class-r34ics.php:317
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -31,7 +31,7 @@ msgstr ""
 "etusivulla. Voit jatkaa kalentereiden tarjoamista %4$sUtilities%5$s-"
 "välilehdessä %6$stäällä%7$s."
 
-#: class-r34ics.php:319
+#: class-r34ics.php:326
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -43,7 +43,7 @@ msgstr ""
 "ominaisuudet eivät välttämättä ole käytettävissä tai ne eivät välttämättä "
 "toimi oikein."
 
-#: class-r34ics.php:328
+#: class-r34ics.php:335
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -59,7 +59,7 @@ msgstr ""
 "sijaintisi lähimpään kaupunkiin, joka on samassa aikavyöhykkeessä, jotta "
 "aika näkyy oikein. Katso lisätietoja tästä asiasta %6$sohjeistuksestamme%7$s."
 
-#: class-r34ics.php:340
+#: class-r34ics.php:347
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
@@ -68,7 +68,7 @@ msgstr ""
 "Tärkeää! %1$s -määrityksesi näyttää ylittävän lähdekalenterin tarjoajan "
 "nopeusrajoitukset."
 
-#: class-r34ics.php:342
+#: class-r34ics.php:349
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
@@ -76,7 +76,7 @@ msgid ""
 msgstr ""
 "Jos kalenterisi eivät lataudu oikein, tarkista %1$s asetukset ja käyttö:"
 
-#: class-r34ics.php:344
+#: class-r34ics.php:351
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
@@ -85,7 +85,7 @@ msgstr ""
 "Älä käytä %1$s lyhytkoodeissasi. Tämä ominaisuus on tarkoitettu vain "
 "vianmääritykseen, eikä sitä tule jättää pysyvästi käyttöön."
 
-#: class-r34ics.php:346
+#: class-r34ics.php:353
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -96,7 +96,7 @@ msgstr ""
 "%4$s43200%5$s (12 tuntia) tai suurempaan arvoon, jotta palveluntarjoajalle "
 "lähetettävien pyyntöjen tiheys vähenee. (Katso alla oleva huomautus.)"
 
-#: class-r34ics.php:348
+#: class-r34ics.php:355
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
@@ -105,7 +105,7 @@ msgstr ""
 "Vältä sisällyttämästä samaan %1$s lyhytkoodiin suurta määrää (10 tai "
 "enemmän) syötteitä samalta palveluntarjoajalta."
 
-#: class-r34ics.php:350
+#: class-r34ics.php:357
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -114,7 +114,7 @@ msgstr ""
 "Keskeytä ICS-kalenteri väliaikaisesti etusivulla %1$sPause Calendars%2$s-"
 "apuohjelman avulla. (Suositeltava kesto on 24–48 tuntia.)"
 
-#: class-r34ics.php:352
+#: class-r34ics.php:359
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -130,7 +130,7 @@ msgstr ""
 "kalenteripalveluntarjoajan väliaikaisen eston web-palvelimesi IP-osoitteelle "
 "tai mahdollisesti koko hosting-verkostollesi."
 
-#: class-r34ics.php:354
+#: class-r34ics.php:361
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -143,7 +143,7 @@ msgstr ""
 "ongelma jatkuu, ota meihin yhteyttä %1$stukipyyntölomakkeella%2$s ja liitä "
 "mukaan %3$sjärjestelmäraportti%4$s."
 
-#: class-r34ics.php:356
+#: class-r34ics.php:363
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -157,7 +157,7 @@ msgstr ""
 "manuaalisesti milloin tahansa %4$sClear Cached Calendar Data%5$s-apuohjelman "
 "avulla."
 
-#: class-r34ics.php:377
+#: class-r34ics.php:384
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -174,11 +174,11 @@ msgstr ""
 "%6$sblogikirjoituksemme%7$s tai vaihda uudet oletusasetukset käyttöön "
 "ottamalla %8$svaihtoehto käyttöön %9$sasetukset%10$s-sivulla."
 
-#: class-r34ics.php:377 templates/admin/settings.php:209
+#: class-r34ics.php:384 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Käytä uusia oletusparametreja (v.10.6)"
 
-#: class-r34ics.php:389
+#: class-r34ics.php:396
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -193,7 +193,7 @@ msgstr ""
 "kanssa. Jos kohtaat uusia ongelmia päivitettyäsi versioon 11 tai uudemmalle, "
 "käy %4$sWordPress-tukifoorumeilla%5$s saadaksesi apua."
 
-#: class-r34ics.php:401
+#: class-r34ics.php:408
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -206,7 +206,7 @@ msgstr ""
 "kaikki käyttämäsi välimuistilisäosat, jotta kalenterisi latautuvat oikein "
 "uudella tavalla."
 
-#: class-r34ics.php:414
+#: class-r34ics.php:421
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -219,46 +219,46 @@ msgstr ""
 "käyttöliittymän hienosäätöjä. Katso %4$smuutoslista%5$s saadaksesi "
 "lisätietoja tästä päivityksestä."
 
-#: class-r34ics.php:463 templates/admin/admin.php:24
+#: class-r34ics.php:470 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Käytön aloittaminen"
 
-#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Asetukset"
 
-#: class-r34ics.php:465 templates/admin/admin.php:29
+#: class-r34ics.php:472 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "Ulkoasu"
 
-#: class-r34ics.php:466 templates/admin/admin.php:33
+#: class-r34ics.php:473 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "Lisäpalvelut"
 
-#: class-r34ics.php:467 templates/admin/admin.php:37
+#: class-r34ics.php:474 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "Järjestelmäraportti"
 
-#: class-r34ics.php:468 templates/admin/admin.php:41
+#: class-r34ics.php:475 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "Tuki"
 
-#: class-r34ics.php:471
+#: class-r34ics.php:478
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "Päivitä versioon %1$s!"
 
-#: class-r34ics.php:501
+#: class-r34ics.php:508
 msgid "Show/hide all"
 msgstr "Näytä/piilota kaikki"
 
-#: class-r34ics.php:782
+#: class-r34ics.php:796
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -272,36 +272,36 @@ msgstr ""
 "osoitteiden erottamiseen, voit myös kokeilla käyttää putkimerkkiä. "
 "Vaikuttava URL-osoite:"
 
-#: class-r34ics.php:1226
+#: class-r34ics.php:1251
 msgid "Hide past events"
 msgstr "Piilota menneet tapahtumat"
 
-#: class-r34ics.php:1227 templates/calendar-month.php:96
+#: class-r34ics.php:1252 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Näytä menneet tapahtumat"
 
-#: class-r34ics.php:1308
+#: class-r34ics.php:1333
 msgid "Contact:"
 msgstr "Yhteystieto:"
 
-#: class-r34ics.php:1314
+#: class-r34ics.php:1339
 msgid "Resources:"
 msgstr "Resurssit:"
 
-#: class-r34ics.php:1324
+#: class-r34ics.php:1349
 msgid "Click for more..."
 msgstr "Klikkaa lisää..."
 
-#: class-r34ics.php:1358
+#: class-r34ics.php:1383
 msgid "Save to your calendar"
 msgstr "Tallenna kalenteriisi"
 
-#: class-r34ics.php:1461
+#: class-r34ics.php:1486
 msgid "Cancelled"
 msgstr "Peruutettu"
 
-#: class-r34ics.php:1574
+#: class-r34ics.php:1599
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -309,11 +309,16 @@ msgstr ""
 "Vanha parser-vaihtoehto on vanhentunut ja se poistetaan tulevassa "
 "päivityksessä."
 
-#: class-r34ics.php:1665
+#: class-r34ics.php:1690
 msgid "Print"
 msgstr "Tulosta"
 
-#: class-r34ics.php:1925
+#: class-r34ics.php:1794
+#, php-format
+msgid "Powered by %1$s"
+msgstr "Palvelun toteuttamisessa käytetty %1$s"
+
+#: class-r34ics.php:1968
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -321,7 +326,7 @@ msgstr ""
 "\"currentweek\" -lyhytkoodin attribuutti on vanhentunut. Käytä sen sijaan "
 "lyhytkoodissasi view=\"week\"."
 
-#: class-r34ics.php:1929
+#: class-r34ics.php:1972
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -329,7 +334,7 @@ msgstr ""
 "\"legendinline\"-lyhytkoodin attribuutti on vanhentunut. Käytä sen sijaan "
 "lyhytkoodissasi legendstyle=\"inline\"."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2330
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -338,7 +343,7 @@ msgstr ""
 "%1$s on %2$saloittanut%3$s uudelleen kalenterien näyttämisen etusivulla. Jos "
 "sivustosi käyttää välimuistilisäosaa, sinun on ehkä tyhjennettävä välimuisti."
 
-#: class-r34ics.php:2274
+#: class-r34ics.php:2338
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -347,21 +352,21 @@ msgstr ""
 "%1$s on %2$skeskeyttänyt%3$s kalenterien näyttämisen etusivulla. Jos "
 "sivustosi käyttää välimuistia, saatat joutua tyhjentämään välimuistin."
 
-#: class-r34ics.php:2286
+#: class-r34ics.php:2350
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Tyhjennetty %1$s %2$s väliaikainen(t)."
 
-#: class-r34ics.php:2293
+#: class-r34ics.php:2357
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Transientteja ei löytynyt %1$s."
 
-#: class-r34ics.php:2302
+#: class-r34ics.php:2366
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Kaikki tallennetut ICS-syötteen URL-osoitteet on poistettu."
 
-#: class-r34ics.php:2309
+#: class-r34ics.php:2373
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -370,7 +375,7 @@ msgstr ""
 "Kaikki %1$s asetukset on palautettu oletusasetuksiin ja tallennetut ICS-"
 "syötteen URL-osoitteet on poistettu."
 
-#: class-r34ics.php:2392
+#: class-r34ics.php:2456
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -380,11 +385,11 @@ msgstr ""
 "tunnistetiedot. Kokeile poistaa %1$s -vaihtoehto käytöstä yllä olevasta %2$s "
 "-välilehdestä."
 
-#: class-r34ics.php:2392 templates/admin/settings.php:85
+#: class-r34ics.php:2456 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Käytä vanhaa syötteen pyyntömenetelmää"
 
-#: class-r34ics.php:2398
+#: class-r34ics.php:2462
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -399,17 +404,17 @@ msgstr ""
 "tulevia päivityksiä. Katso %4$skäyttöoppaastamme%5$s ohjeet oikean "
 "dynaamisen syöte-URL-osoitteen saamiseksi."
 
-#: class-r34ics.php:2404
+#: class-r34ics.php:2468
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Virhe: %1$s IP-osoitetta ei pystytty ratkaisemaan."
 
-#: class-r34ics.php:2407
+#: class-r34ics.php:2471
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Ratkaistu IP-osoite %1$s:"
 
-#: class-r34ics.php:2432
+#: class-r34ics.php:2499
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -418,7 +423,7 @@ msgstr ""
 "%1$sUlkonäkö päivitetty.%2$s Saatat joutua päivittämään sivun nähdäksesi "
 "muutokset."
 
-#: class-r34ics.php:2492
+#: class-r34ics.php:2559
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -426,7 +431,7 @@ msgstr ""
 "Kenttään \"Oletuslyhytkoodi\" syötetty teksti ei ole kelvollinen lyhytkoodi, "
 "eikä sitä ole tallennettu."
 
-#: class-r34ics.php:2549
+#: class-r34ics.php:2616
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -435,15 +440,15 @@ msgstr ""
 "%1$sAsetukset päivitetty.%2$s Saatat joutua päivittämään sivun nähdäksesi "
 "muutokset."
 
-#: class-r34ics.php:2862
+#: class-r34ics.php:2936
 msgid "calendar event"
 msgstr "kalenteritapahtuma"
 
-#: class-r34ics.php:2868
+#: class-r34ics.php:2942
 msgid "Event download failed."
 msgstr "Tapahtuman lataus epäonnistui."
 
-#: class-r34ics.php:3333
+#: class-r34ics.php:3418
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -453,17 +458,7 @@ msgstr ""
 "lähitulevaisuudessa tehtävällä päivityksellä. Testaa syötteesi vanha "
 "syötteen pyyntömenetelmä pois päältä."
 
-#: compatibility.php:38
-#, php-format
-msgid ""
-"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
-"your site to a newer version of WordPress as soon as possible."
-msgstr ""
-"%1$s:n tulevat päivitykset edellyttävät WordPress 5.3:a tai uudempaa "
-"versiota. Päivitä sivustosi uudemmalle WordPress-versiolle mahdollisimman "
-"pian."
-
-#: functions.php:1065
+#: functions.php:1169
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -478,51 +473,51 @@ msgstr ""
 "ristiriidan ratkaisemiseksi. Tämän seurauksena %1$s käännökset eivät "
 "välttämättä lataudu oikein, kun ristiriitaista käännöstyökalua käytetään."
 
-#: functions.php:1188 functions.php:1196 functions.php:1205
+#: functions.php:1292 functions.php:1300 functions.php:1309
 msgid "Map"
 msgstr "Kartta"
 
-#: functions.php:1510
+#: functions.php:1617
 msgid "Recurring event"
 msgstr "Toistuva tapahtuma"
 
-#: functions.php:1515
+#: functions.php:1622
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Toistuu joka %1$s vuosi"
 
-#: functions.php:1515
+#: functions.php:1622
 msgid "Recurs yearly"
 msgstr "Toistuu vuosittain"
 
-#: functions.php:1518
+#: functions.php:1625
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Toistuu joka %1$s kuukausi"
 
-#: functions.php:1518
+#: functions.php:1625
 msgid "Recurs monthly"
 msgstr "Toistuu kuukausittain"
 
-#: functions.php:1521
+#: functions.php:1628
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Toistuu joka %1$s viikko"
 
-#: functions.php:1521
+#: functions.php:1628
 msgid "Recurs weekly"
 msgstr "Toistuu viikoittain"
 
-#: functions.php:1524
+#: functions.php:1631
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Toistuu joka %1$s päivää"
 
-#: functions.php:1524
+#: functions.php:1631
 msgid "Recurs daily"
 msgstr "Toistuu päivittäin"
 
-#: functions.php:1697
+#: functions.php:1804
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -535,7 +530,7 @@ msgstr ""
 "seurauksena kalenterisi ei välttämättä näy oikein. Poista klikattava linkki "
 "lyhytkoodista."
 
-#: functions.php:2029
+#: functions.php:2137
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents()-funktiota ei enää tueta."
 
@@ -833,7 +828,25 @@ msgstr "Tumma tila"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "Kääntää väripaletin (vaaleat värit tummalla taustalla)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:226
+#: templates/admin/appearance.php:71
+msgid "Miscellaneous"
+msgstr "Sekalaiset"
+
+#: templates/admin/appearance.php:78
+#, php-format
+msgid "Give %1$s credit"
+msgstr "Anna %1$s tunnustusta"
+
+#: templates/admin/appearance.php:83
+#, php-format
+msgid ""
+"Help spread the word about %1$s with a small attribution link below your "
+"calendars. Thank you for your support!"
+msgstr ""
+"Auta levittämään tietoa %1$s:sta lisäämällä pieni lähdelinkki kalentereidesi "
+"alle. Kiitos tuestasi!"
+
+#: templates/admin/appearance.php:94 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Tallenna muutokset"
 
@@ -1453,6 +1466,15 @@ msgstr ""
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
 
+#, php-format
+#~ msgid ""
+#~ "Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+#~ "your site to a newer version of WordPress as soon as possible."
+#~ msgstr ""
+#~ "%1$s:n tulevat päivitykset edellyttävät WordPress 5.3:a tai uudempaa "
+#~ "versiota. Päivitä sivustosi uudemmalle WordPress-versiolle mahdollisimman "
+#~ "pian."
+
 #~ msgid ""
 #~ "Configure all calendar settings with an easy visual interface... no need "
 #~ "to manually type shortcodes."
@@ -1515,9 +1537,6 @@ msgstr "Room 34 Creative Services, LLC"
 #~ "paljon tapahtumia. Normaalisti kalenteritiedot lähetetään suoraan "
 #~ "HTML:ssä sivun ensimmäisen latauksen yhteydessä, ellei AJAXia ole "
 #~ "määritetty lyhytkoodissa."
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Sekalaiset"
 
 #~ msgid ""
 #~ "For your site security please do NOT post the System Report in the "

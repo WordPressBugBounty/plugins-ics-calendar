@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-04-27 10:36-0500\n"
-"PO-Revision-Date: 2026-04-27 10:36-0500\n"
+"POT-Creation-Date: 2026-06-24 12:33-0500\n"
+"PO-Revision-Date: 2026-06-24 12:33-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: is\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:310
+#: class-r34ics.php:317
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -30,7 +30,7 @@ msgstr ""
 "%1$s er nú %2$sstöðvað%3$s og er ekki að birta dagatöl á forsíðum. Þú getur "
 "haldið áfram að birta dagatöl undir %4$sUtilities%5$s flipanum %6$shér%7$s."
 
-#: class-r34ics.php:319
+#: class-r34ics.php:326
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -41,7 +41,7 @@ msgstr ""
 "sem ICS Calendar er ætlað að keyra á vefþjóni geta sumar aðgerðir verið "
 "óaðgengilegar eða virkað illa."
 
-#: class-r34ics.php:328
+#: class-r34ics.php:335
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -57,7 +57,7 @@ msgstr ""
 "í sama tímabelti til að tryggja rétta tímasýningu. Sjá %6$shandbókina "
 "okkar%7$s fyrir frekari upplýsingar um þetta mál."
 
-#: class-r34ics.php:340
+#: class-r34ics.php:347
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
@@ -66,7 +66,7 @@ msgstr ""
 "Mikilvægt! Útlit er fyrir að %1$s stilling þín fari yfir hraðamörk "
 "frumdagatalveitunnar."
 
-#: class-r34ics.php:342
+#: class-r34ics.php:349
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
@@ -75,7 +75,7 @@ msgstr ""
 "Ef dagatölin þín eru ekki að hlaðast rétt, vinsamlegast skoðaðu %1$s "
 "stillingar þínar og notkun:"
 
-#: class-r34ics.php:344
+#: class-r34ics.php:351
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
@@ -84,7 +84,7 @@ msgstr ""
 "Ekki nota %1$s í stutlkóðum þínum. Þessi aðgerð er ætluð eingöngu til "
 "bilanaleitar og ætti ekki að vera virkjuð varanlega."
 
-#: class-r34ics.php:346
+#: class-r34ics.php:353
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -95,7 +95,7 @@ msgstr ""
 "%4$s43200%5$s (12 klukkustundir) eða hærra, til að draga úr tíðni beiðna til "
 "veitanda. (Sjá athugasemd hér að neðan.)"
 
-#: class-r34ics.php:348
+#: class-r34ics.php:355
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
@@ -104,7 +104,7 @@ msgstr ""
 "Forðastu að setja marga strauma (10 eða fleiri) frá sama veitanda í einn "
 "%1$s stuttkóða."
 
-#: class-r34ics.php:350
+#: class-r34ics.php:357
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -113,7 +113,7 @@ msgstr ""
 "Stöðvaðu tímabundið ICS-dagatal á forsíðum þínum með %1$sPause Calendars%2$s-"
 "verkfærinu. (Mælt er með 24–48 klukkustundum.)"
 
-#: class-r34ics.php:352
+#: class-r34ics.php:359
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -128,7 +128,7 @@ msgstr ""
 "leitt til tímabundinnar lokunar á IP-tölu vefþjónsins þíns, eða hugsanlega á "
 "allt hýsingarnetið þitt, af hálfu dagatalveitunnar."
 
-#: class-r34ics.php:354
+#: class-r34ics.php:361
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -142,7 +142,7 @@ msgstr ""
 "%1$sstuðningsbeiðniseyðublað%2$s til að hafa samband við okkur og vertu viss "
 "um að fylgja með %3$skerfisskýrslu%4$s."
 
-#: class-r34ics.php:356
+#: class-r34ics.php:363
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -155,7 +155,7 @@ msgstr ""
 "venjulega uppfærðar. %3$s Mundu að þú getur notað %4$sClear Cached Calendar "
 "Data%5$s til að hreinsa skyndiminnið handvirkt hvenær sem er, ef þörf krefur."
 
-#: class-r34ics.php:377
+#: class-r34ics.php:384
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -172,11 +172,11 @@ msgstr ""
 "%6$sbloggfærsluna%7$s okkar, eða til að skipta yfir í nýju sjálfgefin gildi, "
 "kveiktu á %8$s valkostinum á %9$s stillingasíðunni%10$s."
 
-#: class-r34ics.php:377 templates/admin/settings.php:209
+#: class-r34ics.php:384 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Nota nýja sjálfgefna gildi paraметra (v.10.6)"
 
-#: class-r34ics.php:389
+#: class-r34ics.php:396
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -192,7 +192,7 @@ msgstr ""
 "nýrri, vinsamlegast heimsæktu %4$sWordPress stuðningsvettvanginn%5$s til að "
 "fá aðstoð."
 
-#: class-r34ics.php:401
+#: class-r34ics.php:408
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -205,7 +205,7 @@ msgstr ""
 "Vinsamlegast hreinsið skyndiminni viðbótanna sem þið eruð að nota til að "
 "tryggja að dagatalin hlaðast rétt með nýju aðferðinni."
 
-#: class-r34ics.php:414
+#: class-r34ics.php:421
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -218,46 +218,46 @@ msgstr ""
 "allt. Vinsamlegast skoðið %4$sbreytingaskrána%5$s fyrir nánari upplýsingar "
 "um þessa uppfærslu."
 
-#: class-r34ics.php:463 templates/admin/admin.php:24
+#: class-r34ics.php:470 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Byrja hér"
 
-#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Stillingar"
 
-#: class-r34ics.php:465 templates/admin/admin.php:29
+#: class-r34ics.php:472 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "Útlit"
 
-#: class-r34ics.php:466 templates/admin/admin.php:33
+#: class-r34ics.php:473 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "Veitufyrirtæki"
 
-#: class-r34ics.php:467 templates/admin/admin.php:37
+#: class-r34ics.php:474 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "Kerfisskýrsla"
 
-#: class-r34ics.php:468 templates/admin/admin.php:41
+#: class-r34ics.php:475 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "Aðstoð"
 
-#: class-r34ics.php:471
+#: class-r34ics.php:478
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "Uppfærðu í %1$s!"
 
-#: class-r34ics.php:501
+#: class-r34ics.php:508
 msgid "Show/hide all"
 msgstr "Sýna/fela allt"
 
-#: class-r34ics.php:782
+#: class-r34ics.php:796
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -271,36 +271,36 @@ msgstr ""
 "að aðskilja mörg URL gætirðu einnig reynt að nota rörmerkið (|) í staðinn. "
 "Hið fyrirhugaða URL:"
 
-#: class-r34ics.php:1226
+#: class-r34ics.php:1251
 msgid "Hide past events"
 msgstr "Fela fyrri atburði"
 
-#: class-r34ics.php:1227 templates/calendar-month.php:96
+#: class-r34ics.php:1252 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Sýna fyrri atburði"
 
-#: class-r34ics.php:1308
+#: class-r34ics.php:1333
 msgid "Contact:"
 msgstr "Hafðu samband:"
 
-#: class-r34ics.php:1314
+#: class-r34ics.php:1339
 msgid "Resources:"
 msgstr "Auðlindir:"
 
-#: class-r34ics.php:1324
+#: class-r34ics.php:1349
 msgid "Click for more..."
 msgstr "Smelltu til að sjá meira..."
 
-#: class-r34ics.php:1358
+#: class-r34ics.php:1383
 msgid "Save to your calendar"
 msgstr "Bæta við dagatalinu þínu"
 
-#: class-r34ics.php:1461
+#: class-r34ics.php:1486
 msgid "Cancelled"
 msgstr "Hætt við"
 
-#: class-r34ics.php:1574
+#: class-r34ics.php:1599
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -308,11 +308,16 @@ msgstr ""
 "Legacy parser-valkosturinn er úreltur og verður fjarlægður í komandi "
 "uppfærslu."
 
-#: class-r34ics.php:1665
+#: class-r34ics.php:1690
 msgid "Print"
 msgstr "Prenta"
 
-#: class-r34ics.php:1925
+#: class-r34ics.php:1794
+#, php-format
+msgid "Powered by %1$s"
+msgstr "Knúið af %1$s"
+
+#: class-r34ics.php:1968
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -320,7 +325,7 @@ msgstr ""
 "Eiginleikinn \"currentweek\" í shortcode-inum er úreltur. Vinsamlegast "
 "notaðu view=\"week\" í staðinn."
 
-#: class-r34ics.php:1929
+#: class-r34ics.php:1972
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -328,7 +333,7 @@ msgstr ""
 "Eiginleikinn \"legendinline\" í shortcode er úreltur. Vinsamlegast notaðu "
 "legendstyle=\"inline\" í shortcode-inum þínum í staðinn."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2330
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -337,7 +342,7 @@ msgstr ""
 "%1$s hefur %2$sendurræst%3$s birtingu dagatalanna á forsíðum. Ef vefsvæðið "
 "þitt notar skyndiminni-viðbót gætirðu þurft að tæma skyndiminnið."
 
-#: class-r34ics.php:2274
+#: class-r34ics.php:2338
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -346,21 +351,21 @@ msgstr ""
 "%1$s hefur %2$spausað%3$s birtingu dagatalanna á forsíðum. Ef vefsvæðið þitt "
 "notar skyndiminni-viðbót gætir þú þurft að tæma skyndiminnisgeymsluna."
 
-#: class-r34ics.php:2286
+#: class-r34ics.php:2350
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Hreinsaði %1$s %2$s tímabundna atburði."
 
-#: class-r34ics.php:2293
+#: class-r34ics.php:2357
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Engar %1$s skammtímabreytingar fundust."
 
-#: class-r34ics.php:2302
+#: class-r34ics.php:2366
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Allar vistaðar ICS-vefslóðir hafa verið hreinsaðar."
 
-#: class-r34ics.php:2309
+#: class-r34ics.php:2373
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -369,7 +374,7 @@ msgstr ""
 "Öll %1$s stillingar hafa verið stilltar aftur í upprunalegt ástand og "
 "vistaðar ICS-fóðurs-URL-slóðir hafa verið hreinsaðar."
 
-#: class-r34ics.php:2392
+#: class-r34ics.php:2456
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -378,11 +383,11 @@ msgstr ""
 "URL-ið fyrir fóðrið virðist innihalda HTTP Basic Authentication-auðkenni. "
 "Reyndu að slökkva á %1$s valkostinum undir %2$s flipanum hér að ofan."
 
-#: class-r34ics.php:2392 templates/admin/settings.php:85
+#: class-r34ics.php:2456 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Notaðu gamaldags aðferð til að senda fóðurskipanir"
 
-#: class-r34ics.php:2398
+#: class-r34ics.php:2462
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -398,17 +403,17 @@ msgstr ""
 "%4$snotendahandbók%5$s okkar fyrir leiðbeiningar um hvernig þú færð réttu "
 "virku fóðurslóðina."
 
-#: class-r34ics.php:2404
+#: class-r34ics.php:2468
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Villa: Ekki var hægt að leysa IP-tölu fyrir %1$s."
 
-#: class-r34ics.php:2407
+#: class-r34ics.php:2471
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Leyst IP-tala fyrir %1$s:"
 
-#: class-r34ics.php:2432
+#: class-r34ics.php:2499
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -417,7 +422,7 @@ msgstr ""
 "%1$s Útlitið hefur verið uppfært.%2$s Þú gætir þurft að endurnýja síðuna til "
 "að sjá sumar breytingar."
 
-#: class-r34ics.php:2492
+#: class-r34ics.php:2559
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -425,7 +430,7 @@ msgstr ""
 "Texti sem sleginn var inn í reitinn \"Default shortcode\" er ekki gilt "
 "shortcode og var ekki vistaður."
 
-#: class-r34ics.php:2549
+#: class-r34ics.php:2616
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -434,15 +439,15 @@ msgstr ""
 "%1$s Stillingar uppfærðar. %2$s Þú gætir þurft að endurnýja síðuna til að "
 "sjá sumar breytingar."
 
-#: class-r34ics.php:2862
+#: class-r34ics.php:2936
 msgid "calendar event"
 msgstr "dagskrárviðburður"
 
-#: class-r34ics.php:2868
+#: class-r34ics.php:2942
 msgid "Event download failed."
 msgstr "Niðurhal viðburðar mistókst."
 
-#: class-r34ics.php:3333
+#: class-r34ics.php:3418
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -452,16 +457,7 @@ msgstr ""
 "uppfærslu innan skamms. Vinsamlegast prófið fóðursendingar ykkar með legacy-"
 "aðferðinni slökkt."
 
-#: compatibility.php:38
-#, php-format
-msgid ""
-"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
-"your site to a newer version of WordPress as soon as possible."
-msgstr ""
-"Komandi uppfærslur á %1$s krefjast WordPress 5.3 eða nýrri. Vinsamlegast "
-"uppfærðu síðuna þína í nýrri útgáfu af WordPress sem fyrst."
-
-#: functions.php:1065
+#: functions.php:1169
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -476,51 +472,51 @@ msgstr ""
 "%3$s. Af þeim sökum kunna þýðingar %1$s ekki að hlaðast rétt á meðan "
 "árekstursvaldandi þýðingarviðbótin er virk."
 
-#: functions.php:1188 functions.php:1196 functions.php:1205
+#: functions.php:1292 functions.php:1300 functions.php:1309
 msgid "Map"
 msgstr "Kort"
 
-#: functions.php:1510
+#: functions.php:1617
 msgid "Recurring event"
 msgstr "Endurtekinn viðburður"
 
-#: functions.php:1515
+#: functions.php:1622
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Endurtekur sig á hverjum %1$s árum"
 
-#: functions.php:1515
+#: functions.php:1622
 msgid "Recurs yearly"
 msgstr "Endurtekur sig árlega"
 
-#: functions.php:1518
+#: functions.php:1625
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Endurtekur sig á hverjum %1$s mánuðum"
 
-#: functions.php:1518
+#: functions.php:1625
 msgid "Recurs monthly"
 msgstr "Endurtekur sig mánaðarlega"
 
-#: functions.php:1521
+#: functions.php:1628
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Endurtekur sig á hverjum %1$s vikum"
 
-#: functions.php:1521
+#: functions.php:1628
 msgid "Recurs weekly"
 msgstr "Endurtekur sig vikulega"
 
-#: functions.php:1524
+#: functions.php:1631
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Endurtekur sig á hverjum %1$s dögum"
 
-#: functions.php:1524
+#: functions.php:1631
 msgid "Recurs daily"
 msgstr "Endurtekur sig daglega"
 
-#: functions.php:1697
+#: functions.php:1804
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -533,7 +529,7 @@ msgstr ""
 "Dagatal þitt gæti ekki birst rétt vegna þess. Vinsamlegast fjarlægðu "
 "smellanlega hlekkinn úr shortcode-inum."
 
-#: functions.php:2029
+#: functions.php:2137
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() fallið er ekki lengur studd."
 
@@ -828,7 +824,25 @@ msgstr "Dimmur hamur"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "Vendir litapallettu (ljósir litir á dökkum bakgrunni)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:226
+#: templates/admin/appearance.php:71
+msgid "Miscellaneous"
+msgstr "Ýmislegt"
+
+#: templates/admin/appearance.php:78
+#, php-format
+msgid "Give %1$s credit"
+msgstr "Gefðu %1$s viðurkenningu"
+
+#: templates/admin/appearance.php:83
+#, php-format
+msgid ""
+"Help spread the word about %1$s with a small attribution link below your "
+"calendars. Thank you for your support!"
+msgstr ""
+"Aðstoðaðu við að dreifa orðinu um %1$s með litlum viðurkenningarhlekk undir "
+"dagatölum þínum. Takk fyrir stuðninginn!"
+
+#: templates/admin/appearance.php:94 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Vista breytingar"
 
@@ -1446,3 +1460,11 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Herbergi 34 Skapandi þjónusta, LLC"
+
+#, php-format
+#~ msgid ""
+#~ "Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+#~ "your site to a newer version of WordPress as soon as possible."
+#~ msgstr ""
+#~ "Komandi uppfærslur á %1$s krefjast WordPress 5.3 eða nýrri. Vinsamlegast "
+#~ "uppfærðu síðuna þína í nýrri útgáfu af WordPress sem fyrst."

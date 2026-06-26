@@ -5,7 +5,7 @@ Tags: calendar, Google, Microsoft, events, ICS
 Requires at least: 5.3
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 12.1.0.1
+Stable tag: 12.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,7 +45,11 @@ _This plugin includes the PHP ICS Parser library by Jonathan Goode, John Grogg a
 
 == Installation ==
 
-Please see our [Quick Start Guide](https://icscalendar.com/quick-start/). The plugin's admin page also includes a Getting Started tab with links to additional documentation.
+Once the plugin is installed and activated, use the shortcode below (adding your own ICS feed URL between the quotation marks) to insert a calendar into your pages. Use our online [Shortcode Builder](https://icscalendar.com/shortcode-builder/) to easily create a customized shortcode, or consult the [User Guide](https://icscalendar.com/user-guide) for more information.
+
+`[ics_calendar url=""]`
+
+Be sure you are using the _iCalendar subscription (ICS)_ URL (i.e. for importing into a calendar program), not the URL for viewing a calendar in a web browser. To test if you have the correct URL, paste it directly into your browser address bar. It should download an `.ics` file, not display the calendar in the browser.
 
 == Frequently Asked Questions ==
 
@@ -97,9 +101,19 @@ The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional 
 
 == Changelog ==
 
-= 12.1.0.1 - 2026.06.21 =
+= 12.1.1 - 2026.06.26 =
 
-_This update has no changes from version 12.1.0; it is being introduced because the WordPress repository is failing to pick up the 12.1.0 update._
+* Admin:
+  * Fixed issue of a large number of irrelevant, version-related admin notices appearing on initial installation.
+  * Modified `r34ics_admin_full_access()` function, adding the `$multisite_check` parameter. This allows for conditionally checking for Multisite Super Admin access. Prior to this change, in a Multisite configuration, only network Super Admins could access ICS Calendar settings. All settings are site-specific, so site-specific Administrators should be allowed to access them. The conditional retains the ability to check for Super Admin access if needed. (Presently this is only needed for the License tab in the Pro version.)
+* Appearance settings:
+  * Added "Give ICS Calendar credit" option. (This is turned OFF by default.) Adds a small "Powered by ICS Calendar" credit link below each calendar. Thank you for your support!
+* Shortcode parameters:
+  * Added `eventdescdateformat` parameter to allow different formatting for dates in the event description hover box/lightbox than in the main calendar view. If omitted, will fall back to `format` value or default for the view.
+* Miscellaneous:
+  * Added `r34ics_display_calendar_before_render_template` and `r34ics_display_calendar_hooks_render_template` on early render.
+* i18n:
+  * Updated translation strings.
 
 = 12.1.0 - 2026.06.20 =
 

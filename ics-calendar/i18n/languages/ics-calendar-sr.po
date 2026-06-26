@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-04-27 10:34-0500\n"
-"PO-Revision-Date: 2026-04-27 10:34-0500\n"
+"POT-Creation-Date: 2026-06-24 12:31-0500\n"
+"PO-Revision-Date: 2026-06-24 12:31-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:310
+#: class-r34ics.php:317
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -31,7 +31,7 @@ msgstr ""
 "страницама. Можете наставити приказивање календара на картици %4$sУслужни "
 "програми%5$s %6$sовде%7$s."
 
-#: class-r34ics.php:319
+#: class-r34ics.php:326
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -42,7 +42,7 @@ msgstr ""
 "је ICS календар намењен за покретање на веб серверу, неке функције могу бити "
 "недоступне или можда неће правилно функционисати."
 
-#: class-r34ics.php:328
+#: class-r34ics.php:335
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -59,7 +59,7 @@ msgstr ""
 "ради правилног приказа времена. Погледајте нашу %6$sдокументацију%7$s за "
 "додатне информације о овом проблему."
 
-#: class-r34ics.php:340
+#: class-r34ics.php:347
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
@@ -68,7 +68,7 @@ msgstr ""
 "Важно! Изгледа да ваша конфигурација %1$s прелази ограничења брзине "
 "добављача изворног календара."
 
-#: class-r34ics.php:342
+#: class-r34ics.php:349
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
@@ -77,7 +77,7 @@ msgstr ""
 "Ако се ваши календари не учитавају исправно, прегледајте подешавања и "
 "коришћење %1$s:"
 
-#: class-r34ics.php:344
+#: class-r34ics.php:351
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
@@ -86,7 +86,7 @@ msgstr ""
 "Не користите %1$s у својим кратким кодовима. Ова функција је намењена само "
 "за решавање проблема и не би требало да буде трајно укључена."
 
-#: class-r34ics.php:346
+#: class-r34ics.php:353
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -97,7 +97,7 @@ msgstr ""
 "%4$s43200%5$s (12 сати) или више, да бисте смањили учесталост захтева "
 "добављачу. (Погледајте напомену испод.)"
 
-#: class-r34ics.php:348
+#: class-r34ics.php:355
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
@@ -106,7 +106,7 @@ msgstr ""
 "Избегавајте укључивање великог броја фидова (10 или више) од истог добављача "
 "у један %1$s кратки код."
 
-#: class-r34ics.php:350
+#: class-r34ics.php:357
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -115,7 +115,7 @@ msgstr ""
 "Привремено паузирајте ICS календар на вашим предњим страницама помоћу "
 "услужног програма %1$sПаузирај календаре%2$s. (Препоручује се 24-48 сати.)"
 
-#: class-r34ics.php:352
+#: class-r34ics.php:359
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -130,7 +130,7 @@ msgstr ""
 "покренути привремену блокаду на IP адреси вашег веб сервера, или могуће на "
 "целој вашој мрежи за хостовање, од стране добављача календара."
 
-#: class-r34ics.php:354
+#: class-r34ics.php:361
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -144,7 +144,7 @@ msgstr ""
 "да бисте нас контактирали и обавезно приложите свој %3$sсистемски "
 "извештај%4$s."
 
-#: class-r34ics.php:356
+#: class-r34ics.php:363
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -158,7 +158,7 @@ msgstr ""
 "услужни програм %4$sОбриши кеширане податке календара%5$s да бисте ручно "
 "обрисали кеш меморију у било ком тренутку, ако је потребно."
 
-#: class-r34ics.php:377
+#: class-r34ics.php:384
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -175,11 +175,11 @@ msgstr ""
 "%6$sблог пост%7$s или, да бисте прешли на нова подразумевана подешавања, "
 "укључите опцију %8$s на страници %9$s подешавања%10$s."
 
-#: class-r34ics.php:377 templates/admin/settings.php:209
+#: class-r34ics.php:384 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Користите нове подразумеване вредности параметара (v.10.6)"
 
-#: class-r34ics.php:389
+#: class-r34ics.php:396
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -194,7 +194,7 @@ msgstr ""
 "Ако наиђете на било какве нове проблеме након надоградње на верзију 11 или "
 "новију, посетите %4$sWordPress форуме за подршку%5$s за помоћ."
 
-#: class-r34ics.php:401
+#: class-r34ics.php:408
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -207,7 +207,7 @@ msgstr ""
 "да обришете све додатке за кеширање које користите како бисте осигурали да "
 "се ваши календари правилно учитавају помоћу новог метода."
 
-#: class-r34ics.php:414
+#: class-r34ics.php:421
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -220,46 +220,46 @@ msgstr ""
 "интерфејса. Више детаља о овом ажурирању потражите у %4$sдневнику "
 "промена%5$s."
 
-#: class-r34ics.php:463 templates/admin/admin.php:24
+#: class-r34ics.php:470 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "Почетак"
 
-#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Подешавања"
 
-#: class-r34ics.php:465 templates/admin/admin.php:29
+#: class-r34ics.php:472 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "Изглед"
 
-#: class-r34ics.php:466 templates/admin/admin.php:33
+#: class-r34ics.php:473 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "Сервисне Информације"
 
-#: class-r34ics.php:467 templates/admin/admin.php:37
+#: class-r34ics.php:474 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "Системски извештај"
 
-#: class-r34ics.php:468 templates/admin/admin.php:41
+#: class-r34ics.php:475 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "Подршка"
 
-#: class-r34ics.php:471
+#: class-r34ics.php:478
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "Надоградите на %1$s!"
 
-#: class-r34ics.php:501
+#: class-r34ics.php:508
 msgid "Show/hide all"
 msgstr "Прикажи/сакриј све"
 
-#: class-r34ics.php:782
+#: class-r34ics.php:796
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -272,47 +272,52 @@ msgstr ""
 "датотеке доступна. Ако користите размаке за разграничавање више URL адреса, "
 "можете покушати да користите и усправну црту. Погођена URL адреса:"
 
-#: class-r34ics.php:1226
+#: class-r34ics.php:1251
 msgid "Hide past events"
 msgstr "Сакриј прошле догађаје"
 
-#: class-r34ics.php:1227 templates/calendar-month.php:96
+#: class-r34ics.php:1252 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Прикажи прошле догађаје"
 
-#: class-r34ics.php:1308
+#: class-r34ics.php:1333
 msgid "Contact:"
 msgstr "Контакт:"
 
-#: class-r34ics.php:1314
+#: class-r34ics.php:1339
 msgid "Resources:"
 msgstr "Ресурси:"
 
-#: class-r34ics.php:1324
+#: class-r34ics.php:1349
 msgid "Click for more..."
 msgstr "Кликните за више..."
 
-#: class-r34ics.php:1358
+#: class-r34ics.php:1383
 msgid "Save to your calendar"
 msgstr "Сачувај у календару"
 
-#: class-r34ics.php:1461
+#: class-r34ics.php:1486
 msgid "Cancelled"
 msgstr "Otkazana"
 
-#: class-r34ics.php:1574
+#: class-r34ics.php:1599
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr ""
 "Опција застарелих парсера је застарела и биће уклоњена у будућем ажурирању."
 
-#: class-r34ics.php:1665
+#: class-r34ics.php:1690
 msgid "Print"
 msgstr "Штампај"
 
-#: class-r34ics.php:1925
+#: class-r34ics.php:1794
+#, php-format
+msgid "Powered by %1$s"
+msgstr "Покреће %1$s"
+
+#: class-r34ics.php:1968
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -320,7 +325,7 @@ msgstr ""
 "Атрибут кратког кода „currentweek“ је застарео. Уместо тога користите "
 "view=\"week\" у свом кратком коду."
 
-#: class-r34ics.php:1929
+#: class-r34ics.php:1972
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -328,7 +333,7 @@ msgstr ""
 "Атрибут кратког кода „legendinline“ је застарео. Уместо тога користите "
 "legendstyle=\"inline\" у свом кратком коду."
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2330
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -338,7 +343,7 @@ msgstr ""
 "Ако ваш сајт користи додатак за кеширање, можда ћете морати да обришете кеш "
 "меморију."
 
-#: class-r34ics.php:2274
+#: class-r34ics.php:2338
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -348,21 +353,21 @@ msgstr ""
 "страницама. Ако ваш сајт користи додатак за кеширање, можда ћете морати да "
 "обришете кеш меморију."
 
-#: class-r34ics.php:2286
+#: class-r34ics.php:2350
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Обрисано је %1$s %2$s пролазних појава."
 
-#: class-r34ics.php:2293
+#: class-r34ics.php:2357
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Није пронађен ниједан пролазни процес (%1$s)."
 
-#: class-r34ics.php:2302
+#: class-r34ics.php:2366
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Сви сачувани URL-ови ICS фида су обрисани."
 
-#: class-r34ics.php:2309
+#: class-r34ics.php:2373
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -371,7 +376,7 @@ msgstr ""
 "Сва подешавања за %1$s су враћена на подразумеване вредности, а сачувани URL-"
 "ови ICS фида су обрисани."
 
-#: class-r34ics.php:2392
+#: class-r34ics.php:2456
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -380,11 +385,11 @@ msgstr ""
 "Изгледа да URL адреса вашег фида садржи акредитиве за основну HTTP "
 "аутентификацију. Покушајте да искључите опцију %1$s на картици %2$s изнад."
 
-#: class-r34ics.php:2392 templates/admin/settings.php:85
+#: class-r34ics.php:2456 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Користи стари метод захтева за фид"
 
-#: class-r34ics.php:2398
+#: class-r34ics.php:2462
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -400,17 +405,17 @@ msgstr ""
 "%4$sУпутство за кориснике%5$s за упутства о добијању исправне динамичке URL "
 "адресе фида."
 
-#: class-r34ics.php:2404
+#: class-r34ics.php:2468
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Грешка: Није могуће решити IP адресу за %1$s."
 
-#: class-r34ics.php:2407
+#: class-r34ics.php:2471
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Решена IP адреса за %1$s:"
 
-#: class-r34ics.php:2432
+#: class-r34ics.php:2499
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -419,7 +424,7 @@ msgstr ""
 "%1$sИзглед је ажуриран.%2$s Можда ћете морати да освежите страницу да бисте "
 "видели неке промене."
 
-#: class-r34ics.php:2492
+#: class-r34ics.php:2559
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -427,7 +432,7 @@ msgstr ""
 "Текст унет у поље „Подразумевани кратки код“ није важећи кратки код и није "
 "сачуван."
 
-#: class-r34ics.php:2549
+#: class-r34ics.php:2616
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -436,15 +441,15 @@ msgstr ""
 "%1$sПодешавања су ажурирана.%2$s Можда ћете морати да освежите страницу да "
 "бисте видели неке промене."
 
-#: class-r34ics.php:2862
+#: class-r34ics.php:2936
 msgid "calendar event"
 msgstr "догађај у календару"
 
-#: class-r34ics.php:2868
+#: class-r34ics.php:2942
 msgid "Event download failed."
 msgstr "Преузимање догађаја није успело."
 
-#: class-r34ics.php:3333
+#: class-r34ics.php:3418
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -454,16 +459,7 @@ msgstr ""
 "будућности. Тестирајте своје фидове са искљученом методом захтева за стари "
 "фид."
 
-#: compatibility.php:38
-#, php-format
-msgid ""
-"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
-"your site to a newer version of WordPress as soon as possible."
-msgstr ""
-"Будућа ажурирања сајта %1$s захтеваће WordPress 5.3 или новији. Молимо вас "
-"да што пре ажурирате свој сајт на новију верзију WordPress-а."
-
-#: functions.php:1065
+#: functions.php:1169
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -478,51 +474,51 @@ msgstr ""
 "као што је %3$s. Као резултат тога, преводи %1$s се можда неће правилно "
 "учитати док је активан сукобљени додатак за превод."
 
-#: functions.php:1188 functions.php:1196 functions.php:1205
+#: functions.php:1292 functions.php:1300 functions.php:1309
 msgid "Map"
 msgstr "Mapa"
 
-#: functions.php:1510
+#: functions.php:1617
 msgid "Recurring event"
 msgstr "Понављајући догађај"
 
-#: functions.php:1515
+#: functions.php:1622
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Понавља се сваких %1$s година"
 
-#: functions.php:1515
+#: functions.php:1622
 msgid "Recurs yearly"
 msgstr "Понавља се годишње"
 
-#: functions.php:1518
+#: functions.php:1625
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Понавља се сваких %1$s месеци"
 
-#: functions.php:1518
+#: functions.php:1625
 msgid "Recurs monthly"
 msgstr "Понавља се месечно"
 
-#: functions.php:1521
+#: functions.php:1628
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Понавља се сваких %1$s недеља"
 
-#: functions.php:1521
+#: functions.php:1628
 msgid "Recurs weekly"
 msgstr "Понавља се недељно"
 
-#: functions.php:1524
+#: functions.php:1631
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Понавља се сваких %1$s дана"
 
-#: functions.php:1524
+#: functions.php:1631
 msgid "Recurs daily"
 msgstr "Понавља се свакодневно"
 
-#: functions.php:1697
+#: functions.php:1804
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -535,7 +531,7 @@ msgstr ""
 "тога се ваш календар можда неће правилно приказивати. Уклоните везу на коју "
 "се може кликнути из кратког кода."
 
-#: functions.php:2029
+#: functions.php:2137
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Функција r34ics_url_get_contents() више није подржана."
 
@@ -832,7 +828,25 @@ msgstr "Тамни режим"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "Инвертира палету боја (светле боје на тамној позадини)."
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:226
+#: templates/admin/appearance.php:71
+msgid "Miscellaneous"
+msgstr "Разно"
+
+#: templates/admin/appearance.php:78
+#, php-format
+msgid "Give %1$s credit"
+msgstr "Признајте заслуге %1$s"
+
+#: templates/admin/appearance.php:83
+#, php-format
+msgid ""
+"Help spread the word about %1$s with a small attribution link below your "
+"calendars. Thank you for your support!"
+msgstr ""
+"Помозите у ширењу вести о %1$s постављањем малог линка са назнаком испод "
+"ваших календара. Хвала вам на подршци!"
+
+#: templates/admin/appearance.php:94 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "Сачувај промене"
 
@@ -1454,6 +1468,14 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Соба 34 Креативне услуге, ДОО"
+
+#, php-format
+#~ msgid ""
+#~ "Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+#~ "your site to a newer version of WordPress as soon as possible."
+#~ msgstr ""
+#~ "Будућа ажурирања сајта %1$s захтеваће WordPress 5.3 или новији. Молимо "
+#~ "вас да што пре ажурирате свој сајт на новију верзију WordPress-а."
 
 #~ msgid ""
 #~ "Configure all calendar settings with an easy visual interface... no need "

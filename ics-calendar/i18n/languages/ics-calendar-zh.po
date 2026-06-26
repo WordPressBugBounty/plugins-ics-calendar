@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-04-27 10:33-0500\n"
-"PO-Revision-Date: 2026-04-27 10:33-0500\n"
+"POT-Creation-Date: 2026-06-24 12:31-0500\n"
+"PO-Revision-Date: 2026-06-24 12:31-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:310
+#: class-r34ics.php:317
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -30,7 +30,7 @@ msgstr ""
 "%1$s当前处于%2$s暂停%3$s状态，前端页面暂不提供日历服务。您可通过%4$s实用工"
 "具%5$s选项卡%6$s在此处%7$s重新启用日历服务。"
 
-#: class-r34ics.php:319
+#: class-r34ics.php:326
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -40,7 +40,7 @@ msgstr ""
 "%1$s您正在WordPress Playground环境中运行ICS日历。%2$s由于ICS日历旨在运行于Web"
 "服务器，部分功能可能无法使用或无法正常运作。"
 
-#: class-r34ics.php:328
+#: class-r34ics.php:335
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -55,28 +55,28 @@ msgstr ""
 "近且时区相同的城市，以确保时间显示准确。有关此问题的更多信息，请参阅我们"
 "的%6$s文档%7$s。"
 
-#: class-r34ics.php:340
+#: class-r34ics.php:347
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
 "provider rate limits."
 msgstr "重要提示！您的%1$s配置似乎已超过源日历提供商的速率限制。"
 
-#: class-r34ics.php:342
+#: class-r34ics.php:349
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
 "and usage:"
 msgstr "如果您的日历无法正常加载，请检查您的%1$s设置和使用情况："
 
-#: class-r34ics.php:344
+#: class-r34ics.php:351
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
 "troubleshooting only, and should not be left on permanently."
 msgstr "请勿在短代码中使用 %1$s。此功能仅用于故障排除，不应长期启用。"
 
-#: class-r34ics.php:346
+#: class-r34ics.php:353
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -86,14 +86,14 @@ msgstr ""
 "将%1$s %2$s临时（缓存）过期时间%3$s设置为%4$s43200%5$s（12小时）或更长，以降"
 "低向提供商发送请求的频率。（参见下方注释。）"
 
-#: class-r34ics.php:348
+#: class-r34ics.php:355
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
 "in a single %1$s shortcode."
 msgstr "避免在单个%1$s短代码中包含来自同一提供商的大量订阅源（10个或更多）。"
 
-#: class-r34ics.php:350
+#: class-r34ics.php:357
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -102,7 +102,7 @@ msgstr ""
 "使用%1$s暂停日历%2$s工具，在前端页面暂时暂停ICS日历服务。（建议暂停24-48小"
 "时。）"
 
-#: class-r34ics.php:352
+#: class-r34ics.php:359
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -115,7 +115,7 @@ msgstr ""
 "低%2$sreload%3$s设置绕过此缓存机制，可能会触发日历服务商对您网站服务器IP地址"
 "（甚至整个托管网络）实施临时封禁。"
 
-#: class-r34ics.php:354
+#: class-r34ics.php:361
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -127,7 +127,7 @@ msgstr ""
 "若问题仍未解决，请通过我们的%1$s支持请求表单%2$s联系我们，并务必附上您的%3$s"
 "系统报告%4$s。"
 
-#: class-r34ics.php:356
+#: class-r34ics.php:363
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -139,7 +139,7 @@ msgstr ""
 "息的通常更新频率。%3$s请记住，您可随时使用%4$s清除缓存日历数据%5$s工具手动清"
 "除缓存。"
 
-#: class-r34ics.php:377
+#: class-r34ics.php:384
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -153,11 +153,11 @@ msgstr ""
 "从旧版本升级时这些新默认值%4$s不会%5$s自动启用。 若需了解变更详情，请参阅我们"
 "的%6$s博客文章%7$s；如需启用新默认设置，请在%9$s设置%10$s页面开启%8$s选项。"
 
-#: class-r34ics.php:377 templates/admin/settings.php:209
+#: class-r34ics.php:384 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "使用新的参数默认值（v.10.6）"
 
-#: class-r34ics.php:389
+#: class-r34ics.php:396
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -170,7 +170,7 @@ msgstr ""
 "WordPress内置标准函数实现，因此应与所有现有安装完全兼容。若升级至11.0及以上版"
 "本后遇到新问题，请访问%4$sWordPress支持论坛%5$s寻求帮助。"
 
-#: class-r34ics.php:401
+#: class-r34ics.php:408
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -182,7 +182,7 @@ msgstr ""
 "加载日历参数。请清除您正在使用的任何缓存插件，以确保日历能通过新方法正确加"
 "载。"
 
-#: class-r34ics.php:414
+#: class-r34ics.php:421
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -193,46 +193,46 @@ msgstr ""
 "%1$s欢迎使用%2$s第12版！%3$s12.0版本新增了更多故障排除工具，同时全面优化了性"
 "能并完善了界面设计。有关本次更新的详细信息，请参阅%4$s变更日志%5$s。"
 
-#: class-r34ics.php:463 templates/admin/admin.php:24
+#: class-r34ics.php:470 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "入门指南"
 
-#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "设置"
 
-#: class-r34ics.php:465 templates/admin/admin.php:29
+#: class-r34ics.php:472 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "外观"
 
-#: class-r34ics.php:466 templates/admin/admin.php:33
+#: class-r34ics.php:473 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "工具"
 
-#: class-r34ics.php:467 templates/admin/admin.php:37
+#: class-r34ics.php:474 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "系统报告"
 
-#: class-r34ics.php:468 templates/admin/admin.php:41
+#: class-r34ics.php:475 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "支持"
 
-#: class-r34ics.php:471
+#: class-r34ics.php:478
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "升级至%1$s！"
 
-#: class-r34ics.php:501
+#: class-r34ics.php:508
 msgid "Show/hide all"
 msgstr "显示/隐藏全部"
 
-#: class-r34ics.php:782
+#: class-r34ics.php:796
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -244,59 +244,64 @@ msgstr ""
 "cURL或allow_url_fopen功能。若使用空格分隔多个URL，建议改用竖线分隔符。受影响"
 "的URL："
 
-#: class-r34ics.php:1226
+#: class-r34ics.php:1251
 msgid "Hide past events"
 msgstr "隐藏过去的活动"
 
-#: class-r34ics.php:1227 templates/calendar-month.php:96
+#: class-r34ics.php:1252 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "显示过往事件"
 
-#: class-r34ics.php:1308
+#: class-r34ics.php:1333
 msgid "Contact:"
 msgstr "联系人:"
 
-#: class-r34ics.php:1314
+#: class-r34ics.php:1339
 msgid "Resources:"
 msgstr "相关资源"
 
-#: class-r34ics.php:1324
+#: class-r34ics.php:1349
 msgid "Click for more..."
 msgstr "点击查看更多..."
 
-#: class-r34ics.php:1358
+#: class-r34ics.php:1383
 msgid "Save to your calendar"
 msgstr "添加到日历"
 
-#: class-r34ics.php:1461
+#: class-r34ics.php:1486
 msgid "Cancelled"
 msgstr "已取消"
 
-#: class-r34ics.php:1574
+#: class-r34ics.php:1599
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr "旧版解析器选项已被弃用，将在未来的更新中移除。"
 
-#: class-r34ics.php:1665
+#: class-r34ics.php:1690
 msgid "Print"
 msgstr "打印"
 
-#: class-r34ics.php:1925
+#: class-r34ics.php:1794
+#, php-format
+msgid "Powered by %1$s"
+msgstr "由 %1$s 提供支持"
+
+#: class-r34ics.php:1968
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
 msgstr "\"currentweek\" 短代码属性已弃用。请改用 view=\"week\" 替代。"
 
-#: class-r34ics.php:1929
+#: class-r34ics.php:1972
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
 msgstr ""
 "\"legendinline\" 短代码属性已弃用。请改用 legendstyle=\"inline\" 替代。"
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2330
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -305,7 +310,7 @@ msgstr ""
 "%1$s已%2$s恢复%3$s在前端页面显示日历。若您的站点使用缓存插件，可能需要清除缓"
 "存。"
 
-#: class-r34ics.php:2274
+#: class-r34ics.php:2338
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -314,28 +319,28 @@ msgstr ""
 "%1$s已%2$s暂停%3$s在前端页面提供日历服务。若您的站点使用缓存插件，可能需要清"
 "除缓存。"
 
-#: class-r34ics.php:2286
+#: class-r34ics.php:2350
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "清除 %1$s %2$s 个瞬态。"
 
-#: class-r34ics.php:2293
+#: class-r34ics.php:2357
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s 未發現任何瞬態現象。"
 
-#: class-r34ics.php:2302
+#: class-r34ics.php:2366
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "所有已保存的ICS源URL均已清除。"
 
-#: class-r34ics.php:2309
+#: class-r34ics.php:2373
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
 "been cleared."
 msgstr "所有%1$s设置均已重置为默认值，已保存的ICS源URL已被清除。"
 
-#: class-r34ics.php:2392
+#: class-r34ics.php:2456
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -344,11 +349,11 @@ msgstr ""
 "您的订阅源网址似乎包含HTTP基本认证凭据。请尝试关闭上方%2$s选项卡下的%1$s选"
 "项。"
 
-#: class-r34ics.php:2392 templates/admin/settings.php:85
+#: class-r34ics.php:2456 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "使用传统数据源请求方法"
 
-#: class-r34ics.php:2398
+#: class-r34ics.php:2462
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -361,45 +366,45 @@ msgstr ""
 "为文件创建时日历的静态快照，不会反映源日历的后续更新。请参阅我们的%4$s用户指"
 "南%5$s，了解如何获取正确的动态源URL。"
 
-#: class-r34ics.php:2404
+#: class-r34ics.php:2468
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "错误：无法解析 %1$s 的 IP 地址。"
 
-#: class-r34ics.php:2407
+#: class-r34ics.php:2471
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$s 的解析 IP 地址："
 
-#: class-r34ics.php:2432
+#: class-r34ics.php:2499
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
 "changes."
 msgstr "%1$s外观已更新。%2$s您可能需要刷新页面才能看到部分更改。"
 
-#: class-r34ics.php:2492
+#: class-r34ics.php:2559
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
 msgstr "在“默认短代码”字段中输入的文本不是有效的短代码，因此未被保存。"
 
-#: class-r34ics.php:2549
+#: class-r34ics.php:2616
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
 "changes."
 msgstr "%1$s设置已更新。%2$s您可能需要刷新页面才能看到部分更改。"
 
-#: class-r34ics.php:2862
+#: class-r34ics.php:2936
 msgid "calendar event"
 msgstr "日历事件"
 
-#: class-r34ics.php:2868
+#: class-r34ics.php:2942
 msgid "Event download failed."
 msgstr "活动下载失败。"
 
-#: class-r34ics.php:3333
+#: class-r34ics.php:3418
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -408,16 +413,7 @@ msgstr ""
 "旧版数据源请求方法已被弃用，并将在近期更新中移除。请关闭旧版数据源请求方法后"
 "测试您的数据源。"
 
-#: compatibility.php:38
-#, php-format
-msgid ""
-"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
-"your site to a newer version of WordPress as soon as possible."
-msgstr ""
-"%1$s的未来更新将要求使用WordPress 5.3或更高版本。请尽快将您的网站更新至新版"
-"WordPress。"
-
-#: functions.php:1065
+#: functions.php:1169
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -430,51 +426,51 @@ msgstr ""
 "用。此操作旨在解决与某些翻译自定义插件（如 %3$s）的冲突。因此，当冲突的翻译插"
 "件处于活动状态时，%1$s 翻译可能无法正常加载。"
 
-#: functions.php:1188 functions.php:1196 functions.php:1205
+#: functions.php:1292 functions.php:1300 functions.php:1309
 msgid "Map"
 msgstr "地图"
 
-#: functions.php:1510
+#: functions.php:1617
 msgid "Recurring event"
 msgstr "再次发行"
 
-#: functions.php:1515
+#: functions.php:1622
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "每%1$s年重复一次"
 
-#: functions.php:1515
+#: functions.php:1622
 msgid "Recurs yearly"
 msgstr "每年重复"
 
-#: functions.php:1518
+#: functions.php:1625
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "每%1$s个月重复一次"
 
-#: functions.php:1518
+#: functions.php:1625
 msgid "Recurs monthly"
 msgstr "每月重复"
 
-#: functions.php:1521
+#: functions.php:1628
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "每%1$s周重复一次"
 
-#: functions.php:1521
+#: functions.php:1628
 msgid "Recurs weekly"
 msgstr "每周重复"
 
-#: functions.php:1524
+#: functions.php:1631
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "每%1$s天重复一次"
 
-#: functions.php:1524
+#: functions.php:1631
 msgid "Recurs daily"
 msgstr "每日重复"
 
-#: functions.php:1697
+#: functions.php:1804
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -485,7 +481,7 @@ msgstr ""
 "您%1$s短代码中的\"url\"属性似乎包含HTML标签；很可能您的URL已被转换为可点击链"
 "接。这可能导致日历无法正常显示。请移除短代码中的可点击链接。"
 
-#: functions.php:2029
+#: functions.php:2137
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() 函数不再受支持。"
 
@@ -757,7 +753,23 @@ msgstr "黑暗模式"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "反转配色方案（浅色系配深色背景）。"
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:226
+#: templates/admin/appearance.php:71
+msgid "Miscellaneous"
+msgstr "杂项"
+
+#: templates/admin/appearance.php:78
+#, php-format
+msgid "Give %1$s credit"
+msgstr "给予%1$s的肯定"
+
+#: templates/admin/appearance.php:83
+#, php-format
+msgid ""
+"Help spread the word about %1$s with a small attribution link below your "
+"calendars. Thank you for your support!"
+msgstr "请在您的日历下方添加一个小小的署名链接，帮助宣传 %1$s。感谢您的支持！"
+
+#: templates/admin/appearance.php:94 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "保存更改"
 
@@ -1330,6 +1342,14 @@ msgstr ""
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
 
+#, php-format
+#~ msgid ""
+#~ "Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+#~ "your site to a newer version of WordPress as soon as possible."
+#~ msgstr ""
+#~ "%1$s的未来更新将要求使用WordPress 5.3或更高版本。请尽快将您的网站更新至新"
+#~ "版WordPress。"
+
 #~ msgid ""
 #~ "Configure all calendar settings with an easy visual interface... no need "
 #~ "to manually type shortcodes."
@@ -1380,9 +1400,6 @@ msgstr "Room 34 Creative Services, LLC"
 #~ "选中后，所有日历都将通过 AJAX（页面加载后异步）呈现。这在与其他缓存插件配"
 #~ "合使用时，或者在日历包含大量事件时特别有用。通常情况下，日历数据会直接在初"
 #~ "始页面加载的 HTML 中发送，除非在简码中指定了 AJAX。"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "杂项"
 
 #~ msgid ""
 #~ "For your site security please do NOT post the System Report in the "

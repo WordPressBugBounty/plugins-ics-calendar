@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-04-27 10:35-0500\n"
-"PO-Revision-Date: 2026-04-27 10:35-0500\n"
+"POT-Creation-Date: 2026-06-24 12:33-0500\n"
+"PO-Revision-Date: 2026-06-24 12:33-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: class-r34ics.php:310
+#: class-r34ics.php:317
 #, php-format
 msgid ""
 "%1$s is currently %2$spaused%3$s, and is not serving calendars on front end "
@@ -31,7 +31,7 @@ msgstr ""
 "ていません。%4$sユーティリティ%5$sタブの%6$sこちら%7$sからカレンダー提供を再"
 "開できます。"
 
-#: class-r34ics.php:319
+#: class-r34ics.php:326
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -42,7 +42,7 @@ msgstr ""
 "はウェブサーバーでの実行を想定しているため、一部の機能が利用できない、または"
 "正常に動作しない場合があります。"
 
-#: class-r34ics.php:328
+#: class-r34ics.php:335
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -58,7 +58,7 @@ msgstr ""
 "を、お住まいの地域に最も近い、同じタイムゾーン内の都市に変更してください。こ"
 "の問題に関する詳細情報は、当社の%6$sドキュメント%7$sをご参照ください。"
 
-#: class-r34ics.php:340
+#: class-r34ics.php:347
 #, php-format
 msgid ""
 "Important! Your %1$s configuration appears to be exceeding source calendar "
@@ -67,7 +67,7 @@ msgstr ""
 "重要！あなたの%1$s設定は、ソースカレンダープロバイダーのレート制限を超えてい"
 "るようです。"
 
-#: class-r34ics.php:342
+#: class-r34ics.php:349
 #, php-format
 msgid ""
 "If your calendars are not loading properly, please review your %1$s settings "
@@ -76,7 +76,7 @@ msgstr ""
 "カレンダーが正しく読み込まれない場合は、%1$sの設定と使用状況をご確認くださ"
 "い："
 
-#: class-r34ics.php:344
+#: class-r34ics.php:351
 #, php-format
 msgid ""
 "Do not use %1$s in your shortcodes. This feature is intended for "
@@ -85,7 +85,7 @@ msgstr ""
 "ショートコード内で%1$sを使用しないでください。この機能はトラブルシューティン"
 "グ専用であり、常時有効にしておくべきではありません。"
 
-#: class-r34ics.php:346
+#: class-r34ics.php:353
 #, php-format
 msgid ""
 "Increase the %1$s %2$sTransient (cache) expiration%3$s setting to "
@@ -96,7 +96,7 @@ msgstr ""
 "間）以上に増やすことで、プロバイダーへのリクエスト頻度を減らします。（下記の"
 "注を参照）"
 
-#: class-r34ics.php:348
+#: class-r34ics.php:355
 #, php-format
 msgid ""
 "Avoid including a large number of feeds (10 or more) from the same provider "
@@ -105,7 +105,7 @@ msgstr ""
 "同一プロバイダーからのフィードを大量（10以上）に単一の%1$sショートコードに含"
 "めることは避けてください。"
 
-#: class-r34ics.php:350
+#: class-r34ics.php:357
 #, php-format
 msgid ""
 "Temporarily pause ICS Calendar on your front-end pages using the %1$sPause "
@@ -114,7 +114,7 @@ msgstr ""
 "フロントエンドページでICSカレンダーを一時停止するには、%1$sカレンダーの一時停"
 "止%2$sユーティリティを使用してください。（24～48時間の停止が推奨されます。）"
 
-#: class-r34ics.php:352
+#: class-r34ics.php:359
 #, php-format
 msgid ""
 "%1$s includes built-in caching, specifically to improve performance and "
@@ -129,7 +129,7 @@ msgstr ""
 "より、お客様のウェブサーバーIPアドレス、あるいはホスティングネットワーク全体"
 "が一時的にブロックされる可能性があります。"
 
-#: class-r34ics.php:354
+#: class-r34ics.php:361
 #, php-format
 msgid ""
 "After making the recommended changes, please allow up to 24 hours for your "
@@ -142,7 +142,7 @@ msgstr ""
 "合は、%1$sサポートリクエストフォーム%2$sからお問い合わせいただき、必ず%3$sシ"
 "ステムレポート%4$sを添付してください。"
 
-#: class-r34ics.php:356
+#: class-r34ics.php:363
 #, php-format
 msgid ""
 "Note: Set the %1$sTransient (cache) expiration%2$s as large as possible, "
@@ -156,7 +156,7 @@ msgstr ""
 "ユーティリティを使用して手動でキャッシュをクリアできることを覚えておいてくだ"
 "さい。"
 
-#: class-r34ics.php:377
+#: class-r34ics.php:384
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -173,11 +173,11 @@ msgstr ""
 "定に切り替える場合は、%9$s設定%10$sページで%8$sオプションを有効にしてくださ"
 "い。"
 
-#: class-r34ics.php:377 templates/admin/settings.php:209
+#: class-r34ics.php:384 templates/admin/settings.php:209
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "新しいパラメータのデフォルト値を使用する (v.10.6)"
 
-#: class-r34ics.php:389
+#: class-r34ics.php:396
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -192,7 +192,7 @@ msgstr ""
 "ド後に新たな問題が発生した場合は、%4$sWordPressサポートフォーラム%5$sでサポー"
 "トを受けてください。"
 
-#: class-r34ics.php:401
+#: class-r34ics.php:408
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.5.14.2 introduces a new, more secure "
@@ -205,7 +205,7 @@ msgstr ""
 "ダーが正しく読み込まれるよう、ご利用中のキャッシュプラグインをすべてクリアし"
 "てください。"
 
-#: class-r34ics.php:414
+#: class-r34ics.php:421
 #, php-format
 msgid ""
 "%1$sWelcome to %2$s version 12!%3$s Version 12.0 introduces additional "
@@ -218,46 +218,46 @@ msgstr ""
 "れています。このアップデートの詳細については、%4$s変更履歴%5$sをご覧くださ"
 "い。"
 
-#: class-r34ics.php:463 templates/admin/admin.php:24
+#: class-r34ics.php:470 templates/admin/admin.php:24
 #: templates/admin/getting-started.php:7 templates/admin/getting-started.php:46
 msgid "Getting Started"
 msgstr "はじめに"
 
-#: class-r34ics.php:464 class-r34ics.php:2392 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "設定"
 
-#: class-r34ics.php:465 templates/admin/admin.php:29
+#: class-r34ics.php:472 templates/admin/admin.php:29
 #: templates/admin/appearance.php:10
 msgid "Appearance"
 msgstr "外観"
 
-#: class-r34ics.php:466 templates/admin/admin.php:33
+#: class-r34ics.php:473 templates/admin/admin.php:33
 #: templates/admin/utilities.php:10
 msgid "Utilities"
 msgstr "ユーティリティー"
 
-#: class-r34ics.php:467 templates/admin/admin.php:37
+#: class-r34ics.php:474 templates/admin/admin.php:37
 #: templates/admin/utilities.php:209 templates/admin/utilities.php:218
 msgid "System Report"
 msgstr "システムレポート"
 
-#: class-r34ics.php:468 templates/admin/admin.php:41
+#: class-r34ics.php:475 templates/admin/admin.php:41
 #: templates/admin/sidebar.php:18
 msgid "Support"
 msgstr "サポート"
 
-#: class-r34ics.php:471
+#: class-r34ics.php:478
 #, php-format
 msgid "Upgrade to %1$s!"
 msgstr "%1$sにアップグレード！"
 
-#: class-r34ics.php:501
+#: class-r34ics.php:508
 msgid "Show/hide all"
 msgstr "すべて表示/非表示"
 
-#: class-r34ics.php:782
+#: class-r34ics.php:796
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -270,47 +270,52 @@ msgstr ""
 "い。複数のURLを区切る際にスペースを使用している場合は、代わりにパイプ文字"
 "（|）を使用してみてください。影響を受けるURL:"
 
-#: class-r34ics.php:1226
+#: class-r34ics.php:1251
 msgid "Hide past events"
 msgstr "過去のイベントを隠す"
 
-#: class-r34ics.php:1227 templates/calendar-month.php:96
+#: class-r34ics.php:1252 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "過去のイベントを表示"
 
-#: class-r34ics.php:1308
+#: class-r34ics.php:1333
 msgid "Contact:"
 msgstr "連絡先:"
 
-#: class-r34ics.php:1314
+#: class-r34ics.php:1339
 msgid "Resources:"
 msgstr "リソース:"
 
-#: class-r34ics.php:1324
+#: class-r34ics.php:1349
 msgid "Click for more..."
 msgstr "続きを読む..."
 
-#: class-r34ics.php:1358
+#: class-r34ics.php:1383
 msgid "Save to your calendar"
 msgstr "カレンダーに保存"
 
-#: class-r34ics.php:1461
+#: class-r34ics.php:1486
 msgid "Cancelled"
 msgstr "キャンセル"
 
-#: class-r34ics.php:1574
+#: class-r34ics.php:1599
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr ""
 "レガシーパーサーオプションは非推奨となり、今後のアップデートで削除されます。"
 
-#: class-r34ics.php:1665
+#: class-r34ics.php:1690
 msgid "Print"
 msgstr "印刷"
 
-#: class-r34ics.php:1925
+#: class-r34ics.php:1794
+#, php-format
+msgid "Powered by %1$s"
+msgstr "提供：%1$s"
+
+#: class-r34ics.php:1968
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -318,7 +323,7 @@ msgstr ""
 "「currentweek」ショートコード属性は非推奨となりました。代わりにショートコード"
 "内で view=\"week\" を使用してください。"
 
-#: class-r34ics.php:1929
+#: class-r34ics.php:1972
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -326,7 +331,7 @@ msgstr ""
 "「legendinline」ショートコード属性は非推奨となりました。代わりに、ショート"
 "コード内で legendstyle=\"inline\" を使用してください。"
 
-#: class-r34ics.php:2266
+#: class-r34ics.php:2330
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -336,7 +341,7 @@ msgstr ""
 "キャッシュプラグインを使用している場合は、キャッシュをクリアする必要があるか"
 "もしれません。"
 
-#: class-r34ics.php:2274
+#: class-r34ics.php:2338
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -346,21 +351,21 @@ msgstr ""
 "トにキャッシュプラグインを使用している場合は、キャッシュをクリアする必要があ"
 "るかもしれません。"
 
-#: class-r34ics.php:2286
+#: class-r34ics.php:2350
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "クリア済み %1$s %2$s 一時的データ。"
 
-#: class-r34ics.php:2293
+#: class-r34ics.php:2357
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "トランジェントは%1$s個見つかりませんでした。"
 
-#: class-r34ics.php:2302
+#: class-r34ics.php:2366
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "保存されたすべてのICSフィードURLが削除されました。"
 
-#: class-r34ics.php:2309
+#: class-r34ics.php:2373
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -369,7 +374,7 @@ msgstr ""
 "すべての%1$s設定がデフォルトにリセットされ、保存されたICSフィードURLがクリア"
 "されました。"
 
-#: class-r34ics.php:2392
+#: class-r34ics.php:2456
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -378,11 +383,11 @@ msgstr ""
 "フィードURLにHTTP基本認証の認証情報が含まれているようです。上記%2$sタブ内"
 "の%1$sオプションをオフにしてみてください。"
 
-#: class-r34ics.php:2392 templates/admin/settings.php:85
+#: class-r34ics.php:2456 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "レガシーフィードリクエストメソッドを使用する"
 
-#: class-r34ics.php:2398
+#: class-r34ics.php:2462
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -397,17 +402,17 @@ msgstr ""
 "しい動的フィードURLの取得方法については、%4$sユーザーガイド%5$sをご参照くださ"
 "い。"
 
-#: class-r34ics.php:2404
+#: class-r34ics.php:2468
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "エラー: %1$s の IP アドレスを解決できませんでした。"
 
-#: class-r34ics.php:2407
+#: class-r34ics.php:2471
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$s の解決済み IP アドレス:"
 
-#: class-r34ics.php:2432
+#: class-r34ics.php:2499
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -416,7 +421,7 @@ msgstr ""
 "%1$s外観を更新しました。%2$s変更内容を確認するには、ページを更新する必要があ"
 "る場合があります。"
 
-#: class-r34ics.php:2492
+#: class-r34ics.php:2559
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -424,7 +429,7 @@ msgstr ""
 "「デフォルトのショートコード」フィールドに入力されたテキストは有効なショート"
 "コードではありませんでした。保存されませんでした。"
 
-#: class-r34ics.php:2549
+#: class-r34ics.php:2616
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -433,15 +438,15 @@ msgstr ""
 "%1$s設定を更新しました。%2$s 一部の変更を確認するには、ページを更新する必要が"
 "ある場合があります。"
 
-#: class-r34ics.php:2862
+#: class-r34ics.php:2936
 msgid "calendar event"
 msgstr "カレンダーイベント"
 
-#: class-r34ics.php:2868
+#: class-r34ics.php:2942
 msgid "Event download failed."
 msgstr "イベントのダウンロードに失敗しました。"
 
-#: class-r34ics.php:3333
+#: class-r34ics.php:3418
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -451,16 +456,7 @@ msgstr ""
 "除されます。レガシーフィードリクエストメソッドを無効にした状態でフィードをテ"
 "ストしてください。"
 
-#: compatibility.php:38
-#, php-format
-msgid ""
-"Future updates of %1$s will require WordPress 5.3 or newer. Please update "
-"your site to a newer version of WordPress as soon as possible."
-msgstr ""
-"%1$sの今後の更新には、WordPress 5.3以降が必要です。お早めにWordPressを最新版"
-"に更新してください。"
-
-#: functions.php:1065
+#: functions.php:1169
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -474,51 +470,51 @@ msgstr ""
 "ンとの競合に対処するために必要です。その結果、競合する翻訳プラグインが有効な"
 "間は%1$sの翻訳が正しく読み込まれない可能性があります。"
 
-#: functions.php:1188 functions.php:1196 functions.php:1205
+#: functions.php:1292 functions.php:1300 functions.php:1309
 msgid "Map"
 msgstr "マップ"
 
-#: functions.php:1510
+#: functions.php:1617
 msgid "Recurring event"
 msgstr "繰り返しイベントの新規作成"
 
-#: functions.php:1515
+#: functions.php:1622
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "%1$s年ごとに繰り返す"
 
-#: functions.php:1515
+#: functions.php:1622
 msgid "Recurs yearly"
 msgstr "毎年繰り返される"
 
-#: functions.php:1518
+#: functions.php:1625
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "%1$sヶ月ごとに再発する"
 
-#: functions.php:1518
+#: functions.php:1625
 msgid "Recurs monthly"
 msgstr "毎月繰り返される"
 
-#: functions.php:1521
+#: functions.php:1628
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "%1$s週間ごとに再発する"
 
-#: functions.php:1521
+#: functions.php:1628
 msgid "Recurs weekly"
 msgstr "毎週繰り返される"
 
-#: functions.php:1524
+#: functions.php:1631
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "%1$s日ごとに再帰します"
 
-#: functions.php:1524
+#: functions.php:1631
 msgid "Recurs daily"
 msgstr "毎日繰り返される"
 
-#: functions.php:1697
+#: functions.php:1804
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -531,7 +527,7 @@ msgstr ""
 "ない可能性があります。ショートコード内のクリック可能なリンクを削除してくださ"
 "い。"
 
-#: functions.php:2029
+#: functions.php:2137
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() 関数はサポートされなくなりました。"
 
@@ -825,7 +821,25 @@ msgstr "ダークモード"
 msgid "Inverts color palette (light colors on a dark background)."
 msgstr "カラーパレットを反転（暗い背景に明るい色）。"
 
-#: templates/admin/appearance.php:70 templates/admin/settings.php:226
+#: templates/admin/appearance.php:71
+msgid "Miscellaneous"
+msgstr "その他"
+
+#: templates/admin/appearance.php:78
+#, php-format
+msgid "Give %1$s credit"
+msgstr "%1$sの功績を認める"
+
+#: templates/admin/appearance.php:83
+#, php-format
+msgid ""
+"Help spread the word about %1$s with a small attribution link below your "
+"calendars. Thank you for your support!"
+msgstr ""
+"カレンダーの下に、%1$s への小さな出典リンクを掲載して、この情報を広めてくださ"
+"い。ご協力ありがとうございます！"
+
+#: templates/admin/appearance.php:94 templates/admin/settings.php:226
 msgid "Save Changes"
 msgstr "変更を保存"
 
@@ -1439,6 +1453,14 @@ msgstr ""
 msgid "Room 34 Creative Services, LLC"
 msgstr "ルーム34 クリエイティブ・サービスズ合同会社"
 
+#, php-format
+#~ msgid ""
+#~ "Future updates of %1$s will require WordPress 5.3 or newer. Please update "
+#~ "your site to a newer version of WordPress as soon as possible."
+#~ msgstr ""
+#~ "%1$sの今後の更新には、WordPress 5.3以降が必要です。お早めにWordPressを最新"
+#~ "版に更新してください。"
+
 #~ msgid ""
 #~ "Configure all calendar settings with an easy visual interface... no need "
 #~ "to manually type shortcodes."
@@ -1496,9 +1518,6 @@ msgstr "ルーム34 クリエイティブ・サービスズ合同会社"
 #~ "は他のキャッシュプラグインと併用する場合や、カレンダーに多数のイベントが含"
 #~ "まれる場合に特に便利です。通常、カレンダーデータは、ショートコードでAJAXが"
 #~ "指定されていない限り、最初のページロードのHTMLで直接送信されます。"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "その他"
 
 #~ msgid ""
 #~ "For your site security please do NOT post the System Report in the "

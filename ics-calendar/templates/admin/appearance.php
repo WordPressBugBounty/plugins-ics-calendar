@@ -3,7 +3,7 @@
 // Don't load directly
 if (!defined('ABSPATH')) { exit; }
 
-if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
+if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(false)) {
 	?>
 	<div class="inside" id="appearance">
 
@@ -65,6 +65,30 @@ if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access()) {
 			</div>
 			
 			<?php do_action('r34ics_appearance_fields_after'); ?>
+			
+			<div class="r34ics-inner-box">
+
+				<h3><?php esc_html_e('Miscellaneous', 'ics-calendar'); ?></h3>
+				
+				<p class="r34ics-input">
+					<label for="r34ics_give_credit">
+						<input type="checkbox" name="give_credit" id="r34ics_give_credit"<?php if (get_option('r34ics_give_credit')) { echo ' checked="checked"'; } ?> />
+						<strong><?php
+						// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
+						printf(esc_html__('Give %1$s credit', 'ics-calendar'), 'ICS Calendar');
+						?></strong>
+						<span class="description" tabindex="0"><small class="r34ics-help"><span class="help_content">
+							<?php
+							// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
+							printf(esc_html__('Help spread the word about %1$s with a small attribution link below your calendars. Thank you for your support!', 'ics-calendar'), 'ICS Calendar');
+							?>
+						</span></small></span>
+					</label>
+				</p>
+				
+				<?php do_action('r34ics_appearance_fields_misc'); ?>
+			
+			</div>
 			
 			<footer class="r34ics-admin-sticky-footer" style="position: sticky; bottom: 0; z-index: 10;">
 				<input type="submit" class="button button-primary" value="<?php esc_attr_e('Save Changes', 'ics-calendar'); ?>" />
