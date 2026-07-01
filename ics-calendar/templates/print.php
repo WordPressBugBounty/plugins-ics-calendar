@@ -22,9 +22,12 @@ add_action('wp_footer', function() {
 
 <div class="r34ics-print-wrapper">
 	<div<?php
+	// Only the designated set of attributes is allowed
+	$allowed_attrs = r34ics_allowed_print_attrs();
 	foreach ((array)$r34ics_print as $key => $value) {
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo ' ' . sanitize_title($key) . '="' . esc_attr($value) . '"';
+		if (in_array($key, $allowed_attrs)) {
+			echo ' ' . esc_attr(sanitize_title($key)) . '="' . esc_attr($value) . '"';
+		}
 	}
 	?>>&nbsp;</div>
 </div>

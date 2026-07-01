@@ -36,6 +36,22 @@ function r34ics_allowed_heading_tags_check($tag='', $default='div') {
 }
 
 
+// Allowed attributes in print wrapper; values assigned in R34ICS::_ajax_container_attributes()
+function r34ics_allowed_print_attrs() {
+	return array(
+		'class',
+		'data-args',
+		'data-js-args',
+		'data-r34icsym',
+		'data-r34icsymd',
+		'data-view-is-list-long',
+		'data-view-is-list-style',
+		'data-view',
+		'id',
+	);
+}
+
+
 // Echo the contents of a hierarchical array in a condensed view for diagnostic purposes
 function r34ics_array_diagnostic_output($arr=array()) {
 	if (is_array($arr) || is_object($arr)) {

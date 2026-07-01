@@ -1,5 +1,12 @@
 === ICS Calendar Changelog ===
 
+= 12.1.1.1 - 2026.07.01 =
+
+* AJAX:
+  * Adjusted minimum refresh time from 5 minutes to 2 minutes, and added a 10-second delay, to account for any lag in clearing the cache. (Actual refresh rate is based on the **Transient (cache) expiration** setting.)
+* Print:
+  * Added restrictions on allowed HTML attributes passed into print wrapper.
+
 = 12.1.1 - 2026.06.26 =
 
 * Admin:

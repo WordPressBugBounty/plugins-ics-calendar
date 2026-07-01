@@ -1252,9 +1252,11 @@ if (!class_exists('R34ICS')) {
 				'show_past_events' => esc_html__('Show past events', 'ics-calendar'),
 			)) . ';');
 			wp_add_inline_script('ics-calendar', 'var r34ics_days_of_week_map = ' . wp_json_encode((array)$this->days_of_week_map()) . ';');
-			// Transients expiration is used for AJAX refresh interval, but must be at least 5 minutes
-			$transients_expiration = get_option('r34ics_transients_expiration', 3600);
-			if ($transients_expiration < 300) { $transients_expiration = 300; }
+			// Transients expiration is used for AJAX refresh interval, but must be at least 2 minutes
+			$transients_expiration = intval(get_option('r34ics_transients_expiration', 3600));
+			if ($transients_expiration < 120) { $transients_expiration = 120; }
+			// Add 10 seconds to account for a small delay in cache refresh
+			$transients_expiration = $transients_expiration + 10;
 			wp_add_inline_script('ics-calendar', 'var r34ics_transients_expiration_ms = ' . (intval($transients_expiration) * 1000) . '; var r34ics_ajax_interval;');
 	
 			// ICS Calendar CSS
@@ -2663,7 +2665,9 @@ if (!class_exists('R34ICS')) {
 			$js_args = apply_filters('r34ics_ajax_js_args', array(
 				'debug' => $args['debug'],
 			), $args);
+			
 			// Assemble array of attributes
+			// Remember! New attributes also need to be added to r34ics_allowed_print_attrs()
 			return array(
 				'class' => 'r34ics-ajax-container loading',
 				'data-args' => $args['ajax_key'],
@@ -2683,15 +2687,15 @@ if (!class_exists('R34ICS')) {
 		/**
 		 * Note: This handling addresses an issue with, at least, Outlook/Office 365, where an
 		 * individual instance that deviates from the recurrence rules appears in the array,
-		 * *in addition to* the regular (but, in this instance, incorrect) rules. Each recurrence
-		 * in the array can be identified by the 'uid' key. The individual instances that deviate
-		 * are identified by 'recurrence_id', which is absent in the event entry that follows the
-		 * normal rule. Therefore, we look for instances of 'recurrence_id', find the
-		 * corresponding 'uid', and then look through all other events for the date for an
-		 * instance that includes 'uid' but *not* 'recurrence_id'.
+		 * *in addition to* the regular (but, in this instance, incorrect) rules. Each
+		 * recurrence in the array can be identified by the 'uid' key. The individual
+		 * instances that deviate are identified by 'recurrence_id', which is absent in the
+		 * event entry that follows the normal rule. Therefore, we look for instances of
+		 * 'recurrence_id', find the corresponding 'uid', and then look through all other
+		 * events for the date for an instance that includes 'uid' but *not* 'recurrence_id'.
 		 * 
-		 * This may also be an issue with the ICS Parser library, in that it does not seem aware
-		 * of this handling in Office 365.
+		 * This may also be an issue with the ICS Parser library, in that it does not seem
+		 * aware of this handling in Office 365.
 		 * 
 		 * @todo There has GOT to be a way to improve this!
 		 */
@@ -2974,14 +2978,27 @@ if (!class_exists('R34ICS')) {
 		
 		
 		protected function _print_calendar() {
+			// Get requested print parameters
 			$r34ics_print = json_decode(sanitize_text_field(wp_unslash(get_query_var('r34ics-print'))), true);
+			
+			// Only the designated set of attributes is allowed
+			$allowed_attrs = r34ics_allowed_print_attrs();
+			foreach (array_keys((array)$r34ics_print) as $key) {
+				if (!in_array($key, $allowed_attrs)) { unset($r34ics_print[$key]); }
+			}
+			
+			// Append date range selections
 			if (!empty(get_query_var('r34icsym'))) {
 				$r34ics_print['data-r34icsym'] = sanitize_text_field(wp_unslash(get_query_var('r34icsym')));
 			}
 			if (!empty(get_query_var('r34icsymd'))) {
 				$r34ics_print['data-r34icsymd'] = sanitize_text_field(wp_unslash(get_query_var('r34icsymd')));
 			}
+			
+			// Append dropdown selection
 			$r34ics_print_selected = sanitize_text_field(wp_unslash(get_query_var('r34ics-print-selected')));
+			
+			// Render template
 			include_once(plugin_dir_path(__FILE__) . 'templates/print.php');
 			exit;
 		}
