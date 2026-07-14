@@ -1,5 +1,14 @@
 === ICS Calendar Changelog ===
 
+= 12.1.2 - 2026.07.14 =
+
+* Week view:
+  * Fixed issue that prevented events from displaying when displaying the current week only or limiting the display to fewer than 8 days.
+* CSS:
+  * Changed `z-index` on event hover to avoid conflict with Modern Events Calendar plugin.
+* Miscellaneous:
+  * Modified `R34ICS::parse_attach_array()` method to support returning an array in addition to the default string output option.
+
 = 12.1.1.1 - 2026.07.01 =
 
 * AJAX:

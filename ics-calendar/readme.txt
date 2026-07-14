@@ -5,11 +5,11 @@ Tags: calendar, Google, Microsoft, events, ICS
 Requires at least: 5.3
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 12.1.1.1
+Stable tag: 12.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add the calendar you already use to any WordPress site! Google Calendar, Microsoft 365, iCloud, Airbnb and more… no API keys or complicated setup required.
+Add the calendar you already use to any WordPress site! Google Calendar, Microsoft 365, iCloud and more… no API keys or complicated setup required.
 
 == Description ==
 
@@ -100,6 +100,15 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.1.2 - 2026.07.14 =
+
+* Week view:
+  * Fixed issue that prevented events from displaying when displaying the current week only or limiting the display to fewer than 8 days.
+* CSS:
+  * Changed `z-index` on event hover to avoid conflict with Modern Events Calendar plugin.
+* Miscellaneous:
+  * Modified `R34ICS::parse_attach_array()` method to support returning an array in addition to the default string output option.
 
 = 12.1.1.1 - 2026.07.01 =
 

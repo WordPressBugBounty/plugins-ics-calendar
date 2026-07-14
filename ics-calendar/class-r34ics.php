@@ -895,6 +895,7 @@ if (!class_exists('R34ICS')) {
 							// Event description and other details have $maskinfo check in r34ics_has_desc() function
 							$event_item = array(
 								'attach' => $this->parse_attach_array($event->attach_array, $sametab),
+								'attach_array' => $this->parse_attach_array($event->attach_array, $sametab, true),
 								'categories' => ($event->categories ?: ''),
 								'class' => ($event->class ?: ''),
 								'color' => ($event->color ?: ($event->x_apple_calendar_color ?: '')),
@@ -1635,43 +1636,58 @@ if (!class_exists('R34ICS')) {
 		}
 		
 	
-		public function parse_attach_array($attach, $sametab=null) {
+		public function parse_attach_array($attach, $sametab=null, $return_array=false) {
 			if (empty($attach) || !is_array($attach) || count($attach) % 2 !== 0) { return ''; }
 			
-			$output = '';
+			$output = $return_array ? [] : '';
 			// Each attachment has two nodes in the array: $n is array, $n+1 is URL string
 			for ($n = 0; $n < count($attach); $n = $n+2) {
 				// Determine file/URL properties
 				$url = $attach[$n+1];
-				$mime = isset($attach[$n]['FMTTYPE']) ? $attach[$n]['FMTTYPE'] : null;
-				$filename = isset($attach[$n]['FILENAME']) ? $attach[$n]['FILENAME'] : pathinfo($url,PATHINFO_BASENAME);
-				$ext = pathinfo($filename,PATHINFO_EXTENSION);
-				$clean_filename = sanitize_title(pathinfo($filename,PATHINFO_FILENAME)) . '.' . $ext;
-			
+				
 				// Validate URL (some feeds may contain local/network file paths instead of properly formed URLs)
 				if (!filter_var($url, FILTER_VALIDATE_URL)) {
 					continue;
 				}
 			
+				$mime = isset($attach[$n]['FMTTYPE']) ? $attach[$n]['FMTTYPE'] : null;
+				$filename = isset($attach[$n]['FILENAME']) ? $attach[$n]['FILENAME'] : pathinfo($url,PATHINFO_BASENAME);
+				$ext = pathinfo($filename,PATHINFO_EXTENSION);
+				$clean_filename = sanitize_title(pathinfo($filename,PATHINFO_FILENAME)) . '.' . $ext;
+				$html = '';
+			
 				// Google Drive image links have an image MIME type, but require login and don't load the image directly, so we treat them as links
 				if (strpos(($url ?? ''), 'https://drive.google.com/') === 0) {
-					$output .= '<div><a href="' . esc_url($url) . '"' . r34ics_sametab_target($sametab, $url) . '>' . $filename . '</a></div>';
+					$html = '<div><a href="' . esc_url($url) . '"' . r34ics_sametab_target($sametab, $url) . '>' . $filename . '</a></div>';
 				}
 				
 				// Handle images as an image tag (MIME type MUST be passed or this may not actually be a direct image link (e.g. a Google Drive preview link)
 				elseif (!empty($mime) && strpos($mime, 'image/') === 0) {
 					// phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
-					$output .= '<div><img src="' . esc_url($url) . '" alt="" style="position: relative; height: auto; width: 100%;" /></div>';
+					$html = '<div><img src="' . esc_url($url) . '" alt="" style="position: relative; height: auto; width: 100%;" /></div>';
 				}
 			
 				// Handle other files with a MIME type set, and not equal to a text format, as downloads
 				elseif (!empty($mime) && strpos($mime, 'text/') === false) {
-					$output .= '<div><a href="' . esc_url($url) . '" download="' . rawurlencode($filename) . '" rel="noopener noreferrer nofollow">' . $filename . '</a></div>';
+					$html = '<div><a href="' . esc_url($url) . '" download="' . rawurlencode($filename) . '" rel="noopener noreferrer nofollow">' . $filename . '</a></div>';
 				}
 			
 				// Handle others (no MIME type, or a "text/" mime type) as clickable links
 				else {
-					$output .= '<div><a href="' . esc_url($url) . '"' . r34ics_sametab_target($sametab, $url) . '>' . $filename . '</a></div>';
+					$html = '<div><a href="' . esc_url($url) . '"' . r34ics_sametab_target($sametab, $url) . '>' . $filename . '</a></div>';
+				}
+				
+				if ($return_array) {
+					$output[] = array(
+						'mime' => $mime,
+						'filename' => $filename,
+						'ext' => $ext,
+						'clean_filename' => $clean_filename,
+						'html' => $html,
+					);
+				}
+				else {
+					$output .= $html;
 				}
 			}
 			

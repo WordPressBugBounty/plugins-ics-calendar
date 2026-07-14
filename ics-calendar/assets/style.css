@@ -210,7 +210,7 @@
 	.ics-calendar-error { font-style: italic; }
 
 	.ics-calendar.current_week_only tbody tr { display: none; }
-	.ics-calendar.current_week_only tbody tr.current-week { display: table-row; }
+	.ics-calendar.current_week_only tbody tr.current-week { display: table-row !important; }
 	
 	.ics-calendar .hidden { display: none !important; }
 	
@@ -278,8 +278,8 @@
 			position: relative;
 			z-index: 1;
 		}
-		.ics-calendar .event:hover, .ics-calendar .event:focus, .ics-calendar .event:focus-within {
-			z-index: 5 !important; /* Needs to be 5 for Full view in Pro */
+		.ics-calendar .event:is(:hover, :focus, :focus-within) {
+			z-index: 7 !important; /* Needs to be greater than 6 to avoid conflict with Modern Events Calendar plugin */
 		}
 		.ics-calendar .event, .ics-calendar .event * {
 			transition: none !important;
