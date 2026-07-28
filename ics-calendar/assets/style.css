@@ -279,7 +279,7 @@
 			z-index: 1;
 		}
 		.ics-calendar .event:is(:hover, :focus, :focus-within) {
-			z-index: 7 !important; /* Needs to be greater than 6 to avoid conflict with Modern Events Calendar plugin */
+			z-index: 9 !important; /* Needs to be greater than 6 to avoid conflict with Modern Events Calendar plugin */
 		}
 		.ics-calendar .event, .ics-calendar .event * {
 			transition: none !important;

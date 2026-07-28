@@ -1,5 +1,15 @@
 === ICS Calendar Changelog ===
 
+= 12.1.3 - 2026.07.28 =
+
+* Basic view:
+  * Fixed a bug that prevented toggle from working when user clicks on an event title. (Clicking the date or time worked, but the title itself did not.)
+* List and Basic views:
+  * Fixed pagination error when "today" has multiple pages' worth of events.
+* Miscellaneous:
+  * Added new date-specific CSS class to events.
+  * Resolved conflicting `z-index` values for event hover.
+
 = 12.1.2 - 2026.07.14 =
 
 * Week view:

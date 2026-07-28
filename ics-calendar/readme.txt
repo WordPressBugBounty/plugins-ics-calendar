@@ -5,7 +5,7 @@ Tags: calendar, Google, Microsoft, events, ICS
 Requires at least: 5.3
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 12.1.2
+Stable tag: 12.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,16 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.1.3 - 2026.07.28 =
+
+* Basic view:
+  * Fixed a bug that prevented toggle from working when user clicks on an event title. (Clicking the date or time worked, but the title itself did not.)
+* List and Basic views:
+  * Fixed pagination error when "today" has multiple pages' worth of events.
+* Miscellaneous:
+  * Added new date-specific CSS class to events.
+  * Resolved conflicting `z-index` values for event hover.
 
 = 12.1.2 - 2026.07.14 =
 
@@ -386,45 +396,6 @@ Note: Due the fact that its single change would serve no useful purpose on its o
 
 **If you identify any translation issues, please use our [Translation Suggestions](https://icscalendar.com/translation-suggestions/) form to contact us.**
 
-= 11.7.0.4 - 2025.12.08 =
-
-* Performance:
-  * Due to observed issues with some sites using `reload` in ways that exceed request rate limits, causing providers like Google Calendar to put temporary blocks on IP ranges, the `reload` option is now forced to a minimum value of 120 (2 minutes), _unless_ `debug` is also set to `2` or higher. **The `reload` option is intended for troubleshooting only.** If your calendar updates more frequently than once per hour, the best option is to change the **Transient (cache) expiration** setting to a lower value. Recommended value: 300 (5 minutes).
-
-= 11.7.0.3 - 2025.11.30 =
-
-* Added dynamic cookie handling when interacting with source servers that send cookies. May resolve an issue for Google Calendar users in Europe. If you are experiencing this issue, please note that it may take up to 24 hours after you apply this update for your calendars to reappear. [Your feedback is requested.](https://icscalendar.com/support) Also please note that these changes _only_ apply if you have the legacy feed request method turned _off._ That feature is deprecated and will not be receiving further feature updates. If you are currently using the legacy feed request method, you are encouraged to try turning it off and see if your site is now able to load feeds with the standard method.
-* Added `r34ics_get_all_options()` function to retrieve all ICS Calendar options for the admin utility **Clear Cached Calendar Data** with the **Also reset all ICS Calendar settings** option checked. There is currently no way (even with filters) to force the WP core function `wp_load_alloptions()` to retrieve non-autoload options. (See [this note](https://developer.wordpress.org/reference/functions/wp_autoload_values_to_autoload/#comment-7430) for details. It's unclear whether this is a performance-focused intentional decision or a bug in the core `wp_autoload_values_to_autoload()` function.)
-* Removed `r34ics_curl_cookie_path()` function and deprecated code that used it.
-
-= 11.7.0.2 - 2025.11.28 =
-
-* Appended real user agent string when retrieving feeds from Google Calendar.
-
-= 11.7.0.1 - 2025.10.29 =
-
-* Delayed application of `r34ics_shortcode_defaults_new_10_6` filter until other plugins are loaded.
-
-= 11.7.0 - 2025.10.27 =
-
-* schema.org structured data: _BETA_
-  * Added `jsonld` shortcode parameter (and related `r34ics_event2jsonld()` function) for adding [JSON-LD structured data](https://schema.org/Event) to calendar output. This is still a beta/experimental feature. We have confirmed that our generated test code passes [validation](https://validator.schema.org), but we need to observe some real-world testing to determine whether or not the output needs additional refinements to match Google's expectations for structured event data. This feature is _off_ by default. To use it, add `jsondl="true"` to your shortcode. And please send your [feedback](https://icscalendar.com/support/) on how it works for you! **IMPORTANT: Because Google requires each event in the structured data to have a designated URL, _only_ events that have a URL are included in the structured data ICS Calendar generates.** (See [Google's documentation](https://developers.google.com/search/docs/appearance/structured-data/event) for more information.)
-* Miscellaneous:
-  * Bumped 'tested up to' to 6.9.
-
-= 11.6.0 - 2025.10.10 =
-
-* Print: _BETA_
-  * Added `print` shortcode parameter, which will add a print button at the top of your calendar. Use `print="true"` to print the calendar with basic event info (time and event title), or `print="descriptions"` to include all event descriptions. (This works independently of how the event descriptions appear on-screen.) **Important: You MUST be using AJAX to render your calendar to use the `print` parameter.** You can accomplish this either by adding `ajax="true"` to your shortcode, or by turning on the **Always use AJAX to render calendars** setting.
-  * Improved print CSS, now retains calendar colors. _Note: It is impossible for us to test all potential site configurations; if you experience problems with the new print colors, please [submit a support request](https://icscalendar.com/support)._
-* Dark Mode: _BETA_
-  * Resolved conflicts that mostly broke dark mode after adding new element-based CSS variables in v. 11.5.15.
-* i18n:
-  * Updated translation strings.
-  * Added missing en_GB translation files. (Introduced in v. 11.5.17.4 but inadvertently omitted from repository.)
-
-_The print and dark mode features are currently considered BETA and are subject to change._
-  
 = Full Changelog =
 
 _Changelog truncated here due to WordPress repository requirements._ Please see `changelog.txt` for older logs.

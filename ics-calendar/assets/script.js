@@ -145,7 +145,7 @@ function r34ics_init(elem) {
 	 */
 	jQuery(document).on('click', '.ics-calendar.r34ics_toggle .event, .ics-calendar.r34ics_toggle .event .title', function(e) {
 		e.stopPropagation();
-		var elem = jQuery(this).hasClass('title') ? jQuery(this).parent() : jQuery(this);
+		var elem = jQuery(this).hasClass('title') ? jQuery(this).closest('.event') : jQuery(this);
 		// No description -- do nothing
 		if (elem.find('.descloc').length == 0) { return false; }
 		// Lightbox
@@ -308,23 +308,24 @@ function r34ics_init(elem) {
 	// VIEW: LIST / BASIC
 	// Outer section wrapper has classes .ics-calendar.layout-list or .ics-calendar.layout-basic
 
-	if (jQuery('.ics-calendar.layout-list').length > 0) {
-		jQuery('.ics-calendar.layout-list .descloc_toggle_excerpt').on('click', function() {
+	if (jQuery('.ics-calendar.layout-list, .ics-calendar.layout-basic').length > 0) {
+		jQuery(':is(.ics-calendar.layout-list, .ics-calendar.layout-basic) .descloc_toggle_excerpt').on('click', function() {
 			jQuery(this).hide().siblings('.descloc_toggle_full').show();
 		});
 	}
 	
-	if (jQuery('.ics-calendar.layout-list .ics-calendar-pagination, .ics-calendar.layout-basic .ics-calendar-pagination').length > 0) {
+	if (jQuery(':is(.ics-calendar.layout-list, .ics-calendar.layout-basic) .ics-calendar-pagination').length > 0) {
 		jQuery('.ics-calendar.layout-list, .ics-calendar.layout-basic').each(function() {
 			jQuery(this).find('.ics-calendar-pagination:not(:first-child)').hide();
 			jQuery(this).find('.ics-calendar-paginate.prev').hide();
 			// For "reverse," we just show the first page (so we're done here)
-			if (!jQuery(this).hasClass('reverse')) {
+			// This breaks if there are multiple "today" pages so skip it
+			if (!jQuery(this).hasClass('reverse') && jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]').length <= 1) {
 				// Find and display the current week (it will have data-rel2today="today" or be the last data-rel2today="past")
 				if (jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]').length == 0) {
 					jQuery(this).find('.ics-calendar-pagination[data-rel2today="past"]').last().attr('data-rel2today', 'today');
 				}
-				var current_page = jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]');
+				var current_page = jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]').first();
 				if (typeof current_page.data('page') != 'undefined' && current_page.data('page') != 0) {
 					jQuery(this).find('.ics-calendar-pagination:first-child').hide();
 					current_page.show();

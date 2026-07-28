@@ -586,7 +586,12 @@ function r34ics_empty_content($str='') {
 
 // Generate CSS classes to apply to wrapper for an event
 function r34ics_event_css_classes($event, $time, $args) {
-	$classes = array('event', $time);
+	// Create date CSS class from start (and end, if different) date
+	$date = 'd' . intval($event['dtstart_date']);
+	if ($event['dtend_date'] != $event['dtstart_date']) {
+		$date .= '_' . intval($event['dtend_date']);
+	}
+	$classes = array('event', $date, $time);
 	if (!empty($event['multiday']['position'])) {
 		$classes[] = 'multiday_' . $event['multiday']['position'];
 	}

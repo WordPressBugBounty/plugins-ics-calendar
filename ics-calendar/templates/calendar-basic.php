@@ -162,6 +162,7 @@ else {
 								$day_feed_keys = r34ics_day_events_feed_keys($day_events, '|');
 								$day_uid = $ics_data['guid'] . '-' . $ym . $d;
 
+								$new_date = true;
 								foreach ((array)$day_events as $time => $events) {
 									foreach ((array)$events as $event) {
 
@@ -209,7 +210,7 @@ else {
 										$has_desc = r34ics_has_desc($args, $event);
 										?>
 					
-										<li class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); ?>" data-dow="<?php echo esc_attr($dow); ?>" data-wknum="<?php echo esc_attr($wknum); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
+										<li class="<?php echo esc_attr(r34ics_event_css_classes($event, $time, $args)); if (!empty($new_date)) { echo ' new_date'; } ?>" data-dow="<?php echo esc_attr($dow); ?>" data-wknum="<?php echo esc_attr($wknum); ?>" data-rel2today="<?php echo esc_attr($rel2today); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>"<?php
 											if (!empty($ics_data['colors'][$event['feed_key']]['base'])) { echo ' data-feed-color="' . esc_attr($ics_data['colors'][$event['feed_key']]['base']) . '"'; }
 											if (!empty($event['categories'])) { echo ' data-categories="' . esc_attr($event['categories']) . '"'; }
 											if (!empty($event['color'])) { echo ' data-color="' . esc_attr($event['color']) . '"'; }
@@ -254,6 +255,8 @@ else {
 											break(5);
 										}
 
+										$new_date = false;
+
 										// Pagination?
 										if (!empty($pagination)) {
 											$p_i++;
@@ -261,6 +264,7 @@ else {
 												echo '</ul></div>';
 												$p_i = 0;
 												$pagination_open = false;
+												$new_date = true;
 											}
 										}
 									}
