@@ -1758,9 +1758,6 @@ if (!class_exists('R34ICS')) {
 			}
 			if (!empty($args['url']) && (strpos($args['url'], ' ') !== false || strpos($args['url'], '|') !== false)) { $ics_calendar_classes[] = 'multi-feed'; }
 			
-			// View-specific classes
-			if (!empty($args['view']) && $args['view'] == 'week') { $ics_calendar_classes[] = 'current_week_only'; }
-			
 			// Return the CSS classes as a string or an array
 			if (!empty($implode)) {
 				return implode(' ', $ics_calendar_classes);

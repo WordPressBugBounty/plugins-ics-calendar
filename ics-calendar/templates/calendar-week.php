@@ -16,8 +16,6 @@ $date_format = r34ics_date_format($args['format'], true);
 
 $today = r34ics_date('Ymd');
 
-$ics_calendar_classes = apply_filters('r34ics_calendar_classes', null, $args, true);
-
 // Special handling for instances where limitdays and/or startdate are set
 // Note: This was simplified to correspond with shortcode value logic changes in v. 10.10.1 and may need more testing
 $fixed_dates = false;
@@ -29,6 +27,8 @@ if ($args['limitdays'] > 0 && $args['limitdays'] <= 8) {
 	}
 	$enddate = r34ics_date('Ymd', $args['startdate'], null, '+' . intval($args['limitdays'] - 1) . ' days');
 }
+
+$ics_calendar_classes = apply_filters('r34ics_calendar_classes', (!empty($fixed_dates) ? 'current_week_only' : null), $args, true);
 
 // Feed colors custom CSS
 if (!empty($ics_data['colors'])) {
