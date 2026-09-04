@@ -632,13 +632,13 @@ if (!class_exists('R34ICS')) {
 			$early_render = apply_filters('r34ics_display_calendar_early_render', false, $view);
 			if (!empty($early_render)) {
 					// Actions before rendering template (can include additional template output)
-					do_action('r34ics_display_calendar_before_render_template', $view, $args, $ics_data);
+					do_action('r34ics_display_calendar_before_render_template', $view, $args, null);
 
 					// Handle other views externally
 					do_action('r34ics_display_calendar_render_template', $view, $args, null);
 
 					// Actions after rendering template (can include additional template output)
-					do_action('r34ics_display_calendar_after_render_template', $view, $args, $ics_data);
+					do_action('r34ics_display_calendar_after_render_template', $view, $args, null);
 					return;
 			}
 			
