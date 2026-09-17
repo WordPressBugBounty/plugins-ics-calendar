@@ -75,10 +75,11 @@ function r34ics_array_diagnostic_output_callback($subarr=array(), $depth=0) {
 
 // Check for boolean values in shortcode
 function r34ics_boolean_check($val) {
+	if (is_bool($val) || $val === null) { return $val; }
 	$check = strtolower(trim(wp_strip_all_tags((string)$val)));
-	if ($check === '1' || $check === 'true' || $check === 'on') { return true; }
-	if ($check === '0' || $check === 'false' || $check === 'off' || $check === 'none') { return false; }
-	if ($check === 'null' || $check === '') { return null; }
+	if (in_array($check, ['1', 'true', 'on'], true)) { return true; }
+	if (in_array($check, ['0', 'false', 'off', 'none'], true)) { return false; }
+	if ($check === '' || $check === 'null') { return null; }
 	return (bool)$val;
 }
 
@@ -102,56 +103,58 @@ function r34ics_color_closest($luminosity, $palette, $darkmode=false) {
 function r34ics_color_hex_sanitize($color='') {
 	if (empty($color)) { return ''; }
 	// Allow 'transparent' as-is
-	if ($color == 'transparent') { return $color; }
+	if ($color === 'transparent') { return $color; }
 	// Strip invalid characters from string
-	$output = preg_replace('/[^0-9a-f]/', '', strtolower($color));
+	$output = preg_replace('/[^0-9a-f]/', '', strtolower((string)$color));
+	$length = strlen($output);
 	// Convert 3-character hex to 6-character hex
-	if (strlen($output ?? '') == 3) {
-		$output = str_repeat(substr($output,0,1),2) . str_repeat(substr($output,1,1),2) . str_repeat(substr($output,2,1),2);
+	if ($length === 3) {
+		$output = $output[0] . $output[0] . $output[1] . $output[1] . $output[2] . $output[2];
+		$length = 6;
 	}
-	// If after all of the above we still have 6-character hex, return it with preceding #; otherwise return null
-	return (strlen($output ?? '') == 6) ? '#' . $output : '';
+	// Return with preceding # if valid, otherwise empty string
+	return ($length === 6) ? '#' . $output : '';
 }
 
 
 // Return allowed fields array for wp_kses() with methods like R34ICS::color_key_html()
 function r34ics_color_key_allowed() {
 	return array_merge(wp_kses_allowed_html('post'),
-		array(
-			'label' => array(
-				'for' => array(),
-			),
-			'input' => array(
-				'checked' => array(),
-				'class' => array(),
-				'data-feed-key' => array(),
-				'for' => array(),
-				'id' => array(),
-				'type' => array(),
-			),
-			'svg' => array(
-				'clip-rule' => array(),
-				'fill-rule' => array(),
-				'height' => array(),
-				'stroke-linejoin' => array(),
-				'stroke-miterlimit' => array(),
-				'style' => array(),
-				'viewbox' => array(),
-				'width' => array(),
-				'xmlns' => array(),
-			),
-			'g' => array(
-				'fill' => array(),
-				'stroke' => array(),
-			),
-			'path' => array(
-				'd' => array(),
-				'fill' => array(),
-				'fill-rule' => array(),
-				'stroke' => array(),
-				'transform' => array(),
-			),
-		)
+		[
+			'label' => [
+				'for' => [],
+			],
+			'input' => [
+				'checked' => [],
+				'class' => [],
+				'data-feed-key' => [],
+				'for' => [],
+				'id' => [],
+				'type' => [],
+			],
+			'svg' => [
+				'clip-rule' => [],
+				'fill-rule' => [],
+				'height' => [],
+				'stroke-linejoin' => [],
+				'stroke-miterlimit' => [],
+				'style' => [],
+				'viewbox' => [],
+				'width' => [],
+				'xmlns' => [],
+			],
+			'g' => [
+				'fill' => [],
+				'stroke' => [],
+			],
+			'path' => [
+				'd' => [],
+				'fill' => [],
+				'fill-rule' => [],
+				'stroke' => [],
+				'transform' => [],
+			],
+		]
 	);
 }
 
@@ -2022,112 +2025,76 @@ function r34ics_time_format($time_string='', $time_format='', $tz='', $date=null
 	$time_string = (string)$time_string;
 	$time_format = (string)$time_format;
 
-	$output = '';
-
 	// Get time format from WP settings if not passed in
 	if (empty($time_format)) { $time_format = get_option('time_format'); }
 
-	// Strip unsupported format elements from string (a temporary workaround until these can be supported)
-	$time_format = trim(preg_replace('/[BsueOPZ]/', '', $time_format));
-	$time_format_minus_t = trim(preg_replace('/[T]/', '', $time_format));
+	// Strip unsupported format elements
+	$clean_format = trim(preg_replace('/[BsueOPZ]/', '', $time_format));
 
 	// Get digits from time string
 	$time_digits = preg_replace('/[^0-9]+/', '', $time_string);
 
 	// Get am/pm from time string
 	$time_ampm = preg_replace('/[^amp]+/', '', strtolower($time_string));
-	if ($time_ampm != 'am' && $time_ampm != 'pm') { $time_ampm = null; }
+	if ($time_ampm !== 'am' && $time_ampm !== 'pm') { $time_ampm = null; }
 
 	// Prepend zero to digits if length is odd
-	if (strlen($time_digits) % 2 == 1) { $time_digits = '0' . $time_digits; }
+	if (strlen($time_digits) % 2 === 1) { $time_digits = '0' . $time_digits; }
 
 	// Get hour, minutes and seconds from time digits
-	$time_h = substr($time_digits, 0, 2);
-	$time_m = substr($time_digits, 2, 2);
-	$time_s = strlen($time_digits) == 6 ? substr($time_digits, 4, 2) : null;
+	$time_h = substr($time_digits, 0, 2) ?: '00';
+	$time_m = substr($time_digits, 2, 2) ?: '00';
+	$time_s = strlen($time_digits) >= 6 ? substr($time_digits, 4, 2) : '00';
 
 	// Convert hour to correct 24-hour value if needed
-	if ($time_ampm == 'pm') { $time_h = (int)$time_h + 12; }
-	if ($time_ampm == 'am' && $time_h == '12') { $time_h = '00'; }
+	if ($time_ampm === 'pm' && (int)$time_h < 12) { $time_h = (int)$time_h + 12; }
+	if ($time_ampm === 'am' && (int)$time_h === 12) { $time_h = '00'; }
+
+	$time_h = str_pad((string)$time_h, 2, '0', STR_PAD_LEFT);
 
 	// Determine am/pm if not passed in
 	if (empty($time_ampm)) { $time_ampm = (int)$time_h >= 12 ? 'pm' : 'am'; }
 
 	// Get 12-hour version of hour
-	$time_h12 = (int)$time_h % 12;
-	if ($time_h12 == 0) { $time_h12 = 12; }
-	if ($time_h12 < 10) { $time_h12 = '0' . (string)$time_h12; }
+	$time_h12_int = (int)$time_h % 12;
+	if ($time_h12_int === 0) { $time_h12_int = 12; }
+	$time_h12 = str_pad((string)$time_h12_int, 2, '0', STR_PAD_LEFT);
 
 	// Convert am/pm abbreviations for Greek (this is simpler than putting it in the i18n files)
 	if (get_locale() == 'el') { $time_ampm = ($time_ampm == 'am') ? 'πμ' : 'μμ'; }
 
-	// Format output
-	switch ($time_format_minus_t) {
+	// Map standard PHP date tokens to our values
+	$replacements = [
+		'g' => (int)$time_h12,
+		'G' => (int)$time_h,
+		'h' => $time_h12,
+		'H' => $time_h,
+		'i' => $time_m,
+		's' => $time_s,
+		'a' => $time_ampm,
+		'A' => strtoupper($time_ampm),
+	];
 
-		// 12-hour formats without seconds
-		case 'g:i a': $output = intval($time_h12) . ':' . $time_m . '&nbsp;' . $time_ampm; break;
-		case 'g:ia': $output = intval($time_h12) . ':' . $time_m . $time_ampm; break;
-		case 'g:i A': $output = intval($time_h12) . ':' . $time_m . '&nbsp;' . strtoupper($time_ampm); break;
-		case 'g:iA': $output = intval($time_h12) . ':' . $time_m . strtoupper($time_ampm); break;
-		case 'h:i a': $output = $time_h12 . ':' . $time_m . '&nbsp;' . $time_ampm; break;
-		case 'h:ia': $output = $time_h12 . ':' . $time_m . $time_ampm; break;
-		case 'h:i A': $output = $time_h12 . ':' . $time_m . '&nbsp;' . strtoupper($time_ampm); break;
-		case 'h:iA': $output = $time_h12 . ':' . $time_m . strtoupper($time_ampm); break;
-
-		// 24-hour formats without seconds
-		case 'G:i': $output = intval($time_h) . ':' . $time_m; break;
-		case 'G.i': $output = intval($time_h) . '.' . $time_m; break;
-		case 'Gi': $output = intval($time_h) . $time_m; break;
-
-		// case 'H:i': is the default, below
-		case 'Hi': $output = $time_h . $time_m; break;
-
-		// 24-hour formats without seconds, using h and m or min
-		case 'G \h i \m\i\n': $output = intval($time_h) . '&nbsp;h&nbsp;' . $time_m . '&nbsp;min'; break;
-		case 'G\h i\m\i\n': $output = intval($time_h) . 'h&nbsp;' . $time_m . 'min'; break;
-		case 'G\hi': $output = intval($time_h) . 'h' . $time_m; break;
-		case 'G\hi\m\i\n': $output = intval($time_h) . 'h' . $time_m . 'min'; break;
-		case 'G \h i \m': $output = intval($time_h) . '&nbsp;h&nbsp;' . $time_m . '&nbsp;m'; break;
-		case 'G\h i\m': $output = intval($time_h) . 'h&nbsp;' . $time_m . 'm'; break;
-		case 'G\hi\m': $output = intval($time_h) . 'h' . $time_m . 'm'; break;
-		case 'H \h i \m\i\n': $output = $time_h . '&nbsp;h&nbsp;' . $time_m . '&nbsp;min'; break;
-		case 'H\h i\m\i\n': $output = $time_h . 'h&nbsp;' . $time_m . 'min'; break;
-		case 'H\hi\m\i\n': $output = $time_h . 'h' . $time_m . 'min'; break;
-		case 'H \h i \m': $output = $time_h . '&nbsp;h&nbsp;' . $time_m . '&nbsp;m'; break;
-		case 'H\h i\m': $output = $time_h . 'h&nbsp;' . $time_m . 'm'; break;
-		case 'H\hi\m': $output = $time_h . 'h' . $time_m . 'm'; break;
-
-		// 12-hour formats with seconds
-		case 'g:i:s a': $output = intval($time_h12) . ':' . $time_m . ':' . $time_s . '&nbsp;' . $time_ampm; break;
-		case 'g:i:sa': $output = intval($time_h12) . ':' . $time_m . ':' . $time_s . $time_ampm; break;
-		case 'g:i:s A': $output = intval($time_h12) . ':' . $time_m . ':' . $time_s . '&nbsp;' . strtoupper($time_ampm); break;
-		case 'g:i:sA': $output = intval($time_h12) . ':' . $time_m . ':' . $time_s . strtoupper($time_ampm); break;
-		case 'h:i:s a': $output = $time_h12 . ':' . $time_m . ':' . $time_s . '&nbsp;' . $time_ampm; break;
-		case 'h:i:sa': $output = $time_h12 . ':' . $time_m . ':' . $time_s . $time_ampm; break;
-		case 'h:i:s A': $output = $time_h12 . ':' . $time_m . ':' . $time_s . '&nbsp;' . strtoupper($time_ampm); break;
-		case 'h:i:sA': $output = $time_h12 . ':' . $time_m . ':' . $time_s . strtoupper($time_ampm); break;
-
-		// 24-hour formats with seconds
-		case 'G:i:s': $output = intval($time_h) . ':' . $time_m . ':' . $time_s; break;
-		case 'H:i:s': $output = $time_h . ':' . $time_m . ':' . $time_s; break;
-		case 'His': $output = $time_h . $time_m . $time_s; break;
-
-		// Hour-only formats used for grid labels
-		case 'H:00': $output = $time_h . ':00'; break;
-		case 'h:00': $output = $time_h12 . ':00'; break;
-		case 'H00': $output = $time_h . '00'; break;
-		case 'g a': $output = intval($time_h12) . ' ' . $time_ampm; break;
-		case 'g A': $output = intval($time_h12) . ' ' . strtoupper($time_ampm); break;
-
-		// Default
-		case 'H:i':
-		default: $output = $time_h . ':' . $time_m; break;
-
+	// Replace tokens, respecting escaped characters
+	$output = '';
+	$length = strlen($clean_format);
+	for ($i = 0; $i < $length; $i++) {
+		$char = $clean_format[$i];
+		if ($char === '\\') {
+			$i++;
+			if ($i < $length) { $output .= $clean_format[$i]; }
+		}
+		elseif (isset($replacements[$char])) {
+			$output .= $replacements[$char];
+		}
+		else {
+			$output .= $char;
+		}
 	}
 
 	// Append T (timezone) if applicable
 	// @todo Insert in the prescribed spot rather than just appending to end!
-	if (!empty($tz) && $time_format_minus_t != $time_format) {
+	if (!empty($tz) && strpos($time_format, 'T') !== false) {
 		if (is_string($tz)) {
 			$tz = (r34ics_is_valid_tz($tz) ? @timezone_open($tz) : wp_timezone());
 		}

@@ -1,5 +1,14 @@
 === ICS Calendar Changelog ===
 
+= 12.1.4 - 2026.09.17 =
+
+* ics-parser Library:
+  * Added `#[AllowDynamicProperties]` to prevent deprecation warnings in logs for PHP 8.2 and later.
+* Miscellaneous:
+  * Refactored functions in the `functions.php` file: `r34ics_boolean_check()`, `r34ics_color_hex_sanitize()`, `r34ics_color_key_allowed()` and `r34ics_time_format()`.
+* i18n:
+  * Corrected translations of the phrase "All Day" in Portuguese.
+
 = 12.1.3.2 - 2026.09.03 =
 
 * Miscellaneous:

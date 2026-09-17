@@ -1,7 +1,9 @@
 <?php
 
 namespace R34ICS_ICal; // r34ics - Renamed to avoid plugin conflicts
+use \AllowDynamicProperties; // Prevents deprecation warnings in PHP 8.2+
 
+#[AllowDynamicProperties]
 class Event
 {
     // phpcs:disable Generic.Arrays.DisallowLongArraySyntax
