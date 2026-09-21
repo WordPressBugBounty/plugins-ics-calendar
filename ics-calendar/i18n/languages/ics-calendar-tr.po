@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-06-24 12:31-0500\n"
-"PO-Revision-Date: 2026-06-24 12:31-0500\n"
+"POT-Creation-Date: 2026-09-21 09:48-0500\n"
+"PO-Revision-Date: 2026-09-21 09:48-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: tr\n"
@@ -226,7 +226,7 @@ msgstr ""
 msgid "Getting Started"
 msgstr "Başla"
 
-#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2471 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Ayarlar"
@@ -274,36 +274,36 @@ msgstr ""
 "sınırlandırmak için boşluk kullanıyorsanız, bunun yerine boru karakterini "
 "kullanmayı da deneyebilirsiniz. Etkilenen URL:"
 
-#: class-r34ics.php:1251
+#: class-r34ics.php:1252
 msgid "Hide past events"
 msgstr "Geçmiş etkinlikleri gizle"
 
-#: class-r34ics.php:1252 templates/calendar-month.php:96
+#: class-r34ics.php:1253 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Geçmiş etkinlikleri göster"
 
-#: class-r34ics.php:1333
+#: class-r34ics.php:1336
 msgid "Contact:"
 msgstr "İletişim:"
 
-#: class-r34ics.php:1339
+#: class-r34ics.php:1342
 msgid "Resources:"
 msgstr "Kaynaklar:"
 
-#: class-r34ics.php:1349
+#: class-r34ics.php:1352
 msgid "Click for more..."
 msgstr "Daha fazlası için tıklayın..."
 
-#: class-r34ics.php:1383
+#: class-r34ics.php:1386
 msgid "Save to your calendar"
 msgstr "Takviminize kaydedin"
 
-#: class-r34ics.php:1486
+#: class-r34ics.php:1489
 msgid "Cancelled"
 msgstr "İptal Edildi"
 
-#: class-r34ics.php:1599
+#: class-r34ics.php:1602
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -311,16 +311,16 @@ msgstr ""
 "Eski ayrıştırıcı seçeneği kullanımdan kaldırılmıştır ve gelecekteki bir "
 "güncellemede kaldırılacaktır."
 
-#: class-r34ics.php:1690
+#: class-r34ics.php:1708
 msgid "Print"
 msgstr "Yazdır"
 
-#: class-r34ics.php:1794
+#: class-r34ics.php:1809
 #, php-format
 msgid "Powered by %1$s"
 msgstr "%1$s tarafından desteklenmektedir"
 
-#: class-r34ics.php:1968
+#: class-r34ics.php:1983
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -328,7 +328,7 @@ msgstr ""
 "\"currentweek\" kısa kod özniteliği kullanımdan kaldırılmıştır. Lütfen kısa "
 "kodunuzda bunun yerine view=\"week\" kullanın."
 
-#: class-r34ics.php:1972
+#: class-r34ics.php:1987
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -336,7 +336,7 @@ msgstr ""
 "\"legendinline\" kısa kod özniteliği kullanımdan kaldırılmıştır. Lütfen kısa "
 "kodunuzda bunun yerine legendstyle=\"inline\" kullanın."
 
-#: class-r34ics.php:2330
+#: class-r34ics.php:2345
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -345,7 +345,7 @@ msgstr ""
 "%1$s ön uç sayfalarında takvim hizmetini %2$syeniden başlattı%3$s. Siteniz "
 "önbellek eklentisi kullanıyorsa, önbelleği temizlemeniz gerekebilir."
 
-#: class-r34ics.php:2338
+#: class-r34ics.php:2353
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -354,21 +354,21 @@ msgstr ""
 "%1$s ön uç sayfalarında takvimlerin görüntülenmesini %2$sdurdurdu%3$s. "
 "Siteniz önbellek eklentisi kullanıyorsa, önbelleği temizlemeniz gerekebilir."
 
-#: class-r34ics.php:2350
+#: class-r34ics.php:2365
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$s geçici durum silindi."
 
-#: class-r34ics.php:2357
+#: class-r34ics.php:2372
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Hiçbir %1$s geçici durum bulunamadı."
 
-#: class-r34ics.php:2366
+#: class-r34ics.php:2381
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Kaydedilen tüm ICS besleme URL'leri silinmiştir."
 
-#: class-r34ics.php:2373
+#: class-r34ics.php:2388
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -377,7 +377,7 @@ msgstr ""
 "Tüm %1$s ayarlar varsayılan değerlere sıfırlandı ve kaydedilmiş ICS besleme "
 "URL'leri silindi."
 
-#: class-r34ics.php:2456
+#: class-r34ics.php:2471
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -387,11 +387,11 @@ msgstr ""
 "görünüyor. Yukarıdaki %2$s sekmesi altındaki %1$s seçeneğini kapatmayı "
 "deneyin."
 
-#: class-r34ics.php:2456 templates/admin/settings.php:85
+#: class-r34ics.php:2471 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Eski besleme isteği yöntemini kullanın"
 
-#: class-r34ics.php:2462
+#: class-r34ics.php:2477
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -407,17 +407,17 @@ msgstr ""
 "URL'sini elde etme talimatları için lütfen %4$sKullanıcı Kılavuzumuza%5$s "
 "bakın."
 
-#: class-r34ics.php:2468
+#: class-r34ics.php:2483
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Hata: %1$s için IP adresi çözülemedi."
 
-#: class-r34ics.php:2471
+#: class-r34ics.php:2486
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$s için çözümlenmiş IP adresi:"
 
-#: class-r34ics.php:2499
+#: class-r34ics.php:2514
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -426,7 +426,7 @@ msgstr ""
 "%1$sGörünüm güncellendi.%2$s Bazı değişiklikleri görmek için sayfayı "
 "yenilemeniz gerekebilir."
 
-#: class-r34ics.php:2559
+#: class-r34ics.php:2574
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -434,7 +434,7 @@ msgstr ""
 "\"Varsayılan kısa kod\" alanına girilen metin geçerli bir kısa kod değildir "
 "ve kaydedilmemiştir."
 
-#: class-r34ics.php:2616
+#: class-r34ics.php:2631
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -443,15 +443,15 @@ msgstr ""
 "%1$sAyarlar güncellendi.%2$s Bazı değişiklikleri görmek için sayfayı "
 "yenilemeniz gerekebilir."
 
-#: class-r34ics.php:2936
+#: class-r34ics.php:2953
 msgid "calendar event"
 msgstr "takvim etkinliği"
 
-#: class-r34ics.php:2942
+#: class-r34ics.php:2959
 msgid "Event download failed."
 msgstr "Etkinlik indirilemedi."
 
-#: class-r34ics.php:3418
+#: class-r34ics.php:3448
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -461,7 +461,7 @@ msgstr ""
 "yapılacak bir güncellemeyle kaldırılacaktır. Lütfen eski besleme isteği "
 "yöntemini kapatarak beslemelerinizi test edin."
 
-#: functions.php:1169
+#: functions.php:1168
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -476,51 +476,51 @@ msgstr ""
 "gereklidir. Sonuç olarak, çakışan çeviri eklentisi etkin durumdayken %1$s "
 "çevirileri düzgün yüklenmeyebilir."
 
-#: functions.php:1292 functions.php:1300 functions.php:1309
+#: functions.php:1291 functions.php:1299 functions.php:1308
 msgid "Map"
 msgstr "Konumu"
 
-#: functions.php:1617
+#: functions.php:1616
 msgid "Recurring event"
 msgstr "Tekrarlayan etkinlik"
 
-#: functions.php:1622
+#: functions.php:1621
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Her %1$s yılda bir tekrarlanır"
 
-#: functions.php:1622
+#: functions.php:1621
 msgid "Recurs yearly"
 msgstr "Yıllık olarak tekrarlanır"
 
-#: functions.php:1625
+#: functions.php:1624
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Her %1$s ayda bir tekrarlanır"
 
-#: functions.php:1625
+#: functions.php:1624
 msgid "Recurs monthly"
 msgstr "Aylık olarak tekrarlanır"
 
-#: functions.php:1628
+#: functions.php:1627
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Her %1$s haftada bir tekrarlar"
 
-#: functions.php:1628
+#: functions.php:1627
 msgid "Recurs weekly"
 msgstr "Haftalık olarak tekrarlanır"
 
-#: functions.php:1631
+#: functions.php:1630
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Her %1$s günde bir tekrarlar"
 
-#: functions.php:1631
+#: functions.php:1630
 msgid "Recurs daily"
 msgstr "Her gün tekrar eder"
 
-#: functions.php:1804
+#: functions.php:1803
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -533,7 +533,7 @@ msgstr ""
 "dönüştürülmüştür. Sonuç olarak takviminiz düzgün görüntülenmeyebilir. Lütfen "
 "kısa koddaki tıklanabilir bağlantıyı kaldırın."
 
-#: functions.php:2137
+#: functions.php:2106
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() işlevi artık desteklenmemektedir."
 
@@ -1011,20 +1011,14 @@ msgstr ""
 "aralık 30 ile 300 arasındadır. Boş bırakılırsa, varsayılan 30 saniye değeri "
 "kullanılır."
 
-#: templates/admin/settings.php:86
-msgid "deprecated"
-msgstr "kullanım dışı"
-
 #: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
-"are not loading, turn on this option to use the legacy request method. This "
-"feature is deprecated and will be removed in a future update."
+"are not loading, turn on this option to use the legacy request method."
 msgstr ""
 "Bazı sunucular varsayılan besleme isteği yöntemini desteklemeyebilir. "
-"Beslemeleriniz yüklenmiyorsa, eski istek yöntemini kullanmak için bu "
-"seçeneği etkinleştirin. Bu özellik kullanımdan kaldırılmıştır ve gelecekteki "
-"bir güncellemede kaldırılacaktır."
+"Beslemeleriniz yüklenmiyorsa, eski isteği yöntemini kullanmak için bu "
+"seçeneği etkinleştirin."
 
 #: templates/admin/settings.php:95
 msgid "Default shortcode"
@@ -1469,6 +1463,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Oda 34 Yaratıcı Hizmetler, LLC"
+
+#~ msgid "deprecated"
+#~ msgstr "kullanım dışı"
 
 #, php-format
 #~ msgid ""

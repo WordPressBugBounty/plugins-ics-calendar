@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-06-24 12:34-0500\n"
-"PO-Revision-Date: 2026-06-24 12:34-0500\n"
+"POT-Creation-Date: 2026-09-21 09:49-0500\n"
+"PO-Revision-Date: 2026-09-21 09:49-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: cs\n"
@@ -223,7 +223,7 @@ msgstr ""
 msgid "Getting Started"
 msgstr "Začínáme"
 
-#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2471 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Nastavení"
@@ -271,52 +271,52 @@ msgstr ""
 "více adres URL, můžete také zkusit použít místo toho znak pipe. Dotčená "
 "adresa URL:"
 
-#: class-r34ics.php:1251
+#: class-r34ics.php:1252
 msgid "Hide past events"
 msgstr "Skrýt minulé události"
 
-#: class-r34ics.php:1252 templates/calendar-month.php:96
+#: class-r34ics.php:1253 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Zobrazit proběhlé akce"
 
-#: class-r34ics.php:1333
+#: class-r34ics.php:1336
 msgid "Contact:"
 msgstr "Kontakt:"
 
-#: class-r34ics.php:1339
+#: class-r34ics.php:1342
 msgid "Resources:"
 msgstr "Zdroje:"
 
-#: class-r34ics.php:1349
+#: class-r34ics.php:1352
 msgid "Click for more..."
 msgstr "Klikněte pro více informací..."
 
-#: class-r34ics.php:1383
+#: class-r34ics.php:1386
 msgid "Save to your calendar"
 msgstr "Uložit do kalendáře"
 
-#: class-r34ics.php:1486
+#: class-r34ics.php:1489
 msgid "Cancelled"
 msgstr "Zrušeno"
 
-#: class-r34ics.php:1599
+#: class-r34ics.php:1602
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr ""
 "Možnost legacy parser je zastaralá a bude v budoucí aktualizaci odstraněna."
 
-#: class-r34ics.php:1690
+#: class-r34ics.php:1708
 msgid "Print"
 msgstr "Tisk"
 
-#: class-r34ics.php:1794
+#: class-r34ics.php:1809
 #, php-format
 msgid "Powered by %1$s"
 msgstr "Vytvořeno pomocí %1$s"
 
-#: class-r34ics.php:1968
+#: class-r34ics.php:1983
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -324,7 +324,7 @@ msgstr ""
 "Atribut zkráceného kódu „currentweek“ je zastaralý. Místo něj použijte ve "
 "svém zkráceném kódu view=\"week\"."
 
-#: class-r34ics.php:1972
+#: class-r34ics.php:1987
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -332,7 +332,7 @@ msgstr ""
 "Atribut zkráceného kódu „legendinline“ je zastaralý. Místo něj použijte ve "
 "svém zkráceném kódu legendstyle=\"inline\"."
 
-#: class-r34ics.php:2330
+#: class-r34ics.php:2345
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -342,7 +342,7 @@ msgstr ""
 "web používá plugin pro ukládání do mezipaměti, možná budete muset mezipaměť "
 "vymazat."
 
-#: class-r34ics.php:2338
+#: class-r34ics.php:2353
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -352,21 +352,21 @@ msgstr ""
 "váš web používá plugin pro ukládání do mezipaměti, možná budete muset "
 "mezipaměť vymazat."
 
-#: class-r34ics.php:2350
+#: class-r34ics.php:2365
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Vymazáno %1$s %2$s přechodných jevů."
 
-#: class-r34ics.php:2357
+#: class-r34ics.php:2372
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nebyly nalezeny žádné %1$s přechodové jevy."
 
-#: class-r34ics.php:2366
+#: class-r34ics.php:2381
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Všechny uložené adresy URL kanálů ICS byly vymazány."
 
-#: class-r34ics.php:2373
+#: class-r34ics.php:2388
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -375,7 +375,7 @@ msgstr ""
 "Všechna nastavení %1$s byla resetována na výchozí hodnoty a uložené adresy "
 "URL kanálů ICS byly vymazány."
 
-#: class-r34ics.php:2456
+#: class-r34ics.php:2471
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -384,11 +384,11 @@ msgstr ""
 "Vaše adresa URL zdroje zdá se obsahuje přihlašovací údaje pro základní "
 "ověřování HTTP. Zkuste vypnout možnost %1$s na záložce %2$s výše."
 
-#: class-r34ics.php:2456 templates/admin/settings.php:85
+#: class-r34ics.php:2471 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Použít starší metodu požadavku na feed"
 
-#: class-r34ics.php:2462
+#: class-r34ics.php:2477
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -403,17 +403,17 @@ msgstr ""
 "žádné budoucí aktualizace zdrojového kalendáře. Pokyny k získání správné "
 "dynamické URL adresy feedu naleznete v naší %4$suživatelské příručce%5$s."
 
-#: class-r34ics.php:2468
+#: class-r34ics.php:2483
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Chyba: Nelze vyřešit IP adresu pro %1$s."
 
-#: class-r34ics.php:2471
+#: class-r34ics.php:2486
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Vyřešená IP adresa pro %1$s:"
 
-#: class-r34ics.php:2499
+#: class-r34ics.php:2514
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -422,7 +422,7 @@ msgstr ""
 "%1$sVzhled aktualizován.%2$s Možná bude nutné stránku obnovit, aby se změny "
 "projevily."
 
-#: class-r34ics.php:2559
+#: class-r34ics.php:2574
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -430,7 +430,7 @@ msgstr ""
 "Text zadaný do pole „Výchozí zkrácený kód“ není platným zkráceným kódem a "
 "nebyl uložen."
 
-#: class-r34ics.php:2616
+#: class-r34ics.php:2631
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -439,15 +439,15 @@ msgstr ""
 "%1$sNastavení aktualizováno.%2$s Možná bude nutné stránku obnovit, aby se "
 "změny projevily."
 
-#: class-r34ics.php:2936
+#: class-r34ics.php:2953
 msgid "calendar event"
 msgstr "událost v kalendáři"
 
-#: class-r34ics.php:2942
+#: class-r34ics.php:2959
 msgid "Event download failed."
 msgstr "Stažení události se nezdařilo."
 
-#: class-r34ics.php:3418
+#: class-r34ics.php:3448
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -457,7 +457,7 @@ msgstr ""
 "rámci aktualizace odstraněna. Otestujte prosím své feedy s vypnutou starší "
 "metodou požadavku na feed."
 
-#: functions.php:1169
+#: functions.php:1168
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -472,51 +472,51 @@ msgstr ""
 "%3$s. V důsledku toho se překlady %1$s nemusí načíst správně, pokud je "
 "konfliktní plugin pro překlady aktivní."
 
-#: functions.php:1292 functions.php:1300 functions.php:1309
+#: functions.php:1291 functions.php:1299 functions.php:1308
 msgid "Map"
 msgstr "Mapa"
 
-#: functions.php:1617
+#: functions.php:1616
 msgid "Recurring event"
 msgstr " Opakující se akce"
 
-#: functions.php:1622
+#: functions.php:1621
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Opakuje se každých %1$s let"
 
-#: functions.php:1622
+#: functions.php:1621
 msgid "Recurs yearly"
 msgstr "Opakuje se každý rok"
 
-#: functions.php:1625
+#: functions.php:1624
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Opakuje se každých %1$s měsíců"
 
-#: functions.php:1625
+#: functions.php:1624
 msgid "Recurs monthly"
 msgstr "Opakuje se každý měsíc"
 
-#: functions.php:1628
+#: functions.php:1627
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Opakuje se každých %1$s týdnů"
 
-#: functions.php:1628
+#: functions.php:1627
 msgid "Recurs weekly"
 msgstr "Opakuje se každý týden"
 
-#: functions.php:1631
+#: functions.php:1630
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Opakuje se každých %1$s dní"
 
-#: functions.php:1631
+#: functions.php:1630
 msgid "Recurs daily"
 msgstr "Opakuje se každý den"
 
-#: functions.php:1804
+#: functions.php:1803
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -529,7 +529,7 @@ msgstr ""
 "odkaz. V důsledku toho se váš kalendář nemusí zobrazovat správně. Odstraňte "
 "prosím klikatelný odkaz ze zkráceného kódu."
 
-#: functions.php:2137
+#: functions.php:2106
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkce r34ics_url_get_contents() již není podporována."
 
@@ -1008,19 +1008,14 @@ msgstr ""
 "rozsah je 30 až 300. Pokud pole ponecháte prázdné, použije se výchozí "
 "hodnota 30 sekund."
 
-#: templates/admin/settings.php:86
-msgid "deprecated"
-msgstr "zastaralý"
-
 #: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
-"are not loading, turn on this option to use the legacy request method. This "
-"feature is deprecated and will be removed in a future update."
+"are not loading, turn on this option to use the legacy request method."
 msgstr ""
-"Některé servery nemusí podporovat výchozí metodu požadavku na feed. Pokud se "
-"vaše feedy nenačítají, zapněte tuto možnost a použijte starší metodu "
-"požadavku. Tato funkce je zastaralá a bude v budoucí aktualizaci odstraněna."
+"Některé servery nemusí podporovat výchozí metodu žádosti o kanál. Pokud se "
+"vaše kanály nenačítají, zapněte tuto možnost, abyste mohli použít starší "
+"metodu žádosti."
 
 #: templates/admin/settings.php:95
 msgid "Default shortcode"
@@ -1468,6 +1463,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Pokoj 34 Kreativní služby, LLC"
+
+#~ msgid "deprecated"
+#~ msgstr "zastaralý"
 
 #, php-format
 #~ msgid ""

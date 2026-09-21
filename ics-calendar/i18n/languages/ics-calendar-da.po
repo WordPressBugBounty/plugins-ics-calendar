@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-06-24 12:34-0500\n"
-"PO-Revision-Date: 2026-06-24 12:34-0500\n"
+"POT-Creation-Date: 2026-09-21 09:49-0500\n"
+"PO-Revision-Date: 2026-09-21 09:49-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -227,7 +227,7 @@ msgstr ""
 msgid "Getting Started"
 msgstr "Kom godt i gang"
 
-#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2471 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Indstillinger"
@@ -274,36 +274,36 @@ msgstr ""
 "allow_url_fopen er tilgængeligt. Hvis du bruger mellemrum til at afgrænse "
 "flere URL'er, kan du også prøve at bruge pipe-tegnet i stedet. Berørt URL:"
 
-#: class-r34ics.php:1251
+#: class-r34ics.php:1252
 msgid "Hide past events"
 msgstr "Skjul tidligere begivenheder"
 
-#: class-r34ics.php:1252 templates/calendar-month.php:96
+#: class-r34ics.php:1253 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Vis tidligere begivenheder"
 
-#: class-r34ics.php:1333
+#: class-r34ics.php:1336
 msgid "Contact:"
 msgstr "Kontakt:"
 
-#: class-r34ics.php:1339
+#: class-r34ics.php:1342
 msgid "Resources:"
 msgstr "Ressourcer:"
 
-#: class-r34ics.php:1349
+#: class-r34ics.php:1352
 msgid "Click for more..."
 msgstr "Klik for mere..."
 
-#: class-r34ics.php:1383
+#: class-r34ics.php:1386
 msgid "Save to your calendar"
 msgstr "Gem i din kalender"
 
-#: class-r34ics.php:1486
+#: class-r34ics.php:1489
 msgid "Cancelled"
 msgstr "Annulleret"
 
-#: class-r34ics.php:1599
+#: class-r34ics.php:1602
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -311,16 +311,16 @@ msgstr ""
 "Den gamle parser-indstilling er udfaset og vil blive fjernet i en fremtidig "
 "opdatering."
 
-#: class-r34ics.php:1690
+#: class-r34ics.php:1708
 msgid "Print"
 msgstr "Udskriv"
 
-#: class-r34ics.php:1794
+#: class-r34ics.php:1809
 #, php-format
 msgid "Powered by %1$s"
 msgstr "Drevet af %1$s"
 
-#: class-r34ics.php:1968
+#: class-r34ics.php:1983
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -328,7 +328,7 @@ msgstr ""
 "Attributten \"currentweek\" i kortkoden er udfaset. Brug i stedet "
 "view=\"week\" i din kortkode."
 
-#: class-r34ics.php:1972
+#: class-r34ics.php:1987
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -336,7 +336,7 @@ msgstr ""
 "Attributten \"legendinline\" i kortkoden er udgået. Brug i stedet "
 "legendstyle=\"inline\" i din kortkode."
 
-#: class-r34ics.php:2330
+#: class-r34ics.php:2345
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -345,7 +345,7 @@ msgstr ""
 "%1$s har %2$sgenoptaget%3$s visningen af kalendere på forsidens sider. Hvis "
 "dit websted bruger et cache-plugin, skal du muligvis rydde cachen."
 
-#: class-r34ics.php:2338
+#: class-r34ics.php:2353
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -354,21 +354,21 @@ msgstr ""
 "%1$s har %2$ssat%3$s visningen af kalendere på forsidens sider på pause. "
 "Hvis dit websted bruger et cache-plugin, skal du muligvis rydde cachen."
 
-#: class-r34ics.php:2350
+#: class-r34ics.php:2365
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Ryddet %1$s %2$s forbigående(e)."
 
-#: class-r34ics.php:2357
+#: class-r34ics.php:2372
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Der blev ikke fundet nogen %1$s transienter."
 
-#: class-r34ics.php:2366
+#: class-r34ics.php:2381
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Alle gemte ICS-feed-URL'er er blevet slettet."
 
-#: class-r34ics.php:2373
+#: class-r34ics.php:2388
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -377,7 +377,7 @@ msgstr ""
 "Alle %1$s indstillinger er blevet nulstillet til standardindstillingerne, og "
 "gemte ICS-feed-URL'er er blevet slettet."
 
-#: class-r34ics.php:2456
+#: class-r34ics.php:2471
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -387,11 +387,11 @@ msgstr ""
 "legitimationsoplysninger. Prøv at deaktivere indstillingen %1$s under fanen "
 "%2$s ovenfor."
 
-#: class-r34ics.php:2456 templates/admin/settings.php:85
+#: class-r34ics.php:2471 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Brug ældre feed-anmodningsmetode"
 
-#: class-r34ics.php:2462
+#: class-r34ics.php:2477
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -407,17 +407,17 @@ msgstr ""
 "%4$sbrugervejledning%5$s for instruktioner om, hvordan du får den korrekte "
 "dynamiske feed-URL."
 
-#: class-r34ics.php:2468
+#: class-r34ics.php:2483
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Fejl: Kunne ikke finde IP-adressen for %1$s."
 
-#: class-r34ics.php:2471
+#: class-r34ics.php:2486
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Løst IP-adresse for %1$s:"
 
-#: class-r34ics.php:2499
+#: class-r34ics.php:2514
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -426,7 +426,7 @@ msgstr ""
 "%1$sUdseende opdateret.%2$s Du skal muligvis opdatere siden for at se nogle "
 "ændringer."
 
-#: class-r34ics.php:2559
+#: class-r34ics.php:2574
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -434,7 +434,7 @@ msgstr ""
 "Den tekst, der er indtastet i feltet \"Standardkortkode\", er ikke en gyldig "
 "kortkode og blev ikke gemt."
 
-#: class-r34ics.php:2616
+#: class-r34ics.php:2631
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -443,15 +443,15 @@ msgstr ""
 "%1$sIndstillinger opdateret.%2$s Du skal muligvis opdatere siden for at se "
 "nogle ændringer."
 
-#: class-r34ics.php:2936
+#: class-r34ics.php:2953
 msgid "calendar event"
 msgstr "kalenderbegivenhed"
 
-#: class-r34ics.php:2942
+#: class-r34ics.php:2959
 msgid "Event download failed."
 msgstr "Hentning af begivenhed mislykkedes."
 
-#: class-r34ics.php:3418
+#: class-r34ics.php:3448
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -461,7 +461,7 @@ msgstr ""
 "opdatering i nær fremtid. Test dine feeds med den gamle feed-"
 "anmodningsmetode slået fra."
 
-#: functions.php:1169
+#: functions.php:1168
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -477,51 +477,51 @@ msgstr ""
 "oversættelser muligvis ikke indlæses korrekt, mens det konfliktende "
 "oversættelsesplugin er aktivt."
 
-#: functions.php:1292 functions.php:1300 functions.php:1309
+#: functions.php:1291 functions.php:1299 functions.php:1308
 msgid "Map"
 msgstr "Kort"
 
-#: functions.php:1617
+#: functions.php:1616
 msgid "Recurring event"
 msgstr "Tilbagevendende begivenhed"
 
-#: functions.php:1622
+#: functions.php:1621
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Gentages hvert %1$s år"
 
-#: functions.php:1622
+#: functions.php:1621
 msgid "Recurs yearly"
 msgstr "Gentager sig årligt"
 
-#: functions.php:1625
+#: functions.php:1624
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Gentages hver %1$s måned"
 
-#: functions.php:1625
+#: functions.php:1624
 msgid "Recurs monthly"
 msgstr "Gentages hver måned"
 
-#: functions.php:1628
+#: functions.php:1627
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Gentages hver %1$s uge"
 
-#: functions.php:1628
+#: functions.php:1627
 msgid "Recurs weekly"
 msgstr "Gentages hver uge"
 
-#: functions.php:1631
+#: functions.php:1630
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Gentages hver %1$s dag"
 
-#: functions.php:1631
+#: functions.php:1630
 msgid "Recurs daily"
 msgstr "Gentages dagligt"
 
-#: functions.php:1804
+#: functions.php:1803
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -534,7 +534,7 @@ msgstr ""
 "vises muligvis ikke korrekt som følge heraf. Fjern det klikbare link i "
 "shortcoden."
 
-#: functions.php:2137
+#: functions.php:2106
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funktionen r34ics_url_get_contents() understøttes ikke længere."
 
@@ -1013,20 +1013,14 @@ msgstr ""
 "tilladte interval er 30 til 300. Hvis feltet efterlades tomt, anvendes "
 "standardværdien på 30 sekunder."
 
-#: templates/admin/settings.php:86
-msgid "deprecated"
-msgstr "forældet"
-
 #: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
-"are not loading, turn on this option to use the legacy request method. This "
-"feature is deprecated and will be removed in a future update."
+"are not loading, turn on this option to use the legacy request method."
 msgstr ""
 "Nogle servere understøtter muligvis ikke standardmetoden til anmodning om "
 "feeds. Hvis dine feeds ikke indlæses, skal du aktivere denne indstilling for "
-"at bruge den gamle anmodningsmetode. Denne funktion er udfaset og vil blive "
-"fjernet i en fremtidig opdatering."
+"at bruge den ældre anmodningsmetode."
 
 #: templates/admin/settings.php:95
 msgid "Default shortcode"
@@ -1469,6 +1463,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "deprecated"
+#~ msgstr "forældet"
 
 #, php-format
 #~ msgid ""

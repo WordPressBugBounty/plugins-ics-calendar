@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-06-24 12:33-0500\n"
-"PO-Revision-Date: 2026-06-24 12:33-0500\n"
+"POT-Creation-Date: 2026-09-21 09:49-0500\n"
+"PO-Revision-Date: 2026-09-21 09:49-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -223,7 +223,7 @@ msgstr ""
 msgid "Getting Started"
 msgstr "はじめに"
 
-#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2471 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "設定"
@@ -270,52 +270,52 @@ msgstr ""
 "い。複数のURLを区切る際にスペースを使用している場合は、代わりにパイプ文字"
 "（|）を使用してみてください。影響を受けるURL:"
 
-#: class-r34ics.php:1251
+#: class-r34ics.php:1252
 msgid "Hide past events"
 msgstr "過去のイベントを隠す"
 
-#: class-r34ics.php:1252 templates/calendar-month.php:96
+#: class-r34ics.php:1253 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "過去のイベントを表示"
 
-#: class-r34ics.php:1333
+#: class-r34ics.php:1336
 msgid "Contact:"
 msgstr "連絡先:"
 
-#: class-r34ics.php:1339
+#: class-r34ics.php:1342
 msgid "Resources:"
 msgstr "リソース:"
 
-#: class-r34ics.php:1349
+#: class-r34ics.php:1352
 msgid "Click for more..."
 msgstr "続きを読む..."
 
-#: class-r34ics.php:1383
+#: class-r34ics.php:1386
 msgid "Save to your calendar"
 msgstr "カレンダーに保存"
 
-#: class-r34ics.php:1486
+#: class-r34ics.php:1489
 msgid "Cancelled"
 msgstr "キャンセル"
 
-#: class-r34ics.php:1599
+#: class-r34ics.php:1602
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr ""
 "レガシーパーサーオプションは非推奨となり、今後のアップデートで削除されます。"
 
-#: class-r34ics.php:1690
+#: class-r34ics.php:1708
 msgid "Print"
 msgstr "印刷"
 
-#: class-r34ics.php:1794
+#: class-r34ics.php:1809
 #, php-format
 msgid "Powered by %1$s"
 msgstr "提供：%1$s"
 
-#: class-r34ics.php:1968
+#: class-r34ics.php:1983
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -323,7 +323,7 @@ msgstr ""
 "「currentweek」ショートコード属性は非推奨となりました。代わりにショートコード"
 "内で view=\"week\" を使用してください。"
 
-#: class-r34ics.php:1972
+#: class-r34ics.php:1987
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -331,7 +331,7 @@ msgstr ""
 "「legendinline」ショートコード属性は非推奨となりました。代わりに、ショート"
 "コード内で legendstyle=\"inline\" を使用してください。"
 
-#: class-r34ics.php:2330
+#: class-r34ics.php:2345
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -341,7 +341,7 @@ msgstr ""
 "キャッシュプラグインを使用している場合は、キャッシュをクリアする必要があるか"
 "もしれません。"
 
-#: class-r34ics.php:2338
+#: class-r34ics.php:2353
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -351,21 +351,21 @@ msgstr ""
 "トにキャッシュプラグインを使用している場合は、キャッシュをクリアする必要があ"
 "るかもしれません。"
 
-#: class-r34ics.php:2350
+#: class-r34ics.php:2365
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "クリア済み %1$s %2$s 一時的データ。"
 
-#: class-r34ics.php:2357
+#: class-r34ics.php:2372
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "トランジェントは%1$s個見つかりませんでした。"
 
-#: class-r34ics.php:2366
+#: class-r34ics.php:2381
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "保存されたすべてのICSフィードURLが削除されました。"
 
-#: class-r34ics.php:2373
+#: class-r34ics.php:2388
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -374,7 +374,7 @@ msgstr ""
 "すべての%1$s設定がデフォルトにリセットされ、保存されたICSフィードURLがクリア"
 "されました。"
 
-#: class-r34ics.php:2456
+#: class-r34ics.php:2471
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -383,11 +383,11 @@ msgstr ""
 "フィードURLにHTTP基本認証の認証情報が含まれているようです。上記%2$sタブ内"
 "の%1$sオプションをオフにしてみてください。"
 
-#: class-r34ics.php:2456 templates/admin/settings.php:85
+#: class-r34ics.php:2471 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "レガシーフィードリクエストメソッドを使用する"
 
-#: class-r34ics.php:2462
+#: class-r34ics.php:2477
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -402,17 +402,17 @@ msgstr ""
 "しい動的フィードURLの取得方法については、%4$sユーザーガイド%5$sをご参照くださ"
 "い。"
 
-#: class-r34ics.php:2468
+#: class-r34ics.php:2483
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "エラー: %1$s の IP アドレスを解決できませんでした。"
 
-#: class-r34ics.php:2471
+#: class-r34ics.php:2486
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$s の解決済み IP アドレス:"
 
-#: class-r34ics.php:2499
+#: class-r34ics.php:2514
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -421,7 +421,7 @@ msgstr ""
 "%1$s外観を更新しました。%2$s変更内容を確認するには、ページを更新する必要があ"
 "る場合があります。"
 
-#: class-r34ics.php:2559
+#: class-r34ics.php:2574
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -429,7 +429,7 @@ msgstr ""
 "「デフォルトのショートコード」フィールドに入力されたテキストは有効なショート"
 "コードではありませんでした。保存されませんでした。"
 
-#: class-r34ics.php:2616
+#: class-r34ics.php:2631
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -438,15 +438,15 @@ msgstr ""
 "%1$s設定を更新しました。%2$s 一部の変更を確認するには、ページを更新する必要が"
 "ある場合があります。"
 
-#: class-r34ics.php:2936
+#: class-r34ics.php:2953
 msgid "calendar event"
 msgstr "カレンダーイベント"
 
-#: class-r34ics.php:2942
+#: class-r34ics.php:2959
 msgid "Event download failed."
 msgstr "イベントのダウンロードに失敗しました。"
 
-#: class-r34ics.php:3418
+#: class-r34ics.php:3448
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -456,7 +456,7 @@ msgstr ""
 "除されます。レガシーフィードリクエストメソッドを無効にした状態でフィードをテ"
 "ストしてください。"
 
-#: functions.php:1169
+#: functions.php:1168
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -470,51 +470,51 @@ msgstr ""
 "ンとの競合に対処するために必要です。その結果、競合する翻訳プラグインが有効な"
 "間は%1$sの翻訳が正しく読み込まれない可能性があります。"
 
-#: functions.php:1292 functions.php:1300 functions.php:1309
+#: functions.php:1291 functions.php:1299 functions.php:1308
 msgid "Map"
 msgstr "マップ"
 
-#: functions.php:1617
+#: functions.php:1616
 msgid "Recurring event"
 msgstr "繰り返しイベントの新規作成"
 
-#: functions.php:1622
+#: functions.php:1621
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "%1$s年ごとに繰り返す"
 
-#: functions.php:1622
+#: functions.php:1621
 msgid "Recurs yearly"
 msgstr "毎年繰り返される"
 
-#: functions.php:1625
+#: functions.php:1624
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "%1$sヶ月ごとに再発する"
 
-#: functions.php:1625
+#: functions.php:1624
 msgid "Recurs monthly"
 msgstr "毎月繰り返される"
 
-#: functions.php:1628
+#: functions.php:1627
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "%1$s週間ごとに再発する"
 
-#: functions.php:1628
+#: functions.php:1627
 msgid "Recurs weekly"
 msgstr "毎週繰り返される"
 
-#: functions.php:1631
+#: functions.php:1630
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "%1$s日ごとに再帰します"
 
-#: functions.php:1631
+#: functions.php:1630
 msgid "Recurs daily"
 msgstr "毎日繰り返される"
 
-#: functions.php:1804
+#: functions.php:1803
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -527,7 +527,7 @@ msgstr ""
 "ない可能性があります。ショートコード内のクリック可能なリンクを削除してくださ"
 "い。"
 
-#: functions.php:2137
+#: functions.php:2106
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() 関数はサポートされなくなりました。"
 
@@ -999,20 +999,14 @@ msgstr ""
 "合は、この設定を使用してタイムアウト時間を延長してください。設定可能な範囲は"
 "30秒から300秒です。空欄のままにすると、デフォルトの30秒が適用されます。"
 
-#: templates/admin/settings.php:86
-msgid "deprecated"
-msgstr "非推奨"
-
 #: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
-"are not loading, turn on this option to use the legacy request method. This "
-"feature is deprecated and will be removed in a future update."
+"are not loading, turn on this option to use the legacy request method."
 msgstr ""
 "一部のサーバーでは、デフォルトのフィードリクエスト方式がサポートされていない"
-"場合があります。フィードが読み込まれない場合は、このオプションを有効にして従"
-"来のリクエスト方式を使用してください。この機能は非推奨となり、今後のアップ"
-"デートで削除される予定です。"
+"場合があります。フィードが読み込まれない場合は、このオプションを有効にして、"
+"従来のリクエスト方式を使用してください。"
 
 #: templates/admin/settings.php:95
 msgid "Default shortcode"
@@ -1452,6 +1446,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "ルーム34 クリエイティブ・サービスズ合同会社"
+
+#~ msgid "deprecated"
+#~ msgstr "非推奨"
 
 #, php-format
 #~ msgid ""

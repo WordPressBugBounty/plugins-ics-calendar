@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-06-24 12:32-0500\n"
-"PO-Revision-Date: 2026-06-24 12:33-0500\n"
+"POT-Creation-Date: 2026-09-21 09:49-0500\n"
+"PO-Revision-Date: 2026-09-21 09:49-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: lt\n"
@@ -226,7 +226,7 @@ msgstr ""
 msgid "Getting Started"
 msgstr "Pradėkime"
 
-#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2471 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Nustatymai"
@@ -274,36 +274,36 @@ msgstr ""
 "tarpus, kad atskirtumėte kelis URL adresus, galite pabandyti vietoj to "
 "naudoti vertikaliąją brūkšnį. Paveiktas URL adresas:"
 
-#: class-r34ics.php:1251
+#: class-r34ics.php:1252
 msgid "Hide past events"
 msgstr "Paslėpti praėjusius įvykius"
 
-#: class-r34ics.php:1252 templates/calendar-month.php:96
+#: class-r34ics.php:1253 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Rodyti praėjusius renginius"
 
-#: class-r34ics.php:1333
+#: class-r34ics.php:1336
 msgid "Contact:"
 msgstr "Susisiekite:"
 
-#: class-r34ics.php:1339
+#: class-r34ics.php:1342
 msgid "Resources:"
 msgstr "Ištekliai:"
 
-#: class-r34ics.php:1349
+#: class-r34ics.php:1352
 msgid "Click for more..."
 msgstr "Spauskite čia, jei norite sužinoti daugiau..."
 
-#: class-r34ics.php:1383
+#: class-r34ics.php:1386
 msgid "Save to your calendar"
 msgstr "Įtraukti į kalendorių"
 
-#: class-r34ics.php:1486
+#: class-r34ics.php:1489
 msgid "Cancelled"
 msgstr "Atšaukta"
 
-#: class-r34ics.php:1599
+#: class-r34ics.php:1602
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -311,16 +311,16 @@ msgstr ""
 "Senasis analizatoriaus parinktis yra pasenęs ir bus pašalintas ateityje "
 "atnaujinant programą."
 
-#: class-r34ics.php:1690
+#: class-r34ics.php:1708
 msgid "Print"
 msgstr "Spausdinti"
 
-#: class-r34ics.php:1794
+#: class-r34ics.php:1809
 #, php-format
 msgid "Powered by %1$s"
 msgstr "Sukurta naudojant %1$s"
 
-#: class-r34ics.php:1968
+#: class-r34ics.php:1983
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -328,7 +328,7 @@ msgstr ""
 "Trumpasis kodas „currentweek“ yra pasenęs. Vietoj jo trumpajame kode "
 "naudokite view=\"week\"."
 
-#: class-r34ics.php:1972
+#: class-r34ics.php:1987
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -336,7 +336,7 @@ msgstr ""
 "Trumpasis kodas „legendinline“ yra pasenęs. Vietoj jo trumpajame kode "
 "naudokite legendstyle=\"inline\"."
 
-#: class-r34ics.php:2330
+#: class-r34ics.php:2345
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -345,7 +345,7 @@ msgstr ""
 "%1$s atnaujino %2$s%3$s kalendorių teikimą priekiniuose puslapiuose. Jei "
 "jūsų svetainė naudoja talpyklos papildinį, gali tekti išvalyti talpyklą."
 
-#: class-r34ics.php:2338
+#: class-r34ics.php:2353
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -354,21 +354,21 @@ msgstr ""
 "%1$s pagrindiniuose puslapiuose pateikia %2$spaused%3$s kalendorius. Jei "
 "jūsų svetainė naudoja talpyklos papildinį, gali tekti išvalyti talpyklą."
 
-#: class-r34ics.php:2350
+#: class-r34ics.php:2365
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Išvalyta %1$s %2$s laikina (-os) informacija (-os)."
 
-#: class-r34ics.php:2357
+#: class-r34ics.php:2372
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nerasta %1$s pereinamųjų reiškinių."
 
-#: class-r34ics.php:2366
+#: class-r34ics.php:2381
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Visi išsaugoti ICS srauto URL adresai buvo ištrinti."
 
-#: class-r34ics.php:2373
+#: class-r34ics.php:2388
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -377,7 +377,7 @@ msgstr ""
 "Visi %1$s nustatymai buvo atkurti į numatytuosius, o išsaugoti ICS srauto "
 "URL adresai buvo ištrinti."
 
-#: class-r34ics.php:2456
+#: class-r34ics.php:2471
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -387,11 +387,11 @@ msgstr ""
 "autentifikavimo kredencialai. Pabandykite išjungti %1$s parinktį "
 "viršutiniame %2$s skirtuke."
 
-#: class-r34ics.php:2456 templates/admin/settings.php:85
+#: class-r34ics.php:2471 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Naudokite senąjį tiekimo užklausos metodą"
 
-#: class-r34ics.php:2462
+#: class-r34ics.php:2477
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -406,17 +406,17 @@ msgstr ""
 "būsimų šaltinio kalendoriaus atnaujinimų. Teisingo dinaminio srauto URL "
 "gavimo instrukcijas rasite mūsų %4$svartotojo vadove%5$s."
 
-#: class-r34ics.php:2468
+#: class-r34ics.php:2483
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Klaida: Nepavyko nustatyti IP adreso %1$s."
 
-#: class-r34ics.php:2471
+#: class-r34ics.php:2486
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Nustatytas IP adresas %1$s:"
 
-#: class-r34ics.php:2499
+#: class-r34ics.php:2514
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -425,7 +425,7 @@ msgstr ""
 "%1$sAtnaujintas išvaizda.%2$s Kad pamatytumėte kai kuriuos pakeitimus, gali "
 "tekti atnaujinti puslapį."
 
-#: class-r34ics.php:2559
+#: class-r34ics.php:2574
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -433,7 +433,7 @@ msgstr ""
 "Į lauką „Numatytasis trumpasis kodas“ įvestas tekstas nėra galiojantis "
 "trumpasis kodas ir nebuvo išsaugotas."
 
-#: class-r34ics.php:2616
+#: class-r34ics.php:2631
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -442,15 +442,15 @@ msgstr ""
 "%1$sNustatymai atnaujinti.%2$s Kad pamatytumėte kai kuriuos pakeitimus, gali "
 "tekti atnaujinti puslapį."
 
-#: class-r34ics.php:2936
+#: class-r34ics.php:2953
 msgid "calendar event"
 msgstr "kalendoriaus įvykis"
 
-#: class-r34ics.php:2942
+#: class-r34ics.php:2959
 msgid "Event download failed."
 msgstr "Renginio atsisiuntimas nepavyko."
 
-#: class-r34ics.php:3418
+#: class-r34ics.php:3448
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -460,7 +460,7 @@ msgstr ""
 "artimiausioje ateityje. Prašome išbandyti savo informacijos srautus, išjungę "
 "senąjį informacijos srauto užklausos metodą."
 
-#: functions.php:1169
+#: functions.php:1168
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -475,51 +475,51 @@ msgstr ""
 "%3$s. Dėl to %1$s vertimai gali būti įkelti netinkamai, kol konfliktuojantis "
 "vertimo įskiepis yra aktyvus."
 
-#: functions.php:1292 functions.php:1300 functions.php:1309
+#: functions.php:1291 functions.php:1299 functions.php:1308
 msgid "Map"
 msgstr "Žemėlapis"
 
-#: functions.php:1617
+#: functions.php:1616
 msgid "Recurring event"
 msgstr "Pasikartojantis įvykis"
 
-#: functions.php:1622
+#: functions.php:1621
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Kartojasi kas %1$s metus"
 
-#: functions.php:1622
+#: functions.php:1621
 msgid "Recurs yearly"
 msgstr "Kartojasi kasmet"
 
-#: functions.php:1625
+#: functions.php:1624
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Kartojasi kas %1$s mėnesius"
 
-#: functions.php:1625
+#: functions.php:1624
 msgid "Recurs monthly"
 msgstr "Kartojasi kas mėnesį"
 
-#: functions.php:1628
+#: functions.php:1627
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Kartojasi kas %1$s savaites"
 
-#: functions.php:1628
+#: functions.php:1627
 msgid "Recurs weekly"
 msgstr "Kartojasi kas savaitę"
 
-#: functions.php:1631
+#: functions.php:1630
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Kartojasi kas %1$s dienų"
 
-#: functions.php:1631
+#: functions.php:1630
 msgid "Recurs daily"
 msgstr "Kartojasi kasdien"
 
-#: functions.php:1804
+#: functions.php:1803
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -532,7 +532,7 @@ msgstr ""
 "būti rodomas netinkamai. Prašome pašalinti spustelėjamąjį saitą iš trumpojo "
 "kodo."
 
-#: functions.php:2137
+#: functions.php:2106
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() nebėra palaikoma."
 
@@ -1013,20 +1013,14 @@ msgstr ""
 "intervalas yra nuo 30 iki 300. Jei laukelis paliktas tuščias, bus naudojamas "
 "numatytasis 30 sekundžių laiko limitas."
 
-#: templates/admin/settings.php:86
-msgid "deprecated"
-msgstr "nebereikalingas"
-
 #: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
-"are not loading, turn on this option to use the legacy request method. This "
-"feature is deprecated and will be removed in a future update."
+"are not loading, turn on this option to use the legacy request method."
 msgstr ""
-"Kai kurie serveriai gali nepalaikyti numatytojo informacijos srauto "
-"užklausos metodo. Jei jūsų informacijos srautai neatsisiunčia, įjunkite šią "
-"parinktį, kad būtų naudojamas senasis užklausos metodas. Ši funkcija yra "
-"pasenusi ir bus pašalinta būsimame atnaujinime."
+"Kai kurie serveriai gali nepalaikyti numatytojo srauto užklausos metodo. Jei "
+"jūsų srautai neatsisiunčia, įjunkite šią parinktį, kad būtų naudojamas "
+"senasis užklausos metodas."
 
 #: templates/admin/settings.php:95
 msgid "Default shortcode"
@@ -1475,6 +1469,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "deprecated"
+#~ msgstr "nebereikalingas"
 
 #, php-format
 #~ msgid ""

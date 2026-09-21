@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-06-24 12:33-0500\n"
-"PO-Revision-Date: 2026-06-24 12:33-0500\n"
+"POT-Creation-Date: 2026-09-21 09:49-0500\n"
+"PO-Revision-Date: 2026-09-21 09:49-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: el\n"
@@ -230,7 +230,7 @@ msgstr ""
 msgid "Getting Started"
 msgstr "Ξεκινώντας"
 
-#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2471 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Ρυθμίσεις"
@@ -279,36 +279,36 @@ msgstr ""
 "επίσης να δοκιμάσετε να χρησιμοποιήσετε τον χαρακτήρα pipe. Διεύθυνση URL "
 "που επηρεάζεται:"
 
-#: class-r34ics.php:1251
+#: class-r34ics.php:1252
 msgid "Hide past events"
 msgstr "Απόκρυψη προηγούμενων εκδηλώσεων"
 
-#: class-r34ics.php:1252 templates/calendar-month.php:96
+#: class-r34ics.php:1253 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Εμφάνιση παρελθοντικών εκδηλώσεων"
 
-#: class-r34ics.php:1333
+#: class-r34ics.php:1336
 msgid "Contact:"
 msgstr "Επαφή:"
 
-#: class-r34ics.php:1339
+#: class-r34ics.php:1342
 msgid "Resources:"
 msgstr "Πόροι:"
 
-#: class-r34ics.php:1349
+#: class-r34ics.php:1352
 msgid "Click for more..."
 msgstr "Κάντε κλικ για περισσότερα..."
 
-#: class-r34ics.php:1383
+#: class-r34ics.php:1386
 msgid "Save to your calendar"
 msgstr "Αποθήκευση στο ημερολόγιό σας"
 
-#: class-r34ics.php:1486
+#: class-r34ics.php:1489
 msgid "Cancelled"
 msgstr "Ακυρώθηκε"
 
-#: class-r34ics.php:1599
+#: class-r34ics.php:1602
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -316,16 +316,16 @@ msgstr ""
 "Η επιλογή του παλαιού αναλυτή είναι παρωχημένη και θα καταργηθεί σε "
 "μελλοντική ενημέρωση."
 
-#: class-r34ics.php:1690
+#: class-r34ics.php:1708
 msgid "Print"
 msgstr "Εκτύπωση"
 
-#: class-r34ics.php:1794
+#: class-r34ics.php:1809
 #, php-format
 msgid "Powered by %1$s"
 msgstr "Με την υποστήριξη του %1$s"
 
-#: class-r34ics.php:1968
+#: class-r34ics.php:1983
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -333,7 +333,7 @@ msgstr ""
 "Η ιδιότητα \"currentweek\" από το shortcode έτσι καταργηθεί. Χρησιμοποιήστε "
 "το view =\"week\" στο shortcode σας."
 
-#: class-r34ics.php:1972
+#: class-r34ics.php:1987
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -341,7 +341,7 @@ msgstr ""
 "Το χαρακτηριστικό \"legendinline\" του shortcode έχει καταργηθεί. "
 "Χρησιμοποιήστε αντ' αυτού το legendstyle=\"inline\" στο shortcode σας."
 
-#: class-r34ics.php:2330
+#: class-r34ics.php:2345
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -351,7 +351,7 @@ msgstr ""
 "σελίδες. Εάν ο ιστότοπός σας χρησιμοποιεί plugin προσωρινής αποθήκευσης, "
 "ίσως χρειαστεί να καθαρίσετε την προσωρινή μνήμη."
 
-#: class-r34ics.php:2338
+#: class-r34ics.php:2353
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -361,21 +361,21 @@ msgstr ""
 "Εάν ο ιστότοπός σας χρησιμοποιεί ένα πρόσθετο προσωρινής αποθήκευσης, ίσως "
 "χρειαστεί να καθαρίσετε την προσωρινή μνήμη."
 
-#: class-r34ics.php:2350
+#: class-r34ics.php:2365
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Εκκαθάριση %1$s %2$s παροδικών στοιχείων."
 
-#: class-r34ics.php:2357
+#: class-r34ics.php:2372
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Δεν βρέθηκαν %1$s μεταβατικά φαινόμενα."
 
-#: class-r34ics.php:2366
+#: class-r34ics.php:2381
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Όλες οι αποθηκευμένες διευθύνσεις URL τροφοδοσίας ICS έχουν διαγραφεί."
 
-#: class-r34ics.php:2373
+#: class-r34ics.php:2388
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -384,7 +384,7 @@ msgstr ""
 "Όλες οι %1$s ρυθμίσεις έχουν επαναφερθεί στις προεπιλεγμένες τιμές και οι "
 "αποθηκευμένες διευθύνσεις URL τροφοδοσίας ICS έχουν διαγραφεί."
 
-#: class-r34ics.php:2456
+#: class-r34ics.php:2471
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -394,11 +394,11 @@ msgstr ""
 "πιστοποίησης HTTP. Δοκιμάστε να απενεργοποιήσετε την επιλογή %1$s στην "
 "καρτέλα %2$s παραπάνω."
 
-#: class-r34ics.php:2456 templates/admin/settings.php:85
+#: class-r34ics.php:2471 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Χρησιμοποιήστε την παλιά μέθοδο αιτήματος τροφοδοσίας"
 
-#: class-r34ics.php:2462
+#: class-r34ics.php:2477
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -415,17 +415,17 @@ msgstr ""
 "%4$sΟδηγό χρήστη%5$s για οδηγίες σχετικά με την απόκτηση της σωστής "
 "δυναμικής διεύθυνσης URL τροφοδοσίας."
 
-#: class-r34ics.php:2468
+#: class-r34ics.php:2483
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Σφάλμα: Δεν ήταν δυνατή η ανάλυση της διεύθυνσης IP για το %1$s."
 
-#: class-r34ics.php:2471
+#: class-r34ics.php:2486
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Επίλυση διεύθυνσης IP για %1$s:"
 
-#: class-r34ics.php:2499
+#: class-r34ics.php:2514
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -434,7 +434,7 @@ msgstr ""
 "%1$sΕμφάνιση ενημερωμένη.%2$s Ίσως χρειαστεί να ανανεώσετε τη σελίδα για να "
 "δείτε ορισμένες αλλαγές."
 
-#: class-r34ics.php:2559
+#: class-r34ics.php:2574
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -442,7 +442,7 @@ msgstr ""
 "Το κείμενο που εισήχθη στο πεδίο \"Προεπιλεγμένος σύντομος κωδικός\" δεν "
 "είναι έγκυρος σύντομος κωδικός και δεν αποθηκεύτηκε."
 
-#: class-r34ics.php:2616
+#: class-r34ics.php:2631
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -451,15 +451,15 @@ msgstr ""
 "%1$sΟι ρυθμίσεις ενημερώθηκαν.%2$s Ίσως χρειαστεί να ανανεώσετε τη σελίδα "
 "για να δείτε ορισμένες αλλαγές."
 
-#: class-r34ics.php:2936
+#: class-r34ics.php:2953
 msgid "calendar event"
 msgstr "γεγονός ημερολογίου"
 
-#: class-r34ics.php:2942
+#: class-r34ics.php:2959
 msgid "Event download failed."
 msgstr "Η λήψη του συμβάντος απέτυχε."
 
-#: class-r34ics.php:3418
+#: class-r34ics.php:3448
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -469,7 +469,7 @@ msgstr ""
 "μια επικείμενη ενημέρωση. Δοκιμάστε τις τροφοδοσίες σας με την παλιά μέθοδο "
 "αιτήματος τροφοδοσίας απενεργοποιημένη."
 
-#: functions.php:1169
+#: functions.php:1168
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -485,51 +485,51 @@ msgstr ""
 "μεταφράσεις %1$s ενδέχεται να μην φορτώνονται σωστά ενώ το πρόσθετο "
 "μετάφρασης που προκαλεί τη σύγκρουση είναι ενεργό."
 
-#: functions.php:1292 functions.php:1300 functions.php:1309
+#: functions.php:1291 functions.php:1299 functions.php:1308
 msgid "Map"
 msgstr "Χάρτης"
 
-#: functions.php:1617
+#: functions.php:1616
 msgid "Recurring event"
 msgstr "Επαναλαμβανόμενο γεγονός"
 
-#: functions.php:1622
+#: functions.php:1621
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Επαναλαμβάνεται κάθε %1$s χρόνια"
 
-#: functions.php:1622
+#: functions.php:1621
 msgid "Recurs yearly"
 msgstr "Επαναλαμβάνεται κάθε χρόνο"
 
-#: functions.php:1625
+#: functions.php:1624
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Επαναλαμβάνεται κάθε %1$s μήνες"
 
-#: functions.php:1625
+#: functions.php:1624
 msgid "Recurs monthly"
 msgstr "Επαναλαμβάνεται κάθε μήνα"
 
-#: functions.php:1628
+#: functions.php:1627
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Επαναλαμβάνεται κάθε %1$s εβδομάδες"
 
-#: functions.php:1628
+#: functions.php:1627
 msgid "Recurs weekly"
 msgstr "Επαναλαμβάνεται κάθε εβδομάδα"
 
-#: functions.php:1631
+#: functions.php:1630
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Επαναλαμβάνεται κάθε %1$s ημέρες"
 
-#: functions.php:1631
+#: functions.php:1630
 msgid "Recurs daily"
 msgstr "Επαναλαμβάνεται καθημερινά"
 
-#: functions.php:1804
+#: functions.php:1803
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -542,7 +542,7 @@ msgstr ""
 "αποτέλεσμα, το ημερολόγιό σας ενδέχεται να μην εμφανίζεται σωστά. "
 "Παρακαλούμε, αφαιρέστε τον ενεργό σύνδεσμο από τον σύντομο κωδικό."
 
-#: functions.php:2137
+#: functions.php:2106
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Η συνάρτηση r34ics_url_get_contents() δεν υποστηρίζεται πλέον."
 
@@ -1032,20 +1032,14 @@ msgstr ""
 "πεδίο παραμείνει κενό, θα χρησιμοποιηθεί η προεπιλεγμένη τιμή των 30 "
 "δευτερολέπτων."
 
-#: templates/admin/settings.php:86
-msgid "deprecated"
-msgstr "απαρχαιωμένος"
-
 #: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
-"are not loading, turn on this option to use the legacy request method. This "
-"feature is deprecated and will be removed in a future update."
+"are not loading, turn on this option to use the legacy request method."
 msgstr ""
 "Ορισμένοι διακομιστές ενδέχεται να μην υποστηρίζουν την προεπιλεγμένη μέθοδο "
-"αιτήματος τροφοδοσίας. Εάν οι τροφοδοσίες σας δεν φορτώνονται, ενεργοποιήστε "
-"αυτήν την επιλογή για να χρησιμοποιήσετε την παλαιά μέθοδο αιτήματος. Αυτή η "
-"λειτουργία έχει καταργηθεί και θα αφαιρεθεί σε μελλοντική ενημέρωση."
+"αιτήματος για τα feed. Εάν τα feed σας δεν φορτώνονται, ενεργοποιήστε αυτήν "
+"την επιλογή για να χρησιμοποιήσετε την παλαιά μέθοδο αιτήματος."
 
 #: templates/admin/settings.php:95
 msgid "Default shortcode"
@@ -1507,6 +1501,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "deprecated"
+#~ msgstr "απαρχαιωμένος"
 
 #, php-format
 #~ msgid ""

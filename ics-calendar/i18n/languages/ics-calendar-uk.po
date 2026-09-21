@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-06-24 12:31-0500\n"
-"PO-Revision-Date: 2026-06-24 12:31-0500\n"
+"POT-Creation-Date: 2026-09-21 09:48-0500\n"
+"PO-Revision-Date: 2026-09-21 09:48-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -229,7 +229,7 @@ msgstr ""
 msgid "Getting Started"
 msgstr "Починаємо"
 
-#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2471 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Налаштування"
@@ -277,52 +277,52 @@ msgstr ""
 "декількох URL-адрес, спробуйте замість цього використовувати символ "
 "вертикальної риски. URL-адреса, на яку це впливає:"
 
-#: class-r34ics.php:1251
+#: class-r34ics.php:1252
 msgid "Hide past events"
 msgstr "Приховати минулі події"
 
-#: class-r34ics.php:1252 templates/calendar-month.php:96
+#: class-r34ics.php:1253 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Показати минулі події"
 
-#: class-r34ics.php:1333
+#: class-r34ics.php:1336
 msgid "Contact:"
 msgstr "Контактна інформація:"
 
-#: class-r34ics.php:1339
+#: class-r34ics.php:1342
 msgid "Resources:"
 msgstr "Ресурси:"
 
-#: class-r34ics.php:1349
+#: class-r34ics.php:1352
 msgid "Click for more..."
 msgstr "Натисніть, щоб дізнатися більше..."
 
-#: class-r34ics.php:1383
+#: class-r34ics.php:1386
 msgid "Save to your calendar"
 msgstr "Зберегти в календарі"
 
-#: class-r34ics.php:1486
+#: class-r34ics.php:1489
 msgid "Cancelled"
 msgstr "Скасовано"
 
-#: class-r34ics.php:1599
+#: class-r34ics.php:1602
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr ""
 "Опція legacy parser є застарілою і буде видалена в майбутньому оновленні."
 
-#: class-r34ics.php:1690
+#: class-r34ics.php:1708
 msgid "Print"
 msgstr "Друк"
 
-#: class-r34ics.php:1794
+#: class-r34ics.php:1809
 #, php-format
 msgid "Powered by %1$s"
 msgstr "На базі %1$s"
 
-#: class-r34ics.php:1968
+#: class-r34ics.php:1983
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -330,7 +330,7 @@ msgstr ""
 "Атрибут шорткоду «currentweek» є застарілим. Замість нього використовуйте "
 "view=\"week\" у своєму шорткоді."
 
-#: class-r34ics.php:1972
+#: class-r34ics.php:1987
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -338,7 +338,7 @@ msgstr ""
 "Атрибут шорткоду «legendinline» є застарілим. Замість нього використовуйте "
 "legendstyle=\"inline\" у своєму шорткоді."
 
-#: class-r34ics.php:2330
+#: class-r34ics.php:2345
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -347,7 +347,7 @@ msgstr ""
 "%1$s відновив %2$sвідображення%3$s календарів на головних сторінках. Якщо "
 "ваш сайт використовує плагін кешування, можливо, вам доведеться очистити кеш."
 
-#: class-r34ics.php:2338
+#: class-r34ics.php:2353
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -357,21 +357,21 @@ msgstr ""
 "Якщо ваш сайт використовує плагін кешування, можливо, вам доведеться "
 "очистити кеш."
 
-#: class-r34ics.php:2350
+#: class-r34ics.php:2365
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Очищено %1$s %2$s тимчасових файлів."
 
-#: class-r34ics.php:2357
+#: class-r34ics.php:2372
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Не виявлено жодних %1$s перехідних процесів."
 
-#: class-r34ics.php:2366
+#: class-r34ics.php:2381
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Всі збережені URL-адреси ICS-каналів були видалені."
 
-#: class-r34ics.php:2373
+#: class-r34ics.php:2388
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -380,7 +380,7 @@ msgstr ""
 "Всі %1$s налаштування були скинуті до заводських, а збережені URL-адреси ICS-"
 "каналів були видалені."
 
-#: class-r34ics.php:2456
+#: class-r34ics.php:2471
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -389,11 +389,11 @@ msgstr ""
 "Ваша URL-адреса каналу, схоже, містить облікові дані для базової "
 "аутентифікації HTTP. Спробуйте вимкнути опцію %1$s у вкладці %2$s вище."
 
-#: class-r34ics.php:2456 templates/admin/settings.php:85
+#: class-r34ics.php:2471 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Використовуйте старий метод запиту на подачу"
 
-#: class-r34ics.php:2462
+#: class-r34ics.php:2477
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -408,17 +408,17 @@ msgstr ""
 "оновлень вихідного календаря. Інструкції щодо отримання правильного "
 "динамічного URL-адреси каналу див. у нашому %4$sПосібнику користувача%5$s."
 
-#: class-r34ics.php:2468
+#: class-r34ics.php:2483
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Помилка: Не вдалося визначити IP-адресу для %1$s."
 
-#: class-r34ics.php:2471
+#: class-r34ics.php:2486
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Визначена IP-адреса для %1$s:"
 
-#: class-r34ics.php:2499
+#: class-r34ics.php:2514
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -427,7 +427,7 @@ msgstr ""
 "%1$sЗовнішній вигляд оновлено.%2$s Можливо, вам доведеться оновити сторінку, "
 "щоб побачити деякі зміни."
 
-#: class-r34ics.php:2559
+#: class-r34ics.php:2574
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -435,7 +435,7 @@ msgstr ""
 "Текст, введений у поле «Шорткод за замовчуванням», не є дійсним шорткодом і "
 "не був збережений."
 
-#: class-r34ics.php:2616
+#: class-r34ics.php:2631
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -444,15 +444,15 @@ msgstr ""
 "%1$sНалаштування оновлено.%2$s Можливо, вам доведеться оновити сторінку, щоб "
 "побачити деякі зміни."
 
-#: class-r34ics.php:2936
+#: class-r34ics.php:2953
 msgid "calendar event"
 msgstr "календарна подія"
 
-#: class-r34ics.php:2942
+#: class-r34ics.php:2959
 msgid "Event download failed."
 msgstr "Завантаження події не вдалося."
 
-#: class-r34ics.php:3418
+#: class-r34ics.php:3448
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -462,7 +462,7 @@ msgstr ""
 "оновленні. Будь ласка, протестуйте свої канали з вимкненим старим методом "
 "запиту на канали."
 
-#: functions.php:1169
+#: functions.php:1168
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -477,51 +477,51 @@ msgstr ""
 "%3$s. Як результат, переклади %1$s можуть не завантажуватися належним чином, "
 "поки конфліктуючий плагін перекладу активний."
 
-#: functions.php:1292 functions.php:1300 functions.php:1309
+#: functions.php:1291 functions.php:1299 functions.php:1308
 msgid "Map"
 msgstr "Мапа"
 
-#: functions.php:1617
+#: functions.php:1616
 msgid "Recurring event"
 msgstr "Повторювана подія"
 
-#: functions.php:1622
+#: functions.php:1621
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Повторюється кожні %1$s років"
 
-#: functions.php:1622
+#: functions.php:1621
 msgid "Recurs yearly"
 msgstr "Повторюється щорічно"
 
-#: functions.php:1625
+#: functions.php:1624
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Повторюється кожні %1$s місяців"
 
-#: functions.php:1625
+#: functions.php:1624
 msgid "Recurs monthly"
 msgstr "Повторюється щомісяця"
 
-#: functions.php:1628
+#: functions.php:1627
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Повторюється кожні %1$s тижнів"
 
-#: functions.php:1628
+#: functions.php:1627
 msgid "Recurs weekly"
 msgstr "Повторюється щотижня"
 
-#: functions.php:1631
+#: functions.php:1630
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Повторюється кожні %1$s днів"
 
-#: functions.php:1631
+#: functions.php:1630
 msgid "Recurs daily"
 msgstr "Повторюється щодня"
 
-#: functions.php:1804
+#: functions.php:1803
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -534,7 +534,7 @@ msgstr ""
 "результаті ваш календар може відображатися неправильно. Будь ласка, видаліть "
 "активне посилання з короткого коду."
 
-#: functions.php:2137
+#: functions.php:2106
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Функція r34ics_url_get_contents() більше не підтримується."
 
@@ -1015,20 +1015,14 @@ msgstr ""
 "діапазон — від 30 до 300. Якщо поле залишити порожнім, буде використано "
 "значення за замовчуванням — 30 секунд."
 
-#: templates/admin/settings.php:86
-msgid "deprecated"
-msgstr "застарілий"
-
 #: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
-"are not loading, turn on this option to use the legacy request method. This "
-"feature is deprecated and will be removed in a future update."
+"are not loading, turn on this option to use the legacy request method."
 msgstr ""
-"Деякі сервери можуть не підтримувати стандартний метод запиту на канали. "
-"Якщо ваші канали не завантажуються, увімкніть цю опцію, щоб використовувати "
-"застарілий метод запиту. Ця функція є застарілою і буде видалена в "
-"майбутньому оновленні."
+"Деякі сервери можуть не підтримувати стандартний метод запиту на отримання "
+"каналів. Якщо ваші канали не завантажуються, увімкніть цю опцію, щоб "
+"використовувати старий метод запиту."
 
 #: templates/admin/settings.php:95
 msgid "Default shortcode"
@@ -1477,6 +1471,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Кімната 34 Creative Services, ТОВ"
+
+#~ msgid "deprecated"
+#~ msgstr "застарілий"
 
 #, php-format
 #~ msgid ""

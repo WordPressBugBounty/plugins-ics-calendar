@@ -83,9 +83,9 @@ if (function_exists('r34ics_admin_full_access') && r34ics_admin_full_access(fals
 					<label for="r34ics_url_get_contents_legacy_method">
 						<input type="checkbox" name="url_get_contents_legacy_method" id="r34ics_url_get_contents_legacy_method"<?php if (get_option('r34ics_url_get_contents_legacy_method')) { echo ' checked="checked"'; } ?> />
 						<strong><?php esc_html_e('Use legacy feed request method', 'ics-calendar'); ?></strong>
-						<small class="deprecated-indicator"><?php esc_html_e('deprecated', 'ics-calendar'); ?></small>
+						<?php /*<small class="deprecated-indicator"><?php esc_html_e('deprecated', 'ics-calendar'); ?></small>*/ ?>
 						<span class="description" tabindex="0"><small class="r34ics-help"><span class="help_content">
-							<?php esc_html_e('Some servers may not support the default feed request method. If your feeds are not loading, turn on this option to use the legacy request method. This feature is deprecated and will be removed in a future update.', 'ics-calendar'); ?>
+							<?php esc_html_e('Some servers may not support the default feed request method. If your feeds are not loading, turn on this option to use the legacy request method.', 'ics-calendar'); ?>
 						</span></small></span>
 					</label>
 				</p>

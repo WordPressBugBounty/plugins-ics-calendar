@@ -1054,33 +1054,6 @@ function r34ics_hiderecurrence_parse($hiderecurrence='') {
 }
 
 
-// Get an hour format (e.g. for grid headings) based on the site's time format
-function r34ics_hour_format($time_format='') {
-	$time_format = (string)$time_format; // Avoid PHP 8.1 "Passing null to parameter" deprecation notice
-	$hour_format = '';
-	if (empty($time_format)) { $time_format = get_option('time_format'); }
-	switch ($time_format) {
-		case 'H:i':
-			$hour_format = 'H:00';
-			break;
-		case 'h:i':
-			$hour_format = 'h:00';
-			break;
-		case 'Hi':
-			$hour_format = 'H00';
-			break;
-		case 'g:i a':
-			$hour_format = 'g a';
-			break;
-		case 'g:i A':
-		default:
-			$hour_format = 'g A';
-			break;
-	}
-	return $hour_format;
-}
-
-
 // Detect if we're in the block editor
 function r34ics_is_block_editor() {
 	// See: https://developer.wordpress.org/reference/classes/wp_screen/is_block_editor/#comment-6003
@@ -2063,6 +2036,15 @@ function r34ics_time_format($time_string='', $time_format='', $tz='', $date=null
 	// Convert am/pm abbreviations for Greek (this is simpler than putting it in the i18n files)
 	if (get_locale() == 'el') { $time_ampm = ($time_ampm == 'am') ? 'πμ' : 'μμ'; }
 
+	// Get timezone string for T replacement, if applicable
+	$t_replacement = '';
+	if (!empty($tz) && strpos($clean_format, 'T') !== false) {
+		if (is_string($tz)) {
+			$tz = (r34ics_is_valid_tz($tz) ? @timezone_open($tz) : wp_timezone());
+		}
+		$t_replacement = wp_date('T', (!empty($date) ? r34ics_date('U', $date) : null), $tz);
+	}
+
 	// Map standard PHP date tokens to our values
 	$replacements = [
 		'g' => (int)$time_h12,
@@ -2073,6 +2055,7 @@ function r34ics_time_format($time_string='', $time_format='', $tz='', $date=null
 		's' => $time_s,
 		'a' => $time_ampm,
 		'A' => strtoupper($time_ampm),
+		'T' => $t_replacement,
 	];
 
 	// Replace tokens, respecting escaped characters
@@ -2090,15 +2073,6 @@ function r34ics_time_format($time_string='', $time_format='', $tz='', $date=null
 		else {
 			$output .= $char;
 		}
-	}
-
-	// Append T (timezone) if applicable
-	// @todo Insert in the prescribed spot rather than just appending to end!
-	if (!empty($tz) && strpos($time_format, 'T') !== false) {
-		if (is_string($tz)) {
-			$tz = (r34ics_is_valid_tz($tz) ? @timezone_open($tz) : wp_timezone());
-		}
-		$output .= ' ' . wp_date('T', (!empty($date) ? r34ics_date('U', $date) : null), $tz);
 	}
 
 	// Return output

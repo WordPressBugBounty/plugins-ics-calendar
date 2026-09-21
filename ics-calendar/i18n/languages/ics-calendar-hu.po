@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-06-24 12:33-0500\n"
-"PO-Revision-Date: 2026-06-24 12:33-0500\n"
+"POT-Creation-Date: 2026-09-21 09:49-0500\n"
+"PO-Revision-Date: 2026-09-21 09:49-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -226,7 +226,7 @@ msgstr ""
 msgid "Getting Started"
 msgstr "Kezdjük el"
 
-#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2471 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "Beállítások"
@@ -273,36 +273,36 @@ msgstr ""
 "allow_url_fopen elérhető-e. Ha több URL-t szóközökkel választ el, akkor "
 "érdemes kipróbálni a cső karakter használatát is. Érintett URL:"
 
-#: class-r34ics.php:1251
+#: class-r34ics.php:1252
 msgid "Hide past events"
 msgstr "Korábbi események elrejtése"
 
-#: class-r34ics.php:1252 templates/calendar-month.php:96
+#: class-r34ics.php:1253 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "Elmúlt események megjelenítése"
 
-#: class-r34ics.php:1333
+#: class-r34ics.php:1336
 msgid "Contact:"
 msgstr "Kapcsolat:"
 
-#: class-r34ics.php:1339
+#: class-r34ics.php:1342
 msgid "Resources:"
 msgstr "Források:"
 
-#: class-r34ics.php:1349
+#: class-r34ics.php:1352
 msgid "Click for more..."
 msgstr "Kattintson ide további információkért..."
 
-#: class-r34ics.php:1383
+#: class-r34ics.php:1386
 msgid "Save to your calendar"
 msgstr "Mentse a naptárába"
 
-#: class-r34ics.php:1486
+#: class-r34ics.php:1489
 msgid "Cancelled"
 msgstr "Törölve"
 
-#: class-r34ics.php:1599
+#: class-r34ics.php:1602
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
@@ -310,16 +310,16 @@ msgstr ""
 "A régi parser opció elavult, és egy jövőbeli frissítésben eltávolításra "
 "kerül."
 
-#: class-r34ics.php:1690
+#: class-r34ics.php:1708
 msgid "Print"
 msgstr "Nyomtatás"
 
-#: class-r34ics.php:1794
+#: class-r34ics.php:1809
 #, php-format
 msgid "Powered by %1$s"
 msgstr "Köszönjük %1$s"
 
-#: class-r34ics.php:1968
+#: class-r34ics.php:1983
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -327,7 +327,7 @@ msgstr ""
 "A „currentweek” rövidkód attribútum elavult. Kérjük, helyette használja a "
 "view=\"week\" rövidkódot."
 
-#: class-r34ics.php:1972
+#: class-r34ics.php:1987
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -335,7 +335,7 @@ msgstr ""
 "A „legendinline” rövidkód attribútum elavult. Kérjük, helyette a "
 "legendstyle=\"inline\" attribútumot használja a rövidkódjában."
 
-#: class-r34ics.php:2330
+#: class-r34ics.php:2345
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -345,7 +345,7 @@ msgstr ""
 "Ha webhelyed cache-plugint használ, akkor lehet, hogy törölnöd kell a cache-"
 "t."
 
-#: class-r34ics.php:2338
+#: class-r34ics.php:2353
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -354,21 +354,21 @@ msgstr ""
 "%1$s %2$sfelfüggesztette%3$s a naptárak megjelenítését a frontend oldalakon. "
 "Ha webhelye cache-plugint használ, akkor lehet, hogy törölnie kell a cache-t."
 
-#: class-r34ics.php:2350
+#: class-r34ics.php:2365
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "%1$s %2$s átmeneti állapot törölve."
 
-#: class-r34ics.php:2357
+#: class-r34ics.php:2372
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Nem találtunk %1$s átmeneti állapotot."
 
-#: class-r34ics.php:2366
+#: class-r34ics.php:2381
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "Az összes mentett ICS-feed URL-cím törölve lett."
 
-#: class-r34ics.php:2373
+#: class-r34ics.php:2388
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
@@ -377,7 +377,7 @@ msgstr ""
 "Az összes %1$s beállítás alapértelmezett értékre lett visszaállítva, és a "
 "mentett ICS-feed URL-ek törölve lettek."
 
-#: class-r34ics.php:2456
+#: class-r34ics.php:2471
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -386,11 +386,11 @@ msgstr ""
 "Úgy tűnik, hogy a feed URL-je HTTP alapvető hitelesítési adatokat tartalmaz. "
 "Próbálja meg kikapcsolni a fenti %2$s fül alatt található %1$s opciót."
 
-#: class-r34ics.php:2456 templates/admin/settings.php:85
+#: class-r34ics.php:2471 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "Használja a régi feed-lekérés módszert"
 
-#: class-r34ics.php:2462
+#: class-r34ics.php:2477
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -406,17 +406,17 @@ msgstr ""
 "megszerzésével kapcsolatos utasításokat a %4$sFelhasználói útmutatóban%5$s "
 "találja."
 
-#: class-r34ics.php:2468
+#: class-r34ics.php:2483
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Hiba: Nem sikerült feloldani a %1$s IP-címet."
 
-#: class-r34ics.php:2471
+#: class-r34ics.php:2486
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Megoldott IP-cím %1$s:"
 
-#: class-r34ics.php:2499
+#: class-r34ics.php:2514
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
@@ -425,7 +425,7 @@ msgstr ""
 "%1$sMegjelenés frissítve.%2$s Lehet, hogy frissítenie kell az oldalt, hogy "
 "lássa a változásokat."
 
-#: class-r34ics.php:2559
+#: class-r34ics.php:2574
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
@@ -433,7 +433,7 @@ msgstr ""
 "Az „Alapértelmezett rövidkód” mezőbe beírt szöveg nem érvényes rövidkód, "
 "ezért nem lett elmentve."
 
-#: class-r34ics.php:2616
+#: class-r34ics.php:2631
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -442,15 +442,15 @@ msgstr ""
 "%1$sBeállítások frissítve.%2$s Lehet, hogy frissítenie kell az oldalt, hogy "
 "lássa a változásokat."
 
-#: class-r34ics.php:2936
+#: class-r34ics.php:2953
 msgid "calendar event"
 msgstr "naptári esemény"
 
-#: class-r34ics.php:2942
+#: class-r34ics.php:2959
 msgid "Event download failed."
 msgstr "Az esemény letöltése sikertelen."
 
-#: class-r34ics.php:3418
+#: class-r34ics.php:3448
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -460,7 +460,7 @@ msgstr ""
 "eltávolításra kerül. Kérjük, tesztelje feedjeit a régi feed-lekérdezési "
 "módszer kikapcsolt állapotában."
 
-#: functions.php:1169
+#: functions.php:1168
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -475,51 +475,51 @@ msgstr ""
 "Ennek eredményeként a %1$s fordítások nem töltődnek be megfelelően, amíg az "
 "ütköző fordítási bővítmény aktív."
 
-#: functions.php:1292 functions.php:1300 functions.php:1309
+#: functions.php:1291 functions.php:1299 functions.php:1308
 msgid "Map"
 msgstr "Térkép"
 
-#: functions.php:1617
+#: functions.php:1616
 msgid "Recurring event"
 msgstr "Ismétlődő esemény"
 
-#: functions.php:1622
+#: functions.php:1621
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Minden %1$s évben ismétlődik"
 
-#: functions.php:1622
+#: functions.php:1621
 msgid "Recurs yearly"
 msgstr "Évente ismétlődik"
 
-#: functions.php:1625
+#: functions.php:1624
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Minden %1$s hónapban ismétlődik"
 
-#: functions.php:1625
+#: functions.php:1624
 msgid "Recurs monthly"
 msgstr "Havonta ismétlődik"
 
-#: functions.php:1628
+#: functions.php:1627
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Minden %1$s héten ismétlődik"
 
-#: functions.php:1628
+#: functions.php:1627
 msgid "Recurs weekly"
 msgstr "Hetente ismétlődik"
 
-#: functions.php:1631
+#: functions.php:1630
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Minden %1$s nap ismétlődik"
 
-#: functions.php:1631
+#: functions.php:1630
 msgid "Recurs daily"
 msgstr "Naponta ismétlődik"
 
-#: functions.php:1804
+#: functions.php:1803
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -532,7 +532,7 @@ msgstr ""
 "naptár nem jelenik meg megfelelően. Kérjük, távolítsa el a kattintható "
 "linket a rövidkódból."
 
-#: functions.php:2137
+#: functions.php:2106
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Az r34ics_url_get_contents() függvény már nem támogatott."
 
@@ -1014,20 +1014,14 @@ msgstr ""
 "értékek 30 és 300 között vannak. Ha üresen hagyja, az alapértelmezett 30 "
 "másodperces érték lesz érvényes."
 
-#: templates/admin/settings.php:86
-msgid "deprecated"
-msgstr "elavult"
-
 #: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
-"are not loading, turn on this option to use the legacy request method. This "
-"feature is deprecated and will be removed in a future update."
+"are not loading, turn on this option to use the legacy request method."
 msgstr ""
-"Egyes szerverek nem támogatják az alapértelmezett feed-lekérdezési módszert. "
-"Ha a feedjei nem töltődnek be, kapcsolja be ezt az opciót a régi lekérdezési "
-"módszer használatához. Ez a funkció elavult, és egy jövőbeli frissítésben "
-"eltávolításra kerül."
+"Előfordulhat, hogy egyes szerverek nem támogatják az alapértelmezett "
+"hírcsatorna-lekérdezési módszert. Ha a hírcsatornáid nem töltődnek be, "
+"kapcsold be ezt az opciót a korábbi lekérdezési módszer használatához."
 
 #: templates/admin/settings.php:95
 msgid "Default shortcode"
@@ -1477,6 +1471,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "deprecated"
+#~ msgstr "elavult"
 
 #, php-format
 #~ msgid ""

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-06-24 12:31-0500\n"
-"PO-Revision-Date: 2026-06-24 12:31-0500\n"
+"POT-Creation-Date: 2026-09-21 09:48-0500\n"
+"PO-Revision-Date: 2026-09-21 09:48-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -198,7 +198,7 @@ msgstr ""
 msgid "Getting Started"
 msgstr "入门指南"
 
-#: class-r34ics.php:471 class-r34ics.php:2456 templates/admin/admin.php:28
+#: class-r34ics.php:471 class-r34ics.php:2471 templates/admin/admin.php:28
 #: templates/admin/settings.php:11
 msgid "Settings"
 msgstr "设置"
@@ -244,64 +244,64 @@ msgstr ""
 "cURL或allow_url_fopen功能。若使用空格分隔多个URL，建议改用竖线分隔符。受影响"
 "的URL："
 
-#: class-r34ics.php:1251
+#: class-r34ics.php:1252
 msgid "Hide past events"
 msgstr "隐藏过去的活动"
 
-#: class-r34ics.php:1252 templates/calendar-month.php:96
+#: class-r34ics.php:1253 templates/calendar-month.php:96
 #: templates/calendar-week.php:87
 msgid "Show past events"
 msgstr "显示过往事件"
 
-#: class-r34ics.php:1333
+#: class-r34ics.php:1336
 msgid "Contact:"
 msgstr "联系人:"
 
-#: class-r34ics.php:1339
+#: class-r34ics.php:1342
 msgid "Resources:"
 msgstr "相关资源"
 
-#: class-r34ics.php:1349
+#: class-r34ics.php:1352
 msgid "Click for more..."
 msgstr "点击查看更多..."
 
-#: class-r34ics.php:1383
+#: class-r34ics.php:1386
 msgid "Save to your calendar"
 msgstr "添加到日历"
 
-#: class-r34ics.php:1486
+#: class-r34ics.php:1489
 msgid "Cancelled"
 msgstr "已取消"
 
-#: class-r34ics.php:1599
+#: class-r34ics.php:1602
 msgid ""
 "The legacy parser option is deprecated and will be removed in a future "
 "update."
 msgstr "旧版解析器选项已被弃用，将在未来的更新中移除。"
 
-#: class-r34ics.php:1690
+#: class-r34ics.php:1708
 msgid "Print"
 msgstr "打印"
 
-#: class-r34ics.php:1794
+#: class-r34ics.php:1809
 #, php-format
 msgid "Powered by %1$s"
 msgstr "由 %1$s 提供支持"
 
-#: class-r34ics.php:1968
+#: class-r34ics.php:1983
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
 msgstr "\"currentweek\" 短代码属性已弃用。请改用 view=\"week\" 替代。"
 
-#: class-r34ics.php:1972
+#: class-r34ics.php:1987
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
 msgstr ""
 "\"legendinline\" 短代码属性已弃用。请改用 legendstyle=\"inline\" 替代。"
 
-#: class-r34ics.php:2330
+#: class-r34ics.php:2345
 #, php-format
 msgid ""
 "%1$s has %2$sresumed%3$s serving calendars on front end pages. If your site "
@@ -310,7 +310,7 @@ msgstr ""
 "%1$s已%2$s恢复%3$s在前端页面显示日历。若您的站点使用缓存插件，可能需要清除缓"
 "存。"
 
-#: class-r34ics.php:2338
+#: class-r34ics.php:2353
 #, php-format
 msgid ""
 "%1$s has %2$spaused%3$s serving calendars on front end pages. If your site "
@@ -319,28 +319,28 @@ msgstr ""
 "%1$s已%2$s暂停%3$s在前端页面提供日历服务。若您的站点使用缓存插件，可能需要清"
 "除缓存。"
 
-#: class-r34ics.php:2350
+#: class-r34ics.php:2365
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "清除 %1$s %2$s 个瞬态。"
 
-#: class-r34ics.php:2357
+#: class-r34ics.php:2372
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "%1$s 未發現任何瞬態現象。"
 
-#: class-r34ics.php:2366
+#: class-r34ics.php:2381
 msgid "All saved ICS feed URLs have been cleared."
 msgstr "所有已保存的ICS源URL均已清除。"
 
-#: class-r34ics.php:2373
+#: class-r34ics.php:2388
 #, php-format
 msgid ""
 "All %1$s settings have been reset to defaults, and saved ICS feed URLs have "
 "been cleared."
 msgstr "所有%1$s设置均已重置为默认值，已保存的ICS源URL已被清除。"
 
-#: class-r34ics.php:2456
+#: class-r34ics.php:2471
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -349,11 +349,11 @@ msgstr ""
 "您的订阅源网址似乎包含HTTP基本认证凭据。请尝试关闭上方%2$s选项卡下的%1$s选"
 "项。"
 
-#: class-r34ics.php:2456 templates/admin/settings.php:85
+#: class-r34ics.php:2471 templates/admin/settings.php:85
 msgid "Use legacy feed request method"
 msgstr "使用传统数据源请求方法"
 
-#: class-r34ics.php:2462
+#: class-r34ics.php:2477
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -366,45 +366,45 @@ msgstr ""
 "为文件创建时日历的静态快照，不会反映源日历的后续更新。请参阅我们的%4$s用户指"
 "南%5$s，了解如何获取正确的动态源URL。"
 
-#: class-r34ics.php:2468
+#: class-r34ics.php:2483
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "错误：无法解析 %1$s 的 IP 地址。"
 
-#: class-r34ics.php:2471
+#: class-r34ics.php:2486
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "%1$s 的解析 IP 地址："
 
-#: class-r34ics.php:2499
+#: class-r34ics.php:2514
 #, php-format
 msgid ""
 "%1$sAppearance updated.%2$s You may need to refresh the page to see some "
 "changes."
 msgstr "%1$s外观已更新。%2$s您可能需要刷新页面才能看到部分更改。"
 
-#: class-r34ics.php:2559
+#: class-r34ics.php:2574
 msgid ""
 "The text entered in the \"Default shortcode\" field is not a valid "
 "shortcode, and was not saved."
 msgstr "在“默认短代码”字段中输入的文本不是有效的短代码，因此未被保存。"
 
-#: class-r34ics.php:2616
+#: class-r34ics.php:2631
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
 "changes."
 msgstr "%1$s设置已更新。%2$s您可能需要刷新页面才能看到部分更改。"
 
-#: class-r34ics.php:2936
+#: class-r34ics.php:2953
 msgid "calendar event"
 msgstr "日历事件"
 
-#: class-r34ics.php:2942
+#: class-r34ics.php:2959
 msgid "Event download failed."
 msgstr "活动下载失败。"
 
-#: class-r34ics.php:3418
+#: class-r34ics.php:3448
 msgid ""
 "The legacy feed request method is deprecated, and will be removed in an "
 "update in the near future. Please test your feeds with the legacy feed "
@@ -413,7 +413,7 @@ msgstr ""
 "旧版数据源请求方法已被弃用，并将在近期更新中移除。请关闭旧版数据源请求方法后"
 "测试您的数据源。"
 
-#: functions.php:1169
+#: functions.php:1168
 #, php-format
 msgid ""
 "An error occurred with %1$s while attempting to copy language translation "
@@ -426,51 +426,51 @@ msgstr ""
 "用。此操作旨在解决与某些翻译自定义插件（如 %3$s）的冲突。因此，当冲突的翻译插"
 "件处于活动状态时，%1$s 翻译可能无法正常加载。"
 
-#: functions.php:1292 functions.php:1300 functions.php:1309
+#: functions.php:1291 functions.php:1299 functions.php:1308
 msgid "Map"
 msgstr "地图"
 
-#: functions.php:1617
+#: functions.php:1616
 msgid "Recurring event"
 msgstr "再次发行"
 
-#: functions.php:1622
+#: functions.php:1621
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "每%1$s年重复一次"
 
-#: functions.php:1622
+#: functions.php:1621
 msgid "Recurs yearly"
 msgstr "每年重复"
 
-#: functions.php:1625
+#: functions.php:1624
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "每%1$s个月重复一次"
 
-#: functions.php:1625
+#: functions.php:1624
 msgid "Recurs monthly"
 msgstr "每月重复"
 
-#: functions.php:1628
+#: functions.php:1627
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "每%1$s周重复一次"
 
-#: functions.php:1628
+#: functions.php:1627
 msgid "Recurs weekly"
 msgstr "每周重复"
 
-#: functions.php:1631
+#: functions.php:1630
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "每%1$s天重复一次"
 
-#: functions.php:1631
+#: functions.php:1630
 msgid "Recurs daily"
 msgstr "每日重复"
 
-#: functions.php:1804
+#: functions.php:1803
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -481,7 +481,7 @@ msgstr ""
 "您%1$s短代码中的\"url\"属性似乎包含HTML标签；很可能您的URL已被转换为可点击链"
 "接。这可能导致日历无法正常显示。请移除短代码中的可点击链接。"
 
-#: functions.php:2137
+#: functions.php:2106
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() 函数不再受支持。"
 
@@ -923,18 +923,13 @@ msgstr ""
 "如果日历源在默认的 30 秒超时时间内未响应，请使用此设置延长超时限制。允许的范"
 "围为 30 到 300。如果留空，将使用默认的 30 秒。"
 
-#: templates/admin/settings.php:86
-msgid "deprecated"
-msgstr "禁用"
-
 #: templates/admin/settings.php:88
 msgid ""
 "Some servers may not support the default feed request method. If your feeds "
-"are not loading, turn on this option to use the legacy request method. This "
-"feature is deprecated and will be removed in a future update."
+"are not loading, turn on this option to use the legacy request method."
 msgstr ""
-"某些服务器可能不支持默认的订阅源请求方式。若您的订阅源无法加载，请启用此选项"
-"以使用传统请求方式。该功能已被弃用，将在未来更新中移除。"
+"某些服务器可能不支持默认的订阅源请求方法。如果您的订阅源无法加载，请启用此选"
+"项以使用旧版请求方法。"
 
 #: templates/admin/settings.php:95
 msgid "Default shortcode"
@@ -1341,6 +1336,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "deprecated"
+#~ msgstr "禁用"
 
 #, php-format
 #~ msgid ""
