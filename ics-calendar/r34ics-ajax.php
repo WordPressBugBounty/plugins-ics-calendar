@@ -54,7 +54,13 @@ function r34ics_ajax() {
 				}
 				// Sanitize scalar values
 				else {
-					$args[$key] = is_string($value) ? wp_kses_post(stripslashes(trim($value ?: ''))) : intval($value);
+					// Certain keys require us to allow backslashes so we skip stripslashes()
+					if (in_array($key, array('timeformat')) !== false) {
+						$args[$key] = wp_kses_post(trim($value ?: ''));
+					}
+					else {
+						$args[$key] = is_string($value) ? wp_kses_post(stripslashes(trim($value ?: ''))) : intval($value);
+					}
 				}
 				// Sanitize boolean values
 				/**

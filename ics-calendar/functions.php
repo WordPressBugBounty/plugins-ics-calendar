@@ -1488,7 +1488,7 @@ function r34ics_organizer_format($organizer='') {
 	elseif (!empty($organizer)) {
 		$output .= '<div>' . $organizer . '</div>';
 	}
-	return $output;
+	return nl2br(trim($output));
 }
 
 
@@ -1990,6 +1990,7 @@ function r34ics_system_report($echo=true) {
  * s	seconds with leading zero
  * a	lowercase am/pm
  * A	uppercase AM/PM
+ * T  timezone abbreviation
  * \	precedes literal character (only needed if also a formatting character)
  * 
  */

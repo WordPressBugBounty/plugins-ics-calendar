@@ -1,5 +1,12 @@
 === ICS Calendar Changelog ===
 
+= 12.1.4.2 - 2026.10.05 =
+
+* AJAX:
+  * Added exceptions in custom sanitization code to allow backslashes in selected shortcode parameters (currently only `timeformat`) because they are a necessary part of the string, e.g. for the French date format code `G\hi`.
+* Miscellaneous:
+  * Modified `r34ics_organizer_format()` function to support line breaks.
+
 = 12.1.4.1 - 2026.09.21 =
 
 * Fixed regression in `r34ics_time_format()` introduced by the refactoring in version 12.1.4 that would cause a literal "T" to display in addition to the timezone abbreviation when using `T` in the time format string. This change also allows the `T` to appear anywhere in the string, rather than just at the end.

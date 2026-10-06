@@ -5,7 +5,7 @@ Tags: calendar, Google, Microsoft, events, ICS
 Requires at least: 5.3
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 12.1.4.1
+Stable tag: 12.1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,13 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.1.4.2 - 2026.10.05 =
+
+* AJAX:
+  * Added exceptions in custom sanitization code to allow backslashes in selected shortcode parameters (currently only `timeformat`) because they are a necessary part of the string, e.g. for the French date format code `G\hi`.
+* Miscellaneous:
+  * Modified `r34ics_organizer_format()` function to support line breaks.
 
 = 12.1.4.1 - 2026.09.21 =
 
