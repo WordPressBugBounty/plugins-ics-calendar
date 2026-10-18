@@ -149,7 +149,7 @@ if (!class_exists('R34ICS')) {
 		);
 		
 		protected $shortcode_defaults_new_10_6 = array(
-			'count' => array('list' => 5, 'default' => 0), // @todo Set a value for 'basic'
+			'count' => array('list' => 5, 'basic' => 10, 'default' => 0),
 			'description' => false,
 			'eventdesc' => true,
 			'htmltagdate' => array('basic' => 'div', 'default' => 'h4'),
@@ -2905,7 +2905,7 @@ if (!class_exists('R34ICS')) {
 						$content[] = 'BEGIN:VCALENDAR';
 						$content[] = 'PRODID:-//Room 34 Creative Services LLC//ICS Calendar ' . get_option('r34ics_version') . '//' . strtoupper(substr(get_locale(),0,2));
 						$content[] = 'VERSION:2.0';
-						$content = array_merge($content, r34ics_get_vtimezone($event_item->dtstart_array[0]['TZID']));
+						$content = array_merge($content, r34ics_get_vtimezone($event_item->dtstart_array[0]['TZID'] ?? null));
 						$content[] = 'BEGIN:VEVENT';
 						if ($event_item->attach) { $content[] = 'ATTACH:' . r34ics_maybe_enfold($event_item->attach, 7); }
 						if ($event_item->categories) { $content[] = 'CATEGORIES:' . r34ics_maybe_enfold($event_item->categories, 11); }
@@ -3089,7 +3089,7 @@ if (!class_exists('R34ICS')) {
 		protected function _url_get_contents($url, $recursion=0, $use_transients=false, $basicauth=false, $skip_domain_errors=false, $ua=false, $trim=true, $response_array=false) {
 			// Use legacy method? (Can't use legacy method with $response_array)
 			if (get_option('r34ics_url_get_contents_legacy_method') && empty($response_array)) {
-				return $this->_url_get_contents_legacy($url, '', $recursion, null, $use_transients, $basicauth, $skip_domain_errors);
+				return $this->_url_get_contents_legacy($url, '', $recursion, null, $use_transients, $basicauth, $skip_domain_errors, $ua);
 			}
 		
 			// Report that we are using the new method
@@ -3437,16 +3437,22 @@ if (!class_exists('R34ICS')) {
 		 * to replicate the issues in our test environments, so we resorted to retaining the
 		 * old functionality in this legacy method.
 		 */
-		protected function _url_get_contents_legacy($url, $method='', $recursion=false, $curlopts=null, $use_transients=false, $basicauth=false, $skip_domain_errors=false) {
+		protected function _url_get_contents_legacy($url, $method='', $recursion=false, $curlopts=null, $use_transients=false, $basicauth=false, $skip_domain_errors=false, $ua=false) {
 			$method = (string)$method; // Avoid PHP 8.1 "Passing null to parameter" deprecation notice
 	
 			// Report that we are using the legacy method
 			// Reminder: This refers to the class method; it has nothing to do with the $method variable!
+			/**
+			 * @todo As of mid-2026 the legacy method has been "un-deprecated" because it is
+			 * still proving to be needed in some environments! Investigate further!
+			 */
+			/*
 			if ($this->debug) {
 				$this->debug_messages[$url]['Method'][] = __METHOD__;
 				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
 				trigger_error(esc_html__('The legacy feed request method is deprecated, and will be removed in an update in the near future. Please test your feeds with the legacy feed request method turned off.', 'ics-calendar'), E_USER_NOTICE);
 			}
+			*/
 			
 			// Are we at debug level 3 or greater? If so, don't use transients
 			if (!empty($this->debug) && $this->debug >= 3) { $use_transients = false; }

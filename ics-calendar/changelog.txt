@@ -1,5 +1,15 @@
 === ICS Calendar Changelog ===
 
+= 12.2.0 - 2026.10.18 =
+
+* Basic view:
+  * Changed default `count` value from `0` (unlimited) to `10`.
+* JavaScript:
+  * Refactored `script.js` code to replace most uses of `var` with `const` or `let`, as appropriate.
+* Miscellaneous:
+  * Added support for `ua` parameter when using legacy feed request method.
+  * Added fallback value to avoid possible `PHP Warning: Undefined array key "TZID"` messages in error logs.
+
 = 12.1.4.2 - 2026.10.05 =
 
 * AJAX:

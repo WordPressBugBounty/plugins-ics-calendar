@@ -5,7 +5,7 @@ Tags: calendar, Google, Microsoft, events, ICS
 Requires at least: 5.3
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 12.1.4.2
+Stable tag: 12.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,16 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.2.0 - 2026.10.18 =
+
+* Basic view:
+  * Changed default `count` value from `0` (unlimited) to `10`.
+* JavaScript:
+  * Refactored `script.js` code to replace most uses of `var` with `const` or `let`, as appropriate.
+* Miscellaneous:
+  * Added support for `ua` parameter when using legacy feed request method.
+  * Added fallback value to avoid possible `PHP Warning: Undefined array key "TZID"` messages in error logs.
 
 = 12.1.4.2 - 2026.10.05 =
 

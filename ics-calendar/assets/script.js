@@ -51,7 +51,7 @@ function r34ics_ajax_request(r34ics_elem, deprecated) {
 
 
 function r34ics_boolean_check(val) {
-	var check = String(val).trim().toLowerCase();
+	const check = String(val).trim().toLowerCase();
 	if (check === '1' || check === 'true' || check === 'on') { return 1; }
 	if (check === '0' || check === 'false' || check === 'off' || check === 'none') { return 0; }
 	if (check === 'null' || check === '') { return null; }
@@ -85,12 +85,12 @@ function r34ics_init(elem) {
 	// Handle individual event ICS downloads
 	jQuery(document).on('click', '.r34ics_event_ics_download', function() {
 		if (jQuery(this).data('eventdl-uid') != '') {
-			var eventdl_dtend = jQuery(this).data('eventdl-dtend');
-			var eventdl_dtstart = jQuery(this).data('eventdl-dtstart');
-			var eventdl_feed_key = jQuery(this).data('eventdl-feed-key');
-			var eventdl_form = jQuery(this).closest('form');
-			var eventdl_label = jQuery(this).data('eventdl-label');
-			var eventdl_uid = jQuery(this).data('eventdl-uid');
+			const eventdl_dtend = jQuery(this).data('eventdl-dtend');
+			const eventdl_dtstart = jQuery(this).data('eventdl-dtstart');
+			const eventdl_feed_key = jQuery(this).data('eventdl-feed-key');
+			const eventdl_label = jQuery(this).data('eventdl-label');
+			const eventdl_uid = jQuery(this).data('eventdl-uid');
+			let eventdl_form = jQuery(this).closest('form');
 			// If we're in a lightbox, we need to find the form elsewhere on the page
 			if (eventdl_form.length == 0) {
 				jQuery('form.r34ics_event_ics_download_form').each(function() {
@@ -145,7 +145,7 @@ function r34ics_init(elem) {
 	 */
 	jQuery(document).on('click', '.ics-calendar.r34ics_toggle .event, .ics-calendar.r34ics_toggle .event .title', function(e) {
 		e.stopPropagation();
-		var elem = jQuery(this).hasClass('title') ? jQuery(this).closest('.event') : jQuery(this);
+		const elem = jQuery(this).hasClass('title') ? jQuery(this).closest('.event') : jQuery(this);
 		// No description -- do nothing
 		if (elem.find('.descloc').length == 0) { return false; }
 		// Lightbox
@@ -170,7 +170,7 @@ function r34ics_init(elem) {
 	if (jQuery('.r34ics_lightbox').length > 0) {
 		// Remove redundant instances (workaround to a user issue where a global variable to prevent redundancies failed)
 		if (jQuery('.r34ics_lightbox').length > 1) {
-			var i = 0; jQuery('.r34ics_lightbox').each(function() { if (i > 0) { jQuery(this).remove(); } i++; });
+			let i = 0; jQuery('.r34ics_lightbox').each(function() { if (i > 0) { jQuery(this).remove(); } i++; });
 		}
 		// Move the lightbox element from its original DOM position to the top of the body, so its z-index functions properly
 		jQuery('.r34ics_lightbox').prependTo('body');
@@ -197,8 +197,8 @@ function r34ics_init(elem) {
 
 	// Toggle color-coded multi-feed calendars
 	jQuery('.ics-calendar-color-key-toggle').on('click', function() {
-		var cal = jQuery(this).closest('.ics-calendar');
-		var feedkey = jQuery(this).attr('data-feed-key');
+		const cal = jQuery(this).closest('.ics-calendar');
+		const feedkey = jQuery(this).attr('data-feed-key');
 		if (jQuery(this).prop('checked') == true) {
 			cal.find('.event[data-feed-key=' + parseInt(feedkey) + '], .events *[data-feed-key=' + parseInt(feedkey) + ']').removeClass('hidden_in_main');
 		}
@@ -215,7 +215,7 @@ function r34ics_init(elem) {
 		}
 		// Check the show/hide button only if all are checked
 		else {
-			var all_siblings_checked = true;
+			let all_siblings_checked = true;
 			jQuery(this).parent().parent().siblings().find('.ics-calendar-color-key-toggle').each(function() {
 				if (!jQuery(this).prop('checked')) { all_siblings_checked = false; }
 			});
@@ -246,7 +246,7 @@ function r34ics_init(elem) {
 	// Dynamically update print view link
 	if (jQuery('.r34ics-print-button-wrapper').length > 0) {
 		jQuery('.ics-calendar-select').on('change', function() {
-			var print_button = jQuery(this).closest('.ics-calendar').find('.r34ics-print-button-wrapper a');
+			const print_button = jQuery(this).closest('.ics-calendar').find('.r34ics-print-button-wrapper a');
 			print_button.attr('href', print_button.data('href') + '&r34ics-print-selected=' + jQuery(this).val());
 		});
 	}
@@ -258,7 +258,7 @@ function r34ics_init(elem) {
 	if (jQuery('.ics-calendar.layout-week').length > 0) {
 		// Week select interactivity
 		jQuery('.ics-calendar.layout-week .ics-calendar-select').on('change', function() {
-			var r34ics_cal = jQuery(this).closest('.ics-calendar');
+			const r34ics_cal = jQuery(this).closest('.ics-calendar');
 			r34ics_cal.addClass('show-past-events');
 			r34ics_cal.find('.ics-calendar-month-grid tbody tr').css('display','none');
 			if (r34ics_is_phone() && !r34ics_cal.hasClass('nomobile')) {
@@ -270,7 +270,7 @@ function r34ics_init(elem) {
 		});
 		// Show/hide past events on mobile
 		jQuery('a[data-ics-calendar-action="show-past-events"]').on('click', function() {
-			var r34ics_cal = jQuery(this).closest('.ics-calendar');
+			const r34ics_cal = jQuery(this).closest('.ics-calendar');
 			if (!r34ics_cal.hasClass('show-past-events')) {
 				r34ics_cal.addClass('show-past-events');
 				// On week view, remove this from the DOM instead of showing toggle
@@ -325,7 +325,7 @@ function r34ics_init(elem) {
 				if (jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]').length == 0) {
 					jQuery(this).find('.ics-calendar-pagination[data-rel2today="past"]').last().attr('data-rel2today', 'today');
 				}
-				var current_page = jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]').first();
+				const current_page = jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]').first();
 				if (typeof current_page.data('page') != 'undefined' && current_page.data('page') != 0) {
 					jQuery(this).find('.ics-calendar-pagination:first-child').hide();
 					current_page.show();
@@ -343,7 +343,7 @@ function r34ics_init(elem) {
 	if (jQuery('.ics-calendar.layout-month').length > 0) {
 		// Month select interactivity
 		jQuery('.ics-calendar.layout-month .ics-calendar-select').on('change', function() {
-			var r34ics_cal = jQuery(this).closest('.ics-calendar');
+			const r34ics_cal = jQuery(this).closest('.ics-calendar');
 			r34ics_cal.find('.ics-calendar-month-wrapper').hide();
 			r34ics_cal.find('.ics-calendar-month-wrapper[data-year-month="' + jQuery(this).val() + '"]').show();
 			// Update query string in address bar
@@ -351,9 +351,17 @@ function r34ics_init(elem) {
 				r34ics_qs_update('r34icsym', jQuery(this).val(), (jQuery(this).val() == jQuery(this).data('this-month')));
 			}
 			// Change arrow labels
-			var r34ics_arrownav = r34ics_cal.find('.ics-calendar-arrow-nav');
+			const r34ics_arrownav = r34ics_cal.find('.ics-calendar-arrow-nav');
 			if (r34ics_arrownav.length > 0) {
-				var r34ics_arrownav_prev = jQuery(this).find('option:selected').prev();
+				const r34ics_arrownav_current = jQuery(this).find('option:selected');
+				const r34ics_arrownav_prev = r34ics_arrownav_current.prev();
+				const r34ics_arrownav_next = r34ics_arrownav_current.next();
+				if (r34ics_arrownav_current.val() != r34ics_arrownav.find('.today').data('goto')) {
+					r34ics_arrownav.find('.today').removeClass('inactive').removeAttr('aria-hidden');
+				}
+				else {
+					r34ics_arrownav.find('.today').addClass('inactive').attr('aria-hidden', 'true');
+				}
 				if (r34ics_arrownav_prev.length > 0) {
 					r34ics_arrownav.find('.prev').data('goto', r34ics_arrownav_prev.attr('value')).removeClass('inactive').removeAttr('aria-hidden');
 					r34ics_arrownav.find('.prev-text').text(r34ics_arrownav_prev.text());
@@ -362,7 +370,6 @@ function r34ics_init(elem) {
 					r34ics_arrownav.find('.prev').data('goto', '').addClass('inactive').attr('aria-hidden', 'true');
 					r34ics_arrownav.find('.prev-text').text('');
 				}
-				var r34ics_arrownav_next = jQuery(this).find('option:selected').next();
 				if (r34ics_arrownav_next.length > 0) {
 					r34ics_arrownav.find('.next').data('goto', r34ics_arrownav_next.attr('value')).removeClass('inactive').removeAttr('aria-hidden');
 					r34ics_arrownav.find('.next-text').text(r34ics_arrownav_next.text());
@@ -371,26 +378,19 @@ function r34ics_init(elem) {
 					r34ics_arrownav.find('.next').data('goto', '').addClass('inactive').attr('aria-hidden', 'true');
 					r34ics_arrownav.find('.next-text').text('');
 				}
-				var r34ics_arrownav_current = jQuery(this).find('option:selected');
-				if (r34ics_arrownav_current.val() != r34ics_arrownav.find('.today').data('goto')) {
-					r34ics_arrownav.find('.today').removeClass('inactive').removeAttr('aria-hidden');
-				}
-				else {
-					r34ics_arrownav.find('.today').addClass('inactive').attr('aria-hidden', 'true');
-				}
 			}
 		});
 		// Month previous/next arrow interactivity
 		jQuery('.ics-calendar.layout-month .ics-calendar-arrow-nav > *').unbind().on('click', function() {
 			if (jQuery(this).data('goto') != '') {
-				var r34ics_cal = jQuery(this).closest('.ics-calendar');
+				const r34ics_cal = jQuery(this).closest('.ics-calendar');
 				r34ics_cal.find('.ics-calendar-select').val(jQuery(this).data('goto')).trigger('change');
 			}
 			return false;
 		});
 		// Show/hide past events on mobile
 		jQuery('a[data-ics-calendar-action="show-past-events"]').on('click', function() {
-			var r34ics_cal = jQuery(this).closest('.ics-calendar');
+			const r34ics_cal = jQuery(this).closest('.ics-calendar');
 			if (!r34ics_cal.hasClass('show-past-events')) {
 				r34ics_cal.addClass('show-past-events');
 				// Show toggle
@@ -407,7 +407,7 @@ function r34ics_init(elem) {
 		});
 		// Show/hide past events toggle depending on selected month
 		jQuery('.ics-calendar-select').on('change', function() {
-			var r34ics_cal = jQuery(this).closest('.ics-calendar');
+			const r34ics_cal = jQuery(this).closest('.ics-calendar');
 			// Always show if we're showing the full list (Pro only)
 			if (r34ics_cal.hasClass('month_list_all')) {
 				r34ics_cal.find('a[data-ics-calendar-action="show-past-events"]').show();
@@ -423,7 +423,7 @@ function r34ics_init(elem) {
 		jQuery('.ics-calendar.layout-month .ics-calendar-select:not(.hidden), .ics-calendar.layout-month .ics-calendar-arrow-nav').show();
 		jQuery('.ics-calendar.layout-month .ics-calendar-month-wrapper[data-year-month="' + jQuery('.ics-calendar-select').val() + '"]').show();
 		// Set dropdown/display to requested month from query string (r34icsym)
-		var r34icsym = r34ics_qs_val('r34icsym');
+		const r34icsym = r34ics_qs_val('r34icsym');
 		jQuery('.ics-calendar.layout-month').each(function() {
 			if (r34icsym != null && jQuery(this).find('.ics-calendar-select option[value="' + r34icsym + '"]').length == 1) {
 				jQuery(this).find('.ics-calendar-select').val(r34icsym).trigger('change');
@@ -483,10 +483,10 @@ function r34ics_init_once(elem) {
 	// Outer section wrapper has classes .ics-calendar.layout-list or .ics-calendar.layout-basic
 
 	jQuery(document).on('click', '.ics-calendar-paginate', function() {
-		var container = jQuery(this).closest('.ics-calendar');
-		var current = container.find('.ics-calendar-pagination:visible');
-		var dir = jQuery(this).hasClass('prev') ? 'prev' : 'next';
-		var next, next_next, offset;
+		const container = jQuery(this).closest('.ics-calendar');
+		const current = container.find('.ics-calendar-pagination:visible');
+		const dir = jQuery(this).hasClass('prev') ? 'prev' : 'next';
+		let next, next_next, offset;
 		container.find('.ics-calendar-paginate').show();
 		switch (dir) {
 			case 'prev':
@@ -526,8 +526,8 @@ function r34ics_maybe_skip_to_next_month() {
 					jQuery(this).find('.ics-calendar-month-wrapper:visible').next().find('.no_events').length == 0
 				)
 			{
-				var r34ics_cal_select = jQuery(this).closest('.ics-calendar').find('.ics-calendar-select');
-				var next_val = r34ics_cal_select.find('option[selected]').next().val();
+				const r34ics_cal_select = jQuery(this).closest('.ics-calendar').find('.ics-calendar-select');
+				const next_val = r34ics_cal_select.find('option[selected]').next().val();
 				r34ics_cal_select.val(next_val).trigger('change');
 			}
 		});
@@ -538,7 +538,7 @@ function r34ics_maybe_skip_to_next_month() {
 function r34ics_phone_day_headers() {
 	if (r34ics_is_phone() && typeof r34ics_days_of_week_map != 'undefined') {
 		jQuery('.ics-calendar-month-grid thead th').each(function() {
-			var day_string = jQuery(this).text();
+			const day_string = jQuery(this).text();
 			if (typeof r34ics_days_of_week_map[day_string] != 'undefined') {
 				jQuery(this).data('orig-str', day_string);
 				jQuery(this).text(r34ics_days_of_week_map[day_string]);
@@ -558,7 +558,7 @@ function r34ics_phone_day_headers() {
 // Note: Assumes key does not exist as a substring at the end of any other keys!
 function r34ics_qs_update(key, val, remove) {
 	if (history.pushState && val != null) {
-		var qs, re;
+		let qs, re;
 		// We only want to remove this item, not update it
 		if (remove == true) {
 			// Check if it's actually present in the current query string first
@@ -597,7 +597,7 @@ function r34ics_qs_update(key, val, remove) {
 
 // Get the value for a given key in the query string
 function r34ics_qs_val(key) {
-	var arr = location.search.replace('?','').split('&'), params = [], item, i;
+	let arr = location.search.replace('?','').split('&'), params = [], item, i;
 	for (i = 0; i < arr.length; i++) {
 		item = arr[i].split('=');
 		params[item[0]] = item[1];
@@ -659,7 +659,7 @@ function r34ics_week_reset() {
 	if (jQuery('.ics-calendar.layout-week').length > 0) {
 		jQuery('.ics-calendar.layout-week').each(function() {
 			jQuery(this).find('.ics-calendar-month-grid tbody tr').css('display', 'none');
-			var current = jQuery(this).find('.ics-calendar-select').val();
+			const current = jQuery(this).find('.ics-calendar-select').val();
 			if (r34ics_is_phone() && !jQuery(this).hasClass('nomobile')) {
 				jQuery(this).find('.ics-calendar-month-grid tbody tr.' + current).css('display', 'block');
 			}
