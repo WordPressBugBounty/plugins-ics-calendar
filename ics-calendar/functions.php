@@ -1632,6 +1632,10 @@ function r34ics_recurrence_description($rrule=null, $hiderecurrence=null, $html=
 				default: break;
 			}
 		}
+		// Also add the end date if we have one
+		if (!empty($recur['UNTIL'])) {
+			$output = sprintf(esc_html__('%1$s until %2$s', 'ics-calendar'), $output, r34ics_date(get_option('date_format'), $recur['UNTIL']));
+		}
 	}
 	// Add HTML wrapper
 	if (!empty($output) && !empty($html)) {

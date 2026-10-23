@@ -5,7 +5,7 @@ Tags: calendar, Google, Microsoft, events, ICS
 Requires at least: 5.3
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 12.2.0
+Stable tag: 12.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,17 @@ Our [User Guide](https://icscalendar.com/user-guide/) includes extensive documen
 The paid [ICS Calendar Pro](https://icscalendar.com) add-on includes additional layout options, tools for customizing the calendar's appearance more easily than directly editing CSS, an improved insertion tool, and more. We are also constantly adding new features and refinements to _both_ the free and paid versions. If you have suggestions for features you'd like to see or any other additional input, please let us know by following the support link on the admin page or in the [WordPress support forums](https://wordpress.org/support/plugin/ics-calendar/)! The base plugin will always be free to use.
 
 == Changelog ==
+
+= 12.2.1 - 2026.10.23 =
+
+* Miscellaneous:
+  * Updated `r34ics_recurrence_description()` function's output to include "until (date)" when the `RRULE` includes an `UNTIL` value.
+* Vendors:
+  * ics-parser:
+    * Merged [v. 3.6.0](https://github.com/u01jmg3/ics-parser/releases/tag/v3.6.0) changes into customized version of library.
+    * Added a modification to how the [`DURATION`](https://icalendar.org/iCalendar-RFC-5545/3-3-6-duration.html) property is handled, to account for malformed values observed in feeds from some sources (e.g. TeamSnap). The `DURATION` property should not end with a `T`; it is supposed to be followed by one or more digit-letter pairs representing hour/minutes/seconds. This workaround strips any trailing `T` from `DURATION`, allowing the parser to properly handle the remaining value.
+* i18n:
+  * Updated translation strings.
 
 = 12.2.0 - 2026.10.18 =
 

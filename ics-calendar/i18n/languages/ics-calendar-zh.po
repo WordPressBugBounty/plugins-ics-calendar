@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-09-21 09:48-0500\n"
-"PO-Revision-Date: 2026-09-21 09:48-0500\n"
+"POT-Creation-Date: 2026-10-19 14:14-0500\n"
+"PO-Revision-Date: 2026-10-19 14:14-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -19,6 +19,31 @@ msgstr ""
 "__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#. Plugin Name of the plugin/theme
+#: ics-calendar.php:3
+msgid "ICS Calendar"
+msgstr "ICS 日历"
+
+#. Plugin URI of the plugin/theme
+#: ics-calendar.php:4 ics-calendar.php:10
+msgid "https://icscalendar.com"
+msgstr "https://icscalendar.com"
+
+#. Description of the plugin/theme
+#: ics-calendar.php:5
+msgid ""
+"Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar "
+"into a seamlessly integrated, auto-updating, zero-maintenance WordPress "
+"experience."
+msgstr ""
+"将您的谷歌日历、微软Office 365或苹果iCloud日历转化为无缝集成、自动更新且零维"
+"护的WordPress体验。"
+
+#. Author of the plugin/theme
+#: ics-calendar.php:9
+msgid "Room 34 Creative Services, LLC"
+msgstr "Room 34 Creative Services, LLC"
 
 #: class-r34ics.php:317
 #, php-format
@@ -404,15 +429,6 @@ msgstr "日历事件"
 msgid "Event download failed."
 msgstr "活动下载失败。"
 
-#: class-r34ics.php:3448
-msgid ""
-"The legacy feed request method is deprecated, and will be removed in an "
-"update in the near future. Please test your feeds with the legacy feed "
-"request method turned off."
-msgstr ""
-"旧版数据源请求方法已被弃用，并将在近期更新中移除。请关闭旧版数据源请求方法后"
-"测试您的数据源。"
-
 #: functions.php:1168
 #, php-format
 msgid ""
@@ -470,7 +486,12 @@ msgstr "每%1$s天重复一次"
 msgid "Recurs daily"
 msgstr "每日重复"
 
-#: functions.php:1803
+#: functions.php:1637
+#, php-format
+msgid "%1$s until %2$s"
+msgstr "%1$s 至 %2$s"
+
+#: functions.php:1807
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -481,7 +502,7 @@ msgstr ""
 "您%1$s短代码中的\"url\"属性似乎包含HTML标签；很可能您的URL已被转换为可点击链"
 "接。这可能导致日历无法正常显示。请移除短代码中的可点击链接。"
 
-#: functions.php:2106
+#: functions.php:2111
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "r34ics_url_get_contents() 函数不再受支持。"
 
@@ -1315,27 +1336,13 @@ msgstr "本周"
 msgid "Next week"
 msgstr "下周"
 
-#. Plugin Name of the plugin/theme
-msgid "ICS Calendar"
-msgstr "ICS 日历"
-
-#. Plugin URI of the plugin/theme
-#. Author URI of the plugin/theme
-msgid "https://icscalendar.com"
-msgstr "https://icscalendar.com"
-
-#. Description of the plugin/theme
-msgid ""
-"Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar "
-"into a seamlessly integrated, auto-updating, zero-maintenance WordPress "
-"experience."
-msgstr ""
-"将您的谷歌日历、微软Office 365或苹果iCloud日历转化为无缝集成、自动更新且零维"
-"护的WordPress体验。"
-
-#. Author of the plugin/theme
-msgid "Room 34 Creative Services, LLC"
-msgstr "Room 34 Creative Services, LLC"
+#~ msgid ""
+#~ "The legacy feed request method is deprecated, and will be removed in an "
+#~ "update in the near future. Please test your feeds with the legacy feed "
+#~ "request method turned off."
+#~ msgstr ""
+#~ "旧版数据源请求方法已被弃用，并将在近期更新中移除。请关闭旧版数据源请求方法"
+#~ "后测试您的数据源。"
 
 #~ msgid "deprecated"
 #~ msgstr "禁用"

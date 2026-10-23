@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2026-09-21 09:49-0500\n"
-"PO-Revision-Date: 2026-09-21 09:49-0500\n"
+"POT-Creation-Date: 2026-10-19 14:15-0500\n"
+"PO-Revision-Date: 2026-10-19 14:15-0500\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: lt\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && (n%100<11 || n%100>19) ? 0 : "
 "n%10>=2 && n%10<=9 && (n%100<11 || n%100>19) ? 1 : 2);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ics-calendar.php\n"
@@ -20,6 +20,32 @@ msgstr ""
 "__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#. Plugin Name of the plugin/theme
+#: ics-calendar.php:3
+msgid "ICS Calendar"
+msgstr "ICS Calendar"
+
+#. Plugin URI of the plugin/theme
+#: ics-calendar.php:4 ics-calendar.php:10
+msgid "https://icscalendar.com"
+msgstr "https://icscalendar.com"
+
+#. Description of the plugin/theme
+#: ics-calendar.php:5
+msgid ""
+"Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar "
+"into a seamlessly integrated, auto-updating, zero-maintenance WordPress "
+"experience."
+msgstr ""
+"Paversti savo „Google“ kalendorių, „Microsoft Office 365“ arba „Apple "
+"iCloud“ kalendorių į sklandžiai integruotą, automatiškai atnaujinamą ir "
+"priežiūros nereikalaujančią „WordPress“ patirtį."
+
+#. Author of the plugin/theme
+#: ics-calendar.php:9
+msgid "Room 34 Creative Services, LLC"
+msgstr "Room 34 Creative Services, LLC"
 
 #: class-r34ics.php:317
 #, php-format
@@ -450,16 +476,6 @@ msgstr "kalendoriaus įvykis"
 msgid "Event download failed."
 msgstr "Renginio atsisiuntimas nepavyko."
 
-#: class-r34ics.php:3448
-msgid ""
-"The legacy feed request method is deprecated, and will be removed in an "
-"update in the near future. Please test your feeds with the legacy feed "
-"request method turned off."
-msgstr ""
-"Senasis informacijos srauto užklausos metodas yra pasenęs ir bus pašalintas "
-"artimiausioje ateityje. Prašome išbandyti savo informacijos srautus, išjungę "
-"senąjį informacijos srauto užklausos metodą."
-
 #: functions.php:1168
 #, php-format
 msgid ""
@@ -519,7 +535,12 @@ msgstr "Kartojasi kas %1$s dienų"
 msgid "Recurs daily"
 msgstr "Kartojasi kasdien"
 
-#: functions.php:1803
+#: functions.php:1637
+#, php-format
+msgid "%1$s until %2$s"
+msgstr "%1$s iki %2$s"
+
+#: functions.php:1807
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -532,7 +553,7 @@ msgstr ""
 "būti rodomas netinkamai. Prašome pašalinti spustelėjamąjį saitą iš trumpojo "
 "kodo."
 
-#: functions.php:2106
+#: functions.php:2111
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funkcija r34ics_url_get_contents() nebėra palaikoma."
 
@@ -1447,28 +1468,14 @@ msgstr "Šią savaitę"
 msgid "Next week"
 msgstr "Kita savaitę"
 
-#. Plugin Name of the plugin/theme
-msgid "ICS Calendar"
-msgstr "ICS Calendar"
-
-#. Plugin URI of the plugin/theme
-#. Author URI of the plugin/theme
-msgid "https://icscalendar.com"
-msgstr "https://icscalendar.com"
-
-#. Description of the plugin/theme
-msgid ""
-"Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar "
-"into a seamlessly integrated, auto-updating, zero-maintenance WordPress "
-"experience."
-msgstr ""
-"Paversti savo „Google“ kalendorių, „Microsoft Office 365“ arba „Apple "
-"iCloud“ kalendorių į sklandžiai integruotą, automatiškai atnaujinamą ir "
-"priežiūros nereikalaujančią „WordPress“ patirtį."
-
-#. Author of the plugin/theme
-msgid "Room 34 Creative Services, LLC"
-msgstr "Room 34 Creative Services, LLC"
+#~ msgid ""
+#~ "The legacy feed request method is deprecated, and will be removed in an "
+#~ "update in the near future. Please test your feeds with the legacy feed "
+#~ "request method turned off."
+#~ msgstr ""
+#~ "Senasis informacijos srauto užklausos metodas yra pasenęs ir bus "
+#~ "pašalintas artimiausioje ateityje. Prašome išbandyti savo informacijos "
+#~ "srautus, išjungę senąjį informacijos srauto užklausos metodą."
 
 #~ msgid "deprecated"
 #~ msgstr "nebereikalingas"
